@@ -1,0 +1,24 @@
+{
+  "source_commit": "54b0e4e4e7752b3972ddd3550f2b3cc37f7e0be6",
+  "pages_url": "https://eduarbo.github.io/flan36/?rev=54b0e4e4e7752b3972ddd3550f2b3cc37f7e0be6",
+  "archive_files_verified": 1022,
+  "archive_sha256": "5c9c71b62005fc4b382a37f030311a2f93afb973af86bce481a97303d4fcd7ce",
+  "public_viewer_browser_checks": {
+    "viewer_sha256": "ef064fd65e251028e193e26cb9acbc19a105136d5f4d1df8d9587aaa1ae538e8",
+    "checks": [
+      "3/6 digits, optional #, trim, invalid atomicity and Escape",
+      "native picker sync, Copy, real clipboard paste to another part",
+      "mixed halves stay explicit and cannot copy a misleading value",
+      "frame body and all three accent HEX fields, linked rim",
+      "HEX follows all/row/individual targets and preserves cap geometry",
+      "reload preserves configuration",
+      "390px mobile HEX input and editing"
+    ],
+    "runtime_errors": []
+  },
+  "diagram_sha256": "28adae8969b55df8b875f61701589647ca2ee5216e2a7b42570ed9e5855a68ff",
+  "served_diagram_matches": true,
+  "existing_session_readback": "New HEX fields visible; existing saved colors restored. No existing-session colors edited.",
+  "method": "Anonymous archive matches every committed Git blob. Public UI acceptance plus HTTP viewer SHA-256 matches the tested build. Diagram bytes match.",
+  "geometry_changed": false
+}
