@@ -1,0 +1,73 @@
+{
+  "source_head": "34d69bf887787b4aaabbb1c555699c0ed5f60c16",
+  "scope": "Source mesh registration and default native/viewer placements; not physical fit qualification",
+  "native_and_viewer_caps_checked": 36,
+  "source_variants_checked": 38,
+  "maximum_source_prong_center_error_mm": 0.0016366988136103265,
+  "slot_centers_mm": [
+    [
+      -2.85,
+      0
+    ],
+    [
+      2.85,
+      0
+    ]
+  ],
+  "slot_inner_section_mm": [
+    1.2,
+    3
+  ],
+  "cap_tip_z_mm": 11.7,
+  "switch_stem_top_z_mm": 13.450000190734864,
+  "nominal_insertion_mm": 1.7500001907348643,
+  "geometry_changed": false,
+  "checker_sha256": "d2eba98d5fa6444f8485730c823696b8967b56b5a9334d6923b82e74934f5558",
+  "sources": {
+    "keycaps/catalog.json": "a2f461be0342cb75b2595c3b8fd90048ad81833cb8656094b1cd375c61afbf04",
+    "build/viewer-scene.json": "b11aa1bb68c098d9112309d22cf471b7f36d5b7ad6b0e9b8a06b5b1bc040da4f",
+    "mechanical/revI/Flan36.FCStd": "621d03fd572bf04bd8eeaa452c1dbc56f0ef23d16b875e03b37bfdb2cdccd6c2",
+    "keycaps/variants/Choc_Stem_Choc_Size_Normal_90deg.stl": "a6deb4abac72914e12b16a10061c65f84d15fd3e8990c98490443289f8047eeb",
+    "keycaps/variants/Choc_Stem_Choc_Size_Normal_Homing_90deg.stl": "2cb6e93f80298eb185f81dd4d19ee3efa76542b7f31994285478d6fd06616280",
+    "keycaps/variants/Choc_Stem_Choc_Size_Normal_Tilted_90deg.stl": "c75c5c245360a674c3456749d278aad42b13814ca8aaa4ce9fce6f26e8dbf004",
+    "keycaps/variants/Choc_Stem_Choc_Size_Saddle_90deg.stl": "b7a940d3a2ef0d317213508fcb43538d95e3251f03449c16df862ff3c46dd3de",
+    "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Homing_90deg.stl": "51afd2b2064a59bfb4734c41a52ea2f956391e2104474edda3efdf4140168100",
+    "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Tilted_90deg.stl": "c2030a0608ae886af36f229f38cff43ea1bbc1aebd01983a2d26d3a4745df068",
+    "keycaps/variants/Choc_Stem_Choc_Size_Thumb_90deg.stl": "fadfca2053db5e04a9981b7b9b33a825d19908de6ca4743aafd8ae2e31bed373",
+    "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Normal.stl": "7622bfc457d1159ff214f921edd397071c8bbe5266ec2a216fdc0d75f242d1ed",
+    "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Saddle_H.stl": "9b8c922fed930b1406bda08e8217177e31b894b9fb8e765459ff828f2f9c1cd0",
+    "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Saddle_V.stl": "9b7374b9c50732bea1cad302259ee3858d30a497c893bbef65acfd205e045fdf",
+    "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Thumb_H.stl": "c46e091008834d799a0d91573706bb51b232d49a6c436529f7bcaa00884ab8f8",
+    "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Thumb_V.stl": "e748c7591ddc0c5440a4de82434c07e1c7d9e09d509fef1a42c7042b88f92357",
+    "keycaps/variants/Choc_Stem_Choc_Size_Normal.stl": "2e4110f314d848bbacc23585e3002b648e5eb094501d98d206db821867381a53",
+    "keycaps/variants/Choc_Stem_Choc_Size_Normal_Homing.stl": "ef7c5c9940daf78d8a8fd95efc2a9772a37394e26b74d56319f4b5b7609ea441",
+    "keycaps/variants/Choc_Stem_Choc_Size_Normal_Tilted.stl": "03fa50d76416d226904fab95c5a3ded3663f6b5bafaff695683d8fa7979ecf8d",
+    "keycaps/variants/Choc_Stem_Choc_Size_Saddle.stl": "53e3d75f5dd1bd60d82d617df20fdc05651ef21efb9464e8d5ee297e50b9667d",
+    "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Homing.stl": "c399efe2a89ee1478254273e0a2bf2bcbaa2bdb57c1cb264390ee63f906c047a",
+    "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Tilted.stl": "59457a575470c5672c8c9d766a739fefab06dc1f082b34887287eb4f392b2f4f",
+    "keycaps/variants/Choc_Stem_Choc_Size_Thumb.stl": "20e8239ce4836e22906220a39ae17a55e584107240a0b00571f4132b9e26054c",
+    "keycaps/variants/Choc_Stem_MX_Size_Normal_90deg.stl": "724f857b14c97660fc11a745964e7445e4b0a160b6187b5228efd1e441dc085b",
+    "keycaps/variants/Choc_Stem_MX_Size_Normal_Homing_90deg.stl": "cbdede3fbc0ce215fe0f3b4821fcadbeb66d5f0d0c3a36b33e3a665004b553ae",
+    "keycaps/variants/Choc_Stem_MX_Size_Normal_Tilted_90deg.stl": "5261a017cdd9db33e605399986ac2acce60fecc41dd37a67745b2b4f2012a1fd",
+    "keycaps/variants/Choc_Stem_MX_Size_Saddle_90deg.stl": "05f9101d5d45c62d8b7b6904df7a1b6aaf13a8ac455a7b555d5e1e8ce6213a3b",
+    "keycaps/variants/Choc_Stem_MX_Size_Saddle_Homing_90deg.stl": "946f1a996b59fff5d659bc4c3d4af6962fee3097cc4731fe884df844a7731743",
+    "keycaps/variants/Choc_Stem_MX_Size_Saddle_Tilted_90deg.stl": "c5b623ff9a9df2470eaceaec34796ac2859cc4bd02e2ea130c8ccb9feeb30c26",
+    "keycaps/variants/Choc_Stem_MX_Size_Thumb_90deg.stl": "45884c2db33a15e3cf5b3c3aac6a5cf5c762d4529233709955738a4c0f0097ed",
+    "keycaps/variants/Choc_Stem_MX_Size_1.5U_Normal.stl": "648782b2d1a6349846db4afe00fc6eff8a049976bc692def0e22112a4872b8bd",
+    "keycaps/variants/Choc_Stem_MX_Size_1.5U_Saddle_H.stl": "8097a7af2ef2bcc7a15a1fc9bf7fc6df95ea608a10ea3eed75b9c0d23426cf3c",
+    "keycaps/variants/Choc_Stem_MX_Size_1.5U_Saddle_V.stl": "e66033203c6e12672b89341c2e75c05d1abf23081649644e32f67a83d291c422",
+    "keycaps/variants/Choc_Stem_MX_Size_1.5U_Thumb_H.stl": "90a1e697aea6ce2cf7939280f63671bed287d7093f7b515c172a32566c8de084",
+    "keycaps/variants/Choc_Stem_MX_Size_1.5U_Thumb_V.stl": "300733a2a58b16b222acca385ace154601ac6f689d311c1f603e30a934e5748f",
+    "keycaps/variants/Choc_Stem_MX_Size_Normal.stl": "1499d70bdd1ca0efd8c9ce50d8bd179a2ca85f17fc6af7f97105279015199712",
+    "keycaps/variants/Choc_Stem_MX_Size_Normal_Homing.stl": "895d4cbb3db780da7e947b6ad035c0013799df066ee262721365c3724e8f3a98",
+    "keycaps/variants/Choc_Stem_MX_Size_Normal_Tilted.stl": "a6b0d6ade5f38eab16ad8b1dace8d658df87f4a255eb3f1de819ed2485757eb9",
+    "keycaps/variants/Choc_Stem_MX_Size_Saddle.stl": "2ee598afe3835aa5d76888ced84a803769d492f7da9a83a557bfec4e967c5af0",
+    "keycaps/variants/Choc_Stem_MX_Size_Saddle_Homing.stl": "c57b1b8fa2a1ca25ffd2d1c5aaa23902fa50f39e6236a31d33aa3de1610b9f4c",
+    "keycaps/variants/Choc_Stem_MX_Size_Saddle_Tilted.stl": "d1c78001dbaa44784197fe71c1c9219ed1f433794646e1c48ca926317678a2b5",
+    "keycaps/variants/Choc_Stem_MX_Size_Thumb.stl": "046c67773c539c11883b248de156e4659890c90d6220c20f5f457ca717e540b6",
+    "mechanical/revI/component-choc-stem-0.stl": "b430e51cb2ec8e08139f8cae490ea506a24b728243ec7b292298101e8a9a3ae4",
+    "mechanical/revI/component-choc-body-0.stl": "9229bc3d2f35b843fc49f2466de5a7721d0564605c6f74f6170882b607ced273"
+  },
+  "section_image": "docs/images/revI-keycap-registration.png",
+  "section_image_sha256": "28adae8969b55df8b875f61701589647ca2ee5216e2a7b42570ed9e5855a68ff"
+}

@@ -53,7 +53,7 @@
     <p class="hint">Pick a shape. Keep your colors, or restore its original palette.</p>
     <div id="frame-target" class="segments" role="group" aria-label="Apply frame changes to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div>
     <div id="frame-grid" class="preview-grid" role="group" aria-label="Frame styles"></div>
-    <div class="finish-row"><span>Body <small id="color-current"></small></span><div id="swatches" role="group" aria-label="Frame body colors"></div><label class="custom-color" title="Custom frame color"><input type="color" id="frame-color" value="#304d4e" aria-label="Custom frame color"></label></div>
+    <div class="finish-row"><span>Body <small id="color-current" hidden></small></span><div id="swatches" role="group" aria-label="Frame body colors"></div></div><div class="color-field"><input type="color" id="frame-color" value="#304d4e" aria-label="Frame body color"></div>
     <div id="theme-palette" class="color-fields" aria-label="Frame accent colors"></div><label class="cover-option"><input type="checkbox" id="frame-link-colors"> Match frame and rim</label>
     <button id="theme-colors" class="palette-reset">Restore design colors</button>
     <p class="micro">Previews show original palettes. Custom colors are saved with your parts. Simple frames have no raised accent regions.</p>
@@ -68,7 +68,7 @@
 <label id="cap-row-label" hidden>Row<select id="cap-row"><option value="0">Top</option><option value="1">Home</option><option value="2">Bottom</option><option value="3">Thumbs</option></select></label>
 <label id="cap-column-label" hidden>Column<select id="cap-column"><option value="1">1 · outer</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 · inner</option></select></label>
 <div id="cap-map" class="cap-maps" aria-label="Select keys to color"></div><p id="cap-selection" class="micro"></p>
-<label class="color-field"><span>Key color</span><small id="cap-color-value"></small><input id="cap-color" type="color" value="#e9dfc6" aria-label="Selected keycap color"></label>
+<div class="color-field"><span>Key color</span><input id="cap-color" type="color" value="#e9dfc6" aria-label="Selected keycap color"></div>
 <p class="micro">Tap a key to choose it, or to select its row or column. Columns exclude the thumb row.</p><div id="cap-palettes" class="cap-palettes" aria-label="Keycap color presets"></div>
 <details><summary>My palettes <span>save / import / export</span></summary><label>Palette name<input id="cap-palette-name" maxlength="40" placeholder="My palette"></label><button id="save-cap-palette">Save current key colors</button><p id="cap-library-empty" class="micro">Save both halves as a reusable palette.</p><div id="custom-cap-palettes"></div><div class="config-actions"><button id="export-cap-palettes">Export palettes</button><button id="import-cap-palettes">Import palettes</button><input id="cap-palette-file" type="file" accept=".json,application/json" hidden></div></details></details>
 <div id="key-presets" class="preview-grid key-presets" role="group" aria-label="Keycap presets"></div>

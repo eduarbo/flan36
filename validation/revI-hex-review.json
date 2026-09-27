@@ -1,0 +1,61 @@
+{
+  "baseline_commit": "34d69bf887787b4aaabbb1c555699c0ed5f60c16",
+  "requests": [
+    "Investigate apparently mispositioned KLP caps in the viewer",
+    "Make every color editable and copyable as HEX without requiring the native RGB picker"
+  ],
+  "required_results": [
+    "Check source stem registration and native/viewer placements before changing cap geometry",
+    "HEX input and Copy for caps, case, frame body and accents; preserve targets and stored configurations",
+    "Validate and synchronize the existing public main/viewer"
+  ],
+  "reviewers": [
+    {
+      "role": "independent domain/constructive",
+      "recommendation": "Publish; no material objection"
+    },
+    {
+      "role": "independent adversarial/reliability",
+      "recommendation": "Publish; no material objection"
+    }
+  ],
+  "agreement": "Preserve cap layout and nominal seating: no source/native registration error demonstrated. Publish the tested HEX controls to the existing destination.",
+  "findings_disposition": [
+    {
+      "severity": "MEDIUM",
+      "finding": "Moving caps based on silhouette or whole-switch bounding box can break aligned stems; physical seating remains unqualified.",
+      "disposition": "No CAD, mesh, catalog, position, rotation or seating edits."
+    },
+    {
+      "severity": "LOW",
+      "finding": "Desktop screenshot did not show HEX controls.",
+      "disposition": "Scroll to frame HEX controls before capturing; rerun focused test."
+    },
+    {
+      "severity": "LOW",
+      "finding": "Ignored test artifacts need regeneration instructions.",
+      "disposition": "Exact commands and acceptance described in docs/customize.md; outputs remain ignored under build/."
+    },
+    {
+      "severity": "LOW",
+      "finding": "Side-section plot should reflect the cap Y axis to match native placement.",
+      "disposition": "Apply the same Y reflection in the diagram only; rerun registration check."
+    }
+  ],
+  "retrospective": {
+    "cause": "Color codes were read-only text beside native color inputs; there was no plain-text editing/copy control.",
+    "correction": "Shared editable HEX and Copy helper on all seven color controls.",
+    "prevention": "Focused clipboard, validation, mixed selection, scope, persistence and mobile checks plus existing palette/GLB regression."
+  },
+  "post_review_changes": [
+    "viewer/hex-check.cjs",
+    "tools/check_keycap_registration.py",
+    "docs/customize.md",
+    "validation/revI-keycap-registration.json",
+    "validation/revI-color-hex.json",
+    "docs/images/revI-keycap-registration.png"
+  ],
+  "viewer_sha256": "ef064fd65e251028e193e26cb9acbc19a105136d5f4d1df8d9587aaa1ae538e8",
+  "geometry_modified": false,
+  "publication": "Pending public readback of the synchronized commit."
+}

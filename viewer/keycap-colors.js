@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
+import {enhanceColorInput} from './color-input.js';
 import library from '../design/keycap-themes.json';
 import {copy} from './config.js';
 const sides=['left','right'],paletteStorageSlot='flan36.keycap-palettes.v1';
@@ -23,6 +24,7 @@ export function validatePaletteFile(value,catalog){
  return copy(value.palettes);
 }
 export function createKeycapColors({$,catalog,get,apply,message}){
+ const colorHex=enhanceColorInput($('cap-color'));
  let selection={side:'both',mode:'all',row:0,column:1,keySide:'left',key:'K01'},custom=[],initialWarning='';
  try{const saved=localStorage.getItem(paletteStorageSlot);if(saved)custom=validatePaletteFile(JSON.parse(saved),catalog);}catch{initialWarning='Saved palettes could not be read. Your keyboard colors are still in its configuration.';}
  const buttons=[];
@@ -61,7 +63,7 @@ export function createKeycapColors({$,catalog,get,apply,message}){
   for(const {b,side,k} of buttons){const color=c.keycaps[side][k.ref].color||defaultCapColor(k);b.style.setProperty('--cap-color',color);const value=parseInt(color.slice(1),16),l=((value>>16)*.2126+(value>>8&255)*.7152+(value&255)*.0722);b.style.color=l>140?'#23332e':'#fff';b.setAttribute('aria-pressed',String(ids.has(side+':'+k.ref)));}
   for(const b of $('cap-side').children)b.setAttribute('aria-pressed',String(b.dataset.side===selection.side));
   $('cap-mode').value=selection.mode;$('cap-row').value=String(selection.row);$('cap-column').value=String(selection.column);$('cap-row-label').hidden=selection.mode!=='row';$('cap-column-label').hidden=selection.mode!=='column';
-  const colors=targets.map(([s,k])=>c.keycaps[s][k.ref].color||defaultCapColor(k));$('cap-color').value=colors[0]||'#e9dfc6';$('cap-color-value').textContent=new Set(colors.map(c=>c.toLowerCase())).size>1?'Mixed':colors[0];$('cap-selection').textContent=`${targets.length} ${targets.length===1?'key':'keys'} · ${selection.side==='both'?'both halves':selection.side+' half'}`;
+  const colors=targets.map(([s,k])=>c.keycaps[s][k.ref].color||defaultCapColor(k));$('cap-color').value=colors[0]||'#e9dfc6';colorHex.sync(colors);$('cap-selection').textContent=`${targets.length} ${targets.length===1?'key':'keys'} · ${selection.side==='both'?'both halves':selection.side+' half'}`;
  }
  renderCustom();sync();
  return {sync,initialWarning,focus(side,ref){if(ref){selection={...selection,side,mode:'key',keySide:side,key:ref};sync();}}};

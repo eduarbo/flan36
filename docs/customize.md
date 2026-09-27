@@ -108,3 +108,24 @@ Choose **Base → Solid / Color rim / Terrace** in the explorer. Each half has i
 ## Coordinated themes and print kits
 
 See [Make it yours](themes-printing.md) for sixteen palettes, linked frame/rim colors, individual color regions, device saving and the selected-parts print kit.
+
+### Copy and paste colors
+
+Every color swatch has an editable HEX field and a **Copy** button. Paste `#34A87C` or `34A87C` to apply it immediately. Three-digit values such as `#abc` apply with Enter or when leaving the field. Select a key, row, column or half before pasting. Mixed selections show **Mixed** until you assign one color. Invalid text leaves the model unchanged; Escape restores the current value.
+
+### Why the switch stem is visible
+
+The 36 cap centers and rotations match their switches in the native CAD and viewer. In the source meshes, paired cap stems align with slots at ±2.85 mm and extend 1.75 mm below the switch stem's top. The visible red section is part of that switch model. No seating offset was changed from the screenshot alone; physical printed fit remains untested.
+
+![Sections through the actual KLP and Choc source meshes](images/revI-keycap-registration.png)
+
+Reproduce the registration check and this diagram with `python tools/check_keycap_registration.py` in the CAD Python environment with `tools/requirements-registration.txt` installed. Results: [registration measurements](../validation/revI-keycap-registration.json).
+
+Focused viewer check (disposable Chromium profile):
+
+```sh
+node viewer/build.mjs
+FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/hex-check.cjs
+```
+
+This regenerates ignored `build/hex-check/` screenshots and `result.json`. It must exit successfully with no runtime errors; the result's viewer SHA-256 must match `docs/index.html`. `node viewer/keycolors-check.cjs` with the same environment checks color targets, palettes, persistence and GLB colors in ignored `build/keycolors/`. Rebuild the ignored scene first with `python tools/build_viewer_revI.py` if its source hashes are stale.

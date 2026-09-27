@@ -708,7 +708,7 @@
     },
     {
       "path": "viewer/app.js",
-      "sha256": "5f4d902dce7644a9dc892685bd074de6921a19e3a34bbad3ca78e209b54780bc"
+      "sha256": "0be7b7e02d1cb2565e628ea7efe628e0df037ab5bf7b398809685e102da74981"
     },
     {
       "path": "viewer/config.js",
@@ -720,7 +720,11 @@
     },
     {
       "path": "viewer/keycap-colors.js",
-      "sha256": "7c697954e8df523f9c46bd030cd4af78a2142479af76c40fd9d8eb492c4ae6de"
+      "sha256": "0461cd718298fbface1e60f657ab1389f8654bcd2dd496636ddcd0d9640c6543"
+    },
+    {
+      "path": "viewer/color-input.js",
+      "sha256": "c6abbe21dd8af64db7a6d111d1757265580924e0e0028b482e9814d5ec1e1f16"
     },
     {
       "path": "design/keycap-themes.json",
@@ -728,7 +732,7 @@
     },
     {
       "path": "viewer/appearance.js",
-      "sha256": "a46faf18f905debeacd9f32f861b16d5a39877f95b4b082b1aee9653f1945d53"
+      "sha256": "a0c582fe166420c9afabd8e14166dc17e56d078ddb6d0286b9eee15b66baf8b8"
     },
     {
       "path": "viewer/printing.js",
@@ -760,22 +764,22 @@
     },
     {
       "path": "viewer/style.css",
-      "sha256": "5323f0c975c2e5fb9d34705624c165030220f3128e33e5d684d64f7ec0ab4da1"
+      "sha256": "01fc9b5f5adbca554c683ac692ef299a77a7b8905e51b7282c953939f1adbe33"
     },
     {
       "path": "viewer/template.html",
-      "sha256": "41d67c01454049af80ea08a411da6dfb650f32457aaf768f8f2897969b67e3b5"
+      "sha256": "7860d3bee6a2fb2db406e379f78b2ea23c6100240340f37ad01f2cdaabbaaf0e"
     },
     {
       "path": "viewer/build.mjs",
-      "sha256": "4438866add46d3c53686af7cf63ab728bd1b40985d3765caba62cef689943d5f"
+      "sha256": "278ec3d152897e745604d671980f5aebe830e94c5965b4f6967b696b316f05a4"
     },
     {
       "path": "viewer/package-lock.json",
       "sha256": "a62090e2bb0ab32205ff582bd3612ff167dc03d9db4c2b6879bb98f5bf25d550"
     }
   ],
-  "viewer_sha256": "d408f0a5d82b006bb4d96c1475ab16933aee097dd59fd7fa62473ed8d3f9355a",
+  "viewer_sha256": "ef064fd65e251028e193e26cb9acbc19a105136d5f4d1df8d9587aaa1ae538e8",
   "measurements": {
     "bay_width_mm": 24,
     "plate_top_mm": 7.6,
