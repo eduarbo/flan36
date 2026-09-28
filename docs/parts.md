@@ -17,9 +17,9 @@ This is a planning BOM for the revI mechanical study and PCB outline. **It is no
 | [1N4148W SMD diodes](https://typeractive.xyz/products/smd-diodes) | **4 packs of 10** | SOD-123 family; verify supplied marking/footprint |
 | [Machine sockets and pins](https://typeractive.xyz/products/machine-sockets-and-pins) | **2 kits** | Store uses Mill-Max **310**, study references **315**; substitution needs height/pin check |
 | [EZ-Solder sockets/headers](https://typeractive.xyz/products/ez-machine-sockets-and-headers) | **2 kits**, instead of the preceding kits | Easier header handling; taller, not qualified in this stack |
-| [5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) | Optional **1 pack of 2** | Extras; nice!view already includes sockets/pins. Published 7 mm installed height differs from our nominal stack |
+| [5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) | Optional **1 pack of 2** | Extras; nice!view includes sockets/pins. The model now uses the published 5 mm socket + 2 mm male spacer height; fit remains unqualified |
 | [110 mAh battery](https://typeractive.xyz/products/lithium-battery-110mah) | **2**, connector variant to resolve | Supported nominal envelope in the shared 12.5 mm aperture; physical pack fit pending |
-| [Battery jack](https://typeractive.xyz/products/battery-jack) | **1 pack of 2** | JST S2B-PH-K reference; orientation/footprint not closed |
+| [Battery jack](https://typeractive.xyz/products/battery-jack) | **1 pack of 2** | JST S2B-PH-K-S side-entry reference; 2 mm nominal footprint |
 | [Power switch](https://typeractive.xyz/products/power-switch) | **1 pack of 2** | Alps part differs from the C&K reference; footprint change/check required |
 | [Reset button](https://typeractive.xyz/products/reset-button) | **1 pack of 2** | Panasonic part differs from the E-Switch reference; not a drop-in approval |
 
@@ -65,7 +65,7 @@ An exact Pro Red manufacturer PDF has not been verified here; the family page is
 
 <a href="https://www.adafruit.com/product/1570"><img src="https://cdn-shop.adafruit.com/145x109/1570-00.jpg" width="210" alt="Adafruit 1570 battery — supplier product photo"></a>
 
-**CAD reference: 2 × Adafruit 1570, protected 1S LiPo, sold as 100 mAh.** The model uses the product page’s **11.5 × 31 × 3.8 mm** envelope; two 105 mm lead storage paths are modeled as a nominal reservation.
+**CAD reference: 2 × Adafruit 1570, protected 1S LiPo, sold as 100 mAh.** The model uses the product page’s **11.5 × 31 × 3.8 mm** envelope; two continuous nominal 105 mm lead paths include cell-end bends and plug interfaces. Their 0.6 mm insulation diameter and terminal positions remain assumptions.
 
 **Datasheet:** [supplier-linked PKCELL PDF](https://cdn-shop.adafruit.com/product-files/1570/1570datasheet.pdf). **Full information and purchase:** [Adafruit 1570](https://www.adafruit.com/product/1570). The linked PDF names a **401230 / 105 mAh** cell, while the listing says 100 mAh: confirm the actual supplied pack and its dimensions before closing the cradle. The product page limits charging to **100 mA or less**; the nice!nano charger configuration must respect the actual cell’s limit.
 
@@ -80,7 +80,7 @@ An exact Pro Red manufacturer PDF has not been verified here; the family page is
 | Adafruit 1570 | 11.5 × 31 × 3.8 mm | 0.50 mm per side | 0.40 mm |
 | 301230 | 12 × 30 × 3 mm | 0.25 mm per side | 1.20 mm |
 
-These are nominal clearances, not maximum finished-pack tolerances. Confirm protection-board wrapping, insulation at PCB edges, lead exit, connector polarity and charging limits on the delivered pack. The smaller pack can move within the cage; its full translation envelope remains clear of the modeled leads. No autonomy estimate is promised.
+These are nominal clearances, not maximum finished-pack tolerances. Confirm protection-board wrapping, insulation at PCB edges, lead exit, connector polarity and charging limits on the delivered pack. The smaller pack can move within the cage; delivered-pack retention and lead strain still need a physical check. No autonomy estimate is promised.
 
 ## Removable connectors
 
@@ -92,7 +92,7 @@ These are nominal clearances, not maximum finished-pack tolerances. Confirm prot
 
 <a href="https://typeractive.xyz/products/5-pin-sockets"><img src="https://cdn.shopify.com/s/files/1/0618/5674/3655/products/nice-view-sockets.jpg?v=1671232737" width="210" alt="5-Pin Sockets — supplier product photo"></a>
 
-**Display connectors:** 2 × 5-position sockets and 10 matching pins. [Typeractive 5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) are the included nice!view type, sold separately in pairs; 5 mm socket plus 2 mm display pin gives a stated 7 mm installation height. Our reference display PCB is **8.8 mm above the main PCB top**, so contact lengths and support height need reconciliation. No separate connector datasheet is linked.
+**Display connectors:** 2 × 5-position sockets and 10 matching pins. [Typeractive 5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) are the included nice!view type, sold separately in pairs; 5 mm socket plus 2 mm display pin gives a stated 7 mm installation height. The revised reference puts the display PCB **7 mm above the main PCB top**. That matches the stated installation height; actual pin engagement and solder tolerances still need measurement. No separate connector datasheet is linked.
 
 [No-solder spring headers](https://typeractive.xyz/products/no-solder-spring-headers) require the supplier’s specified **0.8–0.9 mm holes** and different installed heights. They are not qualified for the current Flan36 hole/contact geometry. Do not buy them as an assumed shortcut.
 
@@ -104,7 +104,7 @@ These are nominal clearances, not maximum finished-pack tolerances. Confirm prot
 
 <a href="https://typeractive.xyz/products/battery-jack"><img src="https://cdn.shopify.com/s/files/1/0618/5674/3655/products/jst-all_ea8f3d9e-2644-4b11-91c9-7098c3b8c07c.jpg?v=1674443612" width="210" alt="Battery Jack — supplier product photo"></a>
 
-**2 × battery jacks.** [Typeractive JST PH 2.0 mm](https://typeractive.xyz/products/battery-jack) · [JST S2B-PH-K drawing](https://cdn.shopify.com/s/files/1/0618/5674/3655/files/JST-S2B-PH-K.pdf?v=1670451309). Connector orientation and battery polarity must match the final PCB and pack; the CAD block does not settle the footprint.
+**2 × battery jacks.** [Typeractive JST PH 2.0 mm](https://typeractive.xyz/products/battery-jack) · [JST S2B-PH-K drawing](https://cdn.shopify.com/s/files/1/0618/5674/3655/files/JST-S2B-PH-K.pdf?v=1670451309). The PCB study now uses a 2 mm side-entry footprint and the CAD uses a nominal mated header/PHR-2 envelope. Check the purchased pack's polarity and terminal dimensions before assembly.
 
 <a href="https://typeractive.xyz/products/power-switch"><img src="https://cdn.shopify.com/s/files/1/0618/5674/3655/products/switch-both.jpg?v=1670366180" width="210" alt="Power Switch — supplier product photo"></a>
 
@@ -112,7 +112,7 @@ These are nominal clearances, not maximum finished-pack tolerances. Confirm prot
 
 <a href="https://typeractive.xyz/products/reset-button"><img src="https://cdn.shopify.com/s/files/1/0618/5674/3655/products/reset-button-both.jpg?v=1670365788" width="210" alt="Reset Button — supplier product photo"></a>
 
-**2 × reset buttons.** Reference: **E-Switch TL3342F160QG**, [full product information](https://www.e-switch.com/product/tl3342-series-low-profile-smt-tactile-switch/) · [datasheet](https://configured-product-images.s3.amazonaws.com/2D/specs/TL3342F160QG.pdf). Typeractive sells **Panasonic EVQPUC02K**, [product information](https://typeractive.xyz/products/reset-button) · [Panasonic datasheet](https://cdn.shopify.com/s/files/1/0618/5674/3655/files/PANASONIC-EVQPUC02K.pdf?v=1670451309). The photo is the **Panasonic alternative**. Footprint and actuation height must be reviewed before substitution.
+**2 × reset buttons.** Reference: **E-Switch TL3342F160QG**, [full product information](https://www.e-switch.com/product/tl3342-series-low-profile-smt-tactile-switch/) · [datasheet](https://configured-product-images.s3.amazonaws.com/2D/specs/TL3342F160QG.pdf). Typeractive sells **Panasonic EVQPUC02K**, [product information](https://typeractive.xyz/products/reset-button) · [Panasonic datasheet](https://cdn.shopify.com/s/files/1/0618/5674/3655/files/PANASONIC-EVQPUC02K.pdf?v=1670451309). The photo is the **Panasonic alternative**. The E-Switch reference is mounted below the PCB with recessed tool access through the case floor. Footprint, actuation height and underside clearance must be reviewed before substituting the Panasonic part.
 
 ## Printed parts
 

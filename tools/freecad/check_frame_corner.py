@@ -12,7 +12,7 @@ import FreeCADGui as G
 import Part
 
 ROOT = Path(__file__).resolve().parents[2]
-G.showMainWindow()
+G.showMainWindow();G.getMainWindow().hide()
 doc = A.openDocument(str(ROOT/'mechanical/revI/Flan36.FCStd'))
 profiles = json.loads((ROOT/'design/revI-profiles.json').read_text())
 frames = json.loads((ROOT/'design/revI-frame-profiles.json').read_text())
@@ -51,7 +51,7 @@ report = {'source_sha256': hashlib.sha256((ROOT/'mechanical/revI/Flan36.FCStd').
           'shared_corner_checks': rows, 'previous_corner_rejected': True,
           'scope': 'Native corner geometry; physical fit remains untested'}
 (ROOT/'validation/revI-frame-corner.json').write_text(json.dumps(report, indent=2)+'\n')
-sys.__stdout__.write('PASS: 12 native frame corners coincide with the case; former mismatch rejected\n')
+sys.__stdout__.write(f'PASS: {len(rows)} native frame corners coincide with the case; former mismatch rejected\n')
 sys.__stdout__.flush()
 if os.environ.get('FILO_FREECAD_SUBPROCESS') == '1':
     os._exit(0)

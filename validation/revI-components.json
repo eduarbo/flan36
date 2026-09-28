@@ -1,5 +1,5 @@
 {
-  "source_sha256": "38733a3a9a5fb6add4df8e668b9ae5178f44b3f864c6ee9416bfb147b2053fdf",
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
   "model_identity_without_reflection": true,
   "nano_symmetry_difference_after_translation_mm3": 0.0,
   "checks": [
@@ -10,7 +10,7 @@
         34.624,
         3.200000000000001
       ],
-      "positive_board_support_area_mm2": 30.815158172592906,
+      "positive_board_support_area_mm2": 30.815158172592753,
       "solder_reserve_intersection_mm3": 0.0,
       "mcu_riser_intersection_mm3": 0.0,
       "library_material_counts": {
@@ -25,7 +25,7 @@
         34.624,
         3.200000000000001
       ],
-      "positive_board_support_area_mm2": 30.81515817259485,
+      "positive_board_support_area_mm2": 30.8151581725947,
       "solder_reserve_intersection_mm3": 0.0,
       "mcu_riser_intersection_mm3": 0.0,
       "library_material_counts": {
@@ -35,9 +35,9 @@
     }
   ],
   "switch_instances": 36,
+  "display_pcb_separation_mm": 7.0,
   "remaining": [
-    "Measured connector contacts and solder tolerances",
-    "Display connector 7 mm versus modeled 8.8 mm",
+    "Measured connector contacts, pin engagement and solder tolerances",
     "Hotswap socket assembly registration",
     "Physical fit and operation"
   ]

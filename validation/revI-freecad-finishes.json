@@ -1,52 +1,111 @@
 {
   "passed": true,
   "source_unchanged": true,
-  "source_sha256": "38733a3a9a5fb6add4df8e668b9ae5178f44b3f864c6ee9416bfb147b2053fdf",
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "checker_sha256": "9b1ab801386c63ca0ccc2c13ecd5b31e07184a299ea88e0139e372250905a158",
   "styles": [
     {
       "side": "left",
       "style": "handheld",
-      "colored_faces": 114,
+      "colored_faces": 87,
       "distinct_colors": 4,
       "visible_link_inherits_materials": true
     },
     {
       "side": "right",
       "style": "handheld",
-      "colored_faces": 114,
+      "colored_faces": 87,
       "distinct_colors": 4,
       "visible_link_inherits_materials": true
     },
     {
       "side": "left",
       "style": "tv",
-      "colored_faces": 109,
+      "colored_faces": 91,
       "distinct_colors": 4,
       "visible_link_inherits_materials": true
     },
     {
       "side": "right",
       "style": "tv",
-      "colored_faces": 109,
+      "colored_faces": 91,
       "distinct_colors": 4,
       "visible_link_inherits_materials": true
     },
     {
       "side": "left",
       "style": "cyberpunk",
-      "colored_faces": 113,
+      "colored_faces": 87,
       "distinct_colors": 4,
       "visible_link_inherits_materials": true
     },
     {
       "side": "right",
       "style": "cyberpunk",
-      "colored_faces": 113,
+      "colored_faces": 87,
+      "distinct_colors": 4,
+      "visible_link_inherits_materials": true
+    },
+    {
+      "side": "left",
+      "style": "cartridge",
+      "colored_faces": 92,
+      "distinct_colors": 4,
+      "visible_link_inherits_materials": true
+    },
+    {
+      "side": "right",
+      "style": "cartridge",
+      "colored_faces": 92,
+      "distinct_colors": 4,
+      "visible_link_inherits_materials": true
+    },
+    {
+      "side": "left",
+      "style": "arcade",
+      "colored_faces": 97,
+      "distinct_colors": 4,
+      "visible_link_inherits_materials": true
+    },
+    {
+      "side": "right",
+      "style": "arcade",
+      "colored_faces": 97,
+      "distinct_colors": 4,
+      "visible_link_inherits_materials": true
+    },
+    {
+      "side": "left",
+      "style": "mecha",
+      "colored_faces": 94,
+      "distinct_colors": 4,
+      "visible_link_inherits_materials": true
+    },
+    {
+      "side": "right",
+      "style": "mecha",
+      "colored_faces": 94,
+      "distinct_colors": 4,
+      "visible_link_inherits_materials": true
+    },
+    {
+      "side": "left",
+      "style": "kintsugi",
+      "colored_faces": 89,
+      "distinct_colors": 4,
+      "visible_link_inherits_materials": true
+    },
+    {
+      "side": "right",
+      "style": "kintsugi",
+      "colored_faces": 89,
       "distinct_colors": 4,
       "visible_link_inherits_materials": true
     }
   ],
   "json_body_override_roundtrip": true,
   "edited_roof_mm": 17.2,
-  "saved_reopened_colors": true
+  "saved_reopened_colors": true,
+  "native_screenshot_rendered": false,
+  "rendered_qa": "Separate VTK and browser material/image checks; no native screenshot claimed for offscreen Qt."
 }

@@ -12,7 +12,17 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
-## Revision I — keycap palettes and creative frames
+## Current revision I — slimmer stack and flush decoration
+
+The electronics cover now targets **14.8 mm** from the case underside, with a **12.4 mm display PCB datum**. The battery moves 0.8 mm toward USB without rotation. A lateral PH connector, retained display socket and recessed underside reset make the interfaces explicit. Both Adafruit 1570 and 301230 have their own continuous nominal lead routes.
+
+Handheld, Retro TV, Cyberpunk, Cartridge, Arcade, Mecha and Kintsugi use **0.4 mm flush color volumes** with at least 0.8 mm nominal backing. The ten frame styles, 36 original key transforms, case contour and magnetic interface are preserved. Selected KLP caps still set the overall 17.87 mm height, excluding feet.
+
+[Design and service sequence](slim-flush.md) · [Current digital delivery checks](../validation/revI-slim-flush.json). Exact supplied parts, wire flex, printed fits and electrical operation remain unqualified.
+
+The entries below describe their historical snapshots. Current files may supersede their geometry; original receipts retain the hashes of the files tested at the time.
+
+## Earlier revision I — keycap palettes and creative frames
 
 Color all keys, a row, a column or one key, on either half or both. Eight keycap palettes and sixteen coordinated global themes provide starting points. Personal palettes can be saved, imported and exported; configurations retain all 36 colors without changing key shapes or rotations. [Color editor](customize.md#keycap-colors).
 
@@ -22,11 +32,11 @@ The [measured support study](slim-mount-study.md) covers both halves, both batte
 
 Publication verified: all **1,013 implementation files** match the anonymous archive. The public viewer passes desktop/touch checks, per-key palettes, coordinated themes, configuration/GLB round trips and six selected print kits. [Public readback](../validation/revI-customization-publication.json). Physical keyboard acceptance remains open.
 
-## Revision I — shared frame corner and height study
+## Earlier revision I — shared frame corner and height study
 
 The USB-side frame corner now uses the case's actual R2.4 arc. The previous R1.2 frame produced a roughly 0.497 mm diagonal overhang. The cavity, plate clearance and beveled profiles follow that shared definition. Case/PCB outlines and key positions are unchanged. [Close view and height comparison](design.md#can-the-stack-be-thinner) · [Native corner check](../validation/revI-frame-corner.json).
 
-The current 16.6 mm plain / 17.2 mm decorated cover is **not a proven minimum**. A preliminary left-half study lowers the display and evaluates 15.6 / 16.2 mm covers; actual connector engagement and tolerances remain open. A 14.8 mm plain cover intersects the existing battery-connector envelope. Printable source heights remain unchanged. [Study](../validation/revI-stack-study.json) · [Correction scope](../design/corner-stack-workflow.json) · [Independent review](../validation/revI-corner-stack-review.json).
+That snapshot’s 16.6 mm plain / 17.2 mm decorated cover was **not a proven minimum**. A preliminary left-half study lowers the display and evaluates 15.6 / 16.2 mm covers; actual connector engagement and tolerances remain open. A 14.8 mm plain cover intersects the existing battery-connector envelope. Printable source heights remain unchanged. [Study](../validation/revI-stack-study.json) · [Correction scope](../design/corner-stack-workflow.json) · [Independent review](../validation/revI-corner-stack-review.json).
 
 Publication verified: all **922 implementation files** matched the anonymous archive; public Pages, the corner image, desktop/touch UI and selected print exports matched the tested source. [Public readback](../validation/revI-corner-stack-publication.json).
 

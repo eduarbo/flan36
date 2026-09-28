@@ -21,7 +21,7 @@ For keycaps, frame styles and colors, use the [configurator and companion macro]
 
 ### 1. Change the cover
 
-In **Parameters**, change `FrameTop` from **16.6 to 17.2 mm** and recompute. Plain covers extend to the new top height; themed relief stays 0.6 mm above it. Save, close and reopen to confirm the change, then restore 16.6 mm.
+In **Parameters**, increase `FrameTop` by **0.4 mm** and recompute. The cover and its co-printed color volumes follow the new roof together; no decoration rises above it. Save, close and reopen to confirm the change, then restore the original value.
 
 `FrameRoof` controls roof thickness and `WindowMargin` the clearance around the glass. Start from 1.2 and 0.4 mm respectively. The supplied dimensions were checked as a nominal assembly; arbitrary edits are not automatically cleared for fit or printing. For new frame shapes, edit the outline sketch (or loft sections for Beveled/Faceted) while preserving the shared cavity and mounts.
 
@@ -33,9 +33,9 @@ Hide the active frame and keycaps. Change `DisplayShiftY` from **2.4 to 3.4 mm**
 
 ### 3. Inspect the PCB with StepUp
 
-Open `hardware/revI/flan36-left.kicad_pro` in KiCad. RevI matches the chosen contour and adds battery/magnet clearances. H1/H3/H4/H5, J1 and SW1 move; all key transforms, footprint identities and nets are preserved. Switches are locked to preserve the layout; both boards remain unrouted.
+Open `hardware/revI/flan36-left.kicad_pro` in KiCad. RevI matches the chosen contour and adds battery/magnet clearances. The current slim interfaces use a 2 mm JST PH footprint at J1, a bottom-mounted reset at SW2, and the revised battery opening. All key transforms and nets are preserved. Switches are locked to preserve the layout; both boards remain unrouted.
 
-The project-relative STEP files show the current nominal component models in KiCad's 3D Viewer. Their source, colors and placement are checked without changing footprints. Connector reserves and unqualified fit remain identified in the [component guide](../components/README.md).
+The project-relative STEP files show the current nominal component models in KiCad's 3D Viewer. Their source, colors and placement are checked without changing footprints. The side-entry battery connector is a nominal reconstruction; measured fit limits remain identified in the [component guide](../components/README.md).
 
 In StepUp, enable **Virtual models**, keep **Grid Origin**, include holes from **0 mm**, and apply no outline tolerance. The boards’ grid origin is explicitly **(10, 10) mm**. In a new FreeCAD document, use **Load KiCad PCB**.
 

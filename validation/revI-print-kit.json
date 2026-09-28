@@ -1,254 +1,446 @@
 {
   "passed": true,
+  "viewer_sha256": "201550cb807cf7e1fb946c59ebce4344e6ce2be2cfb61f17454daa57778a1a57",
+  "checker_sha256": "7981a3c93aad5ef9164a90f8ce728d4edbcfac3cf26e12c35f2a0510b217cce9",
   "kits": [
     {
       "file": "complete.zip",
+      "zip_sha256": "24d626bee9f5b334f8f4a1e0efe2bdbff7621f0c08d6f41439a8aaccc9dadd97",
       "parts": [
         {
           "id": "left-case-rim-base",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 12668,
+          "fallback_triangles": 13092,
           "colors": [
             "#cc5533",
             "#cc5533",
             "#cc5533",
             "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-case-rim-plate",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 3356,
+          "fallback_triangles": 3356,
           "colors": [
             "#272737",
             "#272737",
             "#272737",
             "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-frame-tv",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 5084,
+          "fallback_triangles": 4418,
           "colors": [
             "#cc5533",
             "#313131",
             "#eeee88",
             "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 4660,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 32,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 416,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 48,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-cradle",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 84,
+          "fallback_triangles": 84,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 84,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-battery-retainer",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 100,
+          "fallback_triangles": 100,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 100,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-mcu-riser",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 3804,
+          "fallback_triangles": 3812,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3812,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-display-sled",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 2260,
+          "fallback_triangles": 116,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 116,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-washer-1",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 840,
+          "fallback_triangles": 840,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 840,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-washer-2",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 840,
+          "fallback_triangles": 840,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 840,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-washer-3",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 840,
+          "fallback_triangles": 840,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 840,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-case-rim-base",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 12666,
+          "fallback_triangles": 13090,
           "colors": [
             "#24444b",
             "#24444b",
             "#24444b",
             "#24444b"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13090,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-case-rim-plate",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 3356,
+          "fallback_triangles": 3356,
           "colors": [
             "#19272f",
             "#19272f",
             "#19272f",
             "#19272f"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-cradle",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 84,
+          "fallback_triangles": 84,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 84,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-battery-retainer",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 100,
+          "fallback_triangles": 100,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 100,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-mcu-riser",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 3804,
+          "fallback_triangles": 3812,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3812,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-display-sled",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 2260,
+          "fallback_triangles": 116,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 116,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-washer-1",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 840,
+          "fallback_triangles": 840,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 840,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-washer-2",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 840,
+          "fallback_triangles": 840,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 840,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "right-washer-3",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 840,
+          "fallback_triangles": 840,
           "colors": [
             "#78908a",
             "#78908a",
             "#78908a",
             "#78908a"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 840,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         }
       ],
@@ -256,44 +448,727 @@
     },
     {
       "file": "left-shells.zip",
+      "zip_sha256": "b96e450f956c95d0895013d42570e27cb3012a3390ce97e7a27da972e03b3edd",
       "parts": [
         {
           "id": "left-case-rim-base",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 12668,
+          "fallback_triangles": 13092,
           "colors": [
             "#cc5533",
             "#cc5533",
             "#cc5533",
             "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-case-rim-plate",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 3356,
+          "fallback_triangles": 3356,
           "colors": [
             "#272737",
             "#272737",
             "#272737",
             "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         },
         {
           "id": "left-frame-tv",
           "stl_bytes_identical": true,
-          "oriented_surface_preserved": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
           "closed": true,
-          "triangles": 5084,
+          "fallback_triangles": 4418,
           "colors": [
             "#cc5533",
             "#313131",
             "#eeee88",
             "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 4660,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 32,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 416,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 48,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        }
+      ],
+      "eye_solo_explosion_do_not_remove_printables": true
+    },
+    {
+      "file": "handheld-shells.zip",
+      "zip_sha256": "bc7f52bf1b992df6d1e2807daa773dc910cfc0b395863570c155ca2cb89b6089",
+      "parts": [
+        {
+          "id": "left-case-rim-base",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 13092,
+          "colors": [
+            "#cc5533",
+            "#cc5533",
+            "#cc5533",
+            "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-case-rim-plate",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 3356,
+          "colors": [
+            "#272737",
+            "#272737",
+            "#272737",
+            "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-frame-handheld",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 4628,
+          "colors": [
+            "#cc5533",
+            "#313131",
+            "#eeee88",
+            "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 5096,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 44,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 832,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 36,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        }
+      ],
+      "eye_solo_explosion_do_not_remove_printables": true
+    },
+    {
+      "file": "tv-shells.zip",
+      "zip_sha256": "5cb54ac4f8970ca204d252ff824fef857b27d2f843152118cd547911e0e0952d",
+      "parts": [
+        {
+          "id": "left-case-rim-base",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 13092,
+          "colors": [
+            "#cc5533",
+            "#cc5533",
+            "#cc5533",
+            "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-case-rim-plate",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 3356,
+          "colors": [
+            "#272737",
+            "#272737",
+            "#272737",
+            "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-frame-tv",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 4418,
+          "colors": [
+            "#cc5533",
+            "#313131",
+            "#eeee88",
+            "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 4660,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 32,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 416,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 48,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        }
+      ],
+      "eye_solo_explosion_do_not_remove_printables": true
+    },
+    {
+      "file": "cyberpunk-shells.zip",
+      "zip_sha256": "4e5694cf06c2acc3c1ad166eb348e5855c7c4b5803f24fd662e2ddf16a863379",
+      "parts": [
+        {
+          "id": "left-case-rim-base",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 13092,
+          "colors": [
+            "#cc5533",
+            "#cc5533",
+            "#cc5533",
+            "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-case-rim-plate",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 3356,
+          "colors": [
+            "#272737",
+            "#272737",
+            "#272737",
+            "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-frame-cyberpunk",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 4418,
+          "colors": [
+            "#cc5533",
+            "#313131",
+            "#eeee88",
+            "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 4676,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 36,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 28,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 428,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        }
+      ],
+      "eye_solo_explosion_do_not_remove_printables": true
+    },
+    {
+      "file": "cartridge-shells.zip",
+      "zip_sha256": "8f846ad2c690d542c00545edbd01b1bfb2094f6de69b5190882bcd3897f38364",
+      "parts": [
+        {
+          "id": "left-case-rim-base",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 13092,
+          "colors": [
+            "#cc5533",
+            "#cc5533",
+            "#cc5533",
+            "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-case-rim-plate",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 3356,
+          "colors": [
+            "#272737",
+            "#272737",
+            "#272737",
+            "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-frame-cartridge",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 4332,
+          "colors": [
+            "#cc5533",
+            "#313131",
+            "#eeee88",
+            "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 4504,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 204,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 84,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 12,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        }
+      ],
+      "eye_solo_explosion_do_not_remove_printables": true
+    },
+    {
+      "file": "arcade-shells.zip",
+      "zip_sha256": "f780e2c02d67deccbc892c53bb1dda8250ac9483803c1e2c3d4e225fcee2397f",
+      "parts": [
+        {
+          "id": "left-case-rim-base",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 13092,
+          "colors": [
+            "#cc5533",
+            "#cc5533",
+            "#cc5533",
+            "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-case-rim-plate",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 3356,
+          "colors": [
+            "#272737",
+            "#272737",
+            "#272737",
+            "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-frame-arcade",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 5220,
+          "colors": [
+            "#cc5533",
+            "#313131",
+            "#eeee88",
+            "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 6280,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 124,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 1248,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 684,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        }
+      ],
+      "eye_solo_explosion_do_not_remove_printables": true
+    },
+    {
+      "file": "mecha-shells.zip",
+      "zip_sha256": "300f4b5c2cb8504ced41278982188a42d3636ae0a4cb1dfc34ee982678751c3b",
+      "parts": [
+        {
+          "id": "left-case-rim-base",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 13092,
+          "colors": [
+            "#cc5533",
+            "#cc5533",
+            "#cc5533",
+            "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-case-rim-plate",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 3356,
+          "colors": [
+            "#272737",
+            "#272737",
+            "#272737",
+            "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-frame-mecha",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 4498,
+          "colors": [
+            "#cc5533",
+            "#313131",
+            "#eeee88",
+            "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 4836,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 136,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 72,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 416,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        }
+      ],
+      "eye_solo_explosion_do_not_remove_printables": true
+    },
+    {
+      "file": "kintsugi-shells.zip",
+      "zip_sha256": "72373bd8eaf5c48bfd4cb6d4c061f67a45fb342f7a421e9dbc39aa7b1d3fa0bc",
+      "parts": [
+        {
+          "id": "left-case-rim-base",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 13092,
+          "colors": [
+            "#cc5533",
+            "#cc5533",
+            "#cc5533",
+            "#cc5533"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 13092,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-case-rim-plate",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 3356,
+          "colors": [
+            "#272737",
+            "#272737",
+            "#272737",
+            "#272737"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 3356,
+              "closed": true,
+              "native_surface_exact": true
+            }
+          ]
+        },
+        {
+          "id": "left-frame-kintsugi",
+          "stl_bytes_identical": true,
+          "native_material_surfaces_preserved": true,
+          "shared_registration": true,
+          "closed": true,
+          "fallback_triangles": 5734,
+          "colors": [
+            "#cc5533",
+            "#313131",
+            "#eeee88",
+            "#6688ee"
+          ],
+          "materials": [
+            {
+              "role": "body",
+              "triangles": 7310,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "detail",
+              "triangles": 32,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "accent",
+              "triangles": 3078,
+              "closed": true,
+              "native_surface_exact": true
+            },
+            {
+              "role": "secondary",
+              "triangles": 12,
+              "closed": true,
+              "native_surface_exact": true
+            }
           ]
         }
       ],

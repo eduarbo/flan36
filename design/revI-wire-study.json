@@ -1,77 +1,275 @@
 {
+  "schema": "flan36-wire-route-3",
   "units": "mm",
   "diameter": 0.6,
-  "center_z": [
-    7.3,
-    8.1
-  ],
   "minimum_bend_radius_mm": 1.5,
   "centerline_length_mm": 105,
-  "control_points": [
-    [
-      117.5,
-      47.81327713730718
+  "profiles": {
+    "adafruit-1570": [
+      {
+        "cell_end": [
+          118.2,
+          45.3,
+          4.2
+        ],
+        "return_center_y": 47.4,
+        "return_radius": 1.5,
+        "storage_z": 7.2,
+        "control_points": [
+          [
+            118.2,
+            47.4
+          ],
+          [
+            118.2,
+            22.365264186250236
+          ],
+          [
+            127.5,
+            22.365264186250236
+          ],
+          [
+            127.5,
+            28
+          ],
+          [
+            120.6,
+            28
+          ],
+          [
+            120.6,
+            43
+          ],
+          [
+            127.0,
+            43
+          ],
+          [
+            127.0,
+            47.6
+          ],
+          [
+            130.6,
+            47.6
+          ],
+          [
+            130.6,
+            54.1
+          ],
+          [
+            115.3,
+            54.1
+          ],
+          [
+            115.3,
+            59.2
+          ],
+          [
+            117.2,
+            59.2
+          ]
+        ],
+        "length_mm": 105.0
+      },
+      {
+        "cell_end": [
+          119.0,
+          45.3,
+          5.0
+        ],
+        "return_center_y": 47.4,
+        "return_radius": 1.5,
+        "storage_z": 8.0,
+        "control_points": [
+          [
+            119.0,
+            47.4
+          ],
+          [
+            119.0,
+            20.96526418625026
+          ],
+          [
+            128.3,
+            20.96526418625026
+          ],
+          [
+            128.3,
+            28
+          ],
+          [
+            121.39999999999999,
+            28
+          ],
+          [
+            121.39999999999999,
+            43
+          ],
+          [
+            127.0,
+            43
+          ],
+          [
+            127.0,
+            47.6
+          ],
+          [
+            130.6,
+            47.6
+          ],
+          [
+            130.6,
+            54.1
+          ],
+          [
+            115.3,
+            54.1
+          ],
+          [
+            115.3,
+            57.2
+          ],
+          [
+            117.2,
+            57.2
+          ]
+        ],
+        "length_mm": 105.0
+      }
     ],
-    [
-      117.5,
-      20.1
-    ],
-    [
-      128,
-      20.1
-    ],
-    [
-      128,
-      26
-    ],
-    [
-      121,
-      26
-    ],
-    [
-      121,
-      30.5
-    ],
-    [
-      128,
-      30.5
-    ],
-    [
-      128,
-      35
-    ],
-    [
-      121,
-      35
-    ],
-    [
-      121,
-      39.5
-    ],
-    [
-      128,
-      39.5
-    ],
-    [
-      128,
-      44
-    ],
-    [
-      122.8,
-      44
-    ],
-    [
-      122.8,
-      52.8
-    ],
-    [
-      116,
-      52.8
-    ],
-    [
-      116,
-      55.9
+    "301230": [
+      {
+        "cell_end": [
+          118.2,
+          44.8,
+          4.2
+        ],
+        "return_center_y": 47.4,
+        "return_radius": 1.5,
+        "storage_z": 7.2,
+        "control_points": [
+          [
+            118.2,
+            47.4
+          ],
+          [
+            118.2,
+            22.615264186250236
+          ],
+          [
+            127.5,
+            22.615264186250236
+          ],
+          [
+            127.5,
+            28
+          ],
+          [
+            120.6,
+            28
+          ],
+          [
+            120.6,
+            43
+          ],
+          [
+            127.0,
+            43
+          ],
+          [
+            127.0,
+            47.6
+          ],
+          [
+            130.6,
+            47.6
+          ],
+          [
+            130.6,
+            54.1
+          ],
+          [
+            115.3,
+            54.1
+          ],
+          [
+            115.3,
+            59.2
+          ],
+          [
+            117.2,
+            59.2
+          ]
+        ],
+        "length_mm": 105.0
+      },
+      {
+        "cell_end": [
+          119.0,
+          44.8,
+          5.0
+        ],
+        "return_center_y": 47.4,
+        "return_radius": 1.5,
+        "storage_z": 8.0,
+        "control_points": [
+          [
+            119.0,
+            47.4
+          ],
+          [
+            119.0,
+            21.21526418625026
+          ],
+          [
+            128.3,
+            21.21526418625026
+          ],
+          [
+            128.3,
+            28
+          ],
+          [
+            121.39999999999999,
+            28
+          ],
+          [
+            121.39999999999999,
+            43
+          ],
+          [
+            127.0,
+            43
+          ],
+          [
+            127.0,
+            47.6
+          ],
+          [
+            130.6,
+            47.6
+          ],
+          [
+            130.6,
+            54.1
+          ],
+          [
+            115.3,
+            54.1
+          ],
+          [
+            115.3,
+            57.2
+          ],
+          [
+            117.2,
+            57.2
+          ]
+        ],
+        "length_mm": 105.0
+      }
     ]
-  ],
-  "status": "Nominal storage for two105mm insulated leads. Wire diameter/bend radius and actual cell/connector terminations require verification; not a wiring instruction."
+  },
+  "status": "Nominal continuous cell-end to mated PHR-2 leads including rear return bend. Stock105 mm lead length retained. 0.6 mm insulation diameter and inferred cell/plug terminals require measurement; not supplier tolerance or physical-fit certification.",
+  "release": "Lift frame, then lift display and support together. Bottom-open support relief leaves wires stationary. Leads detour around the retained J2 socket end. Remove MCU before straight5 mm sideways PH unplug and24 mm lift; flexing leads require a physical service trial."
 }

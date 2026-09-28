@@ -1,0 +1,2290 @@
+{
+  "schema": "flan36-slim-flush-delivery-1",
+  "digital_update_accepted": true,
+  "manufacturing_qualified": false,
+  "physical_acceptance": false,
+  "native_source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "viewer_sha256": "201550cb807cf7e1fb946c59ebce4344e6ce2be2cfb61f17454daa57778a1a57",
+  "frame_top_mm": 14.8,
+  "decorated_frame_top_mm": 14.8,
+  "coverage": [
+    {
+      "side": "left",
+      "frame": "smooth",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "smooth",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "bevel",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "bevel",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "facet",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "facet",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "handheld",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "handheld",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "tv",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "tv",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "cyberpunk",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "cyberpunk",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "cartridge",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "cartridge",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "arcade",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "arcade",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "mecha",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "mecha",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "left",
+      "frame": "kintsugi",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "left",
+      "frame": "kintsugi",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "smooth",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "smooth",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "bevel",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "bevel",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "facet",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "facet",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "handheld",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "handheld",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "tv",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "tv",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "cyberpunk",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "cyberpunk",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "cartridge",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "cartridge",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "arcade",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "arcade",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "mecha",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "mecha",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    },
+    {
+      "side": "right",
+      "frame": "kintsugi",
+      "battery": "adafruit-1570",
+      "cell_to_frame_vertical_gap_mm": 0.5000001907348635
+    },
+    {
+      "side": "right",
+      "frame": "kintsugi",
+      "battery": "301230",
+      "cell_to_frame_vertical_gap_mm": 1.3000001907348633
+    }
+  ],
+  "decorated_variants": 14,
+  "native_material_volumes": 56,
+  "print_kits": 9,
+  "bottom_reset_actual_kicad_registration": true,
+  "connector_continuous_housing_and_grip_sweeps": true,
+  "retained_j2_sockets": 2,
+  "socket_width_depth_and_engagement_qualified": false,
+  "four_lead_analytic_bounds_stable_under_tessellation": true,
+  "exporter_logical_collision_pairs_audited": 2242,
+  "wire_flex_validated": false,
+  "fresh_native_and_viewer_renders": true,
+  "local_markdown_links_checked": 197,
+  "prospective_own_output_links": 3,
+  "limits": [
+    "Digital geometry: continuous nominal PH housing/grip sweeps and sampled frame/module extraction only.",
+    "J2 socket height follows the supplier; its 13.2 \u00d7 3 mm body width/depth, contacts and engagement remain assumptions.",
+    "Stock lead diameter, finished-pack dimensions and terminal engagement remain assumptions.",
+    "Flexible unplug motion, wire forces, measured polarity and electrical operation remain unqualified.",
+    "Printed fit, magnetic retention, RF, charging and PCB routing remain unqualified."
+  ],
+  "inputs": [
+    {
+      "path": "ATTRIBUTION.md",
+      "sha256": "d639a05187f48ac692c6345f1fd42a1d0e1f314b3dbc594af88d307cccdc4d31"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "d227b7dee0a8644fa7cb3211abf2c9e42198e7190f45b3c6561df0945d235e8f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "98aa40f211f4519d60d4e3ba5bb736dfd5e7042cc596644cb4b647f6ae751e2b"
+    },
+    {
+      "path": "build/hex-check/result.json",
+      "sha256": "ca0ff1da4194e01b337c3e54102abcabcbf061e77f48deebf75d503c38af0b5e"
+    },
+    {
+      "path": "build/slim-flush/battery-viewer/result.json",
+      "sha256": "9bbb02d58fb69b1f8227ae2ed78eabad1311c24978712c31b29f1646466fdcf1"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/left-display.step",
+      "sha256": "d802934f8ef4fe3f19570ee4d0f73d23b7f9b04eafabfecbf53cc9038a0c46a2"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/left-jst.step",
+      "sha256": "d7032004257c6b99a20d76198d1d42fc8e6c190601fe69d0a0cdb3aded0885d4"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/left-mcu.step",
+      "sha256": "c16e261bcf30becd9245ddc63d3db13ac35be5fabe843894f3125429096501a2"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/left-reset.step",
+      "sha256": "45502c68557bfbf83295556329d43db65da740cdc21e5ae87870cc0a33914db1"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/left-slider.step",
+      "sha256": "8fa240177713fee40297bdfd7960a3c9dee317c3c3286452739e42e1200d3df7"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/right-display.step",
+      "sha256": "10e6a9b5dedd6cd6a815855ebd3ae1cb765af5bb3bf7fd2b0d3c05c55faa432c"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/right-jst.step",
+      "sha256": "4ba83888e79371471382ed56c60dfba0f16f57a18ea4941372c34e3df2f8d434"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/right-mcu.step",
+      "sha256": "ff59eb37564b44248de20c99b1ecf3560ad5614328bd8aaab154acb96d469574"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/right-reset.step",
+      "sha256": "cd50361d3b7977fc83fe97de48817d5a4fff2caf0bc6c1c2a2c08930aa905c0d"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/actual/right-slider.step",
+      "sha256": "09a3d49d74ebafd34072cd83ae6c43b0a96dbf2cab3ccb03231efd4956ff68f5"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/calibration/back0.step",
+      "sha256": "4b536b46330ac18acd4a23e4a7028c6b5e65de112bf2e4f3e3f20b3b1e4ec3be"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/calibration/back180.step",
+      "sha256": "a69eddff533c699f221f6be092f1f74678b31186f1aa11614c5d607f634667b4"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/calibration/back90-corrected.step",
+      "sha256": "38be5a9c79e965967fc2183f226e94358098835732d5861261ef145352d673ec"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/calibration/back90.step",
+      "sha256": "33522a679b5cffccb9cd8765f010b8e84c5c3056cb20b925781871ba2ba2cb72"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/calibration/front0-corrected.step",
+      "sha256": "1a6372c29862695bbd0ff8c29e30e8e0bdd63014f758cda77654086fe64d2eea"
+    },
+    {
+      "path": "build/slim-flush/pcb-step-registration/calibration/front0.step",
+      "sha256": "5f2f52d65828ff056b7e76f85c723b14072be904e75fa25bd5ea6d1bf36a4b55"
+    },
+    {
+      "path": "build/themes-print/arcade-shells.zip",
+      "sha256": "f780e2c02d67deccbc892c53bb1dda8250ac9483803c1e2c3d4e225fcee2397f"
+    },
+    {
+      "path": "build/themes-print/cartridge-shells.zip",
+      "sha256": "8f846ad2c690d542c00545edbd01b1bfb2094f6de69b5190882bcd3897f38364"
+    },
+    {
+      "path": "build/themes-print/complete.zip",
+      "sha256": "24d626bee9f5b334f8f4a1e0efe2bdbff7621f0c08d6f41439a8aaccc9dadd97"
+    },
+    {
+      "path": "build/themes-print/cyberpunk-shells.zip",
+      "sha256": "4e5694cf06c2acc3c1ad166eb348e5855c7c4b5803f24fd662e2ddf16a863379"
+    },
+    {
+      "path": "build/themes-print/handheld-shells.zip",
+      "sha256": "bc7f52bf1b992df6d1e2807daa773dc910cfc0b395863570c155ca2cb89b6089"
+    },
+    {
+      "path": "build/themes-print/kintsugi-shells.zip",
+      "sha256": "72373bd8eaf5c48bfd4cb6d4c061f67a45fb342f7a421e9dbc39aa7b1d3fa0bc"
+    },
+    {
+      "path": "build/themes-print/left-shells.zip",
+      "sha256": "b96e450f956c95d0895013d42570e27cb3012a3390ce97e7a27da972e03b3edd"
+    },
+    {
+      "path": "build/themes-print/mecha-shells.zip",
+      "sha256": "300f4b5c2cb8504ced41278982188a42d3636ae0a4cb1dfc34ee982678751c3b"
+    },
+    {
+      "path": "build/themes-print/nano-v2.png",
+      "sha256": "7d9f6759aeb736ab96f1936055b6c8c0a03a9e8d866a3601081640d856ee9889"
+    },
+    {
+      "path": "build/themes-print/print-validation.json",
+      "sha256": "ff438d118c5442ce3a917118456e5fd3dbeca944b3c0790f0283d59a139c83af"
+    },
+    {
+      "path": "build/themes-print/themes-desktop.png",
+      "sha256": "f65ddc2c3ae42ed5e9f8852e0b7d741165f819c70c4538d7d0185917df1e106e"
+    },
+    {
+      "path": "build/themes-print/tv-shells.zip",
+      "sha256": "5cb54ac4f8970ca204d252ff824fef857b27d2f843152118cd547911e0e0952d"
+    },
+    {
+      "path": "build/themes-print/ui.json",
+      "sha256": "a5b19bd9d326b54173171a68d5b410523183709e039bff6e2aed3b5e508f4517"
+    },
+    {
+      "path": "build/viewer-multicolor/geometry.json",
+      "sha256": "d238da0f1e310e4e4d119fce318f20dcb4ced42d46e428d4934eea83936a5abf"
+    },
+    {
+      "path": "build/viewer-scene.json",
+      "sha256": "bb43384390f5029de34b97f6c80dff227e66d5b349cfb29095a815e745b44d04"
+    },
+    {
+      "path": "build/viewer-sidebar/performance.json",
+      "sha256": "b7c0bd0b710aabd8e385e9d06a896b8dce44d631e3f02fb31f1114105bbd21c8"
+    },
+    {
+      "path": "build/viewer-ui-check.json",
+      "sha256": "91c95ecd82e09ed918cd8a8229f54fdf9b5e8c68202949cbd45720aa11ca5145"
+    },
+    {
+      "path": "components/sources.json",
+      "sha256": "ea497b753353f2f7405931a9daa330eee2c6f6d6b0fdc9900f2a970f15ebe614"
+    },
+    {
+      "path": "components/sources/SW_SPST_TL3342.step",
+      "sha256": "23b1770b921df25f489d37b5636ad4a292f966c00638da7b5cb4b7f97d11c639"
+    },
+    {
+      "path": "components/switches.json",
+      "sha256": "f4ba2ebd3125efe04f6447ed941aee8dc734a3677591fc13944170a54b410a8b"
+    },
+    {
+      "path": "design/batteries.json",
+      "sha256": "1c4d2037b6fb04ea7aab6ba1d2f780eda9d886ebf8dd1c403c2721743d0424ff"
+    },
+    {
+      "path": "design/cases.json",
+      "sha256": "f84fefc1b6caf551a491c7cf6d29c6dd999654997655fb22d58748e5da44606d"
+    },
+    {
+      "path": "design/frame-extensions.json",
+      "sha256": "adece1c6c0dfe2c4ca36bc142add236710a20ee43b94a175fe2460e3df701be7"
+    },
+    {
+      "path": "design/frame-finishes.json",
+      "sha256": "20b4888d29dd8f3af8450a6c80f5f9ae99649c2641cc74eb093850ba05f1b902"
+    },
+    {
+      "path": "design/keycap-themes.json",
+      "sha256": "c2abd59276e72b29b1fb5fd0eb7617b35ed48f9b1984da0daa5d47c630f3092d"
+    },
+    {
+      "path": "design/layout.json",
+      "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+    },
+    {
+      "path": "design/revI-frame-profiles.json",
+      "sha256": "9f75760ab53bfb554123ddc5223816a5177c9c7478eabad4337b841df38d874c"
+    },
+    {
+      "path": "design/revI-magnets.json",
+      "sha256": "4f953719a2e36c69fd566e90c3b0e6071d90fe5a990126e73a24186910e81ca8"
+    },
+    {
+      "path": "design/revI-mounts.json",
+      "sha256": "ee6a61232b1a8c308748af1174793664c41238a6c36cd166209e6d011d5592bd"
+    },
+    {
+      "path": "design/revI-profiles.json",
+      "sha256": "1320cd0423afc35282d9335610abc0d7cab12351e9e626a31c70808b01af4d73"
+    },
+    {
+      "path": "design/revI-wire-study.json",
+      "sha256": "ae2a204b383e6df81f59706e42a98c163f549183767da38c634fc8983d94a2f1"
+    },
+    {
+      "path": "design/revI.json",
+      "sha256": "8e2cb213c977a78cef89a871d56791cb32b1571093d18f18220fc9faccfc7688"
+    },
+    {
+      "path": "design/slim-flush-workflow.json",
+      "sha256": "3e8f0fcffe66c3ea867239e088b46d574b26856c78b13e63b8aff7562cfac0be"
+    },
+    {
+      "path": "design/themes.json",
+      "sha256": "3ca7926bae2afa5f46cae8fd9f2fc9984f040f75103135bb86f0e739f3ab50ce"
+    },
+    {
+      "path": "docs/branding.md",
+      "sha256": "63bdbcf7dd1503b4b8036f180ef880b5f9a68b085e0bceaa5d17010c3faf6fc4"
+    },
+    {
+      "path": "docs/build.md",
+      "sha256": "b03650bc98bf6e4694a1cba369cd6d35358e36ca6ad756c297ac9ab2a7f3f30d"
+    },
+    {
+      "path": "docs/cad.md",
+      "sha256": "c09d2830aba8546513984bfeff98a48373a1d033d2607f677c4164747b0aba44"
+    },
+    {
+      "path": "docs/cases.md",
+      "sha256": "b6fdd676f08b024ff142a9a13d6d9fc55ab00fa12d5e2ee98f5914266581e305"
+    },
+    {
+      "path": "docs/customize.md",
+      "sha256": "bd6fc2f6ee5b7ef0929da041fe2d407c998d736aa492835f0fc3e0a81a841be4"
+    },
+    {
+      "path": "docs/design.md",
+      "sha256": "41ea86676b327bf9257937b8b9c644468563c363bf8ea1de8ea2b1d1504d4781"
+    },
+    {
+      "path": "docs/frames-extra.md",
+      "sha256": "a73ec3a394fa094da5cda8cdc63082c73853dd092c5a986e3ace110d7e3c30e1"
+    },
+    {
+      "path": "docs/freecad.md",
+      "sha256": "d2dbc14f3ddf81011adb730bba1927d1a366c4929263f19750725926ad327ada"
+    },
+    {
+      "path": "docs/images/revI-assembled.png",
+      "sha256": "9badfafcbe889cb3633e1eecbb66789c2c7f9b50398c83cca2d6cfa682eafee0"
+    },
+    {
+      "path": "docs/images/revI-case-rim-open.png",
+      "sha256": "c1853c4b87e9bb44806aafb7f3bb981614cf26a55663ecec5241e3b10022312a"
+    },
+    {
+      "path": "docs/images/revI-case-rim.png",
+      "sha256": "10e7d40d207b5de447edd09bd8b1242d6ebe097897bf31dc126338eb86533105"
+    },
+    {
+      "path": "docs/images/revI-case-solid.png",
+      "sha256": "f32e2ad089265e48f013e790ddd546c5b944d8cc4dc3fd42e5edfe1a380cc32f"
+    },
+    {
+      "path": "docs/images/revI-case-terrace.png",
+      "sha256": "128bca8e19ca5f86f3562136659a9724deef76cfcbad951266e0fd59a39c86b8"
+    },
+    {
+      "path": "docs/images/revI-corner.png",
+      "sha256": "792f907fa574f02e9b29c051f410b2ada508689a0d5f068936945b9278818544"
+    },
+    {
+      "path": "docs/images/revI-detail.png",
+      "sha256": "fb76e491946b04b36d65f18f0dbbf52267cf6f595a30641a06fd384fd64b2ddc"
+    },
+    {
+      "path": "docs/images/revI-frames.png",
+      "sha256": "ac24533d6bc3d2a026edbf3208cb6d48537a2482c37fd962ff67efa66b422308"
+    },
+    {
+      "path": "docs/images/revI-nano-v2.png",
+      "sha256": "7d9f6759aeb736ab96f1936055b6c8c0a03a9e8d866a3601081640d856ee9889"
+    },
+    {
+      "path": "docs/images/revI-side.png",
+      "sha256": "7e0ee87dc6ae5c85e970a22e35160087f8d0e9b5bbbf1ad55ac3eb45c243e694"
+    },
+    {
+      "path": "docs/images/revI-stack.png",
+      "sha256": "9cd8b7adbf18a69a3f1e02096bd589eae3ae1f47fa5a42e562b3cb955c0d08ce"
+    },
+    {
+      "path": "docs/images/revI-themes.png",
+      "sha256": "f65ddc2c3ae42ed5e9f8852e0b7d741165f819c70c4538d7d0185917df1e106e"
+    },
+    {
+      "path": "docs/images/revI-top.png",
+      "sha256": "94b3969847afaa6fad220b70f9c91de0d806ef9842d969df8d9d5f9d9bca15fb"
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "201550cb807cf7e1fb946c59ebce4344e6ce2be2cfb61f17454daa57778a1a57"
+    },
+    {
+      "path": "docs/parts.md",
+      "sha256": "f9393948d0e6fae5a343751a242417d158ca1c22798af982765f66c6660d7349"
+    },
+    {
+      "path": "docs/progress.md",
+      "sha256": "93e5080e0447cbb35047a16799f71e1624062ea710f5f668c7b9c6c8ccb78326"
+    },
+    {
+      "path": "docs/revF-review.md",
+      "sha256": "9e7bfbe04d6708084441a9ef75830386cabc660896e7120f05e2d6fc0064a5fa"
+    },
+    {
+      "path": "docs/revG-review.md",
+      "sha256": "fe1b8babcbfd8918c3ac991dd0d3db83a96050edf59607559da0e5007edf2beb"
+    },
+    {
+      "path": "docs/revH-review.md",
+      "sha256": "a413ed6014d0420a17322d896c4c374ea08b6e3eb8b6eb71789558b47377a6cd"
+    },
+    {
+      "path": "docs/revI-review.md",
+      "sha256": "38b0392dd307b3accb7d09b2c0b88e2754a60b29eb53fc12ad890df743bbb8e1"
+    },
+    {
+      "path": "docs/slim-flush.md",
+      "sha256": "444731048afed14d9ce9c4867a1047c62897c8a1547c918748458e4a0ebec83d"
+    },
+    {
+      "path": "docs/slim-mount-study.md",
+      "sha256": "35f6bd4c3b4de22008e53a0392f6b4154fe97ed93853fe872bb912688c5b8569"
+    },
+    {
+      "path": "docs/themes-printing.md",
+      "sha256": "2f99099708a9a89483dbb56c0b5624484829d0fd89d685591f9285a27d4a776e"
+    },
+    {
+      "path": "docs/viewer.md",
+      "sha256": "19291aedd3c688561f3070a7b10f926b48948edf4cb24e1bb24eca7e00523bfc"
+    },
+    {
+      "path": "hardware/revI/flan36-left.kicad_pcb",
+      "sha256": "d9227ea364eb2c6fa229a68fb802c291700d9eb4cbd0d6db0e99595af8b321e3"
+    },
+    {
+      "path": "hardware/revI/flan36-right.kicad_pcb",
+      "sha256": "dc71d07b61b01b7d1a4b8680f66f0ee17e075bf614d5ed7cc8f2d8ed98ebf290"
+    },
+    {
+      "path": "hardware/revI/models/left-display.step",
+      "sha256": "9156e0c0ad36052d92c7d3c45bcadfb7e7fe2ab88775bad6893082fff479c0bb"
+    },
+    {
+      "path": "hardware/revI/models/left-jst.step",
+      "sha256": "7fbd3d396560ebf81339a1c670d09a17f3c6fca58576ae18192b641f3f4ef7ee"
+    },
+    {
+      "path": "hardware/revI/models/left-mcu.step",
+      "sha256": "2f7ec25940f2f0a9bf03ef1a0d3779ee7ae9eac94b2535eddc73137139ea46dc"
+    },
+    {
+      "path": "hardware/revI/models/left-reset.step",
+      "sha256": "e2cc3fce3e5285abeac184be1363e591d110ea7acef17a584d5386094a28cd56"
+    },
+    {
+      "path": "hardware/revI/models/left-slider.step",
+      "sha256": "e5777cc2d636ad4de0a88954f328c7ecf6d8a74d65b01b92ad89325af4aee181"
+    },
+    {
+      "path": "hardware/revI/models/right-display.step",
+      "sha256": "e8362e259c5be83644151731f5765fee160c8a6814c95228f65c86e5af54bc4c"
+    },
+    {
+      "path": "hardware/revI/models/right-jst.step",
+      "sha256": "73dc102a096d13321b273fd6ab4c1464e28bbe21ab0411fdceb4310e5a89da85"
+    },
+    {
+      "path": "hardware/revI/models/right-mcu.step",
+      "sha256": "ee8e8a2471dda69786b6b5499defa01319a456bd662d65bce6644400e75818b4"
+    },
+    {
+      "path": "hardware/revI/models/right-reset.step",
+      "sha256": "80b393b78f60ab4b4a3d80d3e471bba1efdc3b5c7b9aa5743606b11bd6f40ca2"
+    },
+    {
+      "path": "hardware/revI/models/right-slider.step",
+      "sha256": "d665acee2c48d4c5040172aea0f7cef4364130247187b2c6bd230eecf254c775"
+    },
+    {
+      "path": "keycaps/catalog.json",
+      "sha256": "a2f461be0342cb75b2595c3b8fd90048ad81833cb8656094b1cd375c61afbf04"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal.stl",
+      "sha256": "2e4110f314d848bbacc23585e3002b648e5eb094501d98d206db821867381a53"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_90deg.stl",
+      "sha256": "a6deb4abac72914e12b16a10061c65f84d15fd3e8990c98490443289f8047eeb"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_Homing.stl",
+      "sha256": "ef7c5c9940daf78d8a8fd95efc2a9772a37394e26b74d56319f4b5b7609ea441"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_Homing_90deg.stl",
+      "sha256": "2cb6e93f80298eb185f81dd4d19ee3efa76542b7f31994285478d6fd06616280"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_Tilted.stl",
+      "sha256": "03fa50d76416d226904fab95c5a3ded3663f6b5bafaff695683d8fa7979ecf8d"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_Tilted_90deg.stl",
+      "sha256": "c75c5c245360a674c3456749d278aad42b13814ca8aaa4ce9fce6f26e8dbf004"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle.stl",
+      "sha256": "53e3d75f5dd1bd60d82d617df20fdc05651ef21efb9464e8d5ee297e50b9667d"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_90deg.stl",
+      "sha256": "b7a940d3a2ef0d317213508fcb43538d95e3251f03449c16df862ff3c46dd3de"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Homing.stl",
+      "sha256": "c399efe2a89ee1478254273e0a2bf2bcbaa2bdb57c1cb264390ee63f906c047a"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Homing_90deg.stl",
+      "sha256": "51afd2b2064a59bfb4734c41a52ea2f956391e2104474edda3efdf4140168100"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Tilted.stl",
+      "sha256": "59457a575470c5672c8c9d766a739fefab06dc1f082b34887287eb4f392b2f4f"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Tilted_90deg.stl",
+      "sha256": "c2030a0608ae886af36f229f38cff43ea1bbc1aebd01983a2d26d3a4745df068"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Thumb.stl",
+      "sha256": "20e8239ce4836e22906220a39ae17a55e584107240a0b00571f4132b9e26054c"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_Choc_Size_Thumb_90deg.stl",
+      "sha256": "fadfca2053db5e04a9981b7b9b33a825d19908de6ca4743aafd8ae2e31bed373"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Normal.stl",
+      "sha256": "1499d70bdd1ca0efd8c9ce50d8bd179a2ca85f17fc6af7f97105279015199712"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_90deg.stl",
+      "sha256": "724f857b14c97660fc11a745964e7445e4b0a160b6187b5228efd1e441dc085b"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_Homing.stl",
+      "sha256": "895d4cbb3db780da7e947b6ad035c0013799df066ee262721365c3724e8f3a98"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_Homing_90deg.stl",
+      "sha256": "cbdede3fbc0ce215fe0f3b4821fcadbeb66d5f0d0c3a36b33e3a665004b553ae"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_Tilted.stl",
+      "sha256": "a6b0d6ade5f38eab16ad8b1dace8d658df87f4a255eb3f1de819ed2485757eb9"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_Tilted_90deg.stl",
+      "sha256": "5261a017cdd9db33e605399986ac2acce60fecc41dd37a67745b2b4f2012a1fd"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle.stl",
+      "sha256": "2ee598afe3835aa5d76888ced84a803769d492f7da9a83a557bfec4e967c5af0"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_90deg.stl",
+      "sha256": "05f9101d5d45c62d8b7b6904df7a1b6aaf13a8ac455a7b555d5e1e8ce6213a3b"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_Homing.stl",
+      "sha256": "c57b1b8fa2a1ca25ffd2d1c5aaa23902fa50f39e6236a31d33aa3de1610b9f4c"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_Homing_90deg.stl",
+      "sha256": "946f1a996b59fff5d659bc4c3d4af6962fee3097cc4731fe884df844a7731743"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_Tilted.stl",
+      "sha256": "d1c78001dbaa44784197fe71c1c9219ed1f433794646e1c48ca926317678a2b5"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_Tilted_90deg.stl",
+      "sha256": "c5b623ff9a9df2470eaceaec34796ac2859cc4bd02e2ea130c8ccb9feeb30c26"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Thumb.stl",
+      "sha256": "046c67773c539c11883b248de156e4659890c90d6220c20f5f457ca717e540b6"
+    },
+    {
+      "path": "keycaps/variants/Choc_Stem_MX_Size_Thumb_90deg.stl",
+      "sha256": "45884c2db33a15e3cf5b3c3aac6a5cf5c762d4529233709955738a4c0f0097ed"
+    },
+    {
+      "path": "mechanical/revI/Flan36.FCStd",
+      "sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc"
+    },
+    {
+      "path": "mechanical/revI/component-choc-body-0.stl",
+      "sha256": "9229bc3d2f35b843fc49f2466de5a7721d0564605c6f74f6170882b607ced273"
+    },
+    {
+      "path": "mechanical/revI/component-choc-body-1.stl",
+      "sha256": "fd2037091f03b8f73da6e70c818c44876bcf07201d1566c05f765065aaffe8e6"
+    },
+    {
+      "path": "mechanical/revI/component-choc-body-2.stl",
+      "sha256": "ab768ccbdff4d5e0faafb7e3386e38e55f0741c19cbef44802d8638bda461483"
+    },
+    {
+      "path": "mechanical/revI/component-choc-body-3.stl",
+      "sha256": "89b16261a6255d2853ede257c37af4312884aee43b6f946114c072c936a72c72"
+    },
+    {
+      "path": "mechanical/revI/component-choc-stem-0.stl",
+      "sha256": "b430e51cb2ec8e08139f8cae490ea506a24b728243ec7b292298101e8a9a3ae4"
+    },
+    {
+      "path": "mechanical/revI/coupon-m2-thread.stl",
+      "sha256": "ccd732a7fb45d346d82a944c30918c84b2ca5eb4f17398a64a77de1ae7f62d0e"
+    },
+    {
+      "path": "mechanical/revI/coupon-magnet-base.stl",
+      "sha256": "c48717505265c6e0d932de1b4983b829a6a16640fe0531f9f70e6939c205a8d4"
+    },
+    {
+      "path": "mechanical/revI/coupon-magnet-frame.stl",
+      "sha256": "58fb07056dd7f6a577d53024892eb5242a69270ae5b01d93178e12b9e686fe6f"
+    },
+    {
+      "path": "mechanical/revI/left-battery-301230.stl",
+      "sha256": "dd0152686f9065c0580eef5ad2d0cfd91c924b4ccef241db1b7ae57c27e20d2b"
+    },
+    {
+      "path": "mechanical/revI/left-battery-adafruit-1570.stl",
+      "sha256": "03bc0d183a3b083f55609fea237406e84aa1d3cb4d41a57131c4c9c60c754644"
+    },
+    {
+      "path": "mechanical/revI/left-battery-lead-0.stl",
+      "sha256": "f32c3c15c22d5df59007a8cad1556d4cdd688dbfc6685ffafb2eca5b82841501"
+    },
+    {
+      "path": "mechanical/revI/left-battery-lead-1.stl",
+      "sha256": "b9b866b4b3bc82f32fac45e2ffa1641be2b8a148533c7b462339f9ef057e8990"
+    },
+    {
+      "path": "mechanical/revI/left-battery-lead-301230-0.stl",
+      "sha256": "8abcec454f269307a140a9c8f0c8fa802b4a17230cea79f258ddd03d1dbe90a8"
+    },
+    {
+      "path": "mechanical/revI/left-battery-lead-301230-1.stl",
+      "sha256": "edecc5ea7160f8b7ff0a5b05bc15baf82cd8cae5efe4698bae565646bb8bb890"
+    },
+    {
+      "path": "mechanical/revI/left-battery-lead-adafruit-1570-0.stl",
+      "sha256": "f32c3c15c22d5df59007a8cad1556d4cdd688dbfc6685ffafb2eca5b82841501"
+    },
+    {
+      "path": "mechanical/revI/left-battery-lead-adafruit-1570-1.stl",
+      "sha256": "b9b866b4b3bc82f32fac45e2ffa1641be2b8a148533c7b462339f9ef057e8990"
+    },
+    {
+      "path": "mechanical/revI/left-battery-retainer.stl",
+      "sha256": "e649c29d03e194646fcf5ea6dbe2f913216bbc9887c65f68d9daf5cd9c9e687f"
+    },
+    {
+      "path": "mechanical/revI/left-battery.stl",
+      "sha256": "03bc0d183a3b083f55609fea237406e84aa1d3cb4d41a57131c4c9c60c754644"
+    },
+    {
+      "path": "mechanical/revI/left-case-rim-base.stl",
+      "sha256": "0e38e7747fa8820d28374cbbd1379b6d3c9c981fe923aa5296c57f749dac52cf"
+    },
+    {
+      "path": "mechanical/revI/left-case-rim-plate.stl",
+      "sha256": "61524ad3dfe85c28e3f7d9570299d2507da09f0868e853372b76cc1a502ed4f5"
+    },
+    {
+      "path": "mechanical/revI/left-case-solid-base.stl",
+      "sha256": "d56361c45002f21d3126b354a8cd674b0b211d5e516bee20a6cf54685d522330"
+    },
+    {
+      "path": "mechanical/revI/left-case-solid-plate.stl",
+      "sha256": "89650509b711ace0e3043d82b07fa197f86d63a2d1fe1115deb684bd8b41b7f1"
+    },
+    {
+      "path": "mechanical/revI/left-case-terrace-base.stl",
+      "sha256": "e67f8f7587841ef83a102f6258e43489821c689d0b8ae061def6a6d7171733b0"
+    },
+    {
+      "path": "mechanical/revI/left-case-terrace-plate.stl",
+      "sha256": "89650509b711ace0e3043d82b07fa197f86d63a2d1fe1115deb684bd8b41b7f1"
+    },
+    {
+      "path": "mechanical/revI/left-cradle.stl",
+      "sha256": "82a14c80da559a7dd3c497ed799ed4d5be94873e3c48d21b0a2dd9d39255f640"
+    },
+    {
+      "path": "mechanical/revI/left-display-sled.stl",
+      "sha256": "f602e3b58ca2e18b3343e4853f5becb6deb43155cce9e648542d0d1a68d582dd"
+    },
+    {
+      "path": "mechanical/revI/left-display-socket-visual-0.stl",
+      "sha256": "1e1c7ac98e6cf01a2a1b6a777cd251f603107d784367aba971679d1b4f8dc07a"
+    },
+    {
+      "path": "mechanical/revI/left-display-socket-visual-1.stl",
+      "sha256": "bb3778d7748ab4dbd2ffae3bc29a0d92a75da205ec2c8797f2ad40bfb56f52e2"
+    },
+    {
+      "path": "mechanical/revI/left-display-socket.stl",
+      "sha256": "6894a48dd284de881b33c8f403584994c851a384bd995047315a8323bbcc3cc6"
+    },
+    {
+      "path": "mechanical/revI/left-display-visual-0.stl",
+      "sha256": "9d99eae8e3a3b817bc4d48450bc15d92e57622b9229408da43aac52c4c6ff717"
+    },
+    {
+      "path": "mechanical/revI/left-display-visual-1.stl",
+      "sha256": "d9a021876c5f3c0e4fe0cd4875f6fe32c2fd610692702540e9d5fca7a9983d1c"
+    },
+    {
+      "path": "mechanical/revI/left-display-visual-2.stl",
+      "sha256": "093039052789c7b985dc62ea23b81542267f4e5fe3525e6bae8b0b36dc17f49d"
+    },
+    {
+      "path": "mechanical/revI/left-display-visual-3.stl",
+      "sha256": "95fe57da41f2bc1fd6e72fe0337034be45cf7a1de8dd4992bd04a6783ed2c2fc"
+    },
+    {
+      "path": "mechanical/revI/left-display-visual-4.stl",
+      "sha256": "045397016b4d434f6dd4ee46ca754b8e74f48f7b4681e909b34928a936cc26be"
+    },
+    {
+      "path": "mechanical/revI/left-display-visual-5.stl",
+      "sha256": "011cd3cf533b022837e86e943f97e5ef7d4d9d6b53ecd7cc34b8d8e004c59923"
+    },
+    {
+      "path": "mechanical/revI/left-display.stl",
+      "sha256": "a10436f70334c0a75b8d6d92e6a96f0e5c3766a00c961d6a53168271048af651"
+    },
+    {
+      "path": "mechanical/revI/left-electronics-lid.stl",
+      "sha256": "0b8db86d2bbbeec80a089f2888b9f0e3f976808612e5fa7944cde90e3cbd6731"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade-accent.step",
+      "sha256": "13098a6f9d9d7f45afc2f08b5324cc16d985bc59b1d33e907ba90cd6da85ec1e"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade-accent.stl",
+      "sha256": "dc3b2520ce1274325252617e861bfc8b35082a91d03ff6b854277002e8d96de1"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade-body.step",
+      "sha256": "c2601fe4e40fc46ea4c311a349a870cb3bc610ae493620d1afdbd31dcdda3d44"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade-body.stl",
+      "sha256": "240b369ef8e463f7d364195f5d5546f0e67b7e657740711c1c70a5ea1b09a5e8"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade-detail.step",
+      "sha256": "4e7c4b5c1f26c438de668f502210a608c2e4a29396cb62076ab8431583ff4709"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade-detail.stl",
+      "sha256": "cd666ca10fa63875db449eea3924c871b4b9a29aadb1cd22adb3133ad37b146d"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade-secondary.step",
+      "sha256": "beeedeabab24b09f819cf22194a9eeb1bf27eb5a66a7d3ea6c75385c2649ff8e"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade-secondary.stl",
+      "sha256": "f8a4b2f59b05ba5168af78ae73a52679995b76c3edf846e353db5cd9d6952e08"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade.step",
+      "sha256": "48a90a658854a0a7aefe5c8186038e2df0aa664f0bc8d263721d312f7357a847"
+    },
+    {
+      "path": "mechanical/revI/left-frame-arcade.stl",
+      "sha256": "3c477df18a102c4f5ceb5f9110c06e7f366ae5a2d66ea723fba1dd077ba308ee"
+    },
+    {
+      "path": "mechanical/revI/left-frame-bevel.step",
+      "sha256": "84ffaf209635a45c8b956085efdb115f4b6b648df8226c00e3741ce7f86d11eb"
+    },
+    {
+      "path": "mechanical/revI/left-frame-bevel.stl",
+      "sha256": "0b8db86d2bbbeec80a089f2888b9f0e3f976808612e5fa7944cde90e3cbd6731"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge-accent.step",
+      "sha256": "250380657a96afd1cffc6b44e54e5c96b845fc340d01c347dd364a7300001044"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge-accent.stl",
+      "sha256": "f44b27c1ec554b912608e9b9e612cae2eea1aa6ca9b071b262925bad8ccc201d"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge-body.step",
+      "sha256": "85bc4e8ed3eda0d5ce693832b5f4624d092da4a327bf9f8f80e347aa7e707a50"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge-body.stl",
+      "sha256": "6c21b2c41e7f1e60208351392ea68505cfbe3e6ca6bd5119093f878bbe9ab3b1"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge-detail.step",
+      "sha256": "eba480a1ea8c973135db8b69c84dcba4b20bb522f9577e521d33835dc94b351b"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge-detail.stl",
+      "sha256": "7cdcb00fdb6f909812430d8666dcfdc7c8ba758099c5b3083a376cffc5c4e7b1"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge-secondary.step",
+      "sha256": "71fce3f39548b448b06e6d6e25eb0317ab8d3a39df735ec7696ed65c7ce356c1"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge-secondary.stl",
+      "sha256": "1c4e7a36a4993c6482cf9057ed69bdaaaeb343538ad5056e28ce862ee003e420"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge.step",
+      "sha256": "9c0949df972232f85f2d263b13fd1c0fc21f2e385dc600cb4d887097e5fc553d"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cartridge.stl",
+      "sha256": "564362adbc4cef2f2a81704540f8f8e3497a60ff32c0c60381617a020a4dc74c"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-accent.step",
+      "sha256": "d31129fb4f5990868d704794b9c7899324ad546e1d07b2d9b473c0ab75af6b76"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-accent.stl",
+      "sha256": "289066854bdd665d15b076ac0901f5536c635eec9e00f1caa866061f380ab449"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-body.step",
+      "sha256": "e6536e6089c3d9ed2c8ef72b0eb2266a37ca035e7c0d12568b5e995470d4b4c8"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-body.stl",
+      "sha256": "7c18cd1dd8cee4c614ed90f0c2fc019eee2230b5e980f36fc052ddedf994cfbd"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-detail.step",
+      "sha256": "79a92eacbd6f9232aaac48fe2c33208910c1351f3fedaf5bd0c928e479a6d840"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-detail.stl",
+      "sha256": "52a3543eee083724c6cb48632e6aa518e420338e188abf9055490d1d3293ad89"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-secondary.step",
+      "sha256": "f49d160bd32fca4d9800e5a209c6d20afe00cf42eab44b3a00bfb1c95a81d987"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-secondary.stl",
+      "sha256": "0feae0c89840e11a86754977d0244cd32f18043418b767a373f1d62334604947"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk.step",
+      "sha256": "7681115ef0221266d96c276393bbf7e832268b075bd63ffdf5e3495caed5dcad"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk.stl",
+      "sha256": "f6883166e0d046b6744baa3279f52a1f9fac21899b7207d051dfb1b4706a3285"
+    },
+    {
+      "path": "mechanical/revI/left-frame-facet.step",
+      "sha256": "ed4f2a8a5d207956491e795022099d288e2bddc4a0d06adf60628f7402ed1772"
+    },
+    {
+      "path": "mechanical/revI/left-frame-facet.stl",
+      "sha256": "e9bf4e43af523d6dc04e86cfc4afa6f238c14ec3b7707c8d66ca66ae5df87038"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-accent.step",
+      "sha256": "57f0f80c7956acaa44f1c4e5515a7a705db331dd36fc04bf80a0e606d24e77e8"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-accent.stl",
+      "sha256": "dd6926b19fcee531b3c362c08fc8914ac94ed750c67e51d0e3af3dfe6a83492b"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-body.step",
+      "sha256": "aab34f48bae80e8d49a85abf82cfc5221801ba8e0d284fd85a1e30585ad75a73"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-body.stl",
+      "sha256": "9a797572c764f9d51f3a0317367764c677b14fd2540b25986a81a735a1705ec8"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-detail.step",
+      "sha256": "dbc60aabd7223028e6c284c937455f59724f06b867bd820021313b69af047e42"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-detail.stl",
+      "sha256": "05e3dff066cb4a3b3dfa308a645984eb6bc8b2aba119a536376227d9bc64e9d4"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-secondary.step",
+      "sha256": "2d274ae01ed72fb8e924da0165da13d2c3fadcb9422d76b30fb67247ba8dda22"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-secondary.stl",
+      "sha256": "ba9399123ecee1580a635d7fe6a609447b1f928e226c8147fdc6b25554b06e78"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld.step",
+      "sha256": "21733c3184ff8ffe7f77899062c275ca9565418dcb0f43c678852b6426a8927b"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld.stl",
+      "sha256": "10148e7b6104168fce30ab5aebad35f5c36a522bdd994e76e8a70ae001233697"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi-accent.step",
+      "sha256": "47d557d2c092e07ac35b50a3558145ed77743911ffb52a123d985c20f507f3b0"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi-accent.stl",
+      "sha256": "552f590594d8f70d4d4ef6b96775294a3be3536417729904fce656738ab11c54"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi-body.step",
+      "sha256": "a8a86f2a7d02651ff943bf827474a7341fbc088f1237d83a8dfaa2152fee2795"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi-body.stl",
+      "sha256": "9797b12944d491358f568d77284236db4a0d196abb6d8d5bfaa8e2001b351262"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi-detail.step",
+      "sha256": "a8a1098629824f69807803ba5770b1e0fb00bbc0ac7dc38f47b6a14de27e252f"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi-detail.stl",
+      "sha256": "0be6e1e28631dd7d6602009416e4ecf4ae7bc45411321b11f190d6a9922dbc9f"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi-secondary.step",
+      "sha256": "76c083e4231569ee1891c9ca0a2bd713b86c28a4d68c28913f98e0e98674e6d1"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi-secondary.stl",
+      "sha256": "252d894312180019c06d6ddbe351af4eb0f7f2e30f605cca8d6d51deba0b7a51"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi.step",
+      "sha256": "15f9a5ac26facdb17639fc1732fd3a6297d14e04e2c481a17f9e01e9df58219d"
+    },
+    {
+      "path": "mechanical/revI/left-frame-kintsugi.stl",
+      "sha256": "9c08e50b2d9db8a8a04266db751f91cd1398a5684a20ab83370df67422ff8830"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha-accent.step",
+      "sha256": "a58d84cc1f5a6fd92d1a125fecfc46272facca12af86d795d7f596173aa31372"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha-accent.stl",
+      "sha256": "12afeef68b36a8d64f99f23f80e0f4df9eeb2a567847e4b2b7ef2cb52a3f21b2"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha-body.step",
+      "sha256": "f351ee87b0f844cb6cde6459ab182b48ef35ceec4f56111b021f3c23f4d4a714"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha-body.stl",
+      "sha256": "74db633a11398c96b215be6696650e9949cf86f3976c31518db80143e01c0f3d"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha-detail.step",
+      "sha256": "c5c078e8be3d78e5c250326d3b05f32554aeab89748f0b06137cac2d862f5bd7"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha-detail.stl",
+      "sha256": "c23ae15056e08738e775bc29c40ca83177e63fc14aab6f662c02405139fa4a6b"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha-secondary.step",
+      "sha256": "1985e97eb7976f2bfd7747fbc5016f82638afe2424597e56e58bcb8463b751ed"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha-secondary.stl",
+      "sha256": "47e2ad84caa6d306f1865e93dc0c8f8a3321c05f1e1e58ed25ccd49bd1fbc5c0"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha.step",
+      "sha256": "a463b752d3ad3c09d5be9595cbf6f2004007812b432e0c4edaf800c5f36651b4"
+    },
+    {
+      "path": "mechanical/revI/left-frame-mecha.stl",
+      "sha256": "f6fc4b628d26254c4179ba3a06cd32dd192ec2e057f8554db6a1d129ec40fd2a"
+    },
+    {
+      "path": "mechanical/revI/left-frame-smooth.step",
+      "sha256": "2195d0cf8822928874409e19debca5e59baec0c426ff5c8c7c11af6371636b0a"
+    },
+    {
+      "path": "mechanical/revI/left-frame-smooth.stl",
+      "sha256": "ec71bab3e924d5e1244b4feba1db9606a6063858d208d0d486e8f515051cd384"
+    },
+    {
+      "path": "mechanical/revI/left-frame-target-0.stl",
+      "sha256": "fa198e17434d3ea3b2670782a30aa036bc216ab032300a3a10ea3a857b86ec3c"
+    },
+    {
+      "path": "mechanical/revI/left-frame-target-1.stl",
+      "sha256": "58cea2e89226fd5a78602cdd0ce7a586942295fdcb173d12b96ef8ff7b1395a0"
+    },
+    {
+      "path": "mechanical/revI/left-frame-target-2.stl",
+      "sha256": "94f0f60e8d87bfc991097e3a13942f965fc9755423f64a8c5bfdeef335511550"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-accent.step",
+      "sha256": "0b633c550df32c0617d42aafce6dcaa415b8f61ccd4fa38448a9ffef478f06d6"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-accent.stl",
+      "sha256": "a99a58b84345e8ce179d87f395fa1814fe0cbb4cfebd1fe425bb74b57b00384f"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-body.step",
+      "sha256": "fa3855f55ae44babe9056f352defde57408604e8b9b98ec55eef89f3e024884a"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-body.stl",
+      "sha256": "defd54be55f48b87ddbedf58f59cb6f1ebb538c1649d4b66c5fb74a11983d8c9"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-detail.step",
+      "sha256": "62e46a86e0d4f45336fbd8202812a6352011281457644bc292a237eb35a54b93"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-detail.stl",
+      "sha256": "b990dfb9c74766f039f43fe6084d45fc71b19ecba90dcb46b4a3a393a1ea5ed1"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-secondary.step",
+      "sha256": "f0bd0aed5ec4fd60a0364b4b9df9258d585fddf54351cf804a10a1a51592ec9a"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-secondary.stl",
+      "sha256": "28f3a87d6615f44a03fa81f1c0825ee47ae87539fdc3b4321a7f0ed71f1234b4"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv.step",
+      "sha256": "9c818b81604a962322f166b6a030d5a7c966fcc09f3ed603a8e4ea07f09c3f2f"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv.stl",
+      "sha256": "6bd0a522e6ab28bfc31bb112f7398489b4f19e0cb1f7d9a207c7eac785a9a1e0"
+    },
+    {
+      "path": "mechanical/revI/left-jst-visual-0.stl",
+      "sha256": "7651326e3af9ebcbe9469f2f1d4619c5d5c21466ea8b2ce887df650771ba06d8"
+    },
+    {
+      "path": "mechanical/revI/left-jst-visual-1.stl",
+      "sha256": "51980a122e617cdd4a88caaf10523d3791c28dc78b6594313747b7bee60006f3"
+    },
+    {
+      "path": "mechanical/revI/left-jst-visual-2.stl",
+      "sha256": "44011115753dd88959654566463571f694100cfdd945c8b6bf8421a71f3f580c"
+    },
+    {
+      "path": "mechanical/revI/left-jst-visual-3.stl",
+      "sha256": "3dd7598e35eb20e9ac781dfa47a19ab2a6b9a6088460b2fd1eec5790d2d203bd"
+    },
+    {
+      "path": "mechanical/revI/left-jst.stl",
+      "sha256": "1670973135133fa86fb4f5abf6a2ee06e1d2241cb04db4287cefd19bf68f1a4a"
+    },
+    {
+      "path": "mechanical/revI/left-key-plate.stl",
+      "sha256": "89650509b711ace0e3043d82b07fa197f86d63a2d1fe1115deb684bd8b41b7f1"
+    },
+    {
+      "path": "mechanical/revI/left-magnet-0.stl",
+      "sha256": "c22fee6c782e310991c885568ceea929a131df643b61fdc5cbc4733b64268d2a"
+    },
+    {
+      "path": "mechanical/revI/left-magnet-1.stl",
+      "sha256": "1f053044a05d51a3db5b66e9c8805fbcbaea88b83608ed5e69173a5b170fb6cb"
+    },
+    {
+      "path": "mechanical/revI/left-magnet-2.stl",
+      "sha256": "6ca094edbbbe601b6c39b941e76cf729fffb39f44d3837c08c8e66d65316e99a"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-riser.stl",
+      "sha256": "0cddb6b6a31274f1e62bc9a7340b86adb136fcc15aedc6c4e24f3578b93d249f"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-sockets.stl",
+      "sha256": "3ffc5ed15c5d2b829782b6c588ca27d3ab0f383564a4961bd84b801baccdee37"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-0.stl",
+      "sha256": "68477618c092a664fd458f56746d561656212ad5d897bb818d743b755a39e9ff"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-1.stl",
+      "sha256": "52eb195f1748ce193f3b127ff47fb3d613385c936c1c952a6ab81d106a980003"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-10.stl",
+      "sha256": "f95b85e5aed402b87a0cd1148c3f66bf8decb9586cb08230c0e2a054917250db"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-11.stl",
+      "sha256": "2ff684e01618a15f581f08eff408860b994f8fd2aeee38821f13e1de70cd8d71"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-2.stl",
+      "sha256": "943a44bec1abb581023a13ea960a8a6b9ae4c1b4f349217a299921560df1e923"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-3.stl",
+      "sha256": "71c0b9fffa38041645dd87d40f16bc87fb345608c6a6189456f426cce0530526"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-4.stl",
+      "sha256": "06777a4bc721cc9046b9909f600d827b059a643f658707c77ed7c7f76c8de3d9"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-5.stl",
+      "sha256": "7d910694aaa2ae58c14a8bad2388d62d7ddca0711e4a702068488f26e6e0ad5e"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-6.stl",
+      "sha256": "5ee010466eb06a131c50996f0a6b8383c4b0c1e62b44f735e27fcb6aaeae1fa2"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-7.stl",
+      "sha256": "fdf10d386a32ec7ae3acd2f709ad3c39a91f18308f8345a362ed261b095c3a56"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-8.stl",
+      "sha256": "eceb56fc8f0a4e54da56480fd810be7d72495bedc7b972ddb09f658ad92af8d3"
+    },
+    {
+      "path": "mechanical/revI/left-mcu-visual-9.stl",
+      "sha256": "2da27de0089592c485cc41d132bfc5658b081017ee96c4bf7e30652a8ecdf8a0"
+    },
+    {
+      "path": "mechanical/revI/left-mcu.stl",
+      "sha256": "2a5a8e3aff541fc941530463a5c30a7a47473fd4d16b389f9be32e55ef588ec5"
+    },
+    {
+      "path": "mechanical/revI/left-pcb.stl",
+      "sha256": "330e4e3d8ad76f6a659f5fc01d5a6e4d20a5b25d854e9b9258412025ab1994f1"
+    },
+    {
+      "path": "mechanical/revI/left-reset-visual-0.stl",
+      "sha256": "4f6a3b77e97cd0470f54780e7105ed1106c2e907ed5c0c5c10e651cde87a69ae"
+    },
+    {
+      "path": "mechanical/revI/left-reset-visual-1.stl",
+      "sha256": "eff5b0b3f14f8071f10cbb59d5afb479fe792cbcb673d598a75e7c7844311bfd"
+    },
+    {
+      "path": "mechanical/revI/left-reset-visual-2.stl",
+      "sha256": "64ba7d2f0df65c89442a7d73eb0b1ad6663bcaf5470062216e716c9a3c8a53b9"
+    },
+    {
+      "path": "mechanical/revI/left-reset-visual-3.stl",
+      "sha256": "c37d4a6ecc5ee69aa5c26953227b6cb69367c38ec5202b7fc32c5566f24b74eb"
+    },
+    {
+      "path": "mechanical/revI/left-reset.stl",
+      "sha256": "8097faf7b590ae84ca3a52eef04c99aff7a0b261515d7bfaa39a482e2259b384"
+    },
+    {
+      "path": "mechanical/revI/left-screw-1.stl",
+      "sha256": "b83571eed10a8641e9cdafd3086ac4afe41420314546c23221502be9a950d7e3"
+    },
+    {
+      "path": "mechanical/revI/left-screw-2.stl",
+      "sha256": "9b81adf38dd450ce5445282fc466652f18884ae2b1c2b88ddcdb672ef43988d9"
+    },
+    {
+      "path": "mechanical/revI/left-screw-3.stl",
+      "sha256": "e216cacaff137cd3674c42a9acf19986a08e759daa8e48d999af0e0f6248e220"
+    },
+    {
+      "path": "mechanical/revI/left-screw-4.stl",
+      "sha256": "01286b844105e52cf533930f33a062643f377a49cdda593c17aed34483854988"
+    },
+    {
+      "path": "mechanical/revI/left-screw-5.stl",
+      "sha256": "2e0ae08eb6c5c500afe095a79b56eba2ebaeb4161e72a89a48ed9d0df81f05fd"
+    },
+    {
+      "path": "mechanical/revI/left-slider-visual-0.stl",
+      "sha256": "78d7dc9e7d64bf8caeefac077b1a793c7796ccd5da25a9b229f74dbc53a036d1"
+    },
+    {
+      "path": "mechanical/revI/left-slider-visual-1.stl",
+      "sha256": "9cd4e18f7f805816d63e1fdf354a8e952d6f482c15ab2aea95ff864b946d19c4"
+    },
+    {
+      "path": "mechanical/revI/left-slider-visual-2.stl",
+      "sha256": "3f2f1a5ceec898182ebe8ff7ec3ed92722bdbfc2cb141678d108404142911f0d"
+    },
+    {
+      "path": "mechanical/revI/left-slider.stl",
+      "sha256": "84aa9e0016d18076fa6e750a0fba4a0d8af57a11db9e87742c0699c88e0d66e4"
+    },
+    {
+      "path": "mechanical/revI/left-tray.stl",
+      "sha256": "d56361c45002f21d3126b354a8cd674b0b211d5e516bee20a6cf54685d522330"
+    },
+    {
+      "path": "mechanical/revI/left-washer-1.stl",
+      "sha256": "8a6c42fa198bd6c09e73d40a3c19d7bc993c6f825661e58e6cbec22d7505e771"
+    },
+    {
+      "path": "mechanical/revI/left-washer-2.stl",
+      "sha256": "ffe120f92854875873ccc7937febcd0b7d60b5e7f56f5ad12125c5f49cb55e9c"
+    },
+    {
+      "path": "mechanical/revI/left-washer-3.stl",
+      "sha256": "8f6f56146a0b38f369f7f2b722a3012790688023114ce0c2e4fc6d71e384f762"
+    },
+    {
+      "path": "mechanical/revI/right-battery-301230.stl",
+      "sha256": "1154a1a75fb8d1f14fa6e84e3f20883bb8d0d3014e4fbb67e1ea16006898f4f8"
+    },
+    {
+      "path": "mechanical/revI/right-battery-adafruit-1570.stl",
+      "sha256": "65b6b3e3fcc219b0892fc6645695f82d3669c3a76c7172a016a9c1a09881b01f"
+    },
+    {
+      "path": "mechanical/revI/right-battery-lead-0.stl",
+      "sha256": "427a0515a6e7dd81688afc954419dfa70e3300f83375df5b6869ebecc8d8744f"
+    },
+    {
+      "path": "mechanical/revI/right-battery-lead-1.stl",
+      "sha256": "b7865b8dafd65a42618682ac9b826b9d3a5c6889812251a5a0bc390f2524d5eb"
+    },
+    {
+      "path": "mechanical/revI/right-battery-lead-301230-0.stl",
+      "sha256": "f4c8feeeebbc7a538d96d68007db97a7ecaa27f5197ef77efc584dc97cb69321"
+    },
+    {
+      "path": "mechanical/revI/right-battery-lead-301230-1.stl",
+      "sha256": "e28c6af8a26553850853b9d8359fcb5954cf0aa503030759b699e1c1e1cbfc3b"
+    },
+    {
+      "path": "mechanical/revI/right-battery-lead-adafruit-1570-0.stl",
+      "sha256": "427a0515a6e7dd81688afc954419dfa70e3300f83375df5b6869ebecc8d8744f"
+    },
+    {
+      "path": "mechanical/revI/right-battery-lead-adafruit-1570-1.stl",
+      "sha256": "b7865b8dafd65a42618682ac9b826b9d3a5c6889812251a5a0bc390f2524d5eb"
+    },
+    {
+      "path": "mechanical/revI/right-battery-retainer.stl",
+      "sha256": "ed977daa3d73eb580c933964b1f1693d921204658cb147cde8bfba80666c7c5c"
+    },
+    {
+      "path": "mechanical/revI/right-battery.stl",
+      "sha256": "65b6b3e3fcc219b0892fc6645695f82d3669c3a76c7172a016a9c1a09881b01f"
+    },
+    {
+      "path": "mechanical/revI/right-case-rim-base.stl",
+      "sha256": "49cac32bffb165068901e15e3302d9249f907d95e881e1e2c71ed6b63637a362"
+    },
+    {
+      "path": "mechanical/revI/right-case-rim-plate.stl",
+      "sha256": "7114130ae3a475f88516c65b5f90af51fa26a1fd1662cfd04169596250c6a28d"
+    },
+    {
+      "path": "mechanical/revI/right-case-solid-base.stl",
+      "sha256": "f3efc85c96d19a5953d9ccd1bfd3a02e8da835f90b9a597309d511d55ec67949"
+    },
+    {
+      "path": "mechanical/revI/right-case-solid-plate.stl",
+      "sha256": "8a60d57cd6f4f408da335187b108be8dc88e644150f2bfda91963e0534e9be39"
+    },
+    {
+      "path": "mechanical/revI/right-case-terrace-base.stl",
+      "sha256": "a83fd92286ccb9d860485b96e59c8ae27d0600807e1fa5b10f790c1f7e3c7a7f"
+    },
+    {
+      "path": "mechanical/revI/right-case-terrace-plate.stl",
+      "sha256": "8a60d57cd6f4f408da335187b108be8dc88e644150f2bfda91963e0534e9be39"
+    },
+    {
+      "path": "mechanical/revI/right-cradle.stl",
+      "sha256": "209ac2eded62a35d0c92ade2894e0971a84c16f90fc368cea6e94c3cb5b0aada"
+    },
+    {
+      "path": "mechanical/revI/right-display-sled.stl",
+      "sha256": "3405565293967523b2cb70e8b0308da523da2f1f0651469f5c62be578055b110"
+    },
+    {
+      "path": "mechanical/revI/right-display-socket-visual-0.stl",
+      "sha256": "a9bdb8d9855a18a4cde5b8acdc80ad8b798108d2d73b512753d520c2e752e9ed"
+    },
+    {
+      "path": "mechanical/revI/right-display-socket-visual-1.stl",
+      "sha256": "5bf2d5b6094814a7612d434762e592d85727dc92e1bf04e62185570d8957df50"
+    },
+    {
+      "path": "mechanical/revI/right-display-socket.stl",
+      "sha256": "441b2c9f85de4f7393f2898467d1982675b3d6c8c24b88ba40be98f0ad1df698"
+    },
+    {
+      "path": "mechanical/revI/right-display-visual-0.stl",
+      "sha256": "41db1c9d59f9aa96ac6ec8d091a755e4b1b02b21cb31ac553603490c945acb57"
+    },
+    {
+      "path": "mechanical/revI/right-display-visual-1.stl",
+      "sha256": "5e4cd7b30af41f682f91c0f77d2d6630913792616217b77942af06b90425d209"
+    },
+    {
+      "path": "mechanical/revI/right-display-visual-2.stl",
+      "sha256": "ba28aeefef587162a05f45b82315f89ce1022121799e703104be08155a2676d2"
+    },
+    {
+      "path": "mechanical/revI/right-display-visual-3.stl",
+      "sha256": "3f281c49cd5c176623223b899e7fcc1fb505977ba7f93bcd367dcc567b3ea661"
+    },
+    {
+      "path": "mechanical/revI/right-display-visual-4.stl",
+      "sha256": "eecafc73556020e67484b887a5063fdb092459fda8c2e2544cf185605af65ad2"
+    },
+    {
+      "path": "mechanical/revI/right-display-visual-5.stl",
+      "sha256": "f2aac6b5d45f40e2488e087b46c0352b0ce569c925f5d3a4283fa13fd0a0d5a1"
+    },
+    {
+      "path": "mechanical/revI/right-display.stl",
+      "sha256": "e9df885c416f6e228d23f6dc7d7439f57191517a419c689b55e9753df0ef8def"
+    },
+    {
+      "path": "mechanical/revI/right-electronics-lid.stl",
+      "sha256": "bec9ac9c6a88febbe9f7c0b49bfe4634809e4e03c268e2d4ecef43d1b377c7ee"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade-accent.step",
+      "sha256": "f47b2a2a7f8b195e259b0f87e73d2b361e609aaef8f047e08b3ed27be116de36"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade-accent.stl",
+      "sha256": "b8bcba76c9678e0eda64da26d22bfaaf3e8ec5a7ffaed022fe7a61026b45be99"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade-body.step",
+      "sha256": "951c9cf9f39881869a6e727584c55418e282bf37d72fa37b302dc0890e8967c1"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade-body.stl",
+      "sha256": "f9492696c8dc3db5d464fba1a7587208e6652e596f1d26b4f7bfb4d18813945a"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade-detail.step",
+      "sha256": "7de1d2b01e821a49501bd7b0b908ba09f84d78f4d507b462e7e155c79a37594a"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade-detail.stl",
+      "sha256": "5b02df2642621b20f751d4106210aa1b904dcac6d5dba86c844cc5ed62542dde"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade-secondary.step",
+      "sha256": "b886b84f35bd0baaf038d30063406395c31af3c16a0d7508d02c30036938056b"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade-secondary.stl",
+      "sha256": "71f83ad0c1b5b9a94eae91c34b5499524a5e23e0799d90e98085c1eabba01466"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade.step",
+      "sha256": "5d5ab8a146e3647a3122afd507e6ef4dddb61dd24178c6a6598290742249b4c3"
+    },
+    {
+      "path": "mechanical/revI/right-frame-arcade.stl",
+      "sha256": "d5ca667e5298fe0af776c9882df8ef10535025a63e1998b0a5111c6e817605de"
+    },
+    {
+      "path": "mechanical/revI/right-frame-bevel.step",
+      "sha256": "f4bead2004266986ea6faefd17833a5095a0ed188f4f8f3547d6043d7cedfa3a"
+    },
+    {
+      "path": "mechanical/revI/right-frame-bevel.stl",
+      "sha256": "bec9ac9c6a88febbe9f7c0b49bfe4634809e4e03c268e2d4ecef43d1b377c7ee"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge-accent.step",
+      "sha256": "a6bad7b906c3a7cb4fdb368c686d18a4202297636b700c132193ccb37fd865da"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge-accent.stl",
+      "sha256": "59a9e9da46fb02fcaf2ae80f1f77f6344b29f8c79a81efef80b152a53e82ebf3"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge-body.step",
+      "sha256": "7cff2084248ea8cd67b604103e48a574f959427a417a166ed592ff1121c61ac5"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge-body.stl",
+      "sha256": "0cbc706ab7ddb2a9f2948c63948e0a8e1735c83c61043421286c072b2918dee7"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge-detail.step",
+      "sha256": "11c7124f1cf0564ebc8cd8b3dcf53dfdcfcb3087597d8c96d57166705d3aea43"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge-detail.stl",
+      "sha256": "0c3ec5a263f06fbf440aca87c78ab455a34ffecdb509a0e76fd1e446f29d9e09"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge-secondary.step",
+      "sha256": "00f45d013a9c8ca8544940e878e363a91798ccfe4d50717315f06d1968a4f975"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge-secondary.stl",
+      "sha256": "a099609b1f2d6663dd97293a47fb0637d4d6547c9262419f37fa4aa6e8e4b5e6"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge.step",
+      "sha256": "9ec25e4d88597e14931df6529b285f034731c605a34c7da7553eca1a80073fc1"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cartridge.stl",
+      "sha256": "90063e29b4d839f397fb34b7d176e12b428687b09a9c63315d8d6b6968d5fa60"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk-accent.step",
+      "sha256": "69b88027f6c29a48eca5fb3c28a25d4c7ccf26301904c7d37ea33c33c560f87c"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk-accent.stl",
+      "sha256": "1ef49cb53e7ab74fcd221be45928b223d3413c475c4fabc5580ed0c2ff635251"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk-body.step",
+      "sha256": "9f9f17e445b80f0200857d05c26f267c72bd4ef2f9c0c33d1ceed94929cb35ea"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk-body.stl",
+      "sha256": "4abca4693cca7dd3e98e079a4b550e85a5bef0d52844b77a1956dc041037f986"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk-detail.step",
+      "sha256": "67401281182cc39fb77c65a9a71c7fcaa723d5313b853c75d6c60bd08bc963e8"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk-detail.stl",
+      "sha256": "d2930b99531fd1f9e38fbfcaafbb0dd0df4ee63597643c3e35cd3d1dcf8532db"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk-secondary.step",
+      "sha256": "7729220f2b3faa3ecd368f2d65c382fd953f5c462c6e1b830f9b6301a1aaad4b"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk-secondary.stl",
+      "sha256": "10090f1b651d0d6f10fc55ac405273545f3bb60bb85ec108f547e8571420961d"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk.step",
+      "sha256": "7f6c1c7bc11ebf99ca27cbe59b17f86c20eba6b64dff481e6e03da3f804f7bac"
+    },
+    {
+      "path": "mechanical/revI/right-frame-cyberpunk.stl",
+      "sha256": "d201457f3393f3872f0528727488032e03563000af3cb49e31b419dac7d21f04"
+    },
+    {
+      "path": "mechanical/revI/right-frame-facet.step",
+      "sha256": "5368df38643586e1fb8e74be4347f8a197dd3039e9fe5e61e041e144c5aa43dd"
+    },
+    {
+      "path": "mechanical/revI/right-frame-facet.stl",
+      "sha256": "267ff48726a847d3490d3896fef87c26b13c8b93104f7744574625ac9d7afa24"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld-accent.step",
+      "sha256": "1c9f8598b63d9a21f178ab4e6b8ab4352b2721143661ed7f2a95b51433aca68e"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld-accent.stl",
+      "sha256": "71fe843b7555a903685775eb594ef0ae6e8bef6d36b60aba77f1c6d5413fd92c"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld-body.step",
+      "sha256": "800bbbf8ef4d4f18c647801ec792b00276ed396c79276418e84c1fbd774c8a53"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld-body.stl",
+      "sha256": "6c03c19710649f32f2174d8f2e0e9fbe481b5061fc31ee2491d8d979af989339"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld-detail.step",
+      "sha256": "5d34be06e9544202f0b57b627475fff22165a0247a32fb42693a9b473f784922"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld-detail.stl",
+      "sha256": "0233ed9219174abdd91db2b8453a21ec537caa7464cc97007e4d943e89e6ee88"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld-secondary.step",
+      "sha256": "eb12cffdcc19ec0796e6126e6d8c0bba388e90451af8529b6d940fb240587790"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld-secondary.stl",
+      "sha256": "2158df7c6dc7c996d11be51ab8bee1b4cd350e180019eb19dc2771413ba3ddca"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld.step",
+      "sha256": "6e2d21958bb13f04f9831b9e4dbc185ff1243db5eeafa29be7559132008f7ded"
+    },
+    {
+      "path": "mechanical/revI/right-frame-handheld.stl",
+      "sha256": "a1335d20f85c0de58ed776b664594e954668d8c39466fb0aa9047e2d7ad1c6a5"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi-accent.step",
+      "sha256": "d8b875cb279fa211b9a8c9832fb93545225896519dbdc1034fd9ff96f3e17a54"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi-accent.stl",
+      "sha256": "5bdc13c7b7c2b374be38a5990c722ecf52ba8ad5592d389b3de741bcde0fd4fc"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi-body.step",
+      "sha256": "e571bc26b63e3f4bfd0a269eac9f9c2c7dca1f88e3b9d370fec603f33bb1cf7b"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi-body.stl",
+      "sha256": "ffa0b02315348c531338662c20cddc49bdd9026cca7ab55489aa111c6238fadd"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi-detail.step",
+      "sha256": "91c850eab7254622aedad5e53c26836b053127871fe50a052987f8763c0d9e4f"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi-detail.stl",
+      "sha256": "960215e2fedb2ece4fd84f597e038735820b73cbbc5f140c1df08faa04b99c5c"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi-secondary.step",
+      "sha256": "9af5c26535d52a45d6e3f47bba3ecc1ff8b4bd90a1bb6745a6091f3011a5952e"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi-secondary.stl",
+      "sha256": "36f7e0f63e5b22600e0956aa2eec692495161599408f319e7d04b0c70384595e"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi.step",
+      "sha256": "812c38173df1abe044749b2f46cef0c1aa4cea82f3312895e8173980311cc234"
+    },
+    {
+      "path": "mechanical/revI/right-frame-kintsugi.stl",
+      "sha256": "483421a07349259d160db0e7073a0f8382123d73a4091fe75108da7256b2f177"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha-accent.step",
+      "sha256": "5a52ae2ab605e8ae52f4d16d30d3741e231cc5cce5c5bfde6c17ec2eadb9c728"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha-accent.stl",
+      "sha256": "8d3020430ae51bcf484b69afa514fdfd29837b6f9fc325e4efe52b7d515bf971"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha-body.step",
+      "sha256": "3e214fcf4a7047f8e9a62a3f3971582b3f02eb7405426b8df525047120589941"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha-body.stl",
+      "sha256": "3bfead4aacfe461b164f14320e172bc97c523b95d97fc6fafe4958038125ff31"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha-detail.step",
+      "sha256": "c16402bf9021a23b1a177a31df5e2140589eb9a2f56eaf5390ae124dfadf6263"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha-detail.stl",
+      "sha256": "376c1ef206d290939ebe680850883f0571502e96f025d142af30d611bfeae5f0"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha-secondary.step",
+      "sha256": "d806b536bfa36d0ee99a93fc67eade4f1bd79da586789663a9395f65e9eb9b56"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha-secondary.stl",
+      "sha256": "e1479ffc1a6baddfe8d920079ee8c280da95f9ee663cdc66145ae00fe86a903a"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha.step",
+      "sha256": "d9a40f5451a3fadf97d8d69aa3f2266e9e1b44a4ef90ca99db4fedbb8b81c21a"
+    },
+    {
+      "path": "mechanical/revI/right-frame-mecha.stl",
+      "sha256": "94b91c8a9fbaea1baee5bc1d870b993748e05297e2a769d4cdec84600df0f205"
+    },
+    {
+      "path": "mechanical/revI/right-frame-smooth.step",
+      "sha256": "f05d28178d1bbb236856fbb20480b96797cc812b71f3e128afb5059688bc2df8"
+    },
+    {
+      "path": "mechanical/revI/right-frame-smooth.stl",
+      "sha256": "047ee3b82cb0b3a607d771825790caefaf9730526ddbfcc4e758cc541015e1ca"
+    },
+    {
+      "path": "mechanical/revI/right-frame-target-0.stl",
+      "sha256": "c1ae7d487b9d64a3856d047fe43672c743d7adc06580ed5d42ea285c0df6de99"
+    },
+    {
+      "path": "mechanical/revI/right-frame-target-1.stl",
+      "sha256": "50de0ed6a02fe52809d1fa3ae9e6c6786d4c7676e8ee61aaa2bec60f9e594072"
+    },
+    {
+      "path": "mechanical/revI/right-frame-target-2.stl",
+      "sha256": "c7d67da60e8dc638119383c6bd8237a2602142febce261cd66be5a6caddc8273"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv-accent.step",
+      "sha256": "9ae35c625d4d00bfe3fd9ad3ba4ccad2903f3558cacdbbb4e0cee5f8d5f64f48"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv-accent.stl",
+      "sha256": "004ac1d2a847bfdd126bedd21b276f25cee7d1f3982eaa777f9e7d3e378988ae"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv-body.step",
+      "sha256": "add6459012a55b4e0bfb9ed667bd948b0510db9d69536814cc4b05e0bc3b6ae3"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv-body.stl",
+      "sha256": "e52393961ec7fef4439211da4e196005534d7aa0f036f2de7cfe77dc3e5ad5ab"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv-detail.step",
+      "sha256": "85407db287f99b1cbfc74464751f40c7beea00f83ca5eaf1db103d3b9d4bf116"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv-detail.stl",
+      "sha256": "727d05a7cba1a263b26759427865c014773121f015345f3c9a7ee000abcfc987"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv-secondary.step",
+      "sha256": "a91e8e7be26bb2bb1525de0d8508d753d7f16d7b4550a6c4eac4c2a4323383de"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv-secondary.stl",
+      "sha256": "9b887a89c67895f9c953f5d4b247b75ba887e5f42a53b7c26d432ceb3642b40e"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv.step",
+      "sha256": "b3a29a14307ffaf248e6944cef41ba433abbdff9fbbc22ac8a9dc986b4de1e54"
+    },
+    {
+      "path": "mechanical/revI/right-frame-tv.stl",
+      "sha256": "e59c85ec3359592b09a222e00dfb4d90fad820d5d5e995738a4c92e0e3ecc0b1"
+    },
+    {
+      "path": "mechanical/revI/right-jst-visual-0.stl",
+      "sha256": "dc57c1d362f4e84b636cd4ff6a4fe43ecf288c4249e742fc5efadefce2a34cd0"
+    },
+    {
+      "path": "mechanical/revI/right-jst-visual-1.stl",
+      "sha256": "beeb049ac76a738d995e7c392da46272907d31f80bbcc546449b1d28fccca179"
+    },
+    {
+      "path": "mechanical/revI/right-jst-visual-2.stl",
+      "sha256": "702c83ffad30447511b7b184a5c274f44fef042f2a4fe6f94557cadb8b8fd8ad"
+    },
+    {
+      "path": "mechanical/revI/right-jst-visual-3.stl",
+      "sha256": "1cd5e6e7e6a040d85a24683e206dc7c3135e663e2403c882ae39589923968412"
+    },
+    {
+      "path": "mechanical/revI/right-jst.stl",
+      "sha256": "1d2a70a98ea456446e33930237bce507b3bbb8a79345260fd7b6c2c0466e4c9a"
+    },
+    {
+      "path": "mechanical/revI/right-key-plate.stl",
+      "sha256": "8a60d57cd6f4f408da335187b108be8dc88e644150f2bfda91963e0534e9be39"
+    },
+    {
+      "path": "mechanical/revI/right-magnet-0.stl",
+      "sha256": "798f3474f5433c9c4abe9200e140723f2146882e083530f68fafce607ad3947e"
+    },
+    {
+      "path": "mechanical/revI/right-magnet-1.stl",
+      "sha256": "6af7cd3e624e5c8993ce29b993b1e466da613dc2393ff73cbb2b828cd9ce232d"
+    },
+    {
+      "path": "mechanical/revI/right-magnet-2.stl",
+      "sha256": "de0e4fbaf4e775d01055258faa39a4f37e55df007107760e91857e7e9d83c940"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-riser.stl",
+      "sha256": "9e4ebd1b38c40ef3a27898474099394a244ca708d493c8a62e7a190695d40ed9"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-sockets.stl",
+      "sha256": "04a2f9e5537deb6bf97f74652d73f8849be043a6f69377f6fccc400e0eee6bbf"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-0.stl",
+      "sha256": "6c075cea58ec628e94539d4e5aba62fecf9773b5457e95a8d24a286521eb5b8d"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-1.stl",
+      "sha256": "6ebd3b59a72069980c20cdfbb5749778c730e942c417f8a20ef88161749a9337"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-10.stl",
+      "sha256": "c32737936ccef64a3d634d2a712b6ea70506ab861b01fb0f79efdf00c287d154"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-11.stl",
+      "sha256": "099e662c7b5f989fc27e31f998ed392c14ef9e96e28c0bd149b63b06b61269f4"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-2.stl",
+      "sha256": "276aea091435e173e31252adaef2bf1686f74879c9f28adb2d856acb11126a3a"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-3.stl",
+      "sha256": "08a684f0e23b576882bc564604a46e8f75b347c478218b2f93f51d534e15d3a0"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-4.stl",
+      "sha256": "3bae952faa33276190908e40e2962ecd962a5614f20de265bcb8542433e185f8"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-5.stl",
+      "sha256": "8cf1d38023bee7f21f5c7c8327a6409bf605f5d4dd7186bf9024a09f59f7cccc"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-6.stl",
+      "sha256": "0819c75c24836828a9e6e38354d788e304b26c39ea5451cb0645a9ee4903ced2"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-7.stl",
+      "sha256": "478e86b22ae387f18b29f5af66b823fdaaf1ef626253e5790563c04c1309b06b"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-8.stl",
+      "sha256": "a0368fde196b057ec9ae6bdc3005cf70b84e96e2d1cf11ce64547626b9625faa"
+    },
+    {
+      "path": "mechanical/revI/right-mcu-visual-9.stl",
+      "sha256": "66577e6b0ca0792465253bb6f27557c5b92b79a060113839b5b9b285bb600488"
+    },
+    {
+      "path": "mechanical/revI/right-mcu.stl",
+      "sha256": "57b1af8c3fb80368849f34c5a6ba2076dbb7f484afb7add86d0969a88ea0480a"
+    },
+    {
+      "path": "mechanical/revI/right-pcb.stl",
+      "sha256": "a7143377c3c43dd673d0dee8b0324ca49c21daa7a77721882975b96256a5f28a"
+    },
+    {
+      "path": "mechanical/revI/right-reset-visual-0.stl",
+      "sha256": "2a77b7249cd95059ffb392c52ed69354277365d2ca697dc8350710ca4725a373"
+    },
+    {
+      "path": "mechanical/revI/right-reset-visual-1.stl",
+      "sha256": "de08199667b19859b708e1cf3473daac27e3fe4a8ca037e7432eeca2f8554b3b"
+    },
+    {
+      "path": "mechanical/revI/right-reset-visual-2.stl",
+      "sha256": "0b1030f01215322ab43c6d3dc1eb42ee232c5e1a23131276684c6d894f2679fa"
+    },
+    {
+      "path": "mechanical/revI/right-reset-visual-3.stl",
+      "sha256": "b06c0cdc113b7f1f5c3e91247c0a257e679bdcbd3fcbfaf138cb29a527568489"
+    },
+    {
+      "path": "mechanical/revI/right-reset.stl",
+      "sha256": "01ede93fad5b9ddbae93fbca5f8c8d7255331d6e971863e851166c1c4afbdcf9"
+    },
+    {
+      "path": "mechanical/revI/right-screw-1.stl",
+      "sha256": "feb9495862a2cfab09afd158d69415052d2247e7b9c45c0f91d58306812bec2a"
+    },
+    {
+      "path": "mechanical/revI/right-screw-2.stl",
+      "sha256": "5004cf3e943b7c9a7ecc07ac49aa73af66616af031d75991a17c73017196fa3a"
+    },
+    {
+      "path": "mechanical/revI/right-screw-3.stl",
+      "sha256": "e216cacaff137cd3674c42a9acf19986a08e759daa8e48d999af0e0f6248e220"
+    },
+    {
+      "path": "mechanical/revI/right-screw-4.stl",
+      "sha256": "227a2bef4412d2227da713ff1c9b2b63160f765e1d3199db301a1345c3668faa"
+    },
+    {
+      "path": "mechanical/revI/right-screw-5.stl",
+      "sha256": "7a3c3d47ae7f38ca5d8af2b4ef1eb3b0ab85d405d2ae498479a7de50b1db1256"
+    },
+    {
+      "path": "mechanical/revI/right-slider-visual-0.stl",
+      "sha256": "c610d8dddca4c9e751698dc5d81a5874f3711d90246e67065ff26a754ab2dea1"
+    },
+    {
+      "path": "mechanical/revI/right-slider-visual-1.stl",
+      "sha256": "715bdee99277d8cfad7be160a7b7a70ed406cc98d2a2c50d462d13638f904ea9"
+    },
+    {
+      "path": "mechanical/revI/right-slider-visual-2.stl",
+      "sha256": "49d01b7cf03135bf39cad9b02d275e06b47aacd7d88c7dfb10d4ec4ed8aa17ca"
+    },
+    {
+      "path": "mechanical/revI/right-slider.stl",
+      "sha256": "e0a6f94c645e87be40feb14055da0c42f7d2f440e733467cea1c5920221619d2"
+    },
+    {
+      "path": "mechanical/revI/right-tray.stl",
+      "sha256": "f3efc85c96d19a5953d9ccd1bfd3a02e8da835f90b9a597309d511d55ec67949"
+    },
+    {
+      "path": "mechanical/revI/right-washer-1.stl",
+      "sha256": "1bae41d2d93d017e9a3231c87397be6404a52136638b2d12bcbe8dcd3c1804ee"
+    },
+    {
+      "path": "mechanical/revI/right-washer-2.stl",
+      "sha256": "373e94bea8c3600074fafbeade575b9c2acbd4d1b673d55fe2b5fec95ecfdec8"
+    },
+    {
+      "path": "mechanical/revI/right-washer-3.stl",
+      "sha256": "8f6f56146a0b38f369f7f2b722a3012790688023114ce0c2e4fc6d71e384f762"
+    },
+    {
+      "path": "tools/build_viewer_revI.py",
+      "sha256": "2d7b2fea9868d6d0d5fb646750e5f61160a08dfa6c4f24baefd951f8354eeebf"
+    },
+    {
+      "path": "tools/check_print_kit.py",
+      "sha256": "7981a3c93aad5ef9164a90f8ce728d4edbcfac3cf26e12c35f2a0510b217cce9"
+    },
+    {
+      "path": "tools/check_slim_flush_delivery.py",
+      "sha256": "b256235b90de2bef0e4837ef4e80c0a4cd6a3eea3cc6fe1a0d9da6a15b574c65"
+    },
+    {
+      "path": "tools/frame_finishes.py",
+      "sha256": "10c1ef73e759b9bef7e9a25e3b506242633dbe86ed821b3a03c204d022a8b4b6"
+    },
+    {
+      "path": "tools/freecad/build_revI.py",
+      "sha256": "87d0a41ce387a45cab7b88ec7b6f11dfbfb10cd4d0ea7da110f9d6d8799a4ab0"
+    },
+    {
+      "path": "tools/freecad/check_analytic_bounds.py",
+      "sha256": "225b0b7d0f392b7e9a96519e0598a611f7592691e5969a7ea478729dff1f1cd1"
+    },
+    {
+      "path": "tools/freecad/check_cases.py",
+      "sha256": "3510d10fe2d228fb3bc8fa3a126a0d7b21afd5321ccd652790cf057f46b42a22"
+    },
+    {
+      "path": "tools/freecad/check_export_pruning.py",
+      "sha256": "cf670129ad28a94c4929d2ea6419f31af5f596cb8e1a249bd499af6b591f25a5"
+    },
+    {
+      "path": "tools/freecad/check_finishes.py",
+      "sha256": "9b1ab801386c63ca0ccc2c13ecd5b31e07184a299ea88e0139e372250905a158"
+    },
+    {
+      "path": "tools/freecad/check_pcb_step_registration.py",
+      "sha256": "a7d0fefa78ecef7c88e7d35490ded87d1865fb0dac056ad3bf13a41513fabd4a"
+    },
+    {
+      "path": "tools/freecad/check_revI_service.py",
+      "sha256": "a7db1c455ff39e0e44b3c15bccd84c77f12fb4dde2d7f516e04375d1e1c98e86"
+    },
+    {
+      "path": "tools/freecad/check_slim_connector_service.py",
+      "sha256": "08f4eb7bffb66457d2075dc9d7a90cf6f6daf262a190cca5e8da402783fddbd6"
+    },
+    {
+      "path": "tools/freecad/components.py",
+      "sha256": "b467197a100a3b9dd45fae34603c16801e98706d23bd7fca38d1e5a60c0d4dd9"
+    },
+    {
+      "path": "tools/freecad/configuration.py",
+      "sha256": "378775f2192dcb080495a182db18964024abdddcff5eef79f7881dcdf8f847d4"
+    },
+    {
+      "path": "tools/freecad/export_pcb_components.py",
+      "sha256": "7ff59dbebdea33a2c3939c233cf3f361aba46612daa523eb3166197084c1c98b"
+    },
+    {
+      "path": "tools/freecad/export_revI.py",
+      "sha256": "05e9352fd6003c04869729cb88caf10aea687f7370f85e9b1b28ac2022f80475"
+    },
+    {
+      "path": "tools/freecad/extra_frames.py",
+      "sha256": "588e1a7e8a2cb6dd278da8aa5ad9bdee4e0f7beca36ad2a50dcce842027a5de1"
+    },
+    {
+      "path": "tools/freecad/flush_frames.py",
+      "sha256": "82d880663bed2f69800f0ecf7bc0e564c32c8954d08a05f418b4edca71c7092c"
+    },
+    {
+      "path": "tools/freecad/install_extra_frames.py",
+      "sha256": "c8e8415c0ca91cf03b89772b7b9d508764ddbf2c791be2c1866dcd1f2dfc0709"
+    },
+    {
+      "path": "tools/freecad/install_slim_flush.py",
+      "sha256": "18383ce35456e06c1ac8cb9c7b339745bf61e870286fcc96fa1276a86e3e6a09"
+    },
+    {
+      "path": "tools/freecad/slim_stack.py",
+      "sha256": "9c50f62fdf4f88099499543369d1508178453ebbc08d46fd67ff50a429337331"
+    },
+    {
+      "path": "tools/freecad/switch_instances.py",
+      "sha256": "0e20afd3c092df3c3cf022e457491e38273ba8076a5a20a76eed5b46f856a401"
+    },
+    {
+      "path": "tools/keycap_config.py",
+      "sha256": "e6cf3b4468bd8e4299589b8b5ea77d915addfffb3bce5c4d1e2f67246f8a73c2"
+    },
+    {
+      "path": "tools/render_frames.py",
+      "sha256": "86e4a6fe6159b4b2b9d9f561a621516581b42bd3f5e94f8c6d2aa2728a722f87"
+    },
+    {
+      "path": "tools/render_revI.py",
+      "sha256": "63598e0f4d7228f6178220385305aeb90a5b2a9edcae6764063d38da877ad2a5"
+    },
+    {
+      "path": "validation/revI-analytic-bounds.json",
+      "sha256": "c96f0d6d68b5ea89a88a812310c606a3bf72a190e34d8ea26b67483306a5eeb6"
+    },
+    {
+      "path": "validation/revI-bottom-reset-step.json",
+      "sha256": "eab30c789367e218477e36babb2016bb7b1ffb5d18b3a10e0eec3cfa523ce8d1"
+    },
+    {
+      "path": "validation/revI-cases-render.json",
+      "sha256": "faa92b3d05a575ba945431423f517d1ef5e5b0510dca75e33840cc6e8f1ad455"
+    },
+    {
+      "path": "validation/revI-cases.json",
+      "sha256": "1ac3dd30b8bdd49fa8b91554ab6fcb78b0f895fd22f63f697e0b71069ab36241"
+    },
+    {
+      "path": "validation/revI-color-hex.json",
+      "sha256": "ca0ff1da4194e01b337c3e54102abcabcbf061e77f48deebf75d503c38af0b5e"
+    },
+    {
+      "path": "validation/revI-components.json",
+      "sha256": "66b350e32bd5d3167135c05c01da33e31282572a4e706ee634a913e030763915"
+    },
+    {
+      "path": "validation/revI-connector-service.json",
+      "sha256": "8dbd50fce21c758d468606cb9227e6881a062dbecde40f097fdc51776b7d2445"
+    },
+    {
+      "path": "validation/revI-electrical.json",
+      "sha256": "055ad3004c8844f65fca7aeef9bd749413558ee7de431ffef8b316df657a9095"
+    },
+    {
+      "path": "validation/revI-export-pruning.json",
+      "sha256": "b9de01b49de028a8b4481f1d931e3e2e2569bd0eeca390ddce0ca23bb88b3304"
+    },
+    {
+      "path": "validation/revI-flush-viewer.json",
+      "sha256": "d238da0f1e310e4e4d119fce318f20dcb4ced42d46e428d4934eea83936a5abf"
+    },
+    {
+      "path": "validation/revI-frames-render.json",
+      "sha256": "890eb26d76953027e5d3ecb7bd6fc46bbad257c85a9c67fd124bea0548b6992e"
+    },
+    {
+      "path": "validation/revI-freecad-finishes.json",
+      "sha256": "d59c09dfc5cc55c1a6434dee84169271f66fb89458e04224258fe670b5f38952"
+    },
+    {
+      "path": "validation/revI-freecad.json",
+      "sha256": "91eb532242f8766d063c856f18afa34e90adb85e047bbc65b7db81f8ff7ad0e9"
+    },
+    {
+      "path": "validation/revI-mechanical.json",
+      "sha256": "46af602c752d0988b41ea862c20cfa9c905a637b488b6ae57b35fbc485fed54a"
+    },
+    {
+      "path": "validation/revI-print-kit.json",
+      "sha256": "ff438d118c5442ce3a917118456e5fd3dbeca944b3c0790f0283d59a139c83af"
+    },
+    {
+      "path": "validation/revI-render.json",
+      "sha256": "7bee1e35487baba12615570d90e70b9d0282daf021cfed95ec6b4c98e32175df"
+    },
+    {
+      "path": "validation/revI-service.json",
+      "sha256": "eb4bd0b0e4629e4bce7fc98302991285b72c6b3547e602487d453e5e684f8d64"
+    },
+    {
+      "path": "validation/revI-slim-flush-installation.json",
+      "sha256": "a76b9f1c647996ba1e8b09b50274167f41910b64238b500d3f68c16445881ed6"
+    },
+    {
+      "path": "validation/revI-theme-customization.json",
+      "sha256": "a5b19bd9d326b54173171a68d5b410523183709e039bff6e2aed3b5e508f4517"
+    },
+    {
+      "path": "validation/revI-viewer.json",
+      "sha256": "df9a9ed20a00097637deb6945ff9b415494de47d81f5ba9cd5048d4ea26d67de"
+    },
+    {
+      "path": "viewer/app.js",
+      "sha256": "62bfba851b61a0726e24700e5d6e8065d4730f3d5f0c974061cfabcb5035ff62"
+    },
+    {
+      "path": "viewer/appearance.js",
+      "sha256": "a0c582fe166420c9afabd8e14166dc17e56d078ddb6d0286b9eee15b66baf8b8"
+    },
+    {
+      "path": "viewer/battery-leads-check.cjs",
+      "sha256": "7c000b29377ebad94ecf8438b64eab91e1ff87ca9856da027b5ced1df91efbf5"
+    },
+    {
+      "path": "viewer/build.mjs",
+      "sha256": "278ec3d152897e745604d671980f5aebe830e94c5965b4f6967b696b316f05a4"
+    },
+    {
+      "path": "viewer/check.cjs",
+      "sha256": "d7807411a50e8cbd7ed17bfd63aa0b735aa396f090000f914beb30ec4a3934eb"
+    },
+    {
+      "path": "viewer/color-input.js",
+      "sha256": "c6abbe21dd8af64db7a6d111d1757265580924e0e0028b482e9814d5ec1e1f16"
+    },
+    {
+      "path": "viewer/config.js",
+      "sha256": "bf665abd9d7fc7bc1cac7335444f6d3beb2d18acb6627e419742c00d179c1704"
+    },
+    {
+      "path": "viewer/customize-check.cjs",
+      "sha256": "9df6655c37595e21f0cadb010867c961c2c999b634251debfa551152810234dd"
+    },
+    {
+      "path": "viewer/explorer.js",
+      "sha256": "2200a6e8993b908e5da23f5e9f1125ac7fa43a4d1fae1f63afae91315de0b63f"
+    },
+    {
+      "path": "viewer/finishes-check.cjs",
+      "sha256": "14bbbe8bdecc97705312d83c068c679286b766d8226cd85e96eb1c34dd53f471"
+    },
+    {
+      "path": "viewer/finishes.js",
+      "sha256": "e532d97fe79eaf8b37eb3627141352c6c1c0938466f383d1b1e0d943c6e78438"
+    },
+    {
+      "path": "viewer/hex-check.cjs",
+      "sha256": "3adfbb0b71ffc61577506608d9e8e9d54c03e081ff90ee557dbdb93fb66dfe9e"
+    },
+    {
+      "path": "viewer/keycap-colors.js",
+      "sha256": "0461cd718298fbface1e60f657ab1389f8654bcd2dd496636ddcd0d9640c6543"
+    },
+    {
+      "path": "viewer/package-lock.json",
+      "sha256": "a62090e2bb0ab32205ff582bd3612ff167dc03d9db4c2b6879bb98f5bf25d550"
+    },
+    {
+      "path": "viewer/performance.cjs",
+      "sha256": "f7910ff377eed4c544836b82a7750ad982d262a670cbd9fc032fd7e7ed389cf1"
+    },
+    {
+      "path": "viewer/previews.js",
+      "sha256": "700c21e97c8896f63c5dac209ed443345b3f763b8a7bc253b5d00d78d751ed15"
+    },
+    {
+      "path": "viewer/printing.js",
+      "sha256": "b7ca61cf86752c4d66f96f770578ad29c503e28e65b875477f97b001e7cd5d66"
+    },
+    {
+      "path": "viewer/storage.js",
+      "sha256": "f8daeb8702b9d3fad93d93e2c18e6a66cee29e85a5a70f83da1184769823ceba"
+    },
+    {
+      "path": "viewer/style.css",
+      "sha256": "3d214bb5422faadd218e6ee4e2ef3b6ff27e229c6e98385ce33f571409035c54"
+    },
+    {
+      "path": "viewer/template.html",
+      "sha256": "1dc0c9ded65f98467b602c9a27575e14d574f5f969bb2de99e4740431a34aaf0"
+    }
+  ]
+}

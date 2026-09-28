@@ -6,13 +6,13 @@ from pathlib import Path
 import FreeCAD as A
 import FreeCADGui as G
 import Part
-R=Path(__file__).resolve().parents[2];G.showMainWindow();doc=A.openDocument(str(R/'mechanical/revI/Flan36.FCStd'))
+R=Path(__file__).resolve().parents[2];G.showMainWindow();G.getMainWindow().hide();doc=A.openDocument(str(R/'mechanical/revI/Flan36.FCStd'))
 for prefix in ['L_','R_']:doc.getObject(prefix+'Half').Placement=A.Placement()
 doc.recompute();parts={o.PartID:o.Shape.copy() for o in doc.Objects if hasattr(o,'PartID')}
-mirror=A.Matrix();mirror.A11=-1;mirror.A14=160
+# Exact plane reflection preserves analytic surfaces for the Boolean comparison.
 symmetry={}
 for name in ['tray','key-plate']:
- a=parts['left-'+name].transformGeometry(mirror);b=parts['right-'+name]
+ a=parts['left-'+name].mirror(A.Vector(80,0,0),A.Vector(1,0,0));b=parts['right-'+name]
  mismatch=a.cut(b).Volume+b.cut(a).Volume
  assert mismatch<1e-5,(name,mismatch)
  symmetry[name]={'symmetric_difference_mm3':mismatch,'left_volume_mm3':parts['left-'+name].Volume,'right_volume_mm3':b.Volume}

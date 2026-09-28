@@ -11,6 +11,10 @@ fs.mkdirSync(path.join(root,'build/case-variants'),{recursive:true});
 const hash=buffer=>crypto.createHash('sha256').update(buffer).digest('hex');
 const html=fs.readFileSync(path.join(root,'docs/index.html'),'utf8');
 const scene=JSON.parse(require('node:zlib').gunzipSync(Buffer.from(html.match(/<script id="scene-data" type="application\/octet-stream">([\s\S]*?)<\/script>/)[1],'base64')));
+const expectedCount=scene.parts.length;
+const sideCount=side=>scene.parts.filter(p=>p.side===side).length;
+const coverCount=side=>scene.parts.filter(p=>p.side===side&&p.group==='lid').length;
+for(const side of ['left','right'])assert.equal(scene.parts.filter(p=>p.part_id===`${side}-display-socket`&&p.group==='connectors').length,1,'Retained J2 socket must be explicit');
 const target=process.env.FLAN36_VIEWER_URL||pathToFileURL(path.join(root,'docs/index.html')).href;
 const offline=target.startsWith('file:');
 
@@ -63,7 +67,8 @@ async function checkLink(page,group){
     const embedded=html.match(/<script id="scene-data" type="application\/octet-stream">([\s\S]*?)<\/script>/)[1];
     assert.equal(delivered,hash(Buffer.from(embedded)),'Public browser must load the exact current CAD scene');
   }
-  await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('180'),null,{timeout:60000});
+  await page.waitForFunction(n=>document.querySelector('#status').textContent.includes(`${n} visible components`),expectedCount,{timeout:60000});
+  for(const [key,value] of Object.entries(scene.measurements))if(['bay_width_mm','cover_top_mm','plate_top_mm'].includes(key))assert.equal(await page.locator(`[data-measurement=${key}]`).textContent(),String(value));
   await checkDirectory(page);
   await checkFramedPixels(page);
   // Case choices change native meshes; absent covers differ from eye visibility.
@@ -76,7 +81,7 @@ async function checkLink(page,group){
     await page.locator('#canvas').screenshot({path:path.join(root,`build/case-variants/${style}.png`),style:'.stage-label,#leader-lines{opacity:0!important}'});
   }
   await page.click('#case-target [data-side=left]');await page.click('[data-case=rim]');await page.locator('#case-cover').uncheck();
-  await page.click('#reset');assert.match(await page.locator('#status').textContent(),/176 visible/,'Open cover omits its three steel targets and cover, preserves display');
+  await page.click('#reset');assert.match(await page.locator('#status').textContent(),new RegExp(`${expectedCount-coverCount('left')} visible`),'Open cover omits its three steel targets and cover, preserves display');
   await page.click('#case-target [data-side=both]');assert.equal(await page.locator('#case-current').textContent(),'Mixed cases');
   assert.equal(await page.locator('#case-cover').evaluate(n=>n.indeterminate),true);
   await page.click('#nav-files');
@@ -88,7 +93,8 @@ async function checkLink(page,group){
   await page.waitForFunction(()=>document.querySelector('#config-status').dataset.error==='true');
   savedPromise=page.waitForEvent('download');await page.click('#glb');saved=await savedPromise;
   const caseGlbPath=path.join(root,'build/case-variants/selected.glb');await saved.saveAs(caseGlbPath);const caseGlb=fs.readFileSync(caseGlbPath),caseJsonLength=caseGlb.readUInt32LE(12),caseGLTF=JSON.parse(caseGlb.toString('utf8',20,20+caseJsonLength));
-  assert.equal(caseGLTF.nodes.filter(n=>n.mesh!==undefined).length,176);
+  assert.equal(caseGLTF.nodes.filter(n=>n.mesh!==undefined).length,expectedCount-coverCount('left'));
+  for(const side of ['left','right'])assert.equal(caseGLTF.nodes.filter(n=>n.extras?.part_id===`${side}-display-socket`&&n.extras?.group==='connectors').length,1,'Removing frame must retain J2');
   assert.equal(caseGLTF.nodes.filter(n=>n.extras?.group==='lid'&&n.extras?.side==='left').length,0);
   assert.equal(caseGLTF.nodes.filter(n=>n.extras?.group==='display').length,4);
   assert.deepEqual(caseGLTF.nodes.find(n=>n.name==='Flan36 revI · nominal').extras.configuration,caseConfig,'Invalid case must leave configuration untouched');
@@ -101,7 +107,7 @@ async function checkLink(page,group){
   const legacy=JSON.parse(JSON.stringify(scene.catalog.default_configuration));delete legacy.cases;
   await page.locator('#load-config').setInputFiles({name:'legacy.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(legacy))});
   assert.equal(await page.locator('#config-status').getAttribute('data-error'),'false');
-  await page.click('#reset');assert.match(await page.locator('#status').textContent(),/180 visible/);
+  await page.click('#reset');assert.match(await page.locator('#status').textContent(),new RegExp(`${expectedCount} visible`));
   await page.click('#part-base');await page.click('[data-case=rim]');await page.locator('#case-cover').uncheck();await page.keyboard.press('Escape');await page.mouse.move(10,20);
   await page.selectOption('#half','left');await page.selectOption('#view','top');
   await page.locator('#canvas').screenshot({path:path.join(root,'build/case-variants/rim-open-top.png'),style:'.stage-label,#leader-lines{opacity:0!important}'});
@@ -122,12 +128,12 @@ async function checkLink(page,group){
   await page.click('#part-base');await page.locator('#individual-parts summary').click();
   assert.equal(await page.locator('[data-object-visibility]').count(),2);
   await page.locator('[data-object-visibility]').first().uncheck();
-  assert.match(await page.locator('#status').textContent(),/179 visible/);
+  assert.match(await page.locator('#status').textContent(),new RegExp(`${expectedCount-1} visible`));
   assert.equal(await page.locator('#layer-base').evaluate(e=>e.indeterminate),true);
   await page.locator('[data-object-visibility]').first().check();
   await page.locator('[data-solo-object]').first().click();
   assert.match(await page.locator('#status').textContent(),/1 visible/);
-  await page.click('#show-all');assert.match(await page.locator('#status').textContent(),/180 visible/);
+  await page.click('#show-all');assert.match(await page.locator('#status').textContent(),new RegExp(`${expectedCount} visible`));
   await page.click('#part-mcu');await page.click('#isolate-selection');
   assert.match(await page.locator('#status').textContent(),/2 visible/);
   await page.click('#toggle-selection');assert.match(await page.locator('#status').textContent(),/0 visible/);
@@ -137,7 +143,7 @@ async function checkLink(page,group){
   await page.locator('#part-mcu').hover();await checkLink(page,'mcu');
   const duringXray=hash(await page.locator('#canvas').screenshot({style:'.stage-label,#leader-lines{opacity:0!important}'}));
   assert.notEqual(duringXray,beforeXray,'Hover must reveal the controller through the assembled display/frame');
-  assert.match(await page.locator('#status').textContent(),/180 visible/,'X-ray hover never changes visibility');
+  assert.match(await page.locator('#status').textContent(),new RegExp(`${expectedCount} visible`),'X-ray hover never changes visibility');
   await page.mouse.move(10,20);await page.keyboard.press('Escape');
   assert.equal(hash(await page.locator('#canvas').screenshot({style:'.stage-label,#leader-lines{opacity:0!important}'})),beforeXray,'Leaving hover restores the original assembly');
   await page.click('#reset');
@@ -146,7 +152,7 @@ async function checkLink(page,group){
   // Opacity keeps hover/focus active; the separate full-page captures include UI.
   const baseline=hash(await page.locator('#canvas').screenshot({style:'.stage > :not(canvas),#leader-lines{opacity:0!important}'}));
   const count=async()=>Number((await page.locator('#status').textContent()).match(/(\d+) visible components/)[1]);
-  assert.equal(await count(),180);
+  assert.equal(await count(),expectedCount);
   await page.click('#part-battery');
   await page.click('#battery-options [data-battery="301230"]');
   assert.equal(await page.locator('#battery-options [data-battery="301230"]').getAttribute('aria-pressed'),'true');
@@ -154,15 +160,15 @@ async function checkLink(page,group){
   await page.keyboard.press('Escape');
   for(const group of new Set(scene.parts.map(p=>p.group))){
     await page.locator('#layer-'+group).uncheck();
-    assert.equal(await count(),180-scene.parts.filter(p=>p.group===group).length,group);
+    assert.equal(await count(),expectedCount-scene.parts.filter(p=>p.group===group).length,group);
     await page.locator('#layer-'+group).check();
   }
-  await page.selectOption('#half','right');assert.equal(await count(),90);
-  await page.selectOption('#half','left');assert.equal(await count(),90);
+  await page.selectOption('#half','right');assert.equal(await count(),sideCount('right'));
+  await page.selectOption('#half','left');assert.equal(await count(),sideCount('left'));
   await page.click('#stack');assert.equal(await page.locator('#explode').inputValue(),'55');
   await page.screenshot({path:path.join(root,'build/viewer-stack.png')});
   await page.selectOption('#view','bottom');await page.screenshot({path:path.join(root,'build/viewer-bottom.png')});
-  await page.click('#reset');assert.equal(await count(),180);
+  await page.click('#reset');assert.equal(await count(),expectedCount);
   assert.equal(await page.locator('#half').inputValue(),'both');assert.equal(await page.locator('#explode').inputValue(),'0');
   assert.equal(hash(await page.locator('#canvas').screenshot({style:'.stage > :not(canvas),#leader-lines{opacity:0!important}'})),baseline,'Full reset must restore the original rendered assembly');
   const box=await page.locator('#canvas').boundingBox();
@@ -240,7 +246,7 @@ async function checkLink(page,group){
   const glbPath=path.join(root,'build/viewer-export.glb');await download.saveAs(glbPath);const glb=fs.readFileSync(glbPath);
   assert.equal(glb.toString('ascii',0,4),'glTF');assert.equal(glb.readUInt32LE(4),2);assert.equal(glb.readUInt32LE(8),glb.length);
   const jsonLength=glb.readUInt32LE(12),gltf=JSON.parse(glb.toString('utf8',20,20+jsonLength));
-  assert.equal(gltf.nodes.filter(n=>n.mesh!==undefined).length,180);
+  assert.equal(gltf.nodes.filter(n=>n.mesh!==undefined).length,expectedCount);
   assert.equal(gltf.nodes.filter(n=>n.name.includes('KLP ')).length,36);
   const assembly=gltf.nodes.find(n=>n.name==='Flan36 revI · nominal');assert.deepEqual(assembly.matrix.slice(0,3),[.001,0,0]);
   assert.ok(assembly.extras.attribution.includes('braindefender'));
@@ -314,7 +320,7 @@ async function checkLink(page,group){
   const mobile=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
   if(offline)await mobile.route(/^https?:/,route=>{requests.push(route.request().url());return route.abort();});
   const phone=await mobile.newPage();phone.on('pageerror',e=>errors.push(e.message));await phone.goto(target);
-  await phone.waitForFunction(()=>document.querySelector('#status').textContent.includes('180'));
+  await phone.waitForFunction(n=>document.querySelector('#status').textContent.includes(`${n} visible components`),expectedCount);
   await checkFramedPixels(phone);
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'No horizontal overflow');
   await phone.locator('[data-case=rim]').tap();await checkDirectory(phone);
@@ -376,12 +382,12 @@ async function checkLink(page,group){
   await phone.locator('#part-base').tap();await phone.locator('[data-case=rim]').tap();await phone.locator('#clear-selection').tap();await phone.evaluate(()=>document.querySelector('#inspector').scrollTop=0);await checkDirectory(phone);
   await phone.screenshot({path:path.join(root,'build/viewer-cases-mobile.png')});
   assert.deepEqual(errors,[]);if(offline)assert.deepEqual(requests,[],'Offline viewer must not request network resources');
-  const receipt={viewer_sha256:hash(Buffer.from(html)),target:offline?'local file with all HTTP(S) requests blocked':'public URL',
+  const receipt={viewer_sha256:hash(Buffer.from(html)),checker_sha256:hash(fs.readFileSync(__filename)),about_measurements_match_model:true,target:offline?'local file with all HTTP(S) requests blocked':'public URL',
     browser:await browser.version(),desktop:true,narrow_viewport_emulation:true,physical_phone_tested:false,public_embedded_scene_matches_current:!offline,
     all_12_layer_filters:true,individual_visibility:true,individual_and_group_solo:true,show_all_recovery:true,occluded_hover_xray_pixel_verified:true,persistent_view_controls:true,fit_actual_pixels_after_zoom:true,fit_empty_feedback:true,full_row_hover:true,half_filters:true,orbit_drag:true,bottom_view:true,full_reset_pixel_identical:true,
     persistent_component_directory:true,sidebar_line_endpoints:true,directory_visible_during_scroll_and_collapse:true,keyboard_component_selection:true,direct_canvas_picking:true,labels_follow_camera:true,frame_click_reveals_hidden_cover:true,annotation_toggle:true,orbit_does_not_select:true,touch_orbit_and_pinch_do_not_select:true,small_320px_viewport:true,
     ten_preview_cards:true,multicolor_glb_roles:true,one_click_frames:true,keyboard_frame_activation:true,mixed_style_and_color_state:true,theme_applies_palette_and_body_overrides_roundtrip:true,sidebar_hover_highlight:true,sidebar_opens_frame_explorer:true,touch_frame_cards_and_sidebar:true,hidden_layer_links_removed:true,highlight_excluded_from_glb:true,
-    dual_battery_selection_and_exact_glb:true,captive_frame_pins_preserved:true,keycap_variant_selection:true,frame_style_and_color:true,three_distinct_themed_geometries:true,json_roundtrip:true,invalid_combination_rejected:true,glb_matches_custom_configuration:true,glb_selected_vertices_exact:true,glb_objects:180,glb_keycaps:36,glb_units:'metres',case_variants:3,case_previews_distinct:true,case_glb_meshes_exact:true,open_cover_configuration:true,legacy_case_default:true,runtime_errors:errors,offline_network_requests:requests.length};
+    dual_battery_selection_and_exact_glb:true,captive_frame_pins_preserved:true,keycap_variant_selection:true,frame_style_and_color:true,three_distinct_themed_geometries:true,json_roundtrip:true,invalid_combination_rejected:true,glb_matches_custom_configuration:true,glb_selected_vertices_exact:true,glb_objects:expectedCount,glb_keycaps:36,glb_units:'metres',case_variants:3,case_previews_distinct:true,case_glb_meshes_exact:true,open_cover_configuration:true,legacy_case_default:true,runtime_errors:errors,offline_network_requests:requests.length};
   const caseImages={};for(const [name,source] of [['solid','solid'],['rim','rim'],['terrace','terrace'],['rim-open','rim-open-top']]){const buffer=fs.readFileSync(path.join(root,`build/case-variants/${source}.png`));fs.writeFileSync(path.join(root,`docs/images/revI-case-${name}.png`),buffer);caseImages[name]=hash(buffer);}
   fs.writeFileSync(path.join(root,'validation/revI-cases-render.json'),JSON.stringify({viewer_sha256:hash(Buffer.from(html)),checker_sha256:hash(fs.readFileSync(__filename)),images:caseImages,source:'Unretouched screenshots of the actual selected native STL meshes in the viewer'},null,2)+'\n');
   fs.writeFileSync(path.join(root,'build/viewer-ui-check.json'),JSON.stringify(receipt,null,2)+'\n');

@@ -1,5 +1,7 @@
-"""Verify a saved extension candidate against its original native document.
-Run with --source, --candidate and --report; never modifies either document.
+"""Historical additive-roof acceptance check; its command is retired.
+Current slim/flush validation is performed by install_slim_flush.py and
+flush_frames.validate_variant. The old unchanged-geometry contract is preserved
+below only as historical evidence, not applied to the new material partition.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 from pathlib import Path
@@ -12,6 +14,7 @@ from extra_frames import load_spec,find_smooth,validate_variant,STYLES
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def log(*v):sys.__stdout__.write(' '.join(map(str,v))+'\n');sys.__stdout__.flush()
 def main():
+ raise SystemExit('Historical additive-roof checker retired. Use tools/freecad/install_slim_flush.py and the current flush-material validation; reproduce the old unchanged-source contract only at its recorded historical commit.')
  args=sys.argv[1:];own=str(Path(__file__).resolve())
  if own in args:args=args[args.index(own)+1:]
  p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--candidate',type=Path,required=True);p.add_argument('--report',type=Path,required=True);a=p.parse_args(args)

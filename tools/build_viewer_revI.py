@@ -13,8 +13,12 @@ from vtk.util.numpy_support import vtk_to_numpy
 ROOT = Path(__file__).resolve().parents[1]
 model = json.loads((ROOT/'design/revI.json').read_text())
 layout = json.loads((ROOT/'design/layout.json').read_text())
-scene = {'revision':'I', 'units':'mm', 'geometries':{}, 'parts':[], 'sources':[]}
+scene = {'revision':'I', 'units':'mm', 'geometries':{}, 'parts':[], 'sources':[], 'batteryLeadProfiles':{}}
 catalog=json.loads((ROOT/'keycaps/catalog.json').read_text());cfg=catalog['default_configuration'];variants={v['id']:v for v in catalog['variants']}
+frame_finishes=json.loads((ROOT/'design/frame-finishes.json').read_text())
+frame_extensions=json.loads((ROOT/'design/frame-extensions.json').read_text())
+decorated_styles=set(frame_finishes['styles'])|set(frame_extensions['styles'])
+frame_variants=model.get('frameVariants',{})
 scene['catalog']=catalog
 scene['presets']={p.stem:json.loads(p.read_text()) for p in (ROOT/'design/configurations').glob('*.json')}
 groups = {
@@ -30,6 +34,7 @@ groups = {
     'mcu-riser':('Controller support','supports','#647d78',36),
     'display-sled':('Display support','supports','#526e67',52),
     'mcu-sockets':('Controller sockets','connectors','#273631',3),
+    'display-socket':('Display socket · retained on PCB','connectors','#273631',3),
     'jst':('Battery connector · envelope','connectors','#d9d3bc',3),
     'reset':('E-Switch TL3342','connectors','#545e58',3),
     'slider':('C&K PCM12','connectors','#45514a',3),
@@ -77,10 +82,42 @@ def colored_mesh(parent,visuals):
     scene['geometries'][ident]={'positions':pack(ps,'<f4'),'normals':pack(np.concatenate(normals),'<f4'),'indices':pack(np.concatenate(indices),'<u4'),'triangles':offset//3,'groups':groups,'bounds_mm':[ps.reshape(-1,3).min(0).tolist(),ps.reshape(-1,3).max(0).tolist()]}
     return ident,colors
 
+
+def frame_materials(side,style):
+    """Use native volume boundaries, never triangle-centroid surface painting."""
+    ident=f'{side}-frame-{style}'
+    parts=frame_variants.get(f'{side}-{style}',{}).get('material_parts',[])
+    if style in decorated_styles and not parts:
+        raise ValueError(f'Missing native flush materials for {ident}; regenerate CAD exports')
+    if not parts:return []
+    roles=[part['role'] for part in parts]
+    assert 'body' in roles and len(roles)==len(set(roles)),(ident,'missing/duplicate roles')
+    positions=[];normals=[];indices=[];groups=[];vertex=0;offset=0
+    for part in parts:
+        assert part['role'] in frame_finishes['roles'],(ident,part['role'])
+        filename=part['stl'];assert Path(filename).name==filename,(ident,'expected STL basename')
+        source=scene['geometries'][mesh('mechanical/revI/'+filename)]
+        unpack=lambda key,dtype:np.frombuffer(base64.b64decode(source[key]),dtype=dtype)
+        p=unpack('positions','<f4');n=unpack('normals','<f4');i=unpack('indices','<u4')
+        assert len(i)>0 and len(i)%3==0,(ident,part['role'],'empty material')
+        positions.append(p);normals.append(n);indices.append(i+vertex)
+        groups.append({'start':offset,'count':len(i),'materialIndex':frame_finishes['roles'].index(part['role'])})
+        vertex+=len(p)//3;offset+=len(i)
+    ps=np.concatenate(positions)
+    scene['geometries'][f'mechanical/revI/{ident}.stl']={
+        'positions':pack(ps,'<f4'),'normals':pack(np.concatenate(normals),'<f4'),
+        'indices':pack(np.concatenate(indices),'<u4'),'triangles':offset//3,'groups':groups,
+        'material_parts':[{'role':p['role'],'path':'mechanical/revI/'+p['stl']} for p in parts],
+        'bounds_mm':[ps.reshape(-1,3).min(0).tolist(),ps.reshape(-1,3).max(0).tolist()]}
+    return parts
+
 def add(name,side,group,color,position,explode,geometry=None,primitive=None,angle=0):
     part={'name':side+' · '+name,'side':side,'group':group,'color':color,
           'position':position,'explode_mm':explode,'angle_deg':angle}
-    if geometry:part['geometry']=geometry
+    if geometry:
+        part['geometry']=geometry
+        if geometry.startswith('mechanical/revI/'):
+            part['part_id']=Path(geometry.split('#')[0]).stem
     if primitive:part['primitive']=primitive
     scene['parts'].append(part)
 
@@ -98,7 +135,9 @@ for side,keys in layout['halves'].items():
         add(f'Washer {i}',side,'fasteners','#89918a',[offset,0,0],9,mesh(f'mechanical/revI/{side}-washer-{i}.stl'))
     for style in catalog['case_styles']:
         for group in ['base','plate']:mesh(f'mechanical/revI/{side}-case-{style}-{group}.stl')
-    for style in catalog['frame_styles']:mesh(f'mechanical/revI/{side}-frame-{style}.stl')
+    for style in catalog['frame_styles']:
+        mesh(f'mechanical/revI/{side}-frame-{style}.stl')
+        frame_materials(side,style)
     for key in keys:
         choice=cfg['keycaps'][side][key['ref']];v=variants[choice['variant']]
         add('KLP '+key['ref'],side,'keycaps','#45967b' if key['row']==3 else '#e9dfc6',
@@ -112,13 +151,27 @@ for side,keys in layout['halves'].items():
     for i in range(3):
         add(f'Captive magnet {i+1}',side,'fasteners','#8c9597',[offset,0,0],0,mesh(f'mechanical/revI/{side}-magnet-{i}.stl'))
         add(f'Captive frame target {i+1}',side,'lid','#899193',[offset,0,0],72,mesh(f'mechanical/revI/{side}-frame-target-{i}.stl'))
-    for i in range(2):add(f'105 mm lead storage {i+1}',side,'connectors','#ad453d' if i==0 else '#353738',[offset,0,0],24,mesh(f'mechanical/revI/{side}-battery-lead-{i}.stl'))
-    for ident in catalog['battery_profiles']:mesh(f'mechanical/revI/{side}-battery-{ident}.stl')
+    for i in range(2):
+        profile=model['batteryLeadProfiles'][f'{side}-{cfg["batteries"][side]}']
+        lead=next(part for part in profile if part['index']==i)
+        add(f'Battery lead {i+1}',side,'connectors',lead.get('color','#ad453d' if i==0 else '#353738'),[offset,0,0],24,mesh(f'mechanical/revI/{side}-battery-lead-{i}.stl'))
+        scene['parts'][-1]['battery_lead_index']=i
+    for ident in catalog['battery_profiles']:
+        mesh(f'mechanical/revI/{side}-battery-{ident}.stl')
+        leads=model['batteryLeadProfiles'][f'{side}-{ident}']
+        assert sorted(part['index'] for part in leads)==[0,1],(side,ident,'battery lead pair missing')
+        scene['batteryLeadProfiles'][f'{side}-{ident}']=[]
+        for part in leads:
+            filename=f'{side}-battery-lead-{ident}-{part["index"]}.stl'
+            assert part['stl']==filename,(side,ident,'unexpected lead filename')
+            path=mesh('mechanical/revI/'+filename)
+            scene['batteryLeadProfiles'][f'{side}-{ident}'].append({'index':part['index'],'geometry':path,
+                'color':part.get('color','#ad453d' if part['index']==0 else '#353738')})
     for i,(x,y) in enumerate([(26,26),(57,15),(28,70),(125,83)]):
         add(f'Foot {i+1}',side,'fasteners','#29352e',[offset+(x if side=='left' else 160-x),-.6,y],0,
             primitive={'kind':'cylinder','radius':3,'height':1.2})
     cx=122.8 if side=='left' else 37.2
-    add('LCD · illustrative content',side,'display','#c5d1ba',[offset+cx,16.12,33.8],52,
+    add('LCD · illustrative content',side,'display','#c5d1ba',[offset+cx,model['parameter_values_mm']['DisplayBottom']+1.92,33.8],52,
         primitive={'kind':'screen','size':[10.744,.025,25.28],'text':'BASE / BLE / L' if side=='left' else 'LINK / BAT / R'})
 
 for v in catalog['variants']:
@@ -136,11 +189,23 @@ for side in ['left','right']:
         path=f'mechanical/revI/{name}.stl'
         if name.split(side+'-')[1] in printing['supports']:assert model['parts'][name]['prototype_part']
         printing['assets'][name]={'id':name,'path':path,'sha256':digest(path),'stl':base64.b64encode((ROOT/path).read_bytes()).decode()}
+        if name.startswith(side+'-frame-'):
+            style=name[len(side+'-frame-'):]
+            material_parts=frame_variants.get(f'{side}-{style}',{}).get('material_parts',[])
+            if material_parts:
+                printing['assets'][name]['material_parts']=[]
+                for part in material_parts:
+                    material_path='mechanical/revI/'+part['stl']
+                    printing['assets'][name]['material_parts'].append({'role':part['role'],
+                        'path':material_path,'sha256':digest(material_path),
+                        'stl':base64.b64encode((ROOT/material_path).read_bytes()).decode()})
 scene['printing']=printing
 top_key=min(k['y']-8.244852066 for k in layout['halves']['left'] if k['row']==0)
 adjacent=next(k for k in layout['halves']['left'] if k['ref']=='K05')['y']-8.244852066
 hood_min=min(p[1] for p in model['halves']['left']['electronics_cover'])
-scene['measurements']={'bay_width_mm':24,'plate_top_mm':7.6,'cover_top_mm':16.6,'themed_relief_top_mm':17.2,
+frame_top=model['parameter_values_mm']['FrameTop']
+scene['measurements']={'bay_width_mm':24,'plate_top_mm':7.6,'cover_top_mm':frame_top,'themed_relief_top_mm':frame_top,
+                       'decoration_relief_mm':0,'frame_materials':'Native recessed co-print volumes; flush top',
                        'cover_ahead_of_top_cap_mm':round(max(0,top_key-hood_min),3),
                        'cover_ahead_of_adjacent_cap_mm':round(max(0,adjacent-hood_min),3)}
 for path in ['design/revI.json','design/layout.json','tools/build_viewer_revI.py','components/switches.json','components/sources.json','keycaps/catalog.json']:

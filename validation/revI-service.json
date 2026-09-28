@@ -24,18 +24,44 @@
     "left": {
       "pcb_lift_after_plate_modules_removed": [],
       "nominal_3mm_driver_shaft_collisions": [],
-      "six_frame_lift_paths": {
+      "frame_lift_paths": {
         "smooth": [],
         "bevel": [],
         "facet": [],
         "handheld": [],
         "tv": [],
-        "cyberpunk": []
+        "cyberpunk": [],
+        "cartridge": [],
+        "arcade": [],
+        "mecha": [],
+        "kintsugi": []
       },
       "cage_capture_overlap_at_0_2mm_lift_mm3": 0.07800000000000151,
       "cell_translation_bound_vs_leads_mm3": {
-        "battery-lead-0": 0,
-        "battery-lead-1": 0
+        "301230": [
+          {
+            "lead": "L_SlimWire301230_0",
+            "attachment_overlap_mm3": 0.565487,
+            "outside_attachment_overlap_mm3": 0.0
+          },
+          {
+            "lead": "L_SlimWire301230_1",
+            "attachment_overlap_mm3": 0.565487,
+            "outside_attachment_overlap_mm3": 0.0
+          }
+        ],
+        "adafruit-1570": [
+          {
+            "lead": "L_WireStudy0",
+            "attachment_overlap_mm3": 0.424115,
+            "outside_attachment_overlap_mm3": 0.0
+          },
+          {
+            "lead": "L_WireStudy1",
+            "attachment_overlap_mm3": 0.424115,
+            "outside_attachment_overlap_mm3": 0.0
+          }
+        ]
       },
       "six_direction_insert_capture_mm3": {
         "magnet-0": [
@@ -91,18 +117,44 @@
     "right": {
       "pcb_lift_after_plate_modules_removed": [],
       "nominal_3mm_driver_shaft_collisions": [],
-      "six_frame_lift_paths": {
+      "frame_lift_paths": {
         "smooth": [],
         "bevel": [],
         "facet": [],
         "handheld": [],
         "tv": [],
-        "cyberpunk": []
+        "cyberpunk": [],
+        "cartridge": [],
+        "arcade": [],
+        "mecha": [],
+        "kintsugi": []
       },
-      "cage_capture_overlap_at_0_2mm_lift_mm3": 0.07800000000000136,
+      "cage_capture_overlap_at_0_2mm_lift_mm3": 0.0780000000000013,
       "cell_translation_bound_vs_leads_mm3": {
-        "battery-lead-0": 0,
-        "battery-lead-1": 0
+        "301230": [
+          {
+            "lead": "R_SlimWire301230_0",
+            "attachment_overlap_mm3": 0.565487,
+            "outside_attachment_overlap_mm3": 0.0
+          },
+          {
+            "lead": "R_SlimWire301230_1",
+            "attachment_overlap_mm3": 0.565487,
+            "outside_attachment_overlap_mm3": 0.0
+          }
+        ],
+        "adafruit-1570": [
+          {
+            "lead": "R_WireStudy0",
+            "attachment_overlap_mm3": 0.424115,
+            "outside_attachment_overlap_mm3": 0.0
+          },
+          {
+            "lead": "R_WireStudy1",
+            "attachment_overlap_mm3": 0.424115,
+            "outside_attachment_overlap_mm3": 0.0
+          }
+        ]
       },
       "six_direction_insert_capture_mm3": {
         "magnet-0": [
@@ -163,7 +215,7 @@
     },
     "magnet-frame": {
       "path": "mechanical/revI/coupon-magnet-frame.stl",
-      "sha256": "974c6764b40586732341a2b23c26f560a0de83dbaaac5e3b3b3f8865167e7922"
+      "sha256": "58fb07056dd7f6a577d53024892eb5242a69270ae5b01d93178e12b9e686fe6f"
     },
     "m2-thread": {
       "path": "mechanical/revI/coupon-m2-thread.stl",
@@ -171,6 +223,6 @@
     }
   },
   "physical_acceptance": false,
-  "source_sha256": "38733a3a9a5fb6add4df8e668b9ae5178f44b3f864c6ee9416bfb147b2053fdf",
-  "checker_sha256": "62f2fe5373c3e775a473c9f1f6cec48fb69876a5e05943e2830a2a89770c85dc"
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "checker_sha256": "a7db1c455ff39e0e44b3c15bccd84c77f12fb4dde2d7f516e04375d1e1c98e86"
 }

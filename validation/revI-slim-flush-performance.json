@@ -1,0 +1,64 @@
+{
+  "baseline": false,
+  "baseline_revision": "8b4edc1d8230a5ad4d35b5e4a9b0f66d912f689a",
+  "smoke": true,
+  "measurement_only": true,
+  "browser": "153.0.8010.53",
+  "viewport": [
+    1200,
+    800
+  ],
+  "cpu_throttle": 4,
+  "ready_ms": 11121,
+  "scene_objects": 182,
+  "physical_phone_tested": false,
+  "checker_sha256": "f7910ff377eed4c544836b82a7750ad982d262a670cbd9fc032fd7e7ed389cf1",
+  "viewer_sha256": "201550cb807cf7e1fb946c59ebce4344e6ce2be2cfb61f17454daa57778a1a57",
+  "link_state": "selected frame linked to sidebar",
+  "orbit": {
+    "elapsed_ms": 1275,
+    "frame_count": 76,
+    "p50_frame_ms": 16.69999999999891,
+    "p95_frame_ms": 16.700000000000728,
+    "long_tasks": 0,
+    "long_task_ms": 0
+  },
+  "frame_choice": {
+    "styles": [
+      "smooth",
+      "bevel",
+      "facet",
+      "handheld",
+      "tv",
+      "cyberpunk",
+      "cartridge",
+      "arcade",
+      "mecha",
+      "kintsugi"
+    ],
+    "p50_ms": 60,
+    "p95_ms": 80.10000002384186,
+    "samples_ms": [
+      57.199999928474426,
+      40.199999928474426,
+      56.59999990463257,
+      63.700000047683716,
+      59.90000009536743,
+      60,
+      59.300000071525574,
+      72.19999992847443,
+      61,
+      80.10000002384186
+    ]
+  },
+  "case_choice": {
+    "p50_ms": 104.69999992847443,
+    "p95_ms": 127.70000004768372,
+    "samples_ms": [
+      45.200000047683716,
+      104.69999992847443,
+      127.70000004768372
+    ]
+  },
+  "runtime_errors": []
+}

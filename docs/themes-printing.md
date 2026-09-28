@@ -6,7 +6,7 @@ Open [the 3D explorer](https://eduarbo.github.io/flan36/), choose **Themes**, an
 
 1. Choose **Both halves**, **Left** or **Right**.
 2. Pick a theme. It changes colors while preserving shapes, keycap geometry and installed covers.
-3. In **Base**, edit the base/rim and key plate. In **Frame**, edit the body and raised details.
+3. In **Base**, edit the base/rim and key plate. In **Frame**, edit the body and flush inlays. Every color also has a HEX field and **Copy** button.
 4. Enable **Match frame and rim** for continuous color. Editing either linked color updates the other.
 5. Use **Files → Download print kit** for the selected parts.
 
@@ -37,8 +37,12 @@ This is prototype geometry. Print [fit coupons](cases.md) before a complete set.
 
 ## Color 3MF status
 
-The generic 3MF files preserve the same triangles and assign surface regions; each part is translated onto Z=0. The manifest records that translation and all colors. They contain no printer or process profile.
+Decorated frames export as **multipart 3MF assemblies**: one recessed shell and separate closed volumes for the three inlay colors. All parts share one transform, so the inlays stay registered to their pockets. They occupy the upper **0.4 mm** and finish at the same height as the roof, leaving at least **0.8 mm** of backing in the checked model.
 
-**Bambu Studio color setup remains manual.** Its CLI preserves the painted regions, but does not automatically restore this generic file's color palette. Add four filament entries in **body, detail, accent, secondary** order using the manifest colors, then inspect each region. Automatic palette import and GUI save/reopen are not yet accepted. Use the unchanged STL if you prefer to paint the regions yourself.
+These are complementary volumes for **co-printing**, not separately printed press-fit inserts. Use compatible colors of the same material and qualify their bonding on a small sample. The kit also includes the original aligned material STLs and a fused single-material STL. The fused file has a plain surface and cannot reproduce the color pattern by geometry alone.
+
+The generic files contain no printer or process profile. The manifest records the common bed translation, colors, material roles and source hashes.
+
+**Check the filament assignments in Bambu Studio.** Map **body, detail, accent and secondary** to the manifest colors and keep the material volumes together as one multipart object. Automatic palette assignment and slicer GUI save/reopen remain unverified. Inspect the sliced inlay layers before printing.
 
 Keycaps are included in global themes. For independent colors, row/column patterns and portable personal palettes, use [Caps → Colors](customize.md#keycap-colors). Selecting another keycap shape preserves its assigned color.

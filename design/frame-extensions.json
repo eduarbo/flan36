@@ -1,23 +1,22 @@
 {
   "schema": "flan36-frame-extensions-1",
   "revision": "I",
-  "description": "Four native additive roof designs; all coordinates use the left KiCad layout. Right X=160-X. Color regions refer to actual fused printable relief faces, not separate decorative meshes.",
+  "description": "Four native recessed co-print motifs. All XY uses left KiCad layout, right X=160-X. Closed material solids partition the existing frame with flush top faces.",
   "roles": [
     "body",
     "detail",
     "accent",
     "secondary"
   ],
-  "roof_mm": 16.6,
-  "max_relief_mm": 0.6,
-  "root_overlap_mm": 0.1,
+  "roof_mm": 14.8,
+  "max_relief_mm": 0,
   "mirror_sum_x_mm": 160,
   "minimum_feature_width_mm": 0.45,
   "manufacturing_ready": false,
   "styles": {
     "cartridge": {
       "label": "Cartridge",
-      "description": "Raised cartridge spine, grip ribs, label plate and gold contact fingers.",
+      "description": "Flush cartridge spine, grip ribs, label plate and gold contact fingers.",
       "colors": {
         "body": "#f2b735",
         "detail": "#38324e",
@@ -30,26 +29,6 @@
         "accent": "Contact fingers",
         "secondary": "Label plate"
       },
-      "zones": [
-        {
-          "role": "accent",
-          "xy": [
-            114,
-            61,
-            132,
-            66
-          ]
-        },
-        {
-          "role": "secondary",
-          "xy": [
-            115.2,
-            50.5,
-            131,
-            57.5
-          ]
-        }
-      ],
       "features": [
         {
           "id": "Crown",
@@ -80,8 +59,7 @@
               15.6
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "Label",
@@ -92,8 +70,7 @@
             130,
             56.8
           ],
-          "role": "secondary",
-          "height_mm": 0.4
+          "role": "secondary"
         },
         {
           "id": "Spine",
@@ -104,8 +81,7 @@
             113.3,
             48.8
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "SpineRight",
@@ -116,8 +92,7 @@
             133.9,
             48.8
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "GripL0",
@@ -128,8 +103,7 @@
             115.2,
             23.4
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripL1",
@@ -140,8 +114,7 @@
             115.2,
             28.599999999999998
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripL2",
@@ -152,8 +125,7 @@
             115.2,
             33.8
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripL3",
@@ -164,8 +136,7 @@
             115.2,
             39.0
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripL4",
@@ -176,8 +147,7 @@
             115.2,
             44.2
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripR0",
@@ -188,8 +158,7 @@
             132.7,
             23.4
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripR1",
@@ -200,8 +169,7 @@
             132.7,
             28.599999999999998
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripR2",
@@ -212,8 +180,7 @@
             132.7,
             33.8
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripR3",
@@ -224,8 +191,7 @@
             132.7,
             39.0
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "GripR4",
@@ -236,8 +202,7 @@
             132.7,
             44.2
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "Contact0",
@@ -248,8 +213,7 @@
             116.4,
             65.8
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "Contact1",
@@ -260,8 +224,7 @@
             118.7,
             65.8
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "Contact2",
@@ -272,8 +235,7 @@
             121.0,
             65.8
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "Contact3",
@@ -284,8 +246,7 @@
             123.30000000000001,
             65.8
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "Contact4",
@@ -296,8 +257,7 @@
             125.60000000000001,
             65.8
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "Contact5",
@@ -308,8 +268,7 @@
             127.9,
             65.8
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "Contact6",
@@ -320,14 +279,13 @@
             130.20000000000002,
             65.8
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         }
       ]
     },
     "arcade": {
       "label": "Arcade",
-      "description": "Stepped marquee, flashing side blocks, joystick and three-button deck.",
+      "description": "Flush marquee, flashing side blocks, joystick and three-button deck.",
       "colors": {
         "body": "#212246",
         "detail": "#8b6cdb",
@@ -340,35 +298,6 @@
         "accent": "Action buttons",
         "secondary": "Joystick and speaker"
       },
-      "zones": [
-        {
-          "role": "accent",
-          "xy": [
-            126,
-            51,
-            134,
-            62
-          ]
-        },
-        {
-          "role": "secondary",
-          "xy": [
-            112.6,
-            50.6,
-            120.6,
-            58.8
-          ]
-        },
-        {
-          "role": "secondary",
-          "xy": [
-            113,
-            62.6,
-            121.5,
-            65.8
-          ]
-        }
-      ],
       "features": [
         {
           "id": "Marquee",
@@ -407,8 +336,7 @@
               16.8
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "JoystickBase",
@@ -418,8 +346,7 @@
             54.8
           ],
           "radius_mm": 2.6,
-          "role": "secondary",
-          "height_mm": 0.35
+          "role": "secondary"
         },
         {
           "id": "JoystickStick",
@@ -430,8 +357,7 @@
             117,
             54.8
           ],
-          "role": "secondary",
-          "height_mm": 0.6
+          "role": "secondary"
         },
         {
           "id": "JoystickBall",
@@ -441,8 +367,7 @@
             51.7
           ],
           "radius_mm": 1.4,
-          "role": "secondary",
-          "height_mm": 0.6
+          "role": "secondary"
         },
         {
           "id": "ButtonA",
@@ -452,8 +377,7 @@
             53.1
           ],
           "radius_mm": 1.6,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "ButtonB",
@@ -463,8 +387,7 @@
             56.8
           ],
           "radius_mm": 1.6,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "ButtonC",
@@ -474,8 +397,7 @@
             59.5
           ],
           "radius_mm": 1.6,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "LightL0",
@@ -486,8 +408,7 @@
             114.3,
             23.8
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "LightL1",
@@ -498,8 +419,7 @@
             114.3,
             30.4
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "LightL2",
@@ -510,8 +430,7 @@
             114.3,
             37.0
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "LightL3",
@@ -522,8 +441,7 @@
             114.3,
             43.599999999999994
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "LightR0",
@@ -534,8 +452,7 @@
             133.8,
             23.8
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "LightR1",
@@ -546,8 +463,7 @@
             133.8,
             30.4
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "LightR2",
@@ -558,8 +474,7 @@
             133.8,
             37.0
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "LightR3",
@@ -570,8 +485,7 @@
             133.8,
             43.599999999999994
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "Speaker0",
@@ -582,8 +496,7 @@
             120.8,
             63.45
           ],
-          "role": "secondary",
-          "height_mm": 0.4
+          "role": "secondary"
         },
         {
           "id": "Speaker1",
@@ -594,8 +507,7 @@
             120.8,
             64.35000000000001
           ],
-          "role": "secondary",
-          "height_mm": 0.4
+          "role": "secondary"
         },
         {
           "id": "Speaker2",
@@ -606,8 +518,7 @@
             120.8,
             65.25
           ],
-          "role": "secondary",
-          "height_mm": 0.4
+          "role": "secondary"
         }
       ]
     },
@@ -626,35 +537,6 @@
         "accent": "Hazard bars",
         "secondary": "Reactor"
       },
-      "zones": [
-        {
-          "role": "accent",
-          "xy": [
-            113,
-            51,
-            122,
-            57.6
-          ]
-        },
-        {
-          "role": "accent",
-          "xy": [
-            124,
-            51,
-            133,
-            57.6
-          ]
-        },
-        {
-          "role": "secondary",
-          "xy": [
-            126,
-            60,
-            132.7,
-            66
-          ]
-        }
-      ],
       "features": [
         {
           "id": "Brow",
@@ -709,8 +591,7 @@
               16.8
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "ArmorL1",
@@ -737,8 +618,7 @@
               30.5
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "ArmorL2",
@@ -769,8 +649,7 @@
               47.7
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "ArmorR1",
@@ -797,8 +676,7 @@
               30.5
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "ArmorR2",
@@ -829,8 +707,7 @@
               47.7
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.6
+          "role": "detail"
         },
         {
           "id": "LowerArmor",
@@ -861,8 +738,7 @@
               63.8
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.4
+          "role": "detail"
         },
         {
           "id": "Reactor",
@@ -872,8 +748,7 @@
             63
           ],
           "radius_mm": 2.45,
-          "role": "secondary",
-          "height_mm": 0.6
+          "role": "secondary"
         },
         {
           "id": "HazardL0",
@@ -896,8 +771,7 @@
               56.9
             ]
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "HazardL1",
@@ -920,8 +794,7 @@
               56.9
             ]
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "HazardL2",
@@ -944,8 +817,7 @@
               56.9
             ]
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "HazardR0",
@@ -968,8 +840,7 @@
               56.9
             ]
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "HazardR1",
@@ -992,8 +863,7 @@
               56.9
             ]
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "HazardR2",
@@ -1016,8 +886,7 @@
               56.9
             ]
           ],
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         }
       ]
     },
@@ -1036,71 +905,6 @@
         "accent": "Gold repair",
         "secondary": "Celadon shard"
       },
-      "zones": [
-        {
-          "role": "accent",
-          "xy": [
-            111,
-            11,
-            135,
-            51
-          ]
-        },
-        {
-          "role": "accent",
-          "xy": [
-            121,
-            50.5,
-            125.4,
-            57
-          ]
-        },
-        {
-          "role": "accent",
-          "xy": [
-            116.5,
-            57,
-            122,
-            62.6
-          ]
-        },
-        {
-          "role": "accent",
-          "xy": [
-            121.6,
-            62.3,
-            126,
-            67
-          ]
-        },
-        {
-          "role": "accent",
-          "xy": [
-            111,
-            59.2,
-            118,
-            62
-          ]
-        },
-        {
-          "role": "accent",
-          "xy": [
-            127.3,
-            57.5,
-            135,
-            60
-          ]
-        },
-        {
-          "role": "secondary",
-          "xy": [
-            124.3,
-            60.4,
-            133.5,
-            66.5
-          ]
-        }
-      ],
       "features": [
         {
           "id": "RepairTop",
@@ -1124,8 +928,7 @@
             ]
           ],
           "width_mm": 1.1,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "RepairL",
@@ -1157,8 +960,7 @@
             ]
           ],
           "width_mm": 1.1,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "RepairLBranch",
@@ -1174,8 +976,7 @@
             ]
           ],
           "width_mm": 1.0,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "RepairR",
@@ -1203,8 +1004,7 @@
             ]
           ],
           "width_mm": 1.1,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "ShardL",
@@ -1231,8 +1031,7 @@
               57.2
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.35
+          "role": "detail"
         },
         {
           "id": "ShardR",
@@ -1259,8 +1058,7 @@
               55.9
             ]
           ],
-          "role": "detail",
-          "height_mm": 0.35
+          "role": "detail"
         },
         {
           "id": "ShardBottom",
@@ -1283,8 +1081,7 @@
               65.5
             ]
           ],
-          "role": "secondary",
-          "height_mm": 0.35
+          "role": "secondary"
         },
         {
           "id": "RepairLowerA",
@@ -1316,8 +1113,7 @@
             ]
           ],
           "width_mm": 1.1,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "RepairLowerBranch",
@@ -1337,8 +1133,7 @@
             ]
           ],
           "width_mm": 1.1,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         },
         {
           "id": "RepairLowerRight",
@@ -1354,10 +1149,12 @@
             ]
           ],
           "width_mm": 1.1,
-          "role": "accent",
-          "height_mm": 0.6
+          "role": "accent"
         }
       ]
     }
-  }
+  },
+  "decoration_mode": "flush-co-print",
+  "inlay_depth_mm": 0.4,
+  "minimum_backing_mm": 0.8
 }

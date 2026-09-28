@@ -17,6 +17,7 @@ async function start(){
 const $=id=>document.getElementById(id);
 const compressed=Uint8Array.from(atob($('scene-data').textContent),c=>c.charCodeAt(0));
 const data=JSON.parse(await new Response(new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
+for(const node of document.querySelectorAll('[data-measurement]'))node.textContent=String(data.measurements[node.dataset.measurement]);
 const catalog=data.catalog;let configuration=normalize(catalog.default_configuration,catalog);
 let restored=false,storageMessage='';try{const saved=restoreConfiguration(localStorage,catalog);if(saved.configuration){configuration=saved.configuration;restored=true;}storageMessage=saved.message;}catch(e){storageMessage='Device storage unavailable; use JSON to restore.';}
 const variants=new Map(catalog.variants.map(v=>[v.id,v]));
@@ -80,6 +81,8 @@ for(const part of data.parts){
   const mesh=new THREE.Mesh(geometry,mat);mesh.name=part.name;
   mesh.position.fromArray(part.position);mesh.rotation.y=THREE.MathUtils.degToRad(part.angle_deg);
   mesh.userData={objectIndex:objects.length,group:part.group,side:part.side,base:[...part.position],explode:part.explode_mm,key:part.key_ref};
+  if(part.part_id)mesh.userData.part_id=part.part_id;
+  if(Number.isInteger(part.battery_lead_index))mesh.userData.battery_lead_index=part.battery_lead_index;
   if(part.name.includes('Electronics cover'))mesh.userData.frame_style=configuration.frames[part.side].style;
   objects.push(mesh);scene.add(mesh);
 }
@@ -246,6 +249,7 @@ function applyConfiguration(next){
     }
   }
   for(const o of objects)if(o.userData.group==='battery'){const id=next.batteries[o.userData.side];o.geometry=geometryFor(`mechanical/revI/${o.userData.side}-battery-${id}.stl`);o.userData.battery_profile=id;}
+  for(const o of objects)if(Number.isInteger(o.userData.battery_lead_index)){const id=next.batteries[o.userData.side],wire=data.batteryLeadProfiles[`${o.userData.side}-${id}`].find(p=>p.index===o.userData.battery_lead_index);o.geometry=geometryFor(wire.geometry);o.material=material(wire.color);o.userData.battery_profile=id;}
   configuration=copy(next);sync();updateChoices();syncConfigurationUI();try{localStorage.setItem(savedKey,JSON.stringify(configuration));message('Saved on this device.');}catch(e){message('Configuration applied. Device storage unavailable; save JSON to keep it.');}
 }
 function chooseKeyTarget(){

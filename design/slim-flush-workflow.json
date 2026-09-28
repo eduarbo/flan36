@@ -1,0 +1,169 @@
+{
+  "schema": "flan36-slim-flush-1",
+  "source_commit": "a4add9f817357bbc01d6296a21c4767d417461de",
+  "source_fcstd_sha256": "621d03fd572bf04bd8eeaa452c1dbc56f0ef23d16b875e03b37bfdb2cdccd6c2",
+  "request": "Implement a slimmer electronics stack; reposition or rotate the battery if useful; make decorative details recessed and flush.",
+  "required_outcomes": [
+    "Keep all 36 Piantor key transforms, the existing case contour and magnetic frame interface.",
+    "Retain both Adafruit 1570 and 301230 profiles, hot-swap switches and replaceable electronics.",
+    "Use a documented mated connector envelope and a connected lead route before choosing a lower roof.",
+    "Preserve complete multicolor decoration as complementary printable volumes at or below the roof.",
+    "Keep native CAD, PCB study, STEP/STL, viewer, configuration, previews and print kits consistent.",
+    "Verify digital geometry, removal sequence, saved-file readback and public delivery; do not claim physical acceptance."
+  ],
+  "decision_review": {
+    "method": "Two independent read-only reviews of the same recorded baseline; hashes and clean Git state rechecked after both reports.",
+    "domain": "Keep MCU datum and initially keep battery placement; lower display PCB underside to 12.4 mm; resolve connector and leads before selecting frame height; use closed flush material volumes.",
+    "adversarial": "Same action, conditional on complete connector and cable checks. Do not approve 14.8 mm by shrinking the generic reserve or classify flush colors by triangle height.",
+    "agreement": true,
+    "finding_dispositions": [
+      {
+        "severity": "HIGH",
+        "finding": "Floating lead ends and enclosed sled tunnels invalidate the removal sequence.",
+        "required_resolution": "Defined cell and plug interfaces, accessible route/release, static and movement checks including the leads."
+      },
+      {
+        "severity": "HIGH",
+        "finding": "Generic JST reserve and pigtail footprint do not establish mating or height.",
+        "required_resolution": "Dimensioned side-entry PH connector, 2 mm footprint registration, mating and extraction envelope."
+      },
+      {
+        "severity": "HIGH",
+        "finding": "Height-based coloring loses flush details and surface-only 3MF does not represent inlays.",
+        "required_resolution": "Explicit closed role volumes and aligned multipart 3MF verified against native exports."
+      },
+      {
+        "severity": "MEDIUM",
+        "finding": "Deep recesses reduce structural backing.",
+        "required_resolution": "0.4 mm candidate co-print depth, nominal 0.8 mm backing under the 1.2 mm roof, clipped against real material."
+      },
+      {
+        "severity": "MEDIUM",
+        "finding": "Supplier terminal variation and exact electrical contact engagement remain unmeasured.",
+        "required_resolution": "Keep these limits explicit; nominal digital clearance is not physical or electrical qualification."
+      }
+    ]
+  },
+  "out_of_scope": [
+    "Purchasing",
+    "PCB routing",
+    "Firmware integration",
+    "Physical print, electrical, charging or RF acceptance",
+    "A claim of absolute minimum physical height"
+  ],
+  "reset_decision_review": {
+    "snapshot_sha256": "9f4d32f1336ba822aadcb95971214ae8cad6c21e676fdc1c2d29ab741c54470d",
+    "trigger": "Authoritative DRC rejects tested top-side reset: zero RESET/SW1 pad clearance, solder-mask bridge and overlapping J1/SW1 courtyards.",
+    "domain_recommendation": "Implement same TL3342 below the PCB with recessed tool access, contingent on all-layer DRC, nominal tool clearance and correctly flipped native/KiCad STEP registration.",
+    "adversarial_recommendation": "Same action and conditions; bottom placement does not eliminate JST through-hole copper or pins.",
+    "agreement": true,
+    "target_xy": {
+      "left": [
+        124,
+        59.5
+      ],
+      "right": [
+        36,
+        59.5
+      ]
+    },
+    "required_checks": [
+      "Nets, pad numbering and switch transforms preserved; only specified footprints/interfaces change.",
+      "Zero new DRC errors on both boards, including through-hole copper.",
+      "All bases include a recessed tool access; all ten frames close the former roof reset opening.",
+      "Reset, solder/contact reserves, through-hole pins, magnets, screws and supports do not clash.",
+      "Actual KiCad bottom-side model registration matches the native model, without double reflection."
+    ],
+    "physical_acceptance": false
+  },
+  "pcb_model_datum_review": {
+    "decision": "Use the KiCad CLI measured board midplane and a -0.04 mm local model Z correction on both faces.",
+    "domain": "Six actual asymmetric witness exports at front/back and three rotations agree with the native targets; explicit correction is required for this KiCad 10.0.6 stack convention.",
+    "adversarial": "Independent review agrees with the measured transform and correction. Final delivered PCB exports must still pass, and dielectric-body equality must not be claimed.",
+    "agreement": true,
+    "cli_dielectric_z_mm": [
+      0,
+      1.51
+    ],
+    "cli_front_model_z_mm": 1.595,
+    "cli_back_model_z_mm": -0.085,
+    "native_board_midplane_mm": 4.6,
+    "assembly_global_z_shift_mm": 3.845,
+    "local_model_z_correction_mm": -0.04,
+    "physical_acceptance": false
+  },
+  "correction_retrospective": {
+    "trigger": "The old tall generic JST reserve and floating cable paths could not establish a physical lower height or service path.",
+    "cause": "Nominal envelopes and illustration-only lead paths were being used as assembly constraints without mating and endpoint registration.",
+    "correction": "Dimensioned PH pair, explicit 2 mm footprint, connected cell-specific lead paths, open-bottom display reliefs, bottom reset and closed flush material volumes.",
+    "prevention": "Bind delivered native/PCB/viewer/material files to fresh geometric and functional readback, including actual KiCad exports and both cell profiles.",
+    "limits": "Physical contact, cable flex, assembly force and manufacturing acceptance remain unqualified."
+  },
+  "retained_display_socket_review": {
+    "trigger": "J2 stays on the PCB when nice!view is removed. It was omitted from PartID solids, so the initial stored-wire and PH withdrawal checks did not include it.",
+    "baseline_sha256": "ce578a1c401cc3b34c5b408e7768980e2cf6e15720717525c5ae2a19c0e4de97",
+    "domain": "Retain 14.8 mm provisionally, model fixed J2 and correct sled relief; reorient the same side-entry PH and route both leads around a socket end.",
+    "adversarial": "Same bounded continuation; current disconnect is not accepted. Require full withdrawal/lift and grip access with retained components, DRC, both battery profiles and native/STEP registration.",
+    "agreement": true,
+    "nominal_socket_reserve_mm": [
+      13.2,
+      3,
+      5
+    ],
+    "source": "https://typeractive.xyz/products/5-pin-sockets",
+    "assumptions": "5 mm installed height is published. Width/depth, terminal geometry, exact engagement, flexible routing and forces remain unmeasured.",
+    "forbidden_shortcuts": [
+      "Omitting soldered J2 from retained obstacles",
+      "Tilting the PH before demonstrated release",
+      "Using a higher roof alone to claim the planar conflict fixed",
+      "Substituting loose pigtails without a reviewed design"
+    ],
+    "physical_acceptance": false
+  },
+  "native_guard_correction": {
+    "trigger": "The initial migration stopped before save at strict key transform comparison after all fourteen flush variants passed.",
+    "evidence": "Only four rotation matrices differed after equivalent quaternion reconstruction; maximum absolute coefficient difference 5.551115123125783e-16. Mesh vertices, facets, translations and case solids matched.",
+    "correction": "Compare rotation/translation matrix values rounded to 12 decimal places, preserving the existing mesh and case checks.",
+    "validation": "Final installation must rerun the guard and saved-file readback; the initial failed run is not accepted."
+  },
+  "final_connector_pose": {
+    "supersedes": "Earlier reset XY and PH pose trials; preserves their review history above.",
+    "left": {
+      "J1": [
+        125.45,
+        57.2,
+        270
+      ],
+      "reset": [
+        119,
+        59.5
+      ]
+    },
+    "right": {
+      "J1": [
+        34.55,
+        59.2,
+        90
+      ],
+      "reset": [
+        41,
+        59.5
+      ]
+    },
+    "release": "5 mm straight toward the key field, then 24 mm lift, with J2, 18 Choc bounds and 18 selected KLP cap bounds retained per half.",
+    "display_header": "Fixed 5 mm female socket; moving 2 mm male spacer and contact reserves included in display. Final sled relief removes the observed 0.24 mm3 ledge contact.",
+    "qualification": "Nominal geometry only; wire deformation, engagement tolerances and forces remain unqualified."
+  },
+  "gui_color_correction": {
+    "trigger": "The first GUI-preserving migration rejected JSON-decoded list colors at the FreeCAD DiffuseColor setter; headless geometry trials did not exercise it.",
+    "correction": "Convert color channels to float tuples at GUI assignment, preserving the stored color values and all geometry.",
+    "validation": "GUI-enabled application smoke followed by complete saved/reopened native candidate and colored STEP/viewer readback."
+  },
+  "analytic_bounds_correction": {
+    "trigger": "Saved-file assembly-signature guard failed; the original pre-save signature was not persisted. The unaccepted saved candidate was kept unchanged for diagnosis.",
+    "evidence": "All 360 reopened signatures stay identical through recompute. Four stored Adafruit lead BReps differ from GUI shapes only in default bounding boxes. For all four, exact volume/area/symmetric differences are zero; analytic bounds match exactly. Controlled tessellation changes default boxes without changing geometry.",
+    "cause_status": "Tessellation-dependent bounds are demonstrated; their contribution to the original unrecorded mismatch is an evidence-backed inference.",
+    "correction": "Use optimalBoundingBox(False, False) for signature bounds and collision broad-phase pruning. Preserve existing comparison precision and exact Boolean checks. Retain pre/post-save signatures for future failures.",
+    "validation": "Regenerate from the preserved source and require the entire original save/reopen, source, geometry, configuration, service and export checks."
+  }
+}

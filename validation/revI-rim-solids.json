@@ -29,12 +29,12 @@
   "symmetry": {
     "tray": {
       "symmetric_difference_mm3": 0.0,
-      "left_volume_mm3": 14523.01672069014,
-      "right_volume_mm3": 14523.016720690075
+      "left_volume_mm3": 14514.396190448655,
+      "right_volume_mm3": 14514.39619044866
     },
     "key-plate": {
       "symmetric_difference_mm3": 0.0,
-      "left_volume_mm3": 4478.289143638066,
+      "left_volume_mm3": 4478.289143638068,
       "right_volume_mm3": 4478.289143638064
     }
   },
@@ -235,6 +235,6 @@
   "nominal_rim_mm": 4.75,
   "tolerance_mm": 2e-05,
   "physical_acceptance": false,
-  "source_sha256": "38733a3a9a5fb6add4df8e668b9ae5178f44b3f864c6ee9416bfb147b2053fdf",
-  "checker_sha256": "766dcd72b1594f024affde2aecd556359b1a1b30363af0efc41681c460930b22"
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "checker_sha256": "709f20dead6dc4a2ce959230295e95ac44d9e2910ea3eaa5cd73ce6839f6b5b2"
 }

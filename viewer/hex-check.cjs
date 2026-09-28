@@ -34,6 +34,6 @@ const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/index.ht
   await page.setViewportSize({width:390,height:844});await page.locator('#part-keycaps').click();await page.locator('#cap-color-hex').scrollIntoViewIfNeeded();
   const bounds=await page.locator('#cap-color-hex').boundingBox();assert(bounds.x>=0&&bounds.x+bounds.width<=390);await page.locator('#cap-color-hex').fill('badbad');assert.equal(await page.locator('#cap-color').inputValue(),'#badbad');await page.screenshot({path:path.join(out,'mobile.png')});checks.push('390px mobile HEX input and editing');
   assert.deepEqual(errors,[]);const bytes=url.startsWith('file:')?fs.readFileSync(new URL(url)):Buffer.from(await(await fetch(url)).arrayBuffer());
-  const report={viewer_sha256:crypto.createHash('sha256').update(bytes).digest('hex'),checks,runtime_errors:errors};fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+  const report={checker_sha256:crypto.createHash('sha256').update(fs.readFileSync(__filename)).digest('hex'),viewer_sha256:crypto.createHash('sha256').update(bytes).digest('hex'),checks,runtime_errors:errors};fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

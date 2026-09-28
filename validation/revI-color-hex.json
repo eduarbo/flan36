@@ -1,5 +1,6 @@
 {
-  "viewer_sha256": "ef064fd65e251028e193e26cb9acbc19a105136d5f4d1df8d9587aaa1ae538e8",
+  "checker_sha256": "3adfbb0b71ffc61577506608d9e8e9d54c03e081ff90ee557dbdb93fb66dfe9e",
+  "viewer_sha256": "201550cb807cf7e1fb946c59ebce4344e6ce2be2cfb61f17454daa57778a1a57",
   "checks": [
     "3/6 digits, optional #, trim, invalid atomicity and Escape",
     "native picker sync, Copy, real clipboard paste to another part",
@@ -9,45 +10,5 @@
     "reload preserves configuration",
     "390px mobile HEX input and editing"
   ],
-  "runtime_errors": [],
-  "checker_sha256": "c073b9e559ab79a11f53059a75f4476c8b826bef7afa8d5e91e3ad00282da2aa",
-  "color_regression": {
-    "target": "local generated viewer",
-    "viewer_sha256": "ef064fd65e251028e193e26cb9acbc19a105136d5f4d1df8d9587aaa1ae538e8",
-    "checks": [
-      "36 normalized key colors in exported configuration",
-      "paint both/all/",
-      "paint left/all/",
-      "paint right/all/",
-      "paint both/row/0",
-      "paint left/row/1",
-      "paint right/row/2",
-      "paint both/row/3",
-      "paint both/column/1",
-      "paint left/column/3",
-      "paint right/column/5",
-      "paint left/key/K11",
-      "paint right/key/K11",
-      "columns exclude every thumb on both halves",
-      "selected key map displays actual colors",
-      "geometry preset preserves all colors",
-      "global themes color caps and preserve every selected geometry",
-      "paint right/all/",
-      "dedicated cap palette honors half and preserves geometry",
-      "paint left/key/K01",
-      "paint left/key/K01",
-      "paint both/all/",
-      "custom palette restores all 36 colors without geometry changes",
-      "palette export and valid import",
-      "invalid palette import is atomic across collection and keyboard",
-      "36 distinct colors survive configuration import/export",
-      "invalid keycap color import is atomic",
-      "GLB contains exact 36 configured colors",
-      "final reload matches exported configuration and palette collection"
-    ],
-    "keycaps": 36,
-    "distinct_glb_colors": 36,
-    "glb_sha256": "68e3ee48a757c2459bf0b909cab5cc200c380ba28d2136635d82db30ce962cce",
-    "runtime_errors": []
-  }
+  "runtime_errors": []
 }

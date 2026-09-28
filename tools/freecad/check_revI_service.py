@@ -7,10 +7,12 @@ import FreeCAD as A
 import FreeCADGui as G
 import Part,MeshPart
 ROOT=Path(__file__).resolve().parents[2]
-G.showMainWindow();doc=A.openDocument(str(ROOT/'mechanical/revI/Flan36.FCStd'));doc.recompute()
+sys.path.insert(0,str(ROOT/'tools/freecad'))
+from slim_stack import overlap, cell_motion_checks
+G.showMainWindow();G.getMainWindow().hide();doc=A.openDocument(str(ROOT/'mechanical/revI/Flan36.FCStd'));doc.recompute()
 def log(*args):sys.__stdout__.write(' '.join(map(str,args))+'\n');sys.__stdout__.flush()
 def volume(a,b):
-    return a.common(b).Volume if a.BoundBox.intersect(b.BoundBox) else 0
+    return overlap(a,b)
 steps=[0,.1,.2,.3,.5,.75,1,1.5,2,3,4,5,6,8,10,12,16,24]
 report={'scope':'Nominal CAD only; sampled release path, not a physical fit/force test','frame_lift_samples_mm':steps,'halves':{},'coupons':{},'physical_acceptance':False}
 for side,prefix in [('left','L_'),('right','R_')]:
@@ -31,14 +33,13 @@ for side,prefix in [('left','L_'),('right','R_')]:
         log(side,obj.FrameStyle,'sampled frame lift clear')
     cage=shapes['battery-retainer'].copy();cage.translate(A.Vector(0,0,.2))
     captured=volume(cage,shapes['pcb']);assert captured>.01,(side,'cage is not captured by PCB')
-    movement={}
-    # Sweep the entire cradle cavity up to the rigid cage roof: a conservative
-    # bound on translation of either cell, independent of nominal cell size.
-    x=116.55 if side=='left' else 160-129.05
-    cell_motion=Part.makeBox(12.5,33.2,4.2,A.Vector(x,-47.6,2))
-    for k,s in shapes.items():
-        if k.startswith('battery-lead-'):
-            v=volume(cell_motion,s);assert v<.001,(side,k,'lead enters possible cell movement');movement[k]=round(v,6)
+    # Both profiles include a continuous lead attached to the terminal region.
+    # Only that explicit join may meet the cell-motion bound; free lead storage
+    # must remain outside it. This does not qualify flexible unplugging.
+    movement=cell_motion_checks(doc,side)
+    for profile, leads in movement.items():
+        assert len(leads)==2
+        assert all(item['outside_attachment_overlap_mm3']<=.001 for item in leads),(side,profile,movement)
     # A rigid enclosed insert cannot leave either pocket by straight translation.
     capture={}
     for i in range(3):
@@ -69,7 +70,7 @@ for side,prefix in [('left','L_'),('right','R_')]:
             v=volume(driver,shape)
             if v>.001:driver_hits.append({'mount':mount['id'],'part':name,'volume_mm3':v})
     assert not driver_hits,(side,'nominal 3 mm driver shaft blocked',driver_hits)
-    report['halves'][side]={'pcb_lift_after_plate_modules_removed':pcb_lift,'nominal_3mm_driver_shaft_collisions':driver_hits,'six_frame_lift_paths':checks,'cage_capture_overlap_at_0_2mm_lift_mm3':captured,'cell_translation_bound_vs_leads_mm3':movement,'six_direction_insert_capture_mm3':capture}
+    report['halves'][side]={'pcb_lift_after_plate_modules_removed':pcb_lift,'nominal_3mm_driver_shaft_collisions':driver_hits,'frame_lift_paths':checks,'cage_capture_overlap_at_0_2mm_lift_mm3':captured,'cell_translation_bound_vs_leads_mm3':movement,'six_direction_insert_capture_mm3':capture}
     if side=='left':
         # Extract the production interface, without scaling or changing its gap.
         x,y=122.8,-64.7

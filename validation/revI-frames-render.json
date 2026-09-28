@@ -1,27 +1,67 @@
 {
-  "image_sha256": "3307e0e29214fd4dea2f0675440a71674bc21549d018b9ec463e8d98d1807d05",
+  "image_sha256": "ac24533d6bc3d2a026edbf3208cb6d48537a2482c37fd962ff67efa66b422308",
   "sources": [
     {
+      "path": "design/revI.json",
+      "sha256": "8e2cb213c977a78cef89a871d56791cb32b1571093d18f18220fc9faccfc7688"
+    },
+    {
       "path": "design/frame-finishes.json",
-      "sha256": "b76bfa1ad6c5753439a8cf41a3c4ad81c2459bcdc43c1521c3ea77c239eeda18"
+      "sha256": "20b4888d29dd8f3af8450a6c80f5f9ae99649c2641cc74eb093850ba05f1b902"
     },
     {
       "path": "tools/frame_finishes.py",
-      "sha256": "1b480bb93e12acdacb797f276805d3c1fcbdf85d0c069e5f306aa9c4c54ecd0b"
+      "sha256": "10c1ef73e759b9bef7e9a25e3b506242633dbe86ed821b3a03c204d022a8b4b6"
     },
     {
-      "path": "mechanical/revI/left-frame-handheld.stl",
-      "sha256": "278cfb46ed28b94f9cb48a19c4a344eb0bd352ae48de03aa9fa7073aab37a3a9"
+      "path": "mechanical/revI/left-frame-handheld-body.stl",
+      "sha256": "9a797572c764f9d51f3a0317367764c677b14fd2540b25986a81a735a1705ec8"
     },
     {
-      "path": "mechanical/revI/left-frame-tv.stl",
-      "sha256": "e29969644e171442e7aec99f70ecb4dcfb7ce1a29cff34122f4a977bff0f3134"
+      "path": "mechanical/revI/left-frame-handheld-detail.stl",
+      "sha256": "05e3dff066cb4a3b3dfa308a645984eb6bc8b2aba119a536376227d9bc64e9d4"
     },
     {
-      "path": "mechanical/revI/left-frame-cyberpunk.stl",
-      "sha256": "2ed546b7872985dfa06c08c2dc5e43f31355ca83d43781530df1fe435fb8c6a2"
+      "path": "mechanical/revI/left-frame-handheld-accent.stl",
+      "sha256": "dd6926b19fcee531b3c362c08fc8914ac94ed750c67e51d0e3af3dfe6a83492b"
+    },
+    {
+      "path": "mechanical/revI/left-frame-handheld-secondary.stl",
+      "sha256": "ba9399123ecee1580a635d7fe6a609447b1f928e226c8147fdc6b25554b06e78"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-body.stl",
+      "sha256": "defd54be55f48b87ddbedf58f59cb6f1ebb538c1649d4b66c5fb74a11983d8c9"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-detail.stl",
+      "sha256": "b990dfb9c74766f039f43fe6084d45fc71b19ecba90dcb46b4a3a393a1ea5ed1"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-accent.stl",
+      "sha256": "a99a58b84345e8ce179d87f395fa1814fe0cbb4cfebd1fe425bb74b57b00384f"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tv-secondary.stl",
+      "sha256": "28f3a87d6615f44a03fa81f1c0825ee47ae87539fdc3b4321a7f0ed71f1234b4"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-body.stl",
+      "sha256": "7c18cd1dd8cee4c614ed90f0c2fc019eee2230b5e980f36fc052ddedf994cfbd"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-detail.stl",
+      "sha256": "52a3543eee083724c6cb48632e6aa518e420338e188abf9055490d1d3293ad89"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-accent.stl",
+      "sha256": "289066854bdd665d15b076ac0901f5536c635eec9e00f1caa866061f380ab449"
+    },
+    {
+      "path": "mechanical/revI/left-frame-cyberpunk-secondary.stl",
+      "sha256": "0feae0c89840e11a86754977d0244cd32f18043418b767a373f1d62334604947"
     }
   ],
-  "renderer_sha256": "79983faba3df2d37e514dc12e84dc747a13306ec140e54553e5a0739b999ce2a",
+  "renderer_sha256": "86e4a6fe6159b4b2b9d9f561a621516581b42bd3f5e94f8c6d2aa2728a722f87",
   "geometry_changed": false
 }

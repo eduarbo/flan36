@@ -3133,7 +3133,7 @@
       ],
       "battery_opening": [
         116.55,
-        14,
+        13.2,
         129.05,
         47.6
       ],
@@ -3418,7 +3418,25 @@
       "size_mm": [
         116.75,
         94.5744432362655
-      ]
+      ],
+      "rear_lead_notch_xy": [
+        [
+          117.65,
+          47.6
+        ],
+        [
+          119.85,
+          49.4
+        ]
+      ],
+      "reset": {
+        "center_xy": [
+          119.0,
+          59.5
+        ],
+        "layer": "B.Cu",
+        "tool_radius_mm": 1.4
+      }
     },
     "right": {
       "mount_holes": [
@@ -6531,8 +6549,8 @@
         ]
       ],
       "battery_opening": [
-        30.94999999999999,
-        14,
+        30.95,
+        13.2,
         43.45,
         47.6
       ],
@@ -6817,7 +6835,25 @@
       "size_mm": [
         116.75,
         94.5744432362655
-      ]
+      ],
+      "rear_lead_notch_xy": [
+        [
+          40.15,
+          47.6
+        ],
+        [
+          42.35,
+          49.4
+        ]
+      ],
+      "reset": {
+        "center_xy": [
+          41.0,
+          59.5
+        ],
+        "layer": "B.Cu",
+        "tool_radius_mm": 1.4
+      }
     }
   },
   "parts": {
@@ -7059,7 +7095,7 @@
         6.6
       ],
       "visuals": [],
-      "stl_sha256": "b013b9f4b27ed8014e161f6a357b204cea3e940d2c6f7205c0e87ce2780f60f1"
+      "stl_sha256": "d56361c45002f21d3126b354a8cd674b0b211d5e516bee20a6cf54685d522330"
     },
     "left-key-plate": {
       "object": "L_ActivePlate",
@@ -7075,23 +7111,7 @@
         7.6
       ],
       "visuals": [],
-      "stl_sha256": "2a0916661d3eb1dbba131bd638fcb877da9f446daa3db5c53daf5beff5c0fe9d"
-    },
-    "left-pcb": {
-      "object": "L_PCBAllDrills",
-      "role": "PCB \u00b7 unrouted placement",
-      "group": "pcb",
-      "prototype_part": false,
-      "bounds_mm": [
-        19.9,
-        -93.1727567220168,
-        3.8,
-        133.35,
-        -1.899999999999999,
-        5.4
-      ],
-      "visuals": [],
-      "stl_sha256": "31855ee97b7211b34f8aeaf43ef3f6a3a3ea5b285c3158517a3d878d8696a004"
+      "stl_sha256": "89650509b711ace0e3043d82b07fa197f86d63a2d1fe1115deb684bd8b41b7f1"
     },
     "left-cradle": {
       "object": "L_CageSeat1",
@@ -7100,14 +7120,14 @@
       "prototype_part": true,
       "bounds_mm": [
         115.8,
-        -48.1,
+        -47.300000000000004,
         1.4,
         129.8,
-        -13.600000000000001,
+        -12.800000000000004,
         3.65
       ],
       "visuals": [],
-      "stl_sha256": "db7b5351a7b0e8f91a771692bd0a23cc2492aa9273289d6137997891404ad8a0"
+      "stl_sha256": "82a14c80da559a7dd3c497ed799ed4d5be94873e3c48d21b0a2dd9d39255f640"
     },
     "left-battery": {
       "object": "L_ActiveBattery",
@@ -7116,14 +7136,14 @@
       "prototype_part": false,
       "bounds_mm": [
         117.05,
-        -46.1,
+        -45.300000000000004,
         2.0,
         128.55,
-        -15.100000000000001,
+        -14.300000000000004,
         5.8
       ],
       "visuals": [],
-      "stl_sha256": "a4088b9be4ed909062145ffb1d33e55ee56802fc98393f7b86b898616bcf81d6"
+      "stl_sha256": "03bc0d183a3b083f55609fea237406e84aa1d3cb4d41a57131c4c9c60c754644"
     },
     "left-battery-retainer": {
       "object": "L_KeeperCableExit",
@@ -7132,14 +7152,14 @@
       "prototype_part": true,
       "bounds_mm": [
         115.9,
-        -47.35,
+        -46.550000000000004,
         3.0,
         129.7,
-        -14.25,
+        -13.45,
         6.8
       ],
       "visuals": [],
-      "stl_sha256": "d125c8f1fc3c6b65008713e776ac684028a3859c9d871a7e635f9e29e0194430"
+      "stl_sha256": "e649c29d03e194646fcf5ea6dbe2f913216bbc9887c65f68d9daf5cd9c9e687f"
     },
     "left-mcu-riser": {
       "object": "L_Riser",
@@ -7155,7 +7175,7 @@
         8.8
       ],
       "visuals": [],
-      "stl_sha256": "ef3e88058d3fd3a4e42ef64986d7fb754b468a0ced7946032b511406565273bb"
+      "stl_sha256": "0cddb6b6a31274f1e62bc9a7340b86adb136fcc15aedc6c4e24f3578b93d249f"
     },
     "left-mcu": {
       "object": "L_NanoV2",
@@ -7250,22 +7270,6 @@
       "visuals": [],
       "stl_sha256": "3ffc5ed15c5d2b829782b6c588ca27d3ab0f383564a4961bd84b801baccdee37"
     },
-    "left-display-sled": {
-      "object": "L_SledCableCrossing",
-      "role": "Removable display support",
-      "group": "supports",
-      "prototype_part": true,
-      "bounds_mm": [
-        115.0,
-        -52.8,
-        5.4,
-        130.6,
-        -15.5,
-        15.399999999999999
-      ],
-      "visuals": [],
-      "stl_sha256": "c2c0a053935ffed1cddd7be85131480db691b4f8c6db668b0f12a4c03174f73f"
-    },
     "left-display": {
       "object": "L_NiceView",
       "role": "nice!view \u00b7 nominal geometry",
@@ -7273,11 +7277,11 @@
       "prototype_part": false,
       "bounds_mm": [
         115.8,
-        -52.0,
-        13.2,
+        -52.3,
+        10.4,
         129.8,
         -16.0,
-        16.099999999999998
+        14.3
       ],
       "visuals": [
         {
@@ -7299,25 +7303,19 @@
           "path": "mechanical/revI/left-display-visual-3.stl",
           "color": "#ab631f",
           "name": "Flex and backing \u00b7 inferred placement"
+        },
+        {
+          "path": "mechanical/revI/left-display-visual-4.stl",
+          "color": "#0e0f11",
+          "name": "L_SlimDisplayMaleSpacer"
+        },
+        {
+          "path": "mechanical/revI/left-display-visual-5.stl",
+          "color": "#b8bdc2",
+          "name": "L_SlimDisplayMaleContacts"
         }
       ],
-      "stl_sha256": "c12e20db659f0e2c5940689d3eb6e3ea36a8444279f2635ac33a04d2ba37781f"
-    },
-    "left-jst": {
-      "object": "L_JST",
-      "role": "JST \u00b7 relocated reference",
-      "group": "connectors",
-      "prototype_part": false,
-      "bounds_mm": [
-        112.5,
-        -62.5,
-        5.4,
-        119.1,
-        -56.2,
-        13.9
-      ],
-      "visuals": [],
-      "stl_sha256": "b056bd7a3ca8dde7de3875e441f52a7f1141c13b924841e2b070d14cf7f6aa23"
+      "stl_sha256": "a10436f70334c0a75b8d6d92e6a96f0e5c3766a00c961d6a53168271048af651"
     },
     "left-reset": {
       "object": "L_ResetModel",
@@ -7325,12 +7323,12 @@
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        119.8,
+        115.8,
         -62.099999999984,
-        5.4,
-        126.2,
+        2.259999999999999,
+        122.2,
         -56.900000000016,
-        6.94
+        3.799999999999999
       ],
       "visuals": [
         {
@@ -7354,7 +7352,7 @@
           "name": "SW_SPST_TL3342.step material 3"
         }
       ],
-      "stl_sha256": "3837d12ceb4489ca861c44c9f34ab3835fd6340a8274cf4be15038bd75d032ac"
+      "stl_sha256": "8097faf7b590ae84ca3a52eef04c99aff7a0b261515d7bfaa39a482e2259b384"
     },
     "left-slider": {
       "object": "L_SliderModel",
@@ -7388,38 +7386,6 @@
       ],
       "stl_sha256": "84aa9e0016d18076fa6e750a0fba4a0d8af57a11db9e87742c0699c88e0d66e4"
     },
-    "left-battery-lead-0": {
-      "object": "L_WireStudy0",
-      "role": "105 mm lead storage \u00b7 nominal",
-      "group": "connectors",
-      "prototype_part": false,
-      "bounds_mm": [
-        115.7,
-        -55.9,
-        7.000033569456917,
-        128.29986572968505,
-        -19.80013427031495,
-        7.599966430543082
-      ],
-      "visuals": [],
-      "stl_sha256": "93d1d7ed4d27c5c13f2f69b23e752bda74b0d2d0c53f0237369ec61a0aef5125"
-    },
-    "left-battery-lead-1": {
-      "object": "L_WireStudy1",
-      "role": "105 mm lead storage \u00b7 nominal001",
-      "group": "connectors",
-      "prototype_part": false,
-      "bounds_mm": [
-        115.7,
-        -55.9,
-        7.800033569456917,
-        128.29986572968505,
-        -19.80013427031495,
-        8.399966430543081
-      ],
-      "visuals": [],
-      "stl_sha256": "7aea058d90c2e7269564e0b2cb8bd32201eb4a811605cd14ee1abf0353cb5abb"
-    },
     "left-electronics-lid": {
       "object": "L_ActiveFrame",
       "role": "Magnetic frame \u00b7 vertical lift",
@@ -7428,13 +7394,141 @@
       "bounds_mm": [
         111.0,
         -67.0,
-        6.299999999999996,
+        6.299999999999994,
         135.0,
         -11.0,
-        16.6
+        14.8
       ],
       "visuals": [],
-      "stl_sha256": "c2a0c1b8cfc08baa6cc22b68afd80eca4b93b3b81eff6a4907cb7e210a8fa77a"
+      "stl_sha256": "0b8db86d2bbbeec80a089f2888b9f0e3f976808612e5fa7944cde90e3cbd6731"
+    },
+    "left-pcb": {
+      "object": "L_SlimPCBLeadNotch",
+      "role": "PCB \u00b7 unrouted placement002",
+      "group": "pcb",
+      "prototype_part": false,
+      "bounds_mm": [
+        19.9,
+        -93.1727567220168,
+        3.8,
+        133.35,
+        -1.899999999999999,
+        5.4
+      ],
+      "visuals": [],
+      "stl_sha256": "330e4e3d8ad76f6a659f5fc01d5a6e4d20a5b25d854e9b9258412025ab1994f1"
+    },
+    "left-jst": {
+      "object": "L_SlimJST",
+      "role": "JST PH \u00b7 side-entry header + mated PHR-2",
+      "group": "connectors",
+      "prototype_part": false,
+      "bounds_mm": [
+        117.19999999999999,
+        -61.14999999999999,
+        2.0,
+        126.79999999999998,
+        -55.249999999999986,
+        10.2
+      ],
+      "visuals": [
+        {
+          "path": "mechanical/revI/left-jst-visual-0.stl",
+          "color": "#dbd6bf",
+          "name": "L_SlimPHHeader"
+        },
+        {
+          "path": "mechanical/revI/left-jst-visual-1.stl",
+          "color": "#f2f0db",
+          "name": "L_SlimPHPlug"
+        },
+        {
+          "path": "mechanical/revI/left-jst-visual-2.stl",
+          "color": "#b3b8b3",
+          "name": "L_SlimPHPin0"
+        },
+        {
+          "path": "mechanical/revI/left-jst-visual-3.stl",
+          "color": "#b3b8b3",
+          "name": "L_SlimPHPin1"
+        }
+      ],
+      "stl_sha256": "1670973135133fa86fb4f5abf6a2ee06e1d2241cb04db4287cefd19bf68f1a4a"
+    },
+    "left-display-socket": {
+      "object": "L_SlimDisplaySocket",
+      "role": "J2 \u00b7 retained nice!view socket",
+      "group": "connectors",
+      "prototype_part": false,
+      "bounds_mm": [
+        116.2,
+        -52.3,
+        2.0,
+        129.4,
+        -49.3,
+        10.4
+      ],
+      "visuals": [
+        {
+          "path": "mechanical/revI/left-display-socket-visual-0.stl",
+          "color": "#0e0f11",
+          "name": "L_SlimDisplaySocketHousing"
+        },
+        {
+          "path": "mechanical/revI/left-display-socket-visual-1.stl",
+          "color": "#b8bdc2",
+          "name": "L_SlimDisplaySocketPins"
+        }
+      ],
+      "stl_sha256": "6894a48dd284de881b33c8f403584994c851a384bd995047315a8323bbcc3cc6"
+    },
+    "left-display-sled": {
+      "object": "L_SlimDisplayHeaderClearance",
+      "role": "Removable display support002",
+      "group": "supports",
+      "prototype_part": true,
+      "bounds_mm": [
+        115.0,
+        -52.8,
+        5.4,
+        130.6,
+        -15.5,
+        13.6
+      ],
+      "visuals": [],
+      "stl_sha256": "f602e3b58ca2e18b3343e4853f5becb6deb43155cce9e648542d0d1a68d582dd"
+    },
+    "left-battery-lead-0": {
+      "object": "L_ActiveBatteryLead0",
+      "role": "105 mm lead \u00b7 continuous nominal route002",
+      "group": "connectors",
+      "prototype_part": false,
+      "bounds_mm": [
+        115.0,
+        -59.5,
+        3.900033569456918,
+        130.89986572968505,
+        -22.065398456565177,
+        7.499966430543083
+      ],
+      "visuals": [],
+      "stl_sha256": "f32c3c15c22d5df59007a8cad1556d4cdd688dbfc6685ffafb2eca5b82841501"
+    },
+    "left-battery-lead-1": {
+      "object": "L_ActiveBatteryLead1",
+      "role": "105 mm lead \u00b7 continuous nominal route003",
+      "group": "connectors",
+      "prototype_part": false,
+      "bounds_mm": [
+        115.0,
+        -57.5,
+        4.700033569456918,
+        130.89986572968505,
+        -20.665398456565207,
+        8.299966430543082
+      ],
+      "visuals": [],
+      "stl_sha256": "b9b866b4b3bc82f32fac45e2ffa1641be2b8a148533c7b462339f9ef057e8990"
     },
     "right-washer-1": {
       "object": "R_Washer1",
@@ -7674,7 +7768,7 @@
         6.6
       ],
       "visuals": [],
-      "stl_sha256": "bf12ec1c0c9d54ca71efcf6f06f290a7e825483f3215c35bb5e9482ba5c4dc19"
+      "stl_sha256": "f3efc85c96d19a5953d9ccd1bfd3a02e8da835f90b9a597309d511d55ec67949"
     },
     "right-key-plate": {
       "object": "R_ActivePlate",
@@ -7690,23 +7784,7 @@
         7.6
       ],
       "visuals": [],
-      "stl_sha256": "f236ccb48874accb4f459dd3238ea409a67dad1ae8857427ffb76235d26aa5e6"
-    },
-    "right-pcb": {
-      "object": "R_PCBAllDrills",
-      "role": "PCB \u00b7 unrouted placement001",
-      "group": "pcb",
-      "prototype_part": false,
-      "bounds_mm": [
-        26.650000000000006,
-        -93.1727567220168,
-        3.8,
-        140.1,
-        -1.899999999999999,
-        5.4
-      ],
-      "visuals": [],
-      "stl_sha256": "7e29269b7d62f7340702492370db5e07e766927799ad28a4e496549638c5b07f"
+      "stl_sha256": "8a60d57cd6f4f408da335187b108be8dc88e644150f2bfda91963e0534e9be39"
     },
     "right-cradle": {
       "object": "R_CageSeat1",
@@ -7715,14 +7793,14 @@
       "prototype_part": true,
       "bounds_mm": [
         30.19999999999999,
-        -48.1,
+        -47.300000000000004,
         1.4,
         44.2,
-        -13.600000000000001,
+        -12.800000000000004,
         3.65
       ],
       "visuals": [],
-      "stl_sha256": "c58132abb283a6d33360c743358f4acc3edcdcd1065ee725a1f0f8397b34c012"
+      "stl_sha256": "209ac2eded62a35d0c92ade2894e0971a84c16f90fc368cea6e94c3cb5b0aada"
     },
     "right-battery": {
       "object": "R_ActiveBattery",
@@ -7731,14 +7809,14 @@
       "prototype_part": false,
       "bounds_mm": [
         31.44999999999999,
-        -46.1,
+        -45.300000000000004,
         2.0,
         42.95,
-        -15.100000000000001,
+        -14.300000000000004,
         5.8
       ],
       "visuals": [],
-      "stl_sha256": "9084a11a78213f96e17adbc7192cc4147403237a9555b6c8c5a185366855c23a"
+      "stl_sha256": "65b6b3e3fcc219b0892fc6645695f82d3669c3a76c7172a016a9c1a09881b01f"
     },
     "right-battery-retainer": {
       "object": "R_KeeperCableExit",
@@ -7747,14 +7825,14 @@
       "prototype_part": true,
       "bounds_mm": [
         30.30000000000001,
-        -47.35,
+        -46.550000000000004,
         3.0,
         44.099999999999994,
-        -14.25,
+        -13.45,
         6.8
       ],
       "visuals": [],
-      "stl_sha256": "356b792c569cd921f0abe198f7a0ba19b6f413e798cdccb81f23c7adb9b10b22"
+      "stl_sha256": "ed977daa3d73eb580c933964b1f1693d921204658cb147cde8bfba80666c7c5c"
     },
     "right-mcu-riser": {
       "object": "R_Riser",
@@ -7770,7 +7848,7 @@
         8.8
       ],
       "visuals": [],
-      "stl_sha256": "38a006ade78db6803dc223faefe3c8714b518d0204d23f9fcbc94aea3487a6b5"
+      "stl_sha256": "9e4ebd1b38c40ef3a27898474099394a244ca708d493c8a62e7a190695d40ed9"
     },
     "right-mcu": {
       "object": "R_NanoV2",
@@ -7865,22 +7943,6 @@
       "visuals": [],
       "stl_sha256": "04a2f9e5537deb6bf97f74652d73f8849be043a6f69377f6fccc400e0eee6bbf"
     },
-    "right-display-sled": {
-      "object": "R_SledCableCrossing",
-      "role": "Removable display support001",
-      "group": "supports",
-      "prototype_part": true,
-      "bounds_mm": [
-        29.400000000000006,
-        -52.8,
-        5.4,
-        45.0,
-        -15.5,
-        15.399999999999999
-      ],
-      "visuals": [],
-      "stl_sha256": "4d7c09a8786951cbad640389d58757935bc324dcaef0c70893dd937bf660604f"
-    },
     "right-display": {
       "object": "R_NiceView",
       "role": "nice!view \u00b7 nominal geometry001",
@@ -7888,11 +7950,11 @@
       "prototype_part": false,
       "bounds_mm": [
         30.200000000000003,
-        -52.0,
-        13.2,
+        -52.3,
+        10.4,
         44.2,
         -16.0,
-        16.099999999999998
+        14.3
       ],
       "visuals": [
         {
@@ -7914,25 +7976,19 @@
           "path": "mechanical/revI/right-display-visual-3.stl",
           "color": "#ab631f",
           "name": "Flex and backing \u00b7 inferred placement001"
+        },
+        {
+          "path": "mechanical/revI/right-display-visual-4.stl",
+          "color": "#0e0f11",
+          "name": "R_SlimDisplayMaleSpacer"
+        },
+        {
+          "path": "mechanical/revI/right-display-visual-5.stl",
+          "color": "#b8bdc2",
+          "name": "R_SlimDisplayMaleContacts"
         }
       ],
-      "stl_sha256": "27000e22a53b95f60ea18cea2736249d4f366a8f47a64fa3cd33dac48a62da26"
-    },
-    "right-jst": {
-      "object": "R_JST",
-      "role": "JST \u00b7 relocated reference001",
-      "group": "connectors",
-      "prototype_part": false,
-      "bounds_mm": [
-        40.900000000000006,
-        -62.5,
-        5.4,
-        47.5,
-        -56.2,
-        13.9
-      ],
-      "visuals": [],
-      "stl_sha256": "11f7d1109abb0ac30133642f12bb2b7ff1836af29ab52858359237bff7487d85"
+      "stl_sha256": "e9df885c416f6e228d23f6dc7d7439f57191517a419c689b55e9753df0ef8def"
     },
     "right-reset": {
       "object": "R_ResetModel",
@@ -7940,12 +7996,12 @@
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        33.8,
+        37.8,
         -62.099999999984,
-        5.4,
-        40.2,
+        2.259999999999999,
+        44.2,
         -56.900000000016,
-        6.94
+        3.799999999999999
       ],
       "visuals": [
         {
@@ -7969,7 +8025,7 @@
           "name": "SW_SPST_TL3342.step material 004"
         }
       ],
-      "stl_sha256": "38b6fe8d07c554c97930270dade784d05dc9aec03f1f0c19b5b98e97c158c82b"
+      "stl_sha256": "01ede93fad5b9ddbae93fbca5f8c8d7255331d6e971863e851166c1c4afbdcf9"
     },
     "right-slider": {
       "object": "R_SliderModel",
@@ -8003,38 +8059,6 @@
       ],
       "stl_sha256": "e0a6f94c645e87be40feb14055da0c42f7d2f440e733467cea1c5920221619d2"
     },
-    "right-battery-lead-0": {
-      "object": "R_WireStudy0",
-      "role": "105 mm lead storage \u00b7 nominal002",
-      "group": "connectors",
-      "prototype_part": false,
-      "bounds_mm": [
-        31.700000000000003,
-        -55.9,
-        7.000033569456917,
-        44.29986572968505,
-        -19.800000000000004,
-        7.599966430543082
-      ],
-      "visuals": [],
-      "stl_sha256": "3d8248276fb87530653645ba7f74f88dc4b2e211b81907e6fc3153dee47dfb42"
-    },
-    "right-battery-lead-1": {
-      "object": "R_WireStudy1",
-      "role": "105 mm lead storage \u00b7 nominal003",
-      "group": "connectors",
-      "prototype_part": false,
-      "bounds_mm": [
-        31.700000000000003,
-        -55.9,
-        7.800033569456918,
-        44.29986572968505,
-        -19.800000000000004,
-        8.399966430543081
-      ],
-      "visuals": [],
-      "stl_sha256": "3e662be7118ef25d4a1aa454fe48a4cbe443f30cb876a1dc0a304c736d015c5e"
-    },
     "right-electronics-lid": {
       "object": "R_ActiveFrame",
       "role": "Magnetic frame \u00b7 vertical lift001",
@@ -8043,13 +8067,141 @@
       "bounds_mm": [
         25.0,
         -67.0,
-        6.299999999999994,
+        6.299999999999998,
         49.0,
         -11.0,
-        16.6
+        14.8
       ],
       "visuals": [],
-      "stl_sha256": "a58aa92fac317742c0b5a2feed1544ca25b8c9662f49194a7c5a91730893d0bc"
+      "stl_sha256": "bec9ac9c6a88febbe9f7c0b49bfe4634809e4e03c268e2d4ecef43d1b377c7ee"
+    },
+    "right-pcb": {
+      "object": "R_SlimPCBLeadNotch",
+      "role": "PCB \u00b7 unrouted placement003",
+      "group": "pcb",
+      "prototype_part": false,
+      "bounds_mm": [
+        26.650000000000006,
+        -93.1727567220168,
+        3.8,
+        140.1,
+        -1.899999999999999,
+        5.4
+      ],
+      "visuals": [],
+      "stl_sha256": "a7143377c3c43dd673d0dee8b0324ca49c21daa7a77721882975b96256a5f28a"
+    },
+    "right-jst": {
+      "object": "R_SlimJST",
+      "role": "JST PH \u00b7 side-entry header + mated PHR-001",
+      "group": "connectors",
+      "prototype_part": false,
+      "bounds_mm": [
+        33.2,
+        -61.15000000000001,
+        2.0,
+        42.800000000000004,
+        -55.250000000000014,
+        10.2
+      ],
+      "visuals": [
+        {
+          "path": "mechanical/revI/right-jst-visual-0.stl",
+          "color": "#dbd6bf",
+          "name": "R_SlimPHHeader"
+        },
+        {
+          "path": "mechanical/revI/right-jst-visual-1.stl",
+          "color": "#f2f0db",
+          "name": "R_SlimPHPlug"
+        },
+        {
+          "path": "mechanical/revI/right-jst-visual-2.stl",
+          "color": "#b3b8b3",
+          "name": "R_SlimPHPin0"
+        },
+        {
+          "path": "mechanical/revI/right-jst-visual-3.stl",
+          "color": "#b3b8b3",
+          "name": "R_SlimPHPin1"
+        }
+      ],
+      "stl_sha256": "1d2a70a98ea456446e33930237bce507b3bbb8a79345260fd7b6c2c0466e4c9a"
+    },
+    "right-display-socket": {
+      "object": "R_SlimDisplaySocket",
+      "role": "J2 \u00b7 retained nice!view socket001",
+      "group": "connectors",
+      "prototype_part": false,
+      "bounds_mm": [
+        30.6,
+        -52.3,
+        2.0,
+        43.8,
+        -49.3,
+        10.4
+      ],
+      "visuals": [
+        {
+          "path": "mechanical/revI/right-display-socket-visual-0.stl",
+          "color": "#0e0f11",
+          "name": "R_SlimDisplaySocketHousing"
+        },
+        {
+          "path": "mechanical/revI/right-display-socket-visual-1.stl",
+          "color": "#b8bdc2",
+          "name": "R_SlimDisplaySocketPins"
+        }
+      ],
+      "stl_sha256": "441b2c9f85de4f7393f2898467d1982675b3d6c8c24b88ba40be98f0ad1df698"
+    },
+    "right-display-sled": {
+      "object": "R_SlimDisplayHeaderClearance",
+      "role": "Removable display support003",
+      "group": "supports",
+      "prototype_part": true,
+      "bounds_mm": [
+        29.400000000000006,
+        -52.8,
+        5.4,
+        45.0,
+        -15.5,
+        13.6
+      ],
+      "visuals": [],
+      "stl_sha256": "3405565293967523b2cb70e8b0308da523da2f1f0651469f5c62be578055b110"
+    },
+    "right-battery-lead-0": {
+      "object": "R_ActiveBatteryLead0",
+      "role": "105 mm lead \u00b7 continuous nominal route006",
+      "group": "connectors",
+      "prototype_part": false,
+      "bounds_mm": [
+        29.10000000000001,
+        -59.499865729685055,
+        3.900033569456918,
+        44.99986572968506,
+        -22.06526418625024,
+        7.499966430543083
+      ],
+      "visuals": [],
+      "stl_sha256": "427a0515a6e7dd81688afc954419dfa70e3300f83375df5b6869ebecc8d8744f"
+    },
+    "right-battery-lead-1": {
+      "object": "R_ActiveBatteryLead1",
+      "role": "105 mm lead \u00b7 continuous nominal route007",
+      "group": "connectors",
+      "prototype_part": false,
+      "bounds_mm": [
+        29.10000000000001,
+        -57.499865729685055,
+        4.700033569456918,
+        44.99986572968506,
+        -20.665264186250262,
+        8.299966430543082
+      ],
+      "visuals": [],
+      "stl_sha256": "b7865b8dafd65a42618682ac9b826b9d3a5c6889812251a5a0bc390f2524d5eb"
     }
   },
   "parameter_values_mm": {
@@ -8061,10 +8213,10 @@
     "MCUShiftY": 7.5,
     "MCUBottom": 8.8,
     "DisplayShiftY": 2.4,
-    "DisplayBottom": 14.2,
-    "BatteryShiftY": 2.0,
+    "DisplayBottom": 12.4,
+    "BatteryShiftY": 1.2,
     "BatteryBottom": 2.0,
-    "FrameTop": 16.6,
+    "FrameTop": 14.8,
     "FrameRoof": 1.2,
     "WindowMargin": 0.4,
     "SlotClearance": 0.1
@@ -8075,16 +8227,36 @@
       "sha256": "f84fefc1b6caf551a491c7cf6d29c6dd999654997655fb22d58748e5da44606d"
     },
     {
+      "path": "design/frame-finishes.json",
+      "sha256": "20b4888d29dd8f3af8450a6c80f5f9ae99649c2641cc74eb093850ba05f1b902"
+    },
+    {
       "path": "design/frame-extensions.json",
-      "sha256": "b328a3b8f45096d5a8cdd509e74ac81a28c0ca1b443ee28050faaa31ec35d344"
+      "sha256": "adece1c6c0dfe2c4ca36bc142add236710a20ee43b94a175fe2460e3df701be7"
+    },
+    {
+      "path": "design/slim-flush-workflow.json",
+      "sha256": "3e8f0fcffe66c3ea867239e088b46d574b26856c78b13e63b8aff7562cfac0be"
+    },
+    {
+      "path": "tools/freecad/flush_frames.py",
+      "sha256": "82d880663bed2f69800f0ecf7bc0e564c32c8954d08a05f418b4edca71c7092c"
+    },
+    {
+      "path": "tools/freecad/slim_stack.py",
+      "sha256": "9c50f62fdf4f88099499543369d1508178453ebbc08d46fd67ff50a429337331"
+    },
+    {
+      "path": "tools/freecad/install_slim_flush.py",
+      "sha256": "18383ce35456e06c1ac8cb9c7b339745bf61e870286fcc96fa1276a86e3e6a09"
     },
     {
       "path": "tools/freecad/extra_frames.py",
-      "sha256": "94f10a43a2a5a1360f00ec340841696566778a188ba7f53b55a8f76c3d9bed14"
+      "sha256": "588e1a7e8a2cb6dd278da8aa5ad9bdee4e0f7beca36ad2a50dcce842027a5de1"
     },
     {
       "path": "tools/freecad/install_extra_frames.py",
-      "sha256": "1e9f37e9f6e0747fd32f162d9b01d64c956744a0ff0f4924a3ac40bad42b0a3b"
+      "sha256": "c8e8415c0ca91cf03b89772b7b9d508764ddbf2c791be2c1866dcd1f2dfc0709"
     },
     {
       "path": "tools/freecad/components.py",
@@ -8100,11 +8272,11 @@
     },
     {
       "path": "components/sources.json",
-      "sha256": "7a24c509e1c2b0f8db76220367db8c2bf0c9f4864fc60c79c57b3b7dc7318b70"
+      "sha256": "ea497b753353f2f7405931a9daa330eee2c6f6d6b0fdc9900f2a970f15ebe614"
     },
     {
       "path": "tools/frame_finishes.py",
-      "sha256": "8a324968d1d33dcef72bf940375bced5b4489cbb69400296bae17d0ff75db339"
+      "sha256": "10c1ef73e759b9bef7e9a25e3b506242633dbe86ed821b3a03c204d022a8b4b6"
     },
     {
       "path": "tools/keycap_config.py",
@@ -8112,7 +8284,7 @@
     },
     {
       "path": "tools/freecad/configuration.py",
-      "sha256": "5972d841493a3400db495ad0e5d47071f713ef2f78a88e6dc57bc18b6c148797"
+      "sha256": "378775f2192dcb080495a182db18964024abdddcff5eef79f7881dcdf8f847d4"
     },
     {
       "path": "design/layout.json",
@@ -8144,18 +8316,18 @@
     },
     {
       "path": "design/revI-wire-study.json",
-      "sha256": "5f57768c897900e9f999a594074449b6945766a0356d01cc037814a1a799090c"
+      "sha256": "ae2a204b383e6df81f59706e42a98c163f549183767da38c634fc8983d94a2f1"
     },
     {
       "path": "tools/freecad/build_revI.py",
-      "sha256": "cf7c181bff156509197e455b79993f682418b4e43641ba85267286bfbce6130e"
+      "sha256": "87d0a41ce387a45cab7b88ec7b6f11dfbfb10cd4d0ea7da110f9d6d8799a4ab0"
     },
     {
       "path": "tools/freecad/export_revI.py",
-      "sha256": "bab27ba066848f313259d519b2fd820076bef624abc7130a30ee58abfe90f555"
+      "sha256": "05e9352fd6003c04869729cb88caf10aea687f7370f85e9b1b28ac2022f80475"
     }
   ],
-  "fcstd_sha256": "621d03fd572bf04bd8eeaa452c1dbc56f0ef23d16b875e03b37bfdb2cdccd6c2",
+  "fcstd_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
   "identity_migration": {
     "baseline_commit": "819a01883b2faec3682ac457328bc361dc43e355",
     "method": "Only branding tokens in native Document.xml changed; shape and mesh members preserved byte for byte",
@@ -8163,12 +8335,741 @@
     "native_readback": "validation/rebrand-native.json",
     "geometry_rebuilt": false
   },
-  "export_execution": {
+  "frameVariants": {
+    "left-smooth": {
+      "stl": "left-frame-smooth.stl",
+      "step": "left-frame-smooth.step",
+      "material_parts": [],
+      "roof_mm": 14.8,
+      "color_construction": "single body"
+    },
+    "left-bevel": {
+      "stl": "left-frame-bevel.stl",
+      "step": "left-frame-bevel.step",
+      "material_parts": [],
+      "roof_mm": 14.8,
+      "color_construction": "single body"
+    },
+    "left-facet": {
+      "stl": "left-frame-facet.stl",
+      "step": "left-frame-facet.step",
+      "material_parts": [],
+      "roof_mm": 14.8,
+      "color_construction": "single body"
+    },
+    "left-handheld": {
+      "stl": "left-frame-handheld.stl",
+      "step": "left-frame-handheld.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-handheld-body.stl",
+          "step": "left-frame-handheld-body.step",
+          "stl_sha256": "9a797572c764f9d51f3a0317367764c677b14fd2540b25986a81a735a1705ec8",
+          "step_sha256": "aab34f48bae80e8d49a85abf82cfc5221801ba8e0d284fd85a1e30585ad75a73",
+          "volume_mm3": 2310.0941174599675,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-handheld-detail.stl",
+          "step": "left-frame-handheld-detail.step",
+          "stl_sha256": "05e3dff066cb4a3b3dfa308a645984eb6bc8b2aba119a536376227d9bc64e9d4",
+          "step_sha256": "dbc60aabd7223028e6c284c937455f59724f06b867bd820021313b69af047e42",
+          "volume_mm3": 8.64000000000004,
+          "solids": 1
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-handheld-accent.stl",
+          "step": "left-frame-handheld-accent.step",
+          "stl_sha256": "dd6926b19fcee531b3c362c08fc8914ac94ed750c67e51d0e3af3dfe6a83492b",
+          "step_sha256": "57f0f80c7956acaa44f1c4e5515a7a705db331dd36fc04bf80a0e606d24e77e8",
+          "volume_mm3": 6.8423887995185675,
+          "solids": 2
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-handheld-secondary.stl",
+          "step": "left-frame-handheld-secondary.step",
+          "stl_sha256": "ba9399123ecee1580a635d7fe6a609447b1f928e226c8147fdc6b25554b06e78",
+          "step_sha256": "2d274ae01ed72fb8e924da0165da13d2c3fadcb9422d76b30fb67247ba8dda22",
+          "volume_mm3": 2.7599999999999967,
+          "solids": 3
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-tv": {
+      "stl": "left-frame-tv.stl",
+      "step": "left-frame-tv.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-tv-body.stl",
+          "step": "left-frame-tv-body.step",
+          "stl_sha256": "defd54be55f48b87ddbedf58f59cb6f1ebb538c1649d4b66c5fb74a11983d8c9",
+          "step_sha256": "fa3855f55ae44babe9056f352defde57408604e8b9b98ec55eef89f3e024884a",
+          "volume_mm3": 2251.6117014429988,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-tv-detail.stl",
+          "step": "left-frame-tv-detail.step",
+          "stl_sha256": "b990dfb9c74766f039f43fe6084d45fc71b19ecba90dcb46b4a3a393a1ea5ed1",
+          "step_sha256": "62e46a86e0d4f45336fbd8202812a6352011281457644bc292a237eb35a54b93",
+          "volume_mm3": 64.42000000000029,
+          "solids": 1
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-tv-accent.stl",
+          "step": "left-frame-tv-accent.step",
+          "stl_sha256": "a99a58b84345e8ce179d87f395fa1814fe0cbb4cfebd1fe425bb74b57b00384f",
+          "step_sha256": "0b633c550df32c0617d42aafce6dcaa415b8f61ccd4fa38448a9ffef478f06d6",
+          "volume_mm3": 5.808804816487529,
+          "solids": 1
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-tv-secondary.stl",
+          "step": "left-frame-tv-secondary.step",
+          "stl_sha256": "28f3a87d6615f44a03fa81f1c0825ee47ae87539fdc3b4321a7f0ed71f1234b4",
+          "step_sha256": "f0bd0aed5ec4fd60a0364b4b9df9258d585fddf54351cf804a10a1a51592ec9a",
+          "volume_mm3": 6.495999999999961,
+          "solids": 4
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-cyberpunk": {
+      "stl": "left-frame-cyberpunk.stl",
+      "step": "left-frame-cyberpunk.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-cyberpunk-body.stl",
+          "step": "left-frame-cyberpunk-body.step",
+          "stl_sha256": "7c18cd1dd8cee4c614ed90f0c2fc019eee2230b5e980f36fc052ddedf994cfbd",
+          "step_sha256": "e6536e6089c3d9ed2c8ef72b0eb2266a37ca035e7c0d12568b5e995470d4b4c8",
+          "volume_mm3": 2310.54786919805,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-cyberpunk-detail.stl",
+          "step": "left-frame-cyberpunk-detail.step",
+          "stl_sha256": "52a3543eee083724c6cb48632e6aa518e420338e188abf9055490d1d3293ad89",
+          "step_sha256": "79a92eacbd6f9232aaac48fe2c33208910c1351f3fedaf5bd0c928e479a6d840",
+          "volume_mm3": 7.055999999999933,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-cyberpunk-accent.stl",
+          "step": "left-frame-cyberpunk-accent.step",
+          "stl_sha256": "289066854bdd665d15b076ac0901f5536c635eec9e00f1caa866061f380ab449",
+          "step_sha256": "d31129fb4f5990868d704794b9c7899324ad546e1d07b2d9b473c0ab75af6b76",
+          "volume_mm3": 5.152000000000024,
+          "solids": 1
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-cyberpunk-secondary.stl",
+          "step": "left-frame-cyberpunk-secondary.step",
+          "stl_sha256": "0feae0c89840e11a86754977d0244cd32f18043418b767a373f1d62334604947",
+          "step_sha256": "f49d160bd32fca4d9800e5a209c6d20afe00cf42eab44b3a00bfb1c95a81d987",
+          "volume_mm3": 5.580637061435919,
+          "solids": 2
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-cartridge": {
+      "stl": "left-frame-cartridge.stl",
+      "step": "left-frame-cartridge.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-cartridge-body.stl",
+          "step": "left-frame-cartridge-body.step",
+          "stl_sha256": "6c21b2c41e7f1e60208351392ea68505cfbe3e6ca6bd5119093f878bbe9ab3b1",
+          "step_sha256": "85bc4e8ed3eda0d5ce693832b5f4624d092da4a327bf9f8f80e347aa7e707a50",
+          "volume_mm3": 2197.240506259488,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-cartridge-detail.stl",
+          "step": "left-frame-cartridge-detail.step",
+          "stl_sha256": "7cdcb00fdb6f909812430d8666dcfdc7c8ba758099c5b3083a376cffc5c4e7b1",
+          "step_sha256": "eba480a1ea8c973135db8b69c84dcba4b20bb522f9577e521d33835dc94b351b",
+          "volume_mm3": 83.9680000000004,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-cartridge-accent.stl",
+          "step": "left-frame-cartridge-accent.step",
+          "stl_sha256": "f44b27c1ec554b912608e9b9e612cae2eea1aa6ca9b071b262925bad8ccc201d",
+          "step_sha256": "250380657a96afd1cffc6b44e54e5c96b845fc340d01c347dd364a7300001044",
+          "volume_mm3": 13.720000000000063,
+          "solids": 7
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-cartridge-secondary.stl",
+          "step": "left-frame-cartridge-secondary.step",
+          "stl_sha256": "1c4e7a36a4993c6482cf9057ed69bdaaaeb343538ad5056e28ce862ee003e420",
+          "step_sha256": "71fce3f39548b448b06e6d6e25eb0317ab8d3a39df735ec7696ed65c7ce356c1",
+          "volume_mm3": 33.40800000000001,
+          "solids": 1
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-arcade": {
+      "stl": "left-frame-arcade.stl",
+      "step": "left-frame-arcade.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-arcade-body.stl",
+          "step": "left-frame-arcade-body.step",
+          "stl_sha256": "240b369ef8e463f7d364195f5d5546f0e67b7e657740711c1c70a5ea1b09a5e8",
+          "step_sha256": "c2601fe4e40fc46ea4c311a349a870cb3bc610ae493620d1afdbd31dcdda3d44",
+          "volume_mm3": 2243.056373597864,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-arcade-detail.stl",
+          "step": "left-frame-arcade-detail.step",
+          "stl_sha256": "cd666ca10fa63875db449eea3924c871b4b9a29aadb1cd22adb3133ad37b146d",
+          "step_sha256": "4e7c4b5c1f26c438de668f502210a608c2e4a29396cb62076ab8431583ff4709",
+          "volume_mm3": 61.42000000000014,
+          "solids": 9
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-arcade-accent.stl",
+          "step": "left-frame-arcade-accent.step",
+          "stl_sha256": "dc3b2520ce1274325252617e861bfc8b35082a91d03ff6b854277002e8d96de1",
+          "step_sha256": "13098a6f9d9d7f45afc2f08b5324cc16d985bc59b1d33e907ba90cd6da85ec1e",
+          "volume_mm3": 9.650972631827853,
+          "solids": 3
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-arcade-secondary.stl",
+          "step": "left-frame-arcade-secondary.step",
+          "stl_sha256": "f8a4b2f59b05ba5168af78ae73a52679995b76c3edf846e353db5cd9d6952e08",
+          "step_sha256": "beeedeabab24b09f819cf22194a9eeb1bf27eb5a66a7d3ea6c75385c2649ff8e",
+          "volume_mm3": 14.209160029791738,
+          "solids": 4
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-mecha": {
+      "stl": "left-frame-mecha.stl",
+      "step": "left-frame-mecha.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-mecha-body.stl",
+          "step": "left-frame-mecha-body.step",
+          "stl_sha256": "74db633a11398c96b215be6696650e9949cf86f3976c31518db80143e01c0f3d",
+          "step_sha256": "f351ee87b0f844cb6cde6459ab182b48ef35ceec4f56111b021f3c23f4d4a714",
+          "volume_mm3": 2196.4815422982188,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-mecha-detail.stl",
+          "step": "left-frame-mecha-detail.step",
+          "stl_sha256": "c23ae15056e08738e775bc29c40ca83177e63fc14aab6f662c02405139fa4a6b",
+          "step_sha256": "c5c078e8be3d78e5c250326d3b05f32554aeab89748f0b06137cac2d862f5bd7",
+          "volume_mm3": 108.4720000000002,
+          "solids": 6
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-mecha-accent.stl",
+          "step": "left-frame-mecha-accent.step",
+          "stl_sha256": "12afeef68b36a8d64f99f23f80e0f4df9eeb2a567847e4b2b7ef2cb52a3f21b2",
+          "step_sha256": "a58d84cc1f5a6fd92d1a125fecfc46272facca12af86d795d7f596173aa31372",
+          "volume_mm3": 15.840000000000028,
+          "solids": 6
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-mecha-secondary.stl",
+          "step": "left-frame-mecha-secondary.step",
+          "stl_sha256": "47e2ad84caa6d306f1865e93dc0c8f8a3321c05f1e1e58ed25ccd49bd1fbc5c0",
+          "step_sha256": "1985e97eb7976f2bfd7747fbc5016f82638afe2424597e56e58bcb8463b751ed",
+          "volume_mm3": 7.542963961269091,
+          "solids": 1
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-kintsugi": {
+      "stl": "left-frame-kintsugi.stl",
+      "step": "left-frame-kintsugi.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-kintsugi-body.stl",
+          "step": "left-frame-kintsugi-body.step",
+          "stl_sha256": "9797b12944d491358f568d77284236db4a0d196abb6d8d5bfaa8e2001b351262",
+          "step_sha256": "a8a86f2a7d02651ff943bf827474a7341fbc088f1237d83a8dfaa2152fee2795",
+          "volume_mm3": 2221.3744740398383,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-kintsugi-detail.stl",
+          "step": "left-frame-kintsugi-detail.step",
+          "stl_sha256": "0be6e1e28631dd7d6602009416e4ecf4ae7bc45411321b11f190d6a9922dbc9f",
+          "step_sha256": "a8a1098629824f69807803ba5770b1e0fb00bbc0ac7dc38f47b6a14de27e252f",
+          "volume_mm3": 36.87600000000005,
+          "solids": 2
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-kintsugi-accent.stl",
+          "step": "left-frame-kintsugi-accent.step",
+          "stl_sha256": "552f590594d8f70d4d4ef6b96775294a3be3536417729904fce656738ab11c54",
+          "step_sha256": "47d557d2c092e07ac35b50a3558145ed77743911ffb52a123d985c20f507f3b0",
+          "volume_mm3": 57.28603221964585,
+          "solids": 4
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-kintsugi-secondary.stl",
+          "step": "left-frame-kintsugi-secondary.step",
+          "stl_sha256": "252d894312180019c06d6ddbe351af4eb0f7f2e30f605cca8d6d51deba0b7a51",
+          "step_sha256": "76c083e4231569ee1891c9ca0a2bd713b86c28a4d68c28913f98e0e98674e6d1",
+          "volume_mm3": 12.799999999999983,
+          "solids": 1
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-smooth": {
+      "stl": "right-frame-smooth.stl",
+      "step": "right-frame-smooth.step",
+      "material_parts": [],
+      "roof_mm": 14.8,
+      "color_construction": "single body"
+    },
+    "right-bevel": {
+      "stl": "right-frame-bevel.stl",
+      "step": "right-frame-bevel.step",
+      "material_parts": [],
+      "roof_mm": 14.8,
+      "color_construction": "single body"
+    },
+    "right-facet": {
+      "stl": "right-frame-facet.stl",
+      "step": "right-frame-facet.step",
+      "material_parts": [],
+      "roof_mm": 14.8,
+      "color_construction": "single body"
+    },
+    "right-handheld": {
+      "stl": "right-frame-handheld.stl",
+      "step": "right-frame-handheld.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-handheld-body.stl",
+          "step": "right-frame-handheld-body.step",
+          "stl_sha256": "6c03c19710649f32f2174d8f2e0e9fbe481b5061fc31ee2491d8d979af989339",
+          "step_sha256": "800bbbf8ef4d4f18c647801ec792b00276ed396c79276418e84c1fbd774c8a53",
+          "volume_mm3": 2310.094117459971,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-handheld-detail.stl",
+          "step": "right-frame-handheld-detail.step",
+          "stl_sha256": "0233ed9219174abdd91db2b8453a21ec537caa7464cc97007e4d943e89e6ee88",
+          "step_sha256": "5d34be06e9544202f0b57b627475fff22165a0247a32fb42693a9b473f784922",
+          "volume_mm3": 8.640000000000041,
+          "solids": 1
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-handheld-accent.stl",
+          "step": "right-frame-handheld-accent.step",
+          "stl_sha256": "71fe843b7555a903685775eb594ef0ae6e8bef6d36b60aba77f1c6d5413fd92c",
+          "step_sha256": "1c9f8598b63d9a21f178ab4e6b8ab4352b2721143661ed7f2a95b51433aca68e",
+          "volume_mm3": 6.842388799518569,
+          "solids": 2
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-handheld-secondary.stl",
+          "step": "right-frame-handheld-secondary.step",
+          "stl_sha256": "2158df7c6dc7c996d11be51ab8bee1b4cd350e180019eb19dc2771413ba3ddca",
+          "step_sha256": "eb12cffdcc19ec0796e6126e6d8c0bba388e90451af8529b6d940fb240587790",
+          "volume_mm3": 2.759999999999997,
+          "solids": 3
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-tv": {
+      "stl": "right-frame-tv.stl",
+      "step": "right-frame-tv.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-tv-body.stl",
+          "step": "right-frame-tv-body.step",
+          "stl_sha256": "e52393961ec7fef4439211da4e196005534d7aa0f036f2de7cfe77dc3e5ad5ab",
+          "step_sha256": "add6459012a55b4e0bfb9ed667bd948b0510db9d69536814cc4b05e0bc3b6ae3",
+          "volume_mm3": 2251.6117014429983,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-tv-detail.stl",
+          "step": "right-frame-tv-detail.step",
+          "stl_sha256": "727d05a7cba1a263b26759427865c014773121f015345f3c9a7ee000abcfc987",
+          "step_sha256": "85407db287f99b1cbfc74464751f40c7beea00f83ca5eaf1db103d3b9d4bf116",
+          "volume_mm3": 64.42000000000024,
+          "solids": 1
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-tv-accent.stl",
+          "step": "right-frame-tv-accent.step",
+          "stl_sha256": "004ac1d2a847bfdd126bedd21b276f25cee7d1f3982eaa777f9e7d3e378988ae",
+          "step_sha256": "9ae35c625d4d00bfe3fd9ad3ba4ccad2903f3558cacdbbb4e0cee5f8d5f64f48",
+          "volume_mm3": 5.8088048164875286,
+          "solids": 1
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-tv-secondary.stl",
+          "step": "right-frame-tv-secondary.step",
+          "stl_sha256": "9b887a89c67895f9c953f5d4b247b75ba887e5f42a53b7c26d432ceb3642b40e",
+          "step_sha256": "a91e8e7be26bb2bb1525de0d8508d753d7f16d7b4550a6c4eac4c2a4323383de",
+          "volume_mm3": 6.495999999999961,
+          "solids": 4
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-cyberpunk": {
+      "stl": "right-frame-cyberpunk.stl",
+      "step": "right-frame-cyberpunk.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-cyberpunk-body.stl",
+          "step": "right-frame-cyberpunk-body.step",
+          "stl_sha256": "4abca4693cca7dd3e98e079a4b550e85a5bef0d52844b77a1956dc041037f986",
+          "step_sha256": "9f9f17e445b80f0200857d05c26f267c72bd4ef2f9c0c33d1ceed94929cb35ea",
+          "volume_mm3": 2310.547869198053,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-cyberpunk-detail.stl",
+          "step": "right-frame-cyberpunk-detail.step",
+          "stl_sha256": "d2930b99531fd1f9e38fbfcaafbb0dd0df4ee63597643c3e35cd3d1dcf8532db",
+          "step_sha256": "67401281182cc39fb77c65a9a71c7fcaa723d5313b853c75d6c60bd08bc963e8",
+          "volume_mm3": 7.055999999999933,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-cyberpunk-accent.stl",
+          "step": "right-frame-cyberpunk-accent.step",
+          "stl_sha256": "1ef49cb53e7ab74fcd221be45928b223d3413c475c4fabc5580ed0c2ff635251",
+          "step_sha256": "69b88027f6c29a48eca5fb3c28a25d4c7ccf26301904c7d37ea33c33c560f87c",
+          "volume_mm3": 5.152000000000043,
+          "solids": 1
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-cyberpunk-secondary.stl",
+          "step": "right-frame-cyberpunk-secondary.step",
+          "stl_sha256": "10090f1b651d0d6f10fc55ac405273545f3bb60bb85ec108f547e8571420961d",
+          "step_sha256": "7729220f2b3faa3ecd368f2d65c382fd953f5c462c6e1b830f9b6301a1aaad4b",
+          "volume_mm3": 5.580637061435916,
+          "solids": 2
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-cartridge": {
+      "stl": "right-frame-cartridge.stl",
+      "step": "right-frame-cartridge.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-cartridge-body.stl",
+          "step": "right-frame-cartridge-body.step",
+          "stl_sha256": "0cbc706ab7ddb2a9f2948c63948e0a8e1735c83c61043421286c072b2918dee7",
+          "step_sha256": "7cff2084248ea8cd67b604103e48a574f959427a417a166ed592ff1121c61ac5",
+          "volume_mm3": 2197.240506259489,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-cartridge-detail.stl",
+          "step": "right-frame-cartridge-detail.step",
+          "stl_sha256": "0c3ec5a263f06fbf440aca87c78ab455a34ffecdb509a0e76fd1e446f29d9e09",
+          "step_sha256": "11c7124f1cf0564ebc8cd8b3dcf53dfdcfcb3087597d8c96d57166705d3aea43",
+          "volume_mm3": 83.96800000000044,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-cartridge-accent.stl",
+          "step": "right-frame-cartridge-accent.step",
+          "stl_sha256": "59a9e9da46fb02fcaf2ae80f1f77f6344b29f8c79a81efef80b152a53e82ebf3",
+          "step_sha256": "a6bad7b906c3a7cb4fdb368c686d18a4202297636b700c132193ccb37fd865da",
+          "volume_mm3": 13.72000000000006,
+          "solids": 7
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-cartridge-secondary.stl",
+          "step": "right-frame-cartridge-secondary.step",
+          "stl_sha256": "a099609b1f2d6663dd97293a47fb0637d4d6547c9262419f37fa4aa6e8e4b5e6",
+          "step_sha256": "00f45d013a9c8ca8544940e878e363a91798ccfe4d50717315f06d1968a4f975",
+          "volume_mm3": 33.40800000000001,
+          "solids": 1
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-arcade": {
+      "stl": "right-frame-arcade.stl",
+      "step": "right-frame-arcade.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-arcade-body.stl",
+          "step": "right-frame-arcade-body.step",
+          "stl_sha256": "f9492696c8dc3db5d464fba1a7587208e6652e596f1d26b4f7bfb4d18813945a",
+          "step_sha256": "951c9cf9f39881869a6e727584c55418e282bf37d72fa37b302dc0890e8967c1",
+          "volume_mm3": 2243.0563735978662,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-arcade-detail.stl",
+          "step": "right-frame-arcade-detail.step",
+          "stl_sha256": "5b02df2642621b20f751d4106210aa1b904dcac6d5dba86c844cc5ed62542dde",
+          "step_sha256": "7de1d2b01e821a49501bd7b0b908ba09f84d78f4d507b462e7e155c79a37594a",
+          "volume_mm3": 61.42000000000014,
+          "solids": 9
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-arcade-accent.stl",
+          "step": "right-frame-arcade-accent.step",
+          "stl_sha256": "b8bcba76c9678e0eda64da26d22bfaaf3e8ec5a7ffaed022fe7a61026b45be99",
+          "step_sha256": "f47b2a2a7f8b195e259b0f87e73d2b361e609aaef8f047e08b3ed27be116de36",
+          "volume_mm3": 9.650972631827846,
+          "solids": 3
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-arcade-secondary.stl",
+          "step": "right-frame-arcade-secondary.step",
+          "stl_sha256": "71f83ad0c1b5b9a94eae91c34b5499524a5e23e0799d90e98085c1eabba01466",
+          "step_sha256": "b886b84f35bd0baaf038d30063406395c31af3c16a0d7508d02c30036938056b",
+          "volume_mm3": 14.209160029791702,
+          "solids": 4
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-mecha": {
+      "stl": "right-frame-mecha.stl",
+      "step": "right-frame-mecha.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-mecha-body.stl",
+          "step": "right-frame-mecha-body.step",
+          "stl_sha256": "3bfead4aacfe461b164f14320e172bc97c523b95d97fc6fafe4958038125ff31",
+          "step_sha256": "3e214fcf4a7047f8e9a62a3f3971582b3f02eb7405426b8df525047120589941",
+          "volume_mm3": 2196.481542298221,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-mecha-detail.stl",
+          "step": "right-frame-mecha-detail.step",
+          "stl_sha256": "376c1ef206d290939ebe680850883f0571502e96f025d142af30d611bfeae5f0",
+          "step_sha256": "c16402bf9021a23b1a177a31df5e2140589eb9a2f56eaf5390ae124dfadf6263",
+          "volume_mm3": 108.47199999999981,
+          "solids": 6
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-mecha-accent.stl",
+          "step": "right-frame-mecha-accent.step",
+          "stl_sha256": "8d3020430ae51bcf484b69afa514fdfd29837b6f9fc325e4efe52b7d515bf971",
+          "step_sha256": "5a52ae2ab605e8ae52f4d16d30d3741e231cc5cce5c5bfde6c17ec2eadb9c728",
+          "volume_mm3": 15.84000000000003,
+          "solids": 6
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-mecha-secondary.stl",
+          "step": "right-frame-mecha-secondary.step",
+          "stl_sha256": "e1479ffc1a6baddfe8d920079ee8c280da95f9ee663cdc66145ae00fe86a903a",
+          "step_sha256": "d806b536bfa36d0ee99a93fc67eade4f1bd79da586789663a9395f65e9eb9b56",
+          "volume_mm3": 7.542963961269098,
+          "solids": 1
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-kintsugi": {
+      "stl": "right-frame-kintsugi.stl",
+      "step": "right-frame-kintsugi.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-kintsugi-body.stl",
+          "step": "right-frame-kintsugi-body.step",
+          "stl_sha256": "ffa0b02315348c531338662c20cddc49bdd9026cca7ab55489aa111c6238fadd",
+          "step_sha256": "e571bc26b63e3f4bfd0a269eac9f9c2c7dca1f88e3b9d370fec603f33bb1cf7b",
+          "volume_mm3": 2221.374474039845,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-kintsugi-detail.stl",
+          "step": "right-frame-kintsugi-detail.step",
+          "stl_sha256": "960215e2fedb2ece4fd84f597e038735820b73cbbc5f140c1df08faa04b99c5c",
+          "step_sha256": "91c850eab7254622aedad5e53c26836b053127871fe50a052987f8763c0d9e4f",
+          "volume_mm3": 36.876000000000055,
+          "solids": 2
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-kintsugi-accent.stl",
+          "step": "right-frame-kintsugi-accent.step",
+          "stl_sha256": "5bdc13c7b7c2b374be38a5990c722ecf52ba8ad5592d389b3de741bcde0fd4fc",
+          "step_sha256": "d8b875cb279fa211b9a8c9832fb93545225896519dbdc1034fd9ff96f3e17a54",
+          "volume_mm3": 57.2860322196457,
+          "solids": 4
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-kintsugi-secondary.stl",
+          "step": "right-frame-kintsugi-secondary.step",
+          "stl_sha256": "36f7e0f63e5b22600e0956aa2eec692495161599408f319e7d04b0c70384595e",
+          "step_sha256": "9af5c26535d52a45d6e3f47bba3ecc1ff8b4bd90a1bb6745a6091f3011a5952e",
+          "volume_mm3": 12.799999999999985,
+          "solids": 1
+        }
+      ],
+      "roof_mm": 14.8,
+      "color_construction": "complementary co-print volumes"
+    }
+  },
+  "batteryLeadProfiles": {
+    "left-301230": [
+      {
+        "index": 0,
+        "stl": "left-battery-lead-301230-0.stl",
+        "stl_sha256": "8abcec454f269307a140a9c8f0c8fa802b4a17230cea79f258ddd03d1dbe90a8",
+        "color": "#2e3033"
+      },
+      {
+        "index": 1,
+        "stl": "left-battery-lead-301230-1.stl",
+        "stl_sha256": "edecc5ea7160f8b7ff0a5b05bc15baf82cd8cae5efe4698bae565646bb8bb890",
+        "color": "#9e2e29"
+      }
+    ],
+    "left-adafruit-1570": [
+      {
+        "index": 0,
+        "stl": "left-battery-lead-adafruit-1570-0.stl",
+        "stl_sha256": "f32c3c15c22d5df59007a8cad1556d4cdd688dbfc6685ffafb2eca5b82841501",
+        "color": "#2e3033"
+      },
+      {
+        "index": 1,
+        "stl": "left-battery-lead-adafruit-1570-1.stl",
+        "stl_sha256": "b9b866b4b3bc82f32fac45e2ffa1641be2b8a148533c7b462339f9ef057e8990",
+        "color": "#9e2e29"
+      }
+    ],
+    "right-301230": [
+      {
+        "index": 0,
+        "stl": "right-battery-lead-301230-0.stl",
+        "stl_sha256": "f4c8feeeebbc7a538d96d68007db97a7ecaa27f5197ef77efc584dc97cb69321",
+        "color": "#9e2e29"
+      },
+      {
+        "index": 1,
+        "stl": "right-battery-lead-301230-1.stl",
+        "stl_sha256": "e28c6af8a26553850853b9d8359fcb5954cf0aa503030759b699e1c1e1cbfc3b",
+        "color": "#2e3033"
+      }
+    ],
+    "right-adafruit-1570": [
+      {
+        "index": 0,
+        "stl": "right-battery-lead-adafruit-1570-0.stl",
+        "stl_sha256": "427a0515a6e7dd81688afc954419dfa70e3300f83375df5b6869ebecc8d8744f",
+        "color": "#9e2e29"
+      },
+      {
+        "index": 1,
+        "stl": "right-battery-lead-adafruit-1570-1.stl",
+        "stl_sha256": "b7865b8dafd65a42618682ac9b826b9d3a5c6889812251a5a0bc390f2524d5eb",
+        "color": "#2e3033"
+      }
+    ]
+  },
+  "slim_flush": {
+    "decoration": "flush co-print material volumes",
+    "inlay_depth_mm": 0.4,
+    "minimum_backing_mm": 0.8,
+    "physical_acceptance": false
+  },
+  "historical_export_execution": {
     "source_template_sha256": "748d1c3dd5432c2bf0965ea09b9729b94bf4c10ee4ae576175544fb8978b2f5e",
     "executed_sha256": "bab27ba066848f313259d519b2fd820076bef624abc7130a30ee58abfe90f555",
     "optimization": "Exact conservative intersection pruning; same solid checks and tolerances",
     "receipt": "validation/revI-native-export.json",
     "analyzed_native_sha256": "c8102e4744f0f2ad22820e69d5daf109f2ad5d1e77ced8a8a6ab2179f1dd6a0f",
     "document_label_preservation": "validation/revI-document-label.json"
+  },
+  "export_execution": {
+    "native_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+    "exporter_sha256": "05e9352fd6003c04869729cb88caf10aea687f7370f85e9b1b28ac2022f80475",
+    "receipt": "validation/revI-mechanical.json"
   }
 }

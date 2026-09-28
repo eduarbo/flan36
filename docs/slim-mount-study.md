@@ -1,8 +1,9 @@
-# Slim support study
+# Historical slim support study
 
-**The reference stack stays at 16.6 mm.** A 15.6 mm roof clears the modeled
-components, but remains experimental: all three tested recipes have a display
-removal conflict with the battery leads. None is qualified for manufacturing.
+This records the **previous 16.6 mm stack and raised decorations**. Its generic
+JST reserve and floating lead paths exposed the problems addressed by the
+[slim, flush redesign](slim-flush.md). The study ZIP and measurements below retain
+their original geometry and findings; they are not the current print kit.
 
 The completed study covers both halves, all **10 frames** and both battery
 profiles: **Adafruit 1570** and **301230**. It also evaluates support consolidation

@@ -1,0 +1,568 @@
+{
+  "schema": "flan36-analytic-bounds-regression-1",
+  "source_file": "Flan36.FCStd",
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "checker_sha256": "225b0b7d0f392b7e9a96519e0598a611f7592691e5969a7ea478729dff1f1cd1",
+  "freecad_version": "1.1.3",
+  "scope": "Read-only measurement regression; no physical fit acceptance.",
+  "analytic_api": "Shape.optimalBoundingBox(False, False)",
+  "tolerance": {
+    "distance_mm": 1e-08,
+    "volume_mm3": 1e-08,
+    "area_mm2": 1e-08
+  },
+  "ordinary_bounds_must_change": false,
+  "physical_acceptance": false,
+  "wires": {
+    "L_WireStudy0": {
+      "stored_ordinary_bounds_mm": [
+        114.85169403947368,
+        -59.64830596052632,
+        3.7516940394736906,
+        131.0483059605263,
+        -21.916958225723917,
+        7.64830596052631
+      ],
+      "analytic_bounds_mm": [
+        114.9999999,
+        -59.50000010000001,
+        3.8999999000000005,
+        130.9000001,
+        -22.065264086250227,
+        7.5000001
+      ],
+      "exact_volume_mm3": 29.68805057642352,
+      "exact_area_mm2": 198.4858238538031,
+      "trials": [
+        {
+          "deflection_mm": 0.2,
+          "mesh_vertices": 40755,
+          "mesh_triangles": 81506,
+          "ordinary_bounds_before_mm": [
+            114.85169403947368,
+            -59.64830596052632,
+            3.7516940394736906,
+            131.0483059605263,
+            -21.916958225723917,
+            7.64830596052631
+          ],
+          "ordinary_bounds_after_mm": [
+            115.0,
+            -59.5,
+            3.900041008502259,
+            130.89983597720226,
+            -22.06542820904795,
+            7.499958991497741
+          ],
+          "ordinary_bounds_max_change_mm": 0.14846998332404837,
+          "analytic_bounds_after_mm": [
+            114.9999999,
+            -59.50000010000001,
+            3.8999999000000005,
+            130.9000001,
+            -22.065264086250227,
+            7.5000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        },
+        {
+          "deflection_mm": 0.05,
+          "mesh_vertices": 54054,
+          "mesh_triangles": 108104,
+          "ordinary_bounds_before_mm": [
+            114.85169403947368,
+            -59.64830596052632,
+            3.7516940394736906,
+            131.0483059605263,
+            -21.916958225723917,
+            7.64830596052631
+          ],
+          "ordinary_bounds_after_mm": [
+            115.0,
+            -59.5,
+            3.900093245399755,
+            130.9,
+            -22.06526418625023,
+            7.499906754600246
+          ],
+          "ordinary_bounds_max_change_mm": 0.1483992059260646,
+          "analytic_bounds_after_mm": [
+            114.9999999,
+            -59.50000010000001,
+            3.8999999000000005,
+            130.9000001,
+            -22.065264086250227,
+            7.5000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        },
+        {
+          "deflection_mm": 0.01,
+          "mesh_vertices": 175643,
+          "mesh_triangles": 351282,
+          "ordinary_bounds_before_mm": [
+            114.85169403947368,
+            -59.64830596052632,
+            3.7516940394736906,
+            131.0483059605263,
+            -21.916958225723917,
+            7.64830596052631
+          ],
+          "ordinary_bounds_after_mm": [
+            115.0,
+            -59.5,
+            3.90000705762121,
+            130.8999717698472,
+            -22.065292416403004,
+            7.49999294237879
+          ],
+          "ordinary_bounds_max_change_mm": 0.14833419067909404,
+          "analytic_bounds_after_mm": [
+            114.9999999,
+            -59.50000010000001,
+            3.8999999000000005,
+            130.9000001,
+            -22.065264086250227,
+            7.5000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "L_WireStudy1": {
+      "stored_ordinary_bounds_mm": [
+        114.85169403947368,
+        -57.64830596052632,
+        4.5516940394736904,
+        131.0483059605263,
+        -20.516958225723954,
+        8.448305960526309
+      ],
+      "analytic_bounds_mm": [
+        114.9999999,
+        -57.50000010000001,
+        4.6999999,
+        130.9000001,
+        -20.66526408625026,
+        8.3000001
+      ],
+      "exact_volume_mm3": 29.68805057642353,
+      "exact_area_mm2": 198.48582385380305,
+      "trials": [
+        {
+          "deflection_mm": 0.2,
+          "mesh_vertices": 40755,
+          "mesh_triangles": 81506,
+          "ordinary_bounds_before_mm": [
+            114.85169403947368,
+            -57.64830596052632,
+            4.5516940394736904,
+            131.0483059605263,
+            -20.516958225723954,
+            8.448305960526309
+          ],
+          "ordinary_bounds_after_mm": [
+            115.0,
+            -57.5,
+            4.700041008502259,
+            130.8998359772023,
+            -20.66542820904798,
+            8.299958991497741
+          ],
+          "ordinary_bounds_max_change_mm": 0.14846998332402706,
+          "analytic_bounds_after_mm": [
+            114.9999999,
+            -57.50000010000001,
+            4.6999999,
+            130.9000001,
+            -20.66526408625026,
+            8.3000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        },
+        {
+          "deflection_mm": 0.05,
+          "mesh_vertices": 54054,
+          "mesh_triangles": 108104,
+          "ordinary_bounds_before_mm": [
+            114.85169403947368,
+            -57.64830596052632,
+            4.5516940394736904,
+            131.0483059605263,
+            -20.516958225723954,
+            8.448305960526309
+          ],
+          "ordinary_bounds_after_mm": [
+            115.0,
+            -57.5,
+            4.7000932453997555,
+            130.9,
+            -20.66526418625026,
+            8.299906754600245
+          ],
+          "ordinary_bounds_max_change_mm": 0.14839920592606504,
+          "analytic_bounds_after_mm": [
+            114.9999999,
+            -57.50000010000001,
+            4.6999999,
+            130.9000001,
+            -20.66526408625026,
+            8.3000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        },
+        {
+          "deflection_mm": 0.01,
+          "mesh_vertices": 175643,
+          "mesh_triangles": 351282,
+          "ordinary_bounds_before_mm": [
+            114.85169403947368,
+            -57.64830596052632,
+            4.5516940394736904,
+            131.0483059605263,
+            -20.516958225723954,
+            8.448305960526309
+          ],
+          "ordinary_bounds_after_mm": [
+            115.0,
+            -57.5,
+            4.70000705762121,
+            130.8999717698472,
+            -20.665292416403034,
+            8.29999294237879
+          ],
+          "ordinary_bounds_max_change_mm": 0.14833419067909404,
+          "analytic_bounds_after_mm": [
+            114.9999999,
+            -57.50000010000001,
+            4.6999999,
+            130.9000001,
+            -20.66526408625026,
+            8.3000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "R_WireStudy0": {
+      "stored_ordinary_bounds_mm": [
+        28.951694039473693,
+        -59.648305960526315,
+        3.7516940394736906,
+        45.14830596052632,
+        -21.916958225723928,
+        7.64830596052631
+      ],
+      "analytic_bounds_mm": [
+        29.0999999,
+        -59.5000001,
+        3.8999999000000005,
+        45.00000010000001,
+        -22.065264086250234,
+        7.5000001
+      ],
+      "exact_volume_mm3": 29.688050576423514,
+      "exact_area_mm2": 198.48582385380317,
+      "trials": [
+        {
+          "deflection_mm": 0.2,
+          "mesh_vertices": 40755,
+          "mesh_triangles": 81506,
+          "ordinary_bounds_before_mm": [
+            28.951694039473693,
+            -59.648305960526315,
+            3.7516940394736906,
+            45.14830596052632,
+            -21.916958225723928,
+            7.64830596052631
+          ],
+          "ordinary_bounds_after_mm": [
+            29.10000000000001,
+            -59.49983597720228,
+            3.900041008502259,
+            44.99983597720229,
+            -22.06526418625024,
+            7.499958991497741
+          ],
+          "ordinary_bounds_max_change_mm": 0.14846998332403416,
+          "analytic_bounds_after_mm": [
+            29.0999999,
+            -59.5000001,
+            3.8999999000000005,
+            45.00000010000001,
+            -22.065264086250234,
+            7.5000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        },
+        {
+          "deflection_mm": 0.05,
+          "mesh_vertices": 54054,
+          "mesh_triangles": 108104,
+          "ordinary_bounds_before_mm": [
+            28.951694039473693,
+            -59.648305960526315,
+            3.7516940394736906,
+            45.14830596052632,
+            -21.916958225723928,
+            7.64830596052631
+          ],
+          "ordinary_bounds_after_mm": [
+            29.10000000000001,
+            -59.5,
+            3.900093245399755,
+            45.00000000000001,
+            -22.06526418625024,
+            7.499906754600246
+          ],
+          "ordinary_bounds_max_change_mm": 0.1483992059260646,
+          "analytic_bounds_after_mm": [
+            29.0999999,
+            -59.5000001,
+            3.8999999000000005,
+            45.00000010000001,
+            -22.065264086250234,
+            7.5000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        },
+        {
+          "deflection_mm": 0.01,
+          "mesh_vertices": 175643,
+          "mesh_triangles": 351282,
+          "ordinary_bounds_before_mm": [
+            28.951694039473693,
+            -59.648305960526315,
+            3.7516940394736906,
+            45.14830596052632,
+            -21.916958225723928,
+            7.64830596052631
+          ],
+          "ordinary_bounds_after_mm": [
+            29.10000000000001,
+            -59.49997176984723,
+            3.90000705762121,
+            44.999971769847235,
+            -22.06526418625024,
+            7.499992942378791
+          ],
+          "ordinary_bounds_max_change_mm": 0.14833419067908693,
+          "analytic_bounds_after_mm": [
+            29.0999999,
+            -59.5000001,
+            3.8999999000000005,
+            45.00000010000001,
+            -22.065264086250234,
+            7.5000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "R_WireStudy1": {
+      "stored_ordinary_bounds_mm": [
+        28.951694039473693,
+        -57.648305960526315,
+        4.5516940394736904,
+        45.14830596052632,
+        -20.51695822572395,
+        8.448305960526309
+      ],
+      "analytic_bounds_mm": [
+        29.0999999,
+        -57.5000001,
+        4.6999999,
+        45.00000010000001,
+        -20.665264086250257,
+        8.3000001
+      ],
+      "exact_volume_mm3": 29.688050576423503,
+      "exact_area_mm2": 198.48582385380314,
+      "trials": [
+        {
+          "deflection_mm": 0.2,
+          "mesh_vertices": 40755,
+          "mesh_triangles": 81506,
+          "ordinary_bounds_before_mm": [
+            28.951694039473693,
+            -57.648305960526315,
+            4.5516940394736904,
+            45.14830596052632,
+            -20.51695822572395,
+            8.448305960526309
+          ],
+          "ordinary_bounds_after_mm": [
+            29.10000000000001,
+            -57.49983597720228,
+            4.700041008502259,
+            44.99983597720229,
+            -20.665264186250262,
+            8.299958991497741
+          ],
+          "ordinary_bounds_max_change_mm": 0.14846998332403416,
+          "analytic_bounds_after_mm": [
+            29.0999999,
+            -57.5000001,
+            4.6999999,
+            45.00000010000001,
+            -20.665264086250257,
+            8.3000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        },
+        {
+          "deflection_mm": 0.05,
+          "mesh_vertices": 54054,
+          "mesh_triangles": 108104,
+          "ordinary_bounds_before_mm": [
+            28.951694039473693,
+            -57.648305960526315,
+            4.5516940394736904,
+            45.14830596052632,
+            -20.51695822572395,
+            8.448305960526309
+          ],
+          "ordinary_bounds_after_mm": [
+            29.10000000000001,
+            -57.5,
+            4.7000932453997555,
+            45.00000000000001,
+            -20.665264186250262,
+            8.299906754600245
+          ],
+          "ordinary_bounds_max_change_mm": 0.14839920592606504,
+          "analytic_bounds_after_mm": [
+            29.0999999,
+            -57.5000001,
+            4.6999999,
+            45.00000010000001,
+            -20.665264086250257,
+            8.3000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        },
+        {
+          "deflection_mm": 0.01,
+          "mesh_vertices": 175643,
+          "mesh_triangles": 351282,
+          "ordinary_bounds_before_mm": [
+            28.951694039473693,
+            -57.648305960526315,
+            4.5516940394736904,
+            45.14830596052632,
+            -20.51695822572395,
+            8.448305960526309
+          ],
+          "ordinary_bounds_after_mm": [
+            29.10000000000001,
+            -57.49997176984723,
+            4.70000705762121,
+            44.999971769847235,
+            -20.665264186250262,
+            8.29999294237879
+          ],
+          "ordinary_bounds_max_change_mm": 0.14833419067908693,
+          "analytic_bounds_after_mm": [
+            29.0999999,
+            -57.5000001,
+            4.6999999,
+            45.00000010000001,
+            -20.665264086250257,
+            8.3000001
+          ],
+          "analytic_bounds_max_change_mm": 0.0,
+          "valid_after": true,
+          "volume_delta_mm3": 0.0,
+          "area_delta_mm2": 0.0,
+          "symmetric_difference_mm3": 0.0,
+          "vertex_count_preserved": true,
+          "vertex_max_change_mm": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  "source_unchanged": true,
+  "passed": true
+}

@@ -1,6 +1,6 @@
 {
-  "source_sha256": "38733a3a9a5fb6add4df8e668b9ae5178f44b3f864c6ee9416bfb147b2053fdf",
-  "checker_sha256": "ca39b27eddfbb93440d2ee4b953c5ae920f9fcdc512aa174ba4d248093a03bb5",
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "checker_sha256": "3510d10fe2d228fb3bc8fa3a126a0d7b21afd5321ccd652790cf057f46b42a22",
   "scope": "Stored native solids; representative straight-face wall and joint sections. Not printed strength or tolerance acceptance.",
   "measurements": [
     {

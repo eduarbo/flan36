@@ -1,0 +1,81 @@
+{
+  "schema": "flan36-configuration-provenance-correction-1",
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "scope": "Native configuration source selection, current export provenance and final finish acceptance",
+  "configuration": {
+    "trigger": "Same-style custom-color application raised RuntimeError: Cyclic dependency at ActiveFrame.setLink(cover).",
+    "cause": "App::Link inherits FrameStyle and was eligible in the frame-source lookup; the active link could be selected before the appended source for its own style.",
+    "correction": "Exclude App::Link from frame-source candidates, as already done for battery source candidates.",
+    "source": "tools/freecad/configuration.py",
+    "source_sha256": "378775f2192dcb080495a182db18964024abdddcff5eef79f7881dcdf8f847d4",
+    "prevention": "Retain the existing full fourteen-style loop followed by same-style custom color edit and native save/reopen assertions.",
+    "acceptance": "Full corrected finish run and independent mixed-configuration run passed on the unchanged saved native."
+  },
+  "provenance": {
+    "trigger": "Current metadata inherited the prior label-only export execution object.",
+    "correction": "Keep the old object as historical_export_execution and bind the current full saved-reference export to native, exporter and mechanical receipt hashes.",
+    "current": {
+      "native_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+      "exporter_sha256": "05e9352fd6003c04869729cb88caf10aea687f7370f85e9b1b28ac2022f80475",
+      "receipt": "validation/revI-mechanical.json"
+    },
+    "historical_record_preserved": true
+  },
+  "final_native_finishes": {
+    "command": "PYTHONFAULTHANDLER=1 python3 tools/freecad/run_macos.py tools/freecad/check_finishes.py",
+    "exit_code": 0,
+    "passed": true,
+    "styles_checked": 14,
+    "custom_color_edit": true,
+    "edited_roof_mm": 17.2,
+    "saved_reopened_colors": true,
+    "native_screenshot_rendered": false,
+    "source_unchanged": true,
+    "checker_sha256": "9b1ab801386c63ca0ccc2c13ecd5b31e07184a299ea88e0139e372250905a158",
+    "prior_aborted_runs_accepted": false
+  },
+  "evidence": [
+    {
+      "path": "validation/revI-freecad-finishes.json",
+      "sha256": "d59c09dfc5cc55c1a6434dee84169271f66fb89458e04224258fe670b5f38952"
+    },
+    {
+      "path": "validation/revI-freecad.json",
+      "sha256": "91eb532242f8766d063c856f18afa34e90adb85e047bbc65b7db81f8ff7ad0e9"
+    },
+    {
+      "path": "validation/revI-mechanical.json",
+      "sha256": "46af602c752d0988b41ea862c20cfa9c905a637b488b6ae57b35fbc485fed54a"
+    },
+    {
+      "path": "validation/revI-native-runtime-correction.json",
+      "sha256": "6ed22cbfbc4c27591163a7ce80570f0942e1cbdb1d9b956d5b0f592538416aa7"
+    },
+    {
+      "path": "validation/revI-render.json",
+      "sha256": "7bee1e35487baba12615570d90e70b9d0282daf021cfed95ec6b4c98e32175df"
+    },
+    {
+      "path": "validation/revI-flush-viewer.json",
+      "sha256": "d238da0f1e310e4e4d119fce318f20dcb4ced42d46e428d4934eea83936a5abf"
+    }
+  ],
+  "physical_acceptance": false,
+  "numeric_datum_correction": {
+    "trigger": "Full delivery gate rejected 3.8 versus 3.8000000000000003 mm after PCBTop minus PCBThickness.",
+    "failure_accepted": false,
+    "cause": "Exact equality compared a reported nominal decimal with its binary floating-point subtraction.",
+    "correction": "Require exactly two datum values and an absolute difference at most 1e-8 mm, consistent with the analytic bounds precision check. All physical geometry, calibration and Boolean guards remain unchanged.",
+    "observed_difference_mm": 4.440892098500626e-16,
+    "absolute_tolerance_mm": 1e-08,
+    "known_0_04_mm_misregistration_still_rejected": true,
+    "checker_before_sha256": "fb5ec8c47c0313a6ee7094403a8fe82e86c202f34bb71c6eabb1f1a2b9664ca1",
+    "checker_after_sha256": "270f73d688f7620ba47fd6969448980b5aa7daac03fc48a2b98a5aae753b32fb",
+    "validation": "Complete aggregate delivery gate passed after correction; current receipt independently binds all checked inputs.",
+    "accepted_receipt": {
+      "path": "validation/revI-slim-flush.json",
+      "sha256": "4812399ccfe4b0fe9dfa589b969cebde76d77840614bba54211d7992751978bc"
+    }
+  },
+  "format_only_followup": "validation/revI-secret-scan-correction.json"
+}

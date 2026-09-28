@@ -1,0 +1,85 @@
+{
+  "scope": "Nominal slim electronics interfaces, unrouted board. No manufacturing acceptance.",
+  "halves": {
+    "left": {
+      "before_sha256": "8067a0039db64fdac46166c21cda19c1b76bf86d327baf621cc906cb5f55dc8e",
+      "after_sha256": "d9227ea364eb2c6fa229a68fb802c291700d9eb4cbd0d6db0e99595af8b321e3",
+      "j1_at": [
+        125.45,
+        57.2,
+        270
+      ],
+      "reset_at": [
+        119.0,
+        59.5
+      ],
+      "reset_side": "B.Cu",
+      "reset_local_y_mirrored": true,
+      "battery_aperture_y": [
+        13.2,
+        47.6
+      ],
+      "rear_lead_notch_xy": [
+        [
+          117.65,
+          47.6
+        ],
+        [
+          119.85,
+          49.4
+        ]
+      ],
+      "j1_pad_pitch_mm": 2,
+      "j1_drill_mm": 0.75,
+      "j1_pad_size_mm": [
+        1.2,
+        1.75
+      ],
+      "nets_preserved": [
+        "BAT_PLUS",
+        "GND"
+      ],
+      "routing_changes": 0
+    },
+    "right": {
+      "before_sha256": "18a242c11a69a41aa3ed2ebfc12a6551d43e1a9babeedad03d7d019d6028062d",
+      "after_sha256": "dc71d07b61b01b7d1a4b8680f66f0ee17e075bf614d5ed7cc8f2d8ed98ebf290",
+      "j1_at": [
+        34.55,
+        59.2,
+        90
+      ],
+      "reset_at": [
+        41.0,
+        59.5
+      ],
+      "reset_side": "B.Cu",
+      "reset_local_y_mirrored": true,
+      "battery_aperture_y": [
+        13.2,
+        47.6
+      ],
+      "rear_lead_notch_xy": [
+        [
+          40.15,
+          47.6
+        ],
+        [
+          42.35,
+          49.4
+        ]
+      ],
+      "j1_pad_pitch_mm": 2,
+      "j1_drill_mm": 0.75,
+      "j1_pad_size_mm": [
+        1.2,
+        1.75
+      ],
+      "nets_preserved": [
+        "BAT_PLUS",
+        "GND"
+      ],
+      "routing_changes": 0
+    }
+  }
+}

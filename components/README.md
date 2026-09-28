@@ -9,15 +9,16 @@ These models make the assembly easier to inspect. They are **nominal representat
 | Choc v1 | KiSwitch housing, pins and moving stem; original geometry, recolored | Generic Choc v1 community CAD; not a measured Pro Red specimen. KLP insertion and travel are not physically verified. |
 | PCM12 / TL3342 | KiCad STEP geometry and original face materials | Registered to the existing KiCad footprints. Library models, not toleranced manufacturer assemblies. |
 | Choc hotswap socket | Licensed source CAD is included for inspection | Assembly datum and floor clearance remain unqualified; it is not silently placed using its bounding-box center. |
-| Batteries, battery connector, MCU sockets and leads | Existing dimensional reserves | Finished pouch seams, contacts, solder, terminations and strain relief still require measurement. |
+| Batteries, MCU sockets and leads | Nominal cell profiles, socket reserves and continuous lead routes | Finished pouch seams, contacts, solder, wire diameter, terminations and strain relief still require measurement. |
+| JST PH connector | Dimensioned side-entry header and mated housing envelope | Original reconstruction from the public catalog; internal mating and supplied plug dimensions are unmeasured. |
 
 The right half uses the **same** commercial nano/display geometry, translated into place. The power switch is rotated to its footprint. Neither module is mirrored.
 
-FreeCAD, the web viewer and the revI KiCad relative STEP models share this nominal geometry. The STEP export is reimported and compared with the native solids at each existing footprint datum; PCB files and model references remain unchanged. [Readback](../validation/revI-pcb-component-models.json).
+FreeCAD, the web viewer and the revI KiCad relative STEP models share this nominal geometry. The STEP export is reimported and compared with the native solids at each existing footprint datum; relative model references are preserved. The slim update changes J1 and moves the reset to the underside; actual KiCad STEP exports verify the resulting registration. [Readback](../validation/revI-pcb-component-models.json).
 
 The controller support has scalloped upper ledges. These keep clear of a 1.05 mm radius reserve around the underside pads. They do not establish solder tolerance or retention force.
 
-The nice!view PCB remains 8.8 mm above the main PCB in this study. The Typeractive connector publishes 7 mm installed height. **That connection is still unresolved**; the visual model does not stretch a pin to hide the difference.
+The revised nice!view PCB sits 7 mm above the main PCB, matching the stated Typeractive connector installation height. Actual contact engagement and solder tolerances remain unmeasured. [Stack dimensions and limits](../docs/slim-flush.md).
 
 ![Nominal nice!nano v2 reconstruction in the explorer](../docs/images/revI-nano-v2.png)
 
@@ -30,3 +31,13 @@ The nice!view PCB remains 8.8 mm above the main PCB in this study. The Typeracti
 - [KiCad library license and exception](https://www.kicad.org/libraries/license/). Imported STEP files are CC-BY-SA-4.0 with the library exception. Original colors are preserved; only placement changes.
 
 Exact asset URLs, hashes and licenses: [sources.json](sources.json). Official photographs are references, not images relicensed by this project. Parametric reconstruction: [components.py](../tools/freecad/components.py).
+
+### PH battery connector
+
+The slim stack uses an original nominal reconstruction of a **JST S2B-PH-K-S**
+side-entry header and **PHR-2** housing. The public [JST PH catalog](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf)
+gives the side-entry mated assembly reserve as **9.6 mm long × 4.8 mm high**, with
+2 mm pin pitch. The header body is 5.9 × 7.6 × 4.8 mm and the housing is
+5.8 × 6.85 × 4.5 mm. Internal engagement, wire-port positions, plastic tolerances
+and the purchased battery polarity remain unmeasured. No downloaded JST CAD is
+redistributed. See `tools/freecad/slim_stack.py` and the bundled original footprint.

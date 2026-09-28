@@ -18,7 +18,15 @@ def apply_finish(doc,cover,side,body,accents=None):
     cover.PaletteAccents=json.dumps({k:colors[k] for k in ['detail','accent','secondary']})
     roof=float(doc.Parameters.FrameTop)
     cover.ViewObject.ShapeColor=rgb(body)
-    cover.ViewObject.DiffuseColor=[rgb(colors[role(cover.FrameStyle,side,f.CenterOfMass.x,-f.CenterOfMass.y,f.CenterOfMass.z,roof)]) for f in cover.Shape.Faces]
+    if getattr(cover,'MaterialParts',[]):
+        from flush_frames import face_roles
+        roles=face_roles(cover)
+        assert len(roles)==len(cover.Shape.Faces),'Flush material faces are out of date'
+        cover.ViewObject.DiffuseColor=[rgb(colors[r]) for r in roles]
+        for part in cover.MaterialParts:
+            part.ViewObject.ShapeColor=rgb(colors[part.ColorRole])
+    else:
+        cover.ViewObject.DiffuseColor=[rgb(colors[role(cover.FrameStyle,side,f.CenterOfMass.x,-f.CenterOfMass.y,f.CenterOfMass.z,roof)]) for f in cover.Shape.Faces]
     # The visible App::Link must inherit its source's per-face materials.
     doc.getObject(('L_' if side=='left' else 'R_')+'ActiveFrame').ViewObject.OverrideMaterial=False
 
@@ -43,6 +51,17 @@ def apply(doc,config):
                 obj.Placement=A.Placement(A.Vector(key['x'],-key['y'],v['seating_z_mm']),A.Rotation(A.Vector(0,0,1),key['angle']+choice['rotation_deg']))
             battery=next(o for o in doc.Objects if o.Name.startswith(prefix) and o.TypeId!='App::Link' and getattr(o,'BatteryStyle',None)==config['batteries'][side])
             doc.getObject(prefix+'ActiveBattery').setLink(battery)
+            receipt=doc.getObject('SlimStackReceipt')
+            if receipt:
+                wires=json.loads(receipt.RecipeJSON)['halves'][side]['lead_objects'][config['batteries'][side]]
+                for index,name in enumerate(wires):
+                    link=doc.getObject(prefix+'ActiveBatteryLead'+str(index))
+                    if not link or link.TypeId!='App::Link':
+                        raise ValueError('Missing battery lead profile link: '+side)
+                    link.setLink(doc.getObject(name))
+                for obj in doc.Objects:
+                    if obj.Name.startswith(prefix) and obj.TypeId!='App::Link' and hasattr(obj,'BatteryLeadStyle'):
+                        obj.Visibility=False
             for o in doc.Objects:
                 if hasattr(o,'BatteryStyle') and o.TypeId!='App::Link':o.Visibility=False
             doc.getObject(prefix+'ActiveBattery').Visibility=True
@@ -56,7 +75,7 @@ def apply(doc,config):
             for o in doc.Objects:
                 if o.Name.startswith(prefix) and hasattr(o,'CaseStyle'):o.Visibility=False
             doc.getObject(prefix+'ActiveTray').Visibility=True;doc.getObject(prefix+'ActivePlate').Visibility=True
-            f=config['frames'][side];cover=next(o for o in doc.Objects if o.Name.startswith(prefix) and hasattr(o,'FrameStyle') and o.FrameStyle==f['style'])
+            f=config['frames'][side];cover=next(o for o in doc.Objects if o.Name.startswith(prefix) and o.TypeId!='App::Link' and hasattr(o,'FrameStyle') and o.FrameStyle==f['style'])
             doc.getObject(prefix+'ActiveFrame').setLink(cover)
             apply_finish(doc,cover,side,f['color'],f['accents'])
             for o in doc.Objects:

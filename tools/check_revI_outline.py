@@ -8,6 +8,7 @@ from shapely.geometry import Polygon,Point,box,LineString
 from shapely.affinity import rotate
 R=Path(__file__).resolve().parents[1];profiles=json.loads((R/'design/revI-profiles.json').read_text());layout=json.loads((R/'design/layout.json').read_text())
 mounts=json.loads((R/'design/revI-mounts.json').read_text());batteries=json.loads((R/'design/batteries.json').read_text())['profiles']
+electrical=json.loads((R/'validation/revI-electrical.json').read_text())
 def rim_samples(outer, keys):
  rows=[];lookup={k['ref']:k for k in keys}
  faces=[*(('K0'+str(i),'north',-4,4) for i in range(1,6)),
@@ -69,7 +70,11 @@ for side,p in profiles.items():
  assert outer.covers(LineString([(reflect(x),y) for x,y in [(79,79),(101,81),(122,86)]]))
  assert inner.covers(pcb) and pcb.boundary.distance(inner.boundary)>.349
  x0,x1=(116.55,129.05) if side=='left' else(30.95,43.45)
- aperture=box(x0,14,x1,47.6);board=pcb.difference(aperture)
+ current=electrical['halves'][side]
+ assert hashlib.sha256((R/f'hardware/revI/flan36-{side}.kicad_pcb').read_bytes()).hexdigest()==current['pcb_sha256']
+ interface=current['slim_electronics'];y0,y1=interface['battery_aperture_y']
+ notch=interface['rear_lead_notch_xy']
+ aperture=box(x0,y0,x1,y1).union(box(*notch[0],*notch[1]));board=pcb.difference(aperture)
  for q in p['pcb_cutouts']:board=board.difference(Polygon(q))
  assert board.is_valid and board.geom_type=='Polygon' and len(board.interiors)==3
  pads=json.loads((R/f'build/revI/pads-{side}.json').read_text());clearances=[]
@@ -118,4 +123,6 @@ assert not any(s['kind']=='bezier' for s in left['outer_segments'])
 report['regression_spanning_thumb_curve_rejected']=True
 report['exceptions']=['Interior bridges between key groups', 'Frame-to-plate service joint', 'Thumb and recess faces retain 4.75 mm for the existing pads', 'Locally bounded tangent rounds; 4.75 mm finger faces']
 report['inputs']={p:hashlib.sha256((R/p).read_bytes()).hexdigest() for p in ['design/layout.json','design/revI-profiles.json','design/revI-mounts.json','design/batteries.json','tools/check_revI_outline.py','tools/build_revI_profiles.py','design/revI-rim-baseline.json','design/revI-lcd-curve-baseline.json','design/revI-local-curves-baseline.json']}
+for p in ['validation/revI-electrical.json',*[f'hardware/revI/flan36-{s}.kicad_pcb' for s in ('left','right')],*[f'build/revI/pads-{s}.json' for s in ('left','right')]]:
+ report['inputs'][p]=hashlib.sha256((R/p).read_bytes()).hexdigest()
 (R/'validation/revI-outline.json').write_text(json.dumps(report,indent=2)+'\n');print('PASS: Aligned LCD flank, local tangent thumb curves, key-aligned finger rim, exact mirror, original-regression rejection, actual copper >=0.5mm, internal fasteners,36 unchanged cutouts and both nominal cells')

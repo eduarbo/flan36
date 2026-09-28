@@ -9,14 +9,17 @@ import FreeCADGui as G
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'tools/freecad'))
 from configuration import apply,extract
 from keycap_config import normalize
-G.showMainWindow();doc=A.openDocument(str(ROOT/'mechanical/revI/Flan36.FCStd'));doc.recompute()
+G.showMainWindow();G.getMainWindow().hide()
+print('Opening native configuration source',file=sys.__stdout__,flush=True)
+doc=A.openDocument(str(ROOT/'mechanical/revI/Flan36.FCStd'));doc.recompute()
 sourcehash=hashlib.sha256((ROOT/'mechanical/revI/Flan36.FCStd').read_bytes()).hexdigest()
+reference_roof=float(doc.Parameters.FrameTop)
 opaque_samples=0
 for obj in [o for o in doc.Objects if hasattr(o,'FrameStyle')]:
     right=obj.Name.startswith('R_')
     for x in [111.6,134.4]:
         for y in [25,40,55]:
-            for z in [14.9,15.2]:
+            for z in [reference_roof-1.7,reference_roof-1.4]:
                 # Body walls must remain present immediately below the roof.
                 assert obj.Shape.isInside(A.Vector(160-x if right else x,-y,z),1e-6,False),(obj.Name,'side-wall gap',x,y,z)
                 opaque_samples+=1
@@ -63,12 +66,12 @@ for obj in doc.Objects:assert 'Invalid' not in obj.State,(obj.Name,obj.State)
 for prefix in ['L_','R_']:
     obj=doc.getObject(prefix+'ActiveFrame')
     print('Edited frame readback',prefix,obj.LinkedObject.Name,obj.Shape.BoundBox.ZMax,flush=True)
-    assert abs(obj.Shape.BoundBox.ZMax-17.8)<1e-6
+    assert abs(obj.Shape.BoundBox.ZMax-17.2)<1e-6
 path=ROOT/'build/revI/customized.FCStd';doc.saveAs(str(path));A.closeDocument(doc.Name)
 doc=A.openDocument(str(path));doc.recompute();assert extract(doc)==nextconfig
-for prefix in ['L_','R_']:assert abs(doc.getObject(prefix+'ActiveFrame').Shape.BoundBox.ZMax-17.8)<1e-6
+for prefix in ['L_','R_']:assert abs(doc.getObject(prefix+'ActiveFrame').Shape.BoundBox.ZMax-17.2)<1e-6
 assert hashlib.sha256((ROOT/'mechanical/revI/Flan36.FCStd').read_bytes()).hexdigest()==sourcehash
-report={'source_sha256':sourcehash,'native_features_no_custom_proxy':True,'configuration_roundtrip':True,'mixed_battery_profiles_roundtrip':True,'mixed_cases_and_open_cover_roundtrip':True,'legacy_configuration_normalized':True,'reopened_customized_file':True,'all_36_key_centres_unchanged':True,'stem_tip_datum_mm':11.7,'FrameTop_edit_mm':[16.6,17.2],'preset':'saddle-sculpted','thumb_variant':'MX-size Normal 90deg','frames':['handheld','tv'],'invalid_configuration_rejected_atomically':True,'xy_margin_mm':margin,'source_file_unchanged':True,'opaque_side_wall_samples':opaque_samples}
+report={'source_sha256':sourcehash,'native_features_no_custom_proxy':True,'configuration_roundtrip':True,'mixed_battery_profiles_roundtrip':True,'mixed_cases_and_open_cover_roundtrip':True,'legacy_configuration_normalized':True,'reopened_customized_file':True,'all_36_key_centres_unchanged':True,'stem_tip_datum_mm':11.7,'FrameTop_edit_mm':[reference_roof,17.2],'preset':'saddle-sculpted','thumb_variant':'MX-size Normal 90deg','frames':['handheld','tv'],'invalid_configuration_rejected_atomically':True,'xy_margin_mm':margin,'source_file_unchanged':True,'opaque_side_wall_samples':opaque_samples}
 (ROOT/'validation/revI-freecad.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report),flush=True)
 A.closeDocument(doc.Name)

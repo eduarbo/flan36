@@ -1,13 +1,13 @@
 {
-  "revision": "H",
-  "description": "Color on existing relief faces; no additional parts. XY uses the left-hand layout in millimetres. Mirror right-hand X about 80 mm.",
+  "revision": "I",
+  "description": "Recessed 0.4 mm co-print materials with flush top faces. All roles are closed native solids; colors belong to solids, not height or XY painting zones.",
   "roles": [
     "body",
     "detail",
     "accent",
     "secondary"
   ],
-  "roof_mm": 16.6,
+  "roof_mm": 14.8,
   "styles": {
     "handheld": {
       "colors": {
@@ -22,26 +22,84 @@
         "accent": "Buttons",
         "secondary": "Speaker"
       },
-      "zones": [
+      "features": [
         {
-          "role": "accent",
+          "id": "DpadH",
+          "kind": "box",
           "xy": [
-            123.9,
-            51.7,
-            131.1,
-            58.0
-          ]
+            113.7,
+            54,
+            120.1,
+            56
+          ],
+          "role": "detail"
         },
         {
-          "role": "secondary",
+          "id": "DpadV",
+          "kind": "box",
           "xy": [
-            118.9,
-            62.9,
-            124.5,
-            65.4
-          ]
+            115.9,
+            51.8,
+            117.9,
+            58.2
+          ],
+          "role": "detail"
+        },
+        {
+          "id": "ButtonA",
+          "kind": "disc",
+          "xy": [
+            129.3,
+            53.5
+          ],
+          "radius_mm": 1.65,
+          "role": "accent"
+        },
+        {
+          "id": "ButtonB",
+          "kind": "disc",
+          "xy": [
+            125.7,
+            56.1
+          ],
+          "radius_mm": 1.65,
+          "role": "accent"
+        },
+        {
+          "id": "Speaker0",
+          "kind": "box",
+          "xy": [
+            119.0,
+            63,
+            120.0,
+            65.3
+          ],
+          "role": "secondary"
+        },
+        {
+          "id": "Speaker1",
+          "kind": "box",
+          "xy": [
+            121.2,
+            63,
+            122.2,
+            65.3
+          ],
+          "role": "secondary"
+        },
+        {
+          "id": "Speaker2",
+          "kind": "box",
+          "xy": [
+            123.4,
+            63,
+            124.4,
+            65.3
+          ],
+          "role": "secondary"
         }
-      ]
+      ],
+      "label": "Handheld"
     },
     "tv": {
       "colors": {
@@ -56,26 +114,107 @@
         "accent": "Tuning knob",
         "secondary": "Speaker"
       },
-      "zones": [
+      "features": [
         {
-          "role": "accent",
+          "id": "BezelLeft",
+          "kind": "box",
           "xy": [
-            126.7,
-            52.9,
-            131.1,
-            57.3
-          ]
+            113.8,
+            16.8,
+            115.55,
+            50.8
+          ],
+          "role": "detail"
         },
         {
-          "role": "secondary",
+          "id": "BezelRight",
+          "kind": "box",
           "xy": [
-            114.1,
-            52.5,
-            120.1,
-            57.9
-          ]
+            130.05,
+            16.8,
+            131.8,
+            50.8
+          ],
+          "role": "detail"
+        },
+        {
+          "id": "BezelTop",
+          "kind": "box",
+          "xy": [
+            113.8,
+            16.8,
+            131.8,
+            18.25
+          ],
+          "role": "detail"
+        },
+        {
+          "id": "BezelBottom",
+          "kind": "box",
+          "xy": [
+            113.8,
+            49.35,
+            131.8,
+            50.8
+          ],
+          "role": "detail"
+        },
+        {
+          "id": "Tuning",
+          "kind": "disc",
+          "xy": [
+            128.9,
+            55.1
+          ],
+          "radius_mm": 2.15,
+          "role": "accent"
+        },
+        {
+          "id": "Speaker0",
+          "kind": "box",
+          "xy": [
+            114.2,
+            52.6,
+            120,
+            53.3
+          ],
+          "role": "secondary"
+        },
+        {
+          "id": "Speaker1",
+          "kind": "box",
+          "xy": [
+            114.2,
+            54.1,
+            120,
+            54.8
+          ],
+          "role": "secondary"
+        },
+        {
+          "id": "Speaker2",
+          "kind": "box",
+          "xy": [
+            114.2,
+            55.6,
+            120,
+            56.3
+          ],
+          "role": "secondary"
+        },
+        {
+          "id": "Speaker3",
+          "kind": "box",
+          "xy": [
+            114.2,
+            57.1,
+            120,
+            57.8
+          ],
+          "role": "secondary"
         }
-      ]
+      ],
+      "label": "Retro TV"
     },
     "cyberpunk": {
       "colors": {
@@ -90,26 +229,99 @@
         "accent": "Circuit traces",
         "secondary": "Panel and node"
       },
-      "zones": [
+      "features": [
         {
-          "role": "accent",
+          "id": "Vent0",
+          "kind": "box",
           "xy": [
-            126.7,
-            51.7,
-            132.6,
-            58.2
-          ]
+            113.4,
+            52,
+            114.6,
+            56.9
+          ],
+          "role": "detail"
         },
         {
-          "role": "secondary",
+          "id": "Vent1",
+          "kind": "box",
           "xy": [
-            119.4,
-            59.9,
-            129.2,
-            65.6
-          ]
+            116.10000000000001,
+            52,
+            117.3,
+            56.9
+          ],
+          "role": "detail"
+        },
+        {
+          "id": "Vent2",
+          "kind": "box",
+          "xy": [
+            118.80000000000001,
+            52,
+            120.0,
+            56.9
+          ],
+          "role": "detail"
+        },
+        {
+          "id": "TraceA",
+          "kind": "box",
+          "xy": [
+            126.8,
+            51.8,
+            132.5,
+            52.6
+          ],
+          "role": "accent"
+        },
+        {
+          "id": "TraceB",
+          "kind": "box",
+          "xy": [
+            131.7,
+            52.6,
+            132.5,
+            58.1
+          ],
+          "role": "accent"
+        },
+        {
+          "id": "TraceC",
+          "kind": "box",
+          "xy": [
+            126.8,
+            57.3,
+            132.5,
+            58.1
+          ],
+          "role": "accent"
+        },
+        {
+          "id": "Panel",
+          "kind": "box",
+          "xy": [
+            119.5,
+            63.2,
+            124.2,
+            65.5
+          ],
+          "role": "secondary"
+        },
+        {
+          "id": "Node",
+          "kind": "disc",
+          "xy": [
+            128.1,
+            61
+          ],
+          "radius_mm": 1,
+          "role": "secondary"
         }
-      ]
+      ],
+      "label": "Cyberpunk"
     }
-  }
+  },
+  "decoration_mode": "flush-co-print",
+  "inlay_depth_mm": 0.4,
+  "minimum_backing_mm": 0.8
 }

@@ -65,6 +65,7 @@ def render(kind):
         part(side,'mcu-riser',(.26,.32,.33),25 if stack else 0)
         part(side,'mcu',(.07,.15,.16),25 if stack else 0)
         part(side,'mcu-sockets',(.05,.06,.062))
+        part(side,'display-socket',(.05,.06,.062))
         part(side,'jst',(.88,.865,.815));part(side,'reset',(.25,.26,.27));part(side,'slider',(.16,.16,.17))
         part(side,'display-sled',(.25,.33,.34),45 if stack else 0)
         part(side,'display',(.055,.075,.073),45 if stack else 0)
@@ -73,15 +74,17 @@ def render(kind):
         for i in range(3):
             part(side,f'magnet-{i}',(.56,.59,.60))
             part(side,f'frame-target-{i}',(.56,.59,.60),lid_dz,lid_dx)
-        for i in range(2):part(side,f'battery-lead-{i}',(.6,.15,.13) if i==0 else(.15,.17,.16))
+        for lead in m['batteryLeadProfiles'][side+'-'+cfg['batteries'][side]]:
+            part(side,f"battery-lead-{lead['index']}",rgb(lead['color']))
         # Reflective screen artwork is illustrative, not a live hardware readback.
         cx=122.8 if side=='left' else 37.2;hy=m['halves'][side]['display_header']['y'];dz=45 if stack else 0
-        glass=vtk.vtkPlaneSource();glass.SetOrigin(offset+cx-5.372,hy-29.64,16.115+dz);glass.SetPoint1(offset+cx+5.372,hy-29.64,16.115+dz);glass.SetPoint2(offset+cx-5.372,hy-4.36,16.115+dz)
+        screen_z=m['parameter_values_mm']['DisplayBottom']+1.915
+        glass=vtk.vtkPlaneSource();glass.SetOrigin(offset+cx-5.372,hy-29.64,screen_z+dz);glass.SetPoint1(offset+cx+5.372,hy-29.64,screen_z+dz);glass.SetPoint2(offset+cx-5.372,hy-4.36,screen_z+dz)
         primitive(glass,(0,0,0),(.73,.79,.725))
         entries=[('BASE',hy-26,1.36),('BLE',hy-18,1.55),('L',hy-8,2.15)] if side=='left' else [('LINK',hy-26,1.36),('BAT',hy-18,1.55),('R',hy-8,2.15)]
         for text,y,scale in entries:
             src=vtk.vtkVectorText();src.SetText(text);src.Update();mp=vtk.vtkPolyDataMapper();mp.SetInputConnection(src.GetOutputPort())
-            a=actor(mp,(offset+cx-4.75,y,16.14+dz),(.08,.15,.12),rx=180);a.SetScale(scale,scale,scale)
+            a=actor(mp,(offset+cx-4.75,y,screen_z+.025+dz),(.08,.15,.12),rx=180);a.SetScale(scale,scale,scale)
         for key in layout['halves'][side]:
             for v in switches['choc-body']+switches['choc-stem']:
                 actor(mesh(v['path']),(offset+key['x'],key['y'],5.4),rgb(v['color']),rz=-key['angle'])
@@ -119,7 +122,7 @@ def render(kind):
     else:focal=(88,-39,28);pos=(225,-270,205);up=(0,0,1);scale=70
     cam.SetFocalPoint(*focal);cam.SetPosition(*pos);cam.SetViewUp(*up);cam.SetParallelScale(scale);ren.ResetCameraClippingRange();win.Render()
     if kind=='side':
-        label('Plate: 7.6 mm',105,1235,29);label('Electronics cover: 16.6 mm',105,1190,29)
+        label('Plate: 7.6 mm',105,1235,29);label(f"Electronics cover: {m['parameter_values_mm']['FrameTop']:g} mm",105,1190,29)
         label('Heights above base; feet add 1.2 mm. Key plate remains at 7.6 mm.',105,170,24,(.37,.44,.41))
     if kind=='stack':
         label('nice!view  /  nice!nano  /  LiPo 100 mAh',105,1230,27)

@@ -65,5 +65,14 @@ for side in ['left','right']:
     at=text.rfind(')');text=text[:at]+'\n'+'\n'.join(edges)+'\n'+text[at:]
     text='\n'.join(line.rstrip() for line in text.splitlines())+'\n';path.write_text(text.replace('filo36','flan36').replace('FILO36','FLAN36'))
     report['halves'][side]={'source_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),'pcb_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'transforms':changes,'outline_segments':len(edges),'routing_changes':0}
+from update_revI_slim_pcb import apply as apply_slim
+slim_report=apply_slim(dest)
+report['allowed_footprint_changes'].append('SW2')
+for side in ['left','right']:
+    report['halves'][side]['pcb_sha256']=slim_report['halves'][side]['after_sha256']
+    report['halves'][side]['slim_electronics']=slim_report['halves'][side]
+    report['halves'][side]['transforms']['J1']['to']=slim_report['halves'][side]['j1_at'][:2]
+    report['halves'][side]['transforms']['SW2']={'from':[123 if side=='left' else 37,59.5],'to':slim_report['halves'][side]['reset_at']}
+(ROOT/'validation/revI-slim-pcb.json').write_text(json.dumps(slim_report,indent=2)+'\n')
 (ROOT/'validation/revI-pcb-outline.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

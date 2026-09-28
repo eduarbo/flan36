@@ -354,26 +354,14 @@ for side in ('left', 'right'):
         done(ident,obj,filename.removesuffix('.step')+' · KiCad model','connectors',(.45,.47,.5))
 
 
-    # Nominal lead storage. Ends are reservation boundaries, not certified terminals.
+    # The source route includes cell-to-plug transitions for both profiles.
+    # slim_stack.apply below installs the active battery/lead links together.
+    import slim_stack
     wire_spec=json.loads((ROOT/'design/revI-wire-study.json').read_text())
-    control=wire_spec['control_points'];radius=wire_spec['minimum_bend_radius_mm']
-    for n,z in enumerate(wire_spec['center_z']):
-        vec=lambda p:A.Vector(mx(p[0]),-p[1],z)
-        edges=[];last=control[0]
-        for j,b in enumerate(control[1:-1],1):
-            a,c=control[j-1],control[j+1]
-            u=[b[t]-a[t] for t in [0,1]];v=[c[t]-b[t] for t in [0,1]]
-            lu,lv=math.hypot(*u),math.hypot(*v);u=[t/lu for t in u];v=[t/lv for t in v]
-            start=[b[t]-u[t]*radius for t in [0,1]];end=[b[t]+v[t]*radius for t in [0,1]]
-            turn=math.atan2(u[0]*v[1]-u[1]*v[0],sum(i*k for i,k in zip(u,v)));sign=1 if turn>0 else -1
-            center=[start[0]-u[1]*radius*sign,start[1]+u[0]*radius*sign]
-            angle=math.atan2(start[1]-center[1],start[0]-center[0]);mid=[center[0]+radius*math.cos(angle+turn/2),center[1]+radius*math.sin(angle+turn/2)]
-            edges.extend([Part.makeLine(vec(last),vec(start)),Part.Arc(vec(start),vec(mid),vec(end)).toShape()]);last=end
-        edges.append(Part.makeLine(vec(last),vec(control[-1])));spine=Part.Wire(edges)
-        assert abs(spine.Length-105)<1e-5
-        circle=Part.Wire([Part.makeCircle(.3,vec(control[0]),vec(control[1])-vec(control[0]))])
-        obj=add('Part::Feature','WireStudy'+str(n));obj.Shape=spine.makePipeShell([circle],True,False)
-        done('battery-lead-'+str(n),obj,'105 mm lead storage · nominal','connectors',(.62,.18,.16) if n==0 else(.18,.19,.20))
+    for n,route in enumerate(wire_spec['profiles']['adafruit-1570']):
+        obj=add('Part::Feature','WireStudy'+str(n))
+        obj.Shape=slim_stack.wire_shape(route,side=='right')
+        done('battery-lead-'+str(n),obj,'105 mm battery lead · nominal continuous route','connectors',(.62,.18,.16) if n==0 else(.18,.19,.20))
 
     print(side,'electronics defined',flush=True)
     # Interchangeable opaque covers. Same PCB/mount centers and independent sled.
@@ -490,6 +478,11 @@ for side in ('left', 'right'):
 doc.recompute()
 from switch_instances import ensure
 ensure(doc)
+import slim_stack,flush_frames
+from configuration import apply as apply_configuration
+slim_stack.apply(doc)
+flush_frames.apply(doc)
+apply_configuration(doc,configuration)
 A.setActiveDocument(doc.Name)
 G.activeDocument().activeView().viewTop();G.activeDocument().activeView().fitAll()
 doc.saveAs(str(OUT/'Flan36.FCStd'))

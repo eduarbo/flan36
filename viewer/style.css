@@ -14,7 +14,7 @@ details{border-top:1px solid var(--line)}summary{cursor:pointer;min-height:44px;
 @media(max-width:350px){.directory{padding-left:5px;padding-right:5px}.part-item{font-size:9px;gap:3px}.visibility{width:19px}.visibility input{width:19px}.part-row{height:32px}.inspector{padding:12px}.stage{height:31dvh}.part-anchor{width:3px;height:3px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
-/* Portrait frame previews retain readable, front-facing relief at card size. */
+/* Portrait frame previews keep flush details readable at card size. */
 #frame-grid .preview-card img{aspect-ratio:220/360}
 #theme-palette{display:flex;flex-wrap:wrap;gap:7px 10px;font-size:10px;color:var(--muted);margin:10px 0}
 #theme-palette span{display:flex;align-items:center;gap:5px}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded current-revision delivery/provenance checks; no hardware approval.
+"""Historical pre-slim revision delivery/provenance checks; no hardware approval.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 import hashlib,json,re,subprocess
@@ -7,6 +7,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def sha(p):return hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
 m=json.loads((ROOT/'design/revI.json').read_text())
+if 'slim_flush' in m:
+    raise SystemExit('This gate describes the historical raised-frame snapshot. Run tools/check_slim_flush_delivery.py for the current revision.')
 assert sha('mechanical/revI/Flan36.FCStd')==m['fcstd_sha256']
 for source in m['inputs']:assert sha(source['path'])==source['sha256'],source
 for s in ['left','right']:

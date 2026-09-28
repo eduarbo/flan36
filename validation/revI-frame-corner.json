@@ -1,6 +1,6 @@
 {
-  "source_sha256": "38733a3a9a5fb6add4df8e668b9ae5178f44b3f864c6ee9416bfb147b2053fdf",
-  "checker_sha256": "16d1259e074fc480d625a1abad1a9c1e1aa2940c1e7c35811599749112d56ca7",
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "checker_sha256": "8491f13bad33d8f98c6e3ee010f687d1261bfa287c61b75163b51b826d6ff422",
   "shared_corner_checks": [
     {
       "side": "left",
@@ -39,6 +39,30 @@
       "outside_case_corner_mm3": 0.0
     },
     {
+      "side": "left",
+      "style": "cartridge",
+      "radius_mm": 2.4,
+      "outside_case_corner_mm3": 0.0
+    },
+    {
+      "side": "left",
+      "style": "arcade",
+      "radius_mm": 2.4,
+      "outside_case_corner_mm3": 0.0
+    },
+    {
+      "side": "left",
+      "style": "mecha",
+      "radius_mm": 2.4,
+      "outside_case_corner_mm3": 0.0
+    },
+    {
+      "side": "left",
+      "style": "kintsugi",
+      "radius_mm": 2.4,
+      "outside_case_corner_mm3": 0.0
+    },
+    {
       "side": "right",
       "style": "smooth",
       "radius_mm": 2.4,
@@ -71,6 +95,30 @@
     {
       "side": "right",
       "style": "cyberpunk",
+      "radius_mm": 2.4,
+      "outside_case_corner_mm3": 0.0
+    },
+    {
+      "side": "right",
+      "style": "cartridge",
+      "radius_mm": 2.4,
+      "outside_case_corner_mm3": 0.0
+    },
+    {
+      "side": "right",
+      "style": "arcade",
+      "radius_mm": 2.4,
+      "outside_case_corner_mm3": 0.0
+    },
+    {
+      "side": "right",
+      "style": "mecha",
+      "radius_mm": 2.4,
+      "outside_case_corner_mm3": 0.0
+    },
+    {
+      "side": "right",
+      "style": "kintsugi",
       "radius_mm": 2.4,
       "outside_case_corner_mm3": 0.0
     }

@@ -49,5 +49,38 @@
       "status": "Community CAD, content pinned by SHA256"
     }
   ],
-  "license_source": "https://www.kicad.org/libraries/license/"
+  "license_source": "https://www.kicad.org/libraries/license/",
+  "original_reconstructions": [
+    {
+      "component": "JST S2B-PH-K-S + PHR-2",
+      "source_url": "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf",
+      "source_pages": [
+        1,
+        3
+      ],
+      "implementation": "tools/freecad/slim_stack.py",
+      "footprint": "hardware/revI/libraries/PiantorSlim.pretty/JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal.kicad_mod",
+      "license": "GPL-3.0-or-later (original reconstruction and footprint)",
+      "vendor_cad_redistributed": false,
+      "status": "Nominal published envelope dimensions; inferred internal mating and wire-port positions. Not a supplier tolerance or physical qualification."
+    },
+    {
+      "component": "J2 nice!view socket and male header",
+      "source_url": "https://typeractive.xyz/products/5-pin-sockets",
+      "implementation": "tools/freecad/slim_stack.py",
+      "license": "GPL-3.0-or-later (original conservative reserve)",
+      "vendor_cad_redistributed": false,
+      "published_installation_mm": {
+        "female_socket_height": 5,
+        "male_spacer_height": 2,
+        "total": 7
+      },
+      "assumed_body_xy_mm": [
+        13.2,
+        3
+      ],
+      "pin_diameter_assumption_mm": 0.6,
+      "status": "Retained female socket and moving male header modeled separately. Supplier provides installed height; conservative XY, internal mating, pin extent, material appearance and tolerances remain unqualified."
+    }
+  ]
 }

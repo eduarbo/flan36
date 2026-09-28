@@ -179,12 +179,12 @@
         {
           "ref": "J1",
           "pad": "1",
-          "clearance_mm": 2.002585
+          "clearance_mm": 5.219497
         },
         {
           "ref": "J1",
           "pad": "2",
-          "clearance_mm": 4.253277
+          "clearance_mm": 3.3414
         },
         {
           "ref": "SW1",
@@ -524,22 +524,22 @@
         {
           "ref": "SW2",
           "pad": "1",
-          "clearance_mm": 4.876304
+          "clearance_mm": 4.662123
         },
         {
           "ref": "SW2",
           "pad": "1",
-          "clearance_mm": 5.008107
+          "clearance_mm": 0.75
         },
         {
           "ref": "SW2",
           "pad": "2",
-          "clearance_mm": 1.450071
+          "clearance_mm": 2.692437
         },
         {
           "ref": "SW2",
           "pad": "2",
-          "clearance_mm": 1.70379
+          "clearance_mm": 4.55
         },
         {
           "ref": "K11",
@@ -684,12 +684,12 @@
         {
           "ref": "J2",
           "pad": "1",
-          "clearance_mm": 2.230171
+          "clearance_mm": 0.554093
         },
         {
           "ref": "J2",
           "pad": "2",
-          "clearance_mm": 2.354093
+          "clearance_mm": 0.608896
         },
         {
           "ref": "J2",
@@ -1167,12 +1167,12 @@
         {
           "ref": "J1",
           "pad": "1",
-          "clearance_mm": 2.002585
+          "clearance_mm": 3.3414
         },
         {
           "ref": "J1",
           "pad": "2",
-          "clearance_mm": 4.253277
+          "clearance_mm": 5.219497
         },
         {
           "ref": "SW1",
@@ -1287,12 +1287,12 @@
         {
           "ref": "J2",
           "pad": "4",
-          "clearance_mm": 2.354093
+          "clearance_mm": 0.608896
         },
         {
           "ref": "J2",
           "pad": "5",
-          "clearance_mm": 2.230171
+          "clearance_mm": 0.554093
         },
         {
           "ref": "K02",
@@ -1517,22 +1517,22 @@
         {
           "ref": "SW2",
           "pad": "1",
-          "clearance_mm": 5.008107
+          "clearance_mm": 0.75
         },
         {
           "ref": "SW2",
           "pad": "1",
-          "clearance_mm": 4.876304
+          "clearance_mm": 4.662123
         },
         {
           "ref": "SW2",
           "pad": "2",
-          "clearance_mm": 1.70379
+          "clearance_mm": 4.55
         },
         {
           "ref": "SW2",
           "pad": "2",
-          "clearance_mm": 1.450071
+          "clearance_mm": 2.692437
         },
         {
           "ref": "U1",
@@ -1960,10 +1960,15 @@
     "design/revI-profiles.json": "1320cd0423afc35282d9335610abc0d7cab12351e9e626a31c70808b01af4d73",
     "design/revI-mounts.json": "ee6a61232b1a8c308748af1174793664c41238a6c36cd166209e6d011d5592bd",
     "design/batteries.json": "1c4d2037b6fb04ea7aab6ba1d2f780eda9d886ebf8dd1c403c2721743d0424ff",
-    "tools/check_revI_outline.py": "777b09eb4f3362779d032a26d8eeae2606620e5b4d5199a92a1be6a1e78896e2",
+    "tools/check_revI_outline.py": "efc961a99b0463879dfb507648e9048494b9535fb23e5175d296edb0ac896edc",
     "tools/build_revI_profiles.py": "03bc9d9add88cbb959cc3fa3530bd485071ce867aae697a69b1f7afc3a2bf9bd",
     "design/revI-rim-baseline.json": "22098506a8528c77043b604dbac6c1437bf44970aa15eb780515b9b40c5d2599",
     "design/revI-lcd-curve-baseline.json": "05281860afcfd053e811651f93af733e7c5bb994f9c8889f8a75f535a47ebffc",
-    "design/revI-local-curves-baseline.json": "0aa8a3745adb7baefc40a7817ce79aa179aed94f1a6baafa93d77e3612357aac"
+    "design/revI-local-curves-baseline.json": "0aa8a3745adb7baefc40a7817ce79aa179aed94f1a6baafa93d77e3612357aac",
+    "validation/revI-electrical.json": "055ad3004c8844f65fca7aeef9bd749413558ee7de431ffef8b316df657a9095",
+    "hardware/revI/flan36-left.kicad_pcb": "d9227ea364eb2c6fa229a68fb802c291700d9eb4cbd0d6db0e99595af8b321e3",
+    "hardware/revI/flan36-right.kicad_pcb": "dc71d07b61b01b7d1a4b8680f66f0ee17e075bf614d5ed7cc8f2d8ed98ebf290",
+    "build/revI/pads-left.json": "4182e88c3fc26d6e4efb21c6ff88f4735d4265e9f6ea8ccab4848c8a06c8afa2",
+    "build/revI/pads-right.json": "3e2d4ce1061ef390edf5d4fdd3154688a6fe75bfa51ace5cd809ac26cdaca8b8"
   }
 }

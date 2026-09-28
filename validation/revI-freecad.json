@@ -1,5 +1,5 @@
 {
-  "source_sha256": "38733a3a9a5fb6add4df8e668b9ae5178f44b3f864c6ee9416bfb147b2053fdf",
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
   "native_features_no_custom_proxy": true,
   "configuration_roundtrip": true,
   "mixed_battery_profiles_roundtrip": true,
@@ -9,7 +9,7 @@
   "all_36_key_centres_unchanged": true,
   "stem_tip_datum_mm": 11.7,
   "FrameTop_edit_mm": [
-    16.6,
+    14.8,
     17.2
   ],
   "preset": "saddle-sculpted",
@@ -21,5 +21,5 @@
   "invalid_configuration_rejected_atomically": true,
   "xy_margin_mm": 0.247659,
   "source_file_unchanged": true,
-  "opaque_side_wall_samples": 168
+  "opaque_side_wall_samples": 264
 }

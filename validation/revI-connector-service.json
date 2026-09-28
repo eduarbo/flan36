@@ -1,0 +1,325 @@
+{
+  "schema": "flan36-PH-release-2",
+  "physical_acceptance": false,
+  "wire_flex_validated": false,
+  "release_stroke_mm": 5.0,
+  "lift_mm": 24.0,
+  "sweep_method": "Continuous union of translated rectangular neck and flange solids; exact for the modeled rectilinear housing, no early tilt.",
+  "sequence": [
+    "Remove magnetic frame with its steel targets.",
+    "Lift nice!view, its male header, and display support together; J2 female socket remains on PCB.",
+    "Lift nice!nano from its sockets.",
+    "Grip exposed PHR-2 flange from above, slide5 mm toward the key field, then lift24 mm. Flexible leads must be released from their loose stored bends during this operation."
+  ],
+  "assumptions": [
+    "Housing engagement4.85 mm and a5 mm release stroke are inferred from original nominal reconstruction, not a measured connector.",
+    "J2 female5 mm height and male2 mm spacer follow the supplier installation dimensions. The13.2 \u00d73 mm XY and contact geometry are conservative assumptions, not supplier tolerances.",
+    "Two opposed0.8 mm thick,1 mm deep jaw tips contact the upper flange atz8.65\u20139.65 mm. This is an access reserve, not a qualified tool design.",
+    "Choc obstacles are transformed bounds of all licensed body/stem sub-meshes.",
+    "All flexible leads are kept in their stored pose and intersections with the moving housing are reported. Their deformation and forces during unplugging are NOT validated."
+  ],
+  "halves": {
+    "left": {
+      "retained_display_socket": {
+        "part_id": "left-display-socket",
+        "body_size_mm": [
+          13.2,
+          3,
+          5
+        ],
+        "body_bounds_mm": [
+          116.2,
+          -52.3,
+          5.4,
+          129.4,
+          -49.3,
+          10.4
+        ],
+        "width_depth_qualified": false,
+        "engagement_qualified": false,
+        "moving_male_header_part_id": "left-display",
+        "moving_male_spacer_size_mm": [
+          13.2,
+          3,
+          2
+        ]
+      },
+      "retained_obstacles": [
+        "SlimPHHeader",
+        "SlimPHPin0",
+        "SlimPHPin1",
+        "battery-retainer",
+        "cap-bound-K01",
+        "cap-bound-K02",
+        "cap-bound-K03",
+        "cap-bound-K04",
+        "cap-bound-K05",
+        "cap-bound-K11",
+        "cap-bound-K12",
+        "cap-bound-K13",
+        "cap-bound-K14",
+        "cap-bound-K15",
+        "cap-bound-K21",
+        "cap-bound-K22",
+        "cap-bound-K23",
+        "cap-bound-K24",
+        "cap-bound-K25",
+        "cap-bound-K30",
+        "cap-bound-K31",
+        "cap-bound-K32",
+        "cradle",
+        "display-socket",
+        "key-plate",
+        "magnet-0",
+        "magnet-1",
+        "magnet-2",
+        "mcu-riser",
+        "mcu-sockets",
+        "pcb",
+        "reset",
+        "screw-1",
+        "screw-2",
+        "screw-3",
+        "screw-4",
+        "screw-5",
+        "slider",
+        "switch-bound-K01",
+        "switch-bound-K02",
+        "switch-bound-K03",
+        "switch-bound-K04",
+        "switch-bound-K05",
+        "switch-bound-K11",
+        "switch-bound-K12",
+        "switch-bound-K13",
+        "switch-bound-K14",
+        "switch-bound-K15",
+        "switch-bound-K21",
+        "switch-bound-K22",
+        "switch-bound-K23",
+        "switch-bound-K24",
+        "switch-bound-K25",
+        "switch-bound-K30",
+        "switch-bound-K31",
+        "switch-bound-K32",
+        "tray",
+        "washer-1",
+        "washer-2",
+        "washer-3"
+      ],
+      "rigid_housing_collisions": [],
+      "rigid_housing_path_clear": true,
+      "grip_tool_collisions": [],
+      "grip_tool_path_clear": true,
+      "stored_wire_intersections_requiring_flex": {
+        "301230": [
+          {
+            "part": "L_SlimWire301230_0",
+            "volume_mm3": 1.231685
+          },
+          {
+            "part": "L_SlimWire301230_1",
+            "volume_mm3": 0.664767
+          }
+        ],
+        "adafruit-1570": [
+          {
+            "part": "L_WireStudy0",
+            "volume_mm3": 1.231685
+          },
+          {
+            "part": "L_WireStudy1",
+            "volume_mm3": 0.664767
+          }
+        ]
+      },
+      "nominal_terminal_distances": {
+        "301230": [
+          {
+            "lead": 0,
+            "to_plug_mm": 0.0,
+            "to_cell_mm": 0.0
+          },
+          {
+            "lead": 1,
+            "to_plug_mm": 0.0,
+            "to_cell_mm": 0.0
+          }
+        ],
+        "adafruit-1570": [
+          {
+            "lead": 0,
+            "to_plug_mm": 0.0,
+            "to_cell_mm": 0.0
+          },
+          {
+            "lead": 1,
+            "to_plug_mm": 0.0,
+            "to_cell_mm": 0.0
+          }
+        ]
+      },
+      "mated_plug_bounds_mm": [
+        117.2,
+        -61.1,
+        5.55,
+        124.05,
+        -55.3,
+        10.05
+      ],
+      "conservative_choc_bounds_count": 18,
+      "conservative_cap_bounds_count": 18
+    },
+    "right": {
+      "retained_display_socket": {
+        "part_id": "right-display-socket",
+        "body_size_mm": [
+          13.2,
+          3,
+          5
+        ],
+        "body_bounds_mm": [
+          30.6,
+          -52.3,
+          5.4,
+          43.8,
+          -49.3,
+          10.4
+        ],
+        "width_depth_qualified": false,
+        "engagement_qualified": false,
+        "moving_male_header_part_id": "right-display",
+        "moving_male_spacer_size_mm": [
+          13.2,
+          3,
+          2
+        ]
+      },
+      "retained_obstacles": [
+        "SlimPHHeader",
+        "SlimPHPin0",
+        "SlimPHPin1",
+        "battery-retainer",
+        "cap-bound-K01",
+        "cap-bound-K02",
+        "cap-bound-K03",
+        "cap-bound-K04",
+        "cap-bound-K05",
+        "cap-bound-K11",
+        "cap-bound-K12",
+        "cap-bound-K13",
+        "cap-bound-K14",
+        "cap-bound-K15",
+        "cap-bound-K21",
+        "cap-bound-K22",
+        "cap-bound-K23",
+        "cap-bound-K24",
+        "cap-bound-K25",
+        "cap-bound-K30",
+        "cap-bound-K31",
+        "cap-bound-K32",
+        "cradle",
+        "display-socket",
+        "key-plate",
+        "magnet-0",
+        "magnet-1",
+        "magnet-2",
+        "mcu-riser",
+        "mcu-sockets",
+        "pcb",
+        "reset",
+        "screw-1",
+        "screw-2",
+        "screw-3",
+        "screw-4",
+        "screw-5",
+        "slider",
+        "switch-bound-K01",
+        "switch-bound-K02",
+        "switch-bound-K03",
+        "switch-bound-K04",
+        "switch-bound-K05",
+        "switch-bound-K11",
+        "switch-bound-K12",
+        "switch-bound-K13",
+        "switch-bound-K14",
+        "switch-bound-K15",
+        "switch-bound-K21",
+        "switch-bound-K22",
+        "switch-bound-K23",
+        "switch-bound-K24",
+        "switch-bound-K25",
+        "switch-bound-K30",
+        "switch-bound-K31",
+        "switch-bound-K32",
+        "tray",
+        "washer-1",
+        "washer-2",
+        "washer-3"
+      ],
+      "rigid_housing_collisions": [],
+      "rigid_housing_path_clear": true,
+      "grip_tool_collisions": [],
+      "grip_tool_path_clear": true,
+      "stored_wire_intersections_requiring_flex": {
+        "301230": [
+          {
+            "part": "R_SlimWire301230_0",
+            "volume_mm3": 1.231685
+          },
+          {
+            "part": "R_SlimWire301230_1",
+            "volume_mm3": 0.664766
+          }
+        ],
+        "adafruit-1570": [
+          {
+            "part": "R_WireStudy0",
+            "volume_mm3": 1.231685
+          },
+          {
+            "part": "R_WireStudy1",
+            "volume_mm3": 0.664766
+          }
+        ]
+      },
+      "nominal_terminal_distances": {
+        "301230": [
+          {
+            "lead": 0,
+            "to_plug_mm": 0.0,
+            "to_cell_mm": 0.0
+          },
+          {
+            "lead": 1,
+            "to_plug_mm": 0.0,
+            "to_cell_mm": 0.0
+          }
+        ],
+        "adafruit-1570": [
+          {
+            "lead": 0,
+            "to_plug_mm": 0.0,
+            "to_cell_mm": 0.0
+          },
+          {
+            "lead": 1,
+            "to_plug_mm": 0.0,
+            "to_cell_mm": 0.0
+          }
+        ]
+      },
+      "mated_plug_bounds_mm": [
+        35.95,
+        -61.1,
+        5.55,
+        42.8,
+        -55.3,
+        10.05
+      ],
+      "conservative_choc_bounds_count": 18,
+      "conservative_cap_bounds_count": 18
+    }
+  },
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "checker_sha256": "08f4eb7bffb66457d2075dc9d7a90cf6f6daf262a190cca5e8da402783fddbd6"
+}

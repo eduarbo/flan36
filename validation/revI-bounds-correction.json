@@ -1,0 +1,61 @@
+{
+  "schema": "flan36-bounds-correction-1",
+  "physical_acceptance": false,
+  "trigger": "Saved/reopened assembly signature comparison failed; the original in-memory pre-save signature was not persisted.",
+  "original_mismatch_cause": {
+    "status": "inferred",
+    "statement": "Tessellation-dependent ordinary Shape.BoundBox values are a demonstrated explanation for the failed signature comparison, but the missing original pre-save checkpoint prevents direct attribution of that exact failure."
+  },
+  "historical_source_sha256": "0cd63c0717a1bdda8bd9a6126b06e14abb10bfc3a72b0ebe45c5f69c0155dfdc",
+  "observed_evidence": {
+    "saved_signature_records_before_recompute": 360,
+    "saved_signature_records_after_recompute": 360,
+    "post_open_recompute_differences": 0,
+    "wire_comparisons": [
+      {
+        "object": "L_WireStudy0",
+        "ordinary_bounds_raw_vs_opened_max_difference_mm": 0.1504932982968934,
+        "volume_delta_mm3": 0.0,
+        "area_delta_mm2": 0.0,
+        "symmetric_difference_mm3": 0.0,
+        "analytic_max_difference_mm": 0.0
+      },
+      {
+        "object": "L_WireStudy1",
+        "ordinary_bounds_raw_vs_opened_max_difference_mm": 0.15049329829689295,
+        "volume_delta_mm3": 0.0,
+        "area_delta_mm2": 0.0,
+        "symmetric_difference_mm3": 0.0,
+        "analytic_max_difference_mm": 0.0
+      },
+      {
+        "object": "R_WireStudy0",
+        "ordinary_bounds_raw_vs_opened_max_difference_mm": 0.1504932982968934,
+        "volume_delta_mm3": 0.0,
+        "area_delta_mm2": 0.0,
+        "symmetric_difference_mm3": 0.0,
+        "analytic_max_difference_mm": 0.0
+      },
+      {
+        "object": "R_WireStudy1",
+        "ordinary_bounds_raw_vs_opened_max_difference_mm": 0.15049329829689295,
+        "volume_delta_mm3": 0.0,
+        "area_delta_mm2": 0.0,
+        "symmetric_difference_mm3": 0.0,
+        "analytic_max_difference_mm": 0.0
+      }
+    ]
+  },
+  "correction": {
+    "bounds_api": "Shape.optimalBoundingBox(False, False)",
+    "applies_to": [
+      "assembly signature bounds",
+      "slim-stack overlap broad-phase bounds"
+    ],
+    "geometry_modified": false,
+    "signature_rounding_and_other_fields_preserved": true,
+    "fit_acceptance_tolerances_weakened": false,
+    "future_pre_save_signature_checkpoint_added": true
+  },
+  "regression": "check_analytic_bounds.py checks four stored lead BReps at three tessellation deflections. Exact geometry and analytic bounds must remain unchanged; ordinary bounds are diagnostic and need not differ."
+}

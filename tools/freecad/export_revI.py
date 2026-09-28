@@ -1,8 +1,12 @@
 """Export the active revI FCStd, preserving manual changes in the source document.
+
+Run through run_macos.py to export the saved reference without rebuilding it.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 import hashlib
 import json
+import os
+import sys
 from pathlib import Path
 import FreeCAD as A
 import Part
@@ -31,18 +35,41 @@ def exact_common(a, b):
     return sa.common(sb)
 
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'mechanical/revI'
+OUT=Path(os.environ.get('FLAN36_EXPORT_OUT',ROOT/'mechanical/revI')).resolve()
+OUT.mkdir(parents=True,exist_ok=True)
+META_OUT=Path(os.environ.get('FLAN36_EXPORT_METADATA',ROOT/'design/revI.json'))
+REPORT_OUT=Path(os.environ.get('FLAN36_EXPORT_REPORT',ROOT/'validation/revI-mechanical.json'))
 doc=A.ActiveDocument
+standalone=os.environ.get('FILO_FREECAD_SUBPROCESS')=='1' and globals().get('__name__')=='__main__'
+if standalone:
+    import FreeCADGui as G
+    G.showMainWindow();G.getMainWindow().hide()
+    saved_source=OUT/'Flan36.FCStd'
+    saved_source_hash=hashlib.sha256(saved_source.read_bytes()).hexdigest()
+    doc=A.openDocument(str(saved_source))
 if not doc or not doc.getObject('Parameters'):
     raise RuntimeError('Open mechanical/revI/Flan36.FCStd first.')
 doc.recompute()
 metadata=json.loads((ROOT/'design/revI.json').read_text())
+# Preserve the prior label-only export bridge as history, not current provenance.
+if 'analyzed_native_sha256' in metadata.get('export_execution',{}):
+    metadata['historical_export_execution']=metadata.pop('export_execution')
 report={'scope':'Native PartID solids only; switch/keycap meshes and unqualified socket registration excluded; not a manufacturing release','halves':{},'unresolved':[
     'No routed PCB or integrated firmware', 'Actual module/socket/contact dimensions and retention',
     'Battery cable routing, strain relief and bending radii', 'Window tolerance and PCB copper-to-edge rule',
     'Printed fits, insertion/extraction loads, charging, RF and measured power']}
 metadata['parts']={}
+metadata['frameVariants']={}
+metadata['batteryLeadProfiles']={}
 metadata['parameter_values_mm']={a:getattr(doc.Parameters,a).Value for a in metadata['parameters']}
+metadata['slim_flush']={'decoration':'flush co-print material volumes',
+    'inlay_depth_mm':.4,'minimum_backing_mm':.8,'physical_acceptance':False}
+stack_recipe=json.loads(doc.getObject('SlimStackReceipt').RecipeJSON)
+for side, recipe in stack_recipe['halves'].items():
+    metadata['halves'][side]['battery_opening']=[v for point in recipe['battery_aperture_xy'] for v in point]
+    metadata['halves'][side]['rear_lead_notch_xy']=recipe['rear_lead_notch_xy']
+    metadata['halves'][side]['reset']={'center_xy':recipe['reset_center_xy'],
+        'layer':recipe['reset_side'],'tool_radius_mm':recipe['reset_tool_radius_mm']}
 for side,prefix in [('left','L_'),('right','R_')]:
     assembly=doc.getObject(prefix+'Half'); old=assembly.Placement
     assembly.Placement=A.Placement();doc.recompute()
@@ -96,15 +123,49 @@ for side,prefix in [('left','L_'),('right','R_')]:
         hits={n:round(exact_common(shape,other).Volume,6) for n,other in shapes.items() if n!='battery' and exact_common(shape,other).Volume>.001}
         assert not hits,(side,ident,hits)
         battery_checks[ident]={'component_collisions_mm3':hits,'bounds_mm':[getattr(shape.BoundBox,k) for k in ['XMin','YMin','ZMin','XMax','YMax','ZMax']]}
+    if doc.getObject('SlimStackReceipt'):
+        for profile,names in json.loads(doc.SlimStackReceipt.RecipeJSON)['halves'][side]['lead_objects'].items():
+            wires=[]
+            for index,source in enumerate(names):
+                shape=doc.getObject(source).Shape
+                wiremesh=MeshPart.meshFromShape(Shape=shape,LinearDeflection=.03,AngularDeflection=.12,Relative=False)
+                assert wiremesh.isSolid(),(source,'open wire mesh')
+                filename=f'{side}-battery-lead-{profile}-{index}.stl'
+                wiremesh.write(str(OUT/filename))
+                wire_color=doc.getObject(source).ViewObject.ShapeColor
+                wires.append({'index':index,'stl':filename,'stl_sha256':hashlib.sha256((OUT/filename).read_bytes()).hexdigest(),
+                    'color':'#'+''.join(f'{round(c*255):02x}' for c in wire_color[:3])})
+            metadata['batteryLeadProfiles'][side+'-'+profile]=wires
     # Check every interchangeable cover, not just the selected frame.
     print(side,'checking frame variants',flush=True)
     frame_checks={}
-    for obj in [o for o in doc.Objects if hasattr(o,'FrameStyle') and o.Name.startswith(prefix)]:
+    for obj in [o for o in doc.Objects if hasattr(o,'FrameStyle') and o.Name.startswith(prefix) and o.TypeId!='App::Link']:
         print(side,'frame',obj.FrameStyle,flush=True)
         shape=obj.Shape;assert shape.isValid() and len(shape.Solids)==1,(obj.Name,'invalid cover')
         frame_mesh=MeshPart.meshFromShape(Shape=shape,LinearDeflection=.03,AngularDeflection=.12,Relative=False)
         assert frame_mesh.isSolid();name=side+'-frame-'+obj.FrameStyle
         frame_mesh.write(str(OUT/(name+'.stl')));shape.exportStep(str(OUT/(name+'.step')))
+        # Flush color is owned by complementary closed volumes, not inferred
+        # from triangle centroids. Preserve their common assembly coordinates.
+        materials=[]
+        for child in getattr(obj,'MaterialParts',[]):
+            material=child.Shape
+            assert not material.isNull() and material.isValid(),(child.Name,'invalid material volume')
+            assert material.Solids and all(s.isClosed() for s in material.Solids),(child.Name,'open material solid')
+            role=child.ColorRole
+            assert role in ('body','detail','accent','secondary'),(child.Name,role)
+            stem=name+'-'+role
+            mm=MeshPart.meshFromShape(Shape=material,LinearDeflection=.03,AngularDeflection=.12,Relative=False)
+            assert mm.isSolid(),(stem,'open material mesh')
+            mm.write(str(OUT/(stem+'.stl')));material.exportStep(str(OUT/(stem+'.step')))
+            materials.append({'role':role,'stl':stem+'.stl','step':stem+'.step',
+                'stl_sha256':hashlib.sha256((OUT/(stem+'.stl')).read_bytes()).hexdigest(),
+                'step_sha256':hashlib.sha256((OUT/(stem+'.step')).read_bytes()).hexdigest(),
+                'volume_mm3':material.Volume,'solids':len(material.Solids)})
+        metadata['frameVariants'][side+'-'+obj.FrameStyle]={
+            'stl':name+'.stl','step':name+'.step','material_parts':materials,
+            'roof_mm':doc.Parameters.FrameTop.Value,
+            'color_construction':'complementary co-print volumes' if materials else 'single body'}
         hits={n:round(exact_common(shape,s).Volume,6) for n,s in shapes.items() if n!='electronics-lid' and exact_common(shape,s).Volume>.001}
         # Nominal 12 x 5 mm USB plug envelope + straight insertion corridor.
         px=116.8 if side=='left' else 160-128.8
@@ -159,9 +220,18 @@ for side,prefix in [('left','L_'),('right','R_')]:
     print(side,'parts',len(objects),'collisions',issues,flush=True)
 doc.recompute()
 metadata['inputs']=[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in [
-    'design/cases.json','design/frame-extensions.json','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
+    'design/cases.json','design/frame-finishes.json','design/frame-extensions.json','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
 metadata['fcstd_sha256']=hashlib.sha256((OUT/'Flan36.FCStd').read_bytes()).hexdigest()
-(ROOT/'design/revI.json').write_text(json.dumps(metadata,indent=2)+'\n')
-(ROOT/'validation/revI-mechanical.json').write_text(json.dumps(report,indent=2)+'\n')
+report['source_sha256']=metadata['fcstd_sha256']
+report['checker_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+metadata['export_execution']={'native_sha256':metadata['fcstd_sha256'],
+    'exporter_sha256':report['checker_sha256'],'receipt':'validation/revI-mechanical.json'}
+META_OUT.write_text(json.dumps(metadata,indent=2)+'\n')
+REPORT_OUT.write_text(json.dumps(report,indent=2)+'\n')
 assert not any(v['collisions'] for v in report['halves'].values()),'Unresolved nominal intersections; see validation/revI-mechanical.json'
 print('PASS: native solids, closed printable meshes, nominal part intersections',flush=True)
+if standalone:
+    assert hashlib.sha256(saved_source.read_bytes()).hexdigest()==saved_source_hash,'Saved source changed during export'
+    A.closeDocument(doc.Name)
+    print('PASS: saved native reference exported without modification',file=sys.__stdout__,flush=True)
+    sys.stdout.flush();sys.stderr.flush();os._exit(0)

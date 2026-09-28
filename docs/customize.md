@@ -42,7 +42,7 @@ Presets: **Original**, **Sculpted Normal** and **Sculpted Saddle**. The sculpted
 
 Open **Frame** in the directory, then choose Both halves, Left or Right, then click a theme thumbnail to apply it immediately. Each preview shows that actual mesh with its original palette. A click applies the design and its colors together. **Body** changes the shell color without changing the accent colors; **Restore design colors** restores the palette for the selected half or halves. You can also select the frame directly on the model to open its sidebar options for that half.
 
-| Theme | Body | Contrasting raised details |
+| Theme | Body | Flush inlays |
 |---|---|---|
 | **Handheld** | Warm cream | Charcoal D-pad, berry buttons, gray speaker bars |
 | **Retro TV** | Walnut brown | Ivory CRT bezel, brass tuning knob, charcoal speaker grille |
@@ -53,33 +53,33 @@ Open **Frame** in the directory, then choose Both halves, Left or Right, then cl
 | **Kintsugi** | Blue glaze | Porcelain shards and gold repair lines |
 | Plain options | Your chosen body color | Smooth, Beveled and Faceted |
 
-The controls are decorative. No logos, extra switches or LEDs are required. All ten styles use the same window, cavity, three magnetic stations and independent display support. Each exports as one closed solid per half. Relief stays within the 24 mm bay, without antennas or side wings.
+The controls are decorative. No logos, extra switches or LEDs are required. All ten styles use the same window, cavity, three magnetic stations and independent display support. Each decorated design includes a closed shell plus complementary color volumes for co-printing. The assembled surface is flush and stays within the 24 mm bay. A fused single-material STL is also included.
 
 | Interface | Nominal dimension |
 |---|---:|
 | Frame envelope | 24 × 56 mm; R2.4 at the shared case corner beside USB, R1.2 at the other corners |
-| Plain top / themed relief top | 16.6 / 17.2 mm above the base datum |
+| Plain and decorated top | Same height; see the [current stack](slim-flush.md) |
 | Structural roof / side wall | 1.2 / 1.2 mm |
 | Glass margin, each side | 0.4 mm |
 | Magnet / steel pin | Ø2 × 3 / Ø2 × 4 mm |
 | Magnetic gap / guide radial clearance | 0.9 / 0.2 mm nominal |
-| Relief height | 0.6 mm; fused into the roof |
+| Inlay depth / minimum backing | 0.4 / 0.8 mm; co-print the aligned volumes |
 
 The frame ends before the thumb key; the **low case and plate continue along the straight flank**. The power switch is recessed inside the side access cut. Key positions remain fixed.
 
 ### Make your own
 
-Open the native source and expand **Construction**. Duplicate a supplied theme, then edit the `Theme_*` boxes/cylinders or the frame section sketches. Preserve the cavity, mounting bosses, screen window and service cuts. The case outline is a native sketch with **21 intentional corners with locally bounded tangent arcs and straight faces parallel to each thumb**; mesh tessellation does not add design corners. Remove only the Block constraints you intend to edit.
+Open the native source and expand **Construction**. Duplicate a supplied theme, then edit the `FlushFrame_*` primitives or the frame section sketches. Preserve the cavity, mounting bosses, screen window and service cuts. The case outline is a native sketch with **21 intentional corners with locally bounded tangent arcs and straight faces parallel to each thumb**; mesh tessellation does not add design corners. Remove only the Block constraints you intend to edit.
 
-Keep decorations within the common envelope. Preserve the magnetic stations at left **(113, 52.8)**, **(133, 52.8)** and **(122.8, 64.7)**, the hidden structural screw reliefs at **(114.5, 65.5)** and **(130.6, 66.5)**, the reset tool opening at **(123, 59.5)**, and the glass window. Right-half coordinates mirror across X=80 mm. Relief adds material above the roof; cutting through it changes the validated wall thickness.
+Keep decorations within the common envelope. Preserve the magnetic stations at left **(113, 52.8)**, **(133, 52.8)** and **(122.8, 64.7)**, the hidden structural screw reliefs at **(114.5, 65.5)** and **(130.6, 66.5)**, the current reset tool opening, and the glass window. Right-half coordinates mirror across X=80 mm. Inlays replace the upper 0.4 mm of roof material. Preserve at least 0.8 mm of backing and the shared outer surface.
 
 Use the viewer’s JSON for the ten supplied shapes. To share a new shape, save your FCStd, export STEP/STL, rebuild the viewer and repeat collision checks; JSON alone cannot carry arbitrary geometry.
 
 ### First print
 
-Start with **one frame in PLA Basic** as a fit sample. Use 0.16 mm layers as a starting point so the 0.6 mm relief is visible; inspect it in the slicer. Face-up protects the visible details but the roof/inside may need supports. PETG HF is an alternative to compare after the fit sample; ABS requires shrinkage compensation from an actual print. No material-specific tolerance has been qualified yet.
+Start with **one frame in PLA Basic** as a fit sample. Keep all material volumes aligned in the slicer and check how its layers resolve the 0.4 mm inlay band. Choose orientation and supports after inspecting the roof and captive insert pockets. PETG HF and ABS remain alternatives to qualify with an actual print.
 
-For contrasting accents, paint raised faces in the slicer if your printer setup supports multiple colors, or paint them after printing. The table above is the color map. STL contains geometry only; it does not retain these colors. GLB preserves the visual materials, and importing the JSON with the current FreeCAD macro applies matching face colors. No multicolor printer accessory is assumed. These are one-piece frames; separate colored inserts and ready-to-print multicolor toolpaths are not included.
+Use the multipart 3MF for multicolor printing, assigning its body, detail, accent and secondary parts to your filaments. The aligned material STLs offer the same geometry. These volumes are for co-printing; they do not include the clearance or retention needed for separately printed press-fit inserts. GLB and the FreeCAD configuration macro preserve the visual palette. Printer profiles and finished toolpaths are not included.
 
 Print capture, magnet temperature, holding force and extraction still require a physical trial. Use the [small coupons and assembly sequence](build.md#magnetic-frame-and-service) first. The reset opening takes a tool. A nominal 12 × 5 mm USB plug and straight insertion corridor clear each theme; cable housings vary.
 

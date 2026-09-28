@@ -1,0 +1,213 @@
+{
+  "scope": "Checker runtime corrections and final read-only native verification. No native geometry or acceptance threshold changed.",
+  "source_path": "mechanical/revI/Flan36.FCStd",
+  "source_before_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "source_after_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "native_unchanged": true,
+  "assigned_native_checks_passed": true,
+  "physical_acceptance": false,
+  "offscreen_startup": {
+    "observed_failure": "SIGSEGV during show/open/recompute startup before finish assertions. The underlying FreeCAD/Qt cause was not established.",
+    "failure_log": {
+      "path": "build/slim-flush/native-finishes-fault.log",
+      "sha256": "30340a8785dc7ee130435e123d3b0976831afd8e2ebaf98267831e5fb77102b6"
+    },
+    "reported_exit_code": 245,
+    "failed_run_accepted": false,
+    "mitigation": "Immediately call G.getMainWindow().hide() after G.showMainWindow(), before opening the native document.",
+    "assertions_changed": false,
+    "hash_provenance": "Pre-hide hashes are reconstructed by reversing only the hide insertion. The rim post-hide/pre-mirror hash was independently captured before the mirror edit and matches the reconstruction.",
+    "owned_checkers": [
+      {
+        "path": "tools/freecad/check_components.py",
+        "reconstructed_pre_hide_sha256": "d878b675f0db033f12044c55dcbc0dd45b6ec513405b74fe58eebc524f443704",
+        "post_hide_pre_mirror_sha256": "f465c128ceafb1ac89dcfa4836276dff0a86e53d6e2046707be67854331b8568",
+        "current_sha256": "f465c128ceafb1ac89dcfa4836276dff0a86e53d6e2046707be67854331b8568"
+      },
+      {
+        "path": "tools/freecad/check_cases.py",
+        "reconstructed_pre_hide_sha256": "658406e8958ebe228ac4fbca273cdc55302cb6b0f6dd783c43a4c1dc787aa13b",
+        "post_hide_pre_mirror_sha256": "3510d10fe2d228fb3bc8fa3a126a0d7b21afd5321ccd652790cf057f46b42a22",
+        "current_sha256": "3510d10fe2d228fb3bc8fa3a126a0d7b21afd5321ccd652790cf057f46b42a22"
+      },
+      {
+        "path": "tools/freecad/check_frame_corner.py",
+        "reconstructed_pre_hide_sha256": "ebcc78104d7c7dacebff8b19f29c7577ccefc2c02b40f14bd51f22d48f3d0a5d",
+        "post_hide_pre_mirror_sha256": "8491f13bad33d8f98c6e3ee010f687d1261bfa287c61b75163b51b826d6ff422",
+        "current_sha256": "8491f13bad33d8f98c6e3ee010f687d1261bfa287c61b75163b51b826d6ff422"
+      },
+      {
+        "path": "tools/freecad/check_revI_rim.py",
+        "reconstructed_pre_hide_sha256": "f3e73e1fb5fb43c278bc1942df32987ed1b4f25e103ac57de9afded5cdad80ab",
+        "post_hide_pre_mirror_sha256": "ae1bc223339fee4bd324debbca0b0fd70de2ad406c0f7020249518e4c2043aeb",
+        "current_sha256": "709f20dead6dc4a2ce959230295e95ac44d9e2910ea3eaa5cd73ce6839f6b5b2"
+      },
+      {
+        "path": "tools/freecad/check_revI_service.py",
+        "reconstructed_pre_hide_sha256": "f75114631e839c400098b24797b95e59fecd716f6ef4c6949017d12d94885a6f",
+        "post_hide_pre_mirror_sha256": "a7db1c455ff39e0e44b3c15bccd84c77f12fb4dde2d7f516e04375d1e1c98e86",
+        "current_sha256": "a7db1c455ff39e0e44b3c15bccd84c77f12fb4dde2d7f516e04375d1e1c98e86"
+      }
+    ]
+  },
+  "exact_mirror": {
+    "reason": "The original transformGeometry-based mirrored case comparison was still executing a Boolean cut when the owned run was terminated after the independent witness passed.",
+    "before_sha256": "ae1bc223339fee4bd324debbca0b0fd70de2ad406c0f7020249518e4c2043aeb",
+    "after_sha256": "709f20dead6dc4a2ce959230295e95ac44d9e2910ea3eaa5cd73ce6839f6b5b2",
+    "replacement": "Replace Matrix reflection plus Shape.transformGeometry with Shape.mirror(Vector(80,0,0), Vector(1,0,0)); preserve analytic surfaces for the same exact X=80 reflection.",
+    "retained_thresholds": {
+      "tray_and_plate_bidirectional_volume_difference_mm3_less_than": 1e-05,
+      "normal_samples": 216,
+      "nominal_rim_mm": 4.75,
+      "normal_length_error_mm_less_than": 2e-05
+    },
+    "original_interrupted_run": {
+      "status": "incomplete, not accepted",
+      "exit_code": 241,
+      "elapsed_seconds": 492.84000070900004,
+      "log": {
+        "path": "build/slim-flush/final-native/check_revI_rim.log",
+        "sha256": "56328f5c5a1972ccb1f90b857a8bae5fd59fc03ce354811132765175dfcd7e6a"
+      }
+    },
+    "successful_native_run": {
+      "exit_code": 0,
+      "elapsed_seconds": 204.025850666,
+      "tray_and_plate_difference_mm3": {
+        "tray": 0.0,
+        "key-plate": 0.0
+      },
+      "all_216_samples_passed": true,
+      "receipt": {
+        "path": "validation/revI-rim-solids.json",
+        "sha256": "871c03baaee131dcf330ffa1cc4d7d3565fa7a947a57e04214fcd53eb343f48f"
+      }
+    },
+    "witness_description": "Asymmetric planar base, off-center cylindrical bore and a taller cylindrical tower. Expected reflected geometry is independently constructed from dimensions rather than transformed.",
+    "witness_tolerances": {
+      "bounds_mm": 1e-08,
+      "analytic_volume_mm3": 1e-08,
+      "bidirectional_volume_difference_mm3": 1e-08
+    },
+    "witness_result": {
+      "passed": true,
+      "mapping": "x -> 160-x; y,z unchanged",
+      "bounds_mm": [
+        145.0,
+        23.0,
+        5.0,
+        149.0,
+        26.0,
+        12.0
+      ],
+      "volume_mm3": 45.84977690571688,
+      "analytic_volume_mm3": 45.849776905717015,
+      "bidirectional_difference_mm3": 0.0,
+      "surface_types": [
+        "Cylinder",
+        "Cylinder",
+        "Plane",
+        "Plane",
+        "Plane",
+        "Plane",
+        "Plane",
+        "Plane",
+        "Plane",
+        "Plane"
+      ],
+      "original_witness_unchanged": true
+    },
+    "witness_python": "import json, math, os, sys\nimport FreeCAD as A\nimport Part\n\nwitness = Part.makeBox(4, 3, 2, A.Vector(11, 23, 5)).fuse(\n    Part.makeCylinder(1.2, 5, A.Vector(13, 24.5, 7))\n).cut(Part.makeCylinder(.35, 2, A.Vector(11.9, 23.8, 5)))\noriginal = witness.exportBrepToString()\nreflected = witness.mirror(A.Vector(80, 0, 0), A.Vector(1, 0, 0))\nexpected = Part.makeBox(4, 3, 2, A.Vector(145, 23, 5)).fuse(\n    Part.makeCylinder(1.2, 5, A.Vector(147, 24.5, 7))\n).cut(Part.makeCylinder(.35, 2, A.Vector(148.1, 23.8, 5)))\nbounds = lambda s: [getattr(s.BoundBox, k) for k in\n                   ('XMin', 'YMin', 'ZMin', 'XMax', 'YMax', 'ZMax')]\nanalytic_volume = 24 + math.pi * 1.2**2 * 5 - math.pi * .35**2 * 2\nerror = reflected.cut(expected).Volume + expected.cut(reflected).Volume\nsurface_types = sorted(type(f.Surface).__name__ for f in reflected.Faces)\nassert reflected.isValid() and len(reflected.Solids) == 1\nassert witness.exportBrepToString() == original\nassert max(abs(a-b) for a, b in zip(bounds(reflected), [145, 23, 5, 149, 26, 12])) < 1e-8\nassert abs(reflected.Volume - analytic_volume) < 1e-8\nassert error < 1e-8, error\nassert surface_types == ['Cylinder'] * 2 + ['Plane'] * 8\nprint(json.dumps({'passed': True, 'mapping': 'x -> 160-x; y,z unchanged',\n                  'bounds_mm': bounds(reflected), 'volume_mm3': reflected.Volume,\n                  'analytic_volume_mm3': analytic_volume,\n                  'bidirectional_difference_mm3': error,\n                  'surface_types': surface_types,\n                  'original_witness_unchanged': True}), file=sys.__stdout__, flush=True)\nif os.environ.get('FILO_FREECAD_SUBPROCESS') == '1':\n    os._exit(0)\n",
+    "witness_python_sha256": "dc7aa38c4263dc379f4db7c0638942595443009ef2e6a0c257722191c4e403ec",
+    "reproduce_from_repository_root": [
+      "python3 -c 'import json; from pathlib import Path; r=json.loads(Path(\"validation/revI-native-runtime-correction.json\").read_text()); p=Path(\"build/slim-flush/final-native/runtime-witness-reproduction.py\"); p.parent.mkdir(parents=True,exist_ok=True); p.write_text(r[\"exact_mirror\"][\"witness_python\"])'",
+      "python3 tools/freecad/run_macos.py build/slim-flush/final-native/runtime-witness-reproduction.py"
+    ]
+  },
+  "offscreen_finish_capture": {
+    "observed_failure": "A subsequent finish run reached the optional saveImage call after style, custom color, 17.2 mm roof and save/reopen assertions, then aborted because Qt offscreen could not create an OpenGL context.",
+    "failure_log": {
+      "path": "build/slim-flush/native-finishes-corrected.log",
+      "sha256": "ccf148bc7927f8a6ceb35a801add7fc46a02c0a7cbd5ca649d8deb3902ec2788"
+    },
+    "reported_exit_code": 250,
+    "failed_run_accepted": false,
+    "mitigation": "Root guards only optional saveImage when QT_QPA_PLATFORM is offscreen; geometry, material and save/reopen assertions remain mandatory.",
+    "native_screenshot_rendered": false,
+    "final_finish_acceptance": "Owned separately by root; not inferred from the aborted run or certified by this runtime receipt.",
+    "rendered_qa": "Separate VTK and browser QA; no native offscreen screenshot claimed."
+  },
+  "final_assigned_checks": [
+    {
+      "command": "python3 tools/freecad/run_macos.py tools/freecad/export_pcb_components.py",
+      "exit_code": 0,
+      "native_unchanged": true,
+      "receipts": [
+        {
+          "path": "validation/revI-pcb-component-models.json",
+          "sha256": "57d3f6ddfac33b3ea71c2017cc4e6861311ef83cd47bfe692893c359e06de8d9"
+        },
+        {
+          "path": "validation/revI-bottom-reset-step.json",
+          "sha256": "eab30c789367e218477e36babb2016bb7b1ffb5d18b3a10e0eec3cfa523ce8d1"
+        }
+      ]
+    },
+    {
+      "command": "python3 tools/freecad/run_macos.py tools/freecad/check_components.py",
+      "exit_code": 0,
+      "native_unchanged": true,
+      "receipts": [
+        {
+          "path": "validation/revI-components.json",
+          "sha256": "66b350e32bd5d3167135c05c01da33e31282572a4e706ee634a913e030763915"
+        }
+      ]
+    },
+    {
+      "command": "python3 tools/freecad/run_macos.py tools/freecad/check_cases.py",
+      "exit_code": 0,
+      "native_unchanged": true,
+      "receipts": [
+        {
+          "path": "validation/revI-cases.json",
+          "sha256": "1ac3dd30b8bdd49fa8b91554ab6fcb78b0f895fd22f63f697e0b71069ab36241"
+        }
+      ]
+    },
+    {
+      "command": "python3 tools/freecad/run_macos.py tools/freecad/check_frame_corner.py",
+      "exit_code": 0,
+      "native_unchanged": true,
+      "receipts": [
+        {
+          "path": "validation/revI-frame-corner.json",
+          "sha256": "1002b774783f1365c63cc572bac35bd5bfda32f7adbb2dbad1a9a6024d1dbb55"
+        }
+      ]
+    },
+    {
+      "command": "python3 tools/freecad/run_macos.py tools/freecad/check_revI_rim.py",
+      "exit_code": 0,
+      "native_unchanged": true,
+      "receipts": [
+        {
+          "path": "validation/revI-rim-solids.json",
+          "sha256": "871c03baaee131dcf330ffa1cc4d7d3565fa7a947a57e04214fcd53eb343f48f"
+        }
+      ]
+    },
+    {
+      "command": "python3 tools/freecad/run_macos.py tools/freecad/check_revI_service.py",
+      "exit_code": 0,
+      "native_unchanged": true,
+      "receipts": [
+        {
+          "path": "validation/revI-service.json",
+          "sha256": "eb4bd0b0e4629e4bce7fc98302991285b72c6b3547e602487d453e5e684f8d64"
+        }
+      ]
+    }
+  ],
+  "reproducibility": "Ignored logs and witness drivers are diagnostic artifacts. The embedded witness and listed committed checker commands reproduce the supported checks without modifying the native source."
+}

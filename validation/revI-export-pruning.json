@@ -1,0 +1,157 @@
+{
+  "schema": "flan36-export-pruning-audit-1",
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "exporter_sha256": "05e9352fd6003c04869729cb88caf10aea687f7370f85e9b1b28ac2022f80475",
+  "checker_sha256": "cf670129ad28a94c4929d2ea6419f31af5f596cb8e1a249bd499af6b591f25a5",
+  "physical_acceptance": false,
+  "native_opened": false,
+  "native_recomputed": false,
+  "native_saved": false,
+  "source_file": "Flan36.FCStd",
+  "mesh_settings": {
+    "linear_deflection_mm": 0.03,
+    "angular_deflection": 0.12,
+    "relative": false
+  },
+  "method": "Replay frozen exporter logical pair categories using saved local BReps and verified identity AppLinks. Compare parent and solid-child selections from ordinary and analytic bounds. Identical selections imply identical Boolean operands; any changed selection is evaluated with both exact Boolean operands. Analytic bounds are cached by complete immutable BRep string.",
+  "halves": {
+    "left": {
+      "active_count": 32,
+      "frame_count": 10,
+      "case_piece_count": 6,
+      "battery_profile_count": 2,
+      "logical_pair_counts": {
+        "active": 496,
+        "battery": 62,
+        "frame": 310,
+        "frame-usb": 10,
+        "case": 180,
+        "case-frame": 60,
+        "case-base-plate": 3
+      },
+      "logical_pairs_checked": 1121,
+      "gate_selection_differences": [],
+      "missed_intersections": [],
+      "wire_bounds": [
+        {
+          "object": "L_WireStudy0",
+          "ordinary_bounds_mm": [
+            115.0,
+            -59.5,
+            3.900033569456918,
+            130.89986572968505,
+            -22.065398456565177,
+            7.499966430543083
+          ],
+          "analytic_bounds_mm": [
+            114.9999999,
+            -59.50000010000001,
+            3.8999999000000005,
+            130.9000001,
+            -22.065264086250227,
+            7.5000001
+          ]
+        },
+        {
+          "object": "L_WireStudy1",
+          "ordinary_bounds_mm": [
+            115.0,
+            -57.5,
+            4.700033569456918,
+            130.89986572968505,
+            -20.665398456565207,
+            8.299966430543082
+          ],
+          "analytic_bounds_mm": [
+            114.9999999,
+            -57.50000010000001,
+            4.6999999,
+            130.9000001,
+            -20.66526408625026,
+            8.3000001
+          ]
+        }
+      ]
+    },
+    "right": {
+      "active_count": 32,
+      "frame_count": 10,
+      "case_piece_count": 6,
+      "battery_profile_count": 2,
+      "logical_pair_counts": {
+        "active": 496,
+        "battery": 62,
+        "frame": 310,
+        "frame-usb": 10,
+        "case": 180,
+        "case-frame": 60,
+        "case-base-plate": 3
+      },
+      "logical_pairs_checked": 1121,
+      "gate_selection_differences": [],
+      "missed_intersections": [],
+      "wire_bounds": [
+        {
+          "object": "R_WireStudy0",
+          "ordinary_bounds_mm": [
+            29.10000000000001,
+            -59.499865729685055,
+            3.900033569456918,
+            44.99986572968506,
+            -22.06526418625024,
+            7.499966430543083
+          ],
+          "analytic_bounds_mm": [
+            29.0999999,
+            -59.5000001,
+            3.8999999000000005,
+            45.00000010000001,
+            -22.065264086250234,
+            7.5000001
+          ]
+        },
+        {
+          "object": "R_WireStudy1",
+          "ordinary_bounds_mm": [
+            29.10000000000001,
+            -57.499865729685055,
+            4.700033569456918,
+            44.99986572968506,
+            -20.665264186250262,
+            8.299966430543082
+          ],
+          "analytic_bounds_mm": [
+            29.0999999,
+            -57.5000001,
+            4.6999999,
+            45.00000010000001,
+            -20.665264086250257,
+            8.3000001
+          ]
+        }
+      ]
+    }
+  },
+  "source_unchanged": true,
+  "exporter_unchanged": true,
+  "seconds": 121.34941704105586,
+  "analytic_cache": {
+    "hits": 26,
+    "misses": 388
+  },
+  "verified_identity_links": {
+    "L_ActiveTray": "L_Case_solid_base",
+    "L_ActivePlate": "L_Case_solid_plate",
+    "L_ActiveBattery": "L_Cell_adafruit_1570",
+    "L_ActiveFrame": "L_Frame_bevel_HeadRelief5",
+    "L_ActiveBatteryLead0": "L_WireStudy0",
+    "L_ActiveBatteryLead1": "L_WireStudy1",
+    "R_ActiveTray": "R_Case_solid_base",
+    "R_ActivePlate": "R_Case_solid_plate",
+    "R_ActiveBattery": "R_Cell_adafruit_1570",
+    "R_ActiveFrame": "R_Frame_bevel_HeadRelief5",
+    "R_ActiveBatteryLead0": "R_WireStudy0",
+    "R_ActiveBatteryLead1": "R_WireStudy1"
+  },
+  "passed": true
+}

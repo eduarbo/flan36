@@ -13,15 +13,15 @@ Keep Piantor’s angles, a thin key area and serviceable electronics.
 
 ## The stack
 
-The insulating saddle stays below the PCB. The cell and a narrow removable cage pass through a **12.5 × 33.6 mm opening**. One cavity accepts the nominal Adafruit 1570 and 301230 envelopes; select either in the viewer or FreeCAD. The model reserves two 105 mm lead paths, but actual terminal positions, wire diameter and strain relief still need measurement. [Battery dimensions and sources](parts.md#battery).
+The insulating saddle stays below the PCB. The cell and a narrow removable cage pass through a **12.5 × 34.4 mm opening with a local rear lead notch**. One cavity accepts the nominal Adafruit 1570 and 301230 envelopes; select either in the viewer or FreeCAD. Each battery profile has two continuous nominal 105 mm lead paths with its own cell-end transition. Supplier terminal positions, wire diameter and strain relief still need measurement. [Battery dimensions and sources](parts.md#battery).
 
-The case is **116.75 × 94.57 mm per half**. Five stepped column tops, an orthogonal pinky foot and a shallow rounded recess follow the reference. Straight lower faces remain parallel to each thumb key, joined by **local tangent arcs**. The outside thumb flank stops at the LCD panel edge. The 21 control corners use locally bounded radii, including R2.4 finger corners where space permits. Straight exposed faces retain their **4.75 mm** copper allowance. Fasteners stay within existing material. Both halves are exact mirrors; all 36 switch centers and angles remain unchanged.
+The case is **116.75 × 94.57 mm per half**. Five stepped column tops, an orthogonal pinky foot and a shallow rounded recess follow the reference. Straight lower faces remain parallel to each thumb key, joined by **local tangent arcs**. The outside thumb flank stops at the LCD panel edge. The 21 control corners use locally bounded radii, including R2.4 finger corners where space permits. Checked exposed faces retain a **4.75 mm** margin from the switch opening to the plate edge. Fasteners stay within existing material. Both halves are exact mirrors; all 36 switch centers and angles remain unchanged.
 
 Choose [Solid, Color rim or Terrace](cases.md). These are different base/plate geometries, compatible with the same stack and ten display frames. The printed display cover can be omitted while retaining the display and structural supports.
 
 ![Measured exterior rim](images/revI-rim.png)
 
-The key plate stays at **7.6 mm**, plain frames at **16.6 mm**, themed relief at **17.2 mm**. The electronics bay remains **24 mm wide**; illustrative feet add 1.2 mm. The frame ends at Y=67 mm while the low base/plate continue to the thumb. The power-switch reference is now recessed 0.1 mm inside the straight X=135 mm flank.
+The key plate stays at **7.6 mm**. Plain and decorated frames share one roof height, with no raised decoration. See [current stack dimensions](slim-flush.md). The electronics bay remains **24 mm wide**; illustrative feet add 1.2 mm. The frame ends at Y=67 mm while the low base/plate continue to the thumb. The power-switch reference is now recessed 0.1 mm inside the straight X=135 mm flank.
 
 The frame now shares the case's **R2.4 north/outside corner** beside USB, including its tangency points. The former independent R1.2 frame corner projected about **0.497 mm** beyond that curve. The cavity, plate clearance and beveled lips follow the corrected corner; the case and PCB outlines stay unchanged.
 
@@ -29,35 +29,11 @@ The frame now shares the case's **R2.4 north/outside corner** beside USB, includ
 
 ### Can the stack be thinner?
 
-**The current height is not a proven minimum.** The completed
-[slim support study](slim-mount-study.md) supersedes the preliminary left-half
-height check: it covers both halves, all 10 frames and both battery profiles.
-Dimensions below start at the case bottom, excluding feet.
+The [slim, flush redesign](slim-flush.md) lowers the display and replaces the tall generic battery-connector reserve with a dimensioned side-entry JST PH pair. It also reroutes the leads and moves reset to a recessed underside access.
 
-| Configuration | Plain cover | Decorated cover | Status |
-| --- | ---: | ---: | --- |
-| Reference | 16.6 mm | 17.2 mm | Static modeled checks clear; retained |
-| Lower display candidate | 15.6 mm | 16.2 mm | Static modeled checks clear; experimental |
-| Rejected limit | 14.8 mm | 15.4 mm | Roof intersects the JST connector by 0.3 mm |
+All decorative colors finish at the same roof height. The selected KLP Lamé caps still reach **17.87 mm**, excluding feet; this update lowers the electronics enclosure rather than the keycap tops. Exact connector engagement, printed fits and real cable behavior remain to be measured.
 
-The lower candidate moves the display bottom from 14.2 to **12.4 mm**, leaving
-**0.82 mm** between the modeled MCU and display and **0.5 mm** above the JST.
-Actual header engagement and electrical continuity remain unqualified. With the
-selected KLP Lamé keycaps, total height remains **17.87 mm** in all three
-recipes; lowering the cover does not lower the highest point.
-
-All three recipes have a service conflict: lifting the display and sled together
-crosses the modeled battery leads at **0.5–2 mm**. Lead routing or the removal
-sequence must change and be rechecked before physical qualification. The native
-source retains the reference height.
-
-Fusing the three washers into each plate removes **six loose parts** across the
-keyboard while preserving their seats. Optional base/saddle fusion removes two
-more, at the cost of independent saddle replacement. Both changes have **zero
-height reduction**. [Study geometry and full findings](slim-mount-study.md) include
-the rejected limit for comparison; printed fit remains unqualified. The
-[earlier height report](../validation/revI-stack-study.json) remains as historical
-evidence.
+The [historical support study](slim-mount-study.md) retains its original rejected candidates. Integrating washers or saddles reduces loose parts but gave **zero height reduction**. The current design keeps these supports independently replaceable.
 
 ### Magnetic frame, independent structure
 

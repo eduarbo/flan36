@@ -1,10 +1,8 @@
-"""Append or refresh the four owned roof variants in a current revI FCStd.
+"""Historical additive-roof installer; its command is retired.
 
-Use FreeCAD's offscreen GUI runtime to preserve GuiDocument and face colors:
-  python3 tools/freecad/run_macos.py tools/freecad/install_extra_frames.py \
-      --source mechanical/revI/Flan36.FCStd --output /tmp/Flan36-extra.FCStd \
-      --report /tmp/Flan36-extra-report.json
-No original model is rebuilt. No current configuration is changed.
+The current seven-style flush/stack recipe intentionally changes the original
+frame geometry and therefore cannot satisfy this tool's append-only contract.
+Use install_slim_flush.py. Snapshot helpers remain available to existing imports.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 import argparse
@@ -220,6 +218,7 @@ def script_args():
 
 
 def main():
+    raise SystemExit('Historical additive-roof installer retired. Use tools/freecad/install_slim_flush.py for the current slim, flush-material recipe. To reproduce the old append-only study, use its recorded historical commit.')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)

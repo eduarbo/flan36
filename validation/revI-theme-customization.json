@@ -1,11 +1,13 @@
 {
-  "viewer_sha256": "5221cbd4002d56c34921039e1aab2c1ab331290734104fc0d9b071bf7cd4958e",
-  "target": "public URL",
+  "checker_sha256": "9df6655c37595e21f0cadb010867c961c2c999b634251debfa551152810234dd",
+  "viewer_sha256": "201550cb807cf7e1fb946c59ebce4344e6ce2be2cfb61f17454daa57778a1a57",
+  "target": "local file",
   "themes": 16,
   "preview_images_distinct": 16,
   "linked_colors_bidirectional": true,
   "mixed_halves": true,
-  "preserve_shapes_cover_and_keycaps": true,
+  "preserve_shapes_cover_and_keycap_geometry": true,
+  "global_keycap_colors": true,
   "json_and_reload_roundtrip": true,
   "invalid_import_atomic": true,
   "storage_failure_recoverable": true,
@@ -16,5 +18,14 @@
   ],
   "individual_selection_ignored_by_printkit": true,
   "custom_case_and_four_frame_colors_in_glb": true,
+  "new_frame_print_kits": [
+    "handheld",
+    "tv",
+    "cyberpunk",
+    "cartridge",
+    "arcade",
+    "mecha",
+    "kintsugi"
+  ],
   "runtime_errors": []
 }

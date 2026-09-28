@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-09-22",
-  "document_sha256": "5381a691e07329f5dc3a6036c3e04fa82a8a89fa35391dead5dbd0ab883ccf7d",
+  "checked_at": "2026-09-27",
+  "document_sha256": "f9393948d0e6fae5a343751a242417d158ca1c22798af982765f66c6660d7349",
   "photo_redistribution": false,
   "links": [
     {
@@ -287,10 +287,5 @@
       "content_type": "application/pdf",
       "resolved_url": "https://www.supermagnete.fr/data_sheet_S-02-03-N.pdf"
     }
-  ],
-  "presentation_change": {
-    "reason": "Filo36 renamed Flan36; exact external URL set unchanged",
-    "previous_document_sha256": "51c807d1bdfed2d45f3262eb20d2fd32f47ee7a750991f22a74a58732f023fc9",
-    "network_observations_reused": true
-  }
+  ]
 }

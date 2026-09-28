@@ -1,4 +1,4 @@
-"""Shared revH painted-face palette; no new geometry or print toolpaths.
+"""Shared palette for solid-owned flush co-print materials.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 import json
@@ -6,16 +6,17 @@ from pathlib import Path
 FINISHES=json.loads((Path(__file__).resolve().parents[1]/'design/frame-finishes.json').read_text())
 
 EXTENSIONS=json.loads((Path(__file__).resolve().parents[1]/'design/frame-extensions.json').read_text())
-FINISHES['styles'].update({k:{f:v[f] for f in ['colors','labels','zones']} for k,v in EXTENSIONS['styles'].items()})
+FINISHES['styles'].update({k:{f:v[f] for f in ['colors','labels','features']} for k,v in EXTENSIONS['styles'].items()})
 
-def role(style,side,x,y,height,roof=None):
-    theme=FINISHES['styles'].get(style)
-    if not theme or height<=(FINISHES['roof_mm'] if roof is None else roof)+1e-4:return 'body'
-    if side=='right':x=160-x
-    for zone in theme['zones']:
-        x0,y0,x1,y1=zone['xy']
-        if x0<=x<=x1 and y0<=y<=y1:return zone['role']
-    return 'detail'
+def role(style,side,x,y,height,roof=None,material_role=None):
+    """Compatibility adapter. Geometry consumers must pass the owning solid role.
+
+    Plain/legacy callers receive body rather than inventing painted zones. Native
+    frame consumers use FrameFaceRoles; exports use MaterialParts/ColorRole.
+    """
+    if material_role is not None and material_role not in FINISHES['roles']:
+        raise ValueError('Unknown frame material role: '+str(material_role))
+    return material_role or 'body'
 
 def palette(style,body=None,accents=None):
     result=dict(FINISHES['styles'].get(style,{}).get('colors',{'body':'#304d4e'}))

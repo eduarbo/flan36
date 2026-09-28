@@ -1,0 +1,441 @@
+{
+  "schema": "flan36-bottom-reset-step-1",
+  "passed": true,
+  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "checker_sha256": "a7d0fefa78ecef7c88e7d35490ded87d1865fb0dac056ad3bf13a41513fabd4a",
+  "exporter_sha256": "7ff59dbebdea33a2c3939c233cf3f361aba46612daa523eb3166197084c1c98b",
+  "calibration": {
+    "schema": "flan36-kicad-step-calibration-1",
+    "passed": true,
+    "checker_sha256": "a7d0fefa78ecef7c88e7d35490ded87d1865fb0dac056ad3bf13a41513fabd4a",
+    "source_step_sha256": "23b1770b921df25f489d37b5636ad4a292f966c00638da7b5cb4b7f97d11c639",
+    "kicad_version": "10.0.6",
+    "board_settings_sha256": "ec6c168f4411ec8fa9ab8d47dd25954ce53728404fed0e7a9bc7f29dab38c30d",
+    "cases": {
+      "front0": {
+        "layer": "F.Cu",
+        "angle_deg": 0,
+        "model_origin_z_mm": 1.5949999999999993,
+        "difference_mm3": 0.0,
+        "step_sha256": "5f2f52d65828ff056b7e76f85c723b14072be904e75fa25bd5ea6d1bf36a4b55",
+        "step": "build/slim-flush/pcb-step-registration/calibration/front0.step"
+      },
+      "back0": {
+        "layer": "B.Cu",
+        "angle_deg": 0,
+        "model_origin_z_mm": -0.08499999999999897,
+        "difference_mm3": 0.0,
+        "step_sha256": "4b536b46330ac18acd4a23e4a7028c6b5e65de112bf2e4f3e3f20b3b1e4ec3be",
+        "step": "build/slim-flush/pcb-step-registration/calibration/back0.step"
+      },
+      "back90": {
+        "layer": "B.Cu",
+        "angle_deg": 90,
+        "model_origin_z_mm": -0.08499999999999952,
+        "difference_mm3": 0.0,
+        "step_sha256": "33522a679b5cffccb9cd8765f010b8e84c5c3056cb20b925781871ba2ba2cb72",
+        "step": "build/slim-flush/pcb-step-registration/calibration/back90.step"
+      },
+      "back180": {
+        "layer": "B.Cu",
+        "angle_deg": 180,
+        "model_origin_z_mm": -0.08499999999999897,
+        "difference_mm3": 0.0,
+        "step_sha256": "a69eddff533c699f221f6be092f1f74678b31186f1aa11614c5d607f634667b4",
+        "step": "build/slim-flush/pcb-step-registration/calibration/back180.step"
+      }
+    },
+    "corrected_independent_cli_witness": {
+      "front0": {
+        "difference_mm3": 0.0,
+        "step_sha256": "1a6372c29862695bbd0ff8c29e30e8e0bdd63014f758cda77654086fe64d2eea",
+        "step": "build/slim-flush/pcb-step-registration/calibration/front0-corrected.step"
+      },
+      "back90": {
+        "difference_mm3": 0.0,
+        "step_sha256": "38be5a9c79e965967fc2183f226e94358098835732d5861261ef145352d673ec",
+        "step": "build/slim-flush/pcb-step-registration/calibration/back90-corrected.step"
+      }
+    },
+    "bottom_rotation": "Rz(footprint angle) * Rx(180 degrees)",
+    "board_dielectric_z_mm": [
+      0.0,
+      1.51
+    ],
+    "native_board_envelope_z_mm": [
+      3.8,
+      5.4
+    ],
+    "dielectric_vs_native_thickness_difference_mm": 0.09000000000000052,
+    "kicad_to_native_z_mm": 3.8449999999999998,
+    "local_z_correction_mm": {
+      "F.Cu": -0.0399999999999987,
+      "B.Cu": -0.03999999999999915
+    },
+    "datum_policy": "One board-midplane registration. Local component Z compensation cancels measured KiCad model standoff against the simplified native total-board envelope. Dielectric-only body is not asserted equal to that envelope.",
+    "physical_acceptance": false
+  },
+  "halves": {
+    "left": {
+      "pcb_sha256": "d9227ea364eb2c6fa229a68fb802c291700d9eb4cbd0d6db0e99595af8b321e3",
+      "reset_layer": "B.Cu",
+      "layer": "B.Cu",
+      "native_placement_difference_mm3": 0.0,
+      "actual_kicad_export_reimported": true,
+      "step_path": "build/slim-flush/pcb-step-registration/actual/left-reset.step",
+      "step_sha256": "45502c68557bfbf83295556329d43db65da740cdc21e5ae87870cc0a33914db1",
+      "local_model_sha256": "e2cc3fce3e5285abeac184be1363e591d110ea7acef17a584d5386094a28cd56",
+      "native_bounds_mm": [
+        115.8,
+        -62.09999999998446,
+        2.259999999999999,
+        122.2,
+        -56.90000000001554,
+        3.799999999999999
+      ],
+      "registered_kicad_bounds_mm": [
+        115.8,
+        -62.09999999998446,
+        2.2599999999999993,
+        122.2,
+        -56.90000000001554,
+        3.8000000000000003
+      ],
+      "components": {
+        "U1": {
+          "layer": "F.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/left-mcu.step",
+          "step_sha256": "c16e261bcf30becd9245ddc63d3db13ac35be5fabe843894f3125429096501a2",
+          "local_model_sha256": "2f7ec25940f2f0a9bf03ef1a0d3779ee7ae9eac94b2535eddc73137139ea46dc",
+          "native_bounds_mm": [
+            113.91,
+            -46.7,
+            7.700000000000001,
+            131.69,
+            -12.075999999999999,
+            10.900000000000002
+          ],
+          "registered_kicad_bounds_mm": [
+            113.91,
+            -46.7,
+            7.699999999999999,
+            131.69,
+            -12.075999999999999,
+            10.899999999999999
+          ]
+        },
+        "J2": {
+          "layer": "F.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/left-display.step",
+          "step_sha256": "d802934f8ef4fe3f19570ee4d0f73d23b7f9b04eafabfecbf53cc9038a0c46a2",
+          "local_model_sha256": "9156e0c0ad36052d92c7d3c45bcadfb7e7fe2ab88775bad6893082fff479c0bb",
+          "native_bounds_mm": [
+            115.8,
+            -52.3,
+            2.0,
+            129.8,
+            -16.0,
+            14.3
+          ],
+          "registered_kicad_bounds_mm": [
+            115.8,
+            -52.3,
+            1.9999999999999996,
+            129.8,
+            -16.0,
+            14.299999999999999
+          ],
+          "native_components": {
+            "left-display": {
+              "native_object": "L_NiceView",
+              "solid_count": 14,
+              "native_placement_difference_mm3": 0.0
+            },
+            "left-display-socket": {
+              "native_object": "L_SlimDisplaySocket",
+              "solid_count": 6,
+              "native_placement_difference_mm3": 0.0
+            }
+          },
+          "retained_display_socket": {
+            "nominal_housing_height_mm": 5.0,
+            "measured_native_housing_height_mm": 5.0,
+            "native_housing_dimensions_mm": [
+              13.200000000000003,
+              3.0,
+              5.0
+            ],
+            "native_housing_bounds_mm": [
+              116.2,
+              -52.3,
+              5.4,
+              129.4,
+              -49.3,
+              10.4
+            ],
+            "physical_acceptance": false,
+            "height_source": "https://typeractive.xyz/products/5-pin-sockets",
+            "limitation": "Supplier states 5 mm socket height plus 2 mm display pin. Socket lateral body dimensions, contacts, engagement and tolerances remain nominal assumptions; geometry readback is not physical qualification."
+          }
+        },
+        "J1": {
+          "layer": "F.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/left-jst.step",
+          "step_sha256": "d7032004257c6b99a20d76198d1d42fc8e6c190601fe69d0a0cdb3aded0885d4",
+          "local_model_sha256": "7fbd3d396560ebf81339a1c670d09a17f3c6fca58576ae18192b641f3f4ef7ee",
+          "native_bounds_mm": [
+            117.19999999999999,
+            -61.14999999999999,
+            2.0,
+            126.79999999999998,
+            -55.249999999999986,
+            10.2
+          ],
+          "registered_kicad_bounds_mm": [
+            117.2,
+            -61.150000000000006,
+            1.9999999999999996,
+            126.8,
+            -55.25,
+            10.2
+          ]
+        },
+        "SW1": {
+          "layer": "F.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/left-slider.step",
+          "step_sha256": "8fa240177713fee40297bdfd7960a3c9dee317c3c3286452739e42e1200d3df7",
+          "local_model_sha256": "e5777cc2d636ad4de0a88954f328c7ecf6d8a74d65b01b92ad89325af4aee181",
+          "native_bounds_mm": [
+            129.02999978434468,
+            -63.5,
+            4.899999999999955,
+            134.03,
+            -55.8,
+            6.900000000000091
+          ],
+          "registered_kicad_bounds_mm": [
+            129.02999978434468,
+            -63.5,
+            4.899999999999954,
+            134.03,
+            -55.8,
+            6.900000000000089
+          ]
+        },
+        "SW2": {
+          "layer": "B.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/left-reset.step",
+          "step_sha256": "45502c68557bfbf83295556329d43db65da740cdc21e5ae87870cc0a33914db1",
+          "local_model_sha256": "e2cc3fce3e5285abeac184be1363e591d110ea7acef17a584d5386094a28cd56",
+          "native_bounds_mm": [
+            115.8,
+            -62.09999999998446,
+            2.259999999999999,
+            122.2,
+            -56.90000000001554,
+            3.799999999999999
+          ],
+          "registered_kicad_bounds_mm": [
+            115.8,
+            -62.09999999998446,
+            2.2599999999999993,
+            122.2,
+            -56.90000000001554,
+            3.8000000000000003
+          ]
+        }
+      }
+    },
+    "right": {
+      "pcb_sha256": "dc71d07b61b01b7d1a4b8680f66f0ee17e075bf614d5ed7cc8f2d8ed98ebf290",
+      "reset_layer": "B.Cu",
+      "layer": "B.Cu",
+      "native_placement_difference_mm3": 0.0,
+      "actual_kicad_export_reimported": true,
+      "step_path": "build/slim-flush/pcb-step-registration/actual/right-reset.step",
+      "step_sha256": "cd50361d3b7977fc83fe97de48817d5a4fff2caf0bc6c1c2a2c08930aa905c0d",
+      "local_model_sha256": "80b393b78f60ab4b4a3d80d3e471bba1efdc3b5c7b9aa5743606b11bd6f40ca2",
+      "native_bounds_mm": [
+        37.8,
+        -62.09999999998446,
+        2.259999999999999,
+        44.2,
+        -56.90000000001554,
+        3.799999999999999
+      ],
+      "registered_kicad_bounds_mm": [
+        37.8,
+        -62.09999999998446,
+        2.2599999999999993,
+        44.2,
+        -56.90000000001554,
+        3.8000000000000003
+      ],
+      "components": {
+        "U1": {
+          "layer": "F.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/right-mcu.step",
+          "step_sha256": "ff59eb37564b44248de20c99b1ecf3560ad5614328bd8aaab154acb96d469574",
+          "local_model_sha256": "ee8e8a2471dda69786b6b5499defa01319a456bd662d65bce6644400e75818b4",
+          "native_bounds_mm": [
+            28.310000000000002,
+            -46.7,
+            7.700000000000001,
+            46.09,
+            -12.075999999999999,
+            10.900000000000002
+          ],
+          "registered_kicad_bounds_mm": [
+            28.310000000000002,
+            -46.7,
+            7.699999999999999,
+            46.09,
+            -12.075999999999999,
+            10.899999999999999
+          ]
+        },
+        "J2": {
+          "layer": "F.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/right-display.step",
+          "step_sha256": "10e6a9b5dedd6cd6a815855ebd3ae1cb765af5bb3bf7fd2b0d3c05c55faa432c",
+          "local_model_sha256": "e8362e259c5be83644151731f5765fee160c8a6814c95228f65c86e5af54bc4c",
+          "native_bounds_mm": [
+            30.200000000000003,
+            -52.3,
+            2.0,
+            44.2,
+            -16.0,
+            14.3
+          ],
+          "registered_kicad_bounds_mm": [
+            30.199999999999996,
+            -52.3,
+            1.9999999999999996,
+            44.199999999999996,
+            -16.0,
+            14.299999999999999
+          ],
+          "native_components": {
+            "right-display": {
+              "native_object": "R_NiceView",
+              "solid_count": 14,
+              "native_placement_difference_mm3": 0.0
+            },
+            "right-display-socket": {
+              "native_object": "R_SlimDisplaySocket",
+              "solid_count": 6,
+              "native_placement_difference_mm3": 0.0
+            }
+          },
+          "retained_display_socket": {
+            "nominal_housing_height_mm": 5.0,
+            "measured_native_housing_height_mm": 5.0,
+            "native_housing_dimensions_mm": [
+              13.199999999999996,
+              3.0,
+              5.0
+            ],
+            "native_housing_bounds_mm": [
+              30.6,
+              -52.3,
+              5.4,
+              43.8,
+              -49.3,
+              10.4
+            ],
+            "physical_acceptance": false,
+            "height_source": "https://typeractive.xyz/products/5-pin-sockets",
+            "limitation": "Supplier states 5 mm socket height plus 2 mm display pin. Socket lateral body dimensions, contacts, engagement and tolerances remain nominal assumptions; geometry readback is not physical qualification."
+          }
+        },
+        "J1": {
+          "layer": "F.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/right-jst.step",
+          "step_sha256": "4ba83888e79371471382ed56c60dfba0f16f57a18ea4941372c34e3df2f8d434",
+          "local_model_sha256": "73dc102a096d13321b273fd6ab4c1464e28bbe21ab0411fdceb4310e5a89da85",
+          "native_bounds_mm": [
+            33.2,
+            -61.15000000000001,
+            2.0,
+            42.800000000000004,
+            -55.250000000000014,
+            10.2
+          ],
+          "registered_kicad_bounds_mm": [
+            33.199999999999996,
+            -61.150000000000006,
+            1.9999999999999996,
+            42.8,
+            -55.25,
+            10.2
+          ]
+        },
+        "SW1": {
+          "layer": "F.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/right-slider.step",
+          "step_sha256": "09a3d49d74ebafd34072cd83ae6c43b0a96dbf2cab3ccb03231efd4956ff68f5",
+          "local_model_sha256": "d665acee2c48d4c5040172aea0f7cef4364130247187b2c6bd230eecf254c775",
+          "native_bounds_mm": [
+            25.96999999999999,
+            -63.5,
+            4.899999999999955,
+            30.970000215655322,
+            -55.8,
+            6.900000000000091
+          ],
+          "registered_kicad_bounds_mm": [
+            25.97,
+            -63.5,
+            4.899999999999954,
+            30.97000021565533,
+            -55.8,
+            6.900000000000089
+          ]
+        },
+        "SW2": {
+          "layer": "B.Cu",
+          "native_placement_difference_mm3": 0.0,
+          "actual_kicad_export_reimported": true,
+          "step_path": "build/slim-flush/pcb-step-registration/actual/right-reset.step",
+          "step_sha256": "cd50361d3b7977fc83fe97de48817d5a4fff2caf0bc6c1c2a2c08930aa905c0d",
+          "local_model_sha256": "80b393b78f60ab4b4a3d80d3e471bba1efdc3b5c7b9aa5743606b11bd6f40ca2",
+          "native_bounds_mm": [
+            37.8,
+            -62.09999999998446,
+            2.259999999999999,
+            44.2,
+            -56.90000000001554,
+            3.799999999999999
+          ],
+          "registered_kicad_bounds_mm": [
+            37.8,
+            -62.09999999998446,
+            2.2599999999999993,
+            44.2,
+            -56.90000000001554,
+            3.8000000000000003
+          ]
+        }
+      }
+    }
+  },
+  "physical_acceptance": false
+}
