@@ -1,0 +1,14 @@
+title = "Flan36 geometry provenance"
+
+[extend]
+useDefault = true
+
+# Public geometry checksum, recomputed by tools/check_geometry_checksum_policy.py.
+# All four constraints must match: rule, path, JSON field, and exact value.
+[[allowlists]]
+description = "Verified KLP catalog geometry SHA-256"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''^design/revI\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"keycap_geometry": "4e749ea8bfeecb3150147e8a15b7d3fdcb859fabb5796f83fda083511e2f326a"\s*,?\s*$''']

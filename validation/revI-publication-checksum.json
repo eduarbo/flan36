@@ -1,0 +1,71 @@
+{
+  "schema": "flan36-public-geometry-checksum-1",
+  "reviewed_commit": "7d22cedd6d2e496e2e83503e0cf5e040f86cba69",
+  "trigger": "Pre-push generic-api-key finding on a deterministic public geometry checksum.",
+  "cause": "The field name and entropy match the generic credential heuristic.",
+  "artifact": "design/revI.json",
+  "field": "level_stack.inputs_sha256.keycap_geometry",
+  "provenance": "SHA-256 of json.dumps(catalog[variants], sort_keys=True).encode(), calculated in tools/freecad/level_stack.py.",
+  "independent_reviews": [
+    {
+      "lens": "domain and constructive",
+      "recommendation": "Preserve provenance and permit only the exact checksum in this file and rule.",
+      "confidence": "high",
+      "baseline_unchanged": true
+    },
+    {
+      "lens": "adversarial and security",
+      "recommendation": "Preserve provenance and permit only the exact checksum in this file and rule.",
+      "confidence": "high",
+      "baseline_unchanged": true
+    }
+  ],
+  "dispositions": [
+    "Default rules are inherited. No rule, file, commit, or hook is disabled.",
+    "AND requires both the anchored path and anchored JSON field/value line. Rule scope is generic-api-key only.",
+    "The full-line criterion is stricter than the reviewed exact-secret option and excludes additional fields.",
+    "Six isolated controls verify the exception plus detection for changed path, field, value and adjacent content.",
+    "The normal pre-push hook remains the acceptance gate for all outgoing commits."
+  ],
+  "controls": {
+    "passed": true,
+    "scanner_version": "8.30.1",
+    "config_sha256": "17c32f4384ea64d08855873a72b83b3f135f52d03ec3ccfc760a41423048b5e7",
+    "recomputed_geometry_sha256": "4e749ea8bfeecb3150147e8a15b7d3fdcb859fabb5796f83fda083511e2f326a",
+    "controls": [
+      {
+        "control": "exact_geometry",
+        "expected_detection": false,
+        "passed": true
+      },
+      {
+        "control": "different_path",
+        "expected_detection": true,
+        "passed": true
+      },
+      {
+        "control": "different_field",
+        "expected_detection": true,
+        "passed": true
+      },
+      {
+        "control": "different_value",
+        "expected_detection": true,
+        "passed": true
+      },
+      {
+        "control": "additional_field",
+        "expected_detection": true,
+        "passed": true
+      },
+      {
+        "control": "other_line_same_file",
+        "expected_detection": true,
+        "passed": true
+      }
+    ]
+  },
+  "regenerate_controls": "python3 tools/check_geometry_checksum_policy.py",
+  "checker_sha256": "e66b3dc28175758bf1c726fa80a021a6d40475a100313ca0160104694b559cda",
+  "source": "https://github.com/gitleaks/gitleaks/blob/v8.30.1/README.md#configuration"
+}
