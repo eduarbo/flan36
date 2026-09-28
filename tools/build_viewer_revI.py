@@ -21,6 +21,8 @@ decorated_styles=set(frame_finishes['styles'])|set(frame_extensions['styles'])
 frame_variants=model.get('frameVariants',{})
 scene['catalog']=catalog
 scene['presets']={p.stem:json.loads(p.read_text()) for p in (ROOT/'design/configurations').glob('*.json')}
+for p in sorted((ROOT/'design/configurations').glob('*.json')):
+    scene['sources'].append({'path':p.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
 groups = {
     'tray':('Base', 'base', '#253639',0),
     'key-plate':('Plate', 'plate','#34494a',9),

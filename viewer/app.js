@@ -299,13 +299,24 @@ const frameHex=enhanceColorInput($('frame-color'));
 $('frame-color').oninput=e=>applyConfiguration(setColor(configuration,frameTargets(),'frame','body',e.target.value));
 $('theme-colors').onclick=()=>{const cfg=copy(configuration);for(const side of frameTargets()){const p=framePalette(cfg.frames[side].style);cfg.frames[side].color=p.body;cfg.frames[side].accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,p[k]]));if(cfg.cases[side].match_frame){cfg.cases[side].base_color=p.body;if(cfg.cases[side].style==='level')cfg.cases[side].plate_color=p.body;}}applyConfiguration(cfg);};
 for(const [id,label] of [['default','Original'],['normal-sculpted','Sculpted Normal'],['saddle-sculpted','Sculpted Saddle']]){
-  const entries=['K01','K11','K21'].map((key,i)=>({path:variants.get(data.presets[id].keycaps.left[key].variant).path,rotation:data.presets[id].keycaps.left[key].rotation_deg,center:[(i-1)*20,0,0]}));
-  const button=card(id,label,preview.image(entries,[.5,1,2]));button.dataset.preset=id;
+  // Show an actual front-to-back column at the shared stem seating datum.
+  const entries=['K01','K11','K21'].map((key,i)=>{const choice=data.presets[id].keycaps.left[key],v=variants.get(choice.variant);return {path:v.path,rotation:choice.rotation_deg,position:[0,v.seating_z_mm,(i-1)*17]};});
+  const button=card(id,label,preview.image(entries,[-1,.35,.1]));button.dataset.preset=id;
   button.onclick=()=>{const cfg=copy(configuration);for(const [side,keys] of Object.entries(cfg.keycaps))for(const ref of Object.keys(keys))cfg.keycaps[side][ref]={...data.presets[id].keycaps[side][ref],color:keys[ref].color};try{applyConfiguration(cfg);}catch(e){message(e.message,true);}};$('key-presets').append(button);
 }
 preview.finish();
+// Legacy files contain literal per-key choices, without preset provenance.
+// Repair only on an explicit click, preserving custom variants and colors.
+const rowRepair=document.createElement('button');rowRepair.id='fix-cap-rows';rowRepair.type='button';
+rowRepair.className='secondary';$('key-presets').after(rowRepair);
+function reversedTiltedRows(){return Object.entries(catalog.layout).flatMap(([side,keys])=>keys.filter(k=>{
+  const choice=configuration.keycaps[side][k.ref];
+  return /^choc_stem_(choc|mx)_size_(normal|saddle)_tilted$/.test(choice.variant)&&((k.row===0&&choice.rotation_deg===0)||(k.row===2&&choice.rotation_deg===180));
+}).map(k=>[side,k.ref]));}
+rowRepair.onclick=()=>{const cfg=copy(configuration);for(const [side,ref] of reversedTiltedRows())cfg.keycaps[side][ref].rotation_deg=(cfg.keycaps[side][ref].rotation_deg+180)%360;try{applyConfiguration(cfg);message('Top and bottom slopes corrected. Your other choices are unchanged.');}catch(e){message(e.message,true);}};
 for(const [id,spec] of Object.entries(catalog.battery_profiles)){const b=document.createElement('button');b.type='button';b.dataset.battery=id;b.textContent=spec.label;b.title=`${spec.width} × ${spec.length} × ${spec.height} mm`;b.onclick=()=>{const c=copy(configuration);for(const side of ['left','right'])c.batteries[side]=id;applyConfiguration(c);};$('battery-options').append(b);}
 function syncConfigurationUI(){
+  const reversed=reversedTiltedRows();rowRepair.hidden=!reversed.length;rowRepair.textContent=`Fix top/bottom slopes (${reversed.length})`;
   const cases=caseTargets().map(side=>configuration.cases[side]),caseStyles=new Set(cases.map(c=>c.style));
   $('case-current').textContent=caseStyles.size===1?catalog.case_styles[cases[0].style].label:'Mixed cases';
   for(const b of $('case-grid').children)b.setAttribute('aria-pressed',String(caseStyles.size===1&&caseStyles.has(b.dataset.case)));

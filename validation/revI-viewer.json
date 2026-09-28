@@ -7,6 +7,18 @@
   "geometry_changed": false,
   "sources": [
     {
+      "path": "design/configurations/default.json",
+      "sha256": "f78cbb02d049a00c11c80322b3ceef75c5ea84a0d6dfe9c6a91f35f44076dff1"
+    },
+    {
+      "path": "design/configurations/normal-sculpted.json",
+      "sha256": "73df7e81def26c97a8e7f58f582987314a8a56897e483c441bb6aed7f03a610c"
+    },
+    {
+      "path": "design/configurations/saddle-sculpted.json",
+      "sha256": "af1aba79cedab22c09a43e2e8c949d90fa1af43d347e78193abd30e5fde3b300"
+    },
+    {
       "path": "mechanical/revI/component-choc-body-0.stl",
       "sha256": "9229bc3d2f35b843fc49f2466de5a7721d0564605c6f74f6170882b607ced273"
     },
@@ -1028,7 +1040,7 @@
     },
     {
       "path": "tools/build_viewer_revI.py",
-      "sha256": "c5c3c678f333c0b6b62498ff58222d50ccbac995ca7c5858489c7ef73f430d34"
+      "sha256": "dd2065bcae68d4358fb1c2969fd0c526d54ec8f2de25606bde9c15a10c46bd26"
     },
     {
       "path": "components/switches.json",
@@ -1044,7 +1056,7 @@
     },
     {
       "path": "viewer/app.js",
-      "sha256": "40d0949fa2d3d91e2609c3a8eb34c5791713ac9c7c1d17ddacd84c3eb79c0ac5"
+      "sha256": "62f6374636ca130b54d91d7a8cec57ec710745e191d7a1bb022e51f161510f50"
     },
     {
       "path": "viewer/config.js",
@@ -1115,7 +1127,7 @@
       "sha256": "a62090e2bb0ab32205ff582bd3612ff167dc03d9db4c2b6879bb98f5bf25d550"
     }
   ],
-  "viewer_sha256": "31eb89f14b7b1257b87424b60a4b78e6f6bbdbd743cda6054a4c6ea662520d37",
+  "viewer_sha256": "c9012c6ef63e146ace353e753d9c4c187fb2ff1ac2afb417cee4bab9adbc5a58",
   "measurements": {
     "bay_width_mm": 24,
     "plate_top_mm": 7.6,

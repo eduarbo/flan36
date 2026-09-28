@@ -5,23 +5,23 @@
     "left": {
       "K01": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K02": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K03": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K04": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K05": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K11": {
         "variant": "choc_stem_choc_size_normal",
@@ -45,23 +45,23 @@
       },
       "K21": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K22": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K23": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K24": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K25": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K30": {
         "variant": "choc_stem_choc_size_thumb",
@@ -79,23 +79,23 @@
     "right": {
       "K01": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K02": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K03": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K04": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K05": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 180
       },
       "K11": {
         "variant": "choc_stem_choc_size_normal",
@@ -119,23 +119,23 @@
       },
       "K21": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K22": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K23": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K24": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K25": {
         "variant": "choc_stem_choc_size_normal_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 0
       },
       "K30": {
         "variant": "choc_stem_choc_size_thumb",

@@ -1,0 +1,533 @@
+{
+  "schema": "flan36-cap-row-correction-1",
+  "accepted_digital_correction": true,
+  "request": "Correct the reversed top and bottom sculpted cap rows shown by the user.",
+  "source_commit": "697807446a7f0e5e70a56aa240189dd8aa15f3cd",
+  "cause": "Preset rotations were reversed; prior registration checked centers and configured transforms, not actual slope direction.",
+  "correction": "Top row 180 degrees; bottom row 0 degrees, both halves and both sculpted presets.",
+  "presets": {
+    "normal-sculpted": {
+      "rotations_changed": 20,
+      "sha256": "73df7e81def26c97a8e7f58f582987314a8a56897e483c441bb6aed7f03a610c"
+    },
+    "saddle-sculpted": {
+      "rotations_changed": 20,
+      "sha256": "af1aba79cedab22c09a43e2e8c949d90fa1af43d347e78193abd30e5fde3b300"
+    }
+  },
+  "source_meshes_seating_layout_and_hardware_unchanged": true,
+  "native": {
+    "passed": true,
+    "native_source_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
+    "canonical_native_unchanged": true,
+    "checker_sha256": "66e998c18d2aec3da0e2c0e729359d6aa968172e9580414fd176ac5ed58fe6a0",
+    "geometry_oracle_sha256": "471334d7a52f68bdb5ab9be4fedd472dc2fbc4006505a19134de9e13c7e08c63",
+    "presets": {
+      "normal-sculpted": {
+        "measured_keys": [
+          {
+            "side": "left",
+            "key": "K01",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K02",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K03",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K04",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K05",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K21",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K22",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K23",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K24",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "left",
+            "key": "K25",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K01",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K02",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K03",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K04",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K05",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K21",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K22",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K23",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K24",
+            "outer_above_inner_mm": 2.7288761138916016
+          },
+          {
+            "side": "right",
+            "key": "K25",
+            "outer_above_inner_mm": 2.7288761138916016
+          }
+        ],
+        "reversed_negative_controls": 20,
+        "minimum_clearance_mm": 0.247659,
+        "saved_reopened": true,
+        "custom_colors_and_components_preserved": true,
+        "manual_rotation_preserved": true
+      },
+      "saddle-sculpted": {
+        "measured_keys": [
+          {
+            "side": "left",
+            "key": "K01",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K02",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K03",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K04",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K05",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K21",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K22",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K23",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K24",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "left",
+            "key": "K25",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K01",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K02",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K03",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K04",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K05",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K21",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K22",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K23",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K24",
+            "outer_above_inner_mm": 3.166055679321289
+          },
+          {
+            "side": "right",
+            "key": "K25",
+            "outer_above_inner_mm": 3.166055679321289
+          }
+        ],
+        "reversed_negative_controls": 20,
+        "minimum_clearance_mm": 0.247659,
+        "saved_reopened": true,
+        "custom_colors_and_components_preserved": true,
+        "manual_rotation_preserved": true
+      }
+    },
+    "physical_acceptance": false
+  },
+  "viewer": {
+    "passed": true,
+    "viewer_sha256": "c9012c6ef63e146ace353e753d9c4c187fb2ff1ac2afb417cee4bab9adbc5a58",
+    "checker_sha256": "3ede47daa0e9ddc4cfb1dc6258303f8e70f1b7e940e156607fc016b63e210b60",
+    "target": "local",
+    "actual_glb_surface_measurements": {
+      "normal-sculpted": [
+        {
+          "side": "left",
+          "key": "K01",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K02",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K03",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K04",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K05",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K21",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K22",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K23",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K24",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "left",
+          "key": "K25",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K01",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K02",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K03",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K04",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K05",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K21",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K22",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K23",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K24",
+          "outer_above_inner_mm": 2.728875160217285
+        },
+        {
+          "side": "right",
+          "key": "K25",
+          "outer_above_inner_mm": 2.728875160217285
+        }
+      ],
+      "saddle-sculpted": [
+        {
+          "side": "left",
+          "key": "K01",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K02",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K03",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K04",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K05",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K21",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K22",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K23",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K24",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "left",
+          "key": "K25",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K01",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K02",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K03",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K04",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K05",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K21",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K22",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K23",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K24",
+          "outer_above_inner_mm": 3.166055202484131
+        },
+        {
+          "side": "right",
+          "key": "K25",
+          "outer_above_inner_mm": 3.166055202484131
+        }
+      ]
+    },
+    "legacy_manual_state_preserved": true,
+    "repair_changes_only_19_rotations": true,
+    "mobile_repair": true,
+    "repair_idempotent": true,
+    "colors_and_other_components_preserved": true,
+    "json_roundtrip": true,
+    "reload": true,
+    "runtime_errors": []
+  },
+  "ui_regression": {
+    "viewer_sha256": "c9012c6ef63e146ace353e753d9c4c187fb2ff1ac2afb417cee4bab9adbc5a58",
+    "runtime_errors": [],
+    "case_variants": 4,
+    "glb_selected_vertices_exact": true
+  },
+  "review": {
+    "lenses": [
+      "constructive mechanics",
+      "adversarial reliability"
+    ],
+    "baseline_unchanged_after_reviews": true,
+    "agreement": "Correct preset rotations; retain literal saved/manual choices; use explicit targeted repair.",
+    "dispositions": [
+      "World-space edge-height checks reject all forty reversed controls.",
+      "Preset input hashes now prevent stale scene builds.",
+      "An explicit repair changes only reversed non-90-degree Tilted finger caps, preserving other choices. No inferred storage migration."
+    ]
+  },
+  "images": {
+    "docs/images/revI-sculpted-normal.png": "d561f7bd7f37ca6af46ca0ecb1163bdbd68c1096502153a153c6501a2461949c",
+    "docs/images/revI-sculpted-saddle.png": "1e4806f73c03b406c7f9d4d5771ba2da986382db06aba47a34b783ffa49c2680"
+  },
+  "inputs": [
+    {
+      "path": "design/layout.json",
+      "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+    },
+    {
+      "path": "keycaps/catalog.json",
+      "sha256": "c69b7c0bdbe38e40edcc53ef3383dfd54486e8e4660b9b790a1f655681205380"
+    },
+    {
+      "path": "tools/keycap_row_geometry.py",
+      "sha256": "471334d7a52f68bdb5ab9be4fedd472dc2fbc4006505a19134de9e13c7e08c63"
+    },
+    {
+      "path": "tools/freecad/check_cap_rows.py",
+      "sha256": "66e998c18d2aec3da0e2c0e729359d6aa968172e9580414fd176ac5ed58fe6a0"
+    },
+    {
+      "path": "viewer/cap-rows-check.cjs",
+      "sha256": "3ede47daa0e9ddc4cfb1dc6258303f8e70f1b7e940e156607fc016b63e210b60"
+    },
+    {
+      "path": "tools/check_cap_rows_delivery.py",
+      "sha256": "999cfa8e24060add2892a938c7a44333d99d1779814034f766ff1d16a6170b2a"
+    },
+    {
+      "path": "viewer/app.js",
+      "sha256": "62f6374636ca130b54d91d7a8cec57ec710745e191d7a1bb022e51f161510f50"
+    },
+    {
+      "path": "tools/build_viewer_revI.py",
+      "sha256": "dd2065bcae68d4358fb1c2969fd0c526d54ec8f2de25606bde9c15a10c46bd26"
+    }
+  ],
+  "physical_acceptance": false,
+  "reproduce": [
+    "python3 tools/freecad/run_macos.py tools/freecad/check_cap_rows.py",
+    "python tools/build_viewer_revI.py",
+    "node viewer/build.mjs",
+    "node viewer/cap-rows-check.cjs",
+    "node build/cap-row-fix/full-ui/viewer/check.cjs",
+    "python3 tools/check_cap_rows_delivery.py"
+  ]
+}

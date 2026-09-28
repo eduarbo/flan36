@@ -12,7 +12,11 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
-## Current revision I — floor battery and Level case
+## Revision I — sculpted cap direction correction
+
+The Normal and Saddle sculpted presets had the top and bottom rotations reversed. Both now place the higher edges away from the home row. This changes 20 rotations per preset, with no changes to stems, seating or key centers. Actual side-profile previews replace the former side-by-side arrangement. **Caps → Fix top/bottom slopes** repairs older configurations without replacing custom variants, colors or other components. [Directional checks](../validation/revI-cap-rows.json).
+
+## Current mechanical revision I — floor battery and Level case
 
 The glass, frame and new **Level** upper shell share a **13.39 mm** plane: **1.41 mm lower** than the previous frame. Both batteries sit directly on the 1.4 mm case floor. The nice!nano PCB is at 8.2 mm and the nice!view PCB at 11.49 mm. Key centers and the selected caps' 17.87 mm height are unchanged.
 

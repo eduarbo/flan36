@@ -34,7 +34,11 @@ The check uses unchanged STL convex envelopes with **at least 0.20 mm XY clearan
 
 For the lowest profile, start with the flat variants. At the common nominal seating datum, Choc-size Normal/Thumb tops reach **17.87 mm**, Saddle **17.78 mm**, and Tilted variants **21.34 mm**, before feet. Tilted caps therefore add about **3.5 mm** locally; their comfort and final seated height need a physical trial.
 
-Presets: **Original**, **Sculpted Normal** and **Sculpted Saddle**. The sculpted presets use tilted upper/lower rows in opposite orientations; they are starting points for comfort trials, not an ergonomic prescription.
+Presets: **Original**, **Sculpted Normal** and **Sculpted Saddle**. The sculpted presets place the high edges away from the home row: top row **180°**, bottom row **0°**, on both halves. Their previews show the actual three-row side profile at the shared stem seating datum. They are starting points for comfort trials, not an ergonomic prescription.
+
+Older saved configurations keep their explicit rotations. In **Caps**, **Fix top/bottom slopes** turns only the reversed, unrotated-stem Tilted caps in the finger rows. Colors, custom cap variants, home keys, thumbs and other components stay as selected. Alternatively, select either corrected sculpted preset to replace the complete cap arrangement while retaining your colors. [Directional geometry and export checks](../validation/revI-cap-rows.json).
+
+![Corrected Sculpted Normal, actual viewer side profile](images/revI-sculpted-normal.png)
 
 ## Print a themed display frame
 
@@ -115,7 +119,7 @@ Every color swatch has an editable HEX field and a **Copy** button. Paste `#34A8
 
 ### Why the switch stem is visible
 
-The 36 cap centers and rotations match their switches in the native CAD and viewer. In the source meshes, paired cap stems align with slots at ±2.85 mm and extend 1.75 mm below the switch stem's top. The visible red section is part of that switch model. No seating offset was changed from the screenshot alone; physical printed fit remains untested.
+The flat reference caps share their switches' centers. In the source meshes, paired cap stems align with slots at ±2.85 mm and extend 1.75 mm below the switch stem's top. The visible red section is part of that switch model. This registration audit did not check the sculpted rows' slope direction; the corrected presets now have separate directional checks. Physical printed fit remains untested.
 
 ![Sections through the actual KLP and Choc source meshes](images/revI-keycap-registration.png)
 
@@ -129,3 +133,18 @@ FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium no
 ```
 
 This regenerates ignored `build/hex-check/` screenshots and `result.json`. It must exit successfully with no runtime errors; the result's viewer SHA-256 must match `docs/index.html`. `node viewer/keycolors-check.cjs` with the same environment checks color targets, palettes, persistence and GLB colors in ignored `build/keycolors/`. Rebuild the ignored scene first with `python tools/build_viewer_revI.py` if its source hashes are stale.
+
+Check sculpted direction with `python3 tools/freecad/run_macos.py tools/freecad/check_cap_rows.py` and `node viewer/cap-rows-check.cjs` (same browser environment). They measure actual cap edges in reopened CAD and exported GLB, reject the former reversed arrangement, and verify explicit repair, custom choices and reload. The native copies, screenshots and reports in `build/cap-row-fix/` are ignored and reproducible. Source STL geometry and seating are unchanged.
+
+Run the broader UI check in a disposable mirror so its screenshots do not overwrite the published gallery:
+
+```sh
+mkdir -p build/cap-row-fix/full-ui/{viewer,docs/images,design,validation}
+cp viewer/check.cjs build/cap-row-fix/full-ui/viewer/
+cp docs/index.html build/cap-row-fix/full-ui/docs/
+cp design/frame-finishes.json build/cap-row-fix/full-ui/design/
+node build/cap-row-fix/full-ui/viewer/check.cjs
+cp build/cap-row-fix/browser/normal-sculpted-side.png docs/images/revI-sculpted-normal.png
+cp build/cap-row-fix/browser/saddle-sculpted-side.png docs/images/revI-sculpted-saddle.png
+python3 tools/check_cap_rows_delivery.py
+```
