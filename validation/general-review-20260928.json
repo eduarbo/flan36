@@ -1,0 +1,240 @@
+{
+  "snapshot": "692ec64a75889ec9ee8cd2e1016bfe1f3e9dd917",
+  "viewer_sha256": "c9012c6ef63e146ace353e753d9c4c187fb2ff1ac2afb417cee4bab9adbc5a58",
+  "html_bytes": 67040759,
+  "scope": "Review only; deliberately malformed inputs stay in disposable profiles.",
+  "observations": {
+    "legacy_without_cases": {
+      "errors": [],
+      "result": {
+        "left": {
+          "style": "level",
+          "cover": true,
+          "base_color": "#253639",
+          "plate_color": "#304d4e",
+          "match_frame": false
+        },
+        "right": {
+          "style": "level",
+          "cover": true,
+          "base_color": "#253639",
+          "plate_color": "#304d4e",
+          "match_frame": false
+        }
+      }
+    },
+    "prototype_style": {
+      "errors": [],
+      "ui_message": "Geometry unavailable: mechanical/revI/right-frame-constructor.stl",
+      "saved_config_unchanged": true,
+      "exported_left_base_color": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "exported_config_color": "#253639"
+    },
+    "load": {
+      "local_readiness_ms": 3893,
+      "metrics": [
+        {
+          "name": "Documents",
+          "value": 1
+        },
+        {
+          "name": "Nodes",
+          "value": 1986
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 444785220
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 520110080
+        }
+      ]
+    },
+    "concurrent_tabs": {
+      "first_tab_edit": "#123456",
+      "stored_after_second_tab_edit": "#e9dfc6",
+      "expected_if_preserved": "#123456"
+    },
+    "battery_half": {
+      "view": "left",
+      "selection": "left half",
+      "batteries": {
+        "left": "301230",
+        "right": "301230"
+      }
+    },
+    "rejected_saved_config": {
+      "message": "Saved settings could not be loaded. Defaults are available; use JSON to restore.",
+      "before_revision": "H",
+      "before_color": "#654321",
+      "after_revision": "I",
+      "after_color": "#e9dfc6"
+    }
+  },
+  "runtime_errors": [],
+  "reviewed_source_inputs": [
+    {
+      "path": "README.md",
+      "sha256": "de2f2452925003b047f0b8e809233703f32168ead601f04e4e92a13ecdb8acf1"
+    },
+    {
+      "path": "docs/customize.md",
+      "sha256": "29540025b0e0267a8499f36654a76a6c09404511c98c324be06411f644a97783"
+    },
+    {
+      "path": "docs/themes-printing.md",
+      "sha256": "bec8fcec5a37f64470b802dee4d12f81d47bfc7d13df205c23528b81b4a1dee4"
+    },
+    {
+      "path": "docs/level-stack.md",
+      "sha256": "1b7f44073c435d81d5ec19b679af0c9dec328f5f36d5af68aade514280969a27"
+    },
+    {
+      "path": "docs/parts.md",
+      "sha256": "3ca0585d18ae2431f9bcb9cbd00d932e8d386f14e5ce9a3bc38446f5bee3e6fc"
+    },
+    {
+      "path": "tools/keycap_config.py",
+      "sha256": "bfba35924ac6dee21d2cc7416daca7f7eed5893c3ae3c10c31b83315068a1ec0"
+    },
+    {
+      "path": "tools/build_viewer_revI.py",
+      "sha256": "dd2065bcae68d4358fb1c2969fd0c526d54ec8f2de25606bde9c15a10c46bd26"
+    },
+    {
+      "path": "tools/freecad/configuration.py",
+      "sha256": "378775f2192dcb080495a182db18964024abdddcff5eef79f7881dcdf8f847d4"
+    },
+    {
+      "path": "tools/freecad/level_stack.py",
+      "sha256": "5b4e75f33f91a6cbdcd84c0209c5d2bce8f2ee54b4087a55eabc16c4b0bd7155"
+    },
+    {
+      "path": "tools/freecad/flush_frames.py",
+      "sha256": "82d880663bed2f69800f0ecf7bc0e564c32c8954d08a05f418b4edca71c7092c"
+    },
+    {
+      "path": "tools/freecad/check_level_stack.py",
+      "sha256": "e419f2a6b2ec93759ca8cb8f3601fef4735e674831231d56cd56a97e742b6c3d"
+    },
+    {
+      "path": "tools/check_level_delivery.py",
+      "sha256": "f0e6befe12abbc48c0beda803017a9500ef8674beef3d5cd32d3b078f4bd3822"
+    },
+    {
+      "path": "tools/check_print_kit.py",
+      "sha256": "55fe33113c198a481f8722095658732f727b7b92022bb339de30900f73970640"
+    },
+    {
+      "path": "design/layout.json",
+      "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+    },
+    {
+      "path": "design/configurations/default.json",
+      "sha256": "f78cbb02d049a00c11c80322b3ceef75c5ea84a0d6dfe9c6a91f35f44076dff1"
+    },
+    {
+      "path": "design/configurations/normal-sculpted.json",
+      "sha256": "73df7e81def26c97a8e7f58f582987314a8a56897e483c441bb6aed7f03a610c"
+    },
+    {
+      "path": "design/configurations/saddle-sculpted.json",
+      "sha256": "af1aba79cedab22c09a43e2e8c949d90fa1af43d347e78193abd30e5fde3b300"
+    },
+    {
+      "path": "keycaps/catalog.json",
+      "sha256": "c69b7c0bdbe38e40edcc53ef3383dfd54486e8e4660b9b790a1f655681205380"
+    },
+    {
+      "path": "validation/revI-level-delivery.json",
+      "sha256": "67474b8ed3961ff89e76887e64b13bc22b3997811e595f89a21588b955e96ffa"
+    },
+    {
+      "path": "validation/revI-print-kit.json",
+      "sha256": "1001ce81b86ebd37ec1189f0f5172f7de73596f13ac339b91db059710e16607c"
+    },
+    {
+      "path": "viewer/template.html",
+      "sha256": "1dc0c9ded65f98467b602c9a27575e14d574f5f969bb2de99e4740431a34aaf0"
+    },
+    {
+      "path": "viewer/style.css",
+      "sha256": "3d214bb5422faadd218e6ee4e2ef3b6ff27e229c6e98385ce33f571409035c54"
+    },
+    {
+      "path": "viewer/build.mjs",
+      "sha256": "278ec3d152897e745604d671980f5aebe830e94c5965b4f6967b696b316f05a4"
+    },
+    {
+      "path": "viewer/app.js",
+      "sha256": "62f6374636ca130b54d91d7a8cec57ec710745e191d7a1bb022e51f161510f50"
+    },
+    {
+      "path": "viewer/appearance.js",
+      "sha256": "30fadac95fa5edb1f667b1a0d03c736e208d2d2f05204604a404bfe77d97eb68"
+    },
+    {
+      "path": "viewer/color-input.js",
+      "sha256": "c6abbe21dd8af64db7a6d111d1757265580924e0e0028b482e9814d5ec1e1f16"
+    },
+    {
+      "path": "viewer/config.js",
+      "sha256": "56dbfea2c0e50a48d40474a9875b33b1e0b29a0e87eadbeaa4bd184845c25095"
+    },
+    {
+      "path": "viewer/explorer.js",
+      "sha256": "2200a6e8993b908e5da23f5e9f1125ac7fa43a4d1fae1f63afae91315de0b63f"
+    },
+    {
+      "path": "viewer/finishes.js",
+      "sha256": "e532d97fe79eaf8b37eb3627141352c6c1c0938466f383d1b1e0d943c6e78438"
+    },
+    {
+      "path": "viewer/keycap-colors.js",
+      "sha256": "0461cd718298fbface1e60f657ab1389f8654bcd2dd496636ddcd0d9640c6543"
+    },
+    {
+      "path": "viewer/previews.js",
+      "sha256": "700c21e97c8896f63c5dac209ed443345b3f763b8a7bc253b5d00d78d751ed15"
+    },
+    {
+      "path": "viewer/printing.js",
+      "sha256": "b7ca61cf86752c4d66f96f770578ad29c503e28e65b875477f97b001e7cd5d66"
+    },
+    {
+      "path": "viewer/storage.js",
+      "sha256": "f8daeb8702b9d3fad93d93e2c18e6a66cee29e85a5a70f83da1184769823ceba"
+    }
+  ],
+  "reviewers": {
+    "lenses": [
+      "domain_constructive",
+      "adversarial_risk"
+    ],
+    "independent_static_agreement": [
+      "rejected saved configuration overwritten",
+      "inherited identifiers accepted and partial scene mutation",
+      "legacy case geometry drift",
+      "stale delivery reference"
+    ],
+    "root_disposition": "All four reproduced or verified. Stale delivery reference is a documentation-scope defect: native source is unchanged and a later cap-direction receipt covers the newer viewer. Physical limitations remain unchanged, outside new findings."
+  },
+  "additional_source_observations": {
+    "decompressed_scene_mib": 124.2074499130249,
+    "printing_json_mib": 21.617639541625977,
+    "geometry_json_mib": 102.17506980895996,
+    "native_source_matches_level_geometry_receipt": true,
+    "review_input_mutations": []
+  },
+  "probe": {
+    "path": "tools/review_general.cjs",
+    "sha256": "ba8197d38636957634ee1fac15a23ef8275861dea476cca559e31189ef4535b6"
+  },
+  "product_changes_applied": false
+}
