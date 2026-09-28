@@ -64,6 +64,8 @@ metadata['batteryLeadProfiles']={}
 metadata['parameter_values_mm']={a:getattr(doc.Parameters,a).Value for a in metadata['parameters']}
 metadata['slim_flush']={'decoration':'flush co-print material volumes',
     'inlay_depth_mm':.4,'minimum_backing_mm':.8,'physical_acceptance':False}
+if doc.getObject('LevelStackReceipt'):
+    metadata['level_stack']=json.loads(doc.LevelStackReceipt.RecipeJSON)
 stack_recipe=json.loads(doc.getObject('SlimStackReceipt').RecipeJSON)
 for side, recipe in stack_recipe['halves'].items():
     metadata['halves'][side]['battery_opening']=[v for point in recipe['battery_aperture_xy'] for v in point]
@@ -169,7 +171,7 @@ for side,prefix in [('left','L_'),('right','R_')]:
         hits={n:round(exact_common(shape,s).Volume,6) for n,s in shapes.items() if n!='electronics-lid' and exact_common(shape,s).Volume>.001}
         # Nominal 12 x 5 mm USB plug envelope + straight insertion corridor.
         px=116.8 if side=='left' else 160-128.8
-        plug=Part.makeBox(12,20,5,A.Vector(px,-18.8,6.7))
+        plug=Part.makeBox(12,20,5,A.Vector(px,-18.8,doc.Parameters.MCUBottom.Value-2.1))
         hit=exact_common(shape,plug).Volume
         frame_checks[obj.FrameStyle]={'component_collisions_mm3':hits,'usb_envelope_collision_mm3':round(hit,6),'volume_mm3':shape.Volume,'closed_mesh':True}
         assert not hits and hit<.001,(name,frame_checks[obj.FrameStyle])
@@ -220,7 +222,7 @@ for side,prefix in [('left','L_'),('right','R_')]:
     print(side,'parts',len(objects),'collisions',issues,flush=True)
 doc.recompute()
 metadata['inputs']=[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in [
-    'design/cases.json','design/frame-finishes.json','design/frame-extensions.json','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
+    'design/level-case-workflow.json','tools/freecad/level_stack.py','tools/freecad/install_level_stack.py','design/cases.json','design/frame-finishes.json','design/frame-extensions.json','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
 metadata['fcstd_sha256']=hashlib.sha256((OUT/'Flan36.FCStd').read_bytes()).hexdigest()
 report['source_sha256']=metadata['fcstd_sha256']
 report['checker_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()

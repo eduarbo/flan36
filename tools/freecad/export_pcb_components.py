@@ -140,14 +140,16 @@ def socket_status(obj):
     housing = [part for part in obj.VisualParts if part.Name.endswith('DisplaySocketHousing')]
     assert len(housing) == 1, (obj.PartID, 'retained socket housing missing')
     box = housing[0].Shape.cleaned().BoundBox
-    assert abs(box.ZMin - 5.4) < 1e-5 and abs(box.ZLength - 5.) < 1e-5, (
+    level = obj.Document.getObject('LevelStackReceipt') is not None
+    height = 4.57 if level else 5.
+    assert abs(box.ZMin - 5.4) < 1e-5 and abs(box.ZLength - height) < 1e-5, (
         obj.PartID, 'nominal socket height', box.ZMin, box.ZLength)
-    return {'nominal_housing_height_mm': 5., 'measured_native_housing_height_mm': box.ZLength,
+    return {'nominal_housing_height_mm': height, 'measured_native_housing_height_mm': box.ZLength,
             'native_housing_dimensions_mm': [box.XLength, box.YLength, box.ZLength],
             'native_housing_bounds_mm': [getattr(box, k) for k in ('XMin', 'YMin', 'ZMin', 'XMax', 'YMax', 'ZMax')],
             'physical_acceptance': False,
-            'height_source': 'https://typeractive.xyz/products/5-pin-sockets',
-            'limitation': 'Supplier states 5 mm socket height plus 2 mm display pin. Socket lateral body dimensions, contacts, engagement and tolerances remain nominal assumptions; geometry readback is not physical qualification.'}
+            'height_source': 'https://suddendocs.samtec.com/catalog_english/slw.pdf' if level else 'https://typeractive.xyz/products/5-pin-sockets',
+            'limitation': 'Samtec SLW/TLW nominal mating geometry; nice!view finished-hole fit, actual engagement and solder tolerances remain unqualified.' if level else 'Supplier states 5 mm socket height plus 2 mm display pin. Socket lateral body dimensions, contacts, engagement and tolerances remain nominal assumptions; geometry readback is not physical qualification.'}
 
 
 def local_shape(shape, pose, layer, correction=0.):

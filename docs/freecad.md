@@ -60,4 +60,4 @@ The project remains a digital prototype. Both boards have **zero geometric DRC v
 
 ## Interchangeable cases
 
-[Solid, Color rim and Terrace](cases.md) are native source bodies. The configuration macro changes `ActiveTray` and `ActivePlate` per half. `DisplayCoverInstalled` records whether to include the printed frame and its steel targets; JSON import applies the corresponding visibility, and export honors this property. Save a custom FCStd copy to retain your choices. The property represents installation, independently from temporary eye visibility.
+[Level, Solid, Color rim and Terrace](cases.md) are native source bodies. Level combines the switch plate and raised upper shell in one removable part; its upper edge follows `FrameTop`. The configuration macro changes `ActiveTray` and `ActivePlate` per half. `DisplayCoverInstalled` records whether to include the printed frame and its steel targets; JSON import applies the corresponding visibility, and export honors this property. Save a custom FCStd copy to retain your choices. The property represents installation, independently from temporary eye visibility.

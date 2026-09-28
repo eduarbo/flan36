@@ -1,9 +1,9 @@
 {
   "schema": "flan36-bottom-reset-step-1",
   "passed": true,
-  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "source_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
   "checker_sha256": "a7d0fefa78ecef7c88e7d35490ded87d1865fb0dac056ad3bf13a41513fabd4a",
-  "exporter_sha256": "7ff59dbebdea33a2c3939c233cf3f361aba46612daa523eb3166197084c1c98b",
+  "exporter_sha256": "26871b34f0f5fe9cb5830fc0a3ba73f993683f88c8f806c6861ad10245212652",
   "calibration": {
     "schema": "flan36-kicad-step-calibration-1",
     "passed": true,
@@ -17,7 +17,7 @@
         "angle_deg": 0,
         "model_origin_z_mm": 1.5949999999999993,
         "difference_mm3": 0.0,
-        "step_sha256": "5f2f52d65828ff056b7e76f85c723b14072be904e75fa25bd5ea6d1bf36a4b55",
+        "step_sha256": "00f26d1bab6508f358917fab9e7f139942c4c3fcf9253665a8124f58242172fb",
         "step": "build/slim-flush/pcb-step-registration/calibration/front0.step"
       },
       "back0": {
@@ -25,7 +25,7 @@
         "angle_deg": 0,
         "model_origin_z_mm": -0.08499999999999897,
         "difference_mm3": 0.0,
-        "step_sha256": "4b536b46330ac18acd4a23e4a7028c6b5e65de112bf2e4f3e3f20b3b1e4ec3be",
+        "step_sha256": "433e1a15c089dae31928ccc9906876f28eb20e72dd56a292c67a42a76eb230a8",
         "step": "build/slim-flush/pcb-step-registration/calibration/back0.step"
       },
       "back90": {
@@ -33,7 +33,7 @@
         "angle_deg": 90,
         "model_origin_z_mm": -0.08499999999999952,
         "difference_mm3": 0.0,
-        "step_sha256": "33522a679b5cffccb9cd8765f010b8e84c5c3056cb20b925781871ba2ba2cb72",
+        "step_sha256": "51572902212826fc68eb8a20375b4497b6b047959f44c96347c2c9f2dcf906ce",
         "step": "build/slim-flush/pcb-step-registration/calibration/back90.step"
       },
       "back180": {
@@ -41,19 +41,19 @@
         "angle_deg": 180,
         "model_origin_z_mm": -0.08499999999999897,
         "difference_mm3": 0.0,
-        "step_sha256": "a69eddff533c699f221f6be092f1f74678b31186f1aa11614c5d607f634667b4",
+        "step_sha256": "a16caa1ecc7aa51730e571a76b082004d81ed884c4d9043dbb2a3aec3ee7100b",
         "step": "build/slim-flush/pcb-step-registration/calibration/back180.step"
       }
     },
     "corrected_independent_cli_witness": {
       "front0": {
         "difference_mm3": 0.0,
-        "step_sha256": "1a6372c29862695bbd0ff8c29e30e8e0bdd63014f758cda77654086fe64d2eea",
+        "step_sha256": "4d6bdc8d69f89c8cd6b0b71475f2a31c56e33fe0ae095db1e3cb948a96f8b237",
         "step": "build/slim-flush/pcb-step-registration/calibration/front0-corrected.step"
       },
       "back90": {
         "difference_mm3": 0.0,
-        "step_sha256": "38be5a9c79e965967fc2183f226e94358098835732d5861261ef145352d673ec",
+        "step_sha256": "b45628145701cdde322014513c8c624a5233c508e06c5d54044259f4e3f04cf0",
         "step": "build/slim-flush/pcb-step-registration/calibration/back90-corrected.step"
       }
     },
@@ -83,8 +83,8 @@
       "native_placement_difference_mm3": 0.0,
       "actual_kicad_export_reimported": true,
       "step_path": "build/slim-flush/pcb-step-registration/actual/left-reset.step",
-      "step_sha256": "45502c68557bfbf83295556329d43db65da740cdc21e5ae87870cc0a33914db1",
-      "local_model_sha256": "e2cc3fce3e5285abeac184be1363e591d110ea7acef17a584d5386094a28cd56",
+      "step_sha256": "287aafb7ce0641ec738c6a0a7b8c9422bdc286fac83f9e1a64d789065b3ecc1e",
+      "local_model_sha256": "4baed8d3923b1b05cf639f2775934156430e4ab1c44738f56cb63b2bd12f4202",
       "native_bounds_mm": [
         115.8,
         -62.09999999998446,
@@ -107,23 +107,23 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/left-mcu.step",
-          "step_sha256": "c16e261bcf30becd9245ddc63d3db13ac35be5fabe843894f3125429096501a2",
-          "local_model_sha256": "2f7ec25940f2f0a9bf03ef1a0d3779ee7ae9eac94b2535eddc73137139ea46dc",
+          "step_sha256": "c6402ce272b33eafbc3a7a0979421e86f9798e6c1e2a8e84183d97b7d4e25ae1",
+          "local_model_sha256": "95c4b719255ba31267c83b99015a0e03317d805d61505f0fc4eeb27c4cbdeacc",
           "native_bounds_mm": [
             113.91,
             -46.7,
-            7.700000000000001,
+            7.1,
             131.69,
             -12.075999999999999,
-            10.900000000000002
+            10.3
           ],
           "registered_kicad_bounds_mm": [
             113.91,
             -46.7,
-            7.699999999999999,
+            7.1,
             131.69,
             -12.075999999999999,
-            10.899999999999999
+            10.3
           ]
         },
         "J2": {
@@ -131,28 +131,28 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/left-display.step",
-          "step_sha256": "d802934f8ef4fe3f19570ee4d0f73d23b7f9b04eafabfecbf53cc9038a0c46a2",
-          "local_model_sha256": "9156e0c0ad36052d92c7d3c45bcadfb7e7fe2ab88775bad6893082fff479c0bb",
+          "step_sha256": "d13db4ae5d32ef4a1d54fc0d873e81b48faf2bbf9148ae4fd1dd61e624e2d28b",
+          "local_model_sha256": "8948697b58c660335625731336a88cd8425f9705066abfea9d8650aa07e23bc8",
           "native_bounds_mm": [
             115.8,
-            -52.3,
-            2.0,
+            -52.099999999999994,
+            2.48,
             129.8,
-            -16.0,
-            14.3
+            -16.099999999999994,
+            13.39
           ],
           "registered_kicad_bounds_mm": [
             115.8,
-            -52.3,
-            1.9999999999999996,
+            -52.099999999999994,
+            2.4799999999999995,
             129.8,
-            -16.0,
-            14.299999999999999
+            -16.099999999999994,
+            13.39
           ],
           "native_components": {
             "left-display": {
               "native_object": "L_NiceView",
-              "solid_count": 14,
+              "solid_count": 19,
               "native_placement_difference_mm3": 0.0
             },
             "left-display-socket": {
@@ -162,24 +162,24 @@
             }
           },
           "retained_display_socket": {
-            "nominal_housing_height_mm": 5.0,
-            "measured_native_housing_height_mm": 5.0,
+            "nominal_housing_height_mm": 4.57,
+            "measured_native_housing_height_mm": 4.57,
             "native_housing_dimensions_mm": [
-              13.200000000000003,
-              3.0,
-              5.0
+              12.700000000000003,
+              2.539999999999999,
+              4.57
             ],
             "native_housing_bounds_mm": [
-              116.2,
-              -52.3,
+              116.45,
+              -52.07,
               5.4,
-              129.4,
-              -49.3,
-              10.4
+              129.15,
+              -49.53,
+              9.97
             ],
             "physical_acceptance": false,
-            "height_source": "https://typeractive.xyz/products/5-pin-sockets",
-            "limitation": "Supplier states 5 mm socket height plus 2 mm display pin. Socket lateral body dimensions, contacts, engagement and tolerances remain nominal assumptions; geometry readback is not physical qualification."
+            "height_source": "https://suddendocs.samtec.com/catalog_english/slw.pdf",
+            "limitation": "Samtec SLW/TLW nominal mating geometry; nice!view finished-hole fit, actual engagement and solder tolerances remain unqualified."
           }
         },
         "J1": {
@@ -187,8 +187,8 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/left-jst.step",
-          "step_sha256": "d7032004257c6b99a20d76198d1d42fc8e6c190601fe69d0a0cdb3aded0885d4",
-          "local_model_sha256": "7fbd3d396560ebf81339a1c670d09a17f3c6fca58576ae18192b641f3f4ef7ee",
+          "step_sha256": "ef429442d14acea779d0c5a85505d209d5d484cd244a1260423ab4a24f73e687",
+          "local_model_sha256": "80be60f9ea38475d4a0806eeebb9861348d8c498928aad95de64b4f9a72a11ee",
           "native_bounds_mm": [
             117.19999999999999,
             -61.14999999999999,
@@ -211,8 +211,8 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/left-slider.step",
-          "step_sha256": "8fa240177713fee40297bdfd7960a3c9dee317c3c3286452739e42e1200d3df7",
-          "local_model_sha256": "e5777cc2d636ad4de0a88954f328c7ecf6d8a74d65b01b92ad89325af4aee181",
+          "step_sha256": "960b0ea9ac7e87e6b900be237b48fbe2b3b9e760a8ae98637d49c37ef9b5a37d",
+          "local_model_sha256": "f12fdacb2513e18ac9ca2b9fe96c591f89501db84b7ea9eae4af5f494e0699a4",
           "native_bounds_mm": [
             129.02999978434468,
             -63.5,
@@ -235,8 +235,8 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/left-reset.step",
-          "step_sha256": "45502c68557bfbf83295556329d43db65da740cdc21e5ae87870cc0a33914db1",
-          "local_model_sha256": "e2cc3fce3e5285abeac184be1363e591d110ea7acef17a584d5386094a28cd56",
+          "step_sha256": "287aafb7ce0641ec738c6a0a7b8c9422bdc286fac83f9e1a64d789065b3ecc1e",
+          "local_model_sha256": "4baed8d3923b1b05cf639f2775934156430e4ab1c44738f56cb63b2bd12f4202",
           "native_bounds_mm": [
             115.8,
             -62.09999999998446,
@@ -263,8 +263,8 @@
       "native_placement_difference_mm3": 0.0,
       "actual_kicad_export_reimported": true,
       "step_path": "build/slim-flush/pcb-step-registration/actual/right-reset.step",
-      "step_sha256": "cd50361d3b7977fc83fe97de48817d5a4fff2caf0bc6c1c2a2c08930aa905c0d",
-      "local_model_sha256": "80b393b78f60ab4b4a3d80d3e471bba1efdc3b5c7b9aa5743606b11bd6f40ca2",
+      "step_sha256": "ef10c1ad006bc86d250f2a91bc2350c2840204b59ba5a87c941aeff4ab2389e8",
+      "local_model_sha256": "55e920d512c3ee32ff6abd63b1fd2012b0e6b65b495d980b2cd0e3f4ac881b23",
       "native_bounds_mm": [
         37.8,
         -62.09999999998446,
@@ -287,23 +287,23 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/right-mcu.step",
-          "step_sha256": "ff59eb37564b44248de20c99b1ecf3560ad5614328bd8aaab154acb96d469574",
-          "local_model_sha256": "ee8e8a2471dda69786b6b5499defa01319a456bd662d65bce6644400e75818b4",
+          "step_sha256": "9c78ac8f192cf06f4273c969d16fa5788e5f60fb137aa332f164f943803a7bed",
+          "local_model_sha256": "f9c4d22f9c58ea01bcf4cdd35d9df929ca438f34a4903dc6148d71fbbd077ecf",
           "native_bounds_mm": [
             28.310000000000002,
             -46.7,
-            7.700000000000001,
+            7.1,
             46.09,
             -12.075999999999999,
-            10.900000000000002
+            10.3
           ],
           "registered_kicad_bounds_mm": [
             28.310000000000002,
             -46.7,
-            7.699999999999999,
+            7.1,
             46.09,
             -12.075999999999999,
-            10.899999999999999
+            10.3
           ]
         },
         "J2": {
@@ -311,28 +311,28 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/right-display.step",
-          "step_sha256": "10e6a9b5dedd6cd6a815855ebd3ae1cb765af5bb3bf7fd2b0d3c05c55faa432c",
-          "local_model_sha256": "e8362e259c5be83644151731f5765fee160c8a6814c95228f65c86e5af54bc4c",
+          "step_sha256": "b683234b45a30934d513d4aab45eaa9c8eb78d1abab8afbe135b4728565fedf5",
+          "local_model_sha256": "09fc77433d79805767683f62a5b6d18e642ff205aba71617fed034f4ac7ac179",
           "native_bounds_mm": [
             30.200000000000003,
-            -52.3,
-            2.0,
+            -52.099999999999994,
+            2.48,
             44.2,
-            -16.0,
-            14.3
+            -16.099999999999994,
+            13.39
           ],
           "registered_kicad_bounds_mm": [
             30.199999999999996,
-            -52.3,
-            1.9999999999999996,
+            -52.099999999999994,
+            2.4799999999999995,
             44.199999999999996,
-            -16.0,
-            14.299999999999999
+            -16.099999999999994,
+            13.39
           ],
           "native_components": {
             "right-display": {
               "native_object": "R_NiceView",
-              "solid_count": 14,
+              "solid_count": 19,
               "native_placement_difference_mm3": 0.0
             },
             "right-display-socket": {
@@ -342,24 +342,24 @@
             }
           },
           "retained_display_socket": {
-            "nominal_housing_height_mm": 5.0,
-            "measured_native_housing_height_mm": 5.0,
+            "nominal_housing_height_mm": 4.57,
+            "measured_native_housing_height_mm": 4.57,
             "native_housing_dimensions_mm": [
-              13.199999999999996,
-              3.0,
-              5.0
+              12.699999999999996,
+              2.539999999999999,
+              4.57
             ],
             "native_housing_bounds_mm": [
-              30.6,
-              -52.3,
+              30.85,
+              -52.07,
               5.4,
-              43.8,
-              -49.3,
-              10.4
+              43.55,
+              -49.53,
+              9.97
             ],
             "physical_acceptance": false,
-            "height_source": "https://typeractive.xyz/products/5-pin-sockets",
-            "limitation": "Supplier states 5 mm socket height plus 2 mm display pin. Socket lateral body dimensions, contacts, engagement and tolerances remain nominal assumptions; geometry readback is not physical qualification."
+            "height_source": "https://suddendocs.samtec.com/catalog_english/slw.pdf",
+            "limitation": "Samtec SLW/TLW nominal mating geometry; nice!view finished-hole fit, actual engagement and solder tolerances remain unqualified."
           }
         },
         "J1": {
@@ -367,8 +367,8 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/right-jst.step",
-          "step_sha256": "4ba83888e79371471382ed56c60dfba0f16f57a18ea4941372c34e3df2f8d434",
-          "local_model_sha256": "73dc102a096d13321b273fd6ab4c1464e28bbe21ab0411fdceb4310e5a89da85",
+          "step_sha256": "65f48638812c45ed93b0c3e1c47b3c9374564bb18e98e8b2f7e69f37dbce8857",
+          "local_model_sha256": "ab37b8b218efdfe1279540b8b60629da69348997cbb4c9dcf807351d34fe66f3",
           "native_bounds_mm": [
             33.2,
             -61.15000000000001,
@@ -391,8 +391,8 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/right-slider.step",
-          "step_sha256": "09a3d49d74ebafd34072cd83ae6c43b0a96dbf2cab3ccb03231efd4956ff68f5",
-          "local_model_sha256": "d665acee2c48d4c5040172aea0f7cef4364130247187b2c6bd230eecf254c775",
+          "step_sha256": "22beba37250a7b0eec26350e2ec775c7b400150b1e762f8782d521ad9f7e7326",
+          "local_model_sha256": "ac9edd8ee0d3e51ce407a5f7e758e83ddbca5e0e243afe48e4c05f6504cd2cf5",
           "native_bounds_mm": [
             25.96999999999999,
             -63.5,
@@ -415,8 +415,8 @@
           "native_placement_difference_mm3": 0.0,
           "actual_kicad_export_reimported": true,
           "step_path": "build/slim-flush/pcb-step-registration/actual/right-reset.step",
-          "step_sha256": "cd50361d3b7977fc83fe97de48817d5a4fff2caf0bc6c1c2a2c08930aa905c0d",
-          "local_model_sha256": "80b393b78f60ab4b4a3d80d3e471bba1efdc3b5c7b9aa5743606b11bd6f40ca2",
+          "step_sha256": "ef10c1ad006bc86d250f2a91bc2350c2840204b59ba5a87c941aeff4ab2389e8",
+          "local_model_sha256": "55e920d512c3ee32ff6abd63b1fd2012b0e6b65b495d980b2cd0e3f4ac881b23",
           "native_bounds_mm": [
             37.8,
             -62.09999999998446,

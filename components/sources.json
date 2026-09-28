@@ -66,21 +66,39 @@
     },
     {
       "component": "J2 nice!view socket and male header",
-      "source_url": "https://typeractive.xyz/products/5-pin-sockets",
-      "implementation": "tools/freecad/slim_stack.py",
+      "source_url": "https://suddendocs.samtec.com/catalog_english/slw.pdf",
+      "implementation": "tools/freecad/level_stack.py",
       "license": "GPL-3.0-or-later (original conservative reserve)",
       "vendor_cad_redistributed": false,
       "published_installation_mm": {
-        "female_socket_height": 5,
-        "male_spacer_height": 2,
-        "total": 7
+        "female_socket_height": 4.57,
+        "male_spacer_height": 1.52,
+        "total": 6.09
       },
-      "assumed_body_xy_mm": [
-        13.2,
-        3
+      "status": "Dimensioned nominal candidate only; display finished-hole and post tolerances unverified. Stock female tails retained; male solder tails trimmed. No vendor CAD redistributed.",
+      "historical_stock_reference": {
+        "source_url": "https://typeractive.xyz/products/5-pin-sockets",
+        "published_installation_mm": {
+          "female_socket_height": 5,
+          "male_spacer_height": 2,
+          "total": 7
+        }
+      },
+      "header_source_url": "https://suddendocs.samtec.com/catalog_english/tlw_th.pdf",
+      "part_numbers": [
+        "SLW-105-01-L-S",
+        "TLW-105-06-G-S"
       ],
-      "pin_diameter_assumption_mm": 0.6,
-      "status": "Retained female socket and moving male header modeled separately. Supplier provides installed height; conservative XY, internal mating, pin extent, material appearance and tolerances remain unqualified."
+      "socket_body_xy_mm": [
+        12.7,
+        2.54
+      ],
+      "header_body_xy_mm": [
+        12.7,
+        2.48
+      ],
+      "male_post_mm": 0.635,
+      "nominal_display_hole_mm": 0.9
     }
   ]
 }

@@ -17,7 +17,7 @@ This is a planning BOM for the revI mechanical study and PCB outline. **It is no
 | [1N4148W SMD diodes](https://typeractive.xyz/products/smd-diodes) | **4 packs of 10** | SOD-123 family; verify supplied marking/footprint |
 | [Machine sockets and pins](https://typeractive.xyz/products/machine-sockets-and-pins) | **2 kits** | Store uses Mill-Max **310**, study references **315**; substitution needs height/pin check |
 | [EZ-Solder sockets/headers](https://typeractive.xyz/products/ez-machine-sockets-and-headers) | **2 kits**, instead of the preceding kits | Easier header handling; taller, not qualified in this stack |
-| [5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) | Optional **1 pack of 2** | Extras; nice!view includes sockets/pins. The model now uses the published 5 mm socket + 2 mm male spacer height; fit remains unqualified |
+| [5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) | Optional **1 pack of 2** | Extras; nice!view includes sockets/pins. Stock alternative for the previous taller stack; the 13.39 mm prototype uses the Samtec candidate below |
 | [110 mAh battery](https://typeractive.xyz/products/lithium-battery-110mah) | **2**, connector variant to resolve | Supported nominal envelope in the shared 12.5 mm aperture; physical pack fit pending |
 | [Battery jack](https://typeractive.xyz/products/battery-jack) | **1 pack of 2** | JST S2B-PH-K-S side-entry reference; 2 mm nominal footprint |
 | [Power switch](https://typeractive.xyz/products/power-switch) | **1 pack of 2** | Alps part differs from the C&K reference; footprint change/check required |
@@ -73,7 +73,7 @@ An exact Pro Red manufacturer PDF has not been verified here; the family page is
 
 **Typeractive alternative: 301230, 110 mAh, 3 × 12 × 30 mm.** [Product and connector variants](https://typeractive.xyz/products/lithium-battery-110mah). The black PH connector version has shorter leads; the white version includes a mating wired jack. No cell-specific datasheet is linked on the listing.
 
-**Both profiles use the same case, PCB opening, cradle and cage.** Select the battery in **Battery** in the sidebar in the viewer; configuration JSON and FreeCAD retain the choice per half.
+**Both profiles use the same case, PCB opening, open-bottom locator and cage.** The cell rests at **Z = 1.4 mm** on the case floor; there is no printed saddle beneath it. Select the battery in **Battery** in the sidebar in the viewer; configuration JSON and FreeCAD retain the choice per half.
 
 | Profile | Nominal W × L × H | Aperture side gap | Gap below rigid cage roof |
 |---|---|---:|---:|
@@ -92,7 +92,9 @@ These are nominal clearances, not maximum finished-pack tolerances. Confirm prot
 
 <a href="https://typeractive.xyz/products/5-pin-sockets"><img src="https://cdn.shopify.com/s/files/1/0618/5674/3655/products/nice-view-sockets.jpg?v=1671232737" width="210" alt="5-Pin Sockets — supplier product photo"></a>
 
-**Display connectors:** 2 × 5-position sockets and 10 matching pins. [Typeractive 5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) are the included nice!view type, sold separately in pairs; 5 mm socket plus 2 mm display pin gives a stated 7 mm installation height. The revised reference puts the display PCB **7 mm above the main PCB top**. That matches the stated installation height; actual pin engagement and solder tolerances still need measurement. No separate connector datasheet is linked.
+**Current low-stack display connector candidate:** 2 × Samtec **SLW-105-01-L-S** sockets and 2 × **TLW-105-06-G-S** headers. Their 4.57 + 1.52 mm bodies give a nominal **6.09 mm** board separation. Manufacturer drawings: [SLW](https://suddendocs.samtec.com/catalog_english/slw.pdf) and [TLW](https://suddendocs.samtec.com/catalog_english/tlw_th.pdf). This is a dimensional candidate, not a purchasable qualified BOM: stock was not checked, and the toleranced square post must be matched against measured nice!view holes. The display solder tails require trimming. [Exact assumptions and service well](level-stack.md).
+
+**Stock alternative:** [Typeractive 5-pin sockets](https://typeractive.xyz/products/5-pin-sockets), included with nice!view and sold separately in pairs. Their stated 5 + 2 mm installed height belongs to the previous taller stack; they cannot simply replace the Samtec candidate inside the lowered frame.
 
 [No-solder spring headers](https://typeractive.xyz/products/no-solder-spring-headers) require the supplier’s specified **0.8–0.9 mm holes** and different installed heights. They are not qualified for the current Flan36 hole/contact geometry. Do not buy them as an assumed shortcut.
 
@@ -121,9 +123,9 @@ These are nominal clearances, not maximum finished-pack tolerances. Confirm prot
 | Part | Quantity | Files / options |
 |---|---:|---|
 | KLP Lamé keycaps | 36 | [Variant guide](customize.md); [38 source STLs](../keycaps/variants); original preset: 28 Normal + 2 Homing + 6 Thumb |
-| Case bases and key plates | 2 each | [Editable CAD, STEP and STL](cad.md) |
-| Display frames | 2 | Handheld, Retro TV, Cyberpunk or three plain styles; separate color per half |
-| Battery cradles and retainers | 2 each | Low saddle and rigid cage; cage feet captured under PCB |
+| Case bases and key plates / upper shells | 2 each | Level, Solid, Color rim or Terrace; [editable CAD, STEP and STL](cad.md) |
+| Display frames | 2 | Seven decorated designs or three plain styles, all flush at 13.39 mm; separate color per half |
+| Battery locators and retainers | 2 each | Open-bottom locator and rigid cage; cell on the floor, cage feet captured under PCB |
 | Controller supports and display sleds | 2 each | Independent from the cover |
 | Printed spacers/washers | 6 | Check printed dimensions and screw fit |
 

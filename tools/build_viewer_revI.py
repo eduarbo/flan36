@@ -29,7 +29,7 @@ groups = {
     'battery':('Battery · two profiles','battery','#b8c1bf',20),
     'mcu':('nice!nano v2 · nominal model','mcu','#1b433b',36),
     'display':('nice!view · nominal model','display','#172c2a',52),
-    'cradle':('Insulating cradle','supports','#78908a',20),
+    'cradle':('Open-bottom battery locator','supports','#78908a',20),
     'battery-retainer':('PCB-captured cage','supports','#78908a',24),
     'mcu-riser':('Controller support','supports','#647d78',36),
     'display-sled':('Display support','supports','#526e67',52),
@@ -171,7 +171,7 @@ for side,keys in layout['halves'].items():
         add(f'Foot {i+1}',side,'fasteners','#29352e',[offset+(x if side=='left' else 160-x),-.6,y],0,
             primitive={'kind':'cylinder','radius':3,'height':1.2})
     cx=122.8 if side=='left' else 37.2
-    add('LCD · illustrative content',side,'display','#c5d1ba',[offset+cx,model['parameter_values_mm']['DisplayBottom']+1.92,33.8],52,
+    add('LCD · illustrative content',side,'display','#c5d1ba',[offset+cx,model['parameter_values_mm']['DisplayBottom']+1.92,33.9],52,
         primitive={'kind':'screen','size':[10.744,.025,25.28],'text':'BASE / BLE / L' if side=='left' else 'LINK / BAT / R'})
 
 for v in catalog['variants']:

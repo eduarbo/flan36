@@ -28,14 +28,17 @@ def topo(t):
  edges=Counter(tuple(sorted((ids[i],ids[(i+1)%3]))) for ids in faces for i in range(3))
  return {'vertices':len(vertices),'edges':len(edges),'open_or_nonmanifold_edges':sum(v!=2 for v in edges.values()),'signed_volume_mm3':float(np.einsum('ij,ij->i',t[:,0],np.cross(t[:,1],t[:,2])).sum()/6)}
 results=[]
-for filename,expected in [('complete.zip',19),('left-shells.zip',3)] + [(style+'-shells.zip',3) for style in ('handheld','tv','cyberpunk','cartridge','arcade','mecha','kintsugi')]:
+for filename,expected in [('complete.zip',19),('left-shells.zip',3),('level-shells.zip',6)] + [(style+'-shells.zip',3) for style in ('handheld','tv','cyberpunk','cartridge','arcade','mecha','kintsugi')]:
  z=zipfile.ZipFile(OUT/filename);manifest=json.loads(z.read('manifest.json'));config=json.loads(z.read('Flan36-config.json'));assert config==manifest['configuration'];assert len(manifest['parts'])==expected
- assert all(p['side']=='left' for p in manifest['parts']) if filename!='complete.zip' else True
- if filename not in ('complete.zip','left-shells.zip'):
+ assert all(p['side']=='left' for p in manifest['parts']) if filename not in ('complete.zip','level-shells.zip') else True
+ if filename=='level-shells.zip':
+  assert {p['side'] for p in manifest['parts']}=={'left','right'}
+  assert all(c['style']=='level' and c['cover'] for c in config['cases'].values())
+ if filename not in ('complete.zip','left-shells.zip','level-shells.zip'):
   style=filename.removesuffix('-shells.zip')
   assert config['frames']['left']['style']==style
   assert sum(p['id']=='left-frame-'+style for p in manifest['parts'])==1
- assert not any('right-frame' in p['id'] for p in manifest['parts'])
+ if filename!='level-shells.zip':assert not any('right-frame' in p['id'] for p in manifest['parts'])
  assert sum('washer' in p['id'] for p in manifest['parts'])==(6 if filename=='complete.zip' else 0)
  records=[]
  for p in manifest['parts']:

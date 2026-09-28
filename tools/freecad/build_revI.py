@@ -236,7 +236,7 @@ for side in ('left', 'right'):
             variant.ViewObject.ShapeColor=tuple(int(color[i:i+2],16)/255 for i in (1,3,5))
     for group,part_id in [('base','tray'),('plate','key-plate')]:
         active=doc.addObject('App::Link',prefix+('ActiveTray' if group=='base' else 'ActivePlate'))
-        active.setLink(doc.getObject(prefix+'Case_'+configuration['cases'][side]['style']+'_'+group))
+        active.setLink(doc.getObject(prefix+'Case_'+('solid' if configuration['cases'][side]['style']=='level' else configuration['cases'][side]['style'])+'_'+group))
         done(part_id,active,('Base' if group=='base' else 'Plate')+' · interchangeable','base' if group=='base' else 'plate',(.145,.205,.207),True)
         active.LinkedObject.ViewObject.ShapeColor=tuple(int(case_catalog['styles'][configuration['cases'][side]['style']][group+'_color'][i:i+2],16)/255 for i in (1,3,5))
         active.ViewObject.OverrideMaterial=False
@@ -478,9 +478,10 @@ for side in ('left', 'right'):
 doc.recompute()
 from switch_instances import ensure
 ensure(doc)
-import slim_stack,flush_frames
+import slim_stack,level_stack,flush_frames
 from configuration import apply as apply_configuration
 slim_stack.apply(doc)
+level_stack.apply(doc)
 flush_frames.apply(doc)
 apply_configuration(doc,configuration)
 A.setActiveDocument(doc.Name)

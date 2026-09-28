@@ -18,7 +18,7 @@ FreeCAD, the web viewer and the revI KiCad relative STEP models share this nomin
 
 The controller support has scalloped upper ledges. These keep clear of a 1.05 mm radius reserve around the underside pads. They do not establish solder tolerance or retention force.
 
-The revised nice!view PCB sits 7 mm above the main PCB, matching the stated Typeractive connector installation height. Actual contact engagement and solder tolerances remain unmeasured. [Stack dimensions and limits](../docs/slim-flush.md).
+The lowest modeled nice!view PCB sits 6.09 mm above the main PCB using a nominal Samtec SLW/TLW pair. The row follows the official 1.3 mm end offset. Commercial finished-hole/post fit, actual mating and solder tolerances remain unqualified. The stock 7 mm pair belongs to the preceding taller reference. [Stack dimensions and limits](../docs/level-stack.md).
 
 ![Nominal nice!nano v2 reconstruction in the explorer](../docs/images/revI-nano-v2.png)
 

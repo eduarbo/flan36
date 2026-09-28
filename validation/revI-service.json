@@ -36,29 +36,29 @@
         "mecha": [],
         "kintsugi": []
       },
-      "cage_capture_overlap_at_0_2mm_lift_mm3": 0.07800000000000151,
+      "cage_capture_overlap_at_0_2mm_lift_mm3": 0.07800000000000185,
       "cell_translation_bound_vs_leads_mm3": {
         "301230": [
           {
             "lead": "L_SlimWire301230_0",
-            "attachment_overlap_mm3": 0.565487,
+            "attachment_overlap_mm3": 0.56548667764616,
             "outside_attachment_overlap_mm3": 0.0
           },
           {
             "lead": "L_SlimWire301230_1",
-            "attachment_overlap_mm3": 0.565487,
+            "attachment_overlap_mm3": 0.5654866776461601,
             "outside_attachment_overlap_mm3": 0.0
           }
         ],
         "adafruit-1570": [
           {
             "lead": "L_WireStudy0",
-            "attachment_overlap_mm3": 0.424115,
+            "attachment_overlap_mm3": 0.42411500823462,
             "outside_attachment_overlap_mm3": 0.0
           },
           {
             "lead": "L_WireStudy1",
-            "attachment_overlap_mm3": 0.424115,
+            "attachment_overlap_mm3": 0.42411500823461934,
             "outside_attachment_overlap_mm3": 0.0
           }
         ]
@@ -129,29 +129,29 @@
         "mecha": [],
         "kintsugi": []
       },
-      "cage_capture_overlap_at_0_2mm_lift_mm3": 0.0780000000000013,
+      "cage_capture_overlap_at_0_2mm_lift_mm3": 0.07800000000000178,
       "cell_translation_bound_vs_leads_mm3": {
         "301230": [
           {
             "lead": "R_SlimWire301230_0",
-            "attachment_overlap_mm3": 0.565487,
+            "attachment_overlap_mm3": 0.5654866776461608,
             "outside_attachment_overlap_mm3": 0.0
           },
           {
             "lead": "R_SlimWire301230_1",
-            "attachment_overlap_mm3": 0.565487,
+            "attachment_overlap_mm3": 0.5654866776461607,
             "outside_attachment_overlap_mm3": 0.0
           }
         ],
         "adafruit-1570": [
           {
             "lead": "R_WireStudy0",
-            "attachment_overlap_mm3": 0.424115,
+            "attachment_overlap_mm3": 0.42411500823462056,
             "outside_attachment_overlap_mm3": 0.0
           },
           {
             "lead": "R_WireStudy1",
-            "attachment_overlap_mm3": 0.424115,
+            "attachment_overlap_mm3": 0.42411500823462045,
             "outside_attachment_overlap_mm3": 0.0
           }
         ]
@@ -215,7 +215,7 @@
     },
     "magnet-frame": {
       "path": "mechanical/revI/coupon-magnet-frame.stl",
-      "sha256": "58fb07056dd7f6a577d53024892eb5242a69270ae5b01d93178e12b9e686fe6f"
+      "sha256": "09f0c869fcae77114b4b15c48035786933dcdc830a06f5af4ecf6552f4aeda97"
     },
     "m2-thread": {
       "path": "mechanical/revI/coupon-m2-thread.stl",
@@ -223,6 +223,6 @@
     }
   },
   "physical_acceptance": false,
-  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
-  "checker_sha256": "a7db1c455ff39e0e44b3c15bccd84c77f12fb4dde2d7f516e04375d1e1c98e86"
+  "source_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
+  "checker_sha256": "010fcf17ba8c97e490cbfdedd1f5e01e9034207aa3b484c72b2757fd7832679d"
 }

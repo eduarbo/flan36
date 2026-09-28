@@ -1,0 +1,276 @@
+{
+  "schema": "flan36-level-review-1",
+  "scope": "Independent read-only design review; digital implementation allowed, physical acceptance withheld",
+  "baseline": {
+    "head": "9ab4b181f77d0f3ffc28bda0cb3c059006713c89",
+    "status": "",
+    "sha256": {
+      "tools/freecad/build_revI.py": "87d0a41ce387a45cab7b88ec7b6f11dfbfb10cd4d0ea7da110f9d6d8799a4ab0",
+      "tools/freecad/slim_stack.py": "9c50f62fdf4f88099499543369d1508178453ebbc08d46fd67ff50a429337331",
+      "tools/freecad/components.py": "b467197a100a3b9dd45fae34603c16801e98706d23bd7fca38d1e5a60c0d4dd9",
+      "tools/freecad/flush_frames.py": "82d880663bed2f69800f0ecf7bc0e564c32c8954d08a05f418b4edca71c7092c",
+      "tools/freecad/configuration.py": "378775f2192dcb080495a182db18964024abdddcff5eef79f7881dcdf8f847d4",
+      "tools/freecad/export_revI.py": "05e9352fd6003c04869729cb88caf10aea687f7370f85e9b1b28ac2022f80475",
+      "design/batteries.json": "1c4d2037b6fb04ea7aab6ba1d2f780eda9d886ebf8dd1c403c2721743d0424ff",
+      "design/cases.json": "f84fefc1b6caf551a491c7cf6d29c6dd999654997655fb22d58748e5da44606d",
+      "design/layout.json": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3",
+      "design/revI-profiles.json": "1320cd0423afc35282d9335610abc0d7cab12351e9e626a31c70808b01af4d73",
+      "design/revI-frame-profiles.json": "9f75760ab53bfb554123ddc5223816a5177c9c7478eabad4337b841df38d874c",
+      "docs/slim-flush.md": "444731048afed14d9ce9c4867a1047c62897c8a1547c918748458e4a0ebec83d",
+      "docs/parts.md": "f9393948d0e6fae5a343751a242417d158ca1c22798af982765f66c6660d7349",
+      "validation/revI-mechanical.json": "46af602c752d0988b41ea862c20cfa9c905a637b488b6ae57b35fbc485fed54a",
+      "mechanical/revI/Flan36.FCStd": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc"
+    }
+  },
+  "reviewers": [
+    {
+      "schema_version": 1,
+      "task_id": "flan36-level-case-domain-constructive-20260927",
+      "run_id": "flan36-level-domain-20260927",
+      "provider": "codex-app-subagent",
+      "role": "domain_constructive",
+      "role_assignment_sha256": "010281f6f102a5d67a28a5b17ba1bf77e74fdbc29f5a1c03cf070276be20cf42",
+      "status": "completed",
+      "summary": "Revisi\u00f3n independiente de dise\u00f1o completada. Recomiendo estudiar la propuesta de marco y vidrio a 13.39 mm como prototipo digital nominal, con bater\u00eda sobre el suelo a 1.4 mm y cubierta superior desmontable nivelada. La reducci\u00f3n propuesta es de 1.41 mm respecto a 14.8 mm. La recomendaci\u00f3n no constituye aceptaci\u00f3n geom\u00e9trica del candidato ni compatibilidad f\u00edsica verificada.",
+      "findings": [
+        {
+          "code": "NOMINAL_1339_STACK_SUPPORTED",
+          "claim": "La pareja Samtec SLW/TLW aporta una base dimensional documentada: cuerpo de socket de 4.57 mm m\u00e1s aislante de header de 1.52 mm producen 6.09 mm entre placas. Desde PCB principal a 5.4 mm, el PCB de pantalla queda a 11.49 mm y el vidrio nominal a 13.39 mm. El poste de 2.67 mm est\u00e1 dentro del intervalo declarado de inserci\u00f3n de 2.16\u20132.92 mm. Confianza alta en esta aritm\u00e9tica nominal.",
+          "evidence": [
+            "https://suddendocs.samtec.com/catalog_english/slw.pdf",
+            "https://suddendocs.samtec.com/catalog_english/tlw_th.pdf",
+            "tools/freecad/components.py: niceview(), PCB de 1 mm y vidrio de 0.9 mm."
+          ]
+        },
+        {
+          "code": "BATTERY_FLOOR_AND_MCU_REDUCTION",
+          "claim": "Bajar la bater\u00eda de 2.0 a 1.4 mm eliminando material bajo la celda, y bajar la jaula 0.6 mm conservando sus pies, es una alternativa nominal coherente. El MCU propuesto a 8.2 mm deja 0.387 mm sobre el cuerpo del socket modelado. Deben comprobarse retenci\u00f3n, aislamiento, soldaduras, cables y desmontaje. No hay engagement f\u00edsico medido.",
+          "evidence": [
+            "tools/freecad/build_revI.py: Floor=1.4 mm, BatteryBottom previo=2.0 mm y socket MCU de 2.413 mm sobre PCBTop=5.4 mm.",
+            "design/batteries.json: perfiles nominales Adafruit 1570 y 301230.",
+            "Propuesta revisada: conservaci\u00f3n de ambas bater\u00edas, apoyos desmontables y rutas completas de 105 mm."
+          ]
+        },
+        {
+          "code": "REMOVABLE_LEVEL_SHELL",
+          "claim": "Una cubierta superior desmontable con huecos derivados de las envolventes de las caps permite estudiar la ocultaci\u00f3n de switches manteniendo centros, \u00e1ngulos y montaje Choc. Debe conservarse la geometr\u00eda de retenci\u00f3n de la placa original. Los huecos de switch de 14\u00d714 mm no sustituyen las reservas de las KLP Lam\u00e9.",
+          "evidence": [
+            "tools/freecad/build_revI.py: placa de Z=6.3..7.6 mm y cortes de switch de 14\u00d714 mm.",
+            "design/layout.json: 36 centros y \u00e1ngulos conservados.",
+            "Propuesta revisada: cubierta nivelada con huecos combinados o borde perimetral y servicio desmontable."
+          ]
+        },
+        {
+          "code": "MODULE_HOLE_FIT_REMAINS_UNQUALIFIED",
+          "claim": "La compatibilidad entre las familias Samtec no demuestra que el poste entre en el agujero del nice!view adquirido. El dibujo oficial no dimensiona ese di\u00e1metro. La representaci\u00f3n nominal existente no autoriza ampliar ni taladrar la placa comercial. La conclusi\u00f3n requiere dimensiones toleranciadas o medici\u00f3n del m\u00f3dulo real.",
+          "evidence": [
+            "https://nicekeyboards.com/static/2f2592ff1ff8021932814b20cb76e3c4/a6d36/niceview_dimensions.png",
+            "https://suddendocs.samtec.com/catalog_english/tlw_th.pdf",
+            "https://typeractive.xyz/products/no-solder-spring-headers"
+          ]
+        },
+        {
+          "code": "HEADER_AND_ROOF_CLEARANCE_REQUIRED",
+          "claim": "La reserva sobre el display debe incluir terminal y soldadura completos. Con PCB de pantalla a 11.49 mm, espesor de 1 mm y cola sobresaliente de 0.3 mm, el terminal alcanza 12.79 mm. Una cubierta de 0.6 mm bajo el techo de 13.39 mm llega exactamente a esa cota y no deja holgura. Deben verificarse alivios y respaldo de cada decoraci\u00f3n.",
+          "evidence": [
+            "C\u00e1lculo: 11.49+1.00+0.30=12.79 mm y 13.39-0.60=12.79 mm.",
+            "tools/freecad/components.py: espesor nominal de PCB nice!view.",
+            "Propuesta revisada: recorte de terminal y alivios locales del marco."
+          ]
+        },
+        {
+          "code": "FULL_GEOMETRY_ACCEPTANCE_PENDING",
+          "claim": "La altura propuesta solo puede aceptarse digitalmente despu\u00e9s de comprobar interferencias, espesores, continuidad de s\u00f3lidos, ambos perfiles de bater\u00eda, cables y servicio. La cubierta necesita barridos continuos de todas las variantes y orientaciones KLP admitidas hasta 3.5 mm de recorrido conservador. Las comprobaciones anteriores exclu\u00edan las mallas de switches y caps.",
+          "evidence": [
+            "validation/revI-mechanical.json: alcance de la comprobaci\u00f3n hist\u00f3rica.",
+            "https://www.kailhswitch.com/info/kailh-kl-switches-pg1350-series-23772219.html",
+            "docs/slim-flush.md: l\u00edmites de aceptaci\u00f3n digital y f\u00edsica."
+          ]
+        }
+      ],
+      "recommendations": [
+        "Proceder con un candidato digital aislado a 13.39 mm, preservando la referencia anterior y sin declararlo m\u00ednimo f\u00edsico.",
+        "Mantener ambos perfiles de bater\u00eda, m\u00f3dulos reemplazables, hotswap, 36 centros y \u00e1ngulos, frames magn\u00e9ticos y variantes KLP admitidas.",
+        "Verificar en el candidato guardado todos los cruces entre cubierta, frames, componentes, cables y barridos de caps, adem\u00e1s del desmontaje completo.",
+        "Modelar terminales y soldadura sin reducir sus reservas para obtener artificialmente un resultado sin colisiones.",
+        "Mantener expl\u00edcitamente pendiente la compatibilidad del agujero del nice!view y el engagement real. Mediciones incompatibles o una colisi\u00f3n del candidato falsificar\u00edan la soluci\u00f3n propuesta."
+      ],
+      "changed_paths": [],
+      "validations": [
+        {
+          "name": "Contraste del estado inicial con los 15 hashes enumerados",
+          "status": "passed"
+        },
+        {
+          "name": "Lectura de par\u00e1metros nativos y geometr\u00eda fuente autorizada",
+          "status": "passed"
+        },
+        {
+          "name": "Consulta de cat\u00e1logos primarios Samtec y referencias de m\u00f3dulos",
+          "status": "passed"
+        },
+        {
+          "name": "C\u00e1lculos independientes de altura, inserci\u00f3n y reserva sobre terminales",
+          "status": "passed"
+        },
+        {
+          "name": "Aceptaci\u00f3n completa del nuevo candidato CAD",
+          "status": "not_run"
+        },
+        {
+          "name": "Medici\u00f3n de interfaces y aceptaci\u00f3n f\u00edsica",
+          "status": "not_run"
+        }
+      ],
+      "defects": [
+        {
+          "severity": "MEDIUM",
+          "code": "NICEVIEW_HEADER_HOLE_UNQUALIFIED"
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "HEADER_SOLDER_ROOF_ALLOWANCE_REQUIRED"
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "FULL_CANDIDATE_GEOMETRY_ACCEPTANCE_PENDING"
+        }
+      ],
+      "blockers": [],
+      "next_actor": "personal-ops"
+    },
+    {
+      "schema_version": 1,
+      "task_id": "flan36-level-case-adversarial-risk-20260927",
+      "run_id": "flan36-level-risk-20260927",
+      "provider": "codex-app-subagent",
+      "role": "adversarial_risk",
+      "role_assignment_sha256": "36c39796d7369bf5b9733b74943eec245af811e3f9c1e1a36d7bad5282a6f8b9",
+      "status": "completed",
+      "summary": "The independent design review supports proceeding with the 13.39 mm proposal as a nominal digital prototype, including floor-mounted batteries and a removable level shell. The specified connector pair supports the nominal stack arithmetic. This completes advisory review only; full geometry acceptance and physical interface qualification remain required.",
+      "findings": [
+        {
+          "code": "SUPPORTED_NOMINAL_STACK",
+          "claim": "The specified SLW/TLW mating pair supports a nominal 6.09 mm separation, placing the display underside at 11.49 mm and modeled glass/frame top at 13.39 mm, a 1.41 mm reduction from 14.8 mm.",
+          "evidence": [
+            "Samtec SLW catalog lists TLW as a mating family, a 4.57 mm body and insertion range 2.16\u20132.92 mm: https://suddendocs.samtec.com/catalog_english/slw.pdf",
+            "Samtec TLW catalog specifies the proposed 1.52 mm insulator and 2.67 mm mating post: https://suddendocs.samtec.com/catalog_english/tlw_th.pdf",
+            "Arithmetic: 5.4+4.57+1.52+1.9=13.39 mm."
+          ]
+        },
+        {
+          "code": "FLOOR_BATTERY_CONDITIONAL",
+          "claim": "Lowering both battery profiles to the 1.4 mm case floor and lowering the cage roof by 0.6 mm is suitable for geometric evaluation. Preserve captured feet, retention, insulation and continuous lead paths to the unchanged PH terminals.",
+          "evidence": [
+            "Reviewed baseline used BatteryBottom=2.0 mm and Floor=1.4 mm.",
+            "Both Adafruit 1570 and 301230 remain required.",
+            "Finished-pack tolerances, case-floor contact, insulation and lead strain were not physically measured."
+          ]
+        },
+        {
+          "code": "REMOVABLE_LEVEL_SHELL",
+          "claim": "A removable upper shell can hide switches while preserving the existing switch plate and key centers. Its openings must clear all admitted cap variants and rotations through the proposed 3.5 mm travel reserve, with merged openings where necessary.",
+          "evidence": [
+            "Reviewed layout contains 18 key centers per half.",
+            "The existing plate spans Z=6.3\u20137.6 mm.",
+            "The original mechanical receipt excludes switch/keycap meshes and does not establish full-travel clearance.",
+            "Existing display, controller, battery-plug and switch extraction paths must include the new shell or explicitly remove it first."
+          ]
+        },
+        {
+          "code": "INTERFACES_REMAIN_UNQUALIFIED",
+          "claim": "Commercial nice!view hole diameter, actual controller engagement, solder envelopes and printed backing strength remain unverified. Correct the display-row registration from the official drawing, but do not enlarge a purchased board or claim pin fit from the nominal CAD hole.",
+          "evidence": [
+            "The reviewed nice!view drawing establishes the proposed row location but does not specify drilled-hole diameter.",
+            "Proposed alignment is module origin 16.1 mm plus local row 34.7 mm equals J2 row 50.8 mm.",
+            "The existing nominal 0.9 mm module-hole model is not a measurement.",
+            "Lower controller placement and locally reduced frame backing require explicit clearance and strength qualification."
+          ]
+        },
+        {
+          "code": "ACCEPTANCE_STILL_REQUIRED",
+          "claim": "No unresolved material objection prevents contained digital implementation. Acceptance of 13.39 mm requires saved-geometry checks covering connector bodies and tails, both batteries, full wire routes, cap travel, service paths and all ten frame styles with valid flush material volumes.",
+          "evidence": [
+            "The reviewed proposal was not an accepted candidate geometry.",
+            "The original receipt cannot establish the effects of the proposed shell and deeper stack.",
+            "Independent review verified the enumerated baseline hashes without changing files."
+          ]
+        }
+      ],
+      "recommendations": [
+        "Proceed with the contained nominal prototype and retain every original module, battery, cap, magnetic-frame and service requirement.",
+        "Accept the proposed height only after full geometry checks and saved-file readback pass.",
+        "Keep physical fit, finger access, retention, insulation and connector engagement explicitly unqualified until measured and tested.",
+        "Do not describe the proposal as an absolute physical minimum or manufacturing-ready assembly."
+      ],
+      "changed_paths": [],
+      "validations": [
+        {
+          "name": "Baseline artifact hashes",
+          "status": "passed"
+        },
+        {
+          "name": "Primary connector mating specifications and nominal stack arithmetic",
+          "status": "passed"
+        },
+        {
+          "name": "Proposed full geometry acceptance",
+          "status": "not_run"
+        },
+        {
+          "name": "Physical interface and printed prototype qualification",
+          "status": "not_run"
+        }
+      ],
+      "defects": [
+        {
+          "severity": "MEDIUM",
+          "code": "INTERFACES_REMAIN_UNQUALIFIED"
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "ACCEPTANCE_STILL_REQUIRED"
+        }
+      ],
+      "blockers": [],
+      "next_actor": "personal-ops"
+    }
+  ],
+  "dispositions": [
+    {
+      "finding": "Commercial nice!view finished-hole diameter and toleranced .025-inch square-pin fit are unknown.",
+      "disposition": "Keep .9 mm hole as explicit unmeasured nominal; no drilling or hardware fit claim."
+    },
+    {
+      "finding": "A 1.2 mm roof would intersect the PCB and solder at 13.39 mm.",
+      "disposition": "Local PCB undercut and open header service well; preserve .8 mm backing requirement where .4 mm inlays exist."
+    },
+    {
+      "finding": "Stored battery leads must descend without disconnecting fixed PH terminals.",
+      "disposition": "Continuous radius-controlled 3D ramp; retain 105 mm length and verify terminal positions."
+    },
+    {
+      "finding": "Display row was modeled 2.4 mm away from J2.",
+      "disposition": "Use official 1.3 mm end offset and common 50.8 mm row; add registration acceptance."
+    },
+    {
+      "finding": "Raised shell can obstruct cap travel and service.",
+      "disposition": "Conservative union of all admitted cap variants and rotations over full3.5 mm travel; preserve removable switch plate and existing3 mounting screws."
+    }
+  ],
+  "implementation_corrections": [
+    {
+      "finding": "Fixed socket tails were initially too short in the candidate model",
+      "disposition": "Full 2.92 mm tail preserved to Z2.48; actual exported native checked."
+    },
+    {
+      "finding": "Lowered MCU support and battery locator intersected socket body and lead",
+      "disposition": "Full-height ledges narrowed laterally; local open wire exit added. Final nominal check has no intersections."
+    },
+    {
+      "finding": "Axis-aligned thumb switch withdrawal boxes created false intersections",
+      "disposition": "Continuous withdrawal retains each rotated source-mesh bound; no cap/switch center, angle or geometry changed."
+    }
+  ],
+  "physical_acceptance": false
+}

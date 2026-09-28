@@ -10,6 +10,10 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'tools/freecad'))
 from slim_stack import overlap, cell_motion_checks
 G.showMainWindow();G.getMainWindow().hide();doc=A.openDocument(str(ROOT/'mechanical/revI/Flan36.FCStd'));doc.recompute()
+if doc.getObject('LevelStackReceipt'):
+    from check_level_stack import AnalyticCollisionCache,cell_motion
+    overlap=AnalyticCollisionCache()
+    cell_motion_checks=cell_motion
 def log(*args):sys.__stdout__.write(' '.join(map(str,args))+'\n');sys.__stdout__.flush()
 def volume(a,b):
     return overlap(a,b)

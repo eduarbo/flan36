@@ -1,5 +1,5 @@
 {
-  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "source_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
   "model_identity_without_reflection": true,
   "nano_symmetry_difference_after_translation_mm3": 0.0,
   "checks": [
@@ -10,7 +10,7 @@
         34.624,
         3.200000000000001
       ],
-      "positive_board_support_area_mm2": 30.815158172592753,
+      "positive_board_support_area_mm2": 16.181716155986663,
       "solder_reserve_intersection_mm3": 0.0,
       "mcu_riser_intersection_mm3": 0.0,
       "library_material_counts": {
@@ -25,7 +25,7 @@
         34.624,
         3.200000000000001
       ],
-      "positive_board_support_area_mm2": 30.8151581725947,
+      "positive_board_support_area_mm2": 16.181716155987115,
       "solder_reserve_intersection_mm3": 0.0,
       "mcu_riser_intersection_mm3": 0.0,
       "library_material_counts": {
@@ -35,7 +35,7 @@
     }
   ],
   "switch_instances": 36,
-  "display_pcb_separation_mm": 7.0,
+  "display_pcb_separation_mm": 6.09,
   "remaining": [
     "Measured connector contacts, pin engagement and solder tolerances",
     "Hotswap socket assembly registration",

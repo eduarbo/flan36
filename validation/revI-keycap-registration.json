@@ -24,9 +24,9 @@
   "geometry_changed": false,
   "checker_sha256": "d2eba98d5fa6444f8485730c823696b8967b56b5a9334d6923b82e74934f5558",
   "sources": {
-    "keycaps/catalog.json": "a2f461be0342cb75b2595c3b8fd90048ad81833cb8656094b1cd375c61afbf04",
-    "build/viewer-scene.json": "b11aa1bb68c098d9112309d22cf471b7f36d5b7ad6b0e9b8a06b5b1bc040da4f",
-    "mechanical/revI/Flan36.FCStd": "621d03fd572bf04bd8eeaa452c1dbc56f0ef23d16b875e03b37bfdb2cdccd6c2",
+    "keycaps/catalog.json": "c69b7c0bdbe38e40edcc53ef3383dfd54486e8e4660b9b790a1f655681205380",
+    "build/viewer-scene.json": "eac4d66dd520164c278491a9644a0dcbacb308f34c8cf612f19bdc6db549e659",
+    "mechanical/revI/Flan36.FCStd": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
     "keycaps/variants/Choc_Stem_Choc_Size_Normal_90deg.stl": "a6deb4abac72914e12b16a10061c65f84d15fd3e8990c98490443289f8047eeb",
     "keycaps/variants/Choc_Stem_Choc_Size_Normal_Homing_90deg.stl": "2cb6e93f80298eb185f81dd4d19ee3efa76542b7f31994285478d6fd06616280",
     "keycaps/variants/Choc_Stem_Choc_Size_Normal_Tilted_90deg.stl": "c75c5c245360a674c3456749d278aad42b13814ca8aaa4ce9fce6f26e8dbf004",
@@ -69,5 +69,5 @@
     "mechanical/revI/component-choc-body-0.stl": "9229bc3d2f35b843fc49f2466de5a7721d0564605c6f74f6170882b607ced273"
   },
   "section_image": "docs/images/revI-keycap-registration.png",
-  "section_image_sha256": "28adae8969b55df8b875f61701589647ca2ee5216e2a7b42570ed9e5855a68ff"
+  "section_image_sha256": "42554b895e3efe2f8405287f97c7cde9f2657ec27292bd8842eb55dd12a8fee0"
 }

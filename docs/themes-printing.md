@@ -7,7 +7,7 @@ Open [the 3D explorer](https://eduarbo.github.io/flan36/), choose **Themes**, an
 1. Choose **Both halves**, **Left** or **Right**.
 2. Pick a theme. It changes colors while preserving shapes, keycap geometry and installed covers.
 3. In **Base**, edit the base/rim and key plate. In **Frame**, edit the body and flush inlays. Every color also has a HEX field and **Copy** button.
-4. Enable **Match frame and rim** for continuous color. Editing either linked color updates the other.
+4. Enable **Match frame and rim** for continuous color. Editing either linked color updates the other; with Level, the upper shell joins the linked base and frame color.
 5. Use **Files → Download print kit** for the selected parts.
 
 Handheld, Retro TV, Cyberpunk, Cartridge, Arcade, Mecha and Kintsugi have four color regions. Smooth, Bevel and Facet use a single body color. Original design palettes remain available through **Restore design colors**.
@@ -22,9 +22,9 @@ Eye, Solo, camera and exploded views are inspection controls. They do not remove
 
 ## Printable parts and joining
 
-**Shells** exports each selected case, key plate and installed frame. **Complete printed set** also includes the battery saddle, cage, controller support, display support and three printed washers per half. Commercial parts and KLP keycaps are excluded; [keycap sources and fit guidance](customize.md#klp-lamé) remain separate.
+**Shells** exports each selected case, key plate and installed frame. For Level, the switch-retaining plate and raised upper shell export as one removable part. **Complete printed set** also includes the open-bottom battery locator, cage, controller support, display support and three printed washers per half. Commercial parts and KLP keycaps are excluded; [keycap sources and fit guidance](customize.md#klp-lamé) remain separate.
 
-The [support study](slim-mount-study.md) includes experimental plates with integrated washers and optional bases with integrated saddles. These reduce loose parts, not height, and are downloaded separately from the reference print kit.
+The [historical support study](slim-mount-study.md) includes experimental plates with integrated washers and bases with integrated saddles. These reduce loose parts, not height. They predate the current floor-mounted battery and Level shell; their separate downloads are comparison geometry, not replacements in the current print kit.
 
 - The structural case uses three M2 × 6 and two M2 × 4 screws per half. Tap the 1.7 mm pilot holes to M2.
 - Each installed frame uses three captive Ø2 × 3 mm magnets and three Ø2 × 4 mm ferromagnetic pins.

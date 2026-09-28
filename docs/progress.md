@@ -12,15 +12,23 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
-## Current revision I — slimmer stack and flush decoration
+## Current revision I — floor battery and Level case
+
+The glass, frame and new **Level** upper shell share a **13.39 mm** plane: **1.41 mm lower** than the previous frame. Both batteries sit directly on the 1.4 mm case floor. The nice!nano PCB is at 8.2 mm and the nice!view PCB at 11.49 mm. Key centers and the selected caps' 17.87 mm height are unchanged.
+
+Level covers switch bodies using the existing removable plate and its three screws. Its openings reserve the full 3.5 mm cap travel. Ten flush frames, both battery profiles and sixteen linked color themes remain available. [Dimensions and connector qualification](level-stack.md) · [Current digital delivery checks](../validation/revI-level-delivery.json).
+
+The Samtec display pair is dimensioned as a nominal candidate. Finished nice!view hole fit, actual engagement, printed strength and physical assembly remain unqualified. The boards remain unrouted.
+
+The entries below describe their historical snapshots. Current files may supersede their geometry; original receipts retain the hashes of the files tested at the time.
+
+## Earlier revision I — slimmer stack and flush decoration
 
 The electronics cover now targets **14.8 mm** from the case underside, with a **12.4 mm display PCB datum**. The battery moves 0.8 mm toward USB without rotation. A lateral PH connector, retained display socket and recessed underside reset make the interfaces explicit. Both Adafruit 1570 and 301230 have their own continuous nominal lead routes.
 
 Handheld, Retro TV, Cyberpunk, Cartridge, Arcade, Mecha and Kintsugi use **0.4 mm flush color volumes** with at least 0.8 mm nominal backing. The ten frame styles, 36 original key transforms, case contour and magnetic interface are preserved. Selected KLP caps still set the overall 17.87 mm height, excluding feet.
 
-[Design and service sequence](slim-flush.md) · [Current digital delivery checks](../validation/revI-slim-flush.json). Exact supplied parts, wire flex, printed fits and electrical operation remain unqualified.
-
-The entries below describe their historical snapshots. Current files may supersede their geometry; original receipts retain the hashes of the files tested at the time.
+[Design and service sequence](slim-flush.md) · [Historical digital delivery checks](../validation/revI-slim-flush.json). Exact supplied parts, wire flex, printed fits and electrical operation remain unqualified.
 
 ## Earlier revision I — keycap palettes and creative frames
 

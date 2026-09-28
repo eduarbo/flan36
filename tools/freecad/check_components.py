@@ -17,13 +17,13 @@ for side,prefix in [('left','L_'),('right','R_')]:
   materials[part]=expected
  assert all(abs(a-v)<1e-5 for a,v in zip([b.XLength,b.YLength,b.ZLength],[17.78,34.624,3.2])),[b.XLength,b.YLength,b.ZLength]
  pcb=doc.getObject(prefix+'NanoV2Visual0').Shape;riser=doc.getObject(prefix+'Riser').Shape
- lower=[f for f in pcb.Faces if abs(f.BoundBox.ZMin-8.8)<1e-6 and f.BoundBox.ZLength<1e-6]
+ lower=[f for f in pcb.Faces if abs(f.BoundBox.ZMin-doc.Parameters.MCUBottom.Value)<1e-6 and f.BoundBox.ZLength<1e-6]
  contact=sum(riser.common(f).Area for f in lower);assert contact>15,(side,contact)
  assert riser.common(nano.Shape).Volume<.001
  reserves=[]
  for x in ([115.18,130.42] if side=='left' else [29.58,44.82]):
   for i in range(13):
-   tool=Part.makeCylinder(1.05,.2,A.Vector(x,-(14.76+2.54*i),8.6));reserves.append(riser.common(tool).Volume)
+   tool=Part.makeCylinder(1.05,.2,A.Vector(x,-(14.76+2.54*i),doc.Parameters.MCUBottom.Value-.2));reserves.append(riser.common(tool).Volume)
  assert max(reserves)<1e-6,(side,max(reserves))
  results.append({'side':side,'nano_bounds_mm':[b.XLength,b.YLength,b.ZLength],'positive_board_support_area_mm2':contact,'solder_reserve_intersection_mm3':max(reserves),'mcu_riser_intersection_mm3':riser.common(nano.Shape).Volume,'library_material_counts':materials})
  half.Placement=old

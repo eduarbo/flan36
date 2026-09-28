@@ -38,7 +38,9 @@ def nano():
 def niceview():
  board=box(-7,0,0,14,36,1);pads=[]
  for i in range(5):
-  x=-5.08+i*2.54;y=32.4;board=board.cut(Part.makeCylinder(.45,1.3,V(x,-y,-.1)));pads.append(ring(x,y,.99,.9,.45,.035))
+  # Manufacturer drawing: connector row is 1.3 mm from the 36 mm end.
+  # Hole diameter remains an unmeasured nominal reserve, not vendor tolerance.
+  x=-5.08+i*2.54;y=34.7;board=board.cut(Part.makeCylinder(.45,1.3,V(x,-y,-.1)));pads.append(ring(x,y,.99,.9,.45,.035))
  return [('PCB · 14 × 36 mm',board,COLORS['pcb']),('Five display contacts',Part.makeCompound(pads),COLORS['gold']),('Sharp glass',box(-6.85,2.55,1,13.7,30.3,.9),COLORS['glass']),('Flex and backing · inferred placement',box(-6,9.55,-1,12,19,1),COLORS['flex'])]
 
 _cache={}

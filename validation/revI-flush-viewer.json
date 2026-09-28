@@ -1,7 +1,7 @@
 {
-  "viewer_sha256": "201550cb807cf7e1fb946c59ebce4344e6ce2be2cfb61f17454daa57778a1a57",
-  "scene_sha256": "bb43384390f5029de34b97f6c80dff227e66d5b349cfb29095a815e745b44d04",
-  "checker_sha256": "14bbbe8bdecc97705312d83c068c679286b766d8226cd85e96eb1c34dd53f471",
+  "viewer_sha256": "31eb89f14b7b1257b87424b60a4b78e6f6bbdbd743cda6054a4c6ea662520d37",
+  "scene_sha256": "eac4d66dd520164c278491a9644a0dcbacb308f34c8cf612f19bdc6db549e659",
+  "checker_sha256": "dd84e5d8b831b9ebd0c6818f182990a6bde03079009d6bd0436d52beff7dba94",
   "original_vertices_normals_and_triangles": true,
   "flush_feature_probes": true,
   "exact_native_material_volumes": true,
@@ -12,140 +12,140 @@
     {
       "side": "left",
       "style": "smooth",
-      "triangles": 4160,
+      "triangles": 4192,
       "groups": 1,
       "feature_probes": 0
     },
     {
       "side": "right",
       "style": "smooth",
-      "triangles": 4160,
+      "triangles": 4192,
       "groups": 1,
       "feature_probes": 0
     },
     {
       "side": "left",
       "style": "bevel",
-      "triangles": 4824,
+      "triangles": 4856,
       "groups": 1,
       "feature_probes": 0
     },
     {
       "side": "right",
       "style": "bevel",
-      "triangles": 4826,
+      "triangles": 4858,
       "groups": 1,
       "feature_probes": 0
     },
     {
       "side": "left",
       "style": "facet",
-      "triangles": 4852,
+      "triangles": 4884,
       "groups": 1,
       "feature_probes": 0
     },
     {
       "side": "right",
       "style": "facet",
-      "triangles": 4852,
+      "triangles": 4884,
       "groups": 1,
       "feature_probes": 0
     },
     {
       "side": "left",
       "style": "handheld",
-      "triangles": 6008,
+      "triangles": 5752,
       "groups": 4,
       "feature_probes": 4
     },
     {
       "side": "right",
       "style": "handheld",
-      "triangles": 6008,
+      "triangles": 5752,
       "groups": 4,
       "feature_probes": 4
     },
     {
       "side": "left",
       "style": "tv",
-      "triangles": 5156,
+      "triangles": 5164,
       "groups": 4,
       "feature_probes": 4
     },
     {
       "side": "right",
       "style": "tv",
-      "triangles": 5156,
+      "triangles": 5164,
       "groups": 4,
       "feature_probes": 4
     },
     {
       "side": "left",
       "style": "cyberpunk",
-      "triangles": 5168,
+      "triangles": 5200,
       "groups": 4,
       "feature_probes": 4
     },
     {
       "side": "right",
       "style": "cyberpunk",
-      "triangles": 5168,
+      "triangles": 5200,
       "groups": 4,
       "feature_probes": 4
     },
     {
       "side": "left",
       "style": "cartridge",
-      "triangles": 4804,
+      "triangles": 4860,
       "groups": 4,
       "feature_probes": 0
     },
     {
       "side": "right",
       "style": "cartridge",
-      "triangles": 4804,
+      "triangles": 4860,
       "groups": 4,
       "feature_probes": 0
     },
     {
       "side": "left",
       "style": "arcade",
-      "triangles": 8336,
+      "triangles": 7384,
       "groups": 4,
       "feature_probes": 0
     },
     {
       "side": "right",
       "style": "arcade",
-      "triangles": 8336,
+      "triangles": 7392,
       "groups": 4,
       "feature_probes": 0
     },
     {
       "side": "left",
       "style": "mecha",
-      "triangles": 5460,
+      "triangles": 5516,
       "groups": 4,
       "feature_probes": 0
     },
     {
       "side": "right",
       "style": "mecha",
-      "triangles": 5460,
+      "triangles": 5516,
       "groups": 4,
       "feature_probes": 0
     },
     {
       "side": "left",
       "style": "kintsugi",
-      "triangles": 10432,
+      "triangles": 9504,
       "groups": 4,
       "feature_probes": 0
     },
     {
       "side": "right",
       "style": "kintsugi",
-      "triangles": 10424,
+      "triangles": 9512,
       "groups": 4,
       "feature_probes": 0
     }

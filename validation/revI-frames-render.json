@@ -1,9 +1,9 @@
 {
-  "image_sha256": "ac24533d6bc3d2a026edbf3208cb6d48537a2482c37fd962ff67efa66b422308",
+  "image_sha256": "c114c54cf3fc87a9f71e5f0ea1dbf423630230ea8d25e94eceade2cc44c1625b",
   "sources": [
     {
       "path": "design/revI.json",
-      "sha256": "8e2cb213c977a78cef89a871d56791cb32b1571093d18f18220fc9faccfc7688"
+      "sha256": "f8b98deec0411a93211b1ba5329b2b632df0683f4773d96d92e64b9263bac41b"
     },
     {
       "path": "design/frame-finishes.json",
@@ -15,51 +15,51 @@
     },
     {
       "path": "mechanical/revI/left-frame-handheld-body.stl",
-      "sha256": "9a797572c764f9d51f3a0317367764c677b14fd2540b25986a81a735a1705ec8"
+      "sha256": "b8e870e9344cfe7d9725299a5e3d31a0ba9e16e95a56dfcd5361f0d1ad003125"
     },
     {
       "path": "mechanical/revI/left-frame-handheld-detail.stl",
-      "sha256": "05e3dff066cb4a3b3dfa308a645984eb6bc8b2aba119a536376227d9bc64e9d4"
+      "sha256": "300f442ac413b5d33a8349b0576b0618d2cb22310d27acb77758bd0d7886d542"
     },
     {
       "path": "mechanical/revI/left-frame-handheld-accent.stl",
-      "sha256": "dd6926b19fcee531b3c362c08fc8914ac94ed750c67e51d0e3af3dfe6a83492b"
+      "sha256": "b0ec8c7de8621f28971e3a145d30e6c02280cd0f44bfcf32fc92f9a90d48de50"
     },
     {
       "path": "mechanical/revI/left-frame-handheld-secondary.stl",
-      "sha256": "ba9399123ecee1580a635d7fe6a609447b1f928e226c8147fdc6b25554b06e78"
+      "sha256": "3f72921b7b18860d6433ec56c27e37773d79c0be53d75949d1a69a341824e125"
     },
     {
       "path": "mechanical/revI/left-frame-tv-body.stl",
-      "sha256": "defd54be55f48b87ddbedf58f59cb6f1ebb538c1649d4b66c5fb74a11983d8c9"
+      "sha256": "7167d3d79975e0db0d8b85c52dce57fee12d33b1a430f555177bd011b041ca5d"
     },
     {
       "path": "mechanical/revI/left-frame-tv-detail.stl",
-      "sha256": "b990dfb9c74766f039f43fe6084d45fc71b19ecba90dcb46b4a3a393a1ea5ed1"
+      "sha256": "977d2aac1cc1abc520c377f2526acb87538ec630db1e0235fbd3472df5617a64"
     },
     {
       "path": "mechanical/revI/left-frame-tv-accent.stl",
-      "sha256": "a99a58b84345e8ce179d87f395fa1814fe0cbb4cfebd1fe425bb74b57b00384f"
+      "sha256": "711bb39aa38d743824eec6d11e111067c302e06cf3416eac93335896f3037cf4"
     },
     {
       "path": "mechanical/revI/left-frame-tv-secondary.stl",
-      "sha256": "28f3a87d6615f44a03fa81f1c0825ee47ae87539fdc3b4321a7f0ed71f1234b4"
+      "sha256": "7425500aa2d70b72c59d1aaa74677d1bccda1396a57a5d6c4559a975adaf8d79"
     },
     {
       "path": "mechanical/revI/left-frame-cyberpunk-body.stl",
-      "sha256": "7c18cd1dd8cee4c614ed90f0c2fc019eee2230b5e980f36fc052ddedf994cfbd"
+      "sha256": "ccd70bcffd097e349226f284c38a32bbebf3c74a5a3d3aa6af8717cb3960ec71"
     },
     {
       "path": "mechanical/revI/left-frame-cyberpunk-detail.stl",
-      "sha256": "52a3543eee083724c6cb48632e6aa518e420338e188abf9055490d1d3293ad89"
+      "sha256": "d8c30df81d385d15b8945e4c4cdf4987c001177a011f41fa40c66d57c6d53a7a"
     },
     {
       "path": "mechanical/revI/left-frame-cyberpunk-accent.stl",
-      "sha256": "289066854bdd665d15b076ac0901f5536c635eec9e00f1caa866061f380ab449"
+      "sha256": "0a7986ca5b1328fea76b2755554d40719d7c6b4caaf48539b470343d5131818c"
     },
     {
       "path": "mechanical/revI/left-frame-cyberpunk-secondary.stl",
-      "sha256": "0feae0c89840e11a86754977d0244cd32f18043418b767a373f1d62334604947"
+      "sha256": "3d1d12101545aa913a678b138de46ea1e34d32046057298a76e76aec8f3ccd91"
     }
   ],
   "renderer_sha256": "86e4a6fe6159b4b2b9d9f561a621516581b42bd3f5e94f8c6d2aa2728a722f87",

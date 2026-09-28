@@ -203,11 +203,11 @@
   },
   "cases": {
     "left": {
-      "style": "solid",
+      "style": "level",
       "cover": true
     },
     "right": {
-      "style": "solid",
+      "style": "level",
       "cover": true
     }
   }

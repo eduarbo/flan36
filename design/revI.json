@@ -7108,26 +7108,10 @@
         6.3,
         135.0,
         -0.249999999999999,
-        7.6
+        13.39
       ],
       "visuals": [],
-      "stl_sha256": "89650509b711ace0e3043d82b07fa197f86d63a2d1fe1115deb684bd8b41b7f1"
-    },
-    "left-cradle": {
-      "object": "L_CageSeat1",
-      "role": "Low insulating saddle \u00b7 walls below PCB",
-      "group": "supports",
-      "prototype_part": true,
-      "bounds_mm": [
-        115.8,
-        -47.300000000000004,
-        1.4,
-        129.8,
-        -12.800000000000004,
-        3.65
-      ],
-      "visuals": [],
-      "stl_sha256": "82a14c80da559a7dd3c497ed799ed4d5be94873e3c48d21b0a2dd9d39255f640"
+      "stl_sha256": "e44195a8bcef6e49d979ff1a5d5ab11cebf23733e945b735a3daa847e933b9fb"
     },
     "left-battery": {
       "object": "L_ActiveBattery",
@@ -7137,13 +7121,13 @@
       "bounds_mm": [
         117.05,
         -45.300000000000004,
-        2.0,
+        1.4,
         128.55,
         -14.300000000000004,
-        5.8
+        5.199999999999999
       ],
       "visuals": [],
-      "stl_sha256": "03bc0d183a3b083f55609fea237406e84aa1d3cb4d41a57131c4c9c60c754644"
+      "stl_sha256": "1c028ff14578e53867e8c2ecb3caf8f4d23e558367749f218e6e07c0e22d31aa"
     },
     "left-battery-retainer": {
       "object": "L_KeeperCableExit",
@@ -7156,10 +7140,10 @@
         3.0,
         129.7,
         -13.45,
-        6.8
+        6.199999999999999
       ],
       "visuals": [],
-      "stl_sha256": "e649c29d03e194646fcf5ea6dbe2f913216bbc9887c65f68d9daf5cd9c9e687f"
+      "stl_sha256": "3be1d269c3a897ca751527b7739ce73bc0f8bde8990576e3eed7b9f907ce34e1"
     },
     "left-mcu-riser": {
       "object": "L_Riser",
@@ -7172,10 +7156,10 @@
         5.4,
         132.7,
         -15.5,
-        8.8
+        8.2
       ],
       "visuals": [],
-      "stl_sha256": "0cddb6b6a31274f1e62bc9a7340b86adb136fcc15aedc6c4e24f3578b93d249f"
+      "stl_sha256": "b74aa156428ca82e0bed111b7f96b02441b36ec090ee57cd2afabdcd5fd82bcf"
     },
     "left-mcu": {
       "object": "L_NanoV2",
@@ -7185,10 +7169,10 @@
       "bounds_mm": [
         113.91,
         -46.7,
-        7.700000000000001,
+        7.1,
         131.69,
         -12.076,
-        10.9
+        10.299999999999999
       ],
       "visuals": [
         {
@@ -7252,7 +7236,7 @@
           "name": "Indicator LEDs \u00b7 unlit"
         }
       ],
-      "stl_sha256": "2a5a8e3aff541fc941530463a5c30a7a47473fd4d16b389f9be32e55ef588ec5"
+      "stl_sha256": "6e923b09126e69cf56178036127ac3ccc6ec2d3aaebaf9b1d89e6ceedb4f60b3"
     },
     "left-mcu-sockets": {
       "object": "L_MCUSockets",
@@ -7277,11 +7261,11 @@
       "prototype_part": false,
       "bounds_mm": [
         115.8,
-        -52.3,
-        10.4,
+        -52.099999999999994,
+        7.3,
         129.8,
-        -16.0,
-        14.3
+        -16.099999999999998,
+        13.39
       ],
       "visuals": [
         {
@@ -7313,9 +7297,14 @@
           "path": "mechanical/revI/left-display-visual-5.stl",
           "color": "#b8bdc2",
           "name": "L_SlimDisplayMaleContacts"
+        },
+        {
+          "path": "mechanical/revI/left-display-visual-6.stl",
+          "color": "#a6adb3",
+          "name": "L_LevelDisplaySolderReserve"
         }
       ],
-      "stl_sha256": "a10436f70334c0a75b8d6d92e6a96f0e5c3766a00c961d6a53168271048af651"
+      "stl_sha256": "0f5637a09fe4616257b0858b3b19c278181d652e98e331ba6d0463722d53efb3"
     },
     "left-reset": {
       "object": "L_ResetModel",
@@ -7393,14 +7382,14 @@
       "prototype_part": true,
       "bounds_mm": [
         111.0,
-        -67.0,
+        -67.00000000000001,
         6.299999999999994,
         135.0,
         -11.0,
-        14.8
+        13.39
       ],
       "visuals": [],
-      "stl_sha256": "0b8db86d2bbbeec80a089f2888b9f0e3f976808612e5fa7944cde90e3cbd6731"
+      "stl_sha256": "e06896d8b53a66e17b431da455f5cca182a6f70359dee8cab83e72a2ee93be80"
     },
     "left-pcb": {
       "object": "L_SlimPCBLeadNotch",
@@ -7457,16 +7446,16 @@
     },
     "left-display-socket": {
       "object": "L_SlimDisplaySocket",
-      "role": "J2 \u00b7 retained nice!view socket",
+      "role": "Samtec SLW-105 \u00b7 nominal 4.57 mm socket",
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        116.2,
-        -52.3,
-        2.0,
-        129.4,
-        -49.3,
-        10.4
+        116.45,
+        -52.07,
+        2.48,
+        129.15,
+        -49.53,
+        9.97
       ],
       "visuals": [
         {
@@ -7480,7 +7469,7 @@
           "name": "L_SlimDisplaySocketPins"
         }
       ],
-      "stl_sha256": "6894a48dd284de881b33c8f403584994c851a384bd995047315a8323bbcc3cc6"
+      "stl_sha256": "3d8802fe22ff466360e4631ec115cb772449fa01b7aa6c90a3a0a82406d62dc2"
     },
     "left-display-sled": {
       "object": "L_SlimDisplayHeaderClearance",
@@ -7493,10 +7482,10 @@
         5.4,
         130.6,
         -15.5,
-        13.6
+        12.69
       ],
       "visuals": [],
-      "stl_sha256": "f602e3b58ca2e18b3343e4853f5becb6deb43155cce9e648542d0d1a68d582dd"
+      "stl_sha256": "40e0841c00feff40c438ab701c143bfe1c197cbd03dddf2d74f1df433bbfc65a"
     },
     "left-battery-lead-0": {
       "object": "L_ActiveBatteryLead0",
@@ -7504,15 +7493,15 @@
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        115.0,
-        -59.5,
-        3.900033569456918,
-        130.89986572968505,
-        -22.065398456565177,
-        7.499966430543083
+        115.0000031383772,
+        -59.49999686162282,
+        3.300033569456918,
+        130.89999921540468,
+        -22.07921524063869,
+        7.499942764762936
       ],
       "visuals": [],
-      "stl_sha256": "f32c3c15c22d5df59007a8cad1556d4cdd688dbfc6685ffafb2eca5b82841501"
+      "stl_sha256": "65bbcedb0cc871098c7e9942be4befda7f765c1163a35840a0e1333a0d9c12ea"
     },
     "left-battery-lead-1": {
       "object": "L_ActiveBatteryLead1",
@@ -7520,15 +7509,31 @@
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        115.0,
-        -57.5,
-        4.700033569456918,
-        130.89986572968505,
-        -20.665398456565207,
-        8.299966430543082
+        115.0000031383772,
+        -57.49999686162282,
+        4.100033569456919,
+        130.89999921540468,
+        -20.679215240638705,
+        8.299942764762934
       ],
       "visuals": [],
-      "stl_sha256": "b9b866b4b3bc82f32fac45e2ffa1641be2b8a148533c7b462339f9ef057e8990"
+      "stl_sha256": "30fc760f3c83a1458c459c5ccdc15273f76aeb9df48ddb2f86a5e35e1cb67af3"
+    },
+    "left-cradle": {
+      "object": "L_LevelCradleCableExit",
+      "role": "Battery locator \u00b7 open bottom, cell on case floor002",
+      "group": "supports",
+      "prototype_part": true,
+      "bounds_mm": [
+        115.8,
+        -47.300000000000004,
+        1.4,
+        129.8,
+        -12.800000000000004,
+        3.65
+      ],
+      "visuals": [],
+      "stl_sha256": "d073ae11392c05a0fd437e56c595d7fc0423864b57005d71c4ecd866ba48398b"
     },
     "right-washer-1": {
       "object": "R_Washer1",
@@ -7781,26 +7786,10 @@
         6.3,
         141.75,
         -0.249999999999999,
-        7.6
+        13.39
       ],
       "visuals": [],
-      "stl_sha256": "8a60d57cd6f4f408da335187b108be8dc88e644150f2bfda91963e0534e9be39"
-    },
-    "right-cradle": {
-      "object": "R_CageSeat1",
-      "role": "Low insulating saddle \u00b7 walls below PCB001",
-      "group": "supports",
-      "prototype_part": true,
-      "bounds_mm": [
-        30.19999999999999,
-        -47.300000000000004,
-        1.4,
-        44.2,
-        -12.800000000000004,
-        3.65
-      ],
-      "visuals": [],
-      "stl_sha256": "209ac2eded62a35d0c92ade2894e0971a84c16f90fc368cea6e94c3cb5b0aada"
+      "stl_sha256": "11bc24956bba20f3969cc49609cf8b9aa7a4ccad5144ff854516d7636a9dc1d5"
     },
     "right-battery": {
       "object": "R_ActiveBattery",
@@ -7810,13 +7799,13 @@
       "bounds_mm": [
         31.44999999999999,
         -45.300000000000004,
-        2.0,
+        1.4,
         42.95,
         -14.300000000000004,
-        5.8
+        5.199999999999999
       ],
       "visuals": [],
-      "stl_sha256": "65b6b3e3fcc219b0892fc6645695f82d3669c3a76c7172a016a9c1a09881b01f"
+      "stl_sha256": "dccc999ef842da717deea303d039e614513bdd9669d05cf1b96a97dd9c07b0db"
     },
     "right-battery-retainer": {
       "object": "R_KeeperCableExit",
@@ -7829,10 +7818,10 @@
         3.0,
         44.099999999999994,
         -13.45,
-        6.8
+        6.199999999999999
       ],
       "visuals": [],
-      "stl_sha256": "ed977daa3d73eb580c933964b1f1693d921204658cb147cde8bfba80666c7c5c"
+      "stl_sha256": "10b690db03494274603ff45cdbe9556df75160908ba71124b8ee65b6f2bb52ec"
     },
     "right-mcu-riser": {
       "object": "R_Riser",
@@ -7845,10 +7834,10 @@
         5.4,
         47.099999999999994,
         -15.5,
-        8.8
+        8.2
       ],
       "visuals": [],
-      "stl_sha256": "9e4ebd1b38c40ef3a27898474099394a244ca708d493c8a62e7a190695d40ed9"
+      "stl_sha256": "5e6a4d9098bf9297ca769d8af49fcd3f65da06a68d6b8bd218e54f7522f499a4"
     },
     "right-mcu": {
       "object": "R_NanoV2",
@@ -7858,10 +7847,10 @@
       "bounds_mm": [
         28.310000000000002,
         -46.7,
-        7.700000000000001,
+        7.1,
         46.09,
         -12.076,
-        10.9
+        10.299999999999999
       ],
       "visuals": [
         {
@@ -7925,7 +7914,7 @@
           "name": "Indicator LEDs \u00b7 unlit001"
         }
       ],
-      "stl_sha256": "57b1af8c3fb80368849f34c5a6ba2076dbb7f484afb7add86d0969a88ea0480a"
+      "stl_sha256": "6da42bf91d0b55d144ed0ff4ff400455e9c42c40d5716699d55279198a9658dc"
     },
     "right-mcu-sockets": {
       "object": "R_MCUSockets",
@@ -7950,11 +7939,11 @@
       "prototype_part": false,
       "bounds_mm": [
         30.200000000000003,
-        -52.3,
-        10.4,
+        -52.099999999999994,
+        7.3,
         44.2,
-        -16.0,
-        14.3
+        -16.099999999999998,
+        13.39
       ],
       "visuals": [
         {
@@ -7986,9 +7975,14 @@
           "path": "mechanical/revI/right-display-visual-5.stl",
           "color": "#b8bdc2",
           "name": "R_SlimDisplayMaleContacts"
+        },
+        {
+          "path": "mechanical/revI/right-display-visual-6.stl",
+          "color": "#a6adb3",
+          "name": "R_LevelDisplaySolderReserve"
         }
       ],
-      "stl_sha256": "e9df885c416f6e228d23f6dc7d7439f57191517a419c689b55e9753df0ef8def"
+      "stl_sha256": "44bfce6915f371cfcb5acf4cf0e303f952cb01918d8e5927b9dd4746d8a3e334"
     },
     "right-reset": {
       "object": "R_ResetModel",
@@ -8070,10 +8064,10 @@
         6.299999999999998,
         49.0,
         -11.0,
-        14.8
+        13.39
       ],
       "visuals": [],
-      "stl_sha256": "bec9ac9c6a88febbe9f7c0b49bfe4634809e4e03c268e2d4ecef43d1b377c7ee"
+      "stl_sha256": "d29e95c73df0e6b4536eb4ebf05f74f074cd6396ae0c93458639f8bf60dcd0d4"
     },
     "right-pcb": {
       "object": "R_SlimPCBLeadNotch",
@@ -8130,16 +8124,16 @@
     },
     "right-display-socket": {
       "object": "R_SlimDisplaySocket",
-      "role": "J2 \u00b7 retained nice!view socket001",
+      "role": "Samtec SLW-105 \u00b7 nominal 4.57 mm socket001",
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        30.6,
-        -52.3,
-        2.0,
-        43.8,
-        -49.3,
-        10.4
+        30.85,
+        -52.07,
+        2.48,
+        43.55,
+        -49.53,
+        9.97
       ],
       "visuals": [
         {
@@ -8153,7 +8147,7 @@
           "name": "R_SlimDisplaySocketPins"
         }
       ],
-      "stl_sha256": "441b2c9f85de4f7393f2898467d1982675b3d6c8c24b88ba40be98f0ad1df698"
+      "stl_sha256": "bf504d88f6ee061086d553f6ac7e59eb34ba9c5e86249aefbd0e4d692ae3a34a"
     },
     "right-display-sled": {
       "object": "R_SlimDisplayHeaderClearance",
@@ -8166,10 +8160,10 @@
         5.4,
         45.0,
         -15.5,
-        13.6
+        12.69
       ],
       "visuals": [],
-      "stl_sha256": "3405565293967523b2cb70e8b0308da523da2f1f0651469f5c62be578055b110"
+      "stl_sha256": "0b9d3a408e0c4ec22e6ff8671a33f21101a373f1781031efacf955c4f35d5c0a"
     },
     "right-battery-lead-0": {
       "object": "R_ActiveBatteryLead0",
@@ -8177,15 +8171,15 @@
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        29.10000000000001,
-        -59.499865729685055,
-        3.900033569456918,
-        44.99986572968506,
-        -22.06526418625024,
-        7.499966430543083
+        29.100114529048316,
+        -59.49990364362674,
+        3.300033569456918,
+        44.999903643626745,
+        -22.079080970323787,
+        7.499983820271208
       ],
       "visuals": [],
-      "stl_sha256": "427a0515a6e7dd81688afc954419dfa70e3300f83375df5b6869ebecc8d8744f"
+      "stl_sha256": "813dbbc40f24418ab1419f56b0ceb82917a51cb449d9963c0c594ea142eea7a1"
     },
     "right-battery-lead-1": {
       "object": "R_ActiveBatteryLead1",
@@ -8193,15 +8187,31 @@
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        29.10000000000001,
-        -57.499865729685055,
-        4.700033569456918,
-        44.99986572968506,
-        -20.665264186250262,
-        8.299966430543082
+        29.100114529048316,
+        -57.49990364362674,
+        4.100033569456919,
+        44.999903643626745,
+        -20.67908097032381,
+        8.299983820271216
       ],
       "visuals": [],
-      "stl_sha256": "b7865b8dafd65a42618682ac9b826b9d3a5c6889812251a5a0bc390f2524d5eb"
+      "stl_sha256": "1efa4369e809dd07ab745c39d26d892e1b40017caba0eb82d6e85b8f5080710c"
+    },
+    "right-cradle": {
+      "object": "R_LevelCradleCableExit",
+      "role": "Battery locator \u00b7 open bottom, cell on case floor003",
+      "group": "supports",
+      "prototype_part": true,
+      "bounds_mm": [
+        30.19999999999999,
+        -47.300000000000004,
+        1.4,
+        44.2,
+        -12.800000000000004,
+        3.65
+      ],
+      "visuals": [],
+      "stl_sha256": "2a0e0467922dfa7e1fc52ce810362c7197661965a0a2023cc41e7ad65c624100"
     }
   },
   "parameter_values_mm": {
@@ -8211,20 +8221,32 @@
     "PCBTop": 5.4,
     "PCBThickness": 1.6,
     "MCUShiftY": 7.5,
-    "MCUBottom": 8.8,
+    "MCUBottom": 8.2,
     "DisplayShiftY": 2.4,
-    "DisplayBottom": 12.4,
+    "DisplayBottom": 11.49,
     "BatteryShiftY": 1.2,
-    "BatteryBottom": 2.0,
-    "FrameTop": 14.8,
+    "BatteryBottom": 1.4,
+    "FrameTop": 13.39,
     "FrameRoof": 1.2,
     "WindowMargin": 0.4,
     "SlotClearance": 0.1
   },
   "inputs": [
     {
+      "path": "design/level-case-workflow.json",
+      "sha256": "9d51a8ac1dd3534acf98756812167481430fc045c2531faac882f184e3c43fc3"
+    },
+    {
+      "path": "tools/freecad/level_stack.py",
+      "sha256": "5b4e75f33f91a6cbdcd84c0209c5d2bce8f2ee54b4087a55eabc16c4b0bd7155"
+    },
+    {
+      "path": "tools/freecad/install_level_stack.py",
+      "sha256": "f2d0af8fa65df8c2ff647a6bd065399b372d9b0f321ed0fe61e359ed143c5748"
+    },
+    {
       "path": "design/cases.json",
-      "sha256": "f84fefc1b6caf551a491c7cf6d29c6dd999654997655fb22d58748e5da44606d"
+      "sha256": "567d9e00633972659874b808cb2f629d24cc63a3cd8db31ce66dda3ed4081599"
     },
     {
       "path": "design/frame-finishes.json",
@@ -8260,7 +8282,7 @@
     },
     {
       "path": "tools/freecad/components.py",
-      "sha256": "b467197a100a3b9dd45fae34603c16801e98706d23bd7fca38d1e5a60c0d4dd9"
+      "sha256": "e32a0e4e3181603d742911c788e1defb4ecd4e76ec59d67eab2915a538e4a171"
     },
     {
       "path": "tools/freecad/switch_instances.py",
@@ -8272,7 +8294,7 @@
     },
     {
       "path": "components/sources.json",
-      "sha256": "ea497b753353f2f7405931a9daa330eee2c6f6d6b0fdc9900f2a970f15ebe614"
+      "sha256": "4b65212f5e36c1b9fa7aba08d17187ee62f362eed34103389fa66453583b4243"
     },
     {
       "path": "tools/frame_finishes.py",
@@ -8280,7 +8302,7 @@
     },
     {
       "path": "tools/keycap_config.py",
-      "sha256": "e6cf3b4468bd8e4299589b8b5ea77d915addfffb3bce5c4d1e2f67246f8a73c2"
+      "sha256": "bfba35924ac6dee21d2cc7416daca7f7eed5893c3ae3c10c31b83315068a1ec0"
     },
     {
       "path": "tools/freecad/configuration.py",
@@ -8300,7 +8322,7 @@
     },
     {
       "path": "keycaps/catalog.json",
-      "sha256": "a2f461be0342cb75b2595c3b8fd90048ad81833cb8656094b1cd375c61afbf04"
+      "sha256": "c69b7c0bdbe38e40edcc53ef3383dfd54486e8e4660b9b790a1f655681205380"
     },
     {
       "path": "design/revI-mounts.json",
@@ -8320,14 +8342,14 @@
     },
     {
       "path": "tools/freecad/build_revI.py",
-      "sha256": "87d0a41ce387a45cab7b88ec7b6f11dfbfb10cd4d0ea7da110f9d6d8799a4ab0"
+      "sha256": "318d35a49126ed6baf062c945ad3e8f025b686e5a9a9179472f5edc18c2ff971"
     },
     {
       "path": "tools/freecad/export_revI.py",
-      "sha256": "05e9352fd6003c04869729cb88caf10aea687f7370f85e9b1b28ac2022f80475"
+      "sha256": "7aad1877f0469acc2bf87b4c01a35c4a8319cadf78824e09b583f21ee8d99ab3"
     }
   ],
-  "fcstd_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "fcstd_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
   "identity_migration": {
     "baseline_commit": "819a01883b2faec3682ac457328bc361dc43e355",
     "method": "Only branding tokens in native Document.xml changed; shape and mesh members preserved byte for byte",
@@ -8340,21 +8362,21 @@
       "stl": "left-frame-smooth.stl",
       "step": "left-frame-smooth.step",
       "material_parts": [],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "single body"
     },
     "left-bevel": {
       "stl": "left-frame-bevel.stl",
       "step": "left-frame-bevel.step",
       "material_parts": [],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "single body"
     },
     "left-facet": {
       "stl": "left-frame-facet.stl",
       "step": "left-frame-facet.step",
       "material_parts": [],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "single body"
     },
     "left-handheld": {
@@ -8365,40 +8387,40 @@
           "role": "body",
           "stl": "left-frame-handheld-body.stl",
           "step": "left-frame-handheld-body.step",
-          "stl_sha256": "9a797572c764f9d51f3a0317367764c677b14fd2540b25986a81a735a1705ec8",
-          "step_sha256": "aab34f48bae80e8d49a85abf82cfc5221801ba8e0d284fd85a1e30585ad75a73",
-          "volume_mm3": 2310.0941174599675,
+          "stl_sha256": "b8e870e9344cfe7d9725299a5e3d31a0ba9e16e95a56dfcd5361f0d1ad003125",
+          "step_sha256": "7e033c5af8eb2f52f8caccd36b539ab577e29d66978ed33c3c6ab84c8c34ac93",
+          "volume_mm3": 1951.6884783732648,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-handheld-detail.stl",
           "step": "left-frame-handheld-detail.step",
-          "stl_sha256": "05e3dff066cb4a3b3dfa308a645984eb6bc8b2aba119a536376227d9bc64e9d4",
-          "step_sha256": "dbc60aabd7223028e6c284c937455f59724f06b867bd820021313b69af047e42",
-          "volume_mm3": 8.64000000000004,
+          "stl_sha256": "300f442ac413b5d33a8349b0576b0618d2cb22310d27acb77758bd0d7886d542",
+          "step_sha256": "94ad21bf8ec9151c8dd78c47a75c4715432ae8a0617d4ee00a9c1047cce8d3ea",
+          "volume_mm3": 7.679999999999973,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "left-frame-handheld-accent.stl",
           "step": "left-frame-handheld-accent.step",
-          "stl_sha256": "dd6926b19fcee531b3c362c08fc8914ac94ed750c67e51d0e3af3dfe6a83492b",
-          "step_sha256": "57f0f80c7956acaa44f1c4e5515a7a705db331dd36fc04bf80a0e606d24e77e8",
-          "volume_mm3": 6.8423887995185675,
+          "stl_sha256": "b0ec8c7de8621f28971e3a145d30e6c02280cd0f44bfcf32fc92f9a90d48de50",
+          "step_sha256": "d5cf273963d6e9c844e7c9502af53fd313ade6b451951bafad3ffe6ba8bc48a8",
+          "volume_mm3": 5.789200825476146,
           "solids": 2
         },
         {
           "role": "secondary",
           "stl": "left-frame-handheld-secondary.stl",
           "step": "left-frame-handheld-secondary.step",
-          "stl_sha256": "ba9399123ecee1580a635d7fe6a609447b1f928e226c8147fdc6b25554b06e78",
-          "step_sha256": "2d274ae01ed72fb8e924da0165da13d2c3fadcb9422d76b30fb67247ba8dda22",
-          "volume_mm3": 2.7599999999999967,
+          "stl_sha256": "3f72921b7b18860d6433ec56c27e37773d79c0be53d75949d1a69a341824e125",
+          "step_sha256": "35561a813e8558143a018f47ca2b8f12370d63a93ce18e8cc432111ba019d6d2",
+          "volume_mm3": 2.759999999999997,
           "solids": 3
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "left-tv": {
@@ -8409,40 +8431,40 @@
           "role": "body",
           "stl": "left-frame-tv-body.stl",
           "step": "left-frame-tv-body.step",
-          "stl_sha256": "defd54be55f48b87ddbedf58f59cb6f1ebb538c1649d4b66c5fb74a11983d8c9",
-          "step_sha256": "fa3855f55ae44babe9056f352defde57408604e8b9b98ec55eef89f3e024884a",
-          "volume_mm3": 2251.6117014429988,
+          "stl_sha256": "7167d3d79975e0db0d8b85c52dce57fee12d33b1a430f555177bd011b041ca5d",
+          "step_sha256": "00dc6a03c14439c8107eeab9a246ef5d90f0a57e993d03136aba8fbeff87b343",
+          "volume_mm3": 1927.8891959838347,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-tv-detail.stl",
           "step": "left-frame-tv-detail.step",
-          "stl_sha256": "b990dfb9c74766f039f43fe6084d45fc71b19ecba90dcb46b4a3a393a1ea5ed1",
-          "step_sha256": "62e46a86e0d4f45336fbd8202812a6352011281457644bc292a237eb35a54b93",
-          "volume_mm3": 64.42000000000029,
-          "solids": 1
+          "stl_sha256": "977d2aac1cc1abc520c377f2526acb87538ec630db1e0235fbd3472df5617a64",
+          "step_sha256": "81e96226185308d1322c2bd71018033fa52a7b0a663cda06c22d5d5e65536609",
+          "volume_mm3": 28.560000000000322,
+          "solids": 2
         },
         {
           "role": "accent",
           "stl": "left-frame-tv-accent.stl",
           "step": "left-frame-tv-accent.step",
-          "stl_sha256": "a99a58b84345e8ce179d87f395fa1814fe0cbb4cfebd1fe425bb74b57b00384f",
-          "step_sha256": "0b633c550df32c0617d42aafce6dcaa415b8f61ccd4fa38448a9ffef478f06d6",
-          "volume_mm3": 5.808804816487529,
+          "stl_sha256": "711bb39aa38d743824eec6d11e111067c302e06cf3416eac93335896f3037cf4",
+          "step_sha256": "c8f315267cd2d99b60ab088babfc6cc2de8a991b9be8ff7b2c6d9558e35f98e8",
+          "volume_mm3": 5.7964832149056615,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "left-frame-tv-secondary.stl",
           "step": "left-frame-tv-secondary.step",
-          "stl_sha256": "28f3a87d6615f44a03fa81f1c0825ee47ae87539fdc3b4321a7f0ed71f1234b4",
-          "step_sha256": "f0bd0aed5ec4fd60a0364b4b9df9258d585fddf54351cf804a10a1a51592ec9a",
-          "volume_mm3": 6.495999999999961,
+          "stl_sha256": "7425500aa2d70b72c59d1aaa74677d1bccda1396a57a5d6c4559a975adaf8d79",
+          "step_sha256": "27cf53381a62306651ef17547c337d690581e431d5dd0dd10d8d6db025f0f894",
+          "volume_mm3": 5.671999999999957,
           "solids": 4
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "left-cyberpunk": {
@@ -8453,40 +8475,40 @@
           "role": "body",
           "stl": "left-frame-cyberpunk-body.stl",
           "step": "left-frame-cyberpunk-body.step",
-          "stl_sha256": "7c18cd1dd8cee4c614ed90f0c2fc019eee2230b5e980f36fc052ddedf994cfbd",
-          "step_sha256": "e6536e6089c3d9ed2c8ef72b0eb2266a37ca035e7c0d12568b5e995470d4b4c8",
-          "volume_mm3": 2310.54786919805,
+          "stl_sha256": "ccd70bcffd097e349226f284c38a32bbebf3c74a5a3d3aa6af8717cb3960ec71",
+          "step_sha256": "834a0c0d41befadd7695362eb73704ab929861b7f7fbe7c4058304fe64225e1f",
+          "volume_mm3": 1952.3530421373034,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-cyberpunk-detail.stl",
           "step": "left-frame-cyberpunk-detail.step",
-          "stl_sha256": "52a3543eee083724c6cb48632e6aa518e420338e188abf9055490d1d3293ad89",
-          "step_sha256": "79a92eacbd6f9232aaac48fe2c33208910c1351f3fedaf5bd0c928e479a6d840",
-          "volume_mm3": 7.055999999999933,
+          "stl_sha256": "d8c30df81d385d15b8945e4c4cdf4987c001177a011f41fa40c66d57c6d53a7a",
+          "step_sha256": "63fd5f4dcad345be38aac7fdb7ca76f2c69183c825e5a9bac68e70d23ef9721d",
+          "volume_mm3": 6.0959999999999415,
           "solids": 3
         },
         {
           "role": "accent",
           "stl": "left-frame-cyberpunk-accent.stl",
           "step": "left-frame-cyberpunk-accent.step",
-          "stl_sha256": "289066854bdd665d15b076ac0901f5536c635eec9e00f1caa866061f380ab449",
-          "step_sha256": "d31129fb4f5990868d704794b9c7899324ad546e1d07b2d9b473c0ab75af6b76",
-          "volume_mm3": 5.152000000000024,
+          "stl_sha256": "0a7986ca5b1328fea76b2755554d40719d7c6b4caaf48539b470343d5131818c",
+          "step_sha256": "74157a5d8bb5d5004114d84e22d3cd09bfdab0e21f76c0376183e067133e5de1",
+          "volume_mm3": 3.8880000000000274,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "left-frame-cyberpunk-secondary.stl",
           "step": "left-frame-cyberpunk-secondary.step",
-          "stl_sha256": "0feae0c89840e11a86754977d0244cd32f18043418b767a373f1d62334604947",
-          "step_sha256": "f49d160bd32fca4d9800e5a209c6d20afe00cf42eab44b3a00bfb1c95a81d987",
-          "volume_mm3": 5.580637061435919,
+          "stl_sha256": "3d1d12101545aa913a678b138de46ea1e34d32046057298a76e76aec8f3ccd91",
+          "step_sha256": "bd5c834a5de39b47f766069b6734de10c9544a91fa71a4192e45afce13688666",
+          "volume_mm3": 5.58063706143592,
           "solids": 2
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "left-cartridge": {
@@ -8497,40 +8519,40 @@
           "role": "body",
           "stl": "left-frame-cartridge-body.stl",
           "step": "left-frame-cartridge-body.step",
-          "stl_sha256": "6c21b2c41e7f1e60208351392ea68505cfbe3e6ca6bd5119093f878bbe9ab3b1",
-          "step_sha256": "85bc4e8ed3eda0d5ce693832b5f4624d092da4a327bf9f8f80e347aa7e707a50",
-          "volume_mm3": 2197.240506259488,
+          "stl_sha256": "a6d2d01dc4ebc28e9cb2de45899d94e9e8a1b30546e541064f5b1f7c05095083",
+          "step_sha256": "3dc97097b642d01515cf14058a0f17f27f6c467bef802938cbd207fd8905b0e7",
+          "volume_mm3": 1863.7769291987386,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-cartridge-detail.stl",
           "step": "left-frame-cartridge-detail.step",
-          "stl_sha256": "7cdcb00fdb6f909812430d8666dcfdc7c8ba758099c5b3083a376cffc5c4e7b1",
-          "step_sha256": "eba480a1ea8c973135db8b69c84dcba4b20bb522f9577e521d33835dc94b351b",
-          "volume_mm3": 83.9680000000004,
+          "stl_sha256": "45ae2ff0f9c776c85d4a5fa7d21452805e640e5bd92f9548e67be19f30c68999",
+          "step_sha256": "69265272bcba1d3eed371e39d863b33445c8a158dc700f00c28cf4acd0ab8527",
+          "volume_mm3": 68.5327500000003,
           "solids": 3
         },
         {
           "role": "accent",
           "stl": "left-frame-cartridge-accent.stl",
           "step": "left-frame-cartridge-accent.step",
-          "stl_sha256": "f44b27c1ec554b912608e9b9e612cae2eea1aa6ca9b071b262925bad8ccc201d",
-          "step_sha256": "250380657a96afd1cffc6b44e54e5c96b845fc340d01c347dd364a7300001044",
-          "volume_mm3": 13.720000000000063,
+          "stl_sha256": "25d5d92e0843a035df390935d46a50876ffb7b311e2cd6f72d821ecca7d5d4f3",
+          "step_sha256": "5ddb1685a291436bf40a6bcee2fae5b7e2b5a4a5befdc0e2406d52bc344e7e7a",
+          "volume_mm3": 13.72000000000006,
           "solids": 7
         },
         {
           "role": "secondary",
           "stl": "left-frame-cartridge-secondary.stl",
           "step": "left-frame-cartridge-secondary.step",
-          "stl_sha256": "1c4e7a36a4993c6482cf9057ed69bdaaaeb343538ad5056e28ce862ee003e420",
-          "step_sha256": "71fce3f39548b448b06e6d6e25eb0317ab8d3a39df735ec7696ed65c7ce356c1",
-          "volume_mm3": 33.40800000000001,
+          "stl_sha256": "78ee273b02f880e719493f2f8ad939b0c7e7b022636c2073744ac1543aed76e6",
+          "step_sha256": "8d4ceae5a84796da1264c5f7d4e9aab916df9058e66d952ee1d7ba2434a712fd",
+          "volume_mm3": 21.887999999999987,
           "solids": 1
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "left-arcade": {
@@ -8541,40 +8563,40 @@
           "role": "body",
           "stl": "left-frame-arcade-body.stl",
           "step": "left-frame-arcade-body.step",
-          "stl_sha256": "240b369ef8e463f7d364195f5d5546f0e67b7e657740711c1c70a5ea1b09a5e8",
-          "step_sha256": "c2601fe4e40fc46ea4c311a349a870cb3bc610ae493620d1afdbd31dcdda3d44",
-          "volume_mm3": 2243.056373597864,
+          "stl_sha256": "0da8e599c4a49b41b967adea8a7863e5e5be92105000f9213abfae8fc4e547fa",
+          "step_sha256": "ff036dbffb74bf0c20ec85cde497bc80f08d1dd0a78e9fdb57e0c47ee279b093",
+          "volume_mm3": 1897.6195038614494,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-arcade-detail.stl",
           "step": "left-frame-arcade-detail.step",
-          "stl_sha256": "cd666ca10fa63875db449eea3924c871b4b9a29aadb1cd22adb3133ad37b146d",
-          "step_sha256": "4e7c4b5c1f26c438de668f502210a608c2e4a29396cb62076ab8431583ff4709",
-          "volume_mm3": 61.42000000000014,
+          "stl_sha256": "32ed619b4a477af1f837c768bdcfe833ef2c66577fb46e0a16d49d3534efc266",
+          "step_sha256": "ef5c84a98a899f6bd83216772eae361675719b4621b58278c333341f07b3790d",
+          "volume_mm3": 50.60800000000024,
           "solids": 9
         },
         {
           "role": "accent",
           "stl": "left-frame-arcade-accent.stl",
           "step": "left-frame-arcade-accent.step",
-          "stl_sha256": "dc3b2520ce1274325252617e861bfc8b35082a91d03ff6b854277002e8d96de1",
-          "step_sha256": "13098a6f9d9d7f45afc2f08b5324cc16d985bc59b1d33e907ba90cd6da85ec1e",
-          "volume_mm3": 9.650972631827853,
+          "stl_sha256": "ebf6d9c2fb542b3778e36bd38364accb1d5e0898c5c307e08a977086861dd93e",
+          "step_sha256": "7225c33a47d0a72e5c734fe7b3213e398af68185728ce37e75156cbf9e662666",
+          "volume_mm3": 8.170393810960165,
           "solids": 3
         },
         {
           "role": "secondary",
           "stl": "left-frame-arcade-secondary.stl",
           "step": "left-frame-arcade-secondary.step",
-          "stl_sha256": "f8a4b2f59b05ba5168af78ae73a52679995b76c3edf846e353db5cd9d6952e08",
-          "step_sha256": "beeedeabab24b09f819cf22194a9eeb1bf27eb5a66a7d3ea6c75385c2649ff8e",
-          "volume_mm3": 14.209160029791738,
+          "stl_sha256": "f1e60143d94e1b749e693d70dec86c099a1ca039098ebce30abd36402d04ab94",
+          "step_sha256": "f6325c3ac972e8d3b6b90a7e7a7db4436dcf81535c7d44a04aa2b766b10865b4",
+          "volume_mm3": 11.519781526331077,
           "solids": 4
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "left-mecha": {
@@ -8585,40 +8607,40 @@
           "role": "body",
           "stl": "left-frame-mecha-body.stl",
           "step": "left-frame-mecha-body.step",
-          "stl_sha256": "74db633a11398c96b215be6696650e9949cf86f3976c31518db80143e01c0f3d",
-          "step_sha256": "f351ee87b0f844cb6cde6459ab182b48ef35ceec4f56111b021f3c23f4d4a714",
-          "volume_mm3": 2196.4815422982188,
+          "stl_sha256": "54e036f4df0fc22a922cc5eb4d03c49a124ed05af2447065a7038ae392a0adfd",
+          "step_sha256": "7a00926d85cf95ba9949b9ed7b010e507e5768f0c118124211ed95d0bb48d5c7",
+          "volume_mm3": 1847.7002485708053,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-mecha-detail.stl",
           "step": "left-frame-mecha-detail.step",
-          "stl_sha256": "c23ae15056e08738e775bc29c40ca83177e63fc14aab6f662c02405139fa4a6b",
-          "step_sha256": "c5c078e8be3d78e5c250326d3b05f32554aeab89748f0b06137cac2d862f5bd7",
-          "volume_mm3": 108.4720000000002,
+          "stl_sha256": "26ccc479234f1f4d5e469420467a83035f572f9ea340ce1e84b688201d4f47da",
+          "step_sha256": "3212f355bfa51e4fc851cdab4bc3491a5f1fc9d285ee3f37015b63dea45280fa",
+          "volume_mm3": 100.97796666666675,
           "solids": 6
         },
         {
           "role": "accent",
           "stl": "left-frame-mecha-accent.stl",
           "step": "left-frame-mecha-accent.step",
-          "stl_sha256": "12afeef68b36a8d64f99f23f80e0f4df9eeb2a567847e4b2b7ef2cb52a3f21b2",
-          "step_sha256": "a58d84cc1f5a6fd92d1a125fecfc46272facca12af86d795d7f596173aa31372",
-          "volume_mm3": 15.840000000000028,
+          "stl_sha256": "ab8f8b5fb5baf7a6646d8b866dc5ca6b4621ee920a62c1877c532cd0e2e6aef8",
+          "step_sha256": "018bd5680a5f604809ca9540203b9508f52f5c4ffb84062c58dee3abe814855e",
+          "volume_mm3": 11.696500000000016,
           "solids": 6
         },
         {
           "role": "secondary",
           "stl": "left-frame-mecha-secondary.stl",
           "step": "left-frame-mecha-secondary.step",
-          "stl_sha256": "47e2ad84caa6d306f1865e93dc0c8f8a3321c05f1e1e58ed25ccd49bd1fbc5c0",
-          "step_sha256": "1985e97eb7976f2bfd7747fbc5016f82638afe2424597e56e58bcb8463b751ed",
-          "volume_mm3": 7.542963961269091,
+          "stl_sha256": "091f209eca3e3b09760e70aceccf63e436a53c9b469a792bfa4cb744ab1cd407",
+          "step_sha256": "f11221415751f75594da670636a48b22f59bfddca59e07d15768ac4b008d35e2",
+          "volume_mm3": 7.542963961269092,
           "solids": 1
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "left-kintsugi": {
@@ -8629,61 +8651,61 @@
           "role": "body",
           "stl": "left-frame-kintsugi-body.stl",
           "step": "left-frame-kintsugi-body.step",
-          "stl_sha256": "9797b12944d491358f568d77284236db4a0d196abb6d8d5bfaa8e2001b351262",
-          "step_sha256": "a8a86f2a7d02651ff943bf827474a7341fbc088f1237d83a8dfaa2152fee2795",
-          "volume_mm3": 2221.3744740398383,
+          "stl_sha256": "4a05c2c925caedec04b5cee67ea530444f7b442f7c616a7eea89ae8a9af460dd",
+          "step_sha256": "a2b6297c1e8839bf1fd24aebfa313fed3553daa463a76924cea59fddf1b4d12d",
+          "volume_mm3": 1871.5207930453587,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-kintsugi-detail.stl",
           "step": "left-frame-kintsugi-detail.step",
-          "stl_sha256": "0be6e1e28631dd7d6602009416e4ecf4ae7bc45411321b11f190d6a9922dbc9f",
-          "step_sha256": "a8a1098629824f69807803ba5770b1e0fb00bbc0ac7dc38f47b6a14de27e252f",
-          "volume_mm3": 36.87600000000005,
+          "stl_sha256": "f9e517b61469a8be371752b70a7d68cdccaf294f0762232df6fcd7eba5dc34c8",
+          "step_sha256": "60e03ca257f933c5f71c2bb106f1ba3717e857a36d2449d06fdc8b1e3e1329f0",
+          "volume_mm3": 29.081130434782644,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "left-frame-kintsugi-accent.stl",
           "step": "left-frame-kintsugi-accent.step",
-          "stl_sha256": "552f590594d8f70d4d4ef6b96775294a3be3536417729904fce656738ab11c54",
-          "step_sha256": "47d557d2c092e07ac35b50a3558145ed77743911ffb52a123d985c20f507f3b0",
-          "volume_mm3": 57.28603221964585,
+          "stl_sha256": "e674e7ab485eda5417371564eb56802486bdd2894caeb8fe1912b1db3d70c008",
+          "step_sha256": "3f950c5591603ee010e7661ffb6646a92d2e520446dc19b6419a68ead398a455",
+          "volume_mm3": 54.515755718599195,
           "solids": 4
         },
         {
           "role": "secondary",
           "stl": "left-frame-kintsugi-secondary.stl",
           "step": "left-frame-kintsugi-secondary.step",
-          "stl_sha256": "252d894312180019c06d6ddbe351af4eb0f7f2e30f605cca8d6d51deba0b7a51",
-          "step_sha256": "76c083e4231569ee1891c9ca0a2bd713b86c28a4d68c28913f98e0e98674e6d1",
-          "volume_mm3": 12.799999999999983,
+          "stl_sha256": "7331f7e07143aa0d4340efc100f38d948b27bf6954d3f88c5281b19758405183",
+          "step_sha256": "93145de9a0bd8e8fc6b04c8809d5b2695e60f3bb862b80952a2879e6f7e38ef1",
+          "volume_mm3": 12.799999999999986,
           "solids": 1
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "right-smooth": {
       "stl": "right-frame-smooth.stl",
       "step": "right-frame-smooth.step",
       "material_parts": [],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "single body"
     },
     "right-bevel": {
       "stl": "right-frame-bevel.stl",
       "step": "right-frame-bevel.step",
       "material_parts": [],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "single body"
     },
     "right-facet": {
       "stl": "right-frame-facet.stl",
       "step": "right-frame-facet.step",
       "material_parts": [],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "single body"
     },
     "right-handheld": {
@@ -8694,40 +8716,40 @@
           "role": "body",
           "stl": "right-frame-handheld-body.stl",
           "step": "right-frame-handheld-body.step",
-          "stl_sha256": "6c03c19710649f32f2174d8f2e0e9fbe481b5061fc31ee2491d8d979af989339",
-          "step_sha256": "800bbbf8ef4d4f18c647801ec792b00276ed396c79276418e84c1fbd774c8a53",
-          "volume_mm3": 2310.094117459971,
+          "stl_sha256": "42b8fb3538364df2061770bcd0cecd18e92cb5ec1cd9d2db3c1c8060af1f63bf",
+          "step_sha256": "dd3cb3f520d86bd1cf747556dbc3edfd71306c6b777df27e9fcb87174efbcf99",
+          "volume_mm3": 1951.6884783732667,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-handheld-detail.stl",
           "step": "right-frame-handheld-detail.step",
-          "stl_sha256": "0233ed9219174abdd91db2b8453a21ec537caa7464cc97007e4d943e89e6ee88",
-          "step_sha256": "5d34be06e9544202f0b57b627475fff22165a0247a32fb42693a9b473f784922",
-          "volume_mm3": 8.640000000000041,
+          "stl_sha256": "723fb29f8fd2c66ad1d64d1a734b3e76693a94585e6679ffbc610caf51a21aa4",
+          "step_sha256": "2a3406137a49803d655fdad91fa60da97db251c4a47d43da564003459cb5979e",
+          "volume_mm3": 7.679999999999985,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "right-frame-handheld-accent.stl",
           "step": "right-frame-handheld-accent.step",
-          "stl_sha256": "71fe843b7555a903685775eb594ef0ae6e8bef6d36b60aba77f1c6d5413fd92c",
-          "step_sha256": "1c9f8598b63d9a21f178ab4e6b8ab4352b2721143661ed7f2a95b51433aca68e",
-          "volume_mm3": 6.842388799518569,
+          "stl_sha256": "bb1c4a6fb32145b9cf14c29ab7e0167ac92bacda8220a1314e64bbee5453ed31",
+          "step_sha256": "7c00332617de7aff12b8f5805947295c8f4ebe7eedd97ea2fb85a5bdcb9a9333",
+          "volume_mm3": 5.789200825476147,
           "solids": 2
         },
         {
           "role": "secondary",
           "stl": "right-frame-handheld-secondary.stl",
           "step": "right-frame-handheld-secondary.step",
-          "stl_sha256": "2158df7c6dc7c996d11be51ab8bee1b4cd350e180019eb19dc2771413ba3ddca",
-          "step_sha256": "eb12cffdcc19ec0796e6126e6d8c0bba388e90451af8529b6d940fb240587790",
+          "stl_sha256": "3763533d99ed7aa1e37ed8dfcf6d3e24461545d0f6151bd90b3311b26d4f442d",
+          "step_sha256": "7484e29a1e90d08bbde1571cf25e9d7344be10ff02b758386affc6d0ce5a0284",
           "volume_mm3": 2.759999999999997,
           "solids": 3
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "right-tv": {
@@ -8738,40 +8760,40 @@
           "role": "body",
           "stl": "right-frame-tv-body.stl",
           "step": "right-frame-tv-body.step",
-          "stl_sha256": "e52393961ec7fef4439211da4e196005534d7aa0f036f2de7cfe77dc3e5ad5ab",
-          "step_sha256": "add6459012a55b4e0bfb9ed667bd948b0510db9d69536814cc4b05e0bc3b6ae3",
-          "volume_mm3": 2251.6117014429983,
+          "stl_sha256": "b861bcd71b3ec945b90b37685c6dc21836b517aa4f7067a30a50d1af7c7d4337",
+          "step_sha256": "07070ee4bda28d3b20695b0cbe89cc0196b8a06bdfcadc2a7fa02087048882d0",
+          "volume_mm3": 1927.8891959838377,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-tv-detail.stl",
           "step": "right-frame-tv-detail.step",
-          "stl_sha256": "727d05a7cba1a263b26759427865c014773121f015345f3c9a7ee000abcfc987",
-          "step_sha256": "85407db287f99b1cbfc74464751f40c7beea00f83ca5eaf1db103d3b9d4bf116",
-          "volume_mm3": 64.42000000000024,
-          "solids": 1
+          "stl_sha256": "364a8b7fe73b8d1119b573cc0e77e32d4eeb9666907339e5a67c525e2bc0c38e",
+          "step_sha256": "c4bf7c92a9ebc9243a8cd72dd33233f99d2208cc58723e4ac73708a0dda472a3",
+          "volume_mm3": 28.56000000000038,
+          "solids": 2
         },
         {
           "role": "accent",
           "stl": "right-frame-tv-accent.stl",
           "step": "right-frame-tv-accent.step",
-          "stl_sha256": "004ac1d2a847bfdd126bedd21b276f25cee7d1f3982eaa777f9e7d3e378988ae",
-          "step_sha256": "9ae35c625d4d00bfe3fd9ad3ba4ccad2903f3558cacdbbb4e0cee5f8d5f64f48",
-          "volume_mm3": 5.8088048164875286,
+          "stl_sha256": "48d35ec94929385f4021be5c3895f69d4819097070a7d8a1e1fc732b7414b5be",
+          "step_sha256": "e609b4cb745245d106e9092f0700e9c7a44fd5ce57e8aa23418cee9e659f5b7a",
+          "volume_mm3": 5.79648321490564,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "right-frame-tv-secondary.stl",
           "step": "right-frame-tv-secondary.step",
-          "stl_sha256": "9b887a89c67895f9c953f5d4b247b75ba887e5f42a53b7c26d432ceb3642b40e",
-          "step_sha256": "a91e8e7be26bb2bb1525de0d8508d753d7f16d7b4550a6c4eac4c2a4323383de",
-          "volume_mm3": 6.495999999999961,
+          "stl_sha256": "eb7e9b8422bc969f6fe58543bc242d1a83ee64b3ec19ba3fc99bdb0200cb5eee",
+          "step_sha256": "687bae34c7db58e1fd934f02a3c1371ff055cd211131d89debd04b4915ae52ba",
+          "volume_mm3": 5.671999999999958,
           "solids": 4
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "right-cyberpunk": {
@@ -8782,40 +8804,40 @@
           "role": "body",
           "stl": "right-frame-cyberpunk-body.stl",
           "step": "right-frame-cyberpunk-body.step",
-          "stl_sha256": "4abca4693cca7dd3e98e079a4b550e85a5bef0d52844b77a1956dc041037f986",
-          "step_sha256": "9f9f17e445b80f0200857d05c26f267c72bd4ef2f9c0c33d1ceed94929cb35ea",
-          "volume_mm3": 2310.547869198053,
+          "stl_sha256": "fe542bea594c81da6c8c84637b5e648f6ad17bf861cc408dd3897f78fecad2b9",
+          "step_sha256": "d20475b54bd361fb24bb43acd9759e454cb85fefe8352a5d6c833693d68837ab",
+          "volume_mm3": 1952.3530421373061,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-cyberpunk-detail.stl",
           "step": "right-frame-cyberpunk-detail.step",
-          "stl_sha256": "d2930b99531fd1f9e38fbfcaafbb0dd0df4ee63597643c3e35cd3d1dcf8532db",
-          "step_sha256": "67401281182cc39fb77c65a9a71c7fcaa723d5313b853c75d6c60bd08bc963e8",
-          "volume_mm3": 7.055999999999933,
+          "stl_sha256": "3116c75e0ef88a47f138529fce79ec40bb8e616dca5ad3fb7cc67bdbead0b602",
+          "step_sha256": "0708758378779de016df196823db404692d7fb2b59f4a43e31b72613d0bd2da5",
+          "volume_mm3": 6.0959999999999415,
           "solids": 3
         },
         {
           "role": "accent",
           "stl": "right-frame-cyberpunk-accent.stl",
           "step": "right-frame-cyberpunk-accent.step",
-          "stl_sha256": "1ef49cb53e7ab74fcd221be45928b223d3413c475c4fabc5580ed0c2ff635251",
-          "step_sha256": "69b88027f6c29a48eca5fb3c28a25d4c7ccf26301904c7d37ea33c33c560f87c",
-          "volume_mm3": 5.152000000000043,
+          "stl_sha256": "2498b03cb0df591d6865f2df8837b52b80f47a6ae22307b836df001303a274b5",
+          "step_sha256": "78879237233a35ba2a470f758b3f80bb20dce87201e5152936d29516704c7e03",
+          "volume_mm3": 3.8880000000000434,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "right-frame-cyberpunk-secondary.stl",
           "step": "right-frame-cyberpunk-secondary.step",
-          "stl_sha256": "10090f1b651d0d6f10fc55ac405273545f3bb60bb85ec108f547e8571420961d",
-          "step_sha256": "7729220f2b3faa3ecd368f2d65c382fd953f5c462c6e1b830f9b6301a1aaad4b",
-          "volume_mm3": 5.580637061435916,
+          "stl_sha256": "48e7e3770f6cdceb742df8e22050ac44412e2ee144273d7b16cc2a37328b9220",
+          "step_sha256": "d52d98b356ce50aa56aacfaeea7bff8f6bcbf99f8f8cdab1db9beb2ff95e34d1",
+          "volume_mm3": 5.580637061435917,
           "solids": 2
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "right-cartridge": {
@@ -8826,26 +8848,26 @@
           "role": "body",
           "stl": "right-frame-cartridge-body.stl",
           "step": "right-frame-cartridge-body.step",
-          "stl_sha256": "0cbc706ab7ddb2a9f2948c63948e0a8e1735c83c61043421286c072b2918dee7",
-          "step_sha256": "7cff2084248ea8cd67b604103e48a574f959427a417a166ed592ff1121c61ac5",
-          "volume_mm3": 2197.240506259489,
+          "stl_sha256": "a72bc86c7454570fb5df9645c6acf04b8bc3ac9af8f62d0e48ecc8bc795334a0",
+          "step_sha256": "4f90f00c29f86f2f5d83b9f84ce1603821e6464662c15510e96fc47cc4d8a12b",
+          "volume_mm3": 1863.7769291987408,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-cartridge-detail.stl",
           "step": "right-frame-cartridge-detail.step",
-          "stl_sha256": "0c3ec5a263f06fbf440aca87c78ab455a34ffecdb509a0e76fd1e446f29d9e09",
-          "step_sha256": "11c7124f1cf0564ebc8cd8b3dcf53dfdcfcb3087597d8c96d57166705d3aea43",
-          "volume_mm3": 83.96800000000044,
+          "stl_sha256": "b2ad07d6be4336be03f48824de16ab2fa4ede4f699c1327bf52defe820f7701f",
+          "step_sha256": "69d2bd71398e92f365434d5515aaf3023d6e6b6ae0c903e900d013656953bf06",
+          "volume_mm3": 68.53275000000008,
           "solids": 3
         },
         {
           "role": "accent",
           "stl": "right-frame-cartridge-accent.stl",
           "step": "right-frame-cartridge-accent.step",
-          "stl_sha256": "59a9e9da46fb02fcaf2ae80f1f77f6344b29f8c79a81efef80b152a53e82ebf3",
-          "step_sha256": "a6bad7b906c3a7cb4fdb368c686d18a4202297636b700c132193ccb37fd865da",
+          "stl_sha256": "a4551319ec94569274dfa1411bf3347f036138564b41757c36037770c03e68c8",
+          "step_sha256": "061cf3c77bf8143bdc3103b3ab2b4e18fd829be47e9966d4ffc66ff624d4c0ba",
           "volume_mm3": 13.72000000000006,
           "solids": 7
         },
@@ -8853,13 +8875,13 @@
           "role": "secondary",
           "stl": "right-frame-cartridge-secondary.stl",
           "step": "right-frame-cartridge-secondary.step",
-          "stl_sha256": "a099609b1f2d6663dd97293a47fb0637d4d6547c9262419f37fa4aa6e8e4b5e6",
-          "step_sha256": "00f45d013a9c8ca8544940e878e363a91798ccfe4d50717315f06d1968a4f975",
-          "volume_mm3": 33.40800000000001,
+          "stl_sha256": "b4edf006d4a30c1d86a82ff368132357ab74a2c06366dd5811b53c177b761d3c",
+          "step_sha256": "7ed441df45997829e85aa4b7424ace029746c9d1c0b2407074f7fcb53453705d",
+          "volume_mm3": 21.887999999999987,
           "solids": 1
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "right-arcade": {
@@ -8870,40 +8892,40 @@
           "role": "body",
           "stl": "right-frame-arcade-body.stl",
           "step": "right-frame-arcade-body.step",
-          "stl_sha256": "f9492696c8dc3db5d464fba1a7587208e6652e596f1d26b4f7bfb4d18813945a",
-          "step_sha256": "951c9cf9f39881869a6e727584c55418e282bf37d72fa37b302dc0890e8967c1",
-          "volume_mm3": 2243.0563735978662,
+          "stl_sha256": "638f20d778fa33cd92cc3d666e53ec32101730d2bc68b5e9b47a2652809f7428",
+          "step_sha256": "ddada2ab1315d08ddb3e239e4d2c36c230867f55d421557b259776df60b1ad95",
+          "volume_mm3": 1897.6195038614494,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-arcade-detail.stl",
           "step": "right-frame-arcade-detail.step",
-          "stl_sha256": "5b02df2642621b20f751d4106210aa1b904dcac6d5dba86c844cc5ed62542dde",
-          "step_sha256": "7de1d2b01e821a49501bd7b0b908ba09f84d78f4d507b462e7e155c79a37594a",
-          "volume_mm3": 61.42000000000014,
+          "stl_sha256": "4ae2d0c6ccd1fdb441678d445e318fc0a7e6c2aeb73a76bac888a0e96dfca613",
+          "step_sha256": "7f8e0828cf5a40db6e3d649d85d884ee11f0d1befe1a6060854f9efc421b4f04",
+          "volume_mm3": 50.60800000000025,
           "solids": 9
         },
         {
           "role": "accent",
           "stl": "right-frame-arcade-accent.stl",
           "step": "right-frame-arcade-accent.step",
-          "stl_sha256": "b8bcba76c9678e0eda64da26d22bfaaf3e8ec5a7ffaed022fe7a61026b45be99",
-          "step_sha256": "f47b2a2a7f8b195e259b0f87e73d2b361e609aaef8f047e08b3ed27be116de36",
-          "volume_mm3": 9.650972631827846,
+          "stl_sha256": "21867b033d17f46b669f835c78971985ca4ecab64b5796ab491a9159d51bb923",
+          "step_sha256": "4ebccf14171dcd8de6d44e6ce989de01fa295bcfe15b6543d1e256c33d0e21a2",
+          "volume_mm3": 8.170393810960157,
           "solids": 3
         },
         {
           "role": "secondary",
           "stl": "right-frame-arcade-secondary.stl",
           "step": "right-frame-arcade-secondary.step",
-          "stl_sha256": "71f83ad0c1b5b9a94eae91c34b5499524a5e23e0799d90e98085c1eabba01466",
-          "step_sha256": "b886b84f35bd0baaf038d30063406395c31af3c16a0d7508d02c30036938056b",
-          "volume_mm3": 14.209160029791702,
+          "stl_sha256": "4ddf4c08c730e438e5a84a531f5863839b648c9124a0e0923ee54e0dca016eb8",
+          "step_sha256": "e5a8218fa9bb9789dffceaa4e096404fbde93b7900e984849abe5a054cdb1518",
+          "volume_mm3": 11.51978152633129,
           "solids": 4
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "right-mecha": {
@@ -8914,40 +8936,40 @@
           "role": "body",
           "stl": "right-frame-mecha-body.stl",
           "step": "right-frame-mecha-body.step",
-          "stl_sha256": "3bfead4aacfe461b164f14320e172bc97c523b95d97fc6fafe4958038125ff31",
-          "step_sha256": "3e214fcf4a7047f8e9a62a3f3971582b3f02eb7405426b8df525047120589941",
-          "volume_mm3": 2196.481542298221,
+          "stl_sha256": "0f99fe5671911e905e996a9b30be8554ef9bdeca7b153dfd06630d9f0f1bdcf3",
+          "step_sha256": "36d2015434582b475ca69322e6ad36438c1f9cb00690962d57b5ad26585a85fd",
+          "volume_mm3": 1847.7002485708044,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-mecha-detail.stl",
           "step": "right-frame-mecha-detail.step",
-          "stl_sha256": "376c1ef206d290939ebe680850883f0571502e96f025d142af30d611bfeae5f0",
-          "step_sha256": "c16402bf9021a23b1a177a31df5e2140589eb9a2f56eaf5390ae124dfadf6263",
-          "volume_mm3": 108.47199999999981,
+          "stl_sha256": "f419b7d7ea655d6a201a0f88545030628df2574f225abcb52f3949e7296ac200",
+          "step_sha256": "d023d6dcf667cb4301b3124a950d790d8181d183568814782130a5bfbd2a32b7",
+          "volume_mm3": 100.97796666666659,
           "solids": 6
         },
         {
           "role": "accent",
           "stl": "right-frame-mecha-accent.stl",
           "step": "right-frame-mecha-accent.step",
-          "stl_sha256": "8d3020430ae51bcf484b69afa514fdfd29837b6f9fc325e4efe52b7d515bf971",
-          "step_sha256": "5a52ae2ab605e8ae52f4d16d30d3741e231cc5cce5c5bfde6c17ec2eadb9c728",
-          "volume_mm3": 15.84000000000003,
+          "stl_sha256": "fc83e40603fcd5c3f0e8ef5633a69d27a78da8de2b1905b6787ad94f286db2b8",
+          "step_sha256": "d5ef58176b60b79b33ce74c74a3a24a09a45bbf5d9d92e367bd0a8125558d446",
+          "volume_mm3": 11.696500000000023,
           "solids": 6
         },
         {
           "role": "secondary",
           "stl": "right-frame-mecha-secondary.stl",
           "step": "right-frame-mecha-secondary.step",
-          "stl_sha256": "e1479ffc1a6baddfe8d920079ee8c280da95f9ee663cdc66145ae00fe86a903a",
-          "step_sha256": "d806b536bfa36d0ee99a93fc67eade4f1bd79da586789663a9395f65e9eb9b56",
-          "volume_mm3": 7.542963961269098,
+          "stl_sha256": "d6d26474a181a658c1a9ad5e4c9789e6a3b7358342bbc5f2e339272a234476be",
+          "step_sha256": "6a6ccbc02cf0b59ca8fc1895f63e823ba47caf76170fa369688f9a0c7bbd0cae",
+          "volume_mm3": 7.542963961269099,
           "solids": 1
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
     "right-kintsugi": {
@@ -8958,40 +8980,40 @@
           "role": "body",
           "stl": "right-frame-kintsugi-body.stl",
           "step": "right-frame-kintsugi-body.step",
-          "stl_sha256": "ffa0b02315348c531338662c20cddc49bdd9026cca7ab55489aa111c6238fadd",
-          "step_sha256": "e571bc26b63e3f4bfd0a269eac9f9c2c7dca1f88e3b9d370fec603f33bb1cf7b",
-          "volume_mm3": 2221.374474039845,
+          "stl_sha256": "08bec89e10985007c71dfc3ef6d2a9517f0998baa2ff9dd61c8188143cf59c10",
+          "step_sha256": "e521bad499f2c05495934590447eccfb6198f1db06de962af785d785685d6319",
+          "volume_mm3": 1871.520793045361,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-kintsugi-detail.stl",
           "step": "right-frame-kintsugi-detail.step",
-          "stl_sha256": "960215e2fedb2ece4fd84f597e038735820b73cbbc5f140c1df08faa04b99c5c",
-          "step_sha256": "91c850eab7254622aedad5e53c26836b053127871fe50a052987f8763c0d9e4f",
-          "volume_mm3": 36.876000000000055,
+          "stl_sha256": "3df39709c6da5f7ab006cc14fe0f32a992b6bc50ecbe57f22f4c5f09b9c9b8fb",
+          "step_sha256": "aad63a160dda724c29787fb470f757d80a09295c0b5ce9664d270e60f97233ec",
+          "volume_mm3": 29.081130434782644,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "right-frame-kintsugi-accent.stl",
           "step": "right-frame-kintsugi-accent.step",
-          "stl_sha256": "5bdc13c7b7c2b374be38a5990c722ecf52ba8ad5592d389b3de741bcde0fd4fc",
-          "step_sha256": "d8b875cb279fa211b9a8c9832fb93545225896519dbdc1034fd9ff96f3e17a54",
-          "volume_mm3": 57.2860322196457,
+          "stl_sha256": "f012aac08c11b3d6eeea1b3fac4520f3fb2af56385136a134f9122abc8d8d177",
+          "step_sha256": "563726121434e62a286ccbe0417a095e3aa705211994cf7a6ebe0a26d084e687",
+          "volume_mm3": 54.51575571859911,
           "solids": 4
         },
         {
           "role": "secondary",
           "stl": "right-frame-kintsugi-secondary.stl",
           "step": "right-frame-kintsugi-secondary.step",
-          "stl_sha256": "36f7e0f63e5b22600e0956aa2eec692495161599408f319e7d04b0c70384595e",
-          "step_sha256": "9af5c26535d52a45d6e3f47bba3ecc1ff8b4bd90a1bb6745a6091f3011a5952e",
+          "stl_sha256": "993924f7508f2d6a1f05299848c18f5e332aafd93f7d68888e955a9757b8267a",
+          "step_sha256": "6f7843d6cc0743045a2def78065f610dcd42ff8e29c4b42076bd657b022a8bfc",
           "volume_mm3": 12.799999999999985,
           "solids": 1
         }
       ],
-      "roof_mm": 14.8,
+      "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     }
   },
@@ -9000,13 +9022,13 @@
       {
         "index": 0,
         "stl": "left-battery-lead-301230-0.stl",
-        "stl_sha256": "8abcec454f269307a140a9c8f0c8fa802b4a17230cea79f258ddd03d1dbe90a8",
+        "stl_sha256": "46997e4598a276aeadfc09e02107516611aa53b21daaf94f144e25d5418394e8",
         "color": "#2e3033"
       },
       {
         "index": 1,
         "stl": "left-battery-lead-301230-1.stl",
-        "stl_sha256": "edecc5ea7160f8b7ff0a5b05bc15baf82cd8cae5efe4698bae565646bb8bb890",
+        "stl_sha256": "e10e7fc891c2ab8e08b70a0c10dd37cf96bf0ae0b3bb1d36a8534dd388e3c11a",
         "color": "#9e2e29"
       }
     ],
@@ -9014,13 +9036,13 @@
       {
         "index": 0,
         "stl": "left-battery-lead-adafruit-1570-0.stl",
-        "stl_sha256": "f32c3c15c22d5df59007a8cad1556d4cdd688dbfc6685ffafb2eca5b82841501",
+        "stl_sha256": "65bbcedb0cc871098c7e9942be4befda7f765c1163a35840a0e1333a0d9c12ea",
         "color": "#2e3033"
       },
       {
         "index": 1,
         "stl": "left-battery-lead-adafruit-1570-1.stl",
-        "stl_sha256": "b9b866b4b3bc82f32fac45e2ffa1641be2b8a148533c7b462339f9ef057e8990",
+        "stl_sha256": "30fc760f3c83a1458c459c5ccdc15273f76aeb9df48ddb2f86a5e35e1cb67af3",
         "color": "#9e2e29"
       }
     ],
@@ -9028,13 +9050,13 @@
       {
         "index": 0,
         "stl": "right-battery-lead-301230-0.stl",
-        "stl_sha256": "f4c8feeeebbc7a538d96d68007db97a7ecaa27f5197ef77efc584dc97cb69321",
+        "stl_sha256": "076cbe30f6068cb8f981fb310721badfd3a8205c615489ffd2e574eeb323b4d2",
         "color": "#9e2e29"
       },
       {
         "index": 1,
         "stl": "right-battery-lead-301230-1.stl",
-        "stl_sha256": "e28c6af8a26553850853b9d8359fcb5954cf0aa503030759b699e1c1e1cbfc3b",
+        "stl_sha256": "dfc5d761376a0d0abf368eec270f7bd1876a74817f712436fc239adeb22765aa",
         "color": "#2e3033"
       }
     ],
@@ -9042,13 +9064,13 @@
       {
         "index": 0,
         "stl": "right-battery-lead-adafruit-1570-0.stl",
-        "stl_sha256": "427a0515a6e7dd81688afc954419dfa70e3300f83375df5b6869ebecc8d8744f",
+        "stl_sha256": "813dbbc40f24418ab1419f56b0ceb82917a51cb449d9963c0c594ea142eea7a1",
         "color": "#9e2e29"
       },
       {
         "index": 1,
         "stl": "right-battery-lead-adafruit-1570-1.stl",
-        "stl_sha256": "b7865b8dafd65a42618682ac9b826b9d3a5c6889812251a5a0bc390f2524d5eb",
+        "stl_sha256": "1efa4369e809dd07ab745c39d26d892e1b40017caba0eb82d6e85b8f5080710c",
         "color": "#2e3033"
       }
     ]
@@ -9068,8 +9090,235 @@
     "document_label_preservation": "validation/revI-document-label.json"
   },
   "export_execution": {
-    "native_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
-    "exporter_sha256": "05e9352fd6003c04869729cb88caf10aea687f7370f85e9b1b28ac2022f80475",
+    "native_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
+    "exporter_sha256": "7aad1877f0469acc2bf87b4c01a35c4a8319cadf78824e09b583f21ee8d99ab3",
     "receipt": "validation/revI-mechanical.json"
+  },
+  "level_stack": {
+    "display_pair": {
+      "allowed_insertion_mm": [
+        2.16,
+        2.92
+      ],
+      "female_height_mm": 4.57,
+      "fixed_socket_tail_mm": 2.92,
+      "header": "TLW-105-06-G-S",
+      "insertion_mm": 2.67,
+      "male_insulator_mm": 1.52,
+      "post_diagonal_mm": 0.8980256121069154,
+      "post_mm": 0.635,
+      "qualification": "Nominal mating geometry only",
+      "separation_mm": 6.09,
+      "socket": "SLW-105-01-L-S",
+      "solder_envelope_above_display_mm": 0.5,
+      "tail_trim_above_display_mm": 0.3
+    },
+    "frame_reduction_mm": 1.41,
+    "generator_sha256": "5b4e75f33f91a6cbdcd84c0209c5d2bce8f2ee54b4087a55eabc16c4b0bd7155",
+    "halves": {
+      "left": {
+        "caps": {
+          "admitted_variants": 28,
+          "minimum_pressed_mesh_z_mm": 8.2,
+          "minimum_xy_clearance_mm": 0.2,
+          "poses": 1008,
+          "travel_mm": 3.5
+        },
+        "display_local_row_mm": 34.7,
+        "display_origin_y_mm": 16.1,
+        "header_row_mm": 50.8,
+        "upper_shell_bounds_mm": [
+          18.25,
+          -94.825459,
+          6.3,
+          135.0,
+          -0.25,
+          13.39
+        ],
+        "upper_shell_volume_mm3": 12488.498837516223,
+        "wires": {
+          "301230": [
+            {
+              "bend_radius_mm": 1.5,
+              "cell_terminal_mm": [
+                118.2,
+                -44.8,
+                3.6
+              ],
+              "coil_y_adjustment_mm": 0.013816784073512167,
+              "length_mm": 105.0,
+              "plug_terminal_mm": [
+                117.2,
+                -59.2,
+                7.2
+              ],
+              "storage_z_mm": 6.6000000000000005
+            },
+            {
+              "bend_radius_mm": 1.5,
+              "cell_terminal_mm": [
+                119.0,
+                -44.8,
+                4.4
+              ],
+              "coil_y_adjustment_mm": 0.013816784073497956,
+              "length_mm": 105.0,
+              "plug_terminal_mm": [
+                117.2,
+                -57.2,
+                8.0
+              ],
+              "storage_z_mm": 7.4
+            }
+          ],
+          "adafruit-1570": [
+            {
+              "bend_radius_mm": 1.5,
+              "cell_terminal_mm": [
+                118.2,
+                -45.3,
+                3.6
+              ],
+              "coil_y_adjustment_mm": 0.013816784073512167,
+              "length_mm": 105.0,
+              "plug_terminal_mm": [
+                117.2,
+                -59.2,
+                7.2
+              ],
+              "storage_z_mm": 6.6000000000000005
+            },
+            {
+              "bend_radius_mm": 1.5,
+              "cell_terminal_mm": [
+                119.0,
+                -45.3,
+                4.4
+              ],
+              "coil_y_adjustment_mm": 0.013816784073497956,
+              "length_mm": 105.0,
+              "plug_terminal_mm": [
+                117.2,
+                -57.2,
+                8.0
+              ],
+              "storage_z_mm": 7.4
+            }
+          ]
+        }
+      },
+      "right": {
+        "caps": {
+          "admitted_variants": 28,
+          "minimum_pressed_mesh_z_mm": 8.2,
+          "minimum_xy_clearance_mm": 0.2,
+          "poses": 1008,
+          "travel_mm": 3.5
+        },
+        "display_local_row_mm": 34.7,
+        "display_origin_y_mm": 16.1,
+        "header_row_mm": 50.8,
+        "upper_shell_bounds_mm": [
+          25.0,
+          -94.825459,
+          6.3,
+          141.75,
+          -0.25,
+          13.39
+        ],
+        "upper_shell_volume_mm3": 12488.791075396133,
+        "wires": {
+          "301230": [
+            {
+              "bend_radius_mm": 1.5,
+              "cell_terminal_mm": [
+                41.8,
+                -44.8,
+                3.6
+              ],
+              "coil_y_adjustment_mm": 0.013816784073547694,
+              "length_mm": 104.99999999999999,
+              "plug_terminal_mm": [
+                42.8,
+                -59.2,
+                7.2
+              ],
+              "storage_z_mm": 6.6000000000000005
+            },
+            {
+              "bend_radius_mm": 1.5,
+              "cell_terminal_mm": [
+                41.0,
+                -44.8,
+                4.4
+              ],
+              "coil_y_adjustment_mm": 0.013816784073547694,
+              "length_mm": 105.00000000000001,
+              "plug_terminal_mm": [
+                42.8,
+                -57.2,
+                8.0
+              ],
+              "storage_z_mm": 7.4
+            }
+          ],
+          "adafruit-1570": [
+            {
+              "bend_radius_mm": 1.5,
+              "cell_terminal_mm": [
+                41.8,
+                -45.3,
+                3.6
+              ],
+              "coil_y_adjustment_mm": 0.013816784073547694,
+              "length_mm": 104.99999999999999,
+              "plug_terminal_mm": [
+                42.8,
+                -59.2,
+                7.2
+              ],
+              "storage_z_mm": 6.6000000000000005
+            },
+            {
+              "bend_radius_mm": 1.5,
+              "cell_terminal_mm": [
+                41.0,
+                -45.3,
+                4.4
+              ],
+              "coil_y_adjustment_mm": 0.013816784073547694,
+              "length_mm": 105.00000000000001,
+              "plug_terminal_mm": [
+                42.8,
+                -57.2,
+                8.0
+              ],
+              "storage_z_mm": 7.4
+            }
+          ]
+        }
+      }
+    },
+    "inputs_sha256": {
+      "design/layout.json": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3",
+      "design/revI-wire-study.json": "ae2a204b383e6df81f59706e42a98c163f549183767da38c634fc8983d94a2f1",
+      "keycap_geometry": "4e749ea8bfeecb3150147e8a15b7d3fdcb859fabb5796f83fda083511e2f326a",
+      "tools/freecad/components.py": "e32a0e4e3181603d742911c788e1defb4ecd4e76ec59d67eab2915a538e4a171"
+    },
+    "local_clearances": {
+      "cradle_wire_exit_floor_z_mm": 3.15,
+      "mcu_ledge_socket_gap_mm": 0.1,
+      "purpose": "Clear lowered socket bodies and the retained continuous battery lead; no height increase."
+    },
+    "niceview_hole_diameter_mm": 0.9,
+    "niceview_hole_status": "Unmeasured nominal; toleranced pin fit must be verified, never enlarge a purchased board on this evidence.",
+    "parameters_mm": {
+      "BatteryBottom": 1.4,
+      "DisplayBottom": 11.49,
+      "FrameTop": 13.39,
+      "MCUBottom": 8.2
+    },
+    "physical_acceptance": false,
+    "schema": "flan36-level-stack-1"
   }
 }

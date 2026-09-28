@@ -267,7 +267,7 @@ function card(id,label,src){
 function frameTargets(){return frameSide==='both'?['left','right']:[frameSide];}
 function setFrameSide(side){frameSide=side;syncConfigurationUI();}
 function applyFrame(change){
-  const cfg=copy(configuration);for(const side of frameTargets()){if(change.style&&!cfg.cases[side].match_frame){const f=cfg.frames[side],p=framePalette(f.style);if(f.color===p.body&&Object.entries(f.accents).every(([k,v])=>v===p[k])){const np=framePalette(change.style);f.color=np.body;f.accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,np[k]]));}}Object.assign(cfg.frames[side],change);if(cfg.cases[side].match_frame)cfg.cases[side].base_color=cfg.frames[side].color;if(change.style)cfg.cases[side].cover=true;}
+  const cfg=copy(configuration);for(const side of frameTargets()){if(change.style&&!cfg.cases[side].match_frame){const f=cfg.frames[side],p=framePalette(f.style);if(f.color===p.body&&Object.entries(f.accents).every(([k,v])=>v===p[k])){const np=framePalette(change.style);f.color=np.body;f.accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,np[k]]));}}Object.assign(cfg.frames[side],change);if(cfg.cases[side].match_frame){cfg.cases[side].base_color=cfg.frames[side].color;if(cfg.cases[side].style==='level')cfg.cases[side].plate_color=cfg.frames[side].color;}if(change.style)cfg.cases[side].cover=true;}
   try{
     applyConfiguration(cfg);
     // A new style must be visible even when coming from the internal stack study.
@@ -281,7 +281,7 @@ for(const [id,spec] of Object.entries(catalog.case_styles)){
   // Every thumbnail uses that style's exported parts, with the same camera.
   const button=card(id,spec.label,preview.image(entries,[.15,.8,1],{width:360,height:250}));button.dataset.case=id;button.title=spec.description;
   const img=button.querySelector('img');img.width=360;img.height=250;img.alt=spec.description;
-  button.onclick=()=>{const cfg=copy(configuration);for(const side of caseTargets()){const cs=cfg.cases[side],old=catalog.case_styles[cs.style];if(!cs.match_frame&&cs.base_color===old.base_color&&cs.plate_color===old.plate_color){cs.base_color=spec.base_color;cs.plate_color=spec.plate_color;}cs.style=id;}applyConfiguration(cfg);for(const o of objects)if(['base','plate'].includes(o.userData.group)&&caseTargets().includes(o.userData.side))hiddenObjects.delete(o.userData.objectIndex);state.layers.base=state.layers.plate=true;state.half=caseSide;sync();fit();};
+  button.onclick=()=>{const cfg=copy(configuration);for(const side of caseTargets()){const cs=cfg.cases[side],old=catalog.case_styles[cs.style];if(!cs.match_frame&&cs.base_color===old.base_color&&cs.plate_color===old.plate_color){cs.base_color=spec.base_color;cs.plate_color=spec.plate_color;}cs.style=id;if(cs.match_frame&&id==='level')cs.plate_color=cfg.frames[side].color;}applyConfiguration(cfg);for(const o of objects)if(['base','plate'].includes(o.userData.group)&&caseTargets().includes(o.userData.side))hiddenObjects.delete(o.userData.objectIndex);state.layers.base=state.layers.plate=true;state.half=caseSide;sync();fit();};
   $('case-grid').append(button);
 }
 for(const button of $('case-target').children)button.onclick=()=>{caseSide=button.dataset.side;syncConfigurationUI();};
@@ -297,7 +297,7 @@ for(const [color,label] of [['#304d4e','Deep teal'],['#ded8c6','Linen'],['#ad765
 }
 const frameHex=enhanceColorInput($('frame-color'));
 $('frame-color').oninput=e=>applyConfiguration(setColor(configuration,frameTargets(),'frame','body',e.target.value));
-$('theme-colors').onclick=()=>{const cfg=copy(configuration);for(const side of frameTargets()){const p=framePalette(cfg.frames[side].style);cfg.frames[side].color=p.body;cfg.frames[side].accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,p[k]]));if(cfg.cases[side].match_frame)cfg.cases[side].base_color=p.body;}applyConfiguration(cfg);};
+$('theme-colors').onclick=()=>{const cfg=copy(configuration);for(const side of frameTargets()){const p=framePalette(cfg.frames[side].style);cfg.frames[side].color=p.body;cfg.frames[side].accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,p[k]]));if(cfg.cases[side].match_frame){cfg.cases[side].base_color=p.body;if(cfg.cases[side].style==='level')cfg.cases[side].plate_color=p.body;}}applyConfiguration(cfg);};
 for(const [id,label] of [['default','Original'],['normal-sculpted','Sculpted Normal'],['saddle-sculpted','Sculpted Saddle']]){
   const entries=['K01','K11','K21'].map((key,i)=>({path:variants.get(data.presets[id].keycaps.left[key].variant).path,rotation:data.presets[id].keycaps.left[key].rotation_deg,center:[(i-1)*20,0,0]}));
   const button=card(id,label,preview.image(entries,[.5,1,2]));button.dataset.preset=id;

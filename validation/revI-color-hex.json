@@ -1,6 +1,6 @@
 {
   "checker_sha256": "3adfbb0b71ffc61577506608d9e8e9d54c03e081ff90ee557dbdb93fb66dfe9e",
-  "viewer_sha256": "201550cb807cf7e1fb946c59ebce4344e6ce2be2cfb61f17454daa57778a1a57",
+  "viewer_sha256": "31eb89f14b7b1257b87424b60a4b78e6f6bbdbd743cda6054a4c6ea662520d37",
   "checks": [
     "3/6 digits, optional #, trim, invalid atomicity and Escape",
     "native picker sync, Copy, real clipboard paste to another part",

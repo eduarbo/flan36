@@ -47,8 +47,8 @@ def render(kind):
         s=vtk.vtkCylinderSource();s.SetRadius(r);s.SetHeight(h);s.SetResolution(36);return primitive(s,(x,y,z),color,rx=90)
     rgb=lambda color:tuple(int(color[i:i+2],16)/255 for i in (1,3,5))
     style=catalog['case_styles'][cfg['cases']['left']['style']]
-    body=rgb(style['base_color']);plate_color=rgb(style['plate_color']);cover=rgb(cfg['frames']['left']['color'])
-    sides=['left'] if kind in ['side','stack','detail','corner'] else ['left','right']
+    body=rgb(cfg['cases']['left'].get('base_color',style['base_color']));plate_color=rgb(cfg['cases']['left'].get('plate_color',style['plate_color']));cover=rgb(cfg['frames']['left']['color'])
+    sides=['left'] if kind in ['side','stack','detail','corner','level'] else ['left','right']
     for side in sides:
         offset=0 if side=='left' else 161
         stack=kind=='stack';lid_dx=32 if stack else 0;lid_dz=13 if stack else 0
@@ -79,7 +79,7 @@ def render(kind):
         # Reflective screen artwork is illustrative, not a live hardware readback.
         cx=122.8 if side=='left' else 37.2;hy=m['halves'][side]['display_header']['y'];dz=45 if stack else 0
         screen_z=m['parameter_values_mm']['DisplayBottom']+1.915
-        glass=vtk.vtkPlaneSource();glass.SetOrigin(offset+cx-5.372,hy-29.64,screen_z+dz);glass.SetPoint1(offset+cx+5.372,hy-29.64,screen_z+dz);glass.SetPoint2(offset+cx-5.372,hy-4.36,screen_z+dz)
+        glass=vtk.vtkPlaneSource();glass.SetOrigin(offset+cx-5.372,hy-29.54,screen_z+dz);glass.SetPoint1(offset+cx+5.372,hy-29.54,screen_z+dz);glass.SetPoint2(offset+cx-5.372,hy-4.26,screen_z+dz)
         primitive(glass,(0,0,0),(.73,.79,.725))
         entries=[('BASE',hy-26,1.36),('BLE',hy-18,1.55),('L',hy-8,2.15)] if side=='left' else [('LINK',hy-26,1.36),('BAT',hy-18,1.55),('R',hy-8,2.15)]
         for text,y,scale in entries:
@@ -106,10 +106,11 @@ def render(kind):
         mp=vtk.vtkPolyDataMapper();mp.SetInputData(rev.GetOutput());a.SetMapper(mp);a.SetPosition(0,0,0);a.SetOrientation(0,0,0);a.SetScale(1,1,1)
     def label(text,x,y,size,color=(.14,.24,.22)):
         a=vtk.vtkTextActor();a.SetInput(text);a.SetPosition(x,y);p=a.GetTextProperty();p.SetFontFamilyToArial();p.SetFontSize(size);p.SetColor(*color);ren.AddActor2D(a)
-    titles={'assembled':'FLAN36  /  REV I','top':'FLAN36  /  TOP VIEW','side':'FLAN36  /  SIDE PROFILE','stack':'FLAN36  /  REMOVABLE STACK','detail':'FLAN36  /  CONTOUR + MAGNETIC FRAMES','corner':'FLAN36  /  SHARED CORNER'}
+    titles={'assembled':'FLAN36  /  REV I','top':'FLAN36  /  TOP VIEW','side':'FLAN36  /  SIDE PROFILE','stack':'FLAN36  /  REMOVABLE STACK','detail':'FLAN36  /  CONTOUR + MAGNETIC FRAMES','corner':'FLAN36  /  SHARED CORNER','level':'FLAN36  /  LEVEL CASE'}
     if kind!='corner':label(titles[kind],105,1380,44)
     sub=('Left half  /  KLP LAME  /  Orthographic profile' if kind=='side' else '36 keys  /  KLP LAME  /  Two nice!view displays  /  24 mm bay') if kind!='stack' else 'Adafruit 1570 or 301230. Captured battery cage and magnetic frame.'
     sub='Contour / Original thumb angles / Local tangent corners' if kind=='detail' else sub
+    if kind=='level':sub='Flush glass, frame and upper shell / 13.39 mm / Original Piantor key positions'
     if kind=='corner':sub='Color rim + Smooth frame / Shared R2.4 corner / Actual CAD meshes'
     if kind!='corner':label(sub,108,1334,25,(.37,.44,.41))
     label('RevI CAD study. Wiring, final connectors, fit and operation remain untested.',108,60,24,(.36,.42,.39))
@@ -119,11 +120,12 @@ def render(kind):
     elif kind=='side':focal=(78,-38,8);pos=(350,-38,8);up=(0,0,1);scale=53
     elif kind=='detail':focal=(115,-45,7);pos=(115,-45,450);up=(0,1,0);scale=68
     elif kind=='corner':focal=(127,-18,8);pos=(180,65,48);up=(0,0,1);scale=17
+    elif kind=='level':focal=(79,-43,8);pos=(160,-220,180);up=(0,0,1);scale=58
     else:focal=(88,-39,28);pos=(225,-270,205);up=(0,0,1);scale=70
     cam.SetFocalPoint(*focal);cam.SetPosition(*pos);cam.SetViewUp(*up);cam.SetParallelScale(scale);ren.ResetCameraClippingRange();win.Render()
     if kind=='side':
-        label('Plate: 7.6 mm',105,1235,29);label(f"Electronics cover: {m['parameter_values_mm']['FrameTop']:g} mm",105,1190,29)
-        label('Heights above base; feet add 1.2 mm. Key plate remains at 7.6 mm.',105,170,24,(.37,.44,.41))
+        label(f"Level shell + frame + glass: {m['parameter_values_mm']['FrameTop']:g} mm",105,1235,29)
+        label('Heights above base; feet add 1.2 mm. Switch retention plate remains at 7.6 mm.',105,170,24,(.37,.44,.41))
     if kind=='stack':
         label('nice!view  /  nice!nano  /  LiPo 100 mAh',105,1230,27)
         label('PCB with battery opening; unrouted',105,170,24,(.37,.44,.41))
@@ -133,7 +135,7 @@ def render(kind):
     print(kind,'rendered',flush=True)
 
 
-for kind in ['assembled','top','side','stack','detail','corner']:render(kind)
+for kind in ['assembled','top','side','stack','detail','corner','level']:render(kind)
 receipt={'revision':'I','model_sha256':hashlib.sha256((ROOT/'design/revI.json').read_bytes()).hexdigest(),
          'layout_sha256':hashlib.sha256((ROOT/'design/layout.json').read_bytes()).hexdigest(),
          'renderer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

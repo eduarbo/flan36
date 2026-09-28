@@ -1,4 +1,6 @@
-# Slim electronics and flush frames
+# Previous slim stack and flush frames
+
+This page records the 14.8 mm reference at commit `9ab4b18`. The current [floor-mounted, level-stack prototype](level-stack.md) lowers the frame and glass to 13.39 mm. The dimensions and receipts below remain historical evidence.
 
 The revised stack targets a **14.8 mm frame roof**, compared with 16.6 mm for the previous plain frame and 17.2 mm for raised decoration. These are heights from the case underside, excluding feet. The selected flat KLP caps still reach about **17.87 mm**: lowering the electronics does not lower the keys.
 
@@ -35,7 +37,7 @@ The connector check uses continuous rigid sweeps for a 5 mm unplug stroke, 24 mm
 
 ## What this proves
 
-The delivery check uses analytic geometry bounds, independent of display-mesh triangulation, and covers both halves, ten frames, both battery envelopes, saved native geometry, PCB placement, actual KiCad STEP registration, matching viewer meshes and aligned multicolor print exports. A separate readback compares all 2,242 exporter pair selections against analytic bounds for this saved geometry. [Current digital checks](../validation/revI-slim-flush.json).
+The delivery check uses analytic geometry bounds, independent of display-mesh triangulation, and covers both halves, ten frames, both battery envelopes, saved native geometry, PCB placement, actual KiCad STEP registration, matching viewer meshes and aligned multicolor print exports. A separate readback compares all 2,242 exporter pair selections against analytic bounds for this saved geometry. [Historical digital checks](../validation/revI-slim-flush.json).
 
 It does **not** prove the absolute minimum physical height. Lead diameter and terminal exits remain nominal, the 105 mm routes are modeled assumptions, and actual contact engagement has not been measured. Printed fits, magnetic retention, cell tolerances, flexing during service, RF, charging and electrical operation still need hardware testing. Both PCB studies remain unrouted with 104 unconnected items per half.
 

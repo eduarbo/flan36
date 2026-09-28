@@ -28,6 +28,12 @@
       "description": "Two shallow recessed bands in the sidewall.",
       "base_color": "#a3b7a7",
       "plate_color": "#354844"
+    },
+    "level": {
+      "label": "Level",
+      "description": "Switch-covering upper shell, flush with the display frame. Original removable 1.3 mm plate underneath.",
+      "base_color": "#253639",
+      "plate_color": "#304d4e"
     }
   },
   "battery_profiles": {
@@ -33439,11 +33445,11 @@
     },
     "cases": {
       "left": {
-        "style": "solid",
+        "style": "level",
         "cover": true
       },
       "right": {
-        "style": "solid",
+        "style": "level",
         "cover": true
       }
     }

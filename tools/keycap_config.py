@@ -64,6 +64,7 @@ def check(config,catalog=None):
         if not isinstance(f,dict):return ['Invalid frame.'],None
         if 'accents' in f:
             if not isinstance(f['accents'],dict) or any(k not in ['detail','accent','secondary'] or not valid_color(v) for k,v in f['accents'].items()):return ['Invalid frame accent color.'],None
+        if case.get('match_frame') and case.get('style')=='level' and str(case.get('plate_color','')).lower()!=str(f.get('color','')).lower():return ['Linked Level shell and frame colors must match.'],None
         if case.get('match_frame') and str(case.get('base_color','')).lower()!=str(f.get('color','')).lower():return ['Linked rim and frame colors must match.'],None
     for side,keys in c['layout'].items():
         if config['batteries'][side] not in c['battery_profiles']:errors.append('Unknown battery profile.')

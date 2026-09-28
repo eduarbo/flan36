@@ -1,0 +1,60 @@
+{
+  "schema": "flan36-level-case-1",
+  "request_ref": "codex:01a0c214-956e-7ff3-9dd0-6f48f74f240f:user:minimize-entire-stack-and-level-hidden-switch-case",
+  "source_commit": "9ab4b181f77d0f3ffc28bda0cb3c059006713c89",
+  "requested_outcome": "Minimize the whole removable battery/MCU/display/frame stack from the case floor upward and deliver a case option hiding switches whose upper edge is level with the frame; allow the display to be flush.",
+  "requirements": [
+    {
+      "id": "lower-stack",
+      "outcome": "Remove unjustified vertical support material and select the lowest evidenced complete stack, retaining both batteries and replaceable nice!nano v2/nice!view.",
+      "acceptance": "Saved/reopened native candidate, dimensioned mating interfaces, both battery profiles and continuous cable/service checks; reject lower candidates with named constraints."
+    },
+    {
+      "id": "level-case",
+      "outcome": "Provide a case variant that visually covers switch housings and shares the frame upper datum without moving the 36 key centers/angles.",
+      "acceptance": "Closed printable solids, cap full-travel envelope clearance, preserved switch plate and service access, visual side/top acceptance."
+    },
+    {
+      "id": "deliverables",
+      "outcome": "Preserve editable CAD, matching PCB component references, frame/color options and supported KLP caps, printable exports and usable public configurator.",
+      "acceptance": "Native/STEP/STL/viewer/configuration/print-kit agreement and verified public readback."
+    }
+  ],
+  "physical_acceptance": false,
+  "state": "design_contract",
+  "authority": "Current explicit design request and existing Flan36 repository/public viewer publication scope; no purchasing or physical acceptance.",
+  "review": {
+    "snapshot": "9ab4b181f77d0f3ffc28bda0cb3c059006713c89",
+    "method": "Two independent read-only reviews, constructive mechanics and adversarial reliability, followed by one focused second round on the dimensioned Samtec candidate.",
+    "reviewers": [
+      "level_case_domain",
+      "level_case_risk"
+    ],
+    "scope_hash_manifest": "build/level-case/baseline.json",
+    "baseline_unchanged_after_review": true,
+    "consensus": "Proceed with contained nominal CAD prototype; acceptance depends on geometry, continuous travel and service checks.",
+    "dispositions": [
+      {
+        "finding": "Commercial nice!view finished-hole diameter and toleranced .025-inch square-pin fit are unknown.",
+        "disposition": "Keep .9 mm hole as explicit unmeasured nominal; no drilling or hardware fit claim."
+      },
+      {
+        "finding": "A 1.2 mm roof would intersect the PCB and solder at 13.39 mm.",
+        "disposition": "Local PCB undercut and open header service well; preserve .8 mm backing requirement where .4 mm inlays exist."
+      },
+      {
+        "finding": "Stored battery leads must descend without disconnecting fixed PH terminals.",
+        "disposition": "Continuous radius-controlled 3D ramp; retain 105 mm length and verify terminal positions."
+      },
+      {
+        "finding": "Display row was modeled 2.4 mm away from J2.",
+        "disposition": "Use official 1.3 mm end offset and common 50.8 mm row; add registration acceptance."
+      },
+      {
+        "finding": "Raised shell can obstruct cap travel and service.",
+        "disposition": "Conservative union of all admitted cap variants and rotations over full3.5 mm travel; preserve removable switch plate and existing3 mounting screws."
+      }
+    ]
+  },
+  "delivery_receipt": "validation/revI-level-delivery.json"
+}

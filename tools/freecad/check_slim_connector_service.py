@@ -40,6 +40,8 @@ def check(doc):
   'sequence':['Remove magnetic frame with its steel targets.','Lift nice!view, its male header, and display support together; J2 female socket remains on PCB.','Lift nice!nano from its sockets.','Grip exposed PHR-2 flange from above, slide5 mm toward the key field, then lift24 mm. Flexible leads must be released from their loose stored bends during this operation.'],
   'assumptions':['Housing engagement4.85 mm and a5 mm release stroke are inferred from original nominal reconstruction, not a measured connector.','J2 female5 mm height and male2 mm spacer follow the supplier installation dimensions. The13.2 ×3 mm XY and contact geometry are conservative assumptions, not supplier tolerances.','Two opposed0.8 mm thick,1 mm deep jaw tips contact the upper flange atz8.65–9.65 mm. This is an access reserve, not a qualified tool design.','Choc obstacles are transformed bounds of all licensed body/stem sub-meshes.','All flexible leads are kept in their stored pose and intersections with the moving housing are reported. Their deformation and forces during unplugging are NOT validated.'],
   'halves':{}}
+ if doc.getObject('LevelStackReceipt'):
+  result['assumptions'][1]='Samtec SLW/TLW nominal6.09 mm board separation; exact nice!view hole and post tolerances, retention and soldering remain unqualified.'
  for side,prefix,sign in [('left','L_',1),('right','R_',-1)]:
   assembly=doc.getObject(prefix+'Half');pose=A.Placement(assembly.Placement)
   try:
@@ -65,7 +67,7 @@ def check(doc):
     griphits.extend({'battery':battery,**item} for item in hits(grip_path,{**obstacles,**{name:doc.getObject(name).Shape for name in names}}))
     terminals[battery]=[{'lead':i,'to_plug_mm':round(doc.getObject(name).Shape.distToShape(plug)[0],6),'to_cell_mm':round(doc.getObject(name).Shape.distToShape(cell)[0],6)} for i,name in enumerate(names)]
    housing=doc.getObject(prefix+'SlimDisplaySocketHousing').Shape
-   result['halves'][side]={'retained_display_socket':{'part_id':side+'-display-socket','body_size_mm':[13.2,3,5],'body_bounds_mm':bounds(housing),'width_depth_qualified':False,'engagement_qualified':False,'moving_male_header_part_id':side+'-display','moving_male_spacer_size_mm':[13.2,3,2]},'retained_obstacles':sorted(fixed),'rigid_housing_collisions':rigid,'rigid_housing_path_clear':not rigid,'grip_tool_collisions':griphits,'grip_tool_path_clear':not griphits,'stored_wire_intersections_requiring_flex':wire_hits,'nominal_terminal_distances':terminals,'mated_plug_bounds_mm':bounds(plug),'conservative_choc_bounds_count':18,'conservative_cap_bounds_count':18}
+   result['halves'][side]={'retained_display_socket':{'part_id':side+'-display-socket','body_size_mm':[housing.BoundBox.XLength,housing.BoundBox.YLength,housing.BoundBox.ZLength],'body_bounds_mm':bounds(housing),'width_depth_qualified':False,'engagement_qualified':False,'moving_male_header_part_id':side+'-display','moving_male_spacer_size_mm':[getattr(doc.getObject(prefix+'SlimDisplayMaleSpacer').Shape.BoundBox,a+'Length') for a in 'XYZ']},'retained_obstacles':sorted(fixed),'rigid_housing_collisions':rigid,'rigid_housing_path_clear':not rigid,'grip_tool_collisions':griphits,'grip_tool_path_clear':not griphits,'stored_wire_intersections_requiring_flex':wire_hits,'nominal_terminal_distances':terminals,'mated_plug_bounds_mm':bounds(plug),'conservative_choc_bounds_count':18,'conservative_cap_bounds_count':18}
   finally:assembly.Placement=pose;doc.recompute()
  return result
 

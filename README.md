@@ -6,11 +6,13 @@
 
 ![Flan36 revI with interchangeable display frames and original KLP Lamé keycaps](docs/images/revI-assembled.png)
 
-*RevI: key-aligned local curves, three interchangeable cases, optional exposed display stack, magnetic frames and one cradle for two battery sizes. Physical fit untested.*
+*RevI: key-aligned local curves, four interchangeable cases, optional exposed display stack, magnetic frames and a floor-mounted cell in either battery size. Physical fit untested.*
 
 **[Themes and print kits](docs/themes-printing.md)** — Sixteen coordinated themes, personal keycap palettes, linked rim/frame colors and selected STL/3MF parts.
 
-**[Case variants](docs/cases.md)** — Solid, Color rim and Terrace; actual meshes in the explorer.
+**[Lower, level stack](docs/level-stack.md)** — Glass, frame and removable switch-covering shell share a 13.39 mm plane. Connector fit remains unqualified.
+
+**[Case variants](docs/cases.md)** — Level, Solid, Color rim and Terrace; actual meshes in the explorer.
 
 Flan36 is a low-profile wireless split keyboard in development by [Eduardo Ruiz](https://github.com/eduarbo). It keeps Piantor’s key centers and angles, with five columns and three thumb keys per half.
 
