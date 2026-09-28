@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "verified_at": "2026-09-28T23:22:18.327482+00:00",
+  "source_ref": "codex:01a0c214-956e-7ff3-9dd0-6f48f74f240f:user:20260928:replace-frame-collection",
+  "scope": "Public delivery of eleven replacement frame designs, coordinated themes and Flan default; physical print qualification is outside this acceptance.",
+  "source_and_assets": {
+    "additional_published_assets": {
+      "docs/offline.html": "77d80e1b743264a2e8a0101d6a405d4963eb36d0edcda48fea8d0da26ff15486",
+      "docs/assets/printing-73391f59d8f1a4cb8ac9757afba5a40334f1203d8a1bff74288b392180755eb4.bin": "73391f59d8f1a4cb8ac9757afba5a40334f1203d8a1bff74288b392180755eb4"
+    },
+    "source_commit": "6644d5e69d04526eb74e7c1139c15b7b266119ce",
+    "archive_files_verified": 1318,
+    "archive_sha256": "c2994170e3de323d33f7df824621f563699c52fb587f9f8e95f0d4e869a48460",
+    "pages_url": "https://eduarbo.github.io/flan36/",
+    "pages_matches_committed_html": true,
+    "viewer_sha256": "be87772bbdcb24265939c6883bbca5a35bb03c2955c3059e7cd51350734ab533",
+    "authenticated_requests": false,
+    "method": "All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer."
+  },
+  "published_browser": {
+    "commit": "6644d5e69d04526eb74e7c1139c15b7b266119ce",
+    "public_scene_matches_local": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "published_gallery": {
+    "url": "https://eduarbo.github.io/flan36/images/revI-frame-gallery.png?rev=6644d5e69d04526eb74e7c1139c15b7b266119ce",
+    "matches_native_render": true,
+    "sha256": "0de95a6760067487fbb123ca6100defffa7648f48e8014933f12cb3f8a7148eb"
+  },
+  "local_acceptance": "validation/revI-frame-collection.json",
+  "regenerate": [
+    "python3 tools/check_public_delivery.py 6644d5e69d04526eb74e7c1139c15b7b266119ce",
+    "FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/public-check.cjs 6644d5e69d04526eb74e7c1139c15b7b266119ce"
+  ]
+}
