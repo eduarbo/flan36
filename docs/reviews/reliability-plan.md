@@ -14,17 +14,18 @@ This plan covers the complete viewer follow-up to the [general review](2026-09-2
 | 6 · Reduce loading cost | Inspection does not eagerly parse printable files. Online loading is smaller; a complete offline artifact remains available. | Comparable startup/heap/size measurements, online and disconnected offline configuration, GLB and exact print-kit tests. |
 | 7 · Deliver | Validate related regressions, preserve audit history, and publish the tested source and viewer. | Explicit staged-file review, normal main push, authoritative remote hash and published functional checks. |
 
-New reproducible defects found during these checks belong in the same bounded pass. Status and evidence will be recorded here after execution; planned work is not completion.
+New reproducible defects found during these checks were included in the same bounded pass. The results below distinguish local acceptance from public readback.
 
 Execution started from `4d17638357f200a53fe4d6baddc9753209019ca6` with a clean working tree. Both independent reviews recommended the same bounded route. [Review record](../../validation/revI-reliability-review.json).
 
 ## Results
 
-Steps 1–6 are verified locally. Step 7 awaits the pushed version and public readback.
+All seven steps are verified. The public source and viewer at `75d2c24e07e51175ed826b0ea0d4a76b24890363` passed anonymous file readback and functional browser checks. [Public delivery receipt](../../validation/revI-reliability-public.json).
 
 - GR01–07 corrected. Opening does not write; stale tabs preserve a separate draft; invalid data and missing resources leave the live scene unchanged; legacy configurations use Solid covers; battery targets are explicit; current documentation identifies historical evidence correctly.
 - Related palette data loss uses the same protection. A synchronous draft also survives closing a tab while its shared save is queued. Storage denial and browsers without locks remain editable/exportable and report the limitation.
 - Seventeen camera/configuration transitions preserve the inspection. Session undo/redo, named JSON designs, 112 JavaScript/Python fixtures, 40 cap-direction measurements, full UI controls, key colors, HEX copy/paste and mobile emulation pass.
+- The public readback matched all 1,238 archive files and the online, offline and print assets. The published viewer retained its camera across case/frame changes and exported matching JSON and exact native STL files without runtime errors.
 - Online print files load on demand with a version hash and retry. The offline HTML exports the same native STLs and 3MF contents with all network requests blocked. Eighteen identical meshes are shared; no geometry was simplified.
 
 [Exact source-bound acceptance and loading measurements](../../validation/revI-reliability.json). The measurements use three interleaved desktop runs per mode, not a physical phone or a remote-network benchmark.

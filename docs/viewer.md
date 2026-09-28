@@ -44,4 +44,13 @@ FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium no
 
 Outputs under `build/reliability-fix/` are ignored, reproducible test artifacts. The [execution plan](reviews/reliability-plan.md) and [current receipt](../validation/revI-reliability.json) record scope and results. Historical delivery receipts retain their original hashes and scope.
 
+After publication, pass the exact published commit to both readbacks:
+
+```sh
+python3 tools/check_public_delivery.py <published-commit>
+FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/public-check.cjs <published-commit>
+```
+
+The first matches the anonymous source archive and served viewer assets against Git. The second checks the actual public scene, camera continuity, configuration export and native print-kit hashes in a disposable browser profile. `python3 tools/restore_reliability_review.py` restores the ignored advisory review artifacts from their committed receipt.
+
 Save serialization uses the browser [Web Locks API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API). Without it, the viewer preserves a separate recovery draft and offers JSON export instead of overwriting shared saved state.

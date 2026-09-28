@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "verified_at": "2026-09-28T21:40:37.304155+00:00",
+  "scope": "Public source and viewer delivery of the full reliability plan; physical hardware is outside this acceptance.",
+  "source_and_assets": {
+    "additional_published_assets": {
+      "docs/offline.html": "46cf619720784195cb05dfdcbd22c28d4fb559cf70922cc4f82f861d207df976",
+      "docs/assets/printing-16cdb142c14aac743a618594d54a37f8e2a6f9be4c80cb9e26a4f4fd3e3538e7.bin": "16cdb142c14aac743a618594d54a37f8e2a6f9be4c80cb9e26a4f4fd3e3538e7"
+    },
+    "source_commit": "75d2c24e07e51175ed826b0ea0d4a76b24890363",
+    "archive_files_verified": 1238,
+    "archive_sha256": "b556dd1f8fe91e516a22ad64c0eb6becf4312dfeb7cc81c2a8f92461aaf81869",
+    "pages_url": "https://eduarbo.github.io/flan36/",
+    "pages_matches_committed_html": true,
+    "viewer_sha256": "d80ca3772e5a261ab6b513cbe771a7a7f27ebb57b3020fa3804b1a92f7d6e802",
+    "authenticated_requests": false,
+    "method": "All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer."
+  },
+  "published_browser": {
+    "commit": "75d2c24e07e51175ed826b0ea0d4a76b24890363",
+    "public_scene_matches_local": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "local_acceptance": "validation/revI-reliability.json",
+  "regenerate": [
+    "python3 tools/check_public_delivery.py 75d2c24e07e51175ed826b0ea0d4a76b24890363",
+    "FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/public-check.cjs 75d2c24e07e51175ed826b0ea0d4a76b24890363"
+  ]
+}
