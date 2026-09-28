@@ -5,160 +5,206 @@
     "left": {
       "K01": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K02": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K03": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K04": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K05": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K11": {
         "variant": "choc_stem_choc_size_saddle",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K12": {
         "variant": "choc_stem_choc_size_saddle",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K13": {
         "variant": "choc_stem_choc_size_saddle",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K14": {
         "variant": "choc_stem_choc_size_saddle_homing",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K15": {
         "variant": "choc_stem_choc_size_saddle",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K21": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K22": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K23": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K24": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K25": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K30": {
         "variant": "choc_stem_choc_size_thumb",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#68422f"
       },
       "K31": {
         "variant": "choc_stem_choc_size_thumb",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#b96732"
       },
       "K32": {
         "variant": "choc_stem_choc_size_thumb",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#dfab50"
       }
     },
     "right": {
       "K01": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K02": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K03": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K04": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K05": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 180
+        "rotation_deg": 180,
+        "color": "#f2dfaf"
       },
       "K11": {
         "variant": "choc_stem_choc_size_saddle",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K12": {
         "variant": "choc_stem_choc_size_saddle",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K13": {
         "variant": "choc_stem_choc_size_saddle",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K14": {
         "variant": "choc_stem_choc_size_saddle_homing",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K15": {
         "variant": "choc_stem_choc_size_saddle",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K21": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K22": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K23": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K24": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K25": {
         "variant": "choc_stem_choc_size_saddle_tilted",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
       },
       "K30": {
         "variant": "choc_stem_choc_size_thumb",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#68422f"
       },
       "K31": {
         "variant": "choc_stem_choc_size_thumb",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#b96732"
       },
       "K32": {
         "variant": "choc_stem_choc_size_thumb",
-        "rotation_deg": 0
+        "rotation_deg": 0,
+        "color": "#dfab50"
       }
     }
   },
   "frames": {
     "left": {
-      "style": "bevel",
-      "color": "#304d4e"
+      "style": "flan",
+      "color": "#f2dfaf",
+      "accents": {
+        "detail": "#68422f",
+        "accent": "#b96732",
+        "secondary": "#dfab50"
+      }
     },
     "right": {
-      "style": "bevel",
-      "color": "#304d4e"
+      "style": "flan",
+      "color": "#f2dfaf",
+      "accents": {
+        "detail": "#68422f",
+        "accent": "#b96732",
+        "secondary": "#dfab50"
+      }
     }
   },
   "batteries": {
@@ -168,11 +214,17 @@
   "cases": {
     "left": {
       "style": "solid",
-      "cover": true
+      "cover": true,
+      "base_color": "#f2dfaf",
+      "plate_color": "#68422f",
+      "match_frame": true
     },
     "right": {
       "style": "solid",
-      "cover": true
+      "cover": true,
+      "base_color": "#f2dfaf",
+      "plate_color": "#68422f",
+      "match_frame": true
     }
   }
 }

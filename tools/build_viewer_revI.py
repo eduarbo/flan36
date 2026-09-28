@@ -16,8 +16,7 @@ layout = json.loads((ROOT/'design/layout.json').read_text())
 scene = {'revision':'I', 'units':'mm', 'geometries':{}, 'parts':[], 'sources':[], 'batteryLeadProfiles':{}}
 catalog=json.loads((ROOT/'keycaps/catalog.json').read_text());cfg=catalog['default_configuration'];variants={v['id']:v for v in catalog['variants']}
 frame_finishes=json.loads((ROOT/'design/frame-finishes.json').read_text())
-frame_extensions=json.loads((ROOT/'design/frame-extensions.json').read_text())
-decorated_styles=set(frame_finishes['styles'])|set(frame_extensions['styles'])
+decorated_styles=set(frame_finishes['styles'])
 frame_variants=model.get('frameVariants',{})
 scene['catalog']=catalog
 scene['presets']={p.stem:json.loads(p.read_text()) for p in (ROOT/'design/configurations').glob('*.json')}

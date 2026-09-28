@@ -25,7 +25,7 @@ The frame is **1.41 mm lower** than the previous 14.8 mm design; this does not r
 - `mechanical/revI/Flan36.FCStd`: editable assembly.
 - `mechanical/revI/*-case-{solid,rim,terrace,level}-{base,plate}.{step,stl}`: [four real case variants](cases.md).
 - `mechanical/revI/*-assembly.step`: installed solid parts per half; no KLP mesh bodies.
-- `mechanical/revI/*-frame-{smooth,bevel,facet,handheld,tv,cyberpunk,cartridge,arcade,mecha,kintsugi}.{step,stl}`: all interchangeable cover styles.
+- `mechanical/revI/*-frame-{flan,tape,orbit,manga,talavera,gameboy,nes,snes,phone,walkman,ipod}.{step,stl}`: all interchangeable cover styles.
 - `mechanical/revI/*-frame-*-{body,detail,accent,secondary}.{step,stl}`: registered flush color volumes.
 - `mechanical/revI/*.step`, `*.stl`: individual prototype parts and identified envelopes.
 - `mechanical/revI/*-battery-{adafruit-1570,301230}.stl`: selectable nominal cell envelopes.
@@ -43,6 +43,8 @@ Parts retain assembly coordinates. Screw envelopes and nominal engagement are mo
 
 For the isolated migration from the preserved source, use the [floor/level reproduction commands](level-stack.md#reproduce). This keeps manual edits and the published source intact.
 
+For the current frame-only update and validation, use the [collection commands](frames-extra.md#print-or-edit). They preserve the stack and write an isolated candidate.
+
 To refresh exports from the saved reference without rebuilding or overwriting its FCStd, run `python3 tools/freecad/run_macos.py tools/freecad/export_revI.py`, then rebuild the renders and viewer below. The exporter records current provenance separately from the preserved historical export record.
 
 These commands overwrite generated revI reference files. **Do not run them over a source you edited by hand.** Use a separate checkout for reconstruction and keep custom FCStd files elsewhere.
@@ -52,51 +54,21 @@ Tested tooling: FreeCAD 1.1.3, KiCad 10.0.6, StepUp 13.1.7 (package metadata 11.
 ```sh
 python -m pip install -r tools/requirements-render.txt
 npm ci --prefix viewer
-python tools/build_revI_profiles.py
-python tools/build_revI_wire.py
-python tools/build_keycap_catalog.py
-python tools/check_revI_config.py
-python tools/check_revI_fasteners.py
-python3 tools/freecad/run_macos.py tools/freecad/export_switch_models.py
-python3 tools/freecad/run_macos.py tools/freecad/build_revI.py
-python3 tools/freecad/run_macos.py tools/freecad/check_components.py
-python3 tools/freecad/run_macos.py tools/freecad/export_pcb_components.py
-python3 tools/freecad/run_macos.py tools/freecad/check_pcb_step_registration.py
-python3 tools/freecad/run_macos.py tools/freecad/check_revI_service.py
-python3 tools/freecad/run_macos.py tools/freecad/check_slim_connector_service.py
-python3 tools/freecad/run_macos.py tools/freecad/check_level_stack.py \
-  --source mechanical/revI/Flan36.FCStd --output build/level-case/recheck.json
-python3 tools/freecad/run_macos.py tools/freecad/check_analytic_bounds.py
-python3 tools/freecad/run_macos.py tools/freecad/check_export_pruning.py
-python3 tools/freecad/run_macos.py tools/freecad/check_revI.py
-python3 tools/freecad/run_macos.py tools/freecad/check_revI_rim.py
-python3 tools/freecad/run_macos.py tools/freecad/check_cases.py
-python3 tools/freecad/run_macos.py tools/freecad/check_frame_corner.py
-python3 tools/freecad/run_macos.py tools/freecad/check_finishes.py
+python3 tools/freecad/run_macos.py tools/freecad/export_revI.py
+python3 tools/freecad/run_macos.py tools/freecad/check_frame_collection.py \
+  --source mechanical/revI/Flan36.FCStd --report build/frame-collection/sections.json
 python tools/render_revI.py
 python tools/render_frames.py
-python tools/render_rim.py
 python tools/build_viewer_revI.py
 node viewer/build.mjs
-python tools/check_viewer_revI.py
-python3 tools/check_layout.py
-node viewer/check.cjs
-node viewer/customize-check.cjs
-node viewer/hex-check.cjs
+node viewer/config-contract-check.cjs
 node viewer/finishes-check.cjs
-node viewer/battery-leads-check.cjs
 node viewer/flush-print-check.cjs
-node viewer/performance.cjs --smoke
-python tools/check_print_kit.py
-cp build/viewer-multicolor/freecad.json validation/revI-freecad-finishes.json
-cp build/themes-print/ui.json validation/revI-theme-customization.json
-cp build/themes-print/print-validation.json validation/revI-print-kit.json
-cp build/hex-check/result.json validation/revI-color-hex.json
-cp build/viewer-multicolor/geometry.json validation/revI-flush-viewer.json
-cp build/themes-print/themes-desktop.png docs/images/revI-themes.png
-cp build/themes-print/nano-v2.png docs/images/revI-nano-v2.png
-python3 tools/check_parts_links.py
+node viewer/frame-collection-check.cjs
+node viewer/reliability-check.cjs
 ```
+
+Browser checks need Playwright and its Chromium runtime; set `FLAN36_PLAYWRIGHT_MODULE` and `FLAN36_BROWSER` when using an existing installation. The resulting ignored `build/frame-collection/` files are reproducible with the commands above. Checks must pass and their recorded source hashes must match the generated artifacts. Historical delivery scripts and receipts describe their pinned snapshots, not the current collection.
 
 To regenerate the current PCB without replacing existing work, use `python3 tools/build_revI_pcb.py --output build/lcd-curve/hardware` with a new empty destination and compare its two PCB files. The source remains the immutable revH placement.
 

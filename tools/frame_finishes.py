@@ -5,8 +5,6 @@ import json
 from pathlib import Path
 FINISHES=json.loads((Path(__file__).resolve().parents[1]/'design/frame-finishes.json').read_text())
 
-EXTENSIONS=json.loads((Path(__file__).resolve().parents[1]/'design/frame-extensions.json').read_text())
-FINISHES['styles'].update({k:{f:v[f] for f in ['colors','labels','features']} for k,v in EXTENSIONS['styles'].items()})
 
 def role(style,side,x,y,height,roof=None,material_role=None):
     """Compatibility adapter. Geometry consumers must pass the owning solid role.

@@ -39,7 +39,7 @@ def normalize(config,catalog=None):
     for side in ['left','right']:
         case=result['cases'][side];style=c['case_styles'][case['style']]
         case.setdefault('base_color',style['base_color']);case.setdefault('plate_color',style['plate_color']);case.setdefault('match_frame',False)
-        f=result['frames'][side];colors=palette(f['style'],f['color'],f.get('accents'))
+        f=result['frames'][side];f['style']=c.get('retired_frame_styles',{}).get(f['style'],f['style']);colors=palette(f['style'],f['color'],f.get('accents'))
         f['accents']={k:colors[k] for k in ['detail','accent','secondary']}
     return result
 
@@ -74,7 +74,7 @@ def check(config,catalog=None):
         if not isinstance(config['keycaps'][side],dict):return ['Missing keys or unknown positions.'],None
         if set(config['keycaps'][side])!={k['ref'] for k in keys}:return ['Missing keys or unknown positions.'],None
         f=config['frames'][side]
-        if not isinstance(f.get('style'),str) or f.get('style') not in c['frame_styles']:errors.append('Unknown frame.')
+        if not isinstance(f.get('style'),str) or (f.get('style') not in c['frame_styles'] and f.get('style') not in c.get('retired_frame_styles',{})):errors.append('Unknown frame.')
         color=f.get('color','')
         if not valid_color(color):errors.append('Invalid frame color.')
         shapes[side]={}

@@ -1,327 +1,1385 @@
 {
+  "schema": "flan36-frame-collection-1",
   "revision": "I",
-  "description": "Recessed 0.4 mm co-print materials with flush top faces. All roles are closed native solids; colors belong to solids, not height or XY painting zones.",
+  "description": "Eleven native solid-color motifs. Recessed material volumes end at the common frame roof; no gradients or raised decorations.",
   "roles": [
     "body",
     "detail",
     "accent",
     "secondary"
   ],
-  "roof_mm": 14.8,
+  "decoration_mode": "flush-co-print",
+  "inlay_depth_mm": 0.4,
+  "minimum_backing_mm": 0.8,
+  "minimum_nominal_stroke_mm": 0.9,
+  "mirror_sum_x_mm": 160,
+  "default_style": "flan",
+  "retired_styles": [
+    "smooth",
+    "bevel",
+    "facet",
+    "handheld",
+    "tv",
+    "cyberpunk",
+    "cartridge",
+    "arcade",
+    "mecha",
+    "kintsugi"
+  ],
   "styles": {
-    "handheld": {
+    "flan": {
+      "label": "Flan",
+      "description": "Custard shell, cocoa window and a broad caramel drip. The signature default.",
       "colors": {
-        "body": "#d8d3bd",
-        "detail": "#33343e",
-        "accent": "#9b3056",
-        "secondary": "#777780"
+        "body": "#f2dfaf",
+        "detail": "#68422f",
+        "accent": "#b96732",
+        "secondary": "#dfab50"
       },
       "labels": {
-        "body": "Warm shell",
-        "detail": "D-pad",
-        "accent": "Buttons",
-        "secondary": "Speaker"
+        "body": "Custard",
+        "detail": "Cocoa",
+        "accent": "Caramel",
+        "secondary": "Golden custard"
       },
       "features": [
         {
-          "id": "DpadH",
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 2
+        },
+        {
+          "id": "CaramelCrown",
+          "role": "accent",
           "kind": "box",
           "xy": [
-            113.7,
+            111,
+            11,
+            135,
+            15.5
+          ]
+        },
+        {
+          "id": "CaramelDrip",
+          "role": "accent",
+          "kind": "roundrect",
+          "xy": [
+            111.8,
+            13.5,
+            114.3,
+            25.5
+          ],
+          "radius_mm": 1.2
+        },
+        {
+          "id": "Dessert",
+          "role": "secondary",
+          "kind": "polygon",
+          "points": [
+            [
+              118,
+              55
+            ],
+            [
+              128,
+              55
+            ],
+            [
+              130,
+              62
+            ],
+            [
+              116,
+              62
+            ]
+          ]
+        },
+        {
+          "id": "Glaze",
+          "role": "accent",
+          "kind": "roundrect",
+          "xy": [
+            117.8,
             54,
-            120.1,
-            56
+            128.2,
+            56.2
           ],
-          "role": "detail"
+          "radius_mm": 1
         },
         {
-          "id": "DpadV",
-          "kind": "box",
+          "id": "Saucer",
+          "role": "detail",
+          "kind": "roundrect",
           "xy": [
-            115.9,
-            51.8,
-            117.9,
-            58.2
+            114.8,
+            63.3,
+            131.2,
+            64.5
           ],
-          "role": "detail"
-        },
-        {
-          "id": "ButtonA",
-          "kind": "disc",
-          "xy": [
-            129.3,
-            53.5
-          ],
-          "radius_mm": 1.65,
-          "role": "accent"
-        },
-        {
-          "id": "ButtonB",
-          "kind": "disc",
-          "xy": [
-            125.7,
-            56.1
-          ],
-          "radius_mm": 1.65,
-          "role": "accent"
-        },
-        {
-          "id": "Speaker0",
-          "kind": "box",
-          "xy": [
-            119.0,
-            63,
-            120.0,
-            65.3
-          ],
-          "role": "secondary"
-        },
-        {
-          "id": "Speaker1",
-          "kind": "box",
-          "xy": [
-            121.2,
-            63,
-            122.2,
-            65.3
-          ],
-          "role": "secondary"
-        },
-        {
-          "id": "Speaker2",
-          "kind": "box",
-          "xy": [
-            123.4,
-            63,
-            124.4,
-            65.3
-          ],
-          "role": "secondary"
+          "radius_mm": 0.6
         }
-      ],
-      "label": "Handheld"
+      ]
     },
-    "tv": {
+    "tape": {
+      "label": "Tape",
+      "description": "Cassette window, two reels and an orange transport stripe.",
       "colors": {
-        "body": "#976044",
-        "detail": "#e2d5ae",
-        "accent": "#c69543",
-        "secondary": "#34373b"
+        "body": "#d2cec1",
+        "detail": "#303738",
+        "accent": "#e27136",
+        "secondary": "#f0e9d6"
       },
       "labels": {
-        "body": "Walnut shell",
-        "detail": "CRT bezel",
-        "accent": "Tuning knob",
-        "secondary": "Speaker"
+        "body": "Shell",
+        "detail": "Tape window",
+        "accent": "Transport orange",
+        "secondary": "Reels"
       },
       "features": [
         {
-          "id": "BezelLeft",
-          "kind": "box",
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
           "xy": [
-            113.8,
-            16.8,
-            115.55,
-            50.8
+            113.6,
+            16.5,
+            132,
+            51.2
           ],
-          "role": "detail"
+          "radius_mm": 2
         },
         {
-          "id": "BezelRight",
-          "kind": "box",
+          "id": "Stripe",
+          "role": "accent",
+          "kind": "roundrect",
           "xy": [
-            130.05,
-            16.8,
-            131.8,
-            50.8
+            112,
+            12.4,
+            134,
+            15
           ],
-          "role": "detail"
+          "radius_mm": 0.5
         },
         {
-          "id": "BezelTop",
-          "kind": "box",
+          "id": "Cassette",
+          "role": "detail",
+          "kind": "roundrect",
           "xy": [
-            113.8,
-            16.8,
-            131.8,
-            18.25
+            113.3,
+            52.5,
+            132.7,
+            61.3
           ],
-          "role": "detail"
+          "radius_mm": 1.8
         },
         {
-          "id": "BezelBottom",
-          "kind": "box",
+          "id": "ReelL",
+          "role": "secondary",
+          "kind": "ring",
           "xy": [
-            113.8,
-            49.35,
-            131.8,
-            50.8
+            118.2,
+            56.8
           ],
-          "role": "detail"
+          "radius_mm": 2.65,
+          "width_mm": 1.1
         },
         {
-          "id": "Tuning",
-          "kind": "disc",
+          "id": "ReelR",
+          "role": "secondary",
+          "kind": "ring",
           "xy": [
-            128.9,
-            55.1
+            127.8,
+            56.8
           ],
-          "radius_mm": 2.15,
-          "role": "accent"
+          "radius_mm": 2.65,
+          "width_mm": 1.1
         },
         {
-          "id": "Speaker0",
+          "id": "Tape",
+          "role": "secondary",
           "kind": "box",
           "xy": [
-            114.2,
-            52.6,
-            120,
-            53.3
-          ],
-          "role": "secondary"
+            120.6,
+            56.25,
+            125.4,
+            57.35
+          ]
         },
         {
-          "id": "Speaker1",
-          "kind": "box",
+          "id": "Transport",
+          "role": "accent",
+          "kind": "roundrect",
           "xy": [
-            114.2,
-            54.1,
-            120,
-            54.8
+            113.5,
+            63,
+            124.5,
+            64.5
           ],
-          "role": "secondary"
+          "radius_mm": 0.7
         },
         {
-          "id": "Speaker2",
-          "kind": "box",
-          "xy": [
-            114.2,
-            55.6,
-            120,
-            56.3
-          ],
-          "role": "secondary"
-        },
-        {
-          "id": "Speaker3",
-          "kind": "box",
-          "xy": [
-            114.2,
-            57.1,
-            120,
-            57.8
-          ],
-          "role": "secondary"
+          "id": "Play",
+          "role": "secondary",
+          "kind": "polygon",
+          "points": [
+            [
+              128,
+              62.5
+            ],
+            [
+              131.5,
+              64
+            ],
+            [
+              128,
+              65.5
+            ]
+          ]
         }
-      ],
-      "label": "Retro TV"
+      ]
     },
-    "cyberpunk": {
+    "orbit": {
+      "label": "Orbit",
+      "description": "Seventies green, an orange orbit and a small satellite.",
       "colors": {
-        "body": "#303440",
-        "detail": "#657584",
-        "accent": "#18c5c2",
-        "secondary": "#d74c95"
+        "body": "#eee5cd",
+        "detail": "#315c4e",
+        "accent": "#df7339",
+        "secondary": "#d9bf73"
       },
       "labels": {
-        "body": "Graphite shell",
-        "detail": "Vents",
-        "accent": "Circuit traces",
-        "secondary": "Panel and node"
+        "body": "Ivory",
+        "detail": "Forest",
+        "accent": "Orbit orange",
+        "secondary": "Satellite"
       },
       "features": [
         {
-          "id": "Vent0",
-          "kind": "box",
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
           "xy": [
-            113.4,
-            52,
-            114.6,
-            56.9
+            113.6,
+            16.5,
+            132,
+            51.2
           ],
-          "role": "detail"
+          "radius_mm": 2.7
         },
         {
-          "id": "Vent1",
-          "kind": "box",
+          "id": "Orbit",
+          "role": "accent",
+          "kind": "ring",
           "xy": [
-            116.10000000000001,
-            52,
-            117.3,
-            56.9
+            122.8,
+            58.7
           ],
-          "role": "detail"
+          "radius_mm": 6,
+          "width_mm": 1.4
         },
         {
-          "id": "Vent2",
-          "kind": "box",
+          "id": "Satellite",
+          "role": "secondary",
+          "kind": "disc",
           "xy": [
-            118.80000000000001,
-            52,
-            120.0,
-            56.9
+            130.8,
+            55.7
           ],
-          "role": "detail"
+          "radius_mm": 1.7
         },
         {
-          "id": "TraceA",
-          "kind": "box",
+          "id": "Core",
+          "role": "detail",
+          "kind": "disc",
           "xy": [
-            126.8,
-            51.8,
-            132.5,
-            52.6
+            122.8,
+            58.7
           ],
-          "role": "accent"
+          "radius_mm": 2
         },
         {
-          "id": "TraceB",
-          "kind": "box",
+          "id": "Horizon",
+          "role": "secondary",
+          "kind": "roundrect",
           "xy": [
-            131.7,
-            52.6,
-            132.5,
-            58.1
+            115,
+            13,
+            130,
+            14.5
           ],
-          "role": "accent"
+          "radius_mm": 0.7
+        }
+      ]
+    },
+    "manga": {
+      "label": "Manga",
+      "description": "Bold ink panels, broad speed lines and a vermilion corner.",
+      "colors": {
+        "body": "#f0eadb",
+        "detail": "#27282e",
+        "accent": "#da453d",
+        "secondary": "#99988e"
+      },
+      "labels": {
+        "body": "Paper",
+        "detail": "Ink",
+        "accent": "Vermilion",
+        "secondary": "Halftone blocks"
+      },
+      "features": [
+        {
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 0.8
         },
         {
-          "id": "TraceC",
-          "kind": "box",
-          "xy": [
-            126.8,
-            57.3,
-            132.5,
-            58.1
-          ],
-          "role": "accent"
+          "id": "Corner",
+          "role": "accent",
+          "kind": "polygon",
+          "points": [
+            [
+              125,
+              53
+            ],
+            [
+              135,
+              50
+            ],
+            [
+              135,
+              66
+            ],
+            [
+              128,
+              66
+            ],
+            [
+              128,
+              60
+            ]
+          ]
         },
         {
           "id": "Panel",
-          "kind": "box",
-          "xy": [
-            119.5,
-            63.2,
-            124.2,
-            65.5
+          "role": "detail",
+          "kind": "stroke",
+          "points": [
+            [
+              113,
+              53
+            ],
+            [
+              121,
+              55
+            ],
+            [
+              121,
+              64.8
+            ],
+            [
+              113,
+              63
+            ]
           ],
-          "role": "secondary"
+          "width_mm": 1.3
         },
         {
-          "id": "Node",
+          "id": "SpeedA",
+          "role": "detail",
+          "kind": "box",
+          "xy": [
+            112.3,
+            13,
+            123,
+            14.3
+          ]
+        },
+        {
+          "id": "SpeedB",
+          "role": "detail",
+          "kind": "box",
+          "xy": [
+            125,
+            13,
+            133.5,
+            14.3
+          ]
+        },
+        {
+          "id": "DotA",
+          "role": "secondary",
           "kind": "disc",
           "xy": [
-            128.1,
-            61
+            115.4,
+            57.7
           ],
-          "radius_mm": 1,
-          "role": "secondary"
+          "radius_mm": 1
+        },
+        {
+          "id": "DotB",
+          "role": "secondary",
+          "kind": "disc",
+          "xy": [
+            118.5,
+            58.6
+          ],
+          "radius_mm": 1
+        },
+        {
+          "id": "DotC",
+          "role": "secondary",
+          "kind": "disc",
+          "xy": [
+            115.4,
+            60.8
+          ],
+          "radius_mm": 1
+        }
+      ]
+    },
+    "talavera": {
+      "label": "Talavera",
+      "description": "Cobalt ceramic borders and a four-petal tile with a terracotta center.",
+      "colors": {
+        "body": "#f1e6ca",
+        "detail": "#244e91",
+        "accent": "#c36443",
+        "secondary": "#3d8b89"
+      },
+      "labels": {
+        "body": "Ivory glaze",
+        "detail": "Cobalt",
+        "accent": "Terracotta",
+        "secondary": "Teal"
+      },
+      "features": [
+        {
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 1.6
+        },
+        {
+          "id": "PetalN",
+          "role": "detail",
+          "kind": "disc",
+          "xy": [
+            123,
+            54.7
+          ],
+          "radius_mm": 2.1
+        },
+        {
+          "id": "PetalS",
+          "role": "detail",
+          "kind": "disc",
+          "xy": [
+            123,
+            62.6
+          ],
+          "radius_mm": 2.1
+        },
+        {
+          "id": "PetalW",
+          "role": "detail",
+          "kind": "disc",
+          "xy": [
+            119,
+            58.65
+          ],
+          "radius_mm": 2.1
+        },
+        {
+          "id": "PetalE",
+          "role": "detail",
+          "kind": "disc",
+          "xy": [
+            127,
+            58.65
+          ],
+          "radius_mm": 2.1
+        },
+        {
+          "id": "Center",
+          "role": "accent",
+          "kind": "disc",
+          "xy": [
+            123,
+            58.65
+          ],
+          "radius_mm": 1.55
+        },
+        {
+          "id": "DiamondL",
+          "role": "secondary",
+          "kind": "polygon",
+          "points": [
+            [
+              112.5,
+              58.6
+            ],
+            [
+              114.2,
+              56.9
+            ],
+            [
+              115.9,
+              58.6
+            ],
+            [
+              114.2,
+              60.3
+            ]
+          ]
+        },
+        {
+          "id": "DiamondR",
+          "role": "secondary",
+          "kind": "polygon",
+          "points": [
+            [
+              130.1,
+              58.6
+            ],
+            [
+              131.8,
+              56.9
+            ],
+            [
+              133.5,
+              58.6
+            ],
+            [
+              131.8,
+              60.3
+            ]
+          ]
+        },
+        {
+          "id": "TopRule",
+          "role": "accent",
+          "kind": "roundrect",
+          "xy": [
+            113,
+            13,
+            133,
+            14.2
+          ],
+          "radius_mm": 0.5
+        }
+      ]
+    },
+    "gameboy": {
+      "label": "Game Boy",
+      "description": "Pocket-console bezel, cross pad and two berry-colored buttons.",
+      "colors": {
+        "body": "#dcd6ba",
+        "detail": "#42454d",
+        "accent": "#973c60",
+        "secondary": "#a6a392"
+      },
+      "labels": {
+        "body": "Warm shell",
+        "detail": "Graphite",
+        "accent": "Berry buttons",
+        "secondary": "Speaker"
+      },
+      "features": [
+        {
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 2.5
+        },
+        {
+          "id": "DpadH",
+          "role": "detail",
+          "kind": "box",
+          "xy": [
+            113.5,
+            56.3,
+            120.7,
+            58.5
+          ]
+        },
+        {
+          "id": "DpadV",
+          "role": "detail",
+          "kind": "box",
+          "xy": [
+            116,
+            53.8,
+            118.2,
+            61
+          ]
+        },
+        {
+          "id": "A",
+          "role": "accent",
+          "kind": "disc",
+          "xy": [
+            130.1,
+            54.7
+          ],
+          "radius_mm": 1.8
+        },
+        {
+          "id": "B",
+          "role": "accent",
+          "kind": "disc",
+          "xy": [
+            126.7,
+            58
+          ],
+          "radius_mm": 1.8
+        },
+        {
+          "id": "Speaker0",
+          "role": "secondary",
+          "kind": "stroke",
+          "points": [
+            [
+              124.0,
+              63
+            ],
+            [
+              125.0,
+              65
+            ]
+          ],
+          "width_mm": 0.9
+        },
+        {
+          "id": "Speaker1",
+          "role": "secondary",
+          "kind": "stroke",
+          "points": [
+            [
+              126.5,
+              63
+            ],
+            [
+              127.5,
+              65
+            ]
+          ],
+          "width_mm": 0.9
+        },
+        {
+          "id": "Speaker2",
+          "role": "secondary",
+          "kind": "stroke",
+          "points": [
+            [
+              129.0,
+              63
+            ],
+            [
+              130.0,
+              65
+            ]
+          ],
+          "width_mm": 0.9
+        },
+        {
+          "id": "Speaker3",
+          "role": "secondary",
+          "kind": "stroke",
+          "points": [
+            [
+              131.5,
+              63
+            ],
+            [
+              132.5,
+              65
+            ]
+          ],
+          "width_mm": 0.9
+        },
+        {
+          "id": "Start",
+          "role": "secondary",
+          "kind": "roundrect",
+          "xy": [
+            114.2,
+            63.4,
+            119,
+            64.4
+          ],
+          "radius_mm": 0.5
+        }
+      ]
+    },
+    "nes": {
+      "label": "NES",
+      "description": "A restrained controller strip with red action buttons.",
+      "colors": {
+        "body": "#c6c7be",
+        "detail": "#32363b",
+        "accent": "#c94b3e",
+        "secondary": "#8a8d8d"
+      },
+      "labels": {
+        "body": "Console gray",
+        "detail": "Controller black",
+        "accent": "Action red",
+        "secondary": "Mid gray"
+      },
+      "features": [
+        {
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 0.5
+        },
+        {
+          "id": "Deck",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            112.5,
+            53,
+            133.5,
+            62.2
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "DpadH",
+          "role": "secondary",
+          "kind": "box",
+          "xy": [
+            114,
+            56.6,
+            120.5,
+            58.6
+          ]
+        },
+        {
+          "id": "DpadV",
+          "role": "secondary",
+          "kind": "box",
+          "xy": [
+            116.3,
+            54.3,
+            118.3,
+            60.8
+          ]
+        },
+        {
+          "id": "A",
+          "role": "accent",
+          "kind": "disc",
+          "xy": [
+            130.5,
+            58.1
+          ],
+          "radius_mm": 1.8
+        },
+        {
+          "id": "B",
+          "role": "accent",
+          "kind": "disc",
+          "xy": [
+            126,
+            58.1
+          ],
+          "radius_mm": 1.8
+        },
+        {
+          "id": "Stripe1",
+          "role": "secondary",
+          "kind": "box",
+          "xy": [
+            113,
+            12.6,
+            133,
+            13.6
+          ]
+        },
+        {
+          "id": "Stripe2",
+          "role": "secondary",
+          "kind": "box",
+          "xy": [
+            113,
+            14.6,
+            133,
+            15.6
+          ]
+        },
+        {
+          "id": "Signature",
+          "role": "accent",
+          "kind": "box",
+          "xy": [
+            125,
+            64,
+            132.7,
+            65.2
+          ]
+        }
+      ]
+    },
+    "snes": {
+      "label": "SNES",
+      "description": "A soft gray console with two lavender button tones.",
+      "colors": {
+        "body": "#d1d0c9",
+        "detail": "#464751",
+        "accent": "#746198",
+        "secondary": "#aca0c2"
+      },
+      "labels": {
+        "body": "Console gray",
+        "detail": "Graphite",
+        "accent": "Deep lavender",
+        "secondary": "Lilac"
+      },
+      "features": [
+        {
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 2.4
+        },
+        {
+          "id": "DpadH",
+          "role": "detail",
+          "kind": "box",
+          "xy": [
+            113.5,
+            56.2,
+            120.1,
+            58.2
+          ]
+        },
+        {
+          "id": "DpadV",
+          "role": "detail",
+          "kind": "box",
+          "xy": [
+            115.8,
+            53.9,
+            117.8,
+            60.5
+          ]
+        },
+        {
+          "id": "A",
+          "role": "accent",
+          "kind": "disc",
+          "xy": [
+            131,
+            57.3
+          ],
+          "radius_mm": 1.65
+        },
+        {
+          "id": "B",
+          "role": "accent",
+          "kind": "disc",
+          "xy": [
+            127.8,
+            60.5
+          ],
+          "radius_mm": 1.65
+        },
+        {
+          "id": "X",
+          "role": "secondary",
+          "kind": "disc",
+          "xy": [
+            127.8,
+            54.1
+          ],
+          "radius_mm": 1.65
+        },
+        {
+          "id": "Y",
+          "role": "secondary",
+          "kind": "disc",
+          "xy": [
+            124.6,
+            57.3
+          ],
+          "radius_mm": 1.65
+        },
+        {
+          "id": "Power",
+          "role": "accent",
+          "kind": "roundrect",
+          "xy": [
+            114,
+            13,
+            121,
+            15
+          ],
+          "radius_mm": 1
+        },
+        {
+          "id": "Reset",
+          "role": "secondary",
+          "kind": "roundrect",
+          "xy": [
+            124,
+            13,
+            131,
+            15
+          ],
+          "radius_mm": 1
+        },
+        {
+          "id": "Select",
+          "role": "secondary",
+          "kind": "roundrect",
+          "xy": [
+            115,
+            63.8,
+            123,
+            65
+          ],
+          "radius_mm": 0.6
+        }
+      ]
+    },
+    "phone": {
+      "label": "2000s Phone",
+      "description": "Navy faceplate, silver keypad and green call key.",
+      "colors": {
+        "body": "#263c55",
+        "detail": "#b8bbb5",
+        "accent": "#87ad67",
+        "secondary": "#455469"
+      },
+      "labels": {
+        "body": "Navy shell",
+        "detail": "Silver keys",
+        "accent": "Call green",
+        "secondary": "Navigation"
+      },
+      "features": [
+        {
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 2.8
+        },
+        {
+          "id": "Earpiece",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            119,
+            13,
+            127,
+            14.3
+          ],
+          "radius_mm": 0.6
+        },
+        {
+          "id": "Nav",
+          "role": "secondary",
+          "kind": "roundrect",
+          "xy": [
+            120,
+            52,
+            126,
+            55
+          ],
+          "radius_mm": 1.2
+        },
+        {
+          "id": "Call",
+          "role": "accent",
+          "kind": "roundrect",
+          "xy": [
+            113.7,
+            52,
+            118.5,
+            54.2
+          ],
+          "radius_mm": 1
+        },
+        {
+          "id": "End",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            127.5,
+            52,
+            132.3,
+            54.2
+          ],
+          "radius_mm": 1
+        },
+        {
+          "id": "Key00",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            114.0,
+            56.0,
+            118.2,
+            58.0
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Key01",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            120.3,
+            56.0,
+            124.5,
+            58.0
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Key02",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            126.6,
+            56.0,
+            130.8,
+            58.0
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Key10",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            114.0,
+            59.1,
+            118.2,
+            61.1
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Key11",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            120.3,
+            59.1,
+            124.5,
+            61.1
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Key12",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            126.6,
+            59.1,
+            130.8,
+            61.1
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Key20",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            114.0,
+            62.2,
+            118.2,
+            64.2
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Key21",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            120.3,
+            62.2,
+            124.5,
+            64.2
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Key22",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            126.6,
+            62.2,
+            130.8,
+            64.2
+          ],
+          "radius_mm": 0.8
+        }
+      ]
+    },
+    "walkman": {
+      "label": "Walkman",
+      "description": "Cobalt portable audio, yellow controls and speaker bars.",
+      "colors": {
+        "body": "#275273",
+        "detail": "#192d3b",
+        "accent": "#e4b54b",
+        "secondary": "#acbcc0"
+      },
+      "labels": {
+        "body": "Cobalt",
+        "detail": "Tape door",
+        "accent": "Transport yellow",
+        "secondary": "Silver"
+      },
+      "features": [
+        {
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 0.9
+        },
+        {
+          "id": "Header",
+          "role": "accent",
+          "kind": "roundrect",
+          "xy": [
+            112.4,
+            12.4,
+            133.6,
+            15.3
+          ],
+          "radius_mm": 0.8
+        },
+        {
+          "id": "Speaker0",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            114,
+            53.0,
+            124.5,
+            54.0
+          ],
+          "radius_mm": 0.5
+        },
+        {
+          "id": "Speaker1",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            114,
+            55.2,
+            124.5,
+            56.2
+          ],
+          "radius_mm": 0.5
+        },
+        {
+          "id": "Speaker2",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            114,
+            57.4,
+            124.5,
+            58.4
+          ],
+          "radius_mm": 0.5
+        },
+        {
+          "id": "Speaker3",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            114,
+            59.6,
+            124.5,
+            60.6
+          ],
+          "radius_mm": 0.5
+        },
+        {
+          "id": "Speaker4",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            114,
+            61.8,
+            124.5,
+            62.8
+          ],
+          "radius_mm": 0.5
+        },
+        {
+          "id": "ControlStrip",
+          "role": "accent",
+          "kind": "roundrect",
+          "xy": [
+            127,
+            52.8,
+            132.5,
+            64
+          ],
+          "radius_mm": 1
+        },
+        {
+          "id": "Play",
+          "role": "secondary",
+          "kind": "polygon",
+          "points": [
+            [
+              128.3,
+              54.4
+            ],
+            [
+              131.4,
+              56
+            ],
+            [
+              128.3,
+              57.6
+            ]
+          ]
+        },
+        {
+          "id": "Stop",
+          "role": "secondary",
+          "kind": "roundrect",
+          "xy": [
+            128.5,
+            59.8,
+            131,
+            62.3
+          ],
+          "radius_mm": 0.4
         }
       ],
-      "label": "Cyberpunk"
+      "priority": [
+        "secondary",
+        "accent",
+        "detail"
+      ]
+    },
+    "ipod": {
+      "label": "iPod",
+      "description": "White face, soft silver click wheel and a dark screen border.",
+      "colors": {
+        "body": "#f0eee5",
+        "detail": "#656f79",
+        "accent": "#afb4b1",
+        "secondary": "#d8d9d2"
+      },
+      "labels": {
+        "body": "White shell",
+        "detail": "Screen gray",
+        "accent": "Wheel ring",
+        "secondary": "Center key"
+      },
+      "features": [
+        {
+          "id": "ScreenBorder",
+          "role": "detail",
+          "kind": "roundrect",
+          "xy": [
+            113.6,
+            16.5,
+            132,
+            51.2
+          ],
+          "radius_mm": 2.2
+        },
+        {
+          "id": "Wheel",
+          "role": "accent",
+          "kind": "ring",
+          "xy": [
+            123,
+            58.6
+          ],
+          "radius_mm": 6.1,
+          "width_mm": 2
+        },
+        {
+          "id": "Center",
+          "role": "secondary",
+          "kind": "disc",
+          "xy": [
+            123,
+            58.6
+          ],
+          "radius_mm": 2.2
+        },
+        {
+          "id": "Hold",
+          "role": "secondary",
+          "kind": "roundrect",
+          "xy": [
+            121,
+            13,
+            125,
+            14.4
+          ],
+          "radius_mm": 0.6
+        }
+      ]
     }
-  },
-  "decoration_mode": "flush-co-print",
-  "inlay_depth_mm": 0.4,
-  "minimum_backing_mm": 0.8
+  }
 }

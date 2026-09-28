@@ -10,7 +10,7 @@ function box(x,y,z,w,l,h){
  return b.toString('base64');
 }
 const body=box(100,-40,6.3,20,30,8.1),inlay=box(101,-39,14.4,2,3,.4);
-const part={id:'left-frame-handheld',side:'left',style:'handheld',path:'whole.stl',stl:body,colors:{body:'#abcdef',detail:'#123456',accent:'#ff0000',secondary:'#00ff00'},material_parts:[{role:'body',path:'body.stl',stl:body},{role:'detail',path:'detail.stl',stl:inlay}]};
+const part={id:'left-frame-gameboy',side:'left',style:'gameboy',path:'whole.stl',stl:body,colors:{body:'#abcdef',detail:'#123456',accent:'#ff0000',secondary:'#00ff00'},material_parts:[{role:'body',path:'body.stl',stl:body},{role:'detail',path:'detail.stl',stl:inlay}]};
 const result=mesh3MF(part),zip=unzipSync(result.bytes),xml=strFromU8(zip['3D/3dmodel.model']);
 assert.equal(result.material_parts.length,2);assert.deepEqual(result.translation_mm.map(v=>Math.round(v*1e5)/1e5),[-90,50,-6.3]);
 assert.match(strFromU8(zip['[Content_Types].xml']),/<Default Extension="config" ContentType="application\/xml"\/>/);
@@ -28,9 +28,9 @@ const plain=mesh3MF({...part,style:'smooth',material_parts:undefined});assert.eq
 const registry={assets:{},supports:['cradle']},configuration={cases:{},frames:{}};
 for(const side of ['left','right']){
  configuration.cases[side]={style:'rim',cover:side==='left',base_color:'#112233',plate_color:'#445566'};
- configuration.frames[side]={style:'handheld',color:'#abcdef',accents:{detail:'#123456',accent:'#ff0000',secondary:'#00ff00'}};
- for(const id of [`${side}-case-rim-base`,`${side}-case-rim-plate`,`${side}-frame-handheld`,`${side}-cradle`])registry.assets[id]={...part,id};
+ configuration.frames[side]={style:'gameboy',color:'#abcdef',accents:{detail:'#123456',accent:'#ff0000',secondary:'#00ff00'}};
+ for(const id of [`${side}-case-rim-base`,`${side}-case-rim-plate`,`${side}-frame-gameboy`,`${side}-cradle`])registry.assets[id]={...part,id};
 }
-assert.deepEqual(selectedParts(configuration,registry,'both','complete').map(p=>p.id),['left-case-rim-base','left-case-rim-plate','left-frame-handheld','left-cradle','right-case-rim-base','right-case-rim-plate','right-cradle']);
-assert.deepEqual(selectedParts(configuration,registry,'left','shells').map(p=>p.id),['left-case-rim-base','left-case-rim-plate','left-frame-handheld']);
+assert.deepEqual(selectedParts(configuration,registry,'both','complete').map(p=>p.id),['left-case-rim-base','left-case-rim-plate','left-frame-gameboy','left-cradle','right-case-rim-base','right-case-rim-plate','right-cradle']);
+assert.deepEqual(selectedParts(configuration,registry,'left','shells').map(p=>p.id),['left-case-rim-base','left-case-rim-plate','left-frame-gameboy']);
 console.log('PASS: native material objects, one shared 3MF placement, exact HEX roles, missing-material rejection, fallback and print scopes');

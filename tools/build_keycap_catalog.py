@@ -33,11 +33,14 @@ for f in manifest['files']:
         stem_axis_deg=axis,rotations_deg=[axis,axis+180],hull_xy_mm=[list(x) for x in MultiPoint(points[:,:2]).convex_hull.exterior.coords][:-1],
         qualified_reference_positions=[]))
 cases=json.loads((ROOT/'design/cases.json').read_text())
+finishes=json.loads((ROOT/'design/frame-finishes.json').read_text());flan=finishes['styles']['flan']['colors']
 byid={v['id']:v for v in variants};cfg={'schema':'flan36-config-1','revision':'I','keycaps':{},'frames':{},'batteries':{'left':'adafruit-1570','right':'adafruit-1570'}}
 cfg['cases']={side:{'style':cases['default'],'cover':True} for side in layout}
 for side,keys in layout.items():
     cfg['keycaps'][side]={k['ref']:{'variant':'choc_stem_choc_size_'+('thumb' if k['row']==3 else 'normal_homing' if k['ref']=='K14' else 'normal'),'rotation_deg':0,'color':'#45967b' if k['row']==3 else '#e9dfc6'} for k in keys}
-    cfg['frames'][side]={'style':'bevel','color':'#304d4e'}
+    cfg['frames'][side]={'style':'flan','color':flan['body'],'accents':{k:v for k,v in flan.items() if k!='body'}}
+    cfg['cases'][side].update(base_color=flan['body'],plate_color=flan['body'] if cfg['cases'][side]['style']=='level' else flan['detail'],match_frame=True)
+    for key in keys:cfg['keycaps'][side][key['ref']]['color']=[flan['detail'],flan['accent'],flan['secondary']][key['col']] if key['row']==3 else flan['body']
 base={s:{k['ref']:polygon(byid[cfg['keycaps'][s][k['ref']]['variant']]['hull_xy_mm'],k,0) for k in keys} for s,keys in layout.items()}
 for v in variants:
     for side,keys in layout.items():
@@ -54,8 +57,7 @@ catalog={'schema':'flan36-klp-catalog-1','revision':'I','upstream':manifest['ups
     'minimum_clearance_mm':.2,'study_travel_mm':3.5,'minimum_pressed_mesh_z_mm':8.2,'plate_top_mm':7.6,
     'case_styles':cases['styles'],
     'battery_profiles':json.loads((ROOT/'design/batteries.json').read_text())['profiles'],
-    'layout':layout,'frame_envelopes':frames,'frame_styles':{'smooth':'Smooth','bevel':'Beveled','facet':'Faceted','handheld':'Handheld','tv':'Retro TV','cyberpunk':'Cyberpunk'},'variants':variants,'default_configuration':cfg}
-catalog['frame_styles'].update({k:v['label'] for k,v in json.loads((ROOT/'design/frame-extensions.json').read_text())['styles'].items()})
+    'layout':layout,'frame_envelopes':frames,'frame_styles':{k:v['label'] for k,v in finishes['styles'].items()},'retired_frame_styles':{k:'flan' for k in finishes['retired_styles']},'variants':variants,'default_configuration':cfg}
 (ROOT/'keycaps/catalog.json').write_text(json.dumps(catalog,indent=2,ensure_ascii=False)+'\n')
 (ROOT/'design/configurations').mkdir(exist_ok=True)
 (ROOT/'design/configurations/default.json').write_text(json.dumps(cfg,indent=2)+'\n')

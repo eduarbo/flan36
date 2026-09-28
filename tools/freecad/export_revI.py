@@ -141,6 +141,8 @@ for side,prefix in [('left','L_'),('right','R_')]:
     # Check every interchangeable cover, not just the selected frame.
     print(side,'checking frame variants',flush=True)
     frame_checks={}
+    frame_envelopes={}
+    envelope_checks={}
     for obj in [o for o in doc.Objects if hasattr(o,'FrameStyle') and o.Name.startswith(prefix) and o.TypeId!='App::Link']:
         print(side,'frame',obj.FrameStyle,flush=True)
         shape=obj.Shape;assert shape.isValid() and len(shape.Solids)==1,(obj.Name,'invalid cover')
@@ -168,15 +170,29 @@ for side,prefix in [('left','L_'),('right','R_')]:
             'stl':name+'.stl','step':name+'.step','material_parts':materials,
             'roof_mm':doc.Parameters.FrameTop.Value,
             'color_construction':'complementary co-print volumes' if materials else 'single body'}
-        hits={n:round(exact_common(shape,s).Volume,6) for n,s in shapes.items() if n!='electronics-lid' and exact_common(shape,s).Volume>.001}
-        # Nominal 12 x 5 mm USB plug envelope + straight insertion corridor.
-        px=116.8 if side=='left' else 160-128.8
-        plug=Part.makeBox(12,20,5,A.Vector(px,-18.8,doc.Parameters.MCUBottom.Value-2.1))
-        hit=exact_common(shape,plug).Volume
-        frame_checks[obj.FrameStyle]={'component_collisions_mm3':hits,'usb_envelope_collision_mm3':round(hit,6),'volume_mm3':shape.Volume,'closed_mesh':True}
+        # Color subdivisions share a blank only after proving both directional
+        # solid differences. Reuse its interference results, not a bounding box.
+        blank=getattr(obj,'SmoothSource',None)
+        if blank is not None:
+            assert shape.cut(blank.Shape).Volume<1e-5 and blank.Shape.cut(shape).Volume<1e-5,(name,'frame envelope drift')
+            envelope,identity=blank.Shape,blank.Name
+        else:envelope,identity=shape,obj.Name
+        frame_envelopes[obj.Name]=(envelope,identity)
+        if identity not in envelope_checks:
+            hits={}
+            for n,other in shapes.items():
+                if n=='electronics-lid':continue
+                hit=exact_common(envelope,other).Volume
+                if hit>.001:hits[n]=round(hit,6)
+            px=116.8 if side=='left' else 160-128.8
+            plug=Part.makeBox(12,20,5,A.Vector(px,-18.8,doc.Parameters.MCUBottom.Value-2.1))
+            envelope_checks[identity]=(hits,exact_common(envelope,plug).Volume)
+        hits,hit=envelope_checks[identity]
+        frame_checks[obj.FrameStyle]={'component_collisions_mm3':hits,'usb_envelope_collision_mm3':round(hit,6),'volume_mm3':shape.Volume,'closed_mesh':True,'verified_envelope':identity}
         assert not hits and hit<.001,(name,frame_checks[obj.FrameStyle])
     print(side,'checking case variants',flush=True)
     case_checks={}
+    case_frame_checks={}
     for style in json.loads((ROOT/'design/cases.json').read_text())['styles']:
         print(side,'case',style,flush=True)
         pair={g:doc.getObject(prefix+'Case_'+style+'_'+g).Shape for g in ['base','plate']}
@@ -196,7 +212,10 @@ for side,prefix in [('left','L_'),('right','R_')]:
                     hit-=common.common(Part.makeCylinder(1,3.8-tip,A.Vector(x,-y,tip))).Volume
                 if hit>.001:hits[group+' / '+name]=hit
             for frame in [o for o in doc.Objects if o.Name.startswith(prefix) and hasattr(o,'FrameStyle') and o.TypeId!='App::Link']:
-                hit=exact_common(shape,frame.Shape).Volume
+                envelope,identity=frame_envelopes[frame.Name]
+                cache_key=(style,group,identity)
+                if cache_key not in case_frame_checks:case_frame_checks[cache_key]=exact_common(shape,envelope).Volume
+                hit=case_frame_checks[cache_key]
                 if hit>.001:hits[group+' / frame '+frame.FrameStyle]=hit
         hit=exact_common(pair['base'],pair['plate']).Volume
         if hit>.001:hits['base / plate']=hit
@@ -222,7 +241,7 @@ for side,prefix in [('left','L_'),('right','R_')]:
     print(side,'parts',len(objects),'collisions',issues,flush=True)
 doc.recompute()
 metadata['inputs']=[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in [
-    'design/level-case-workflow.json','tools/freecad/level_stack.py','tools/freecad/install_level_stack.py','design/cases.json','design/frame-finishes.json','design/frame-extensions.json','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
+    'design/level-case-workflow.json','tools/freecad/level_stack.py','tools/freecad/install_level_stack.py','design/cases.json','design/frame-finishes.json','design/frame-collection-workflow.json','tools/build_frame_collection.py','tools/freecad/install_frame_collection.py','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
 metadata['fcstd_sha256']=hashlib.sha256((OUT/'Flan36.FCStd').read_bytes()).hexdigest()
 report['source_sha256']=metadata['fcstd_sha256']
 report['checker_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()

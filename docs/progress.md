@@ -6,11 +6,17 @@
 |---|---|---|
 | 36 Piantor key centers and angles | Checked | [Layout](../design/layout.json), upstream files and checker |
 | Editable source and CAD exchange | Available | Native FCStd, parameters and [FreeCAD/StepUp examples](freecad.md) |
-| KLP catalog and themed frames | RevI digital study | 38 source variants, 28 with qualified positions; ten frame styles, per-key colors and configuration export/import |
+| KLP catalog and themed frames | RevI digital study | 38 source variants, 28 with qualified positions; eleven frame styles, per-key colors and configuration export/import |
 | Wireless electronics and displays | Placement only | Unrouted revI PCBs; 0 geometric DRC violations, 104 unconnected items each; exact connectors pending |
 | Final BOM and manufacturing files | Pending | Close routing, clearances, retention and exact supplied parts |
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
+
+## Revision I — solid-color frame collection
+
+Flan is the default frame in the native assembly, viewer and presets. Tape, Orbit, Manga, Talavera, Game Boy, NES, SNES, 2000s Phone, Walkman and iPod complete the new collection. Every design uses four solid colors in flush 0.4 mm co-print regions. The case, keys, electronics and 13.39 mm roof remain unchanged.
+
+Older frame IDs migrate to Flan with the original saved bytes retained for recovery. Their colors, battery, cases and caps survive. The current exports contain only the eleven designs. [Collection and regeneration](frames-extra.md) · [Current digital checks](../validation/revI-frame-collection.json).
 
 ## Revision I — sculpted cap direction correction
 
@@ -20,7 +26,7 @@ The Normal and Saddle sculpted presets had the top and bottom rotations reversed
 
 The glass, frame and new **Level** upper shell share a **13.39 mm** plane: **1.41 mm lower** than the previous frame. Both batteries sit directly on the 1.4 mm case floor. The nice!nano PCB is at 8.2 mm and the nice!view PCB at 11.49 mm. Key centers and the selected caps' 17.87 mm height are unchanged.
 
-Level covers switch bodies using the existing removable plate and its three screws. Its openings reserve the full 3.5 mm cap travel. Ten flush frames, both battery profiles and sixteen linked color themes remain available. [Dimensions and connector qualification](level-stack.md) · [Current digital delivery checks](../validation/revI-level-delivery.json).
+Level covers switch bodies using the existing removable plate and its three screws. Its openings reserve the full 3.5 mm cap travel. The current collection has eleven flush frames, both battery profiles and twenty-seven linked color themes. [Dimensions and connector qualification](level-stack.md) · [Current digital delivery checks](../validation/revI-level-delivery.json).
 
 The Samtec display pair is dimensioned as a nominal candidate. Finished nice!view hole fit, actual engagement, printed strength and physical assembly remain unqualified. The boards remain unrouted.
 

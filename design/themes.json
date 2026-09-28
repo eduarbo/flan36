@@ -3,6 +3,237 @@
   "description": "Coordinated case, frame and keycap colors. Finger columns share a base; thumbs lists K30, K31 and K32, mirrored by key reference on both halves. Geometry, rotation and joining interfaces are preserved.",
   "themes": [
     {
+      "id": "flan",
+      "name": "Flan",
+      "recommended_frame": "flan",
+      "base": "#f2dfaf",
+      "plate": "#68422f",
+      "frame": {
+        "body": "#f2dfaf",
+        "detail": "#68422f",
+        "accent": "#b96732",
+        "secondary": "#dfab50"
+      },
+      "keycaps": {
+        "base": "#f2dfaf",
+        "thumbs": [
+          "#68422f",
+          "#b96732",
+          "#dfab50"
+        ]
+      }
+    },
+    {
+      "id": "tape",
+      "name": "Tape",
+      "recommended_frame": "tape",
+      "base": "#d2cec1",
+      "plate": "#303738",
+      "frame": {
+        "body": "#d2cec1",
+        "detail": "#303738",
+        "accent": "#e27136",
+        "secondary": "#f0e9d6"
+      },
+      "keycaps": {
+        "base": "#d2cec1",
+        "thumbs": [
+          "#303738",
+          "#e27136",
+          "#f0e9d6"
+        ]
+      }
+    },
+    {
+      "id": "orbit",
+      "name": "Orbit",
+      "recommended_frame": "orbit",
+      "base": "#eee5cd",
+      "plate": "#315c4e",
+      "frame": {
+        "body": "#eee5cd",
+        "detail": "#315c4e",
+        "accent": "#df7339",
+        "secondary": "#d9bf73"
+      },
+      "keycaps": {
+        "base": "#eee5cd",
+        "thumbs": [
+          "#315c4e",
+          "#df7339",
+          "#d9bf73"
+        ]
+      }
+    },
+    {
+      "id": "manga",
+      "name": "Manga",
+      "recommended_frame": "manga",
+      "base": "#f0eadb",
+      "plate": "#27282e",
+      "frame": {
+        "body": "#f0eadb",
+        "detail": "#27282e",
+        "accent": "#da453d",
+        "secondary": "#99988e"
+      },
+      "keycaps": {
+        "base": "#f0eadb",
+        "thumbs": [
+          "#27282e",
+          "#da453d",
+          "#99988e"
+        ]
+      }
+    },
+    {
+      "id": "talavera",
+      "name": "Talavera",
+      "recommended_frame": "talavera",
+      "base": "#f1e6ca",
+      "plate": "#244e91",
+      "frame": {
+        "body": "#f1e6ca",
+        "detail": "#244e91",
+        "accent": "#c36443",
+        "secondary": "#3d8b89"
+      },
+      "keycaps": {
+        "base": "#f1e6ca",
+        "thumbs": [
+          "#244e91",
+          "#c36443",
+          "#3d8b89"
+        ]
+      }
+    },
+    {
+      "id": "gameboy",
+      "name": "Game Boy",
+      "recommended_frame": "gameboy",
+      "base": "#dcd6ba",
+      "plate": "#42454d",
+      "frame": {
+        "body": "#dcd6ba",
+        "detail": "#42454d",
+        "accent": "#973c60",
+        "secondary": "#a6a392"
+      },
+      "keycaps": {
+        "base": "#dcd6ba",
+        "thumbs": [
+          "#42454d",
+          "#973c60",
+          "#a6a392"
+        ]
+      }
+    },
+    {
+      "id": "nes",
+      "name": "NES",
+      "recommended_frame": "nes",
+      "base": "#c6c7be",
+      "plate": "#32363b",
+      "frame": {
+        "body": "#c6c7be",
+        "detail": "#32363b",
+        "accent": "#c94b3e",
+        "secondary": "#8a8d8d"
+      },
+      "keycaps": {
+        "base": "#c6c7be",
+        "thumbs": [
+          "#32363b",
+          "#c94b3e",
+          "#8a8d8d"
+        ]
+      }
+    },
+    {
+      "id": "snes",
+      "name": "SNES",
+      "recommended_frame": "snes",
+      "base": "#d1d0c9",
+      "plate": "#464751",
+      "frame": {
+        "body": "#d1d0c9",
+        "detail": "#464751",
+        "accent": "#746198",
+        "secondary": "#aca0c2"
+      },
+      "keycaps": {
+        "base": "#d1d0c9",
+        "thumbs": [
+          "#464751",
+          "#746198",
+          "#aca0c2"
+        ]
+      }
+    },
+    {
+      "id": "phone",
+      "name": "2000s Phone",
+      "recommended_frame": "phone",
+      "base": "#263c55",
+      "plate": "#b8bbb5",
+      "frame": {
+        "body": "#263c55",
+        "detail": "#b8bbb5",
+        "accent": "#87ad67",
+        "secondary": "#455469"
+      },
+      "keycaps": {
+        "base": "#263c55",
+        "thumbs": [
+          "#b8bbb5",
+          "#87ad67",
+          "#455469"
+        ]
+      }
+    },
+    {
+      "id": "walkman",
+      "name": "Walkman",
+      "recommended_frame": "walkman",
+      "base": "#275273",
+      "plate": "#192d3b",
+      "frame": {
+        "body": "#275273",
+        "detail": "#192d3b",
+        "accent": "#e4b54b",
+        "secondary": "#acbcc0"
+      },
+      "keycaps": {
+        "base": "#275273",
+        "thumbs": [
+          "#192d3b",
+          "#e4b54b",
+          "#acbcc0"
+        ]
+      }
+    },
+    {
+      "id": "ipod",
+      "name": "iPod",
+      "recommended_frame": "ipod",
+      "base": "#f0eee5",
+      "plate": "#656f79",
+      "frame": {
+        "body": "#f0eee5",
+        "detail": "#656f79",
+        "accent": "#afb4b1",
+        "secondary": "#d8d9d2"
+      },
+      "keycaps": {
+        "base": "#f0eee5",
+        "thumbs": [
+          "#656f79",
+          "#afb4b1",
+          "#d8d9d2"
+        ]
+      }
+    },
+    {
       "id": "piantor-red",
       "name": "Piantor Red",
       "base": "#d93957",

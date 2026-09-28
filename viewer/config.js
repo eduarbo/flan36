@@ -13,7 +13,8 @@ export function gap(a,b){
  }
  return result;
 }
-export function normalize(config,c){const result=copy(config);result.schema="flan36-config-1";for(const [side,keys] of Object.entries(c.layout))for(const key of keys)result.keycaps[side][key.ref].color??=key.row===3?'#45967b':'#e9dfc6';if(!('cases' in result))result.cases=Object.fromEntries(['left','right'].map(side=>[side,{style:'solid',cover:true}]));for(const side of ['left','right']){const cs=result.cases[side],style=c.case_styles[cs.style];cs.base_color??=style.base_color;cs.plate_color??=style.plate_color;cs.match_frame??=false;const f=result.frames[side],p=framePalette(f.style,f.color,f.accents);f.accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,p[k]]));}return result;}
+export const retiredFrames=(config,c)=>['left','right'].filter(side=>Object.hasOwn(c.retired_frame_styles||{},config?.frames?.[side]?.style));
+export function normalize(config,c){const result=copy(config);result.schema="flan36-config-1";for(const [side,keys] of Object.entries(c.layout))for(const key of keys)result.keycaps[side][key.ref].color??=key.row===3?'#45967b':'#e9dfc6';if(!('cases' in result))result.cases=Object.fromEntries(['left','right'].map(side=>[side,{style:'solid',cover:true}]));for(const side of ['left','right']){const cs=result.cases[side],style=c.case_styles[cs.style];cs.base_color??=style.base_color;cs.plate_color??=style.plate_color;cs.match_frame??=false;const f=result.frames[side];if(Object.hasOwn(c.retired_frame_styles||{},f.style))f.style=c.retired_frame_styles[f.style];const p=framePalette(f.style,f.color,f.accents);f.accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,p[k]]));}return result;}
 export function check(config,c){
  const record=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
  if(!record(config))return {errors:['Choose a configuration object.']};
@@ -27,7 +28,7 @@ export function check(config,c){
  for(const [side,keys] of Object.entries(c.layout)){
    if(typeof config.batteries[side]!=='string'||!Object.hasOwn(c.battery_profiles,config.batteries[side]))errors.push('Unknown battery profile.');
    if(Object.keys(record(config.keycaps[side])?config.keycaps[side]:{}).sort().join()!==keys.map(k=>k.ref).sort().join())return {errors:['Missing keys or unknown positions.']};
-   const f=config.frames[side];if(typeof f.style!=='string'||!Object.hasOwn(c.frame_styles,f.style)||!color(f.color))errors.push('Invalid frame or color.');
+   const f=config.frames[side];if(typeof f.style!=='string'||(!Object.hasOwn(c.frame_styles,f.style)&&!Object.hasOwn(c.retired_frame_styles||{},f.style))||!color(f.color))errors.push('Invalid frame or color.');
    const shapes=[];
    for(const k of keys){
      const x=config.keycaps[side][k.ref];if(!record(x))return {errors:['Invalid keycap choice.']};const v=variants.get(x.variant);

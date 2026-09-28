@@ -57,8 +57,7 @@ print('Parameters ready',flush=True)
 frame_profiles=json.loads((ROOT/'design/revI-frame-profiles.json').read_text())
 sys.path.insert(0,str(ROOT/'tools'));from keycap_config import load,default_config,check
 sys.path.insert(0,str(ROOT/'tools/freecad'));import components
-import extra_frames
-extension_spec=extra_frames.load_spec(ROOT)
+import flush_frames
 catalog=load();configuration=default_config(catalog);assert not check(configuration,catalog)[0]
 variants={v['id']:v for v in catalog['variants']}
 finals = {}
@@ -379,62 +378,17 @@ for side in ('left', 'right'):
     expr(mcu_clearance,'Placement.Base.z','Parameters.MCUBottom - 2.6 mm')
     reset_access=cyl('ResetToolAccess',123,59.5,7.8,1.4,12)
     styles={}
-    for style,label in catalog['frame_styles'].items():
-        if style in extension_spec['styles']:continue
-        if style in ('bevel','facet'):
-            sections=[]
-            for j,(z,contour) in enumerate([(6.3,'outer'),(15.4,'outer'),(16.6,style)]):
-                sk=sketch('Frame_'+style+'_Section'+str(j),frame_profiles[side][contour]);sk.Placement.Base.z=z
-                if j==1:expr(sk,'Placement.Base.z','Parameters.FrameTop - Parameters.FrameRoof')
-                if j==2:expr(sk,'Placement.Base.z','Parameters.FrameTop')
-                sections.append(sk)
-            loft=add('Part::Loft','Frame_'+style+'_Loft');loft.Sections=sections;loft.Solid=True;loft.Ruled=True
-        else:
-            # Constant sections are extrusions. Redundant identical arc loft
-            # sections can fail later boolean recomputes when FrameTop changes.
-            loft=extrude('Frame_'+style+'_Pad',frame_profiles[side]['outer'],6.3,10.3)
-            expr(loft,'LengthFwd','Parameters.FrameTop - 6.3 mm')
+    # One undecorated construction template. Only current co-print variants
+    # receive FrameStyle and can be selected or exported.
+    for style,label in [('smooth','Internal blank')]:
+        loft=extrude('Frame_'+style+'_Pad',frame_profiles[side]['outer'],6.3,10.3)
+        expr(loft,'LengthFwd','Parameters.FrameTop - 6.3 mm')
         cover=cut('Frame_'+style+'_Hollow',loft,cavity)
         cover=cut('Frame_'+style+'_Window',cover,window)
         cover=cut('Frame_'+style+'_USB',cover,usb_access)
         cover=cut('Frame_'+style+'_Micro',cover,mcu_clearance)
         cover=cut('Frame_'+style+'_Power',cover,power_slot)
         cover=cut('Frame_'+style+'_Reset',cover,reset_access)
-        # Distinct printable themes. Relief is fused into the roof, stays inside
-        # the common XY envelope and adds only 0.6 mm. Controls are decorative.
-        relief=[]
-        def badge_box(tag,x0,y0,x1,y1):
-            b=box('Theme_'+style+'_'+tag,x0,y0,x1,y1,16.5,.7)
-            expr(b,'Placement.Base.z','Parameters.FrameTop - .1 mm');relief.append(b)
-        def badge_disc(tag,x,y,r):
-            b=cyl('Theme_'+style+'_'+tag,x,y,16.5,r,.7)
-            expr(b,'Placement.Base.z','Parameters.FrameTop - .1 mm');relief.append(b)
-        if style=='handheld':
-            badge_box('DpadH',113.7,54,120.1,56)
-            badge_box('DpadV',115.9,51.8,117.9,58.2)
-            badge_disc('ButtonA',129.3,53.5,1.65)
-            badge_disc('ButtonB',125.7,56.1,1.65)
-            for i in range(3):badge_box('Speaker'+str(i),119+i*2.2,63,120+i*2.2,65.3)
-        elif style=='tv':
-            # Portrait CRT-inspired bezel, sized around the actual LCD opening.
-            badge_box('BezelLeft',113.8,16.8,115.55,50.8)
-            badge_box('BezelRight',130.05,16.8,131.8,50.8)
-            badge_box('BezelTop',113.8,16.8,131.8,18.25)
-            badge_box('BezelBottom',113.8,49.35,131.8,50.8)
-            badge_disc('Tuning',128.9,55.1,2.15)
-            for i in range(4):badge_box('Speaker'+str(i),114.2,52.6+i*1.5,120,53.3+i*1.5)
-        elif style=='cyberpunk':
-            for i in range(3):
-                badge_box('Vent'+str(i),113.4+i*2.7,52,114.6+i*2.7,56.9)
-            badge_box('TraceA',126.8,51.8,132.5,52.6)
-            badge_box('TraceB',131.7,52.6,132.5,58.1)
-            badge_box('TraceC',126.8,57.3,132.5,58.1)
-            badge_box('Panel',119.5,63.2,124.2,65.5)
-            badge_disc('Node',128.1,61,1)
-        if relief:
-            cover=fuse('Frame_'+style+'_Relief',[cover]+relief)
-            cover=cut('Frame_'+style+'_ThemeWindow',cover,window)
-            cover=cut('Frame_'+style+'_ThemeReset',cover,reset_access)
         for i,(x,y) in enumerate(magnetic['stations_left']):
             cover=fuse('Frame_'+style+'_MagnetBoss'+str(i),[cover,cyl('Frame_'+style+'_Boss'+str(i),x,y,6.3,1.85,5.3)])
             cover=cut('Frame_'+style+'_Register'+str(i),cover,cyl('Frame_'+style+'_RegisterTool'+str(i),x,y,6.2,1.6,.6))
@@ -442,9 +396,10 @@ for side in ('left', 'right'):
         for i,(x,y) in enumerate(mounts[3:],4):
             cover=cut('Frame_'+style+'_HeadRelief'+str(i),cover,cyl('Frame_'+style+'_HeadTool'+str(i),x,y,5.3,2.15,1.45))
         cover.Label='Frame · '+label+' · variant'
-        cover.addProperty('App::PropertyString','FrameStyle','Flan36');cover.FrameStyle=style
+        cover.addProperty('App::PropertyBool','FrameTemplate','Flan36');cover.FrameTemplate=True
         cover.ViewObject.ShapeColor=(.16,.25,.23);styles[style]=cover
-    styles.update(extra_frames.build_for_half(doc,side,smooth=styles['smooth'],history=history,spec=extension_spec))
+    current,_=flush_frames.build_styles(doc,side,smooth=styles['smooth'],validate=False)
+    styles.update(current)
     active=doc.addObject('App::Link',prefix+'ActiveFrame');active.setLink(styles[configuration['frames'][side]['style']])
     done('electronics-lid',active,'Magnetic frame · vertical lift','lid',tuple(int(configuration['frames'][side]['color'][i:i+2],16)/255 for i in (1,3,5)),True)
 

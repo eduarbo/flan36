@@ -58,65 +58,82 @@
         }
       },
       "frame_variants": {
-        "smooth": {
+        "flan": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987436,
-          "closed_mesh": true
+          "volume_mm3": 1967.9176791987416,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
-        "bevel": {
+        "tape": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1930.3367944179909,
-          "closed_mesh": true
+          "volume_mm3": 1967.9176791987422,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
-        "facet": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1893.1580334968944,
-          "closed_mesh": true
-        },
-        "handheld": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987425,
-          "closed_mesh": true
-        },
-        "tv": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.917679198741,
-          "closed_mesh": true
-        },
-        "cyberpunk": {
+        "orbit": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
           "volume_mm3": 1967.9176791987402,
-          "closed_mesh": true
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
-        "cartridge": {
+        "manga": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987416,
-          "closed_mesh": true
+          "volume_mm3": 1967.9176791987418,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
-        "arcade": {
+        "talavera": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987431,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
+        },
+        "gameboy": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987425,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
+        },
+        "nes": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.917679198741,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
+        },
+        "snes": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987425,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
+        },
+        "phone": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987404,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
+        },
+        "walkman": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
           "volume_mm3": 1967.9176791987436,
-          "closed_mesh": true
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
-        "mecha": {
+        "ipod": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987416,
-          "closed_mesh": true
-        },
-        "kintsugi": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.917679198742,
-          "closed_mesh": true
+          "volume_mm3": 1967.9176791987402,
+          "closed_mesh": true,
+          "verified_envelope": "L_Frame_smooth_HeadRelief5"
         }
       },
       "pair_intersections_mm3": {
@@ -700,65 +717,82 @@
         }
       },
       "frame_variants": {
-        "smooth": {
+        "flan": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987436,
-          "closed_mesh": true
+          "volume_mm3": 1967.9176791987459,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
-        "bevel": {
+        "tape": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1930.3367944179888,
-          "closed_mesh": true
+          "volume_mm3": 1967.9176791987443,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
-        "facet": {
+        "orbit": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1893.1580334968949,
-          "closed_mesh": true
+          "volume_mm3": 1967.9176791987425,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
-        "handheld": {
+        "manga": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987422,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
+        },
+        "talavera": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987443,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
+        },
+        "gameboy": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987438,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
+        },
+        "nes": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.917679198744,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
+        },
+        "snes": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987438,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
+        },
+        "phone": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.917679198742,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
+        },
+        "walkman": {
+          "component_collisions_mm3": {},
+          "usb_envelope_collision_mm3": 0.0,
+          "volume_mm3": 1967.9176791987422,
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
+        },
+        "ipod": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
           "volume_mm3": 1967.917679198743,
-          "closed_mesh": true
-        },
-        "tv": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987454,
-          "closed_mesh": true
-        },
-        "cyberpunk": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987418,
-          "closed_mesh": true
-        },
-        "cartridge": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.917679198741,
-          "closed_mesh": true
-        },
-        "arcade": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987386,
-          "closed_mesh": true
-        },
-        "mecha": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987431,
-          "closed_mesh": true
-        },
-        "kintsugi": {
-          "component_collisions_mm3": {},
-          "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987427,
-          "closed_mesh": true
+          "closed_mesh": true,
+          "verified_envelope": "R_Frame_smooth_HeadRelief5"
         }
       },
       "pair_intersections_mm3": {
@@ -1293,6 +1327,6 @@
     "Window tolerance and PCB copper-to-edge rule",
     "Printed fits, insertion/extraction loads, charging, RF and measured power"
   ],
-  "source_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
-  "checker_sha256": "7aad1877f0469acc2bf87b4c01a35c4a8319cadf78824e09b583f21ee8d99ab3"
+  "source_sha256": "4e3531e9e955f1747e97178666e2cde1c1794896997bc44655188c986705d043",
+  "checker_sha256": "11bbc8d104daca9cda325b627693dcd4fcd23637f44e3bb4c9eb7fd9acbef640"
 }

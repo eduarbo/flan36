@@ -20,22 +20,29 @@ for source in receipt['sources']:
     assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256'],source['path']
 data=json.loads(gzip.decompress(base64.b64decode(re.search(rb'<script id="scene-data" type="application/octet-stream">(.*?)</script>',html,re.S)[1])))
 model=json.loads((ROOT/'design/revI.json').read_text())
+# Packed aliases retain the exact same geometry; inspect their original IDs too.
+for alias,source in data.get('geometryAliases',{}).items():data['geometries'][alias]=data['geometries'][source]
+catalog=data['catalog'];config=catalog['default_configuration'];variants={v['id']:v for v in catalog['variants']}
 native_ids=[p['part_id'] for p in data['parts'] if 'part_id' in p]
 assert len(native_ids)==len(set(native_ids)) and set(native_ids)==set(model['parts']), 'Every exported assembly part must appear exactly once in the viewer'
 assert len(data['parts'])==len(model['parts'])+36*3+8+2, 'Native assembly plus 36 keys, 72 switch objects, 8 feet and 2 screens'
 for side in ('left','right'):
     sockets=[p for p in data['parts'] if p.get('part_id')==side+'-display-socket']
     assert len(sockets)==1 and sockets[0]['group']=='connectors', 'Retained J2 must be explicit in each half'
-for side,expected_x in [('left',117.05),('right',31.45)]:
+for side in ('left','right'):
     bounds=data['geometries'][f'mechanical/revI/{side}-battery.stl']['bounds_mm']
-    assert abs(bounds[0][0]-expected_x)<1e-4 and abs(bounds[0][1]-2)<1e-5,(side,'unplaced battery')
+    native=model['parts'][side+'-battery']['bounds_mm']
+    expected=[[native[0],native[2],-native[4]],[native[3],native[5],-native[1]]]
+    assert np.allclose(bounds,expected,rtol=0,atol=1e-4),(side,'unplaced battery')
+    assert abs(bounds[0][1]-model['parameter_values_mm']['BatteryBottom'])<1e-5,(side,'battery datum')
 layout=json.loads((ROOT/'design/layout.json').read_text())
 caps=[p for p in data['parts'] if p['group']=='keycaps'];assert len(caps)==36
 for side,keys in layout['halves'].items():
     for k in keys:
         p=next(p for p in caps if p['name']==side+' · KLP '+k['ref'])
-        assert p['position']==[(161 if side=='right' else 0)+k['x'],12.2,k['y']]
-        assert p['angle_deg']==k['angle']
+        choice=config['keycaps'][side][k['ref']];variant=variants[choice['variant']]
+        assert p['position']==[(161 if side=='right' else 0)+k['x'],variant['seating_z_mm'],k['y']]
+        assert p['angle_deg']==k['angle']+choice['rotation_deg']
 for ident,leads in model['batteryLeadProfiles'].items():
     assert data['batteryLeadProfiles'][ident]==[{'index':wire['index'],'geometry':'mechanical/revI/'+wire['stl'],
         'color':wire.get('color','#ad453d' if wire['index']==0 else '#353738')} for wire in leads],ident

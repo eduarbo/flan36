@@ -1,6 +1,6 @@
-"""Four native flush frame themes, shared by the installer and full generator.
+"""Compatibility helpers for the current native frame collection.
 
-Compatibility entry points delegate to the common seven-style co-print recipe.
+Legacy entry points delegate to the canonical co-print recipe.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 import hashlib
@@ -10,19 +10,13 @@ from pathlib import Path
 import flush_frames
 
 OWNER = 'flan36-frame-extensions-1'
-STYLES = ('cartridge', 'arcade', 'mecha', 'kintsugi')
+STYLES = flush_frames.STYLES
 BOUND_KEYS = flush_frames.BOUNDS
 
 
 def load_spec(root=None):
     root = Path(root) if root else Path(__file__).resolve().parents[2]
-    spec = json.loads((root / 'design/frame-extensions.json').read_text())
-    if spec['schema'] != OWNER or tuple(spec['styles']) != STYLES:
-        raise ValueError('Unexpected extension schema or style set')
-    if spec['decoration_mode'] != 'flush-co-print' or spec['max_relief_mm'] != 0:
-        raise ValueError('Only flush co-print frame themes are supported')
-    flush_frames.load_spec(root)
-    return spec
+    return flush_frames.load_spec(root)
 
 
 def digest(path):
@@ -50,7 +44,7 @@ def validate_variant(doc, side, smooth, variant, spec=None):
 
 
 def build_for_half(doc, side, smooth=None, history=None, spec=None, validate=True):
-    """Return the same four FrameStyle objects using actual flush color solids."""
+    """Return the current FrameStyle objects using actual flush color solids."""
     load_spec()
     objects, _ = flush_frames.build_styles(doc, side, smooth=smooth,
                                           styles=STYLES, validate=validate)

@@ -1,7 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 import finishes from '../design/frame-finishes.json';
-import extensions from '../design/frame-extensions.json';
-for(const [id,spec] of Object.entries(extensions.styles))finishes.styles[id]={colors:spec.colors,labels:spec.labels};
 export {finishes};
 
 export function framePalette(style,body,accents){

@@ -1,0 +1,156 @@
+{
+  "scope": "Replacement frame collection: native CAD, current exports, themes, viewer and configuration migration",
+  "baseline_commit": "e75111c4550b9481558df4e77fe2c682e074ca94",
+  "styles": [
+    "flan",
+    "tape",
+    "orbit",
+    "manga",
+    "talavera",
+    "gameboy",
+    "nes",
+    "snes",
+    "phone",
+    "walkman",
+    "ipod"
+  ],
+  "default_style": "flan",
+  "solid_colors_per_frame": 4,
+  "gradients": false,
+  "frame_top_mm": 13.39,
+  "inlay_depth_mm": 0.4,
+  "minimum_backing_mm": 0.8,
+  "physical_acceptance": false,
+  "native": {
+    "halves": 2,
+    "variants": 22,
+    "saved_reopened_recomputed": true,
+    "protected_36_caps_cases_electronics_and_parameters": true,
+    "post_boolean_color_islands": 200,
+    "section_core_check": true,
+    "new_files": 227,
+    "retired_exports_removed": 152,
+    "non_frame_stls_unchanged": true
+  },
+  "viewer": {
+    "distinct_actual_previews": 11,
+    "frame_changes_preserve_inspection": 11,
+    "themes_without_pinky_accents": 27,
+    "flan_reset_default": true,
+    "exact_old_configuration_preserved_on_migration": true,
+    "mobile_gallery": true,
+    "registered_native_3mf_assemblies": 22,
+    "geometry_meshes": 301,
+    "js_python_contract_fixtures": 122,
+    "runtime_errors": []
+  },
+  "reliability": {
+    "camera_transitions": 17,
+    "rejected_import_atomic_glb": true,
+    "legacy_solid_kit": true,
+    "battery_targets": true,
+    "undo_redo_and_pending_paint": true,
+    "named_json_export": true,
+    "lazy_print_retry_and_hash": true,
+    "exact_native_stl_hashes": true,
+    "missing_resource_atomic_glb": true,
+    "simultaneous_tabs_preserve_both": true,
+    "close_while_save_queued": true,
+    "palette_tab_conflicts": true,
+    "rejected_storage_preserved_and_downloadable": true,
+    "offline_exact_kit_and_glb": true,
+    "mobile_controls": true,
+    "no_locks_or_random_uuid": true,
+    "denied_storage_export": true
+  },
+  "evidence": [
+    {
+      "path": "mechanical/revI/Flan36.FCStd",
+      "sha256": "4e3531e9e955f1747e97178666e2cde1c1794896997bc44655188c986705d043"
+    },
+    {
+      "path": "design/frame-finishes.json",
+      "sha256": "b582b902f00e1a8d79fc1ce1483f7484fbdf1004e7f1e60c0270217cb338a4c1"
+    },
+    {
+      "path": "design/themes.json",
+      "sha256": "f615841afdb7d2157fa784587c42e877af0550d61ca02502162c1003866c7b93"
+    },
+    {
+      "path": "keycaps/catalog.json",
+      "sha256": "d0722cadd295514f48de8c944435178410bc3e42035b45e9a591d8f87c31df57"
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "be87772bbdcb24265939c6883bbca5a35bb03c2955c3059e7cd51350734ab533"
+    },
+    {
+      "path": "docs/offline.html",
+      "sha256": "77d80e1b743264a2e8a0101d6a405d4963eb36d0edcda48fea8d0da26ff15486"
+    },
+    {
+      "path": "docs/images/revI-frame-gallery.png",
+      "sha256": "0de95a6760067487fbb123ca6100defffa7648f48e8014933f12cb3f8a7148eb"
+    },
+    {
+      "path": "docs/images/revI-assembled.png",
+      "sha256": "606c0250620ef61d9b17d0eff69fa410cd6a73701bd22c79935b923e1a230e93"
+    },
+    {
+      "path": "docs/images/revI-themes.png",
+      "sha256": "6a6253f58da99fd12c06712439c06c39d055fa2020949e9cca5ea668caef49d7"
+    },
+    {
+      "path": "validation/revI-frame-collection-native.json",
+      "sha256": "f9d916678755ac97a8ba82b427fdb8c238a89ef414c17e1bd32058a952131e90"
+    },
+    {
+      "path": "validation/revI-frame-sections.json",
+      "sha256": "16542ece45539170faf887cd42c19a8aea9246c3fec27bdbdf33d31c5a31d3dd"
+    },
+    {
+      "path": "validation/revI-frame-collection-viewer.json",
+      "sha256": "d2ce3cf7fca08fbcdd7b495da26789328b1ac5ee434d417524fdd2e5aec6c1cd"
+    },
+    {
+      "path": "validation/revI-frame-collection-reliability.json",
+      "sha256": "85067555934aab50449fe469523850d7848f08938f32f1bbee33201da0fbf3b1"
+    },
+    {
+      "path": "validation/revI-mechanical.json",
+      "sha256": "e6fed91954069f4346e9e2ec45dbb69547ed5a330a6607abd80e88780afcfd09"
+    },
+    {
+      "path": "validation/revI-viewer.json",
+      "sha256": "20897b24e7ac0a715e7f0cd8615254922504cab287c9c52328eb8801969f1b34"
+    },
+    {
+      "path": "viewer/frame-collection-check.cjs",
+      "sha256": "152803bb57f26c35bbca195d8db139de1df5a78913250fee913562652e1b19bd"
+    },
+    {
+      "path": "tools/freecad/check_frame_collection.py",
+      "sha256": "25685fed6dd2dbccedda1f7090ec94528520b24d80b63acf71822bd0b4c3616d"
+    },
+    {
+      "path": "tools/check_viewer_revI.py",
+      "sha256": "fa65bff3ef52e1152bfccbb8350bd4d17aa7b1cc107ba4dbb4affbc991891ecf"
+    },
+    {
+      "path": "validation/revI-flush-viewer.json",
+      "sha256": "eb22d12db66251b09de673723753439955a9e4e832eb45130eba4f2a70474b68"
+    }
+  ],
+  "review": {
+    "route": "Two independent advisory reviews; root resolved their current-collection, migration and print-feature findings.",
+    "bounded_findings": [
+      "Changed material priority for Walkman icons and simplified the iPod ring after mesh validation.",
+      "Tightened slice discretization to 0.001 mm and polygonized section edges before occupancy checks.",
+      "Updated stale viewer checker datums from the current native metadata and restored packed geometry aliases.",
+      "Static assembly renders now use configured key colors."
+    ],
+    "limits": [
+      "Digital checks do not qualify printer-specific slicing, filament bonding, physical fit or hardware operation."
+    ]
+  }
+}

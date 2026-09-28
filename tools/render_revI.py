@@ -54,10 +54,12 @@ def render(kind):
         stack=kind=='stack';lid_dx=32 if stack else 0;lid_dz=13 if stack else 0
         if kind=='corner':
             part(side,'case-rim-base',(.64,.12,.23));part(side,'case-rim-plate',plate_color)
-            part(side,'frame-smooth',(.64,.12,.23))
+            part(side,'frame-flan',(.64,.12,.23))
         else:
             part(side,'tray',body);part(side,'key-plate',plate_color)
-            part(side,'electronics-lid',cover,lid_dz,lid_dx)
+            colors={'body':cfg['frames'][side]['color'],**cfg['frames'][side]['accents']}
+            for volume in m['frameVariants'][side+'-'+cfg['frames'][side]['style']]['material_parts']:
+                actor(mesh('mechanical/revI/'+volume['stl']),(offset+lid_dx,0,lid_dz),rgb(colors[volume['role']]))
         part(side,'pcb',(.10,.32,.26))
         part(side,'cradle',(.30,.38,.39),10 if stack else 0)
         part(side,'battery-retainer',(.30,.38,.39),15 if stack else 0)
@@ -89,7 +91,7 @@ def render(kind):
             for v in switches['choc-body']+switches['choc-stem']:
                 actor(mesh(v['path']),(offset+key['x'],key['y'],5.4),rgb(v['color']),rz=-key['angle'])
             choice=cfg['keycaps'][side][key['ref']];v=variants[choice['variant']]
-            actor(mesh(v['path']),(offset+key['x'],key['y'],v['seating_z_mm']),(.25,.55,.45) if key['row']==3 else (.91,.878,.783),rz=-key['angle']-choice['rotation_deg'])
+            actor(mesh(v['path']),(offset+key['x'],key['y'],v['seating_z_mm']),rgb(choice['color']),rz=-key['angle']-choice['rotation_deg'])
         for x,y in [(26,26),(57,15),(28,70),(125,83)]:
             cylinder(offset+(x if side=='left' else 160-x),y,-.6,3,1.2,(.055,.067,.07))
     floor=vtk.vtkPlaneSource();floor.SetOrigin(-600,-600,-1.21);floor.SetPoint1(900,-600,-1.21);floor.SetPoint2(-600,800,-1.21)

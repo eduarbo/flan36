@@ -226,7 +226,8 @@ def apply(doc):
         well.setExpression('Placement.Base.z','Parameters.DisplayBottom - .59 mm')
         tools=add('Part::MultiFuse','FrameCavities');tools.Shapes=[doc.getObject(prefix+'FrameInside'),relief,well]
         for style in ['smooth','bevel','facet']:
-            doc.getObject(prefix+'Frame_'+style+'_Hollow').Tool=tools
+            hollow=doc.getObject(prefix+'Frame_'+style+'_Hollow')
+            if hollow is not None:hollow.Tool=tools
         # Rebuild continuous battery routes; fixed PH contacts do not descend.
         wire_report={}
         for profile,names in old_recipe['halves'][side]['lead_objects'].items():

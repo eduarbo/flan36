@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-import {check,normalize} from './config.js';
+import {check,normalize,retiredFrames} from './config.js';
 export const savedKey='flan36.configuration.v1';
 const legacyKey='filo36.configuration.v1';
 export const recoveryPrefix='flan36.recovery.';
@@ -10,13 +10,13 @@ export function restoreConfiguration(storage,catalog){
   const raw=storage.getItem(key);if(raw===null)continue;
   if(raw.length>100000)throw Error('Oversized configuration');
   const parsed=JSON.parse(raw);if(check(parsed,catalog).errors.length)throw Error('Invalid configuration');
-  return {configuration:normalize(parsed,catalog),message:''};
+  return {configuration:normalize(parsed,catalog),message:retiredFrames(parsed,catalog).length?'Retired frames were replaced with Flan. Your colors and other choices are unchanged; the original is preserved in Files → Recover saved data.':''};
  }catch{return {configuration:null,message:'Saved settings could not be loaded. The original is preserved in Files → Recover saved data.'};}
  return {configuration:null,message:''};
 }
 // Cooperating tabs serialize compare-and-write. Stale edits become separate
 // recovery drafts. No lock means no shared write. Recovery keys survive reload.
-export function createStore({key,validate,storage=()=>localStorage,locks=()=>navigator.locks,notify=()=>{}}){
+export function createStore({key,validate,storage=()=>localStorage,locks=()=>navigator.locks,notify=()=>{},preserveBeforeWrite=()=>false}){
  let expected=null,invalid=false,queue=Promise.resolve(),sequence=0;
  const draftKey=recoveryPrefix+key+'.'+uniqueId();
  try{expected=storage().getItem(key);if(expected!==null)validateRaw(expected);}catch{invalid=true;}
@@ -36,6 +36,7 @@ export function createStore({key,validate,storage=()=>localStorage,locks=()=>nav
     else await manager.request(key,{mode:'exclusive'},()=>{
      const current=storage().getItem(key);
      if(invalid||current!==expected){recover(raw,'Conflicting draft');notice='Saved data differs from this tab. Your draft is preserved in Files → Recover saved data. Export it or load the saved version.';return;}
+     if(current!==null&&preserveBeforeWrite(JSON.parse(current)))storage().setItem(recoveryPrefix+key+'.'+uniqueId(),JSON.stringify({key,label:'Before retired-frame migration',raw:current}));
      storage().setItem(key,raw);expected=raw;
      if(ticket===sequence)try{storage().removeItem?.(draftKey);}catch{/* A redundant recovery copy is harmless. */}
     });

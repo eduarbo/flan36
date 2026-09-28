@@ -8,7 +8,7 @@
 
 *RevI: key-aligned local curves, four interchangeable cases, optional exposed display stack, magnetic frames and a floor-mounted cell in either battery size. Physical fit untested.*
 
-**[Themes and print kits](docs/themes-printing.md)** — Sixteen coordinated themes, personal keycap palettes, linked rim/frame colors and selected STL/3MF parts.
+**[Themes and print kits](docs/themes-printing.md)** — Twenty-seven coordinated themes, personal keycap palettes, linked rim/frame colors and selected STL/3MF parts.
 
 **[Lower, level stack](docs/level-stack.md)** — Glass, frame and removable switch-covering shell share a 13.39 mm plane. Connector fit remains unqualified.
 
@@ -17,7 +17,7 @@
 Flan36 is a low-profile wireless split keyboard in development by [Eduardo Ruiz](https://github.com/eduarbo). It keeps Piantor’s key centers and angles, with five columns and three thumb keys per half.
 
 - **KLP Lamé choices:** all 38 Choc-stem variants catalogued; 28 qualify in at least one position. The viewer checks complete combinations and exports a configuration for FreeCAD.
-- **Magnetic frames:** Cartridge, Arcade, Mecha, Kintsugi, Handheld, Retro TV and Cyberpunk, with flush multicolor inlays, plus three plain styles. Match the frame to the case rim or give each half its own palette.
+- **Magnetic frames:** Flan (default), Tape, Orbit, Manga, Talavera, Game Boy, NES, SNES, 2000s Phone, Walkman and iPod. Four solid colors in flush inlays, with matching rim and key palettes.
 - **Keycap colors:** paint all keys, rows, columns or individual keys; save and share your own palettes.
 - **Free tools:** KiCad for electronics, FreeCAD for the case, StepUp for exchange. Editable source, STEP/STL, offline viewer and GLB included.
 - **Intended hardware:** Choc v1 hot-swap, two nice!nano controllers and two nice!view displays. One display remains the fallback.

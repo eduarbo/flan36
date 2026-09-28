@@ -1,0 +1,26 @@
+{
+  "source_snapshot": "e75111c4550b9481558df4e77fe2c682e074ca94",
+  "online_sha256": "be87772bbdcb24265939c6883bbca5a35bb03c2955c3059e7cd51350734ab533",
+  "offline_sha256": "77d80e1b743264a2e8a0101d6a405d4963eb36d0edcda48fea8d0da26ff15486",
+  "checks": {
+    "camera_transitions": 17,
+    "rejected_import_atomic_glb": true,
+    "legacy_solid_kit": true,
+    "battery_targets": true,
+    "undo_redo_and_pending_paint": true,
+    "named_json_export": true,
+    "lazy_print_retry_and_hash": true,
+    "exact_native_stl_hashes": true,
+    "missing_resource_atomic_glb": true,
+    "simultaneous_tabs_preserve_both": true,
+    "close_while_save_queued": true,
+    "palette_tab_conflicts": true,
+    "rejected_storage_preserved_and_downloadable": true,
+    "offline_exact_kit_and_glb": true,
+    "mobile_controls": true,
+    "no_locks_or_random_uuid": true,
+    "denied_storage_export": true
+  },
+  "errors": [],
+  "passed": true
+}

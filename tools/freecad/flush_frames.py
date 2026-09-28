@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OWNER = 'flan36-flush-frames-1'
 ROLES = ('body', 'detail', 'accent', 'secondary')
-STYLES = ('handheld', 'tv', 'cyberpunk', 'cartridge', 'arcade', 'mecha', 'kintsugi')
+STYLES = tuple(json.loads((ROOT/'design/frame-finishes.json').read_text())['styles'])
 BOUNDS = ('XMin', 'YMin', 'ZMin', 'XMax', 'YMax', 'ZMax')
 EPS = 1e-5
 
@@ -21,8 +21,6 @@ EPS = 1e-5
 def load_spec(root=ROOT):
     root = Path(root)
     spec = json.loads((root / 'design/frame-finishes.json').read_text())
-    extensions = json.loads((root / 'design/frame-extensions.json').read_text())
-    spec['styles'].update(extensions['styles'])
     if tuple(spec['styles']) != STYLES or tuple(spec['roles']) != ROLES:
         raise ValueError('Unexpected flush frame styles or material roles')
     if spec['decoration_mode'] != 'flush-co-print' or not 0 < spec['inlay_depth_mm'] <= .4:
@@ -30,6 +28,8 @@ def load_spec(root=ROOT):
     if spec['minimum_backing_mm'] < .8:
         raise ValueError('The shell backing must remain at least 0.8 mm')
     for style, theme in spec['styles'].items():
+        if sorted(theme.get('priority', ['accent','secondary','detail'])) != sorted(ROLES[1:]):
+            raise ValueError((style, 'invalid material priority'))
         ids = set()
         for item in theme['features']:
             if item['id'] in ids or not item['id'].isalnum():
@@ -53,7 +53,8 @@ def rgb(color):
 def find_smooth(doc, side):
     prefix = 'L_' if side == 'left' else 'R_'
     matches = [o for o in doc.Objects if o.Name.startswith(prefix)
-               and o.TypeId != 'App::Link' and getattr(o, 'FrameStyle', '') == 'smooth']
+               and o.TypeId != 'App::Link' and (getattr(o, 'FrameTemplate', False)
+               or getattr(o, 'FrameStyle', '') == 'smooth')]
     if len(matches) != 1:
         raise ValueError((side, 'expected one undecorated Smooth frame', len(matches)))
     return matches[0]
@@ -114,6 +115,36 @@ class Recipe:
 
     def primitive(self, name, item):
         kind = item['kind']
+        if kind == 'roundrect':
+            import Part
+            import Sketcher
+            x0,y0,x1,y1=item['xy']; r=item['radius_mm']
+            if not 0 < r <= min(x1-x0,y1-y0)/2:
+                raise ValueError((name,'invalid corner radius'))
+            # True circular corners, not polygon approximations or baked meshes.
+            q=1-math.sqrt(.5)
+            segments=[[[x0+r,y0],[x1-r,y0]],[[x1-r,y0],[x1-r*q,y0+r*q],[x1,y0+r]],
+                [[x1,y0+r],[x1,y1-r]],[[x1,y1-r],[x1-r*q,y1-r*q],[x1-r,y1]],
+                [[x1-r,y1],[x0+r,y1]],[[x0+r,y1],[x0+r*q,y1-r*q],[x0,y1-r]],
+                [[x0,y1-r],[x0,y0+r]],[[x0,y0+r],[x0+r*q,y0+r*q],[x0+r,y0]]]
+            sketch=self.add('Sketcher::SketchObject',name+'Sketch')
+            for i in reversed(range(sketch.GeometryCount)):sketch.delGeometry(i)
+            for segment in segments:
+                pts=[self.point(p) for p in segment]
+                if len(pts)==2 and (pts[1]-pts[0]).Length<EPS:continue
+                geometry=Part.LineSegment(*pts) if len(pts)==2 else Part.Arc(*pts)
+                index=sketch.addGeometry(geometry,False)
+                sketch.addConstraint(Sketcher.Constraint('Block',index))
+            obj=self.add('Part::Extrusion',name)
+            obj.Base,obj.Dir,obj.Solid=sketch,self.A.Vector(0,0,1),True
+            self.depth(obj,'Placement.Base.z','LengthFwd')
+            return [obj]
+        if kind == 'ring':
+            if not 0 < item['width_mm'] < item['radius_mm']:
+                raise ValueError((name,'invalid ring width'))
+            outer=self.primitive(name+'Outer',dict(item,kind='disc'))[0]
+            inner=self.primitive(name+'Inner',dict(item,kind='disc',radius_mm=item['radius_mm']-item['width_mm']))[0]
+            return [self.cut(name,outer,inner)]
         if kind == 'box':
             x0, y0, x1, y1 = item['xy']
             if x1 <= x0 or y1 <= y0:
@@ -181,7 +212,7 @@ class Recipe:
         # Explicit deterministic priority: accent over secondary over detail.
         # Subtraction gives disjoint material interiors even at crossing motifs.
         occupied = None
-        for role in ('accent', 'secondary', 'detail'):
+        for role in theme.get('priority', ('accent', 'secondary', 'detail')):
             if not raw[role]:
                 continue
             fused = self.combine(style+'_'+role+'_Raw', raw[role])
@@ -364,7 +395,7 @@ def build_styles(doc, side, smooth=None, styles=STYLES, spec=None, validate=True
 
 
 def apply(doc, output_dir=None):
-    """Apply all seven styles after stack edits; does not save the document."""
+    """Apply the current collection after stack edits; does not save the document."""
     import FreeCAD as A
     spec = load_spec()
     if float(doc.Parameters.FrameRoof.Value)+EPS < spec['inlay_depth_mm']+spec['minimum_backing_mm']:

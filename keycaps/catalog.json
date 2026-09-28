@@ -38,14 +38,14 @@
   },
   "battery_profiles": {
     "adafruit-1570": {
-      "label": "Adafruit 1570 · 100 mAh",
+      "label": "Adafruit 1570 \u00b7 100 mAh",
       "width": 11.5,
       "length": 31,
       "height": 3.8,
       "source": "https://www.adafruit.com/product/1570"
     },
     "301230": {
-      "label": "301230 · 110 mAh",
+      "label": "301230 \u00b7 110 mAh",
       "width": 12,
       "length": 30,
       "height": 3,
@@ -457,21 +457,22 @@
     ]
   },
   "frame_styles": {
-    "smooth": "Smooth",
-    "bevel": "Beveled",
-    "facet": "Faceted",
-    "handheld": "Handheld",
-    "tv": "Retro TV",
-    "cyberpunk": "Cyberpunk",
-    "cartridge": "Cartridge",
-    "arcade": "Arcade",
-    "mecha": "Mecha",
-    "kintsugi": "Kintsugi"
+    "flan": "Flan",
+    "tape": "Tape",
+    "orbit": "Orbit",
+    "manga": "Manga",
+    "talavera": "Talavera",
+    "gameboy": "Game Boy",
+    "nes": "NES",
+    "snes": "SNES",
+    "phone": "2000s Phone",
+    "walkman": "Walkman",
+    "ipod": "iPod"
   },
   "variants": [
     {
       "id": "choc_stem_choc_size_normal_90deg",
-      "label": "Choc · Normal 90deg",
+      "label": "Choc \u00b7 Normal 90deg",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_90deg.stl",
       "source": "STL/Choc Stem + Choc Size/90 deg Rotated/Choc_Stem_Choc_Size_Normal_90deg.stl",
       "sha256": "a6deb4abac72914e12b16a10061c65f84d15fd3e8990c98490443289f8047eeb",
@@ -1295,7 +1296,7 @@
     },
     {
       "id": "choc_stem_choc_size_normal_homing_90deg",
-      "label": "Choc · Normal Homing 90deg",
+      "label": "Choc \u00b7 Normal Homing 90deg",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_Homing_90deg.stl",
       "source": "STL/Choc Stem + Choc Size/90 deg Rotated/Choc_Stem_Choc_Size_Normal_Homing_90deg.stl",
       "sha256": "2cb6e93f80298eb185f81dd4d19ee3efa76542b7f31994285478d6fd06616280",
@@ -2119,7 +2120,7 @@
     },
     {
       "id": "choc_stem_choc_size_normal_tilted_90deg",
-      "label": "Choc · Normal Tilted 90deg",
+      "label": "Choc \u00b7 Normal Tilted 90deg",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_Tilted_90deg.stl",
       "source": "STL/Choc Stem + Choc Size/90 deg Rotated/Choc_Stem_Choc_Size_Normal_Tilted_90deg.stl",
       "sha256": "c75c5c245360a674c3456749d278aad42b13814ca8aaa4ce9fce6f26e8dbf004",
@@ -2919,7 +2920,7 @@
     },
     {
       "id": "choc_stem_choc_size_saddle_90deg",
-      "label": "Choc · Saddle 90deg",
+      "label": "Choc \u00b7 Saddle 90deg",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_90deg.stl",
       "source": "STL/Choc Stem + Choc Size/90 deg Rotated/Choc_Stem_Choc_Size_Saddle_90deg.stl",
       "sha256": "b7a940d3a2ef0d317213508fcb43538d95e3251f03449c16df862ff3c46dd3de",
@@ -3743,7 +3744,7 @@
     },
     {
       "id": "choc_stem_choc_size_saddle_homing_90deg",
-      "label": "Choc · Saddle Homing 90deg",
+      "label": "Choc \u00b7 Saddle Homing 90deg",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Homing_90deg.stl",
       "source": "STL/Choc Stem + Choc Size/90 deg Rotated/Choc_Stem_Choc_Size_Saddle_Homing_90deg.stl",
       "sha256": "51afd2b2064a59bfb4734c41a52ea2f956391e2104474edda3efdf4140168100",
@@ -4567,7 +4568,7 @@
     },
     {
       "id": "choc_stem_choc_size_saddle_tilted_90deg",
-      "label": "Choc · Saddle Tilted 90deg",
+      "label": "Choc \u00b7 Saddle Tilted 90deg",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Tilted_90deg.stl",
       "source": "STL/Choc Stem + Choc Size/90 deg Rotated/Choc_Stem_Choc_Size_Saddle_Tilted_90deg.stl",
       "sha256": "c2030a0608ae886af36f229f38cff43ea1bbc1aebd01983a2d26d3a4745df068",
@@ -5367,7 +5368,7 @@
     },
     {
       "id": "choc_stem_choc_size_thumb_90deg",
-      "label": "Choc · Thumb 90deg",
+      "label": "Choc \u00b7 Thumb 90deg",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Thumb_90deg.stl",
       "source": "STL/Choc Stem + Choc Size/90 deg Rotated/Choc_Stem_Choc_Size_Thumb_90deg.stl",
       "sha256": "fadfca2053db5e04a9981b7b9b33a825d19908de6ca4743aafd8ae2e31bed373",
@@ -6191,7 +6192,7 @@
     },
     {
       "id": "choc_stem_choc_size_1.5u_normal",
-      "label": "Choc · 1.5U Normal",
+      "label": "Choc \u00b7 1.5U Normal",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Normal.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_1.5U_Normal.stl",
       "sha256": "7622bfc457d1159ff214f921edd397071c8bbe5266ec2a216fdc0d75f242d1ed",
@@ -6910,7 +6911,7 @@
     },
     {
       "id": "choc_stem_choc_size_1.5u_saddle_h",
-      "label": "Choc · 1.5U Saddle H",
+      "label": "Choc \u00b7 1.5U Saddle H",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Saddle_H.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_1.5U_Saddle_H.stl",
       "sha256": "9b8c922fed930b1406bda08e8217177e31b894b9fb8e765459ff828f2f9c1cd0",
@@ -7629,7 +7630,7 @@
     },
     {
       "id": "choc_stem_choc_size_1.5u_saddle_v",
-      "label": "Choc · 1.5U Saddle V",
+      "label": "Choc \u00b7 1.5U Saddle V",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Saddle_V.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_1.5U_Saddle_V.stl",
       "sha256": "9b7374b9c50732bea1cad302259ee3858d30a497c893bbef65acfd205e045fdf",
@@ -8348,7 +8349,7 @@
     },
     {
       "id": "choc_stem_choc_size_1.5u_thumb_h",
-      "label": "Choc · 1.5U Thumb H",
+      "label": "Choc \u00b7 1.5U Thumb H",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Thumb_H.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_1.5U_Thumb_H.stl",
       "sha256": "c46e091008834d799a0d91573706bb51b232d49a6c436529f7bcaa00884ab8f8",
@@ -9067,7 +9068,7 @@
     },
     {
       "id": "choc_stem_choc_size_1.5u_thumb_v",
-      "label": "Choc · 1.5U Thumb V",
+      "label": "Choc \u00b7 1.5U Thumb V",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_1.5U_Thumb_V.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_1.5U_Thumb_V.stl",
       "sha256": "e748c7591ddc0c5440a4de82434c07e1c7d9e09d509fef1a42c7042b88f92357",
@@ -9786,7 +9787,7 @@
     },
     {
       "id": "choc_stem_choc_size_normal",
-      "label": "Choc · Normal",
+      "label": "Choc \u00b7 Normal",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_Normal.stl",
       "sha256": "2e4110f314d848bbacc23585e3002b648e5eb094501d98d206db821867381a53",
@@ -10970,7 +10971,7 @@
     },
     {
       "id": "choc_stem_choc_size_normal_homing",
-      "label": "Choc · Normal Homing",
+      "label": "Choc \u00b7 Normal Homing",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_Homing.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_Normal_Homing.stl",
       "sha256": "ef7c5c9940daf78d8a8fd95efc2a9772a37394e26b74d56319f4b5b7609ea441",
@@ -12154,7 +12155,7 @@
     },
     {
       "id": "choc_stem_choc_size_normal_tilted",
-      "label": "Choc · Normal Tilted",
+      "label": "Choc \u00b7 Normal Tilted",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal_Tilted.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_Normal_Tilted.stl",
       "sha256": "03fa50d76416d226904fab95c5a3ded3663f6b5bafaff695683d8fa7979ecf8d",
@@ -13314,7 +13315,7 @@
     },
     {
       "id": "choc_stem_choc_size_saddle",
-      "label": "Choc · Saddle",
+      "label": "Choc \u00b7 Saddle",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_Saddle.stl",
       "sha256": "53e3d75f5dd1bd60d82d617df20fdc05651ef21efb9464e8d5ee297e50b9667d",
@@ -14498,7 +14499,7 @@
     },
     {
       "id": "choc_stem_choc_size_saddle_homing",
-      "label": "Choc · Saddle Homing",
+      "label": "Choc \u00b7 Saddle Homing",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Homing.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_Saddle_Homing.stl",
       "sha256": "c399efe2a89ee1478254273e0a2bf2bcbaa2bdb57c1cb264390ee63f906c047a",
@@ -15682,7 +15683,7 @@
     },
     {
       "id": "choc_stem_choc_size_saddle_tilted",
-      "label": "Choc · Saddle Tilted",
+      "label": "Choc \u00b7 Saddle Tilted",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Saddle_Tilted.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_Saddle_Tilted.stl",
       "sha256": "59457a575470c5672c8c9d766a739fefab06dc1f082b34887287eb4f392b2f4f",
@@ -16842,7 +16843,7 @@
     },
     {
       "id": "choc_stem_choc_size_thumb",
-      "label": "Choc · Thumb",
+      "label": "Choc \u00b7 Thumb",
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Thumb.stl",
       "source": "STL/Choc Stem + Choc Size/Choc_Stem_Choc_Size_Thumb.stl",
       "sha256": "20e8239ce4836e22906220a39ae17a55e584107240a0b00571f4132b9e26054c",
@@ -18026,7 +18027,7 @@
     },
     {
       "id": "choc_stem_mx_size_normal_90deg",
-      "label": "MX · Normal 90deg",
+      "label": "MX \u00b7 Normal 90deg",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_90deg.stl",
       "source": "STL/Choc Stem + MX Size/90 deg Rotated/Choc_Stem_MX_Size_Normal_90deg.stl",
       "sha256": "724f857b14c97660fc11a745964e7445e4b0a160b6187b5228efd1e441dc085b",
@@ -18830,7 +18831,7 @@
     },
     {
       "id": "choc_stem_mx_size_normal_homing_90deg",
-      "label": "MX · Normal Homing 90deg",
+      "label": "MX \u00b7 Normal Homing 90deg",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_Homing_90deg.stl",
       "source": "STL/Choc Stem + MX Size/90 deg Rotated/Choc_Stem_MX_Size_Normal_Homing_90deg.stl",
       "sha256": "cbdede3fbc0ce215fe0f3b4821fcadbeb66d5f0d0c3a36b33e3a665004b553ae",
@@ -19634,7 +19635,7 @@
     },
     {
       "id": "choc_stem_mx_size_normal_tilted_90deg",
-      "label": "MX · Normal Tilted 90deg",
+      "label": "MX \u00b7 Normal Tilted 90deg",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_Tilted_90deg.stl",
       "source": "STL/Choc Stem + MX Size/90 deg Rotated/Choc_Stem_MX_Size_Normal_Tilted_90deg.stl",
       "sha256": "5261a017cdd9db33e605399986ac2acce60fecc41dd37a67745b2b4f2012a1fd",
@@ -20514,7 +20515,7 @@
     },
     {
       "id": "choc_stem_mx_size_saddle_90deg",
-      "label": "MX · Saddle 90deg",
+      "label": "MX \u00b7 Saddle 90deg",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_90deg.stl",
       "source": "STL/Choc Stem + MX Size/90 deg Rotated/Choc_Stem_MX_Size_Saddle_90deg.stl",
       "sha256": "05f9101d5d45c62d8b7b6904df7a1b6aaf13a8ac455a7b555d5e1e8ce6213a3b",
@@ -21318,7 +21319,7 @@
     },
     {
       "id": "choc_stem_mx_size_saddle_homing_90deg",
-      "label": "MX · Saddle Homing 90deg",
+      "label": "MX \u00b7 Saddle Homing 90deg",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_Homing_90deg.stl",
       "source": "STL/Choc Stem + MX Size/90 deg Rotated/Choc_Stem_MX_Size_Saddle_Homing_90deg.stl",
       "sha256": "946f1a996b59fff5d659bc4c3d4af6962fee3097cc4731fe884df844a7731743",
@@ -22122,7 +22123,7 @@
     },
     {
       "id": "choc_stem_mx_size_saddle_tilted_90deg",
-      "label": "MX · Saddle Tilted 90deg",
+      "label": "MX \u00b7 Saddle Tilted 90deg",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_Tilted_90deg.stl",
       "source": "STL/Choc Stem + MX Size/90 deg Rotated/Choc_Stem_MX_Size_Saddle_Tilted_90deg.stl",
       "sha256": "c5b623ff9a9df2470eaceaec34796ac2859cc4bd02e2ea130c8ccb9feeb30c26",
@@ -23002,7 +23003,7 @@
     },
     {
       "id": "choc_stem_mx_size_thumb_90deg",
-      "label": "MX · Thumb 90deg",
+      "label": "MX \u00b7 Thumb 90deg",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Thumb_90deg.stl",
       "source": "STL/Choc Stem + MX Size/90 deg Rotated/Choc_Stem_MX_Size_Thumb_90deg.stl",
       "sha256": "45884c2db33a15e3cf5b3c3aac6a5cf5c762d4529233709955738a4c0f0097ed",
@@ -23806,7 +23807,7 @@
     },
     {
       "id": "choc_stem_mx_size_1.5u_normal",
-      "label": "MX · 1.5U Normal",
+      "label": "MX \u00b7 1.5U Normal",
       "path": "keycaps/variants/Choc_Stem_MX_Size_1.5U_Normal.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_1.5U_Normal.stl",
       "sha256": "648782b2d1a6349846db4afe00fc6eff8a049976bc692def0e22112a4872b8bd",
@@ -24537,7 +24538,7 @@
     },
     {
       "id": "choc_stem_mx_size_1.5u_saddle_h",
-      "label": "MX · 1.5U Saddle H",
+      "label": "MX \u00b7 1.5U Saddle H",
       "path": "keycaps/variants/Choc_Stem_MX_Size_1.5U_Saddle_H.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_1.5U_Saddle_H.stl",
       "sha256": "8097a7af2ef2bcc7a15a1fc9bf7fc6df95ea608a10ea3eed75b9c0d23426cf3c",
@@ -25268,7 +25269,7 @@
     },
     {
       "id": "choc_stem_mx_size_1.5u_saddle_v",
-      "label": "MX · 1.5U Saddle V",
+      "label": "MX \u00b7 1.5U Saddle V",
       "path": "keycaps/variants/Choc_Stem_MX_Size_1.5U_Saddle_V.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_1.5U_Saddle_V.stl",
       "sha256": "e66033203c6e12672b89341c2e75c05d1abf23081649644e32f67a83d291c422",
@@ -25999,7 +26000,7 @@
     },
     {
       "id": "choc_stem_mx_size_1.5u_thumb_h",
-      "label": "MX · 1.5U Thumb H",
+      "label": "MX \u00b7 1.5U Thumb H",
       "path": "keycaps/variants/Choc_Stem_MX_Size_1.5U_Thumb_H.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_1.5U_Thumb_H.stl",
       "sha256": "90a1e697aea6ce2cf7939280f63671bed287d7093f7b515c172a32566c8de084",
@@ -26730,7 +26731,7 @@
     },
     {
       "id": "choc_stem_mx_size_1.5u_thumb_v",
-      "label": "MX · 1.5U Thumb V",
+      "label": "MX \u00b7 1.5U Thumb V",
       "path": "keycaps/variants/Choc_Stem_MX_Size_1.5U_Thumb_V.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_1.5U_Thumb_V.stl",
       "sha256": "300733a2a58b16b222acca385ace154601ac6f689d311c1f603e30a934e5748f",
@@ -27461,7 +27462,7 @@
     },
     {
       "id": "choc_stem_mx_size_normal",
-      "label": "MX · Normal",
+      "label": "MX \u00b7 Normal",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Normal.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_Normal.stl",
       "sha256": "1499d70bdd1ca0efd8c9ce50d8bd179a2ca85f17fc6af7f97105279015199712",
@@ -28265,7 +28266,7 @@
     },
     {
       "id": "choc_stem_mx_size_normal_homing",
-      "label": "MX · Normal Homing",
+      "label": "MX \u00b7 Normal Homing",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_Homing.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_Normal_Homing.stl",
       "sha256": "895d4cbb3db780da7e947b6ad035c0013799df066ee262721365c3724e8f3a98",
@@ -29069,7 +29070,7 @@
     },
     {
       "id": "choc_stem_mx_size_normal_tilted",
-      "label": "MX · Normal Tilted",
+      "label": "MX \u00b7 Normal Tilted",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Normal_Tilted.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_Normal_Tilted.stl",
       "sha256": "a6b0d6ade5f38eab16ad8b1dace8d658df87f4a255eb3f1de819ed2485757eb9",
@@ -29949,7 +29950,7 @@
     },
     {
       "id": "choc_stem_mx_size_saddle",
-      "label": "MX · Saddle",
+      "label": "MX \u00b7 Saddle",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_Saddle.stl",
       "sha256": "2ee598afe3835aa5d76888ced84a803769d492f7da9a83a557bfec4e967c5af0",
@@ -30753,7 +30754,7 @@
     },
     {
       "id": "choc_stem_mx_size_saddle_homing",
-      "label": "MX · Saddle Homing",
+      "label": "MX \u00b7 Saddle Homing",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_Homing.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_Saddle_Homing.stl",
       "sha256": "c57b1b8fa2a1ca25ffd2d1c5aaa23902fa50f39e6236a31d33aa3de1610b9f4c",
@@ -31557,7 +31558,7 @@
     },
     {
       "id": "choc_stem_mx_size_saddle_tilted",
-      "label": "MX · Saddle Tilted",
+      "label": "MX \u00b7 Saddle Tilted",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Saddle_Tilted.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_Saddle_Tilted.stl",
       "sha256": "d1c78001dbaa44784197fe71c1c9219ed1f433794646e1c48ca926317678a2b5",
@@ -32437,7 +32438,7 @@
     },
     {
       "id": "choc_stem_mx_size_thumb",
-      "label": "MX · Thumb",
+      "label": "MX \u00b7 Thumb",
       "path": "keycaps/variants/Choc_Stem_MX_Size_Thumb.stl",
       "source": "STL/Choc Stem + MX Size/Choc_Stem_MX_Size_Thumb.stl",
       "sha256": "046c67773c539c11883b248de156e4659890c90d6220c20f5f457ca717e540b6",
@@ -33248,195 +33249,205 @@
         "K01": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K02": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K03": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K04": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K05": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K11": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K12": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K13": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K14": {
           "variant": "choc_stem_choc_size_normal_homing",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K15": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K21": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K22": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K23": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K24": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K25": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K30": {
           "variant": "choc_stem_choc_size_thumb",
           "rotation_deg": 0,
-          "color": "#45967b"
+          "color": "#68422f"
         },
         "K31": {
           "variant": "choc_stem_choc_size_thumb",
           "rotation_deg": 0,
-          "color": "#45967b"
+          "color": "#b96732"
         },
         "K32": {
           "variant": "choc_stem_choc_size_thumb",
           "rotation_deg": 0,
-          "color": "#45967b"
+          "color": "#dfab50"
         }
       },
       "right": {
         "K01": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K02": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K03": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K04": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K05": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K11": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K12": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K13": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K14": {
           "variant": "choc_stem_choc_size_normal_homing",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K15": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K21": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K22": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K23": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K24": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K25": {
           "variant": "choc_stem_choc_size_normal",
           "rotation_deg": 0,
-          "color": "#e9dfc6"
+          "color": "#f2dfaf"
         },
         "K30": {
           "variant": "choc_stem_choc_size_thumb",
           "rotation_deg": 0,
-          "color": "#45967b"
+          "color": "#68422f"
         },
         "K31": {
           "variant": "choc_stem_choc_size_thumb",
           "rotation_deg": 0,
-          "color": "#45967b"
+          "color": "#b96732"
         },
         "K32": {
           "variant": "choc_stem_choc_size_thumb",
           "rotation_deg": 0,
-          "color": "#45967b"
+          "color": "#dfab50"
         }
       }
     },
     "frames": {
       "left": {
-        "style": "bevel",
-        "color": "#304d4e"
+        "style": "flan",
+        "color": "#f2dfaf",
+        "accents": {
+          "detail": "#68422f",
+          "accent": "#b96732",
+          "secondary": "#dfab50"
+        }
       },
       "right": {
-        "style": "bevel",
-        "color": "#304d4e"
+        "style": "flan",
+        "color": "#f2dfaf",
+        "accents": {
+          "detail": "#68422f",
+          "accent": "#b96732",
+          "secondary": "#dfab50"
+        }
       }
     },
     "batteries": {
@@ -33446,12 +33457,30 @@
     "cases": {
       "left": {
         "style": "level",
-        "cover": true
+        "cover": true,
+        "base_color": "#f2dfaf",
+        "plate_color": "#f2dfaf",
+        "match_frame": true
       },
       "right": {
         "style": "level",
-        "cover": true
+        "cover": true,
+        "base_color": "#f2dfaf",
+        "plate_color": "#f2dfaf",
+        "match_frame": true
       }
     }
+  },
+  "retired_frame_styles": {
+    "smooth": "flan",
+    "bevel": "flan",
+    "facet": "flan",
+    "handheld": "flan",
+    "tv": "flan",
+    "cyberpunk": "flan",
+    "cartridge": "flan",
+    "arcade": "flan",
+    "mecha": "flan",
+    "kintsugi": "flan"
   }
 }

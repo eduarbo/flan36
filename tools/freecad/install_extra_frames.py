@@ -1,8 +1,8 @@
 """Historical additive-roof installer; its command is retired.
 
-The current seven-style flush/stack recipe intentionally changes the original
+The current flush frame recipe intentionally changes the original
 frame geometry and therefore cannot satisfy this tool's append-only contract.
-Use install_slim_flush.py. Snapshot helpers remain available to existing imports.
+Use install_frame_collection.py. Snapshot helpers remain available to existing imports.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 import argparse

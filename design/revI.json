@@ -7382,14 +7382,14 @@
       "prototype_part": true,
       "bounds_mm": [
         111.0,
-        -67.00000000000001,
-        6.299999999999994,
+        -67.0,
+        6.299999999999996,
         135.0,
         -11.0,
         13.39
       ],
       "visuals": [],
-      "stl_sha256": "e06896d8b53a66e17b431da455f5cca182a6f70359dee8cab83e72a2ee93be80"
+      "stl_sha256": "490280581fdcf76ef651aca8be5f6e46bbcae8ae161f96d49dcbfa6a1839d5ed"
     },
     "left-pcb": {
       "object": "L_SlimPCBLeadNotch",
@@ -8061,13 +8061,13 @@
       "bounds_mm": [
         25.0,
         -67.0,
-        6.299999999999998,
+        6.299999999999995,
         49.0,
         -11.0,
         13.39
       ],
       "visuals": [],
-      "stl_sha256": "d29e95c73df0e6b4536eb4ebf05f74f074cd6396ae0c93458639f8bf60dcd0d4"
+      "stl_sha256": "5a87e59bdba6aae5d9e636c978e95a7cf96d9e44b9429e4a2cfdf4d6a6950c6c"
     },
     "right-pcb": {
       "object": "R_SlimPCBLeadNotch",
@@ -8238,7 +8238,7 @@
     },
     {
       "path": "tools/freecad/level_stack.py",
-      "sha256": "5b4e75f33f91a6cbdcd84c0209c5d2bce8f2ee54b4087a55eabc16c4b0bd7155"
+      "sha256": "a4c330c8a0acd789ad51e6a9a58023b3fd6d937cf14e35acbe880f069c4399cc"
     },
     {
       "path": "tools/freecad/install_level_stack.py",
@@ -8250,11 +8250,19 @@
     },
     {
       "path": "design/frame-finishes.json",
-      "sha256": "20b4888d29dd8f3af8450a6c80f5f9ae99649c2641cc74eb093850ba05f1b902"
+      "sha256": "b582b902f00e1a8d79fc1ce1483f7484fbdf1004e7f1e60c0270217cb338a4c1"
     },
     {
-      "path": "design/frame-extensions.json",
-      "sha256": "adece1c6c0dfe2c4ca36bc142add236710a20ee43b94a175fe2460e3df701be7"
+      "path": "design/frame-collection-workflow.json",
+      "sha256": "7a7896d1bc7a920464baef43119d2ea6ff46a3d3b6fd0ac9a135bd0778f9e924"
+    },
+    {
+      "path": "tools/build_frame_collection.py",
+      "sha256": "62840ac75a150def004c49c8840d5dd518c80d3c127526f3cf9f063d29125b97"
+    },
+    {
+      "path": "tools/freecad/install_frame_collection.py",
+      "sha256": "9ededed9bb347b30799d6922d668537db42e3ce4319be8150ea1daad62cb3004"
     },
     {
       "path": "design/slim-flush-workflow.json",
@@ -8262,7 +8270,7 @@
     },
     {
       "path": "tools/freecad/flush_frames.py",
-      "sha256": "82d880663bed2f69800f0ecf7bc0e564c32c8954d08a05f418b4edca71c7092c"
+      "sha256": "905b1e18d91dfe961c4de2ba9a9e4039051ed25450475deb104cabed301d109d"
     },
     {
       "path": "tools/freecad/slim_stack.py",
@@ -8274,11 +8282,11 @@
     },
     {
       "path": "tools/freecad/extra_frames.py",
-      "sha256": "588e1a7e8a2cb6dd278da8aa5ad9bdee4e0f7beca36ad2a50dcce842027a5de1"
+      "sha256": "9196ab47432608067bce66a3e26aa6034a7860f4ede7494e81e5360532a51009"
     },
     {
       "path": "tools/freecad/install_extra_frames.py",
-      "sha256": "c8e8415c0ca91cf03b89772b7b9d508764ddbf2c791be2c1866dcd1f2dfc0709"
+      "sha256": "785dee9d8dfca5cfbd3c3942cf2ef4379f47a8ff1951f7d317193427d718c708"
     },
     {
       "path": "tools/freecad/components.py",
@@ -8298,15 +8306,15 @@
     },
     {
       "path": "tools/frame_finishes.py",
-      "sha256": "10c1ef73e759b9bef7e9a25e3b506242633dbe86ed821b3a03c204d022a8b4b6"
+      "sha256": "826943355f831f1c933de0e02e8082c343f4ea47e482cab0751b48df0844606c"
     },
     {
       "path": "tools/keycap_config.py",
-      "sha256": "bfba35924ac6dee21d2cc7416daca7f7eed5893c3ae3c10c31b83315068a1ec0"
+      "sha256": "299b18fa827e69cf8ff9e6293d8a7eecc9983596950318da1d38e019c8bd5d8f"
     },
     {
       "path": "tools/freecad/configuration.py",
-      "sha256": "378775f2192dcb080495a182db18964024abdddcff5eef79f7881dcdf8f847d4"
+      "sha256": "f444aef98a8d7e2ae088cdc28ecde7e8c55c551f368d5b5ad380fafd48ca5a59"
     },
     {
       "path": "design/layout.json",
@@ -8322,7 +8330,7 @@
     },
     {
       "path": "keycaps/catalog.json",
-      "sha256": "c69b7c0bdbe38e40edcc53ef3383dfd54486e8e4660b9b790a1f655681205380"
+      "sha256": "d0722cadd295514f48de8c944435178410bc3e42035b45e9a591d8f87c31df57"
     },
     {
       "path": "design/revI-mounts.json",
@@ -8342,14 +8350,14 @@
     },
     {
       "path": "tools/freecad/build_revI.py",
-      "sha256": "318d35a49126ed6baf062c945ad3e8f025b686e5a9a9179472f5edc18c2ff971"
+      "sha256": "37d68494dd9c511855321854dfc77a38278a212cef96262d19e3db61d40341ec"
     },
     {
       "path": "tools/freecad/export_revI.py",
-      "sha256": "7aad1877f0469acc2bf87b4c01a35c4a8319cadf78824e09b583f21ee8d99ab3"
+      "sha256": "11bbc8d104daca9cda325b627693dcd4fcd23637f44e3bb4c9eb7fd9acbef640"
     }
   ],
-  "fcstd_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
+  "fcstd_sha256": "4e3531e9e955f1747e97178666e2cde1c1794896997bc44655188c986705d043",
   "identity_migration": {
     "baseline_commit": "819a01883b2faec3682ac457328bc361dc43e355",
     "method": "Only branding tokens in native Document.xml changed; shape and mesh members preserved byte for byte",
@@ -8358,659 +8366,969 @@
     "geometry_rebuilt": false
   },
   "frameVariants": {
-    "left-smooth": {
-      "stl": "left-frame-smooth.stl",
-      "step": "left-frame-smooth.step",
-      "material_parts": [],
-      "roof_mm": 13.39,
-      "color_construction": "single body"
-    },
-    "left-bevel": {
-      "stl": "left-frame-bevel.stl",
-      "step": "left-frame-bevel.step",
-      "material_parts": [],
-      "roof_mm": 13.39,
-      "color_construction": "single body"
-    },
-    "left-facet": {
-      "stl": "left-frame-facet.stl",
-      "step": "left-frame-facet.step",
-      "material_parts": [],
-      "roof_mm": 13.39,
-      "color_construction": "single body"
-    },
-    "left-handheld": {
-      "stl": "left-frame-handheld.stl",
-      "step": "left-frame-handheld.step",
+    "left-flan": {
+      "stl": "left-frame-flan.stl",
+      "step": "left-frame-flan.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "left-frame-handheld-body.stl",
-          "step": "left-frame-handheld-body.step",
-          "stl_sha256": "b8e870e9344cfe7d9725299a5e3d31a0ba9e16e95a56dfcd5361f0d1ad003125",
-          "step_sha256": "7e033c5af8eb2f52f8caccd36b539ab577e29d66978ed33c3c6ab84c8c34ac93",
-          "volume_mm3": 1951.6884783732648,
+          "stl": "left-frame-flan-body.stl",
+          "step": "left-frame-flan-body.step",
+          "stl_sha256": "d85e0453cdb06a02b787161e31fb89496671bec7c6a52fc92deda32822bb7d48",
+          "step_sha256": "cfb7903103f4d21ad23586442f8926b9e5536da6a33a552e1c88a8082e43a9ba",
+          "volume_mm3": 1841.4972685191753,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "left-frame-handheld-detail.stl",
-          "step": "left-frame-handheld-detail.step",
-          "stl_sha256": "300f442ac413b5d33a8349b0576b0618d2cb22310d27acb77758bd0d7886d542",
-          "step_sha256": "94ad21bf8ec9151c8dd78c47a75c4715432ae8a0617d4ee00a9c1047cce8d3ea",
-          "volume_mm3": 7.679999999999973,
-          "solids": 1
+          "stl": "left-frame-flan-detail.stl",
+          "step": "left-frame-flan-detail.step",
+          "stl_sha256": "e23d58aaac86e28349dc01df4be713b8c26c361ed450ee1d69aa041ebcb12c79",
+          "step_sha256": "abe8145f91694466ffbc0d1a4954d2dbde88fdb159edddbb1221ccadda0d54e1",
+          "volume_mm3": 38.99350751559297,
+          "solids": 3
         },
         {
           "role": "accent",
-          "stl": "left-frame-handheld-accent.stl",
-          "step": "left-frame-handheld-accent.step",
-          "stl_sha256": "b0ec8c7de8621f28971e3a145d30e6c02280cd0f44bfcf32fc92f9a90d48de50",
-          "step_sha256": "d5cf273963d6e9c844e7c9502af53fd313ade6b451951bafad3ffe6ba8bc48a8",
-          "volume_mm3": 5.789200825476146,
+          "stl": "left-frame-flan-accent.stl",
+          "step": "left-frame-flan-accent.step",
+          "stl_sha256": "9ed99430b078734a125684409d3d52e8693a65ef8bfc6a359830f70bbb592743",
+          "step_sha256": "30939fb64eb2a9f2f9566599ad92b23cd282832ec7db6da9892cecc3f4bc6b78",
+          "volume_mm3": 58.59936245625516,
           "solids": 2
         },
         {
           "role": "secondary",
-          "stl": "left-frame-handheld-secondary.stl",
-          "step": "left-frame-handheld-secondary.step",
-          "stl_sha256": "3f72921b7b18860d6433ec56c27e37773d79c0be53d75949d1a69a341824e125",
-          "step_sha256": "35561a813e8558143a018f47ca2b8f12370d63a93ce18e8cc432111ba019d6d2",
-          "volume_mm3": 2.759999999999997,
+          "stl": "left-frame-flan-secondary.stl",
+          "step": "left-frame-flan-secondary.step",
+          "stl_sha256": "01538d00e14eb26eedce4570c135e7c6adf8cba00370cf37d3fa48d3e3fc2763",
+          "step_sha256": "bd4cfb4b1b088e4b3acc90338fc360afe0a089745530c4e62ea1704d56106769",
+          "volume_mm3": 28.8275407077188,
+          "solids": 1
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-tape": {
+      "stl": "left-frame-tape.stl",
+      "step": "left-frame-tape.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-tape-body.stl",
+          "step": "left-frame-tape-body.step",
+          "stl_sha256": "e34456ef24e8506a626f68dff03f17bfd6ceb07ff841ebf4c50023dfb80d832d",
+          "step_sha256": "93fdbe019a2e74c0e00cfc7a73991cac632f6370dfa1acc90dc809381e1d0868",
+          "volume_mm3": 1839.2116345100922,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-tape-detail.stl",
+          "step": "left-frame-tape-detail.step",
+          "stl_sha256": "bdc625c4bff6a84d249cc764f4aa59138ddcf839cb67efda58e8b7aab0c3d018",
+          "step_sha256": "8f77f767a92548bd3eb222ba59701c8a3afcbacbf9c30b664444652a7f4ac9f5",
+          "volume_mm3": 83.85995479997737,
+          "solids": 5
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-tape-accent.stl",
+          "step": "left-frame-tape-accent.step",
+          "stl_sha256": "5effb7fadeb1837e6a6763b6840be58aa10998023e7bea6030e61da83a1ac10e",
+          "step_sha256": "8b6aeb8b98166d75ab7ec7eb16faaf66f180eae45adc807efd03ccca8cbb592b",
+          "volume_mm3": 29.22591142546265,
+          "solids": 2
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-tape-secondary.stl",
+          "step": "left-frame-tape-secondary.step",
+          "stl_sha256": "c981d6d1425e82f5e64e5d6230d0a946481106daa1987921c4c5f0a3f2a9b7c0",
+          "step_sha256": "f048c4610336b970973f700ed33ecf47f1d5371ce9492f9999ab8868da34d696",
+          "volume_mm3": 15.620178463207576,
+          "solids": 2
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-orbit": {
+      "stl": "left-frame-orbit.stl",
+      "step": "left-frame-orbit.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-orbit-body.stl",
+          "step": "left-frame-orbit-body.step",
+          "stl_sha256": "737fc2d567a0e2806df0891a6c0be37fceda7aa42a455f4e533216273ae59d43",
+          "step_sha256": "8b5a9d55da31d8b6264c3f1d3140f18341015f6652b2adbad30db388329f6966",
+          "volume_mm3": 1899.5679183843674,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-orbit-detail.stl",
+          "step": "left-frame-orbit-detail.step",
+          "stl_sha256": "e91f6c282035e9260830ae821dbcc1c49edb02fe5dc7d8c3ec376813a1fb143e",
+          "step_sha256": "6cb16006543ab0ae0fc7d6ac7d626b401c35f1f5877a5804a4309c364fc0a178",
+          "volume_mm3": 37.53912510590308,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-orbit-accent.stl",
+          "step": "left-frame-orbit-accent.step",
+          "stl_sha256": "72424ddad2dc8aed59f2ffa8e6f82f5a2130c9d484cd5ae4b30d201652e3f97e",
+          "step_sha256": "7ca852d6ae81a1ecfebfcfa3b0dc627365a32d16e40403aaf627391344fcf94d",
+          "volume_mm3": 18.347202440815394,
+          "solids": 1
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-orbit-secondary.stl",
+          "step": "left-frame-orbit-secondary.step",
+          "stl_sha256": "e4c9dfe799958612122ff695a9227af14cec092405a979a278321641388f3de6",
+          "step_sha256": "a976942759068e806146f4aa7f5246218314e8610b170d0f9d12868e7db3df4b",
+          "volume_mm3": 12.463433267653416,
+          "solids": 2
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-manga": {
+      "stl": "left-frame-manga.stl",
+      "step": "left-frame-manga.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-manga-body.stl",
+          "step": "left-frame-manga-body.step",
+          "stl_sha256": "8a43b198512c4e076a8a405647f4a6ad4689eba4cabe6995684bc71a30c58b4b",
+          "step_sha256": "737329b950e54850271c2440cff44da19f37a2a655d94a429b1829d38f599a63",
+          "volume_mm3": 1861.0216346263455,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-manga-detail.stl",
+          "step": "left-frame-manga-detail.step",
+          "stl_sha256": "14fa942b15139b2a2a8a9c7953893af6dd61b8940e0d8ef453cc2c66f2ed594b",
+          "step_sha256": "9480f40a11a0491c35e9faf907e1fd9c2997f061e492430105c441c93e69d020",
+          "volume_mm3": 58.510329703007976,
+          "solids": 5
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-manga-accent.stl",
+          "step": "left-frame-manga-accent.step",
+          "stl_sha256": "97fea5e8f9478d8e16b721d0debc12e26f4952ad2b9caf0213762f1a62cf9476",
+          "step_sha256": "ab35b3a132310cc3578eea0224e14366c31ec16e87fc3981b1ff189dbce6c734",
+          "volume_mm3": 44.61580368508007,
+          "solids": 1
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-manga-secondary.stl",
+          "step": "left-frame-manga-secondary.step",
+          "stl_sha256": "0b8ad1201233e0f735ec3820bc3b250ae858288b3e0ea55b876e974c7e41f68d",
+          "step_sha256": "5e01d3a441bbd6f1867c22bf4ce068403c45a8c1ffc69bf5599166d4aad0495d",
+          "volume_mm3": 3.769911184307755,
           "solids": 3
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "left-tv": {
-      "stl": "left-frame-tv.stl",
-      "step": "left-frame-tv.step",
+    "left-talavera": {
+      "stl": "left-frame-talavera.stl",
+      "step": "left-frame-talavera.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "left-frame-tv-body.stl",
-          "step": "left-frame-tv-body.step",
-          "stl_sha256": "7167d3d79975e0db0d8b85c52dce57fee12d33b1a430f555177bd011b041ca5d",
-          "step_sha256": "00dc6a03c14439c8107eeab9a246ef5d90f0a57e993d03136aba8fbeff87b343",
-          "volume_mm3": 1927.8891959838347,
+          "stl": "left-frame-talavera-body.stl",
+          "step": "left-frame-talavera-body.step",
+          "stl_sha256": "05ecefbb4853b6241e6287850789bdbd09c36081adf97af3e7b4e7e0cde3efe4",
+          "step_sha256": "7543ae0f10a95fc23c27abe792c92635212f2ef9b3f0110a88da6a117ce43167",
+          "volume_mm3": 1895.0336544095628,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "left-frame-tv-detail.stl",
-          "step": "left-frame-tv-detail.step",
-          "stl_sha256": "977d2aac1cc1abc520c377f2526acb87538ec630db1e0235fbd3472df5617a64",
-          "step_sha256": "81e96226185308d1322c2bd71018033fa52a7b0a663cda06c22d5d5e65536609",
-          "volume_mm3": 28.560000000000322,
-          "solids": 2
+          "stl": "left-frame-talavera-detail.stl",
+          "step": "left-frame-talavera-detail.step",
+          "stl_sha256": "b7fda439eab8fd7381fb5c891fbdb8c03cbcfeb9deed41e54d3599440f85cb37",
+          "step_sha256": "7e2c5e41a696ab448b909c8246e6fe96b7ce5b49cdac568150b747f6e828e779",
+          "volume_mm3": 55.7267949837193,
+          "solids": 6
         },
         {
           "role": "accent",
-          "stl": "left-frame-tv-accent.stl",
-          "step": "left-frame-tv-accent.step",
-          "stl_sha256": "711bb39aa38d743824eec6d11e111067c302e06cf3416eac93335896f3037cf4",
-          "step_sha256": "c8f315267cd2d99b60ab088babfc6cc2de8a991b9be8ff7b2c6d9558e35f98e8",
-          "volume_mm3": 5.7964832149056615,
-          "solids": 1
+          "stl": "left-frame-talavera-accent.stl",
+          "step": "left-frame-talavera-accent.step",
+          "stl_sha256": "c0fdc217b7bd7ea71f68a6d58560562720da68faabfaa18ac607b68b35e86b59",
+          "step_sha256": "db6e823746e1f8dab486586be510593a9c6a1769dda7e1c7634e27a007504ece",
+          "volume_mm3": 12.533229805458793,
+          "solids": 2
         },
         {
           "role": "secondary",
-          "stl": "left-frame-tv-secondary.stl",
-          "step": "left-frame-tv-secondary.step",
-          "stl_sha256": "7425500aa2d70b72c59d1aaa74677d1bccda1396a57a5d6c4559a975adaf8d79",
-          "step_sha256": "27cf53381a62306651ef17547c337d690581e431d5dd0dd10d8d6db025f0f894",
-          "volume_mm3": 5.671999999999957,
+          "stl": "left-frame-talavera-secondary.stl",
+          "step": "left-frame-talavera-secondary.step",
+          "stl_sha256": "66ea0e5ed3f84a8d27886fd5bdbd7ab91313857e4aec7d56a6b4cc4458928d1d",
+          "step_sha256": "b2ff1805d00a61786818f93f73773062e074057d1ffe9de4aa24f3a1d52a2ac9",
+          "volume_mm3": 4.624000000000008,
+          "solids": 2
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-gameboy": {
+      "stl": "left-frame-gameboy.stl",
+      "step": "left-frame-gameboy.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-gameboy-body.stl",
+          "step": "left-frame-gameboy-body.step",
+          "stl_sha256": "d57b837bc83156347c853b9a1641cabe195f1e783461db0ac6200932bb1c8b7b",
+          "step_sha256": "fb773193910a3d6a08b5557066794a0a5ebad62d143906ff3aaeca6a32bd8a64",
+          "volume_mm3": 1910.2275056174783,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-gameboy-detail.stl",
+          "step": "left-frame-gameboy-detail.step",
+          "stl_sha256": "435f668db73f4e0142216c9641764d1850ca4f10d5f47e90d1cbb93b289e4b28",
+          "step_sha256": "341da769a4d951a6ea743050162f51533781eb7391ba0d5172ddcb872befcaa5",
+          "volume_mm3": 43.50692424652202,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-gameboy-accent.stl",
+          "step": "left-frame-gameboy-accent.step",
+          "stl_sha256": "3e501bdc84e48713b38046e5f17967deb3ef8b367658283b047f443b8aa8b27e",
+          "step_sha256": "d12e3ebeb4c615e7d44b8b1a6c4930a5f8123098947cb351c7134fdb92e666d9",
+          "volume_mm3": 8.111276162018049,
+          "solids": 2
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-gameboy-secondary.stl",
+          "step": "left-frame-gameboy-secondary.step",
+          "stl_sha256": "1e9be31cf4c33c839f4797015f174d17ef8b76a613209384732b6af418a40769",
+          "step_sha256": "6769716ae533175f40bfaa71f1aa36e4c992727ba8718c4c1255acfacf50c733",
+          "volume_mm3": 6.071973172721717,
+          "solids": 5
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-nes": {
+      "stl": "left-frame-nes.stl",
+      "step": "left-frame-nes.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-nes-body.stl",
+          "step": "left-frame-nes-body.step",
+          "stl_sha256": "4a528d47dc48e6f0716a34c0a3bb1c94111066e1f206cfc01197845ffe479cf8",
+          "step_sha256": "cbd35c55801d8045c775440c558767ce711430f2f88dd33c7d8d62d3ad729fa2",
+          "volume_mm3": 1839.7272722140633,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-nes-detail.stl",
+          "step": "left-frame-nes-detail.step",
+          "stl_sha256": "5201b741a3af2ba4473ae698238e6f91afacdac2a8f47738e03a64ebeabd32b5",
+          "step_sha256": "03eb1442290d34b0b0f9a61247c7b1490381576d086557b82c75af103109f151",
+          "volume_mm3": 94.73139882657348,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-nes-accent.stl",
+          "step": "left-frame-nes-accent.step",
+          "stl_sha256": "5dbbbe185b210a38f8fc215599582aae8ae4a407555fd11b167765b53bf90a1c",
+          "step_sha256": "30c3ea3f98378a5fef82928abb53e6824d49322d3e9a98727179967ba179ea85",
+          "volume_mm3": 11.83900815810475,
+          "solids": 3
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-nes-secondary.stl",
+          "step": "left-frame-nes-secondary.step",
+          "stl_sha256": "e772b2e1cf750dd53a7444c406b896267a9d65625fd0075ee080e52ffdeba392",
+          "step_sha256": "c2db0d9509fa2bf5033cb48914632929fbf2fdabf874075247f003332dc35f1e",
+          "volume_mm3": 21.620000000000125,
+          "solids": 3
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "left-snes": {
+      "stl": "left-frame-snes.stl",
+      "step": "left-frame-snes.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "left-frame-snes-body.stl",
+          "step": "left-frame-snes-body.step",
+          "stl_sha256": "a9ad3e48b137a5d288afde74f7755a25caca73c90ec6f44f80b6171d20e3e9f6",
+          "step_sha256": "2ce183d553818bdb546851ccd47256bb9d6afc025e835a25797905199a2b497d",
+          "volume_mm3": 1898.5204592681873,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "left-frame-snes-detail.stl",
+          "step": "left-frame-snes-detail.step",
+          "stl_sha256": "efe768d8c6efff0de5643fc5aedbb6124e75df6541845a3d70f1ad7612e2d33d",
+          "step_sha256": "8ef544f68990cdac49ed0024b44699e2dedfc1862f2de0cf05e1743bfebd9e06",
+          "volume_mm3": 41.85757419822132,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "left-frame-snes-accent.stl",
+          "step": "left-frame-snes-accent.step",
+          "stl_sha256": "b1608dd23c036d80d0f00dead289cd81d735533af821b1123825373872b354d8",
+          "step_sha256": "97c1f12d448c36b9b756e03f9a1ba0f6ca2ecdb5e43d0c6ef5901b1c3a705909",
+          "volume_mm3": 12.099025860954464,
+          "solids": 3
+        },
+        {
+          "role": "secondary",
+          "stl": "left-frame-snes-secondary.stl",
+          "step": "left-frame-snes-secondary.step",
+          "stl_sha256": "3537fb3c46335d583427d6d46fc915e1a00390440d1d3af6afff4727f33b5dec",
+          "step_sha256": "4ad188c00beffb3644a7c764cfe8e15bb1241abb379a0a3aa481808a247e1e48",
+          "volume_mm3": 15.440619871377939,
           "solids": 4
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "left-cyberpunk": {
-      "stl": "left-frame-cyberpunk.stl",
-      "step": "left-frame-cyberpunk.step",
+    "left-phone": {
+      "stl": "left-frame-phone.stl",
+      "step": "left-frame-phone.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "left-frame-cyberpunk-body.stl",
-          "step": "left-frame-cyberpunk-body.step",
-          "stl_sha256": "ccd70bcffd097e349226f284c38a32bbebf3c74a5a3d3aa6af8717cb3960ec71",
-          "step_sha256": "834a0c0d41befadd7695362eb73704ab929861b7f7fbe7c4058304fe64225e1f",
-          "volume_mm3": 1952.3530421373034,
+          "stl": "left-frame-phone-body.stl",
+          "step": "left-frame-phone-body.step",
+          "stl_sha256": "08c624227d91835bb05968065ae64361ed4483e92d8ae6ef939a2be27e28972b",
+          "step_sha256": "a7cc68edee34c330043137f73d04e7a85f0d38c16f0c4f3514794a674796f52f",
+          "volume_mm3": 1893.5131191948187,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "left-frame-cyberpunk-detail.stl",
-          "step": "left-frame-cyberpunk-detail.step",
-          "stl_sha256": "d8c30df81d385d15b8945e4c4cdf4987c001177a011f41fa40c66d57c6d53a7a",
-          "step_sha256": "63fd5f4dcad345be38aac7fdb7ca76f2c69183c825e5a9bac68e70d23ef9721d",
-          "volume_mm3": 6.0959999999999415,
-          "solids": 3
+          "stl": "left-frame-phone-detail.stl",
+          "step": "left-frame-phone-detail.step",
+          "stl_sha256": "4c1e3fb247aa3624329cda9a442554ec94b29dfe1656fc3c7b5dc7b48f03f394",
+          "step_sha256": "73129d5986ab6a62e7756e6ecdc806e9ba12990869fa54a7fe53132d8a18200f",
+          "volume_mm3": 67.34619615344906,
+          "solids": 13
         },
         {
           "role": "accent",
-          "stl": "left-frame-cyberpunk-accent.stl",
-          "step": "left-frame-cyberpunk-accent.step",
-          "stl_sha256": "0a7986ca5b1328fea76b2755554d40719d7c6b4caaf48539b470343d5131818c",
-          "step_sha256": "74157a5d8bb5d5004114d84e22d3cd09bfdab0e21f76c0376183e067133e5de1",
-          "volume_mm3": 3.8880000000000274,
+          "stl": "left-frame-phone-accent.stl",
+          "step": "left-frame-phone-accent.step",
+          "stl_sha256": "9e3a4e13cd012f2cdf68d897208709c8dfc49e828e44271972d5e8f6365f7242",
+          "step_sha256": "caffed7a4cc06312f02a70f10ca554d118b72fc301541f5ddfb7915cc2874069",
+          "volume_mm3": 2.506477796076944,
           "solids": 1
         },
         {
           "role": "secondary",
-          "stl": "left-frame-cyberpunk-secondary.stl",
-          "step": "left-frame-cyberpunk-secondary.step",
-          "stl_sha256": "3d1d12101545aa913a678b138de46ea1e34d32046057298a76e76aec8f3ccd91",
-          "step_sha256": "bd5c834a5de39b47f766069b6734de10c9544a91fa71a4192e45afce13688666",
-          "volume_mm3": 5.58063706143592,
-          "solids": 2
+          "stl": "left-frame-phone-secondary.stl",
+          "step": "left-frame-phone-secondary.step",
+          "stl_sha256": "bb2c55f769c9884d022dbc43cbc3783553c01982caff3404df514caf07dd7b3f",
+          "step_sha256": "599aad750a5ce74e643af8d3406c35fd6a1c7712b805e105cf2e5033f5c0bfd4",
+          "volume_mm3": 4.551886054393978,
+          "solids": 1
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "left-cartridge": {
-      "stl": "left-frame-cartridge.stl",
-      "step": "left-frame-cartridge.step",
+    "left-walkman": {
+      "stl": "left-frame-walkman.stl",
+      "step": "left-frame-walkman.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "left-frame-cartridge-body.stl",
-          "step": "left-frame-cartridge-body.step",
-          "stl_sha256": "a6d2d01dc4ebc28e9cb2de45899d94e9e8a1b30546e541064f5b1f7c05095083",
-          "step_sha256": "3dc97097b642d01515cf14058a0f17f27f6c467bef802938cbd207fd8905b0e7",
-          "volume_mm3": 1863.7769291987386,
+          "stl": "left-frame-walkman-body.stl",
+          "step": "left-frame-walkman-body.step",
+          "stl_sha256": "1cafc228a59564ed2b1cffdc2bb8961be617a2b14bea0077ae38dbc45b290df4",
+          "step_sha256": "0a46c8aa074e4784b8ed57bf5b7c3e6c32c7ac0916b719e36178f2d905445872",
+          "volume_mm3": 1865.780822293185,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "left-frame-cartridge-detail.stl",
-          "step": "left-frame-cartridge-detail.step",
-          "stl_sha256": "45ae2ff0f9c776c85d4a5fa7d21452805e640e5bd92f9548e67be19f30c68999",
-          "step_sha256": "69265272bcba1d3eed371e39d863b33445c8a158dc700f00c28cf4acd0ab8527",
-          "volume_mm3": 68.5327500000003,
-          "solids": 3
-        },
-        {
-          "role": "accent",
-          "stl": "left-frame-cartridge-accent.stl",
-          "step": "left-frame-cartridge-accent.step",
-          "stl_sha256": "25d5d92e0843a035df390935d46a50876ffb7b311e2cd6f72d821ecca7d5d4f3",
-          "step_sha256": "5ddb1685a291436bf40a6bcee2fae5b7e2b5a4a5befdc0e2406d52bc344e7e7a",
-          "volume_mm3": 13.72000000000006,
+          "stl": "left-frame-walkman-detail.stl",
+          "step": "left-frame-walkman-detail.step",
+          "stl_sha256": "1276d7d1b9b29db40a73aee1c1b14ba2c7d03dc5c885d393b13a87316997159f",
+          "step_sha256": "c807a9d76614ef83c749d954bc3b3b6c7a36d9b6a91add003ce8ce96460a768e",
+          "volume_mm3": 54.99267234655806,
           "solids": 7
         },
         {
+          "role": "accent",
+          "stl": "left-frame-walkman-accent.stl",
+          "step": "left-frame-walkman-accent.step",
+          "stl_sha256": "75ee5838bc778d0f92c8dd375f88253d9b7a43f8f5509b603667e4f733b5fca5",
+          "step_sha256": "fcd01125f961d0583ac56d4b4676e38add5057a94eb6a16350b1f6a225c9a821",
+          "volume_mm3": 42.715122629166814,
+          "solids": 2
+        },
+        {
           "role": "secondary",
-          "stl": "left-frame-cartridge-secondary.stl",
-          "step": "left-frame-cartridge-secondary.step",
-          "stl_sha256": "78ee273b02f880e719493f2f8ad939b0c7e7b022636c2073744ac1543aed76e6",
-          "step_sha256": "8d4ceae5a84796da1264c5f7d4e9aab916df9058e66d952ee1d7ba2434a712fd",
-          "volume_mm3": 21.887999999999987,
-          "solids": 1
+          "stl": "left-frame-walkman-secondary.stl",
+          "step": "left-frame-walkman-secondary.step",
+          "stl_sha256": "c453edc5ef1abef3b0fd5791ae51f4dd7d1b861a18487653da33e6033eb3453b",
+          "step_sha256": "f0766a0221ea313c1939fc5d6669d7140129cc214c015886943e49a6e05bac40",
+          "volume_mm3": 4.429061929829751,
+          "solids": 2
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "left-arcade": {
-      "stl": "left-frame-arcade.stl",
-      "step": "left-frame-arcade.step",
+    "left-ipod": {
+      "stl": "left-frame-ipod.stl",
+      "step": "left-frame-ipod.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "left-frame-arcade-body.stl",
-          "step": "left-frame-arcade-body.step",
-          "stl_sha256": "0da8e599c4a49b41b967adea8a7863e5e5be92105000f9213abfae8fc4e547fa",
-          "step_sha256": "ff036dbffb74bf0c20ec85cde497bc80f08d1dd0a78e9fdb57e0c47ee279b093",
-          "volume_mm3": 1897.6195038614494,
+          "stl": "left-frame-ipod-body.stl",
+          "step": "left-frame-ipod-body.step",
+          "stl_sha256": "0e7dde99bd6bfabfa3696b33e8433828a0c481520d22932fcb7be5202dff92c4",
+          "step_sha256": "0fe9d9ef1bb1d5d8208fcdf207d06de86b26bbc60c1b8b2458cb894e4fcd39c1",
+          "volume_mm3": 1901.5890628794089,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "left-frame-arcade-detail.stl",
-          "step": "left-frame-arcade-detail.step",
-          "stl_sha256": "32ed619b4a477af1f837c768bdcfe833ef2c66577fb46e0a16d49d3534efc266",
-          "step_sha256": "ef5c84a98a899f6bd83216772eae361675719b4621b58278c333341f07b3790d",
-          "volume_mm3": 50.60800000000024,
-          "solids": 9
+          "stl": "left-frame-ipod-detail.stl",
+          "step": "left-frame-ipod-detail.step",
+          "stl_sha256": "15aae1038f6f2e16a6bbf1c65baee5abbc8ac6992b2486f6b3ed882fd1571e73",
+          "step_sha256": "b55ccf64edeeab3a8bcb61fe2fdd62b62eb98ad3cf4e9e79fa2216ff1272634b",
+          "volume_mm3": 33.14516763682626,
+          "solids": 2
         },
         {
           "role": "accent",
-          "stl": "left-frame-arcade-accent.stl",
-          "step": "left-frame-arcade-accent.step",
-          "stl_sha256": "ebf6d9c2fb542b3778e36bd38364accb1d5e0898c5c307e08a977086861dd93e",
-          "step_sha256": "7225c33a47d0a72e5c734fe7b3213e398af68185728ce37e75156cbf9e662666",
-          "volume_mm3": 8.170393810960165,
-          "solids": 3
+          "stl": "left-frame-ipod-accent.stl",
+          "step": "left-frame-ipod-accent.step",
+          "stl_sha256": "3e6b94bcbaaf93cc754ca3ed880f4643c0a5730fef80ebddff587397161544d5",
+          "step_sha256": "e01c805927ac3af9c5793060cd142e5197bd4b49d8a1f740eba1350791d3ae52",
+          "volume_mm3": 24.984935963040353,
+          "solids": 1
         },
         {
           "role": "secondary",
-          "stl": "left-frame-arcade-secondary.stl",
-          "step": "left-frame-arcade-secondary.step",
-          "stl_sha256": "f1e60143d94e1b749e693d70dec86c099a1ca039098ebce30abd36402d04ab94",
-          "step_sha256": "f6325c3ac972e8d3b6b90a7e7a7db4436dcf81535c7d44a04aa2b766b10865b4",
-          "volume_mm3": 11.519781526331077,
-          "solids": 4
+          "stl": "left-frame-ipod-secondary.stl",
+          "step": "left-frame-ipod-secondary.step",
+          "stl_sha256": "f39abca9de4ac5e4b29415864e4261a55ffc6e6c19dea24a2a9a9ce6ba53453c",
+          "step_sha256": "55725045557f8257384828dca774282f39ca1172b4881b1af0f484a7b3f7794e",
+          "volume_mm3": 8.19851271946678,
+          "solids": 2
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "left-mecha": {
-      "stl": "left-frame-mecha.stl",
-      "step": "left-frame-mecha.step",
+    "right-flan": {
+      "stl": "right-frame-flan.stl",
+      "step": "right-frame-flan.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "left-frame-mecha-body.stl",
-          "step": "left-frame-mecha-body.step",
-          "stl_sha256": "54e036f4df0fc22a922cc5eb4d03c49a124ed05af2447065a7038ae392a0adfd",
-          "step_sha256": "7a00926d85cf95ba9949b9ed7b010e507e5768f0c118124211ed95d0bb48d5c7",
-          "volume_mm3": 1847.7002485708053,
+          "stl": "right-frame-flan-body.stl",
+          "step": "right-frame-flan-body.step",
+          "stl_sha256": "3d1ffa44459f065f018c8f81980fb61ff3e61190c9327d790fb63ba65b99b582",
+          "step_sha256": "15600c83d93ceaa9578a0f229ab85f87c20df4990745bf3c49231d7a4ca6819e",
+          "volume_mm3": 1841.4972685191779,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "left-frame-mecha-detail.stl",
-          "step": "left-frame-mecha-detail.step",
-          "stl_sha256": "26ccc479234f1f4d5e469420467a83035f572f9ea340ce1e84b688201d4f47da",
-          "step_sha256": "3212f355bfa51e4fc851cdab4bc3491a5f1fc9d285ee3f37015b63dea45280fa",
-          "volume_mm3": 100.97796666666675,
+          "stl": "right-frame-flan-detail.stl",
+          "step": "right-frame-flan-detail.step",
+          "stl_sha256": "f4df9bf521ae95bf00b39d11eb0cfe1e740ead4fef40765b593f5cc945cebc98",
+          "step_sha256": "a391413be92a308976b7e86417c288626ccd1f28e8bfc9c10e697366f56badc7",
+          "volume_mm3": 38.9935075155929,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-flan-accent.stl",
+          "step": "right-frame-flan-accent.step",
+          "stl_sha256": "24dffde341c559549ff50deefa4c005fe3a131a6c5ef3f14fbd368573e231716",
+          "step_sha256": "4e452c9b024be3ad5cbd6fa8f5ee87cd5aab9e84101c6b5d643ba452bb57c878",
+          "volume_mm3": 58.59936245625499,
+          "solids": 2
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-flan-secondary.stl",
+          "step": "right-frame-flan-secondary.step",
+          "stl_sha256": "e76a6d6b95cce400fa9736ffdfa5949112835f71ad578475a191af765dd1da01",
+          "step_sha256": "5887e65600b4ae4d2cf617338c546621099095ca0a319808994de22f6bb60e8e",
+          "volume_mm3": 28.827540707718814,
+          "solids": 1
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-tape": {
+      "stl": "right-frame-tape.stl",
+      "step": "right-frame-tape.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-tape-body.stl",
+          "step": "right-frame-tape-body.step",
+          "stl_sha256": "84a61dee58379bf545b5d899a5dd2d7eb49f2e23371256300e35775d7f89a7ee",
+          "step_sha256": "7146a2f5e8472efd54027fc3545191f220bc2a7fd31f314f5e4f594704e08c14",
+          "volume_mm3": 1839.211634510095,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-tape-detail.stl",
+          "step": "right-frame-tape-detail.step",
+          "stl_sha256": "ec5a54075a2844bee47ba6d063f3f8214fac0a1c01a64b98df3c351ff30c9191",
+          "step_sha256": "4486f23fc493b4fce6429f88b4d306a3e83cbd9c31d1a8aad0f80e431e0beea4",
+          "volume_mm3": 83.85995479997742,
+          "solids": 5
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-tape-accent.stl",
+          "step": "right-frame-tape-accent.step",
+          "stl_sha256": "8a45bc987d526ead952a1aa0f7158d4cd1b007c03438b58ebe99841882375687",
+          "step_sha256": "3ecdff0a3f197e6224e2b705186bba96bb58455159ab55494debec43e0b6c328",
+          "volume_mm3": 29.22591142546256,
+          "solids": 2
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-tape-secondary.stl",
+          "step": "right-frame-tape-secondary.step",
+          "stl_sha256": "7dd513cf971aefcadfa35b44903378b0a4ac63ff2cafc5f68306160dcb469320",
+          "step_sha256": "4e83b6b2449a2dd7128323da5ae6f2c343953a00d999e542424abc11b24841f1",
+          "volume_mm3": 15.62017846320752,
+          "solids": 2
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-orbit": {
+      "stl": "right-frame-orbit.stl",
+      "step": "right-frame-orbit.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-orbit-body.stl",
+          "step": "right-frame-orbit-body.step",
+          "stl_sha256": "c7666eb1ec1e4e937330c48b6154b580886943f258b0bcfa48d92afe875f9c47",
+          "step_sha256": "ecc350f4ab4c192afa4cd7497d0808c01576e1daf1b0e75fa00b3d073d184bed",
+          "volume_mm3": 1899.5679183843718,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-orbit-detail.stl",
+          "step": "right-frame-orbit-detail.step",
+          "stl_sha256": "fab847370e10bcb9ba99cb551090bd5162179824b40b38d04d9531f24d6bca8b",
+          "step_sha256": "59d1858101e6dd2ce794f4e343e5d88def2daec4c63ef8d108910918e82f6df5",
+          "volume_mm3": 37.539125105903096,
+          "solids": 3
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-orbit-accent.stl",
+          "step": "right-frame-orbit-accent.step",
+          "stl_sha256": "ce8e2717498aff3e62d72379ea8a7e7d02d079ff204deb1c54705a1a54c27e1d",
+          "step_sha256": "d823805b2df4d243703dfb0876caa4b4f5bf465febbd1ab44328e388b38ddd77",
+          "volume_mm3": 18.34720244081541,
+          "solids": 1
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-orbit-secondary.stl",
+          "step": "right-frame-orbit-secondary.step",
+          "stl_sha256": "899227a13bff745a075e15cc6f3e49ef7e25fd71a4bfbcf1315bb006db680197",
+          "step_sha256": "f95287d9b34b0e5b97f708542bd0afff7778d00ec8d4ccf139e494cc65d73748",
+          "volume_mm3": 12.463433267653398,
+          "solids": 2
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-manga": {
+      "stl": "right-frame-manga.stl",
+      "step": "right-frame-manga.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-manga-body.stl",
+          "step": "right-frame-manga-body.step",
+          "stl_sha256": "922dbc58bed057388727842a39d4e76f87d0ef15503d860c0e5d873908a4b69a",
+          "step_sha256": "6ec73bae95b646ead2c0b96cb151994df7e0ccdf15f7d10200bc297a6519bfd2",
+          "volume_mm3": 1861.0216346263464,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-manga-detail.stl",
+          "step": "right-frame-manga-detail.step",
+          "stl_sha256": "7721b83b7a5d414753de6809744bda6dfe3a87880ab82df3d3a67b084d303344",
+          "step_sha256": "b6ba353a2be8129ea0afef461c4b5e8465d2426ff979e13a89977439ca4c53fd",
+          "volume_mm3": 58.510329703008146,
+          "solids": 5
+        },
+        {
+          "role": "accent",
+          "stl": "right-frame-manga-accent.stl",
+          "step": "right-frame-manga-accent.step",
+          "stl_sha256": "fa780a2a913995d50e4cad41bb55b48a73d04fe62566010b7bd70360667fbc5b",
+          "step_sha256": "1fe3ba7ebacd336423ad4b86f04a29e60ff4bb9f982e41da76e9639be339da78",
+          "volume_mm3": 44.61580368508003,
+          "solids": 1
+        },
+        {
+          "role": "secondary",
+          "stl": "right-frame-manga-secondary.stl",
+          "step": "right-frame-manga-secondary.step",
+          "stl_sha256": "06d890428c17797cedb689f0b295be7681f89022f9309f044ea49805637d357a",
+          "step_sha256": "a92d3b4d69801364f16d34d579a3433ff40341d002326ee22603dd8b3e76f40e",
+          "volume_mm3": 3.7699111843077513,
+          "solids": 3
+        }
+      ],
+      "roof_mm": 13.39,
+      "color_construction": "complementary co-print volumes"
+    },
+    "right-talavera": {
+      "stl": "right-frame-talavera.stl",
+      "step": "right-frame-talavera.step",
+      "material_parts": [
+        {
+          "role": "body",
+          "stl": "right-frame-talavera-body.stl",
+          "step": "right-frame-talavera-body.step",
+          "stl_sha256": "e7df1d49ffb67544901e08119917b007eb1eadbc54798b411a0736902b179538",
+          "step_sha256": "72bd660a9ee80c6c4e7b0a07521962977b01773efe92f86bdb3e345e6cb22147",
+          "volume_mm3": 1895.0336544095658,
+          "solids": 1
+        },
+        {
+          "role": "detail",
+          "stl": "right-frame-talavera-detail.stl",
+          "step": "right-frame-talavera-detail.step",
+          "stl_sha256": "59ec2d8538f6c5501b9c91741c7a45122576724bae451ab8f03b7dd074b3096a",
+          "step_sha256": "c0ad9cc1c9a54dae45a15c2e83d1ab59deb7a8791070884ab34eacdacddb7f13",
+          "volume_mm3": 55.72679498371932,
           "solids": 6
         },
         {
           "role": "accent",
-          "stl": "left-frame-mecha-accent.stl",
-          "step": "left-frame-mecha-accent.step",
-          "stl_sha256": "ab8f8b5fb5baf7a6646d8b866dc5ca6b4621ee920a62c1877c532cd0e2e6aef8",
-          "step_sha256": "018bd5680a5f604809ca9540203b9508f52f5c4ffb84062c58dee3abe814855e",
-          "volume_mm3": 11.696500000000016,
-          "solids": 6
+          "stl": "right-frame-talavera-accent.stl",
+          "step": "right-frame-talavera-accent.step",
+          "stl_sha256": "bdeeb7b64c69288b1c5534961feb32ad570aa7889cbc687f3a6516dce45f5831",
+          "step_sha256": "96f91935bf608d650cde318bef4d788d8d708924afed80b37e5fba0a223670e8",
+          "volume_mm3": 12.533229805458753,
+          "solids": 2
         },
         {
           "role": "secondary",
-          "stl": "left-frame-mecha-secondary.stl",
-          "step": "left-frame-mecha-secondary.step",
-          "stl_sha256": "091f209eca3e3b09760e70aceccf63e436a53c9b469a792bfa4cb744ab1cd407",
-          "step_sha256": "f11221415751f75594da670636a48b22f59bfddca59e07d15768ac4b008d35e2",
-          "volume_mm3": 7.542963961269092,
-          "solids": 1
+          "stl": "right-frame-talavera-secondary.stl",
+          "step": "right-frame-talavera-secondary.step",
+          "stl_sha256": "c5bfe2f5bf0aafdd9828e50bf4166ee4186883820b0ef14d9334a92f35186eb4",
+          "step_sha256": "a47862e98137a3693911659c9bf53ee801fcf1960b14aaf04f99c7e9a644c174",
+          "volume_mm3": 4.6240000000000085,
+          "solids": 2
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "left-kintsugi": {
-      "stl": "left-frame-kintsugi.stl",
-      "step": "left-frame-kintsugi.step",
+    "right-gameboy": {
+      "stl": "right-frame-gameboy.stl",
+      "step": "right-frame-gameboy.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "left-frame-kintsugi-body.stl",
-          "step": "left-frame-kintsugi-body.step",
-          "stl_sha256": "4a05c2c925caedec04b5cee67ea530444f7b442f7c616a7eea89ae8a9af460dd",
-          "step_sha256": "a2b6297c1e8839bf1fd24aebfa313fed3553daa463a76924cea59fddf1b4d12d",
-          "volume_mm3": 1871.5207930453587,
+          "stl": "right-frame-gameboy-body.stl",
+          "step": "right-frame-gameboy-body.step",
+          "stl_sha256": "288186c5b5745276d200ac602266487af15413d6869223e7b095090f2c48e652",
+          "step_sha256": "af32fdd410bd6a8929b92a1e349ddc02b03e271a9d0a33c4b3cf3c5b957b83bb",
+          "volume_mm3": 1910.22750561748,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "left-frame-kintsugi-detail.stl",
-          "step": "left-frame-kintsugi-detail.step",
-          "stl_sha256": "f9e517b61469a8be371752b70a7d68cdccaf294f0762232df6fcd7eba5dc34c8",
-          "step_sha256": "60e03ca257f933c5f71c2bb106f1ba3717e857a36d2449d06fdc8b1e3e1329f0",
-          "volume_mm3": 29.081130434782644,
-          "solids": 2
+          "stl": "right-frame-gameboy-detail.stl",
+          "step": "right-frame-gameboy-detail.step",
+          "stl_sha256": "fbe44cb38b96ddc7e7a9a6ae1e2d47868dece3528cfceeaf592ef2d74a500ed4",
+          "step_sha256": "9f1ad95a80f805b893061ef9f65e6ee15afd096a9cc2375a2e69c3082c38c55f",
+          "volume_mm3": 43.506924246522075,
+          "solids": 3
         },
         {
           "role": "accent",
-          "stl": "left-frame-kintsugi-accent.stl",
-          "step": "left-frame-kintsugi-accent.step",
-          "stl_sha256": "e674e7ab485eda5417371564eb56802486bdd2894caeb8fe1912b1db3d70c008",
-          "step_sha256": "3f950c5591603ee010e7661ffb6646a92d2e520446dc19b6419a68ead398a455",
-          "volume_mm3": 54.515755718599195,
-          "solids": 4
+          "stl": "right-frame-gameboy-accent.stl",
+          "step": "right-frame-gameboy-accent.step",
+          "stl_sha256": "9151aff1c2faef874c37d4c3b6d3387feb3028943da1e8cdbdb00d803dd355f2",
+          "step_sha256": "c98772eea32c2f07322ef9d1179f864d25d4bccd0065dfa86c5affc394f32abe",
+          "volume_mm3": 8.111276162018099,
+          "solids": 2
         },
         {
           "role": "secondary",
-          "stl": "left-frame-kintsugi-secondary.stl",
-          "step": "left-frame-kintsugi-secondary.step",
-          "stl_sha256": "7331f7e07143aa0d4340efc100f38d948b27bf6954d3f88c5281b19758405183",
-          "step_sha256": "93145de9a0bd8e8fc6b04c8809d5b2695e60f3bb862b80952a2879e6f7e38ef1",
-          "volume_mm3": 12.799999999999986,
-          "solids": 1
+          "stl": "right-frame-gameboy-secondary.stl",
+          "step": "right-frame-gameboy-secondary.step",
+          "stl_sha256": "6a66c3b775a93e88aa3d87d7a3803c5ba0ccfd07dc89a31ad3167b82a7ee7372",
+          "step_sha256": "e150cdd901dcae33f86b746651d7d7b7e4bd2026f4c66714712f35cdace54b89",
+          "volume_mm3": 6.071973172721764,
+          "solids": 5
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "right-smooth": {
-      "stl": "right-frame-smooth.stl",
-      "step": "right-frame-smooth.step",
-      "material_parts": [],
-      "roof_mm": 13.39,
-      "color_construction": "single body"
-    },
-    "right-bevel": {
-      "stl": "right-frame-bevel.stl",
-      "step": "right-frame-bevel.step",
-      "material_parts": [],
-      "roof_mm": 13.39,
-      "color_construction": "single body"
-    },
-    "right-facet": {
-      "stl": "right-frame-facet.stl",
-      "step": "right-frame-facet.step",
-      "material_parts": [],
-      "roof_mm": 13.39,
-      "color_construction": "single body"
-    },
-    "right-handheld": {
-      "stl": "right-frame-handheld.stl",
-      "step": "right-frame-handheld.step",
+    "right-nes": {
+      "stl": "right-frame-nes.stl",
+      "step": "right-frame-nes.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "right-frame-handheld-body.stl",
-          "step": "right-frame-handheld-body.step",
-          "stl_sha256": "42b8fb3538364df2061770bcd0cecd18e92cb5ec1cd9d2db3c1c8060af1f63bf",
-          "step_sha256": "dd3cb3f520d86bd1cf747556dbc3edfd71306c6b777df27e9fcb87174efbcf99",
-          "volume_mm3": 1951.6884783732667,
+          "stl": "right-frame-nes-body.stl",
+          "step": "right-frame-nes-body.step",
+          "stl_sha256": "d3df13c310c0e419087845429cb7ceed6adba18cb73776c44feee7d6d2a0d51f",
+          "step_sha256": "c7010f0cd9241bf914af691e1c2899c131c2cdb204ccfbc4ac07b6f51127790b",
+          "volume_mm3": 1839.7272722140651,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "right-frame-handheld-detail.stl",
-          "step": "right-frame-handheld-detail.step",
-          "stl_sha256": "723fb29f8fd2c66ad1d64d1a734b3e76693a94585e6679ffbc610caf51a21aa4",
-          "step_sha256": "2a3406137a49803d655fdad91fa60da97db251c4a47d43da564003459cb5979e",
-          "volume_mm3": 7.679999999999985,
-          "solids": 1
+          "stl": "right-frame-nes-detail.stl",
+          "step": "right-frame-nes-detail.step",
+          "stl_sha256": "5fb0354b6c748385d584b22713f89cb39800125813beeea961b06da06cfe5b49",
+          "step_sha256": "1de4fc5000c534111cbd70a55a6238851822b8e5dcc7a30013414bd30f92b0c3",
+          "volume_mm3": 94.73139882657362,
+          "solids": 3
         },
         {
           "role": "accent",
-          "stl": "right-frame-handheld-accent.stl",
-          "step": "right-frame-handheld-accent.step",
-          "stl_sha256": "bb1c4a6fb32145b9cf14c29ab7e0167ac92bacda8220a1314e64bbee5453ed31",
-          "step_sha256": "7c00332617de7aff12b8f5805947295c8f4ebe7eedd97ea2fb85a5bdcb9a9333",
-          "volume_mm3": 5.789200825476147,
-          "solids": 2
+          "stl": "right-frame-nes-accent.stl",
+          "step": "right-frame-nes-accent.step",
+          "stl_sha256": "2d5ce92a146c573349e76a29de6e91c5091c5a7ac2e1eb748f1709e83fa958e9",
+          "step_sha256": "81aef14bf882fafd3ed33b780d74ed7478eed8e32293d476f84531df1d214166",
+          "volume_mm3": 11.839008158104754,
+          "solids": 3
         },
         {
           "role": "secondary",
-          "stl": "right-frame-handheld-secondary.stl",
-          "step": "right-frame-handheld-secondary.step",
-          "stl_sha256": "3763533d99ed7aa1e37ed8dfcf6d3e24461545d0f6151bd90b3311b26d4f442d",
-          "step_sha256": "7484e29a1e90d08bbde1571cf25e9d7344be10ff02b758386affc6d0ce5a0284",
-          "volume_mm3": 2.759999999999997,
+          "stl": "right-frame-nes-secondary.stl",
+          "step": "right-frame-nes-secondary.step",
+          "stl_sha256": "f875ac444b69e9d340f2b01d4b1d126251a78055eb0bb3a6e73bb31f11ad8bd5",
+          "step_sha256": "d632f267379150c26ace08d9bd7f874c865a4b700cc65911bcec3fda7e131f9b",
+          "volume_mm3": 21.62000000000011,
           "solids": 3
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "right-tv": {
-      "stl": "right-frame-tv.stl",
-      "step": "right-frame-tv.step",
+    "right-snes": {
+      "stl": "right-frame-snes.stl",
+      "step": "right-frame-snes.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "right-frame-tv-body.stl",
-          "step": "right-frame-tv-body.step",
-          "stl_sha256": "b861bcd71b3ec945b90b37685c6dc21836b517aa4f7067a30a50d1af7c7d4337",
-          "step_sha256": "07070ee4bda28d3b20695b0cbe89cc0196b8a06bdfcadc2a7fa02087048882d0",
-          "volume_mm3": 1927.8891959838377,
+          "stl": "right-frame-snes-body.stl",
+          "step": "right-frame-snes-body.step",
+          "stl_sha256": "70a966d6ab78618d30248e40ebf4d29c38f5076d364260eef45e7445b98fb9ce",
+          "step_sha256": "a8fbcb52bc14a5d2961ac7302f923cf29122591a3f6b323abba50765b09a2d0a",
+          "volume_mm3": 1898.5204592681887,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "right-frame-tv-detail.stl",
-          "step": "right-frame-tv-detail.step",
-          "stl_sha256": "364a8b7fe73b8d1119b573cc0e77e32d4eeb9666907339e5a67c525e2bc0c38e",
-          "step_sha256": "c4bf7c92a9ebc9243a8cd72dd33233f99d2208cc58723e4ac73708a0dda472a3",
-          "volume_mm3": 28.56000000000038,
-          "solids": 2
+          "stl": "right-frame-snes-detail.stl",
+          "step": "right-frame-snes-detail.step",
+          "stl_sha256": "ad08988be0b0805c3662b89cbbe634c0b8cb9a403abf82f1d2dec4e5e15efbc9",
+          "step_sha256": "be4b44934f0da28196313a62269fa2afa1f018c732e8f57384e9660385c3bacd",
+          "volume_mm3": 41.857574198221315,
+          "solids": 3
         },
         {
           "role": "accent",
-          "stl": "right-frame-tv-accent.stl",
-          "step": "right-frame-tv-accent.step",
-          "stl_sha256": "48d35ec94929385f4021be5c3895f69d4819097070a7d8a1e1fc732b7414b5be",
-          "step_sha256": "e609b4cb745245d106e9092f0700e9c7a44fd5ce57e8aa23418cee9e659f5b7a",
-          "volume_mm3": 5.79648321490564,
-          "solids": 1
+          "stl": "right-frame-snes-accent.stl",
+          "step": "right-frame-snes-accent.step",
+          "stl_sha256": "66624f3e9df1a6e1ad696403a4cf710c9590601f2802df1f881a22866b5aa1d3",
+          "step_sha256": "f1650a0431660b1862cf7196fd5dd70c540f916b41c7b35b687ef3d34b2785b6",
+          "volume_mm3": 12.099025860954484,
+          "solids": 3
         },
         {
           "role": "secondary",
-          "stl": "right-frame-tv-secondary.stl",
-          "step": "right-frame-tv-secondary.step",
-          "stl_sha256": "eb7e9b8422bc969f6fe58543bc242d1a83ee64b3ec19ba3fc99bdb0200cb5eee",
-          "step_sha256": "687bae34c7db58e1fd934f02a3c1371ff055cd211131d89debd04b4915ae52ba",
-          "volume_mm3": 5.671999999999958,
+          "stl": "right-frame-snes-secondary.stl",
+          "step": "right-frame-snes-secondary.step",
+          "stl_sha256": "0f2349a1dc3e30f236fa38336fa9aab2c10f7ca0989577cb0a56e52f1f9363f6",
+          "step_sha256": "9e2a28a11957aa38c94ca84dc728caf1e999f74ee360a764eaa23eadaaa5fc5b",
+          "volume_mm3": 15.440619871377917,
           "solids": 4
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "right-cyberpunk": {
-      "stl": "right-frame-cyberpunk.stl",
-      "step": "right-frame-cyberpunk.step",
+    "right-phone": {
+      "stl": "right-frame-phone.stl",
+      "step": "right-frame-phone.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "right-frame-cyberpunk-body.stl",
-          "step": "right-frame-cyberpunk-body.step",
-          "stl_sha256": "fe542bea594c81da6c8c84637b5e648f6ad17bf861cc408dd3897f78fecad2b9",
-          "step_sha256": "d20475b54bd361fb24bb43acd9759e454cb85fefe8352a5d6c833693d68837ab",
-          "volume_mm3": 1952.3530421373061,
+          "stl": "right-frame-phone-body.stl",
+          "step": "right-frame-phone-body.step",
+          "stl_sha256": "5098ccf32fe4c11fb21c6205db8cd0c9b79e7d4cca90d49580780f2f8d8b4a94",
+          "step_sha256": "204d8048b3a6a54d83ce5e3886dcd1b5eca3fcb26c2d53226f754c46513382f0",
+          "volume_mm3": 1893.5131191948178,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "right-frame-cyberpunk-detail.stl",
-          "step": "right-frame-cyberpunk-detail.step",
-          "stl_sha256": "3116c75e0ef88a47f138529fce79ec40bb8e616dca5ad3fb7cc67bdbead0b602",
-          "step_sha256": "0708758378779de016df196823db404692d7fb2b59f4a43e31b72613d0bd2da5",
-          "volume_mm3": 6.0959999999999415,
-          "solids": 3
+          "stl": "right-frame-phone-detail.stl",
+          "step": "right-frame-phone-detail.step",
+          "stl_sha256": "7502fce8fbfc4e4a4870ee038a83e41b4bb3bfe6e1a13083266f24121b0526af",
+          "step_sha256": "f2d0d57d8a31d5707f5eae1c80d7afe6961d2f815686b3b15884853141dfe04e",
+          "volume_mm3": 67.34619615344901,
+          "solids": 13
         },
         {
           "role": "accent",
-          "stl": "right-frame-cyberpunk-accent.stl",
-          "step": "right-frame-cyberpunk-accent.step",
-          "stl_sha256": "2498b03cb0df591d6865f2df8837b52b80f47a6ae22307b836df001303a274b5",
-          "step_sha256": "78879237233a35ba2a470f758b3f80bb20dce87201e5152936d29516704c7e03",
-          "volume_mm3": 3.8880000000000434,
+          "stl": "right-frame-phone-accent.stl",
+          "step": "right-frame-phone-accent.step",
+          "stl_sha256": "cf3c4cca9da2d5a70e2a1aa43d2ac0ecc3666faa22a7bccb6818079f3bcf4d61",
+          "step_sha256": "b7d56106f428ec109b685880d3a652bfbd212c2af261200ba7c00d106795fdad",
+          "volume_mm3": 2.506477796076945,
           "solids": 1
         },
         {
           "role": "secondary",
-          "stl": "right-frame-cyberpunk-secondary.stl",
-          "step": "right-frame-cyberpunk-secondary.step",
-          "stl_sha256": "48e7e3770f6cdceb742df8e22050ac44412e2ee144273d7b16cc2a37328b9220",
-          "step_sha256": "d52d98b356ce50aa56aacfaeea7bff8f6bcbf99f8f8cdab1db9beb2ff95e34d1",
-          "volume_mm3": 5.580637061435917,
-          "solids": 2
+          "stl": "right-frame-phone-secondary.stl",
+          "step": "right-frame-phone-secondary.step",
+          "stl_sha256": "6a6a31507921a53d47f95cd04ebc9114f659903e47fc9c3be7965cc627fed1b4",
+          "step_sha256": "347bd0152ec4f872a88c02486babf95009845c569177d3631c1b4cb6799e041e",
+          "volume_mm3": 4.551886054393981,
+          "solids": 1
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "right-cartridge": {
-      "stl": "right-frame-cartridge.stl",
-      "step": "right-frame-cartridge.step",
+    "right-walkman": {
+      "stl": "right-frame-walkman.stl",
+      "step": "right-frame-walkman.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "right-frame-cartridge-body.stl",
-          "step": "right-frame-cartridge-body.step",
-          "stl_sha256": "a72bc86c7454570fb5df9645c6acf04b8bc3ac9af8f62d0e48ecc8bc795334a0",
-          "step_sha256": "4f90f00c29f86f2f5d83b9f84ce1603821e6464662c15510e96fc47cc4d8a12b",
-          "volume_mm3": 1863.7769291987408,
+          "stl": "right-frame-walkman-body.stl",
+          "step": "right-frame-walkman-body.step",
+          "stl_sha256": "f5cdf27ebc74678270b3038a21d3139b591e211699068066b2546fcd98461682",
+          "step_sha256": "501b817b3552c6cdfaa7ec289dd18b5ea397f0f3252f9c14ea24f1abf22e8a64",
+          "volume_mm3": 1865.7808222931874,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "right-frame-cartridge-detail.stl",
-          "step": "right-frame-cartridge-detail.step",
-          "stl_sha256": "b2ad07d6be4336be03f48824de16ab2fa4ede4f699c1327bf52defe820f7701f",
-          "step_sha256": "69d2bd71398e92f365434d5515aaf3023d6e6b6ae0c903e900d013656953bf06",
-          "volume_mm3": 68.53275000000008,
-          "solids": 3
-        },
-        {
-          "role": "accent",
-          "stl": "right-frame-cartridge-accent.stl",
-          "step": "right-frame-cartridge-accent.step",
-          "stl_sha256": "a4551319ec94569274dfa1411bf3347f036138564b41757c36037770c03e68c8",
-          "step_sha256": "061cf3c77bf8143bdc3103b3ab2b4e18fd829be47e9966d4ffc66ff624d4c0ba",
-          "volume_mm3": 13.72000000000006,
+          "stl": "right-frame-walkman-detail.stl",
+          "step": "right-frame-walkman-detail.step",
+          "stl_sha256": "dc2051d4199234ce75a2525c1a3bdb4f546e50de07899b3fdaa634ada57d232b",
+          "step_sha256": "6421e74a4507042dcfafe571ae5b5adece9fccec1d28ebc23337d1edba9a3bf8",
+          "volume_mm3": 54.99267234655817,
           "solids": 7
         },
         {
-          "role": "secondary",
-          "stl": "right-frame-cartridge-secondary.stl",
-          "step": "right-frame-cartridge-secondary.step",
-          "stl_sha256": "b4edf006d4a30c1d86a82ff368132357ab74a2c06366dd5811b53c177b761d3c",
-          "step_sha256": "7ed441df45997829e85aa4b7424ace029746c9d1c0b2407074f7fcb53453705d",
-          "volume_mm3": 21.887999999999987,
-          "solids": 1
-        }
-      ],
-      "roof_mm": 13.39,
-      "color_construction": "complementary co-print volumes"
-    },
-    "right-arcade": {
-      "stl": "right-frame-arcade.stl",
-      "step": "right-frame-arcade.step",
-      "material_parts": [
-        {
-          "role": "body",
-          "stl": "right-frame-arcade-body.stl",
-          "step": "right-frame-arcade-body.step",
-          "stl_sha256": "638f20d778fa33cd92cc3d666e53ec32101730d2bc68b5e9b47a2652809f7428",
-          "step_sha256": "ddada2ab1315d08ddb3e239e4d2c36c230867f55d421557b259776df60b1ad95",
-          "volume_mm3": 1897.6195038614494,
-          "solids": 1
-        },
-        {
-          "role": "detail",
-          "stl": "right-frame-arcade-detail.stl",
-          "step": "right-frame-arcade-detail.step",
-          "stl_sha256": "4ae2d0c6ccd1fdb441678d445e318fc0a7e6c2aeb73a76bac888a0e96dfca613",
-          "step_sha256": "7f8e0828cf5a40db6e3d649d85d884ee11f0d1befe1a6060854f9efc421b4f04",
-          "volume_mm3": 50.60800000000025,
-          "solids": 9
-        },
-        {
           "role": "accent",
-          "stl": "right-frame-arcade-accent.stl",
-          "step": "right-frame-arcade-accent.step",
-          "stl_sha256": "21867b033d17f46b669f835c78971985ca4ecab64b5796ab491a9159d51bb923",
-          "step_sha256": "4ebccf14171dcd8de6d44e6ce989de01fa295bcfe15b6543d1e256c33d0e21a2",
-          "volume_mm3": 8.170393810960157,
-          "solids": 3
+          "stl": "right-frame-walkman-accent.stl",
+          "step": "right-frame-walkman-accent.step",
+          "stl_sha256": "5bcc12656e781da1bc8f8bd9c1abdf4e19a8646cd31bbe844348c56491176130",
+          "step_sha256": "dd7f22b6e4cca43563829ec03711d15825188ff4812817e4754bef988933f157",
+          "volume_mm3": 42.715122629166714,
+          "solids": 2
         },
         {
           "role": "secondary",
-          "stl": "right-frame-arcade-secondary.stl",
-          "step": "right-frame-arcade-secondary.step",
-          "stl_sha256": "4ddf4c08c730e438e5a84a531f5863839b648c9124a0e0923ee54e0dca016eb8",
-          "step_sha256": "e5a8218fa9bb9789dffceaa4e096404fbde93b7900e984849abe5a054cdb1518",
-          "volume_mm3": 11.51978152633129,
-          "solids": 4
+          "stl": "right-frame-walkman-secondary.stl",
+          "step": "right-frame-walkman-secondary.step",
+          "stl_sha256": "65f0bb446e6334a89bd84d5533b47abf1ced3531da3dae00be3f0d3a59058001",
+          "step_sha256": "e35597ccb58bc47426017b078c1589dc9c8334564ad02a5824007f2320b81274",
+          "volume_mm3": 4.429061929829751,
+          "solids": 2
         }
       ],
       "roof_mm": 13.39,
       "color_construction": "complementary co-print volumes"
     },
-    "right-mecha": {
-      "stl": "right-frame-mecha.stl",
-      "step": "right-frame-mecha.step",
+    "right-ipod": {
+      "stl": "right-frame-ipod.stl",
+      "step": "right-frame-ipod.step",
       "material_parts": [
         {
           "role": "body",
-          "stl": "right-frame-mecha-body.stl",
-          "step": "right-frame-mecha-body.step",
-          "stl_sha256": "0f99fe5671911e905e996a9b30be8554ef9bdeca7b153dfd06630d9f0f1bdcf3",
-          "step_sha256": "36d2015434582b475ca69322e6ad36438c1f9cb00690962d57b5ad26585a85fd",
-          "volume_mm3": 1847.7002485708044,
+          "stl": "right-frame-ipod-body.stl",
+          "step": "right-frame-ipod-body.step",
+          "stl_sha256": "8e9ed84208b02d0b3010071b63ec5a06e189bdc8888867c72f22a254673e28bb",
+          "step_sha256": "7f5b5deedef5c3ba0fe08093a3f3d45e15a0e5e68433eebe91e0caf3369dd935",
+          "volume_mm3": 1901.5890628794089,
           "solids": 1
         },
         {
           "role": "detail",
-          "stl": "right-frame-mecha-detail.stl",
-          "step": "right-frame-mecha-detail.step",
-          "stl_sha256": "f419b7d7ea655d6a201a0f88545030628df2574f225abcb52f3949e7296ac200",
-          "step_sha256": "d023d6dcf667cb4301b3124a950d790d8181d183568814782130a5bfbd2a32b7",
-          "volume_mm3": 100.97796666666659,
-          "solids": 6
-        },
-        {
-          "role": "accent",
-          "stl": "right-frame-mecha-accent.stl",
-          "step": "right-frame-mecha-accent.step",
-          "stl_sha256": "fc83e40603fcd5c3f0e8ef5633a69d27a78da8de2b1905b6787ad94f286db2b8",
-          "step_sha256": "d5ef58176b60b79b33ce74c74a3a24a09a45bbf5d9d92e367bd0a8125558d446",
-          "volume_mm3": 11.696500000000023,
-          "solids": 6
-        },
-        {
-          "role": "secondary",
-          "stl": "right-frame-mecha-secondary.stl",
-          "step": "right-frame-mecha-secondary.step",
-          "stl_sha256": "d6d26474a181a658c1a9ad5e4c9789e6a3b7358342bbc5f2e339272a234476be",
-          "step_sha256": "6a6ccbc02cf0b59ca8fc1895f63e823ba47caf76170fa369688f9a0c7bbd0cae",
-          "volume_mm3": 7.542963961269099,
-          "solids": 1
-        }
-      ],
-      "roof_mm": 13.39,
-      "color_construction": "complementary co-print volumes"
-    },
-    "right-kintsugi": {
-      "stl": "right-frame-kintsugi.stl",
-      "step": "right-frame-kintsugi.step",
-      "material_parts": [
-        {
-          "role": "body",
-          "stl": "right-frame-kintsugi-body.stl",
-          "step": "right-frame-kintsugi-body.step",
-          "stl_sha256": "08bec89e10985007c71dfc3ef6d2a9517f0998baa2ff9dd61c8188143cf59c10",
-          "step_sha256": "e521bad499f2c05495934590447eccfb6198f1db06de962af785d785685d6319",
-          "volume_mm3": 1871.520793045361,
-          "solids": 1
-        },
-        {
-          "role": "detail",
-          "stl": "right-frame-kintsugi-detail.stl",
-          "step": "right-frame-kintsugi-detail.step",
-          "stl_sha256": "3df39709c6da5f7ab006cc14fe0f32a992b6bc50ecbe57f22f4c5f09b9c9b8fb",
-          "step_sha256": "aad63a160dda724c29787fb470f757d80a09295c0b5ce9664d270e60f97233ec",
-          "volume_mm3": 29.081130434782644,
+          "stl": "right-frame-ipod-detail.stl",
+          "step": "right-frame-ipod-detail.step",
+          "stl_sha256": "adf3173e5b189ecdc75d6497575ad4a53d670515295a3c9470194994a4daf4c4",
+          "step_sha256": "e6300b7fe654f5a001c1cc8a7c9c4a58f76431ed8fd90f8504fdb63e61fe5981",
+          "volume_mm3": 33.14516763682628,
           "solids": 2
         },
         {
           "role": "accent",
-          "stl": "right-frame-kintsugi-accent.stl",
-          "step": "right-frame-kintsugi-accent.step",
-          "stl_sha256": "f012aac08c11b3d6eeea1b3fac4520f3fb2af56385136a134f9122abc8d8d177",
-          "step_sha256": "563726121434e62a286ccbe0417a095e3aa705211994cf7a6ebe0a26d084e687",
-          "volume_mm3": 54.51575571859911,
-          "solids": 4
+          "stl": "right-frame-ipod-accent.stl",
+          "step": "right-frame-ipod-accent.step",
+          "stl_sha256": "a194179286bc5ec8496dd861d4fe660d0c72d347b0733337ca64765e55767881",
+          "step_sha256": "df164ecb535b026f1d9e91a5444aa056639a1d39758ba68711da83e3a055f88c",
+          "volume_mm3": 24.984935963040357,
+          "solids": 1
         },
         {
           "role": "secondary",
-          "stl": "right-frame-kintsugi-secondary.stl",
-          "step": "right-frame-kintsugi-secondary.step",
-          "stl_sha256": "993924f7508f2d6a1f05299848c18f5e332aafd93f7d68888e955a9757b8267a",
-          "step_sha256": "6f7843d6cc0743045a2def78065f610dcd42ff8e29c4b42076bd657b022a8bfc",
-          "volume_mm3": 12.799999999999985,
-          "solids": 1
+          "stl": "right-frame-ipod-secondary.stl",
+          "step": "right-frame-ipod-secondary.step",
+          "stl_sha256": "b115e9cc1ef915108a81683ac608b1a17d3c7065e9f4acbaddfeb4100451ef0d",
+          "step_sha256": "22679f9dd0bb4a6fc1900e62b5fce2579d2dd1c655f96525b0faeb6a01700b31",
+          "volume_mm3": 8.198512719466775,
+          "solids": 2
         }
       ],
       "roof_mm": 13.39,
@@ -9090,8 +9408,8 @@
     "document_label_preservation": "validation/revI-document-label.json"
   },
   "export_execution": {
-    "native_sha256": "1c9d3db85b360fea61ed891d6262d0b49055a3fde4ac0912038c96a59ded84cd",
-    "exporter_sha256": "7aad1877f0469acc2bf87b4c01a35c4a8319cadf78824e09b583f21ee8d99ab3",
+    "native_sha256": "4e3531e9e955f1747e97178666e2cde1c1794896997bc44655188c986705d043",
+    "exporter_sha256": "11bbc8d104daca9cda325b627693dcd4fcd23637f44e3bb4c9eb7fd9acbef640",
     "receipt": "validation/revI-mechanical.json"
   },
   "level_stack": {

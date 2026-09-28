@@ -1,0 +1,1255 @@
+{
+  "source_sha256": "4e3531e9e955f1747e97178666e2cde1c1794896997bc44655188c986705d043",
+  "section_z_mm": 13.190000000000001,
+  "contour_deflection_mm": 0.001,
+  "minimum_island_core_diameter_mm": 0.8,
+  "physical_acceptance": false,
+  "frames": {
+    "left-flan": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 19.36860186867204,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 36.38178945601194,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 41.726977552903,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 22.01760709542802,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 124.47095311869411,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 72.070501602791,
+        "core_survives": true
+      }
+    ],
+    "left-tape": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 111.10794770596891,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 7.541264914084006,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 7.5412649140840085,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 41.72697755290297,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 41.726977552903,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 16.076568400983994,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 56.983487895672,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 5.25,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 33.79264821842003,
+        "core_survives": true
+      }
+    ],
+    "left-orbit": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 12.558102800678,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 40.637316047124,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 40.63731604712398,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 45.864690394734964,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 9.072146956402,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 22.076568400984,
+        "core_survives": true
+      }
+    ],
+    "left-manga": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 35.158076497550155,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 43.098695470684,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 43.052344946757,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 13.91000000000001,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 11.050000000000006,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 111.539446620968,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 3.1374941575269957,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 3.1374941575270068,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 2,
+        "area_mm2": 3.1374941575269957,
+        "core_survives": true
+      }
+    ],
+    "left-talavera": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 13.845663383874005,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 13.845663383874015,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 13.845663383874005,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 13.176297067031,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 42.282610629678985,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 42.282610629679006,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 7.541264914084,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 23.78348789567199,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 5.780000000000007,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 5.7800000000000065,
+        "core_survives": true
+      }
+    ],
+    "left-gameboy": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 26.84000000000004,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 40.960342258219974,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 40.96034225821999,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 10.17134091428899,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 10.092821833174005,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 2.6468169046779804,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 2.6468169046779804,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 2,
+        "area_mm2": 2.646816904677982,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 3,
+        "area_mm2": 2.646816904677982,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 4,
+        "area_mm2": 4.583332663254026,
+        "core_survives": true
+      }
+    ],
+    "left-nes": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 150.30470911279005,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 43.266743947836,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 43.266743947836,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 9.240000000000009,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 10.171340914288995,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 2,
+        "area_mm2": 10.171340914289017,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 22.0,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 12.049999999999997,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 2,
+        "area_mm2": 20.0,
+        "core_survives": true
+      }
+    ],
+    "left-snes": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 22.39999999999999,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 41.11870026811996,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 41.11870026811999,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 8.546191571932987,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 8.546191571933017,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 2,
+        "area_mm2": 13.137607095427995,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 9.288601868672018,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 8.546191571933003,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 2,
+        "area_mm2": 7.611076532257002,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 3,
+        "area_mm2": 13.137607095427995,
+        "core_survives": true
+      }
+    ],
+    "left-phone": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 7.847390941368004,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 7.847390941368001,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 7.847390941368,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 7.847390941368,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 7.847390941368001,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 7.847390941368002,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 6,
+        "area_mm2": 40.47292502513496,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 7,
+        "area_mm2": 7.8473909413680065,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 8,
+        "area_mm2": 7.8473909413680065,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 9,
+        "area_mm2": 7.847390941368008,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 10,
+        "area_mm2": 6.663205321571018,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 11,
+        "area_mm2": 40.472925025135005,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 12,
+        "area_mm2": 10.088601868672006,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 6.263205321571002,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 11.377264920183997,
+        "core_survives": true
+      }
+    ],
+    "left-walkman": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 10.283332663254003,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 10.283332663254,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 10.283332663254,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 10.283332663254,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 10.283332663254003,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 43.025535485465994,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 6,
+        "area_mm2": 43.025535485466,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 49.03508344427001,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 57.74739094136796,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 6.111220519623995,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 4.9599999999999955,
+        "core_survives": true
+      }
+    ],
+    "left-ipod": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 41.428285493175,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 41.42828549317501,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 62.457102913558046,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 15.196233607399003,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 5.288601868671998,
+        "core_survives": true
+      }
+    ],
+    "right-flan": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 19.368601868672044,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 41.72697755290301,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 36.38178945601204,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 22.01760709542803,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 124.47095311869406,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 72.07050160279093,
+        "core_survives": true
+      }
+    ],
+    "right-tape": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 111.107947705969,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 7.541264914084008,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 7.541264914084005,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 41.726977552903,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 41.726977552903,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 16.076568400983998,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 56.983487895671985,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 5.25,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 33.79264821841996,
+        "core_survives": true
+      }
+    ],
+    "right-orbit": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 12.558102800678002,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 40.637316047124024,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 40.63731604712401,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 45.864690394734936,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 9.072146956402005,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 22.076568400983998,
+        "core_survives": true
+      }
+    ],
+    "right-manga": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 35.15807649754997,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 43.052344946757,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 43.098695470684,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 11.050000000000006,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 13.91000000000001,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 111.539446620968,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 3.137494157526996,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 3.1374941575270006,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 2,
+        "area_mm2": 3.137494157526999,
+        "core_survives": true
+      }
+    ],
+    "right-talavera": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 13.845663383874008,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 13.845663383874006,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 13.84566338387401,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 13.176297067030994,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 42.282610629679,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 42.282610629679006,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 7.541264914083998,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 23.783487895671986,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 5.779999999999995,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 5.779999999999996,
+        "core_survives": true
+      }
+    ],
+    "right-gameboy": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 26.84000000000004,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 40.960342258219995,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 40.960342258220024,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 10.171340914288997,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 10.092821833173995,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 2.6468169046779906,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 2.6468169046779906,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 2,
+        "area_mm2": 2.646816904678004,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 3,
+        "area_mm2": 2.6468169046780035,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 4,
+        "area_mm2": 4.583332663254028,
+        "core_survives": true
+      }
+    ],
+    "right-nes": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 150.30470911278994,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 43.266743947836,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 43.266743947836005,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 9.240000000000022,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 10.17134091428899,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 2,
+        "area_mm2": 10.171340914288994,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 22.0,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 12.05,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 2,
+        "area_mm2": 20.0,
+        "core_survives": true
+      }
+    ],
+    "right-snes": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 22.400000000000006,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 41.11870026811999,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 41.11870026812,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 8.546191571932996,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 8.546191571933003,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 2,
+        "area_mm2": 13.137607095428,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 9.28860186867202,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 8.546191571933004,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 2,
+        "area_mm2": 7.611076532257,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 3,
+        "area_mm2": 13.137607095428,
+        "core_survives": true
+      }
+    ],
+    "right-phone": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 7.847390941367997,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 7.847390941367995,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 7.847390941367998,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 7.847390941368,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 6.663205321571015,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 40.47292502513498,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 6,
+        "area_mm2": 10.088601868672004,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 7,
+        "area_mm2": 7.847390941367999,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 8,
+        "area_mm2": 7.847390941368,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 9,
+        "area_mm2": 7.847390941367998,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 10,
+        "area_mm2": 7.8473909413679985,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 11,
+        "area_mm2": 7.847390941368,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 12,
+        "area_mm2": 40.472925025135005,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 6.263205321571008,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 11.377264920184002,
+        "core_survives": true
+      }
+    ],
+    "right-walkman": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 10.283332663253999,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 10.283332663253999,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 2,
+        "area_mm2": 10.283332663253999,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 3,
+        "area_mm2": 10.283332663253997,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 4,
+        "area_mm2": 10.283332663253999,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 43.02553548546601,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 6,
+        "area_mm2": 43.02553548546601,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 49.03508344427,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 1,
+        "area_mm2": 57.747390941367996,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 6.111220519624001,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 4.960000000000001,
+        "core_survives": true
+      }
+    ],
+    "right-ipod": [
+      {
+        "role": "detail",
+        "island": 0,
+        "area_mm2": 41.428285493175,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 1,
+        "area_mm2": 41.428285493175004,
+        "core_survives": true
+      },
+      {
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 62.45710291355807,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 15.196233607399007,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 1,
+        "area_mm2": 5.288601868672,
+        "core_survives": true
+      }
+    ]
+  },
+  "failures": [],
+  "passed": true
+}

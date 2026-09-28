@@ -1,28 +1,31 @@
 #!/usr/bin/env python3
-"""Three actual themed revI frame exports, displayed separately for comparison.
+"""Render the current native material solids in a compact comparison gallery.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 from pathlib import Path
 import hashlib,json
 import vtk
-from frame_finishes import palette,rgb
+from frame_finishes import palette,rgb,FINISHES
 ROOT=Path(__file__).resolve().parents[1]
-model=json.loads((ROOT/'design/revI.json').read_text())
-r=vtk.vtkRenderer();r.SetBackground(.929,.94,.918)
-w=vtk.vtkRenderWindow();w.SetOffScreenRendering(1);w.SetSize(1500,900);w.SetMultiSamples(0);w.AddRenderer(r);r.SetUseFXAA(True)
-sources=[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in ['design/revI.json','design/frame-finishes.json','tools/frame_finishes.py']]
-for i,style in enumerate(['handheld','tv','cyberpunk']):
- parts=model['frameVariants']['left-'+style]['material_parts']
- assert parts and any(part['role']=='body' for part in parts)
- for part in parts:
-  color=rgb(palette(style)[part['role']])
-  p=ROOT/'mechanical/revI'/part['stl'];sources.append({'path':str(p.relative_to(ROOT)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
-  rd=vtk.vtkSTLReader();rd.SetFileName(str(p));rd.Update()
-  n=vtk.vtkPolyDataNormals();n.SetInputConnection(rd.GetOutputPort());n.SetFeatureAngle(45);n.ConsistencyOn();n.AutoOrientNormalsOn();n.Update()
-  mp=vtk.vtkPolyDataMapper();mp.SetInputConnection(n.GetOutputPort());a=vtk.vtkActor();a.SetMapper(mp);a.SetPosition(-111+40*i,0,0);a.GetProperty().SetColor(*color);r.AddActor(a)
- t=vtk.vtkTextActor();t.SetInput({'handheld':'HANDHELD','tv':'RETRO TV','cyberpunk':'CYBERPUNK'}[style]);t.SetPosition(210+430*i,170);t.GetTextProperty().SetFontSize(27);t.GetTextProperty().SetColor(.16,.25,.22);r.AddActor2D(t)
-for text,y,size in [('FLAN36 / INTERCHANGEABLE FRAMES',805,35),('Three flush themes. Colors follow native recessed material volumes.',755,22),('Actual revI CAD exports. Nominal study; printed fit and fastening untested.',55,20)]:
- t=vtk.vtkTextActor();t.SetInput(text);t.SetPosition(100,y);t.GetTextProperty().SetFontSize(size);t.GetTextProperty().SetColor(.16,.25,.22);r.AddActor2D(t)
-c=r.GetActiveCamera();c.ParallelProjectionOn();c.SetFocalPoint(52,-37,8);c.SetPosition(52,-140,170);c.SetViewUp(0,0,1);c.SetParallelScale(53);r.ResetCameraClippingRange();w.Render()
-f=vtk.vtkWindowToImageFilter();f.SetInput(w);f.ReadFrontBufferOff();f.Update();p=ROOT/'docs/images/revI-frames.png';writer=vtk.vtkPNGWriter();writer.SetFileName(str(p));writer.SetInputConnection(f.GetOutputPort());writer.Write();w.Finalize()
-(ROOT/'validation/revI-frames-render.json').write_text(json.dumps({'image_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'sources':sources,'renderer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'geometry_changed':False},indent=2)+'\n')
+model=json.loads((ROOT/'design/revI.json').read_text());styles=FINISHES['styles']
+win=vtk.vtkRenderWindow();win.SetOffScreenRendering(1);win.SetSize(1920,1220);win.SetMultiSamples(0)
+footer=vtk.vtkRenderer();footer.SetViewport(0,0,1,.04);footer.SetBackground(.947,.947,.915);win.AddRenderer(footer)
+sources={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ['design/revI.json','design/frame-finishes.json','tools/frame_finishes.py']}
+def label(ren,text,x,y,size,color=(.18,.24,.22)):
+ a=vtk.vtkTextActor();a.SetInput(text);a.SetPosition(x,y);a.GetTextProperty().SetFontSize(size);a.GetTextProperty().SetColor(*color);a.GetTextProperty().SetFontFamilyToArial();ren.AddActor2D(a)
+def actor(ren,path,color):
+ p=ROOT/path;sources[path]=hashlib.sha256(p.read_bytes()).hexdigest()
+ rd=vtk.vtkSTLReader();rd.SetFileName(str(p));rd.Update()
+ normals=vtk.vtkPolyDataNormals();normals.SetInputConnection(rd.GetOutputPort());normals.SetFeatureAngle(45);normals.ConsistencyOn();normals.AutoOrientNormalsOn()
+ mapper=vtk.vtkPolyDataMapper();mapper.SetInputConnection(normals.GetOutputPort());a=vtk.vtkActor();a.SetMapper(mapper);a.GetProperty().SetColor(*rgb(color));a.GetProperty().SetAmbient(.75);a.GetProperty().SetDiffuse(.25);a.GetProperty().SetSpecular(0);ren.AddActor(a)
+for i,(style,theme) in enumerate(styles.items()):
+ col=i%6;row=i//6;r=vtk.vtkRenderer();r.SetViewport(col/6,.04+(1-row)*.43,(col+1)/6,.04+(2-row)*.43);r.SetBackground(.947,.947,.915);r.SetUseFXAA(True);win.AddRenderer(r)
+ for part in model['frameVariants']['left-'+style]['material_parts']:actor(r,'mechanical/revI/'+part['stl'],theme['colors'][part['role']])
+ for visual in model['parts']['left-display']['visuals']:actor(r,visual['path'],visual['color'])
+ label(r,theme['label'],25,22,23)
+ camera=r.GetActiveCamera();camera.ParallelProjectionOn();camera.SetFocalPoint(123,-39,11);camera.SetPosition(123,-47,240);camera.SetViewUp(0,1,0);camera.SetParallelScale(36);r.ResetCameraClippingRange()
+r=vtk.vtkRenderer();r.SetViewport(0,.90,1,1);r.SetBackground(.947,.947,.915);win.AddRenderer(r);label(r,'FLAN36 / FRAME COLLECTION',45,65,34);label(r,'11 native designs. Four solid colors. Flush inlays. Flan is the default.',45,25,23)
+r=vtk.vtkRenderer();r.SetViewport(5/6,.04,1,.47);r.SetBackground(.947,.947,.915);win.AddRenderer(r);label(r,'FLUSH COLOR',15,260,23);label(r,'0.4 mm co-print inlays',15,222,20);label(r,'Same 13.39 mm roof',15,190,20);label(r,'Editable native CAD',15,158,20);label(r,'Prototype / fit untested',15,105,18)
+win.Render();f=vtk.vtkWindowToImageFilter();f.SetInput(win);f.SetInputBufferTypeToRGB();f.ReadFrontBufferOff();f.Update();p=ROOT/'docs/images/revI-frame-gallery.png';w=vtk.vtkPNGWriter();w.SetFileName(str(p));w.SetInputConnection(f.GetOutputPort());w.Write();win.Finalize()
+(ROOT/'validation/revI-frames-render.json').write_text(json.dumps(dict(image_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),sources=[dict(path=p,sha256=h) for p,h in sources.items()],renderer_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),geometry_changed=False,styles=list(styles)),indent=2)+'\n')
+print('Rendered eleven native frames')

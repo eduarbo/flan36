@@ -1,0 +1,138 @@
+{
+  "styles": [
+    "flan",
+    "tape",
+    "orbit",
+    "manga",
+    "talavera",
+    "gameboy",
+    "nes",
+    "snes",
+    "phone",
+    "walkman",
+    "ipod"
+  ],
+  "viewer_sha256": "77d80e1b743264a2e8a0101d6a405d4963eb36d0edcda48fea8d0da26ff15486",
+  "native_3mf": [
+    {
+      "id": "left-frame-flan",
+      "material_parts": 4,
+      "sha256": "89bf394ac5cf3b94cdc4aa479f9101f8e3c4f5db25ab53feba3fdbbd8853516d"
+    },
+    {
+      "id": "left-frame-tape",
+      "material_parts": 4,
+      "sha256": "faed5dbc3d7d52a43e36bab855100fac4fcb01334a14e41869a4e79524672b89"
+    },
+    {
+      "id": "left-frame-orbit",
+      "material_parts": 4,
+      "sha256": "f280e3a1f81abff2631d972c5996dfc41acdcfbdc0ceb18b4343d99140c20e93"
+    },
+    {
+      "id": "left-frame-manga",
+      "material_parts": 4,
+      "sha256": "49f2276285cdaabd636286ec573f6063531d14a9fbc145c39c4863e6b8abbd3f"
+    },
+    {
+      "id": "left-frame-talavera",
+      "material_parts": 4,
+      "sha256": "91beb5a30c3fdd93161e022a093529c256c683dffc54ba3cf751fdb97273c184"
+    },
+    {
+      "id": "left-frame-gameboy",
+      "material_parts": 4,
+      "sha256": "0a49845107c239960359a4e39e91ed5f124b41b272af091f85e7bcefa69caa72"
+    },
+    {
+      "id": "left-frame-nes",
+      "material_parts": 4,
+      "sha256": "d92350a506c5a4d7267e8fc545144787bd8535526cad7c8f71ab27826b12c6ee"
+    },
+    {
+      "id": "left-frame-snes",
+      "material_parts": 4,
+      "sha256": "590e7ecf8dbc2d23492a0d14588beef54bcdbc6e8303f888e117678832590e28"
+    },
+    {
+      "id": "left-frame-phone",
+      "material_parts": 4,
+      "sha256": "1ffcb1fac5194839d1351b6a8856d474c8fe9e2f1bc3b3a320bb5506185a3b8a"
+    },
+    {
+      "id": "left-frame-walkman",
+      "material_parts": 4,
+      "sha256": "03f05eff9c4843895305468bf983e9403787193eb1d110ac397c39211dc8cee8"
+    },
+    {
+      "id": "left-frame-ipod",
+      "material_parts": 4,
+      "sha256": "f3fac0c1564df987af49b950f920b571fd677a063f96e4e07d255a67598b13f4"
+    },
+    {
+      "id": "right-frame-flan",
+      "material_parts": 4,
+      "sha256": "e7012f70f63905a1b57e5a0cd9edf03d04280d96ef03bbc8512f2d9940cf3d60"
+    },
+    {
+      "id": "right-frame-tape",
+      "material_parts": 4,
+      "sha256": "8f65f70702c675eb37c70531a2bbd5bd600ed2ffe6137a3b0f448d9de000df5e"
+    },
+    {
+      "id": "right-frame-orbit",
+      "material_parts": 4,
+      "sha256": "9230c0a30d451f2925e692d9b39cf45cda215a2f5d0ad84ffa49497e3521a8f9"
+    },
+    {
+      "id": "right-frame-manga",
+      "material_parts": 4,
+      "sha256": "f3e0568e9dd88e253c306b1fba44a6ca919ae4cd97841f97d581c68d46de27de"
+    },
+    {
+      "id": "right-frame-talavera",
+      "material_parts": 4,
+      "sha256": "06ef5ab19d3ad3b2ae96463b5c2b1b401f76c2c3f2f59271369755d42604f89e"
+    },
+    {
+      "id": "right-frame-gameboy",
+      "material_parts": 4,
+      "sha256": "847cd0a6fc894c40f0205525f2938a3da74e79e76ac0b7a52c003ffefeb7adf3"
+    },
+    {
+      "id": "right-frame-nes",
+      "material_parts": 4,
+      "sha256": "5d480ac725880959f444936df1fd1ba93fafe0a641a6a3cedd289dc6f971b5b2"
+    },
+    {
+      "id": "right-frame-snes",
+      "material_parts": 4,
+      "sha256": "10e2ee508ae3b4bddf096dd368a8b941145318ec4cabec35ddc0c4da527500a1"
+    },
+    {
+      "id": "right-frame-phone",
+      "material_parts": 4,
+      "sha256": "2ab720e81a33c165055db6082e1b4acf7b3009324544bb94d0e1cd53e67d021b"
+    },
+    {
+      "id": "right-frame-walkman",
+      "material_parts": 4,
+      "sha256": "ae5ae522af19585d3ff9c19bad2a3abcb4a0b195bcb3da58387694ec23e65ef4"
+    },
+    {
+      "id": "right-frame-ipod",
+      "material_parts": 4,
+      "sha256": "bc9fbe2600f8bcf73bf47940e50ecbb5ed305298d2a933b98e17f9816aef0bb0"
+    }
+  ],
+  "checks": {
+    "distinct_actual_previews": 11,
+    "frame_changes_preserve_inspection": 11,
+    "themes_without_pinky_accents": 27,
+    "flan_reset_default": true,
+    "exact_old_configuration_preserved_on_migration": true,
+    "mobile_gallery": true
+  },
+  "runtime_errors": [],
+  "passed": true
+}

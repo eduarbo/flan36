@@ -22,7 +22,7 @@ const result={source_snapshot:require('child_process').execFileSync('git',['rev-
  function sameView(a,b){assert.deepEqual(b.camera,a.camera,'Camera must stay exact');assert.deepEqual(b.view,a.view,'Layer/half/explosion state must stay exact');assert.deepEqual(b.hidden,a.hidden,'Individual hides must stay exact');assert.deepEqual(b.selected,a.selected,'Selection must stay exact');}
  let count=0;async function unchanged(action){const a=await snap(p);await action();await idle(p);await p.waitForTimeout(50);const b=await snap(p);sameView(a,b);count++;return b;}
  await unchanged(()=>p.click('[data-case=rim]'));
- await p.click('#part-lid');await unchanged(()=>p.click('[data-style=tv]'));await unchanged(()=>p.fill('#frame-color-hex','#aabbcc'));
+ await p.click('#part-lid');await unchanged(()=>p.click('[data-style=orbit]'));await unchanged(()=>p.fill('#frame-color-hex','#aabbcc'));
  await p.click('#part-keycaps');await unchanged(()=>p.click('[data-preset=saddle-sculpted]'));
  await p.click('#part-battery');assert.equal(await p.locator('#battery-target [data-side=left]').getAttribute('aria-pressed'),'true');const beforeBattery=await snap(p);const afterBattery=await unchanged(()=>p.click('[data-battery="301230"]'));assert.equal(afterBattery.configuration.batteries.left,'301230');assert.equal(afterBattery.configuration.batteries.right,beforeBattery.configuration.batteries.right);
  await p.click('#battery-target [data-side=right]');await unchanged(()=>p.click('[data-battery="301230"]'));assert.equal((await snap(p)).configuration.batteries.right,'301230');await p.click('#battery-target [data-side=both]');await unchanged(()=>p.click('[data-battery="adafruit-1570"]'));assert.equal((await snap(p)).configuration.batteries.left,'adafruit-1570');

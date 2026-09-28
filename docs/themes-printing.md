@@ -1,6 +1,6 @@
 # Make it yours
 
-Open [the 3D explorer](https://eduarbo.github.io/flan36/), choose **Themes**, and pick a starting palette. Sixteen presets coordinate the case, frame and keycaps. Their previews use your selected shapes.
+Open [the 3D explorer](https://eduarbo.github.io/flan36/), choose **Themes**, and pick a starting palette. Twenty-seven presets coordinate the case, frame and keycaps. Their previews use your selected shapes.
 
 All five finger columns share the same base color. Each thumb gets its own coordinated accent, mirrored between halves. In **Caps → Colors**, eight independent palettes follow the same approach: **Sunset rows** colors whole finger rows and **Arcade thumbs** puts its bright accents on the three thumbs. **Original** keeps matching green thumbs.
 
@@ -12,7 +12,7 @@ All five finger columns share the same base color. Each thumb gets its own coord
 4. Enable **Match frame and rim** for continuous color. Editing either linked color updates the other; with Level, the upper shell joins the linked base and frame color.
 5. Use **Files → Download print kit** for the selected parts.
 
-Handheld, Retro TV, Cyberpunk, Cartridge, Arcade, Mecha and Kintsugi have four color regions. Smooth, Bevel and Facet use a single body color. Original design palettes remain available through **Restore design colors**.
+All [eleven frames](frames-extra.md) have four solid-color regions. Flan is the default. Each design has a matching global palette; **Restore design colors** restores the selected frame palette.
 
 Changing shapes preserves customized colors. An untouched original design adopts the new shape's original palette. Frame and theme changes preserve cover visibility and the current inspection.
 
@@ -22,7 +22,7 @@ Selections save automatically on this device. **Save configuration** downloads J
 
 To update an existing design to these colors, select its theme or cap palette again. Custom colors remain editable per key, row or column.
 
-[Palette verification](../validation/revI-thumb-themes.json) covers all 24 presets on both halves, unchanged camera state, previews and exported key colors.
+The [current collection checks](../validation/revI-frame-collection.json) cover native material exports, configuration migration and viewer behavior. The earlier [thumb-palette receipt](../validation/revI-thumb-themes.json) records the previous palette set.
 
 Eye, Solo, camera and exploded views are inspection controls. They do not remove parts from the print kit. Unchecking **Printed display cover** does remove that cover and its targets from the selected assembly.
 

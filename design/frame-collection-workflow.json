@@ -1,0 +1,124 @@
+{
+  "source_ref": "codex:01a0c214-956e-7ff3-9dd0-6f48f74f240f:user:20260928:replace-frame-collection",
+  "request": "Replace the prior frames with new printable designs inspired by the selected Tape, Orbit, Manga and Talavera concepts. Include Game Boy, NES, SNES, 2000s cell phone, Walkman and iPod references, plus Flan as default. Use solid colors with no gradients. Update or add coordinated themes where needed.",
+  "required_outcomes": [
+    "Eleven distinct native frame designs and no old selectable frames",
+    "Flan default in native CAD, presets, viewer and reset",
+    "Solid-color flush material volumes and actual printable exports",
+    "Accurate frame thumbnails, coordinated themes, no pinky-only keycap accents",
+    "Unchanged slim envelope, window, assembly interfaces and camera continuity",
+    "Safe handling of saved configurations referring to retired frames",
+    "English documentation, tested public repository and viewer"
+  ],
+  "scope": "Update current revI assembly and its existing export/viewer pipeline. Physical print qualification remains separate. Prior Git history is retained; no unrelated hardware redesign.",
+  "baseline_commit": "e75111c4550b9481558df4e77fe2c682e074ca94",
+  "review": {
+    "baseline": {
+      "commit": "e75111c4550b9481558df4e77fe2c682e074ca94",
+      "status": "",
+      "artifacts": [
+        {
+          "path": "tools/freecad/flush_frames.py",
+          "sha256": "82d880663bed2f69800f0ecf7bc0e564c32c8954d08a05f418b4edca71c7092c"
+        },
+        {
+          "path": "tools/freecad/configuration.py",
+          "sha256": "378775f2192dcb080495a182db18964024abdddcff5eef79f7881dcdf8f847d4"
+        },
+        {
+          "path": "tools/freecad/export_revI.py",
+          "sha256": "7aad1877f0469acc2bf87b4c01a35c4a8319cadf78824e09b583f21ee8d99ab3"
+        },
+        {
+          "path": "tools/freecad/install_slim_flush.py",
+          "sha256": "18383ce35456e06c1ac8cb9c7b339745bf61e870286fcc96fa1276a86e3e6a09"
+        },
+        {
+          "path": "tools/freecad/install_extra_frames.py",
+          "sha256": "c8e8415c0ca91cf03b89772b7b9d508764ddbf2c791be2c1866dcd1f2dfc0709"
+        },
+        {
+          "path": "tools/freecad/build_revI.py",
+          "sha256": "318d35a49126ed6baf062c945ad3e8f025b686e5a9a9179472f5edc18c2ff971"
+        },
+        {
+          "path": "tools/frame_finishes.py",
+          "sha256": "10c1ef73e759b9bef7e9a25e3b506242633dbe86ed821b3a03c204d022a8b4b6"
+        },
+        {
+          "path": "tools/keycap_config.py",
+          "sha256": "81cf0cd6029794c2127c425878dbb39823451ce029e7cda819370d56f0faf5e1"
+        },
+        {
+          "path": "tools/build_viewer_revI.py",
+          "sha256": "dd2065bcae68d4358fb1c2969fd0c526d54ec8f2de25606bde9c15a10c46bd26"
+        },
+        {
+          "path": "viewer/config.js",
+          "sha256": "c6e5c12560c2e4d1950174f681767e45ad9a82af4ee7bb71cc95d6c5064d5377"
+        },
+        {
+          "path": "viewer/storage.js",
+          "sha256": "8a4fb74ca4a3889fd2685824b71c1102bb781b714535b01b770cdd3734fc7cf9"
+        },
+        {
+          "path": "viewer/app.js",
+          "sha256": "01504e5e14a2f82f45ed9e634b7603d3ea2fc5fc7ca259dd8c9073cc1c4fec73"
+        },
+        {
+          "path": "viewer/finishes.js",
+          "sha256": "e532d97fe79eaf8b37eb3627141352c6c1c0938466f383d1b1e0d943c6e78438"
+        },
+        {
+          "path": "viewer/appearance.js",
+          "sha256": "25779ccacbae08407a9768ee61fc5314720fda04fedacf33af15f877c62677cd"
+        },
+        {
+          "path": "viewer/printing.js",
+          "sha256": "b7ca61cf86752c4d66f96f770578ad29c503e28e65b875477f97b001e7cd5d66"
+        },
+        {
+          "path": "viewer/build.mjs",
+          "sha256": "d930a7ebf39d05dc2e6d1f8cc47d681ea91d4836df454dc4d75026959114a578"
+        },
+        {
+          "path": "design/frame-finishes.json",
+          "sha256": "20b4888d29dd8f3af8450a6c80f5f9ae99649c2641cc74eb093850ba05f1b902"
+        },
+        {
+          "path": "design/frame-extensions.json",
+          "sha256": "adece1c6c0dfe2c4ca36bc142add236710a20ee43b94a175fe2460e3df701be7"
+        },
+        {
+          "path": "design/themes.json",
+          "sha256": "71af587d22b5d0ce9c09044c6ef21087662f66fe2382c62a84cd27a373f5bafc"
+        },
+        {
+          "path": "keycaps/catalog.json",
+          "sha256": "c69b7c0bdbe38e40edcc53ef3383dfd54486e8e4660b9b790a1f655681205380"
+        },
+        {
+          "path": "docs/themes-printing.md",
+          "sha256": "40eab49b3c3e5470c0ce96a165e2ee657d9f93359e1b7c02e37e2c9d676a09b7"
+        },
+        {
+          "path": "docs/slim-flush.md",
+          "sha256": "ec88e08675cf049a92826b601a2f77312ed4e2a96558b28520ee5f82ba7581bb"
+        }
+      ]
+    },
+    "reviewer_runs": [
+      "role-run-c0ccb8a5dd63ffe375ffc069",
+      "role-run-c31d9dd82412f74c2731c9a5"
+    ],
+    "agreement": "Both independent read-only reviewers recommend a frame-only isolated candidate using complementary flush material volumes and an internal blank template. Root implements. No unresolved objection to that route.",
+    "dispositions": {
+      "template_and_retirement": "Preserve one internal blank; retire old selectable FrameStyle objects, exports and menus; assert exact eleven IDs after reopen.",
+      "default_parity": "One ordered catalog shared by CAD, viewer and exports; Flan first and default in all presets.",
+      "migration": "Explicit finite retired-ID conversion with JS/Python parity, preserved originals and unrelated choices, user-visible notice; reject unknown IDs.",
+      "feature_survival": "Check post-Boolean inlay cross-sections and export registered materials; retain physical print qualification as unverified.",
+      "scope": "Do not reapply stack migration. Preserve case/electronics geometry, parameters and interfaces."
+    },
+    "baseline_unchanged_after_review": true
+  }
+}

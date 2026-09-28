@@ -1,7 +1,7 @@
 {
-  "viewer_sha256": "31eb89f14b7b1257b87424b60a4b78e6f6bbdbd743cda6054a4c6ea662520d37",
-  "scene_sha256": "eac4d66dd520164c278491a9644a0dcbacb308f34c8cf612f19bdc6db549e659",
-  "checker_sha256": "dd84e5d8b831b9ebd0c6818f182990a6bde03079009d6bd0436d52beff7dba94",
+  "viewer_sha256": "be87772bbdcb24265939c6883bbca5a35bb03c2955c3059e7cd51350734ab533",
+  "scene_sha256": "96bd5cffefd487725e2b99d0c2e58518538dde9409f384b136099b925162c2d4",
+  "checker_sha256": "4b616f43a0255146e0cac33878251ecd1d2be9192373ab83d621d669efa4ed93",
   "original_vertices_normals_and_triangles": true,
   "flush_feature_probes": true,
   "exact_native_material_volumes": true,
@@ -11,143 +11,157 @@
   "checked": [
     {
       "side": "left",
-      "style": "smooth",
-      "triangles": 4192,
-      "groups": 1,
-      "feature_probes": 0
+      "style": "flan",
+      "triangles": 7276,
+      "groups": 4,
+      "feature_probes": 2
     },
     {
       "side": "right",
-      "style": "smooth",
-      "triangles": 4192,
-      "groups": 1,
-      "feature_probes": 0
+      "style": "flan",
+      "triangles": 7276,
+      "groups": 4,
+      "feature_probes": 2
     },
     {
       "side": "left",
-      "style": "bevel",
-      "triangles": 4856,
-      "groups": 1,
-      "feature_probes": 0
+      "style": "tape",
+      "triangles": 10816,
+      "groups": 4,
+      "feature_probes": 1
     },
     {
       "side": "right",
-      "style": "bevel",
-      "triangles": 4858,
-      "groups": 1,
-      "feature_probes": 0
+      "style": "tape",
+      "triangles": 10816,
+      "groups": 4,
+      "feature_probes": 1
     },
     {
       "side": "left",
-      "style": "facet",
-      "triangles": 4884,
-      "groups": 1,
-      "feature_probes": 0
+      "style": "orbit",
+      "triangles": 8932,
+      "groups": 4,
+      "feature_probes": 1
     },
     {
       "side": "right",
-      "style": "facet",
-      "triangles": 4884,
-      "groups": 1,
-      "feature_probes": 0
+      "style": "orbit",
+      "triangles": 8932,
+      "groups": 4,
+      "feature_probes": 1
     },
     {
       "side": "left",
-      "style": "handheld",
-      "triangles": 5752,
+      "style": "manga",
+      "triangles": 8982,
       "groups": 4,
-      "feature_probes": 4
+      "feature_probes": 1
     },
     {
       "side": "right",
-      "style": "handheld",
-      "triangles": 5752,
+      "style": "manga",
+      "triangles": 8990,
       "groups": 4,
-      "feature_probes": 4
+      "feature_probes": 1
     },
     {
       "side": "left",
-      "style": "tv",
-      "triangles": 5164,
+      "style": "talavera",
+      "triangles": 9928,
       "groups": 4,
-      "feature_probes": 4
+      "feature_probes": 1
     },
     {
       "side": "right",
-      "style": "tv",
-      "triangles": 5164,
+      "style": "talavera",
+      "triangles": 9928,
       "groups": 4,
-      "feature_probes": 4
+      "feature_probes": 1
     },
     {
       "side": "left",
-      "style": "cyberpunk",
-      "triangles": 5200,
+      "style": "gameboy",
+      "triangles": 10792,
       "groups": 4,
-      "feature_probes": 4
+      "feature_probes": 2
     },
     {
       "side": "right",
-      "style": "cyberpunk",
-      "triangles": 5200,
+      "style": "gameboy",
+      "triangles": 10792,
       "groups": 4,
-      "feature_probes": 4
+      "feature_probes": 2
     },
     {
       "side": "left",
-      "style": "cartridge",
-      "triangles": 4860,
+      "style": "nes",
+      "triangles": 7896,
       "groups": 4,
-      "feature_probes": 0
+      "feature_probes": 1
     },
     {
       "side": "right",
-      "style": "cartridge",
-      "triangles": 4860,
+      "style": "nes",
+      "triangles": 7896,
       "groups": 4,
-      "feature_probes": 0
+      "feature_probes": 1
     },
     {
       "side": "left",
-      "style": "arcade",
-      "triangles": 7384,
+      "style": "snes",
+      "triangles": 10648,
       "groups": 4,
-      "feature_probes": 0
+      "feature_probes": 1
     },
     {
       "side": "right",
-      "style": "arcade",
-      "triangles": 7392,
+      "style": "snes",
+      "triangles": 10648,
       "groups": 4,
-      "feature_probes": 0
+      "feature_probes": 1
     },
     {
       "side": "left",
-      "style": "mecha",
-      "triangles": 5516,
+      "style": "phone",
+      "triangles": 15572,
       "groups": 4,
-      "feature_probes": 0
+      "feature_probes": 1
     },
     {
       "side": "right",
-      "style": "mecha",
-      "triangles": 5516,
+      "style": "phone",
+      "triangles": 15572,
       "groups": 4,
-      "feature_probes": 0
+      "feature_probes": 1
     },
     {
       "side": "left",
-      "style": "kintsugi",
-      "triangles": 9504,
+      "style": "walkman",
+      "triangles": 12156,
       "groups": 4,
-      "feature_probes": 0
+      "feature_probes": 1
     },
     {
       "side": "right",
-      "style": "kintsugi",
-      "triangles": 9512,
+      "style": "walkman",
+      "triangles": 12156,
       "groups": 4,
-      "feature_probes": 0
+      "feature_probes": 1
+    },
+    {
+      "side": "left",
+      "style": "ipod",
+      "triangles": 8136,
+      "groups": 4,
+      "feature_probes": 1
+    },
+    {
+      "side": "right",
+      "style": "ipod",
+      "triangles": 8136,
+      "groups": 4,
+      "feature_probes": 1
     }
   ]
 }

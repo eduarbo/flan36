@@ -33,6 +33,7 @@ def apply_finish(doc,cover,side,body,accents=None):
 def apply(doc,config):
     catalog=load();errors,clearance=check(config,catalog)
     if errors:raise ValueError('\n'.join(errors[:12]))
+    retired=[side for side in ['left','right'] if config['frames'][side]['style'] in catalog.get('retired_frame_styles',{})]
     config=normalize(config,catalog)
     if not doc or not all(doc.getObject(p+'ActiveFrame') for p in ['L_','R_']):raise ValueError('Open mechanical/revI/Flan36.FCStd first.')
     variants={v['id']:v for v in catalog['variants']};meshes={}
@@ -90,6 +91,7 @@ def apply(doc,config):
         doc.commitTransaction()
     except Exception:
         doc.abortTransaction();raise
+    if retired:A.Console.PrintWarning('Retired frames replaced with Flan on '+', '.join(retired)+'. Other configuration choices are preserved.\n')
     return clearance
 
 def extract(doc):
