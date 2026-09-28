@@ -35,7 +35,7 @@ def normalize(config,catalog=None):
     c=catalog or load();result=copy.deepcopy(config);result['schema']='flan36-config-1'
     for side,keys in c['layout'].items():
         for key in keys:result['keycaps'][side][key['ref']].setdefault('color','#45967b' if key['row']==3 else '#e9dfc6')
-    if 'cases' not in result:result['cases']=copy.deepcopy(c['default_configuration']['cases'])
+    if 'cases' not in result:result['cases']={side:{'style':'solid','cover':True} for side in ['left','right']}
     for side in ['left','right']:
         case=result['cases'][side];style=c['case_styles'][case['style']]
         case.setdefault('base_color',style['base_color']);case.setdefault('plate_color',style['plate_color']);case.setdefault('match_frame',False)
@@ -47,8 +47,11 @@ def valid_color(v):return isinstance(v,str) and len(v)==7 and v[0]=='#' and all(
 
 def check(config,catalog=None):
     c=catalog or load();variants={v['id']:v for v in c['variants']};errors=[];shapes={};minimum=float('inf')
+    if not isinstance(config,dict):return ['Choose a configuration object.'],None
     if config.get('schema') not in ('flan36-config-1','filo36-config-1') or config.get('revision')!='I':return ['Unsupported configuration format or revision.'],None
+    if not isinstance(config.get('keycaps'),dict) or not isinstance(config.get('frames'),dict):return ['Both halves are required.'],None
     if set(config.get('keycaps',{}))!={'left','right'} or set(config.get('frames',{}))!={'left','right'}:return ['Both halves are required.'],None
+    if not isinstance(config.get('batteries'),dict):return ['Select a battery for each half.'],None
     if set(config.get('batteries',{}))!={'left','right'}:return ['Select a battery for each half.'],None
     if 'cases' in config:
         cases=config['cases']
@@ -67,17 +70,20 @@ def check(config,catalog=None):
         if case.get('match_frame') and case.get('style')=='level' and str(case.get('plate_color','')).lower()!=str(f.get('color','')).lower():return ['Linked Level shell and frame colors must match.'],None
         if case.get('match_frame') and str(case.get('base_color','')).lower()!=str(f.get('color','')).lower():return ['Linked rim and frame colors must match.'],None
     for side,keys in c['layout'].items():
-        if config['batteries'][side] not in c['battery_profiles']:errors.append('Unknown battery profile.')
+        if not isinstance(config['batteries'][side],str) or config['batteries'][side] not in c['battery_profiles']:errors.append('Unknown battery profile.')
+        if not isinstance(config['keycaps'][side],dict):return ['Missing keys or unknown positions.'],None
         if set(config['keycaps'][side])!={k['ref'] for k in keys}:return ['Missing keys or unknown positions.'],None
         f=config['frames'][side]
-        if f.get('style') not in c['frame_styles']:errors.append('Unknown frame.')
+        if not isinstance(f.get('style'),str) or f.get('style') not in c['frame_styles']:errors.append('Unknown frame.')
         color=f.get('color','')
         if not valid_color(color):errors.append('Invalid frame color.')
         shapes[side]={}
         for k in keys:
-            x=config['keycaps'][side][k['ref']];v=variants.get(x.get('variant'));turn=x.get('rotation_deg')
+            x=config['keycaps'][side][k['ref']]
+            if not isinstance(x,dict):return ['Invalid keycap choice.'],None
+            v=variants.get(x.get('variant')) if isinstance(x.get('variant'),str) else None;turn=x.get('rotation_deg')
             if 'color' in x and not valid_color(x['color']):return ['Invalid keycap color.'],None
-            if not v or turn not in v['rotations_deg'] or not v['qualified_reference_positions']:
+            if not v or type(turn) not in (int,float) or turn not in v['rotations_deg'] or not v['qualified_reference_positions']:
                 errors.append(f"{side} {k['ref']}: unqualified variant or orientation.");continue
             p=polygon(v['hull_xy_mm'],k,turn);shapes[side][k['ref']]=p
             d=gap(p,c['frame_envelopes'][side]);minimum=min(minimum,d)

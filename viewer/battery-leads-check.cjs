@@ -3,10 +3,11 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),zlib=require('node:zlib'),crypto=require('node:crypto');
 const {chromium}=require(process.env.FLAN36_PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'build/slim-flush/battery-viewer');fs.mkdirSync(out,{recursive:true});
-const html=fs.readFileSync(path.join(root,'docs/index.html'),'utf8');
+const html=fs.readFileSync(path.join(root,'docs/offline.html'),'utf8');
 const scene=JSON.parse(zlib.gunzipSync(Buffer.from(html.match(/<script id="scene-data" type="application\/octet-stream">([\s\S]*?)<\/script>/)[1],'base64')));
+for(const [alias,id] of Object.entries(scene.geometryAliases||{}))scene.geometries[alias]=scene.geometries[id];
 const expectedCount=scene.parts.length;
-const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/index.html');
+const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/offline.html');
 (async()=>{
  const browser=await chromium.launch({headless:true,...(process.env.FLAN36_BROWSER?{executablePath:process.env.FLAN36_BROWSER}:{})});
  try{

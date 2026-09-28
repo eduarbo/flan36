@@ -2,6 +2,7 @@
 import {enhanceColorInput} from './color-input.js';
 import library from '../design/keycap-themes.json';
 import {copy} from './config.js';
+import {createStore} from './storage.js';
 const sides=['left','right'],paletteStorageSlot='flan36.keycap-palettes.v1';
 export const defaultCapColor=key=>key.row===3?'#45967b':'#e9dfc6';
 export function paletteColor(palette,key){
@@ -18,17 +19,18 @@ export function applyCapPalette(config,catalog,palette,targets=sides){const c=co
 export function validatePaletteFile(value,catalog){
  if(value?.schema!=='flan36-keycap-palettes-1'||!Array.isArray(value.palettes)||value.palettes.length>24)throw Error('Choose a Flan36 keycap palette file (up to 24 palettes).');
  for(const p of value.palettes){
-  if(typeof p.name!=='string'||!p.name.trim()||p.name.length>40||!p.colors||Object.keys(p.colors).sort().join()!=='left,right')throw Error('Invalid palette name or halves.');
+  if(!p||typeof p!=='object'||typeof p.name!=='string'||!p.name.trim()||p.name.length>40||!p.colors||Object.keys(p.colors).sort().join()!=='left,right')throw Error('Invalid palette name or halves.');
   for(const side of sides){const colors=p.colors[side];if(!colors||typeof colors!=='object'||Object.keys(colors).sort().join()!==catalog.layout[side].map(k=>k.ref).sort().join()||Object.values(colors).some(c=>typeof c!=='string'||!/^#[0-9a-f]{6}$/i.test(c)))throw Error('Every palette must contain 36 valid key colors.');}
  }
  return copy(value.palettes);
 }
-export function createKeycapColors({$,catalog,get,apply,message}){
+export function createKeycapColors({$,catalog,get,apply,message,storageNotice=message}){
  const colorHex=enhanceColorInput($('cap-color'));
  let selection={side:'both',mode:'all',row:0,column:1,keySide:'left',key:'K01'},custom=[],initialWarning='';
- try{const saved=localStorage.getItem(paletteStorageSlot);if(saved)custom=validatePaletteFile(JSON.parse(saved),catalog);}catch{initialWarning='Saved palettes could not be read. Your keyboard colors are still in its configuration.';}
+ const paletteStore=createStore({key:paletteStorageSlot,validate:v=>{validatePaletteFile(v,catalog);return v;},notify:storageNotice});
+ try{const saved=paletteStore.initialRaw;if(saved)custom=validatePaletteFile(JSON.parse(saved),catalog);}catch{initialWarning='Saved palettes could not be read. Your keyboard colors are still in its configuration.';}
  const buttons=[];
- function remember(){try{localStorage.setItem(paletteStorageSlot,JSON.stringify({schema:'flan36-keycap-palettes-1',palettes:custom}));return true;}catch{message('Palette storage unavailable. Export palettes to keep this collection.',true);return false;}}
+ function remember(){paletteStore.save({schema:'flan36-keycap-palettes-1',palettes:custom});return false;}
  const activeSides=()=>selection.side==='both'?sides:[selection.side];
  const resolved=()=>colorTargets(catalog,selection);
  function selectKey(side,k){if(selection.mode==='row')selection.row=k.row;else if(selection.mode==='column'&&k.row!==3)selection.column=k.col;else{selection.mode='key';selection.side=side;selection.keySide=side;selection.key=k.ref;}sync();}
@@ -66,5 +68,5 @@ export function createKeycapColors({$,catalog,get,apply,message}){
   const colors=targets.map(([s,k])=>c.keycaps[s][k.ref].color||defaultCapColor(k));$('cap-color').value=colors[0]||'#e9dfc6';colorHex.sync(colors);$('cap-selection').textContent=`${targets.length} ${targets.length===1?'key':'keys'} · ${selection.side==='both'?'both halves':selection.side+' half'}`;
  }
  renderCustom();sync();
- return {sync,initialWarning,focus(side,ref){if(ref){selection={...selection,side,mode:'key',keySide:side,key:ref};sync();}}};
+ return {sync,initialWarning,idle:()=>paletteStore.idle(),cancelPending(){if(pending)cancelAnimationFrame(pending);pending=0;},focus(side,ref){if(ref){selection={...selection,side,mode:'key',keySide:side,key:ref};sync();}}};
 }

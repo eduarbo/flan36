@@ -35,7 +35,7 @@ The frame is **1.41 mm lower** than the previous 14.8 mm design; this does not r
 - `design/configurations/`: default and two sculpted preset examples.
 - `hardware/revI/`: two KiCad projects, schematic/PCB placement, local libraries and models; **unrouted**.
 - `docs/images/revI-*.png`: renders calculated from exported meshes.
-- Viewer: self-contained offline HTML, active-configuration GLB and JSON downloads.
+- Viewer: lighter online page, complete self-contained offline HTML, active-configuration GLB and JSON downloads. See the [viewer guide](viewer.md).
 
 Parts retain assembly coordinates. Screw envelopes and nominal engagement are modeled; physical fits, printing orientation and final slicing settings are not qualified. Historical revE/revF/revG/revH sources and receipts remain available for comparison. To rebuild an older viewer, use its historical Git commit; the current shared viewer code targets revI.
 

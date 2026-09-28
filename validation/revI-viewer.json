@@ -1056,19 +1056,27 @@
     },
     {
       "path": "viewer/app.js",
-      "sha256": "62f6374636ca130b54d91d7a8cec57ec710745e191d7a1bb022e51f161510f50"
+      "sha256": "01504e5e14a2f82f45ed9e634b7603d3ea2fc5fc7ca259dd8c9073cc1c4fec73"
     },
     {
       "path": "viewer/config.js",
-      "sha256": "56dbfea2c0e50a48d40474a9875b33b1e0b29a0e87eadbeaa4bd184845c25095"
+      "sha256": "c6e5c12560c2e4d1950174f681767e45ad9a82af4ee7bb71cc95d6c5064d5377"
     },
     {
       "path": "viewer/storage.js",
-      "sha256": "f8daeb8702b9d3fad93d93e2c18e6a66cee29e85a5a70f83da1184769823ceba"
+      "sha256": "8a4fb74ca4a3889fd2685824b71c1102bb781b714535b01b770cdd3734fc7cf9"
+    },
+    {
+      "path": "viewer/history.js",
+      "sha256": "5c0d9f90771c5325027dc7f0aedde6e1b13bed455ddcc300997941f05fffbf31"
+    },
+    {
+      "path": "viewer/assets.js",
+      "sha256": "161172f2366683f7c7432b3ca9a715d298d2a6421dbd40c7e128713a9a28f4fb"
     },
     {
       "path": "viewer/keycap-colors.js",
-      "sha256": "0461cd718298fbface1e60f657ab1389f8654bcd2dd496636ddcd0d9640c6543"
+      "sha256": "7ee64d85df2cad9a424cd72b29128599ffaebcf94f09f48af6dbff99c4e4b3d8"
     },
     {
       "path": "viewer/color-input.js",
@@ -1092,7 +1100,7 @@
     },
     {
       "path": "viewer/explorer.js",
-      "sha256": "2200a6e8993b908e5da23f5e9f1125ac7fa43a4d1fae1f63afae91315de0b63f"
+      "sha256": "5369c88b4f2a24952ee5f5da8170348080a97d58cacbbfe332b2df11dd4b4498"
     },
     {
       "path": "viewer/previews.js",
@@ -1112,22 +1120,22 @@
     },
     {
       "path": "viewer/style.css",
-      "sha256": "3d214bb5422faadd218e6ee4e2ef3b6ff27e229c6e98385ce33f571409035c54"
+      "sha256": "441d02023c2a981896bfa9ea621405d6d627f8c8fb4d823cafc815695d5fae47"
     },
     {
       "path": "viewer/template.html",
-      "sha256": "1dc0c9ded65f98467b602c9a27575e14d574f5f969bb2de99e4740431a34aaf0"
+      "sha256": "8d25c11360e4d3763bc9d7a2691bb40bc1b5d39446fac451a68b6f0194f2a3cc"
     },
     {
       "path": "viewer/build.mjs",
-      "sha256": "278ec3d152897e745604d671980f5aebe830e94c5965b4f6967b696b316f05a4"
+      "sha256": "d930a7ebf39d05dc2e6d1f8cc47d681ea91d4836df454dc4d75026959114a578"
     },
     {
       "path": "viewer/package-lock.json",
       "sha256": "a62090e2bb0ab32205ff582bd3612ff167dc03d9db4c2b6879bb98f5bf25d550"
     }
   ],
-  "viewer_sha256": "c9012c6ef63e146ace353e753d9c4c187fb2ff1ac2afb417cee4bab9adbc5a58",
+  "viewer_sha256": "d80ca3772e5a261ab6b513cbe771a7a7f27ebb57b3020fa3804b1a92f7d6e802",
   "measurements": {
     "bay_width_mm": 24,
     "plate_top_mm": 7.6,
@@ -1138,7 +1146,16 @@
     "cover_ahead_of_top_cap_mm": 0,
     "cover_ahead_of_adjacent_cap_mm": 0
   },
-  "offline": "All geometry, scripts, styles and license notices embedded; external links only open on explicit click.",
+  "offline": "docs/offline.html embeds geometry, scripts, styles, deferred print files and licenses. docs/index.html fetches only the hashed print payload on export.",
+  "offline_sha256": "46cf619720784195cb05dfdcbd22c28d4fb559cf70922cc4f82f861d207df976",
+  "printing": {
+    "path": "docs/assets/printing-16cdb142c14aac743a618594d54a37f8e2a6f9be4c80cb9e26a4f4fd3e3538e7.bin",
+    "sha256": "16cdb142c14aac743a618594d54a37f8e2a6f9be4c80cb9e26a4f4fd3e3538e7",
+    "bytes": 7007878
+  },
+  "geometry_aliases": 18,
+  "online_bytes": 49849638,
+  "offline_bytes": 59193478,
   "limitations": [
     "Commercial representations combine documented nominal dimensions, licensed community CAD and inferred package detail; see components/README.md",
     "Unrouted PCB",

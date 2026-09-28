@@ -9,13 +9,14 @@ const {chromium}=require(process.env.FLAN36_PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..');
 fs.mkdirSync(path.join(root,'build/case-variants'),{recursive:true});
 const hash=buffer=>crypto.createHash('sha256').update(buffer).digest('hex');
-const html=fs.readFileSync(path.join(root,'docs/index.html'),'utf8');
+const html=fs.readFileSync(path.join(root,'docs/offline.html'),'utf8');
 const scene=JSON.parse(require('node:zlib').gunzipSync(Buffer.from(html.match(/<script id="scene-data" type="application\/octet-stream">([\s\S]*?)<\/script>/)[1],'base64')));
+for(const [alias,id] of Object.entries(scene.geometryAliases||{}))scene.geometries[alias]=scene.geometries[id];
 const expectedCount=scene.parts.length;
 const sideCount=side=>scene.parts.filter(p=>p.side===side).length;
 const coverCount=side=>scene.parts.filter(p=>p.side===side&&p.group==='lid').length;
 for(const side of ['left','right'])assert.equal(scene.parts.filter(p=>p.part_id===`${side}-display-socket`&&p.group==='connectors').length,1,'Retained J2 socket must be explicit');
-const target=process.env.FLAN36_VIEWER_URL||pathToFileURL(path.join(root,'docs/index.html')).href;
+const target=process.env.FLAN36_VIEWER_URL||pathToFileURL(path.join(root,'docs/offline.html')).href;
 const offline=target.startsWith('file:');
 
 async function checkDirectory(page){
@@ -299,10 +300,10 @@ async function checkLink(page,group){
   await page.selectOption('#view','front');
   await page.locator('#part-mcu').hover();await checkLink(page,'mcu');
   await page.click('#part-lid');await page.click('[data-style=handheld]');
-  assert.equal(await page.locator('#layer-lid').isChecked(),true,'A frame click reveals a previously hidden cover');
-  assert.equal(await page.locator('#explode').inputValue(),'0');
+  assert.equal(await page.locator('#layer-lid').isChecked(),false,'Changing a frame preserves a hidden cover');
+  assert.equal(await page.locator('#explode').inputValue(),'55');
   await page.click('#frame-target [data-side=both]');await page.click('[data-style=tv]');
-  assert.equal(await page.locator('#half').inputValue(),'both','Both target reveals both halves');
+  assert.equal(await page.locator('#half').inputValue(),'left','Editing both halves preserves the inspected half');
   await page.click('#reset');await page.locator('#part-lid').focus();await page.keyboard.press('Enter');
   assert.equal(await page.locator('#selection-title').textContent(),'Display frame');
   await checkDirectory(page);await checkLink(page,'lid');
@@ -385,7 +386,7 @@ async function checkLink(page,group){
   const receipt={viewer_sha256:hash(Buffer.from(html)),checker_sha256:hash(fs.readFileSync(__filename)),about_measurements_match_model:true,target:offline?'local file with all HTTP(S) requests blocked':'public URL',
     browser:await browser.version(),desktop:true,narrow_viewport_emulation:true,physical_phone_tested:false,public_embedded_scene_matches_current:!offline,
     all_12_layer_filters:true,individual_visibility:true,individual_and_group_solo:true,show_all_recovery:true,occluded_hover_xray_pixel_verified:true,persistent_view_controls:true,fit_actual_pixels_after_zoom:true,fit_empty_feedback:true,full_row_hover:true,half_filters:true,orbit_drag:true,bottom_view:true,full_reset_pixel_identical:true,
-    persistent_component_directory:true,sidebar_line_endpoints:true,directory_visible_during_scroll_and_collapse:true,keyboard_component_selection:true,direct_canvas_picking:true,labels_follow_camera:true,frame_click_reveals_hidden_cover:true,annotation_toggle:true,orbit_does_not_select:true,touch_orbit_and_pinch_do_not_select:true,small_320px_viewport:true,
+    persistent_component_directory:true,sidebar_line_endpoints:true,directory_visible_during_scroll_and_collapse:true,keyboard_component_selection:true,direct_canvas_picking:true,labels_follow_camera:true,frame_change_preserves_hidden_cover:true,annotation_toggle:true,orbit_does_not_select:true,touch_orbit_and_pinch_do_not_select:true,small_320px_viewport:true,
     ten_preview_cards:true,multicolor_glb_roles:true,one_click_frames:true,keyboard_frame_activation:true,mixed_style_and_color_state:true,theme_applies_palette_and_body_overrides_roundtrip:true,sidebar_hover_highlight:true,sidebar_opens_frame_explorer:true,touch_frame_cards_and_sidebar:true,hidden_layer_links_removed:true,highlight_excluded_from_glb:true,
     dual_battery_selection_and_exact_glb:true,captive_frame_pins_preserved:true,keycap_variant_selection:true,frame_style_and_color:true,three_distinct_themed_geometries:true,json_roundtrip:true,invalid_combination_rejected:true,glb_matches_custom_configuration:true,glb_selected_vertices_exact:true,glb_objects:expectedCount,glb_keycaps:36,glb_units:'metres',case_variants:Object.keys(scene.catalog.case_styles).length,case_previews_distinct:true,case_glb_meshes_exact:true,open_cover_configuration:true,legacy_case_default:true,runtime_errors:errors,offline_network_requests:requests.length};
   const caseImages={};for(const [name,source] of [['level','level'],['solid','solid'],['rim','rim'],['terrace','terrace'],['rim-open','rim-open-top']]){const buffer=fs.readFileSync(path.join(root,`build/case-variants/${source}.png`));fs.writeFileSync(path.join(root,`docs/images/revI-case-${name}.png`),buffer);caseImages[name]=hash(buffer);}

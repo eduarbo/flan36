@@ -10,11 +10,11 @@ const esbuild=require('esbuild'),Module=require('node:module');
  for(const f of [catalog.default_configuration,...presets]){
   const old={...f,schema:'filo36-config-1'},current={...f,schema:'flan36-config-1'};
   assert.equal(check(old,catalog).errors.length,0);assert.equal(check(current,catalog).errors.length,0);assert.deepEqual(normalize(old,catalog),normalize(current,catalog));
-  const map=new Map([['filo36.configuration.v1',JSON.stringify(old)]]),storage={getItem:k=>map.get(k),setItem:(k,v)=>map.set(k,v)};
-  const result=restoreConfiguration(storage,catalog);assert.deepEqual(result.configuration,normalize(current,catalog));assert.equal(map.get('filo36.configuration.v1'),JSON.stringify(old));assert.deepEqual(JSON.parse(map.get(savedKey)),normalize(current,catalog));
+  const map=new Map([['filo36.configuration.v1',JSON.stringify(old)]]),storage={getItem:k=>map.get(k)??null,setItem:(k,v)=>map.set(k,v)};
+  const result=restoreConfiguration(storage,catalog);assert.deepEqual(result.configuration,normalize(current,catalog));assert.equal(map.get('filo36.configuration.v1'),JSON.stringify(old));assert.equal(map.has(savedKey),false,'Restoring legacy data must not write during startup');
   const preferred=normalize(catalog.default_configuration,catalog);storage.setItem(savedKey,JSON.stringify(preferred));assert.deepEqual(restoreConfiguration(storage,catalog).configuration,preferred);
-  storage.setItem(savedKey,'broken');assert.deepEqual(restoreConfiguration(storage,catalog).configuration,normalize(current,catalog));
-  storage.setItem=()=>{throw Error('quota')};assert.deepEqual(restoreConfiguration(storage,catalog).configuration,normalize(current,catalog));
+  storage.setItem(savedKey,'broken');assert.equal(restoreConfiguration(storage,catalog).configuration,null);assert.equal(map.get(savedKey),'broken');
+  storage.setItem=()=>{throw Error('quota')};assert.equal(restoreConfiguration(storage,catalog).configuration,null);assert.equal(map.get(savedKey),'broken');
  }
- fs.writeFileSync(path.join(root,'validation/rebrand-config.json'),JSON.stringify({fixtures:presets.length+1,legacy_and_new_equivalent:true,legacy_storage_preserved:true,new_key_preferred:true,invalid_new_falls_back:true,quota_does_not_lose_restored_configuration:true},null,2)+'\n');console.log('PASS: JS schemas, storage migration, precedence, invalid data and quota');
+ fs.mkdirSync(path.join(root,'build/reliability-fix'),{recursive:true});fs.writeFileSync(path.join(root,'build/reliability-fix/rebrand-config.json'),JSON.stringify({fixtures:presets.length+1,legacy_and_new_equivalent:true,legacy_storage_preserved:true,new_key_preferred:true,invalid_new_is_preserved:true,quota_does_not_lose_restored_configuration:true},null,2)+'\n');console.log('PASS: JS schemas, storage migration, precedence, invalid data and quota');
 })().catch(e=>{console.error(e);process.exit(1)});

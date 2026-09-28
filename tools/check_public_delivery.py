@@ -28,5 +28,11 @@ print('Anonymous archive verified:',len(expected),'files',flush=True)
 pageurl='https://eduarbo.github.io/flan36/'
 html=urllib.request.urlopen(pageurl+'?rev='+commit,timeout=60).read()
 assert hashlib.sha1(b'blob '+str(len(html)).encode()+b'\0'+html).hexdigest()==expected['docs/index.html'],'Pages is not yet the published source revision'
-report={'source_commit':commit,'archive_files_verified':len(expected),'archive_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'pages_url':pageurl,'pages_matches_committed_html':True,'viewer_sha256':hashlib.sha256(html).hexdigest(),'authenticated_requests':False,'method':'All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer.'}
+extra={}
+viewer_receipt=json.loads(subprocess.check_output(['git','show',commit+':validation/revI-viewer.json'],cwd=ROOT))
+for name in ['docs/offline.html',viewer_receipt['printing']['path']]:
+    raw=urllib.request.urlopen(pageurl+name.removeprefix('docs/')+'?rev='+commit,timeout=60).read()
+    assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()==expected[name],name
+    extra[name]=hashlib.sha256(raw).hexdigest()
+report={'additional_published_assets':extra,'source_commit':commit,'archive_files_verified':len(expected),'archive_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'pages_url':pageurl,'pages_matches_committed_html':True,'viewer_sha256':hashlib.sha256(html).hexdigest(),'authenticated_requests':False,'method':'All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer.'}
 (out/'public-readback.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report),flush=True)

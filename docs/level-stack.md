@@ -38,7 +38,7 @@ The [nice!view drawing](https://nicekeyboards.com/docs/nice-view/pinout-schemati
 
 13.39 mm is the current dimensioned prototype target, not a claim of an absolute physical minimum. Further reductions require a different qualified connector or module arrangement. Actual socket engagement, soldering, printed strength, battery insulation, cable flex and service forces still need a physical prototype. Both PCB studies remain unrouted; this geometry is not a finished build kit.
 
-[Current digital checks](../validation/revI-level-delivery.json) bind the native source, PCB models, print exports and viewer to this version. Openings preserve cap travel, so parts of the switches can still be visible from above between keys; the Level perimeter conceals their bodies from the sides.
+[Level geometry delivery](../validation/revI-level-delivery.json) is a historical receipt for the floor/Level installation. Its native FCStd hash is still unchanged; its viewer and builder hashes predate later cap-direction and reliability changes. [Cap direction checks](../validation/revI-cap-rows.json) cover the subsequent orientation fix. [Current viewer reliability checks](../validation/revI-reliability.json) bind the current online/offline viewer and configuration behavior. Openings preserve cap travel, so parts of the switches can still be visible from above between keys; the Level perimeter conceals their bodies from the sides.
 
 ## Reproduce
 
@@ -55,6 +55,6 @@ python3 tools/freecad/run_macos.py tools/freecad/check_level_stack.py \
 
 Use a new output directory. The installer preserves the input and checks native save/reopen, unchanged key meshes and transforms, and idempotence. A saved candidate alone is not acceptance. The delivery receipt records the subsequent collision, travel, service, export and viewer checks.
 
-Follow the [CAD export and viewer commands](cad.md#rebuild-the-reference) after adopting an accepted candidate. Run `node viewer/level-check.cjs` before `python tools/check_print_kit.py` to include the Level shell kit alongside the nine existing kit checks. `python tools/check_level_delivery.py` ties those results to the current files. After publication, `python tools/check_public_delivery.py COMMIT` checks the anonymous source archive and live viewer against that exact commit.
+Follow the [CAD export and viewer commands](cad.md#rebuild-the-reference) after adopting an accepted candidate. Run `node viewer/level-check.cjs` before `python tools/check_print_kit.py` to include the Level shell kit alongside the nine existing kit checks. `python tools/check_level_delivery.py` reproduces the historical Level delivery binding only at that snapshot; newer viewer changes require their own scoped receipt. Use `node viewer/reliability-check.cjs` for the current viewer state transitions. After publication, `python tools/check_public_delivery.py COMMIT` checks the anonymous source archive and live viewer against that exact commit.
 
 `build/level-case/` holds ignored, reproducible candidates, diagnostic logs and browser test output. The committed installer/checkers above recreate the delivery artifacts; the installation and review receipts preserve the decisions and superseded candidate findings.

@@ -1,0 +1,468 @@
+{
+  "schema": 1,
+  "scope": "Independent read-only implementation deliberation; root implemented after both reports.",
+  "baseline": {
+    "head": "4d17638357f200a53fe4d6baddc9753209019ca6",
+    "status": "",
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "de2f2452925003b047f0b8e809233703f32168ead601f04e4e92a13ecdb8acf1"
+      },
+      {
+        "path": "docs/customize.md",
+        "sha256": "29540025b0e0267a8499f36654a76a6c09404511c98c324be06411f644a97783"
+      },
+      {
+        "path": "docs/themes-printing.md",
+        "sha256": "bec8fcec5a37f64470b802dee4d12f81d47bfc7d13df205c23528b81b4a1dee4"
+      },
+      {
+        "path": "docs/level-stack.md",
+        "sha256": "1b7f44073c435d81d5ec19b679af0c9dec328f5f36d5af68aade514280969a27"
+      },
+      {
+        "path": "docs/parts.md",
+        "sha256": "3ca0585d18ae2431f9bcb9cbd00d932e8d386f14e5ce9a3bc38446f5bee3e6fc"
+      },
+      {
+        "path": "tools/keycap_config.py",
+        "sha256": "bfba35924ac6dee21d2cc7416daca7f7eed5893c3ae3c10c31b83315068a1ec0"
+      },
+      {
+        "path": "tools/build_viewer_revI.py",
+        "sha256": "dd2065bcae68d4358fb1c2969fd0c526d54ec8f2de25606bde9c15a10c46bd26"
+      },
+      {
+        "path": "tools/freecad/configuration.py",
+        "sha256": "378775f2192dcb080495a182db18964024abdddcff5eef79f7881dcdf8f847d4"
+      },
+      {
+        "path": "tools/freecad/level_stack.py",
+        "sha256": "5b4e75f33f91a6cbdcd84c0209c5d2bce8f2ee54b4087a55eabc16c4b0bd7155"
+      },
+      {
+        "path": "tools/freecad/flush_frames.py",
+        "sha256": "82d880663bed2f69800f0ecf7bc0e564c32c8954d08a05f418b4edca71c7092c"
+      },
+      {
+        "path": "tools/freecad/check_level_stack.py",
+        "sha256": "e419f2a6b2ec93759ca8cb8f3601fef4735e674831231d56cd56a97e742b6c3d"
+      },
+      {
+        "path": "tools/check_level_delivery.py",
+        "sha256": "f0e6befe12abbc48c0beda803017a9500ef8674beef3d5cd32d3b078f4bd3822"
+      },
+      {
+        "path": "tools/check_print_kit.py",
+        "sha256": "55fe33113c198a481f8722095658732f727b7b92022bb339de30900f73970640"
+      },
+      {
+        "path": "design/layout.json",
+        "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+      },
+      {
+        "path": "design/configurations/default.json",
+        "sha256": "f78cbb02d049a00c11c80322b3ceef75c5ea84a0d6dfe9c6a91f35f44076dff1"
+      },
+      {
+        "path": "design/configurations/normal-sculpted.json",
+        "sha256": "73df7e81def26c97a8e7f58f582987314a8a56897e483c441bb6aed7f03a610c"
+      },
+      {
+        "path": "design/configurations/saddle-sculpted.json",
+        "sha256": "af1aba79cedab22c09a43e2e8c949d90fa1af43d347e78193abd30e5fde3b300"
+      },
+      {
+        "path": "keycaps/catalog.json",
+        "sha256": "c69b7c0bdbe38e40edcc53ef3383dfd54486e8e4660b9b790a1f655681205380"
+      },
+      {
+        "path": "validation/revI-level-delivery.json",
+        "sha256": "67474b8ed3961ff89e76887e64b13bc22b3997811e595f89a21588b955e96ffa"
+      },
+      {
+        "path": "validation/revI-print-kit.json",
+        "sha256": "1001ce81b86ebd37ec1189f0f5172f7de73596f13ac339b91db059710e16607c"
+      },
+      {
+        "path": "viewer/template.html",
+        "sha256": "1dc0c9ded65f98467b602c9a27575e14d574f5f969bb2de99e4740431a34aaf0"
+      },
+      {
+        "path": "viewer/style.css",
+        "sha256": "3d214bb5422faadd218e6ee4e2ef3b6ff27e229c6e98385ce33f571409035c54"
+      },
+      {
+        "path": "viewer/build.mjs",
+        "sha256": "278ec3d152897e745604d671980f5aebe830e94c5965b4f6967b696b316f05a4"
+      },
+      {
+        "path": "viewer/app.js",
+        "sha256": "62f6374636ca130b54d91d7a8cec57ec710745e191d7a1bb022e51f161510f50"
+      },
+      {
+        "path": "viewer/appearance.js",
+        "sha256": "30fadac95fa5edb1f667b1a0d03c736e208d2d2f05204604a404bfe77d97eb68"
+      },
+      {
+        "path": "viewer/color-input.js",
+        "sha256": "c6abbe21dd8af64db7a6d111d1757265580924e0e0028b482e9814d5ec1e1f16"
+      },
+      {
+        "path": "viewer/config.js",
+        "sha256": "56dbfea2c0e50a48d40474a9875b33b1e0b29a0e87eadbeaa4bd184845c25095"
+      },
+      {
+        "path": "viewer/explorer.js",
+        "sha256": "2200a6e8993b908e5da23f5e9f1125ac7fa43a4d1fae1f63afae91315de0b63f"
+      },
+      {
+        "path": "viewer/finishes.js",
+        "sha256": "e532d97fe79eaf8b37eb3627141352c6c1c0938466f383d1b1e0d943c6e78438"
+      },
+      {
+        "path": "viewer/keycap-colors.js",
+        "sha256": "0461cd718298fbface1e60f657ab1389f8654bcd2dd496636ddcd0d9640c6543"
+      },
+      {
+        "path": "viewer/previews.js",
+        "sha256": "700c21e97c8896f63c5dac209ed443345b3f763b8a7bc253b5d00d78d751ed15"
+      },
+      {
+        "path": "viewer/printing.js",
+        "sha256": "b7ca61cf86752c4d66f96f770578ad29c503e28e65b875477f97b001e7cd5d66"
+      },
+      {
+        "path": "viewer/storage.js",
+        "sha256": "f8daeb8702b9d3fad93d93e2c18e6a66cee29e85a5a70f83da1184769823ceba"
+      },
+      {
+        "path": "docs/reviews/2026-09-28.md",
+        "sha256": "6b36ce217a3487cee404b13730ea6b853a33a2a936a7daf9b3cddcb835c6232c"
+      },
+      {
+        "path": "viewer/check.cjs",
+        "sha256": "e3b1b5bea5d977976cf23a0020625aa128419162337d7c9d5fc7659bab10bf6f"
+      },
+      {
+        "path": "viewer/performance.cjs",
+        "sha256": "f7910ff377eed4c544836b82a7750ad982d262a670cbd9fc032fd7e7ed389cf1"
+      }
+    ]
+  },
+  "decision": {
+    "snapshot": "4d17638357f200a53fe4d6baddc9753209019ca6",
+    "reviewers": [
+      "role-run-f598fe4c2cbe5c8c9cf9b83f",
+      "role-run-9d88dcb862ce1c4751067810"
+    ],
+    "independence": "Two read-only frozen scope reviews; unchanged input hashes. Root implementation only.",
+    "decision": "Restore without writes; serialize baseline-checked saves with Web Locks; preserve recovery drafts and invalid originals; prepare all geometry before commit; fixed Solid legacy migration; separate view state from design; explicit battery target; session undo/redo with named JSON snapshots; split lazy print payload and deduplicate byte-identical geometry; complete offline HTML.",
+    "agreement": true,
+    "disagreements": [],
+    "disposition": "All existing HIGH/MEDIUM defects are implementation acceptance requirements, including newly identified palette data loss. No unresolved objection to this bounded route. Named JSON snapshots reuse file export; no additional mutable saved-design collection.",
+    "implementation_status": "not_started",
+    "hardware_geometry_changes": false
+  },
+  "reviewers": [
+    {
+      "lens": "domain",
+      "handoff": {
+        "schema_version": 1,
+        "task_id": "flan36-reliability-domain_constructive-20260928",
+        "run_id": "flan36-fix-domain-worker",
+        "provider": "codex-app-subagent",
+        "role": "domain_constructive",
+        "role_assignment_sha256": "bc6056b63048d7c766d23e84df6f44ec79d1c719df8da4d0ecdca93901aeff84",
+        "status": "completed",
+        "summary": "Controller transcription of the independent domain advisory. Both recommend read-only restore, exclusive checked saves, retained recovery, atomic preparation, JS/Python parity, explicit battery targets, preserved camera state, bounded session undo and lazy printing with complete offline delivery. No code changed by reviewer. Existing defects remain implementation acceptance requirements, not objections to the bounded approach. High static confidence; performance requires measurement.",
+        "findings": [
+          {
+            "code": "GR01_RECOVERY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR02_CONCURRENCY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR03_ATOMICITY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR04_LEGACY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR05_BATTERY_TARGET",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR06_GR07_SCOPE",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "VIEW_CONTINUITY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "RELATED_PALETTE_LOSS",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          }
+        ],
+        "recommendations": [
+          "Execute bounded route recorded in build/reliability-fix/decision.json; test negative and simultaneous input, verify actual exports and preserve hardware geometry."
+        ],
+        "changed_paths": [],
+        "validations": [
+          {
+            "name": "Independent enumerated static review",
+            "status": "passed"
+          },
+          {
+            "name": "Implementation acceptance (root-owned follow-up)",
+            "status": "not_run"
+          }
+        ],
+        "defects": [
+          {
+            "severity": "HIGH",
+            "code": "GR01_RECOVERY"
+          },
+          {
+            "severity": "HIGH",
+            "code": "GR02_CONCURRENCY"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "GR03_ATOMICITY"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "GR04_LEGACY"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "GR05_BATTERY_TARGET"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "GR06_GR07_SCOPE"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "VIEW_CONTINUITY"
+          },
+          {
+            "severity": "HIGH",
+            "code": "RELATED_PALETTE_LOSS"
+          }
+        ],
+        "blockers": [],
+        "next_actor": "personal-ops"
+      },
+      "finalization": {
+        "dispatch_binding_sha256": "4a25e181bcbcb009858a27b5c2f10e8c34e64c721c7a562db4cd27ffb0a138c0",
+        "event_id": "role-event-d190d26add50db96492945af",
+        "event_sha256": "b84d2785c922db079803c27f38c3bb2500fa812d1fb4907a3191953eb4a406d1",
+        "event_type": "agent_role_run_terminal",
+        "finalization_request_sha256": "086231b279d489de84ea619ed0a38d0128c1a1871095c4d00b71fe0fcc449771",
+        "finalized_at": "2026-09-28T21:07:21+00:00",
+        "handoff_sha256": "a94ea038e1258236f3e5c2e8d5a6ea645748b927a250ec3dfac4a73b493b2f67",
+        "request_binding_sha256": "f598fe4c2cbe5c8c9cf9b83f395d56f79eadb086fb6c8c2668a2715edb3fd1b1",
+        "role_assignment_sha256": "bc6056b63048d7c766d23e84df6f44ec79d1c719df8da4d0ecdca93901aeff84",
+        "role_contract_sha256": "b7240a91b858a35b2e514516eaef970f9a27e3b43bc54cf9936f596446dfb1f5",
+        "role_run_id": "role-run-f598fe4c2cbe5c8c9cf9b83f",
+        "route_decision_sha256": "8a68afdf930d092f687d27dc6355df2a1e880f3aaeefb9a1fc0c315ae2c71279",
+        "schema_version": 1,
+        "spawn_envelope_sha256": "1d92f48072f2a07ca2d90477cba60a529f963dedc60eeed1c94498999ab54ac7",
+        "task_packet_sha256": "a1533af28e25bd63d5ba4e4d8bed994f982a52bc18186d55fecba482533adbe5",
+        "terminal_state": "PARTIAL",
+        "termination_phase": "verified",
+        "verifier_receipt_sha256": "dcb4935e3ee88c23a90322449e561d2666bb944cc3b816be083b98ac4ff99c04"
+      }
+    },
+    {
+      "lens": "risk",
+      "handoff": {
+        "schema_version": 1,
+        "task_id": "flan36-reliability-adversarial_risk-20260928",
+        "run_id": "flan36-fix-risk-worker",
+        "provider": "codex-app-subagent",
+        "role": "adversarial_risk",
+        "role_assignment_sha256": "15c065be805ae2882750dece1dc6571d483b4edc3e0d07c1f4485a53b4c858f9",
+        "status": "completed",
+        "summary": "Controller transcription of the independent risk advisory. Both recommend read-only restore, exclusive checked saves, retained recovery, atomic preparation, JS/Python parity, explicit battery targets, preserved camera state, bounded session undo and lazy printing with complete offline delivery. No code changed by reviewer. Existing defects remain implementation acceptance requirements, not objections to the bounded approach. High static confidence; performance requires measurement.",
+        "findings": [
+          {
+            "code": "GR01_RECOVERY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR02_CONCURRENCY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR03_ATOMICITY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR04_LEGACY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR05_BATTERY_TARGET",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "GR06_GR07_SCOPE",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "VIEW_CONTINUITY",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          },
+          {
+            "code": "RELATED_PALETTE_LOSS",
+            "claim": "Confirmed existing issue; implementation acceptance recorded in docs/reviews/reliability-plan.md and decision.json.",
+            "evidence": [
+              "docs/reviews/2026-09-28.md",
+              "build/reliability-fix/baseline.json"
+            ]
+          }
+        ],
+        "recommendations": [
+          "Execute bounded route recorded in build/reliability-fix/decision.json; test negative and simultaneous input, verify actual exports and preserve hardware geometry."
+        ],
+        "changed_paths": [],
+        "validations": [
+          {
+            "name": "Independent enumerated static review",
+            "status": "passed"
+          },
+          {
+            "name": "Implementation acceptance (root-owned follow-up)",
+            "status": "not_run"
+          }
+        ],
+        "defects": [
+          {
+            "severity": "HIGH",
+            "code": "GR01_RECOVERY"
+          },
+          {
+            "severity": "HIGH",
+            "code": "GR02_CONCURRENCY"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "GR03_ATOMICITY"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "GR04_LEGACY"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "GR05_BATTERY_TARGET"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "GR06_GR07_SCOPE"
+          },
+          {
+            "severity": "MEDIUM",
+            "code": "VIEW_CONTINUITY"
+          },
+          {
+            "severity": "HIGH",
+            "code": "RELATED_PALETTE_LOSS"
+          }
+        ],
+        "blockers": [],
+        "next_actor": "personal-ops"
+      },
+      "finalization": {
+        "dispatch_binding_sha256": "a1e7032a432bc2f78de387ff45903680efaf02b633953054f914f6ca94a9edd0",
+        "event_id": "role-event-58d0daa74513028fdf69e5cb",
+        "event_sha256": "f2c81e359dc6a3aa3fcb45364eda4cb837a3f390df6313fa4050e2f24e69f865",
+        "event_type": "agent_role_run_terminal",
+        "finalization_request_sha256": "9fc2d1d78af7c0efb5f96c6e9ac7d23c70be80364d91016fdb7451c159072182",
+        "finalized_at": "2026-09-28T21:07:22+00:00",
+        "handoff_sha256": "226ec3b1c17cbc0e0f4c24467ad0e4450fe42575ee2bd61b2ef385e00a521f94",
+        "request_binding_sha256": "9d88dcb862ce1c47510678104e9b27c12ae9770ec3ccc1212a1f63ae43bf19b4",
+        "role_assignment_sha256": "15c065be805ae2882750dece1dc6571d483b4edc3e0d07c1f4485a53b4c858f9",
+        "role_contract_sha256": "52c635a61163e72262b9ed36755d62980bdff2a47b271a20faeb8709d253449b",
+        "role_run_id": "role-run-9d88dcb862ce1c4751067810",
+        "route_decision_sha256": "f9d0aff724554c12a3b8abbd1d822d3c48f85451dc1a7ad7ce7162f3f8e30bea",
+        "schema_version": 1,
+        "spawn_envelope_sha256": "685a02ea92d846918f7bcf0f8d85a8ef0b7b22b38f243cd7a2429ad538155688",
+        "task_packet_sha256": "78fdde0d23c8bffb07a5d9105c2f9acbb069236f105b3cf0cd861082588a22f0",
+        "terminal_state": "PARTIAL",
+        "termination_phase": "verified",
+        "verifier_receipt_sha256": "19b66346999fc99d96e6d6233b61c17f4cd168ab540949603bb87c26ddd2e435"
+      }
+    }
+  ]
+}

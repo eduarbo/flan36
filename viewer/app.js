@@ -6,7 +6,9 @@ import {GLTFExporter} from 'three/addons/exporters/GLTFExporter.js';
 import {copy,check,normalize} from './config.js';
 import {printKit} from './printing.js';
 import {createAppearance,setColor,savedKey} from './appearance.js';
-import {restoreConfiguration} from './storage.js';
+import {restoreConfiguration,createStore,recoveryPrefix} from './storage.js';
+import {createHistory} from './history.js';
+import {decodeBytes,unpack,printLoader} from './assets.js';
 import {enhanceColorInput} from './color-input.js';
 import {createKeycapColors} from './keycap-colors.js';
 import {createExplorer,partInfo} from './explorer.js';
@@ -15,11 +17,13 @@ import {createFrameFinishes,framePalette,finishes} from './finishes.js';
 
 async function start(){
 const $=id=>document.getElementById(id);
-const compressed=Uint8Array.from(atob($('scene-data').textContent),c=>c.charCodeAt(0));
-const data=JSON.parse(await new Response(new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
+const data=await unpack(decodeBytes($('scene-data').textContent));
+const loadPrinting=printLoader(data.printing,$('print-data'));
+if($('print-data').textContent.trim())document.querySelector('[download="Flan36-revI.html"]').href=location.href;
 for(const node of document.querySelectorAll('[data-measurement]'))node.textContent=String(data.measurements[node.dataset.measurement]);
 const catalog=data.catalog;let configuration=normalize(catalog.default_configuration,catalog);
-let restored=false,storageMessage='';try{const saved=restoreConfiguration(localStorage,catalog);if(saved.configuration){configuration=saved.configuration;restored=true;}storageMessage=saved.message;}catch(e){storageMessage='Device storage unavailable; use JSON to restore.';}
+const store=createStore({key:savedKey,validate:value=>{const result=check(value,catalog);if(result.errors.length)throw Error(result.errors[0]);return normalize(value,catalog);},notify:(text,error)=>storageNotice(text,error,'configuration')});
+let restored=false,storageMessage='';try{const saved=restoreConfiguration({getItem:key=>key===savedKey?store.initialRaw:localStorage.getItem(key)},catalog);if(saved.configuration){configuration=saved.configuration;restored=true;}storageMessage=saved.message;}catch(e){storageMessage='Device storage unavailable; use JSON to restore.';}
 const variants=new Map(catalog.variants.map(v=>[v.id,v]));
 const labels={base:'Bases',plate:'Plates',lid:'Frames / covers',keycaps:'Keycaps',switches:'Switches',pcb:'PCB',battery:'Batteries',mcu:'Controllers',display:'Displays',connectors:'Connectors',supports:'Supports',fasteners:'Fasteners / feet'};
 const state={half:'both',layers:Object.fromEntries(Object.keys(labels).map(k=>[k,true])),explode:0,view:'iso'};
@@ -41,10 +45,11 @@ for(const [pos,power] of [[[20,250,160],2.4],[[-220,100,-180],1.1],[[360,30,20],
   const light=new THREE.DirectionalLight('#ffffff',power);light.position.fromArray(pos);scene.add(light);
 }
 
-function decode(text,Type){const bytes=Uint8Array.from(atob(text),c=>c.charCodeAt(0));return new Type(bytes.buffer);}
+function decode(text,Type){const bytes=decodeBytes(text);return new Type(bytes.buffer);}
 const geometries=new Map();
 function geometryFor(id){
   if(!id)return undefined;
+  id=data.geometryAliases?.[id]||id;
   if(geometries.has(id))return geometries.get(id);
   const g=data.geometries[id];if(!g)throw Error('Geometry unavailable: '+id);
   const geometry=new THREE.BufferGeometry();
@@ -52,7 +57,7 @@ function geometryFor(id){
   geometry.setAttribute('normal',new THREE.BufferAttribute(decode(g.normals,Float32Array),3));
   geometry.setIndex(new THREE.BufferAttribute(decode(g.indices,Uint32Array),1));
   if(g.groups)for(const group of g.groups)geometry.addGroup(group.start,group.count,group.materialIndex);
-  geometry.computeBoundingBox();geometries.set(id,geometry);return geometry;
+  geometry.computeBoundingBox();geometries.set(id,geometry);delete g.positions;delete g.normals;delete g.indices;return geometry;
 }
 const materials=new Map();
 function material(color){
@@ -100,12 +105,12 @@ controls.addEventListener('change',()=>{
 });
 let halfHeight=100;
 function resize(){
-  const {width,height}=canvas.getBoundingClientRect();
+  const {width,height}=canvas.getBoundingClientRect();if(width<1||height<1)return;
   renderer.setSize(width,height,false);const aspect=width/height;
   camera.left=-halfHeight*aspect;camera.right=halfHeight*aspect;camera.top=halfHeight;camera.bottom=-halfHeight;
   camera.updateProjectionMatrix();explorer?.layoutChanged();render();
 }
-new ResizeObserver(()=>fit()).observe(canvas);
+new ResizeObserver(()=>resize()).observe(canvas);
 
 function visibleBounds(){
   const box=new THREE.Box3();for(const o of objects)if(o.visible)box.union(new THREE.Box3().setFromObject(o));
@@ -162,7 +167,7 @@ function openPanel(id,section=id){
   $('inspector').scrollTop=0;appearance?.sync();keycapColors?.sync();
 }
 $('collapse-detail').onclick=()=>setCollapsed($('collapse-detail').getAttribute('aria-expanded')==='true');
-for(const name of ['themes','files','about'])$('nav-'+name).onclick=()=>{if(name!=='files')explorer?.clear();openPanel(name);};
+for(const name of ['themes','files','about'])$('nav-'+name).onclick=()=>{if(name!=='files')explorer?.clear();openPanel(name);if(name==='files')refreshRecovery();};
 $('layers').replaceChildren();
 for(const [id,label] of Object.entries(labels)){
   const row=document.createElement('div');row.className='part-row';row.dataset.group=id;
@@ -180,17 +185,17 @@ for(const [id,label] of Object.entries(labels)){
   const eye=document.createElement('span');eye.className='eye';eye.innerHTML='<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.7"/><path class="eye-slash" d="m3 3 18 18"/></svg>';eye.setAttribute('aria-hidden','true');visibility.append(input,eye);
   row.append(button,visibility);$('layers').append(row);
 }
-$('half').addEventListener('change',e=>{state.half=e.target.value;sync();fit();});
+$('half').addEventListener('change',e=>{state.half=e.target.value;sync();});
 function chooseView(view){state.view=view;sync();fit(directions[view]);}
 $('view').addEventListener('change',e=>chooseView(e.target.value));
 for(const button of document.querySelectorAll('[data-view]'))button.onclick=()=>chooseView(button.dataset.view);
-$('explode').addEventListener('input',e=>{state.explode=Number(e.target.value)/100;sync();fit();});
+$('explode').addEventListener('input',e=>{state.explode=Number(e.target.value)/100;sync();});
 $('complete').onclick=reset;$('reset').onclick=()=>{reset();$('view-feedback').textContent='View and layers reset. Your parts are unchanged.';};$('fit').onclick=()=>{fit();$('view-feedback').textContent=objects.some(o=>o.visible)?'Visible parts centered and fitted.':'Nothing visible. Show a layer or choose Assembled.';};
 $('inside').onclick=()=>{reset();for(const k of ['base','plate','lid','keycaps','switches','fasteners'])state.layers[k]=false;sync();fit();};
 $('stack').onclick=()=>{reset();state.half='left';state.explode=.55;for(const k of Object.keys(labels))state.layers[k]=['battery','mcu','display','supports','connectors'].includes(k);sync();fit();};
 $('credits').onclick=()=>$('licenses').showModal();$('close-credits').onclick=()=>$('licenses').close();
 canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();$('error').hidden=false;$('error').textContent='Graphics context lost. Reload the page to restore the viewer.';});
-$('print-kit').onclick=async()=>{const b=$('print-kit');b.disabled=true;try{const {bytes,manifest}=await printKit(configuration,data.printing,{half:$('print-half').value,scope:$('print-scope').value,progress:(i,n)=>b.textContent=`Preparing ${i} / ${n}…`});const url=URL.createObjectURL(new Blob([bytes],{type:'application/zip'})),a=document.createElement('a');a.href=url;a.download=`Flan36-${manifest.half}-${manifest.scope}.zip`;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);$('print-status').textContent=`${manifest.parts.length} printed parts exported. See the included joining instructions.`;}catch(e){$('print-status').textContent='Export failed: '+e.message;}finally{b.disabled=false;b.textContent='Download print kit';}};
+$('print-kit').onclick=async()=>{const b=$('print-kit');b.disabled=true;try{const selected=copy(configuration),half=$('print-half').value,scope=$('print-scope').value;b.textContent='Loading print files…';const registry=await loadPrinting();const {bytes,manifest}=await printKit(selected,registry,{half,scope,progress:(i,n)=>b.textContent=`Preparing ${i} / ${n}…`});const url=URL.createObjectURL(new Blob([bytes],{type:'application/zip'})),a=document.createElement('a');a.href=url;a.download=`Flan36-${manifest.half}-${manifest.scope}.zip`;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);$('print-status').textContent=`${manifest.parts.length} printed parts exported. See the included joining instructions.`;}catch(e){$('print-status').textContent='Export failed: '+e.message;}finally{b.disabled=false;b.textContent='Download print kit';}};
 $('glb').onclick=async()=>{
   const button=$('glb');button.disabled=true;button.textContent='Preparing GLB…';
   try{
@@ -209,6 +214,9 @@ $('glb').onclick=async()=>{
   }catch(error){button.textContent='Export failed; use STEP files';console.error(error);}
   finally{button.disabled=false;}
 };
+const saveWarnings=new Map();
+function storageNotice(text,error,scope){if(error)saveWarnings.set(scope,text);else saveWarnings.delete(scope);$('save-warning').hidden=saveWarnings.size===0;$('save-warning').title=[...saveWarnings.values()].join(' ');message(text,error);}
+$('save-warning').onclick=()=>{openPanel('files');refreshRecovery();$('recovery').open=true;};
 const message=(text,error=false)=>{$('config-status').textContent=text;$('config-status').dataset.error=String(error);};
 const targetKeys=()=>Object.entries(catalog.layout).flatMap(([side,keys])=>keys.filter(k=>{
   const t=$('key-target').value;
@@ -232,33 +240,48 @@ function updateChoices(){
   const result=check(candidate(v.id,turn),catalog);$('apply-keys').disabled=result.errors.length>0;
   $('key-fit').textContent=result.errors.length?result.errors[0]:`Conservative clearance ≥ ${result.minimum.toFixed(2)} mm. Physical seating and travel untested.`;
 }
-function applyConfiguration(next){
+const history=createHistory(configuration);
+let gesture=null;
+document.addEventListener('pointerdown',e=>{if(e.target.type!=='color'){gesture=null;history.endGesture();}},true);
+document.addEventListener('input',e=>{if(e.target.type==='color'||e.target.classList.contains('hex-input'))gesture=e.target;},true);
+document.addEventListener('change',()=>queueMicrotask(()=>{gesture=null;history.endGesture();}),true);
+function applyConfiguration(next,{record=true,persist=true}={}){
   const result=check(next,catalog);if(result.errors.length)throw Error(result.errors[0]);
   next=normalize(next,catalog);
-  for(const o of objects){
-    const {side,key,group}=o.userData;
-    if(group==='base'||group==='plate'){const style=next.cases[side].style;o.geometry=geometryFor(`mechanical/revI/${side}-case-${style}-${group}.stl`);o.material=material(next.cases[side][group+'_color']);o.userData.case_style=style;}
-    if(group==='lid')o.userData.installed=next.cases[side].cover;
+  // Resolve every resource before touching any live object, including both wires.
+  const prepared=objects.map(o=>{
+    const userData=copy(o.userData),{side,key,group}=userData;
+    let geometry=o.geometry,mat=o.material,rotation=o.rotation.y;
+    if(group==='base'||group==='plate'){const style=next.cases[side].style;geometry=geometryFor(`mechanical/revI/${side}-case-${style}-${group}.stl`);mat=material(next.cases[side][group+'_color']);userData.case_style=style;}
+    if(group==='lid')userData.installed=next.cases[side].cover;
     if(group==='keycaps'){
       const choice=next.keycaps[side][key],v=variants.get(choice.variant),k=catalog.layout[side].find(k=>k.ref===key);
-      o.material=material(choice.color);o.userData.color=choice.color;o.geometry=geometryFor(v.path);o.rotation.y=THREE.MathUtils.degToRad(k.angle+choice.rotation_deg);o.userData.base[1]=v.seating_z_mm;
-      o.userData.variant=v.id;o.userData.cap_rotation_deg=choice.rotation_deg;
+      mat=material(choice.color);userData.color=choice.color;geometry=geometryFor(v.path);rotation=THREE.MathUtils.degToRad(k.angle+choice.rotation_deg);userData.base[1]=v.seating_z_mm;
+      userData.variant=v.id;userData.cap_rotation_deg=choice.rotation_deg;
     }
-    if(group==='lid'&&o.userData.frame_style!==undefined){
-      const f=next.frames[side],finish=frameFinish(f.style,side,f.color,f.accents);o.geometry=finish.geometry;o.material=finish.material;o.userData.frame_style=f.style;o.userData.frame_palette=finish.palette;
-    }
-  }
-  for(const o of objects)if(o.userData.group==='battery'){const id=next.batteries[o.userData.side];o.geometry=geometryFor(`mechanical/revI/${o.userData.side}-battery-${id}.stl`);o.userData.battery_profile=id;}
-  for(const o of objects)if(Number.isInteger(o.userData.battery_lead_index)){const id=next.batteries[o.userData.side],wire=data.batteryLeadProfiles[`${o.userData.side}-${id}`].find(p=>p.index===o.userData.battery_lead_index);o.geometry=geometryFor(wire.geometry);o.material=material(wire.color);o.userData.battery_profile=id;}
-  configuration=copy(next);sync();updateChoices();syncConfigurationUI();try{localStorage.setItem(savedKey,JSON.stringify(configuration));message('Saved on this device.');}catch(e){message('Configuration applied. Device storage unavailable; save JSON to keep it.');}
+    if(group==='lid'&&userData.frame_style!==undefined){const f=next.frames[side],finish=frameFinish(f.style,side,f.color,f.accents);geometry=finish.geometry;mat=finish.material;userData.frame_style=f.style;userData.frame_palette=finish.palette;}
+    if(group==='battery'){const id=next.batteries[side];geometry=geometryFor(`mechanical/revI/${side}-battery-${id}.stl`);userData.battery_profile=id;}
+    if(Number.isInteger(userData.battery_lead_index)){const id=next.batteries[side],wire=data.batteryLeadProfiles[`${side}-${id}`].find(p=>p.index===userData.battery_lead_index);geometry=geometryFor(wire.geometry);mat=material(wire.color);userData.battery_profile=id;}
+    return {o,geometry,mat,rotation,userData};
+  });
+  const previous=configuration,old=objects.map(o=>({o,geometry:o.geometry,mat:o.material,rotation:o.rotation.y,userData:o.userData}));
+  const commit=items=>{for(const {o,geometry,mat,rotation,userData} of items){o.geometry=geometry;o.material=mat;o.rotation.y=rotation;o.userData=userData;}};
+  try{commit(prepared);configuration=copy(next);sync();updateChoices();syncConfigurationUI();}
+  catch(error){commit(old);configuration=previous;sync();throw error;}
+  if(record)history.record(next,gesture);syncHistory();
+  if(persist){message('Saving changes…');store.save(configuration);}
 }
+function syncHistory(){$('undo').disabled=!history.canUndo;$('redo').disabled=!history.canRedo;}
+function travelHistory(direction){keycapColors?.cancelPending();gesture=null;const next=direction==='undo'?history.peekUndo():history.peekRedo();if(!next)return;try{applyConfiguration(next,{record:false});history[direction]();syncHistory();}catch(e){message(e.message,true);}}
+$('undo').onclick=()=>travelHistory('undo');$('redo').onclick=()=>travelHistory('redo');
+document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select,[contenteditable=true]')||!(e.ctrlKey||e.metaKey)||e.altKey)return;if(e.key.toLowerCase()==='z'){e.preventDefault();travelHistory(e.shiftKey?'redo':'undo');}});
 function chooseKeyTarget(){
   const target=targetKeys();if(target.length===1){const [side,k]=target[0],choice=configuration.keycaps[side][k.ref];$('key-variant').value=choice.variant;updateChoices();$('key-rotation').value=String(choice.rotation_deg);}
   updateChoices();
 }
 $('key-target').onchange=chooseKeyTarget;$('key-variant').onchange=updateChoices;$('key-rotation').onchange=updateChoices;
 $('apply-keys').onclick=()=>{try{applyConfiguration(candidate($('key-variant').value,Number($('key-rotation').value)));}catch(e){message(e.message,true);}};
-let frameSide='both',caseSide='both';
+let frameSide='both',caseSide='both',batterySide='both';
 const preview=createPreviewRenderer(renderer,geometryFor);
 function card(id,label,src){
   const button=document.createElement('button');button.type='button';button.className='preview-card';button.dataset.choice=id;button.setAttribute('aria-pressed','false');
@@ -270,9 +293,6 @@ function applyFrame(change){
   const cfg=copy(configuration);for(const side of frameTargets()){if(change.style&&!cfg.cases[side].match_frame){const f=cfg.frames[side],p=framePalette(f.style);if(f.color===p.body&&Object.entries(f.accents).every(([k,v])=>v===p[k])){const np=framePalette(change.style);f.color=np.body;f.accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,np[k]]));}}Object.assign(cfg.frames[side],change);if(cfg.cases[side].match_frame){cfg.cases[side].base_color=cfg.frames[side].color;if(cfg.cases[side].style==='level')cfg.cases[side].plate_color=cfg.frames[side].color;}if(change.style)cfg.cases[side].cover=true;}
   try{
     applyConfiguration(cfg);
-    // A new style must be visible even when coming from the internal stack study.
-    if(change.style){for(const o of objects)if(o.userData.group==='lid'&&frameTargets().includes(o.userData.side))hiddenObjects.delete(o.userData.objectIndex);const needsFit=state.explode>0||!state.layers.lid||frameSide==='both'&&state.half!=='both'||state.half!=='both'&&!frameTargets().includes(state.half);
-      if(needsFit){for(const k of Object.keys(state.layers))state.layers[k]=true;state.explode=0;state.half=frameSide;sync();fit();}else sync();}
   }catch(e){message(e.message,true);}
 }
 function caseTargets(){return caseSide==='both'?['left','right']:[caseSide];}
@@ -281,7 +301,7 @@ for(const [id,spec] of Object.entries(catalog.case_styles)){
   // Every thumbnail uses that style's exported parts, with the same camera.
   const button=card(id,spec.label,preview.image(entries,[.15,.8,1],{width:360,height:250}));button.dataset.case=id;button.title=spec.description;
   const img=button.querySelector('img');img.width=360;img.height=250;img.alt=spec.description;
-  button.onclick=()=>{const cfg=copy(configuration);for(const side of caseTargets()){const cs=cfg.cases[side],old=catalog.case_styles[cs.style];if(!cs.match_frame&&cs.base_color===old.base_color&&cs.plate_color===old.plate_color){cs.base_color=spec.base_color;cs.plate_color=spec.plate_color;}cs.style=id;if(cs.match_frame&&id==='level')cs.plate_color=cfg.frames[side].color;}applyConfiguration(cfg);for(const o of objects)if(['base','plate'].includes(o.userData.group)&&caseTargets().includes(o.userData.side))hiddenObjects.delete(o.userData.objectIndex);state.layers.base=state.layers.plate=true;state.half=caseSide;sync();fit();};
+  button.onclick=()=>{const cfg=copy(configuration);for(const side of caseTargets()){const cs=cfg.cases[side],old=catalog.case_styles[cs.style];if(!cs.match_frame&&cs.base_color===old.base_color&&cs.plate_color===old.plate_color){cs.base_color=spec.base_color;cs.plate_color=spec.plate_color;}cs.style=id;if(cs.match_frame&&id==='level')cs.plate_color=cfg.frames[side].color;}applyConfiguration(cfg);};
   $('case-grid').append(button);
 }
 for(const button of $('case-target').children)button.onclick=()=>{caseSide=button.dataset.side;syncConfigurationUI();};
@@ -314,8 +334,12 @@ function reversedTiltedRows(){return Object.entries(catalog.layout).flatMap(([si
   return /^choc_stem_(choc|mx)_size_(normal|saddle)_tilted$/.test(choice.variant)&&((k.row===0&&choice.rotation_deg===0)||(k.row===2&&choice.rotation_deg===180));
 }).map(k=>[side,k.ref]));}
 rowRepair.onclick=()=>{const cfg=copy(configuration);for(const [side,ref] of reversedTiltedRows())cfg.keycaps[side][ref].rotation_deg=(cfg.keycaps[side][ref].rotation_deg+180)%360;try{applyConfiguration(cfg);message('Top and bottom slopes corrected. Your other choices are unchanged.');}catch(e){message(e.message,true);}};
-for(const [id,spec] of Object.entries(catalog.battery_profiles)){const b=document.createElement('button');b.type='button';b.dataset.battery=id;b.textContent=spec.label;b.title=`${spec.width} × ${spec.length} × ${spec.height} mm`;b.onclick=()=>{const c=copy(configuration);for(const side of ['left','right'])c.batteries[side]=id;applyConfiguration(c);};$('battery-options').append(b);}
+for(const [id,spec] of Object.entries(catalog.battery_profiles)){const b=document.createElement('button');b.type='button';b.dataset.battery=id;b.textContent=spec.label;b.title=`${spec.width} × ${spec.length} × ${spec.height} mm`;b.onclick=()=>{const c=copy(configuration);for(const side of batterySide==='both'?['left','right']:[batterySide])c.batteries[side]=id;applyConfiguration(c);};$('battery-options').append(b);}
+for(const b of $('battery-target').children)b.onclick=()=>{batterySide=b.dataset.side;syncConfigurationUI();};
 function syncConfigurationUI(){
+  for(const b of $('battery-target').children)b.setAttribute('aria-pressed',String(b.dataset.side===batterySide));
+  const batteries=(batterySide==='both'?['left','right']:[batterySide]).map(side=>configuration.batteries[side]);
+  $('battery-current').textContent=new Set(batteries).size===1?catalog.battery_profiles[batteries[0]].label:'Mixed profiles';
   const reversed=reversedTiltedRows();rowRepair.hidden=!reversed.length;rowRepair.textContent=`Fix top/bottom slopes (${reversed.length})`;
   const cases=caseTargets().map(side=>configuration.cases[side]),caseStyles=new Set(cases.map(c=>c.style));
   $('case-current').textContent=caseStyles.size===1?catalog.case_styles[cases[0].style].label:'Mixed cases';
@@ -323,7 +347,7 @@ function syncConfigurationUI(){
   for(const b of $('case-target').children)b.setAttribute('aria-pressed',String(b.dataset.side===caseSide));
   $('case-cover').checked=cases.every(c=>c.cover);$('case-cover').indeterminate=cases.some(c=>c.cover)&&!cases.every(c=>c.cover);
   $('cover-state').textContent=cases.every(c=>c.cover)?'Covered':cases.every(c=>!c.cover)?'Exposed stack':'Mixed covers';
-  for(const b of document.querySelectorAll('[data-battery]'))b.setAttribute('aria-pressed',String(['left','right'].every(side=>configuration.batteries[side]===b.dataset.battery)));
+  for(const b of document.querySelectorAll('[data-battery]'))b.setAttribute('aria-pressed',String(batteries.every(id=>id===b.dataset.battery)));
   const frames=frameTargets().map(side=>configuration.frames[side]),styles=new Set(frames.map(f=>f.style)),colors=new Set(frames.map(f=>f.color.toLowerCase()));
   for(const button of $('frame-target').children)button.setAttribute('aria-pressed',String(button.dataset.side===frameSide));
   for(const button of $('frame-grid').children)button.setAttribute('aria-pressed',String(styles.size===1&&styles.has(button.dataset.style)));
@@ -381,23 +405,37 @@ explorer=createExplorer({scene,camera,canvas,objects,requestRender:render,
     if(ref.group==='lid'){setFrameSide(ref.side||'both');openPanel('frames','lid');}
     else if(ref.group==='keycaps'){openPanel('keycaps','keycaps');$('key-details').open=true;if(ref.key)$('key-target').value=ref.side+':'+ref.key;else $('key-target').value='all';chooseKeyTarget();keycapColors?.focus(ref.side,ref.key);}
     else if(['base','plate'].includes(ref.group)){caseSide=ref.side||'both';syncConfigurationUI();openPanel('cases',ref.group);}
-    else if(ref.group==='battery')openPanel('battery','battery');
+    else if(ref.group==='battery'){batterySide=ref.side||'both';syncConfigurationUI();openPanel('battery','battery');}
     else openPanel('none',ref.group);
   },onClear(){$('selection').hidden=true;}
 });
 $('load-trigger').onclick=()=>$('load-config').click();
-function downloadJSON(){const url=URL.createObjectURL(new Blob([JSON.stringify(configuration,null,2)+'\n'],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='Flan36-config.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
+function downloadJSON(){const url=URL.createObjectURL(new Blob([JSON.stringify(configuration,null,2)+'\n'],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download=($('design-name').value.trim().replace(/[^a-z0-9_-]+/gi,'-').slice(0,60)||'Flan36-config')+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
 $('save-config').onclick=downloadJSON;
 $('load-config').onchange=async e=>{try{const f=e.target.files[0];if(f){if(f.size>100000)throw Error('File too large. Choose a configuration JSON.');applyConfiguration(JSON.parse(await f.text()));}}catch(error){message(error.message,true);}finally{e.target.value='';}};
 $('default-config').onclick=()=>applyConfiguration(catalog.default_configuration);
+$('load-saved').onclick=async()=>{try{keycapColors?.cancelPending();applyConfiguration(await store.load(),{persist:false});message('Loaded the saved version. Undo keeps your previous design available.');}catch(e){message(e.message,true);}};
+$('replace-saved').onclick=async()=>{try{await store.replace(configuration);refreshRecovery();}catch(e){message(e.message,true);}};
+function refreshRecovery(){
+ const list=$('recovery-list');list.replaceChildren();
+ try{const keys=[savedKey,'filo36.configuration.v1','flan36.keycap-palettes.v1',...Object.keys(localStorage).filter(k=>k.startsWith(recoveryPrefix))];
+  for(const key of keys){const raw=localStorage.getItem(key);if(raw===null)continue;let content=raw,label=key.includes('palette')?'Saved palettes':'Saved configuration';
+   if(key.startsWith(recoveryPrefix)){try{const v=JSON.parse(raw);content=v.raw;label=v.label+(v.key.includes('palette')?' · palettes':' · design');}catch{label='Unreadable recovery record';}}
+   const b=document.createElement('button');b.textContent='Download '+label;b.onclick=()=>{const url=URL.createObjectURL(new Blob([content],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='Flan36-recovery.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);};list.append(b);
+  }
+ }catch{list.textContent='Device storage is unavailable. Export the current design instead.';}
+}
+window.addEventListener('storage',e=>{if(e.key===savedKey)message('Another tab changed the saved design. Your current view stays here; use Files to load or keep a separate copy.',true);});
 appearance=createAppearance({$,get:()=>configuration,apply:applyConfiguration,targets:kind=>kind==='case'?caseTargets():frameTargets(),preview,frameFinish,material,resize,catalog,geometryFor});
-keycapColors=createKeycapColors({$,catalog,get:()=>configuration,apply:applyConfiguration,message});
-applyConfiguration(configuration);
-if(storageMessage)message(storageMessage,true);else if(restored)message('Restored your saved configuration.');
-if(keycapColors.initialWarning)message(keycapColors.initialWarning,true);
+keycapColors=createKeycapColors({$,catalog,get:()=>configuration,apply:applyConfiguration,message,storageNotice:(text,error)=>storageNotice(text,error,'palettes')});
+applyConfiguration(configuration,{record:false,persist:false});
+if(storageMessage)storageNotice(storageMessage,true,'configuration');else if(restored)message('Restored your saved configuration.');else message('Choose your parts. Changes save on this device.');
+if(keycapColors.initialWarning)storageNotice(keycapColors.initialWarning,true,'palettes');
 
 
 resize();reset();openPanel('cases','base');
+if(new URLSearchParams(location.search).has('diagnostics'))window.flan36=Object.freeze({snapshot:()=>({configuration:copy(configuration),view:copy(state),camera:{position:camera.position.toArray(),quaternion:camera.quaternion.toArray(),target:controls.target.toArray(),zoom:camera.zoom,halfHeight},hidden:[...hiddenObjects],selected:copy(explorer.selected),visible:objects.filter(o=>o.visible).map(o=>o.userData.objectIndex),undo:history.canUndo,redo:history.canRedo}),idle:()=>Promise.all([store.idle(),keycapColors.idle()])});
+
 
 }
 start().catch(error=>{document.getElementById('error').hidden=false;document.getElementById('error').textContent='Could not open the viewer: '+error.message;console.error(error);});

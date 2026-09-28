@@ -4,11 +4,12 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {chromium}=require(process.env.FLAN36_PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..'),THREE=require(path.join(root,'viewer/node_modules/three'));
 const out=process.env.FLAN36_CAP_ROWS_OUT||path.join(root,'build/cap-row-fix/browser');
-const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/index.html');
+const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/offline.html');
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),clone=x=>JSON.parse(JSON.stringify(x));
-const html=fs.readFileSync(path.join(root,'docs/index.html'));
+const html=fs.readFileSync(path.join(root,'docs/offline.html'));
 const packed=html.toString().match(/<script id="scene-data" type="application\/octet-stream">([\s\S]*?)<\/script>/)[1];
 const scene=JSON.parse(require('node:zlib').gunzipSync(Buffer.from(packed,'base64')));
+for(const [alias,id] of Object.entries(scene.geometryAliases||{}))scene.geometries[alias]=scene.geometries[id];
 const geometry=c=>Object.fromEntries(Object.entries(c.keycaps).map(([s,keys])=>[s,Object.fromEntries(Object.entries(keys).map(([k,v])=>[k,{variant:v.variant,rotation_deg:v.rotation_deg}]))]));
 const colors=c=>Object.fromEntries(Object.entries(c.keycaps).map(([s,keys])=>[s,Object.fromEntries(Object.entries(keys).map(([k,v])=>[k,v.color]))]));
 const rest=c=>{const x=clone(c);delete x.keycaps;return x;};
@@ -20,10 +21,10 @@ const errors=[];let browser;
  const p=await context.newPage();p.on('pageerror',e=>errors.push(e.message));
  async function activate(selector){const e=p.locator(selector);for(const d of await e.locator('xpath=ancestor::details').all())if(await d.getAttribute('open')===null){await d.locator(':scope > summary').focus();await p.keyboard.press('Enter');}await e.focus();await p.keyboard.press('Enter');}
  async function ready(){await p.waitForFunction(()=>document.querySelectorAll('[data-preset]').length===3&&localStorage.getItem('flan36.configuration.v1'),null,{timeout:60000});}
- const saved=()=>p.evaluate(()=>JSON.parse(localStorage.getItem('flan36.configuration.v1')));
+ const saved=async()=>{await p.evaluate(()=>window.flan36.idle());return p.evaluate(()=>JSON.parse(localStorage.getItem('flan36.configuration.v1')));};
  async function download(selector,name){await activate('#nav-files');const event=p.waitForEvent('download');await activate(selector);const d=await event,file=path.join(out,name);await d.saveAs(file);assert.equal(await d.failure(),null);return fs.readFileSync(file);}
  async function imported(c){await activate('#nav-files');await p.locator('#load-config').setInputFiles({name:'caps.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(c))});await p.waitForFunction(()=>document.querySelector('#load-config').value==='');assert.equal(await p.locator('#config-status').getAttribute('data-error'),'false');}
- await p.goto(url);await ready();
+ await p.goto(url+(url.includes('?')?'&':'?')+'diagnostics');await p.waitForFunction(()=>document.querySelector('#status').textContent.includes('visible components'));await p.evaluate(()=>document.querySelector('#default-config').click());await ready();
  assert.equal(await p.evaluate(async()=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(document.querySelector('#scene-data').textContent)))).map(x=>x.toString(16).padStart(2,'0')).join('')),hash(Buffer.from(packed)));
  const initial=await saved(),legacy=clone(initial);
  for(const [side,keys] of Object.entries(legacy.keycaps))for(const [ref,choice] of Object.entries(keys)){

@@ -7,7 +7,7 @@ const {chromium}=require(process.env.FLAN36_PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'build/viewer-sidebar');fs.mkdirSync(out,{recursive:true});
 const baseline=process.argv.includes('--baseline'),smoke=process.argv.includes('--smoke'),revision='8b4edc1d8230a5ad4d35b5e4a9b0f66d912f689a';
 assert.ok(!(baseline&&smoke),'--smoke measures only the current viewer');
-const file=baseline?path.join(out,'baseline.html'):path.join(root,'docs/index.html');
+const file=baseline?path.join(out,'baseline.html'):path.join(root,'docs/offline.html');
 if(baseline)fs.writeFileSync(file,execFileSync('git',['show',revision+':docs/index.html'],{cwd:root,maxBuffer:50*1024*1024}));
 const scene=baseline?null:JSON.parse(fs.readFileSync(path.join(root,'build/viewer-scene.json')));
 const expectedCount=baseline?168:scene.parts.length;

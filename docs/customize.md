@@ -132,7 +132,7 @@ node viewer/build.mjs
 FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/hex-check.cjs
 ```
 
-This regenerates ignored `build/hex-check/` screenshots and `result.json`. It must exit successfully with no runtime errors; the result's viewer SHA-256 must match `docs/index.html`. `node viewer/keycolors-check.cjs` with the same environment checks color targets, palettes, persistence and GLB colors in ignored `build/keycolors/`. Rebuild the ignored scene first with `python tools/build_viewer_revI.py` if its source hashes are stale.
+This regenerates ignored `build/hex-check/` screenshots and `result.json`. It must exit successfully with no runtime errors; the result's viewer SHA-256 must match `docs/offline.html`. `node viewer/keycolors-check.cjs` with the same environment checks color targets, palettes, persistence and GLB colors in ignored `build/keycolors/`. Rebuild the ignored scene first with `python tools/build_viewer_revI.py` if its source hashes are stale.
 
 Check sculpted direction with `python3 tools/freecad/run_macos.py tools/freecad/check_cap_rows.py` and `node viewer/cap-rows-check.cjs` (same browser environment). They measure actual cap edges in reopened CAD and exported GLB, reject the former reversed arrangement, and verify explicit repair, custom choices and reload. The native copies, screenshots and reports in `build/cap-row-fix/` are ignored and reproducible. Source STL geometry and seating are unchanged.
 
@@ -141,10 +141,12 @@ Run the broader UI check in a disposable mirror so its screenshots do not overwr
 ```sh
 mkdir -p build/cap-row-fix/full-ui/{viewer,docs/images,design,validation}
 cp viewer/check.cjs build/cap-row-fix/full-ui/viewer/
-cp docs/index.html build/cap-row-fix/full-ui/docs/
+cp docs/offline.html build/cap-row-fix/full-ui/docs/
 cp design/frame-finishes.json build/cap-row-fix/full-ui/design/
 node build/cap-row-fix/full-ui/viewer/check.cjs
 cp build/cap-row-fix/browser/normal-sculpted-side.png docs/images/revI-sculpted-normal.png
 cp build/cap-row-fix/browser/saddle-sculpted-side.png docs/images/revI-sculpted-saddle.png
 python3 tools/check_cap_rows_delivery.py
 ```
+
+For view continuity, undo/redo, named JSON designs and recovery of conflicting saves, see the [viewer guide](viewer.md).

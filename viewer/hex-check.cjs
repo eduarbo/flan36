@@ -3,15 +3,16 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto');
 const {chromium}=require(process.env.FLAN36_PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'build/hex-check');
-const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/index.html');
+const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/offline.html');
 (async()=>{
  fs.mkdirSync(out,{recursive:true});
  const browser=await chromium.launch({headless:true,executablePath:process.env.FLAN36_BROWSER});
  const context=await browser.newContext({viewport:{width:1440,height:960},permissions:['clipboard-read','clipboard-write']});
  const page=await context.newPage(),errors=[],checks=[];page.on('pageerror',e=>errors.push(e.message));
  try{
-  await page.goto(url);await page.waitForSelector('#case-base_color-hex',{timeout:60000});
-  const saved=()=>page.evaluate(()=>{for(const v of Object.values(localStorage)){try{const c=JSON.parse(v);if(c.schema==='flan36-config-1')return c;}catch{}}});
+  await page.goto(url+(url.includes('?')?'&':'?')+'diagnostics');await page.waitForSelector('#case-base_color-hex',{timeout:60000});
+  await page.evaluate(()=>document.querySelector('#default-config').click());
+  const saved=async()=>{await page.evaluate(()=>new Promise(requestAnimationFrame));await page.evaluate(()=>window.flan36.idle());return page.evaluate(()=>{for(const v of Object.values(localStorage)){try{const c=JSON.parse(v);if(c.schema==='flan36-config-1')return c;}catch{}}});};
   const initial=await saved(),geometry=c=>Object.fromEntries(Object.entries(c.keycaps).map(([s,ks])=>[s,Object.fromEntries(Object.entries(ks).map(([k,v])=>[k,[v.variant,v.rotation_deg]]))]));
   const hex=page.locator('#case-base_color-hex');
   await page.locator('#case-link-colors').check();

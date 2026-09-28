@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="theme-color" content="#edf0e9">
 <title>Flan36 · Explore in 3D</title>
 <style>/*__STYLE__*/</style>
 </head>
 <body>
-<header><div><strong>FLAN36</strong><span>REV I / OBJECT EXPLORER</span></div><a href="https://github.com/eduarbo/flan36">Repository ↗</a></header>
+<header><div><strong>FLAN36</strong><span>REV I / OBJECT EXPLORER</span></div><div class="history-controls" aria-label="Design history"><button id="save-warning" hidden title="Open saved-data recovery">Save warning</button><button id="undo" title="Undo design change (Ctrl/Cmd Z)" disabled>↶ Undo</button><button id="redo" title="Redo design change (Ctrl/Cmd Shift Z)" disabled>↷ Redo</button></div><a href="https://github.com/eduarbo/flan36">Repository ↗</a></header>
 <main>
 <section class="stage" aria-label="3D keyboard view">
   <canvas id="canvas" aria-label="Drag to rotate; pinch or scroll to zoom; tap a part to inspect"></canvas>
@@ -40,7 +40,7 @@
     <section id="selection" class="selection" role="region" aria-live="polite" aria-label="Selected component" hidden><button id="clear-selection" aria-label="Clear selected component">×</button><p id="selection-meta" class="eyebrow"></p><h2 id="selection-title"></h2><p id="selection-info"></p><p id="selection-visibility" class="micro"></p><div class="selection-actions"><button id="toggle-selection">Hide</button><button id="isolate-selection" title="Hide everything except this selection">Solo</button><button id="show-all" title="Restore every part and both halves">Show all</button></div><details id="individual-parts"><summary>Individual parts <span id="individual-count"></span></summary><div id="part-visibility-list"></div></details></section>
   <section id="panel-cases" aria-label="Case options">
     <div class="panel-heading"><h2>Cases</h2><span id="case-current"></span></div>
-    <p class="hint">One contour. Three interchangeable designs.</p>
+    <p class="hint">One contour. Four interchangeable designs.</p>
     <div id="case-target" class="segments" role="group" aria-label="Apply case changes to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div>
     <div id="case-grid" class="preview-grid case-grid" role="group" aria-label="Case styles"></div>
     <div id="case-colors" class="color-fields"></div><label class="cover-option"><input type="checkbox" id="case-link-colors"> Match frame and rim</label>
@@ -78,14 +78,15 @@
       <p class="micro">38 source variants; 28 qualify somewhere. No 1.5U reference configuration qualifies. Physical fit remains untested.</p>
     </details>
   </section>
-  <section id="panel-battery" aria-label="Battery options" hidden><h2>Battery profile</h2><div id="battery-options" class="segments" aria-label="Battery profiles"></div><p class="hint">Apply to both halves. Both nominal sizes share the same cradle and cage.</p><p class="micro">Check the finished pack, insulation and leads before assembly. JSON can store a different profile per half.</p></section>
+  <section id="panel-battery" aria-label="Battery options" hidden><div class="panel-heading"><h2>Battery profile</h2><span id="battery-current"></span></div><div id="battery-target" class="segments" role="group" aria-label="Apply battery changes to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div><div id="battery-options" class="segments" aria-label="Battery profiles"></div><p class="hint">Both nominal sizes sit on the insulated case floor inside the same retaining cage.</p><p class="micro">Check the finished pack, insulation and leads before assembly.</p></section>
   <p id="config-status" class="micro config-status" role="status"></p>
   <section id="panel-files" aria-label="Files and export" hidden><details id="project-menu" open><summary>Save &amp; export <span>JSON / GLB / offline</span></summary>
-    <div class="config-actions"><button id="save-config">Save configuration</button><button id="load-trigger">Load JSON</button><input id="load-config" type="file" accept=".json,application/json" hidden><button id="default-config">Restore default parts</button></div>
-    <p class="micro">Transfer JSON selections to FreeCAD. Reset view keeps your choices.</p>
+    <label>Design name<input id="design-name" maxlength="60" placeholder="Flan36-config"></label><div class="config-actions"><button id="save-config">Save configuration</button><button id="load-trigger">Load JSON</button><input id="load-config" type="file" accept=".json,application/json" hidden><button id="default-config">Restore default parts</button></div>
+    <p class="micro">Name and save a JSON design to keep or share it. Load JSON to return to it. Undo/redo keeps the last 40 design steps in this session. Reset view keeps your choices.</p>
 
+    <details id="recovery"><summary>Recover saved data</summary><p class="micro">Downloads preserve the original saved bytes and separate drafts. Load a recovered design with Load JSON, or import a palette from My palettes.</p><div id="recovery-list" class="config-actions"></div><div class="config-actions"><button id="load-saved">Load saved version</button><button id="replace-saved">Use this design as saved version</button></div><p class="micro">Replacing the saved version first keeps its previous contents as a recovery copy.</p></details>
     <h3>Print your parts</h3><label>Halves<select id="print-half"><option value="both">Both</option><option value="left">Left</option><option value="right">Right</option></select></label><label>Parts<select id="print-scope"><option value="shells">Case, plate &amp; installed frame</option><option value="complete">Complete printed set, with supports &amp; washers</option></select></label><button id="print-kit" class="primary">Download print kit</button><p id="print-status" class="micro">ZIP with STL, generic color 3MF, configuration and part list. Bambu palette setup is manual. Screwed case; captive magnetic frame. No clips modeled.</p>
-    <div class="downloads"><button id="glb">Download assembled GLB</button><a href="./index.html" download="Flan36-revI.html">Download offline HTML</a><a href="https://github.com/eduarbo/flan36/blob/main/docs/freecad.md">Edit in FreeCAD + KiCad ↗</a></div>
+    <div class="downloads"><button id="glb">Download assembled GLB</button><a href="./offline.html" download="Flan36-revI.html">Download offline HTML</a><a href="https://github.com/eduarbo/flan36/blob/main/docs/freecad.md">Edit in FreeCAD + KiCad ↗</a></div>
   </details>
   </section><section id="panel-about" aria-label="Prototype information" hidden><details open><summary>About this prototype</summary><div class="notes"><p><b>Bay:</b> <span data-measurement="bay_width_mm"></span> mm · <b>Frame roof:</b> <span data-measurement="cover_top_mm"></span> mm · <b>Plate:</b> <span data-measurement="plate_top_mm"></span> mm. All frame details are flush. Heights above the base, without feet.</p><p>36 Piantor positions. Original KLP Lamé meshes. Units: mm. The directory includes all 12 component groups. A fine line connects the active visible part to its entry.</p><p>Nominal CAD study. Zero geometric DRC violations; 104 unconnected items per PCB. Both battery profiles fit the modeled aperture. Magnetic frames, printed threads, actual cables/contacts and hardware operation require physical tests. Commercial models mix documented dimensions, licensed library CAD and reconstructed details. See the component guide for remaining fit reserves.</p></div><a href="https://github.com/eduarbo/flan36/blob/main/components/README.md">Component models &amp; dimensions ↗</a><a href="https://github.com/eduarbo/flan36/blob/main/docs/slim-flush.md">Slim stack &amp; flush frames ↗</a><button id="credits">Credits and licenses</button></details>
 </section></div>
@@ -93,6 +94,7 @@
 <svg id="leader-lines" aria-hidden="true"><path id="part-link" hidden></path><circle id="part-link-dot" r="2.5" hidden></circle></svg>
 </main>
 <dialog id="licenses"><button id="close-credits">Close</button><h2>Sources and licenses</h2><!--__LICENSES__--></dialog>
+<script id="print-data" type="application/octet-stream">/*__PRINT__*/</script>
 <script id="scene-data" type="application/octet-stream">/*__DATA__*/</script>
 <script>/*__APP__*/</script>
 </body>

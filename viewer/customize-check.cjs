@@ -2,10 +2,11 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto'),zlib=require('zlib');
 const {chromium}=require(process.env.FLAN36_PLAYWRIGHT_MODULE||'playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'build/themes-print');fs.mkdirSync(out,{recursive:true});
-const html=fs.readFileSync(path.join(root,'docs/index.html'));const scene=JSON.parse(zlib.gunzipSync(Buffer.from(html.toString().match(/<script id="scene-data" type="application\/octet-stream">([\s\S]*?)<\/script>/)[1],'base64')));
+const html=fs.readFileSync(path.join(root,'docs/offline.html'));const scene=JSON.parse(zlib.gunzipSync(Buffer.from(html.toString().match(/<script id="scene-data" type="application\/octet-stream">([\s\S]*?)<\/script>/)[1],'base64')));
+for(const [alias,id] of Object.entries(scene.geometryAliases||{}))scene.geometries[alias]=scene.geometries[id];
 (async()=>{const browser=await chromium.launch({headless:true,...(process.env.FLAN36_BROWSER?{executablePath:process.env.FLAN36_BROWSER}:{})});try{
  const context=await browser.newContext({viewport:{width:1440,height:960},acceptDownloads:true}),p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
- const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/index.html');await p.goto(url);await p.waitForFunction(()=>document.querySelector('#config-status').textContent.includes('Saved'),null,{timeout:60000});
+ const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/offline.html');await p.goto(url);await p.waitForFunction(()=>document.querySelector('#status').textContent.includes('visible components'),null,{timeout:60000});
  async function save(name){await p.click('#nav-files');const wait=p.waitForEvent('download');await p.click('#save-config');const d=await wait,file=path.join(out,name+'.json');await d.saveAs(file);return JSON.parse(fs.readFileSync(file));}
  async function color(id,value){await p.locator(id).evaluate((e,v)=>{e.value=v;e.dispatchEvent(new Event('input',{bubbles:true}));},value);}
  const initial=await save('initial');await p.click('#part-base');await p.click('[data-case=rim]');await p.click('#part-lid');await p.click('[data-style=handheld]');await p.click('#part-base');await p.locator('#case-cover').uncheck();

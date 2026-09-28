@@ -7,7 +7,7 @@ const fs=require('fs'),path=require('path'),assert=require('assert/strict'),cryp
 const {chromium}=require(process.env.FLAN36_PLAYWRIGHT_MODULE||'playwright');
 const root=process.env.FLAN36_ROOT||path.resolve(__dirname,'..');
 const out=process.env.FLAN36_KEYCOLORS_OUT||path.join(root,'build/keycolors');
-const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/index.html');
+const url=process.env.FLAN36_VIEWER_URL||'file://'+path.join(root,'docs/offline.html');
 const clone=x=>JSON.parse(JSON.stringify(x));
 const colorMap=c=>Object.fromEntries(Object.entries(c.keycaps).map(([side,keys])=>[side,Object.fromEntries(Object.entries(keys).map(([ref,k])=>[ref,k.color]))]));
 const geometry=c=>({keycaps:Object.fromEntries(Object.entries(c.keycaps).map(([side,keys])=>[side,Object.fromEntries(Object.entries(keys).map(([ref,k])=>[ref,{variant:k.variant,rotation_deg:k.rotation_deg}]))])),frames:Object.fromEntries(Object.entries(c.frames).map(([s,f])=>[s,f.style])),cases:Object.fromEntries(Object.entries(c.cases).map(([s,v])=>[s,{style:v.style,cover:v.cover}])),batteries:c.batteries});
@@ -29,8 +29,8 @@ let step='launch',browser;
  }
  async function activate(selector){await openDetails(selector);const e=p.locator(selector);await e.focus();await e.press('Enter');}
  async function ready(){await p.waitForFunction(()=>{try{return Object.values(localStorage).some(v=>{try{return JSON.parse(v)?.schema==='flan36-config-1';}catch{return false;}});}catch{return false;}},null,{timeout:60000});await p.waitForFunction(()=>document.querySelectorAll('[data-cap-key]').length===36,null,{timeout:60000});}
- async function saved(){return p.evaluate(()=>{for(const value of Object.values(localStorage)){try{const c=JSON.parse(value);if(c?.schema==='flan36-config-1')return c;}catch{}}throw Error('No persisted Flan36 configuration');});}
- async function library(){return p.evaluate(()=>{for(const value of Object.values(localStorage)){try{const c=JSON.parse(value);if(c?.schema==='flan36-keycap-palettes-1')return c;}catch{}}return null;});}
+ async function saved(){await p.evaluate(()=>new Promise(requestAnimationFrame));await p.evaluate(()=>window.flan36.idle());return p.evaluate(()=>{for(const value of Object.values(localStorage)){try{const c=JSON.parse(value);if(c?.schema==='flan36-config-1')return c;}catch{}}throw Error('No persisted Flan36 configuration');});}
+ async function library(){await p.evaluate(()=>new Promise(requestAnimationFrame));await p.evaluate(()=>window.flan36.idle());return p.evaluate(()=>{for(const value of Object.values(localStorage)){try{const c=JSON.parse(value);if(c?.schema==='flan36-keycap-palettes-1')return c;}catch{}}return null;});}
  async function caps(){await activate('#part-keycaps');}
  async function libraryOpen(){await caps();await openDetails('#cap-palette-name');}
  async function download(selector,filename){const pending=p.waitForEvent('download');await activate(selector);const d=await pending,file=path.join(out,filename);await d.saveAs(file);assert.equal(await d.failure(),null);return fs.readFileSync(file);}
@@ -40,7 +40,7 @@ let step='launch',browser;
  // same source directly instead of relying on the inspector retaining 47 MiB.
  const viewerBytes=url.startsWith('file:')?fs.readFileSync(new URL(url)):Buffer.from(await(await fetch(url)).arrayBuffer());
  const viewerSha=crypto.createHash('sha256').update(viewerBytes).digest('hex');
- await p.goto(url);await ready();
+ await p.goto(url+(url.includes('?')?'&':'?')+'diagnostics');await p.waitForFunction(()=>document.querySelector('#status').textContent.includes('visible components'));await p.evaluate(()=>document.querySelector('#default-config').click());await ready();
  const scene=await p.evaluate(async()=>{const bytes=Uint8Array.from(atob(document.querySelector('#scene-data').textContent),c=>c.charCodeAt(0));return JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());});
  const layout=scene.catalog.layout;
  assert.deepEqual(Object.keys(layout).sort(),['left','right']);

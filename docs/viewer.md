@@ -1,33 +1,47 @@
-# Explore the assembly
+# Using the viewer
 
-**[Open the 3D viewer →](https://eduarbo.github.io/flan36/)**
+[Open Flan36](https://eduarbo.github.io/flan36/) · [Download the complete offline viewer](https://eduarbo.github.io/flan36/offline.html)
 
-The component directory stays visible while you inspect or customize the keyboard. Its 12 entries include **Frame**, **Caps**, **PCB**, **Battery** and **MCU**. Open an entry for its controls or information; use its eye to show or hide that layer. Open **Individual parts** within a selected entry to toggle a single piece. **Hide / Show** acts on the selection, **Solo** hides everything else, and **Show all** restores every piece and both halves. Each individual piece also has its own Solo button. **Files** and **About** remain beside the directory. View controls have a fixed bar below the model, independent of the details panel.
+Drag to orbit, scroll or pinch to zoom, and right-drag or use two fingers to pan. **Fit view** recenters the visible parts. Changing a case, frame, keycap, color or battery keeps your camera, hidden parts and layer separation. Resizing the sidebar preserves the view too.
 
-![A component connected directly to its sidebar entry](images/revI-viewer.png)
+Hover or focus a component to highlight it, including through the case. A subtle line connects it to the sidebar. Click a component in the model or directory to inspect it; Escape clears the selection. The sidebar arrow collapses details while keeping the directory available.
 
-## Follow a component
+The eye controls affect visibility. Open **Individual parts** to toggle one piece. **Show all** restores the assembly. **Solo** isolates the selected component. Case, frame and battery controls have explicit **Both / Left / Right** targets; the battery target follows the component you select.
 
-Hover anywhere across a directory row, including its eye, or focus an entry to highlight its visible parts. Click or tap to keep the selection. A selected frame keeps its actual colors; its surface highlight appears only while hovering or focusing the component entry. You can also select a part directly in 3D. A fine line connects the active visible part to its exact directory entry; there are no floating tags. Hover uses a temporary translucent X-ray highlight, so parts remain identifiable behind the case or display. It also previews deliberately hidden pieces without changing their visibility. When no visible surface is available, the hover line points into that component. Leaving hover restores the assembly; selecting an occluded part does not keep the X-ray active.
+**Undo / Redo** keeps 40 design steps during the current session. Ctrl/Cmd Z and Ctrl/Cmd Shift Z work outside text fields. One continuous color gesture is one step. View changes are separate from design history.
 
-**Frame** opens ten actual-mesh previews. Choose a half, then click a thumbnail to apply the design and its original palette. **Body** changes the shell color; the three inlay colors have their own controls. **Restore design colors** resets the palette. Previews show the same flush material volumes used for printing. **Caps** opens KLP presets and individual key editing. **Battery** switches between Adafruit 1570 and 301230 in the shared cradle. Other entries explain the component and its current limitations.
+In **Files**, give your design a name and save its JSON. Load that file to return to the same shapes, per-key colors, frames and batteries. JSON also transfers selections to FreeCAD.
 
-The arrow beside the directory collapses only the details. Component names and section controls stay visible, including while the details scroll. The mobile directory uses a compact grid; all entries stay visible while the detail area scrolls and the model stays on screen.
+## Saved data and recovery
 
-Clear a selection with **×** or **Escape**. **Part links** toggles the connecting line and explains when selection or visibility is needed. During a camera gesture, the line pauses; it reconnects after the gesture settles. Expensive surface searches no longer run during every camera update.
+Opening the viewer never overwrites saved data. If an older or damaged value cannot be read, it stays intact and a **Save warning** links to recovery.
 
-## Move and inspect
+Two current viewer tabs cannot silently replace one another's changes. A stale tab keeps a separate recovery draft. **Files → Recover saved data** lets you download the original values and those drafts. You can load the saved version, export your current design separately, or explicitly use it as the saved version; replacement keeps a recovery copy first. Palette conflicts use the same protection. Import recovered palette files through **My palettes**.
 
-Drag to orbit, scroll or pinch to zoom, and use two fingers to pan. The fixed **View** selector includes 3D, Top, Front, Bottom and side views. **Fit view** centers and fits visible parts without changing the angle; it reports when nothing is visible. **↺** resets the view and layers while keeping your chosen parts.
+If browser storage is unavailable, the design remains editable and exportable in that tab. Export before closing. Session undo does not survive a reload.
 
-The same always-visible bar contains **Assembled**, **Inside**, **Stack**, half selection and **Separate layers**. Exploded spacing is a viewing aid; it does not alter saved geometry. Dragging or using two fingers does not select components.
+## Online and offline
 
-## Keep your choices
+The online viewer loads print files only when you request a print kit. A failed download can be retried without changing the design. Files are matched to the viewer version before use.
 
-Open **Files** for Save configuration, Load JSON, Restore default parts, GLB and offline downloads. JSON transfers selections to another browser or [FreeCAD](customize.md#save-a-configuration-for-freecad). Restoring defaults changes parts; resetting the view does not.
+Use the **Download offline HTML** link for a complete, single-file copy. It opens without a server or network and includes configuration, GLB and print-kit export. The smaller online `index.html` alone is not the offline download.
 
-**Download offline HTML** includes geometry, previews, code and licenses. It needs no network requests after download. The file remains about 33 MiB because it contains the original supported meshes; first-load time depends on the device and connection.
+GLB exports all installed parts assembled, regardless of hidden layers or exploded offsets. Its units are meters; use FreeCAD/STEP for solid editing.
 
-**Download assembled GLB** exports all installed parts in their assembled positions, with the selected keycaps, frames, colors and battery profiles. Hidden layers, exploded offsets, lines and highlights do not alter the exported assembly. GLB uses meters and retains attribution; use FreeCAD/STEP for solid editing.
+Both use the same full-resolution geometry. Print kits preserve the exact native STL files; 3MF retains the registered material volumes. These checks do not qualify physical fit, electronics or a print process.
 
-This remains a nominal CAD study. See [dimensions and limitations](cad.md), [customization rules](customize.md) and [parts](parts.md). Browser checks distinguish desktop and emulated touch viewports from physical-phone and hardware acceptance.
+## Reproduce the checks
+
+With the locked viewer dependencies installed:
+
+```sh
+node viewer/build.mjs
+node viewer/config-contract-check.cjs
+node viewer/rebrand-check.cjs
+FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/reliability-check.cjs
+FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/loading-check.cjs
+```
+
+Outputs under `build/reliability-fix/` are ignored, reproducible test artifacts. The [execution plan](reviews/reliability-plan.md) and [current receipt](../validation/revI-reliability.json) record scope and results. Historical delivery receipts retain their original hashes and scope.
+
+Save serialization uses the browser [Web Locks API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API). Without it, the viewer preserves a separate recovery draft and offers JSON export instead of overwriting shared saved state.
