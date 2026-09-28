@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "description": "Coordinated case, frame and keycap colors; preserve geometry, rotation and joining interfaces.",
+  "description": "Coordinated case, frame and keycap colors. Finger columns share a base; thumbs lists K30, K31 and K32, mirrored by key reference on both halves. Geometry, rotation and joining interfaces are preserved.",
   "themes": [
     {
       "id": "piantor-red",
@@ -15,8 +15,11 @@
       },
       "keycaps": {
         "base": "#e9dfc6",
-        "mods": "#353741",
-        "accent": "#f3deab"
+        "thumbs": [
+          "#353741",
+          "#d93957",
+          "#f3deab"
+        ]
       }
     },
     {
@@ -32,8 +35,11 @@
       },
       "keycaps": {
         "base": "#e9dfc6",
-        "mods": "#353741",
-        "accent": "#9b3056"
+        "thumbs": [
+          "#353741",
+          "#9b3056",
+          "#777780"
+        ]
       }
     },
     {
@@ -49,8 +55,11 @@
       },
       "keycaps": {
         "base": "#e5e8cf",
-        "mods": "#7a9567",
-        "accent": "#385444"
+        "thumbs": [
+          "#7a9567",
+          "#ead5a2",
+          "#385444"
+        ]
       }
     },
     {
@@ -66,8 +75,11 @@
       },
       "keycaps": {
         "base": "#f5e6eb",
-        "mods": "#cc8da5",
-        "accent": "#724b70"
+        "thumbs": [
+          "#cc8da5",
+          "#fff0d9",
+          "#724b70"
+        ]
       }
     },
     {
@@ -83,8 +95,11 @@
       },
       "keycaps": {
         "base": "#f0c977",
-        "mods": "#4a7d95",
-        "accent": "#94b9c2"
+        "thumbs": [
+          "#4a7d95",
+          "#94b9c2",
+          "#d9e7e9"
+        ]
       }
     },
     {
@@ -100,8 +115,11 @@
       },
       "keycaps": {
         "base": "#e8d9a8",
-        "mods": "#4b6553",
-        "accent": "#b65445"
+        "thumbs": [
+          "#4b6553",
+          "#ea9563",
+          "#b65445"
+        ]
       }
     },
     {
@@ -117,8 +135,11 @@
       },
       "keycaps": {
         "base": "#e7b976",
-        "mods": "#b3d3cb",
-        "accent": "#427c7a"
+        "thumbs": [
+          "#b3d3cb",
+          "#447e90",
+          "#427c7a"
+        ]
       }
     },
     {
@@ -134,8 +155,11 @@
       },
       "keycaps": {
         "base": "#bbc8c9",
-        "mods": "#77818e",
-        "accent": "#576778"
+        "thumbs": [
+          "#77818e",
+          "#343946",
+          "#576778"
+        ]
       }
     },
     {
@@ -151,8 +175,11 @@
       },
       "keycaps": {
         "base": "#42e3ba",
-        "mods": "#5e7d85",
-        "accent": "#e098bf"
+        "thumbs": [
+          "#5e7d85",
+          "#e098bf",
+          "#24444b"
+        ]
       }
     },
     {
@@ -168,8 +195,11 @@
       },
       "keycaps": {
         "base": "#60d5d7",
-        "mods": "#827d9e",
-        "accent": "#ee6aa4"
+        "thumbs": [
+          "#827d9e",
+          "#ee6aa4",
+          "#514269"
+        ]
       }
     },
     {
@@ -185,8 +215,11 @@
       },
       "keycaps": {
         "base": "#c69543",
-        "mods": "#e2d5ae",
-        "accent": "#34373b"
+        "thumbs": [
+          "#e2d5ae",
+          "#976044",
+          "#34373b"
+        ]
       }
     },
     {
@@ -202,8 +235,11 @@
       },
       "keycaps": {
         "base": "#d28d72",
-        "mods": "#8d9d7c",
-        "accent": "#b9aa83"
+        "thumbs": [
+          "#8d9d7c",
+          "#e4d5b4",
+          "#b9aa83"
+        ]
       }
     },
     {
@@ -219,8 +255,11 @@
       },
       "keycaps": {
         "base": "#c37753",
-        "mods": "#7a8873",
-        "accent": "#dbc998"
+        "thumbs": [
+          "#7a8873",
+          "#c9ab86",
+          "#dbc998"
+        ]
       }
     },
     {
@@ -236,8 +275,11 @@
       },
       "keycaps": {
         "base": "#efbaad",
-        "mods": "#676093",
-        "accent": "#d5cfeb"
+        "thumbs": [
+          "#676093",
+          "#aaa0ce",
+          "#d5cfeb"
+        ]
       }
     },
     {
@@ -253,8 +295,11 @@
       },
       "keycaps": {
         "base": "#939e96",
-        "mods": "#454b50",
-        "accent": "#c4c5b9"
+        "thumbs": [
+          "#454b50",
+          "#e2e3da",
+          "#c4c5b9"
+        ]
       }
     },
     {
@@ -270,8 +315,11 @@
       },
       "keycaps": {
         "base": "#e7d9b3",
-        "mods": "#616e77",
-        "accent": "#d25c58"
+        "thumbs": [
+          "#616e77",
+          "#d3ae49",
+          "#d25c58"
+        ]
       }
     }
   ]

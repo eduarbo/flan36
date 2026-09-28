@@ -8,7 +8,7 @@ Open the **[3D configurator](https://eduarbo.github.io/flan36/)**. No account or
 
 Open **Caps → Colors**. Choose **Both / Left / Right**, then **All keys, Row, Column or Individual key**. Tap the key map to select a key or its group; pick a color to apply it immediately. Finger columns exclude thumbs. The **Thumbs** row colors all three thumb keys on the selected halves.
 
-Eight keycap palettes provide starting points, including row and column patterns. They change key colors only. **My palettes** saves the exact colors of all 36 keys, with JSON import/export for sharing or another device. **Themes** applies a coordinated palette to the case, frame and keys. Changing keycap shape or rotation preserves its color.
+Eight keycap palettes provide starting points with coordinated thumb accents and a whole-row Sunset option. None gives the pinky column a separate color. They change key colors only. **My palettes** saves the exact colors of all 36 keys, with JSON import/export for sharing or another device. **Themes** applies a coordinated palette to the case, frame and keys. Changing keycap shape or rotation preserves its color.
 
 Configuration JSON, GLB and the FreeCAD import/export macro retain individual key colors. STL has no color data: assign filament per key or paint in the slicer. The case/frame print kit does not include keycap toolpaths; use the unchanged KLP source meshes for those.
 

@@ -42,7 +42,7 @@ FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium no
 FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/loading-check.cjs
 ```
 
-Outputs under `build/reliability-fix/` are ignored, reproducible test artifacts. The [execution plan](reviews/reliability-plan.md) and [current receipt](../validation/revI-reliability.json) record scope and results. Historical delivery receipts retain their original hashes and scope.
+Outputs under `build/reliability-fix/` are ignored, reproducible test artifacts. The [execution plan](reviews/reliability-plan.md) and [reliability receipt](../validation/revI-reliability.json) record scope and results at their stated revision. Historical delivery receipts retain their original hashes and scope.
 
 After publication, pass the exact published commit to both readbacks:
 

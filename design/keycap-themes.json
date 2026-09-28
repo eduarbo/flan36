@@ -5,43 +5,61 @@
       "id": "original",
       "name": "Original",
       "base": "#e9dfc6",
-      "mods": "#e9dfc6",
-      "accent": "#45967b"
+      "thumbs": [
+        "#45967b",
+        "#45967b",
+        "#45967b"
+      ]
     },
     {
       "id": "flan",
       "name": "Caramel",
       "base": "#f5dfa3",
-      "mods": "#b46737",
-      "accent": "#743e2d"
+      "thumbs": [
+        "#b46737",
+        "#d59c5b",
+        "#743e2d"
+      ]
     },
     {
       "id": "pocket",
       "name": "Pocket",
       "base": "#e5dfc8",
-      "mods": "#393941",
-      "accent": "#a83363"
+      "thumbs": [
+        "#353741",
+        "#9b3056",
+        "#777780"
+      ]
     },
     {
       "id": "matcha",
       "name": "Matcha",
       "base": "#e5e8cf",
-      "mods": "#7a9567",
-      "accent": "#385444"
+      "thumbs": [
+        "#7a9567",
+        "#ead5a2",
+        "#385444"
+      ]
     },
     {
       "id": "sakura",
       "name": "Sakura",
       "base": "#f5e6eb",
-      "mods": "#cc8da5",
-      "accent": "#724b70"
+      "thumbs": [
+        "#cc8da5",
+        "#fff0d9",
+        "#724b70"
+      ]
     },
     {
       "id": "ink",
       "name": "Ink",
       "base": "#303541",
-      "mods": "#555e6d",
-      "accent": "#b3d5cd"
+      "thumbs": [
+        "#555e6d",
+        "#77818e",
+        "#b3d5cd"
+      ]
     },
     {
       "id": "sunset",
@@ -50,22 +68,23 @@
       "colors": [
         "#e8b467",
         "#e99578",
-        "#c3657c",
-        "#634965"
+        "#c3657c"
+      ],
+      "thumbs": [
+        "#634965",
+        "#e99578",
+        "#e8b467"
       ]
     },
     {
       "id": "arcade",
-      "name": "Arcade columns",
-      "pattern": "columns",
-      "colors": [
+      "name": "Arcade thumbs",
+      "thumbs": [
         "#d35b79",
         "#daaa5a",
-        "#8daf78",
-        "#609eac",
         "#8879ba"
       ],
-      "accent": "#383c52"
+      "base": "#383c52"
     }
   ]
 }

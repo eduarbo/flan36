@@ -2,6 +2,8 @@
 
 Open [the 3D explorer](https://eduarbo.github.io/flan36/), choose **Themes**, and pick a starting palette. Sixteen presets coordinate the case, frame and keycaps. Their previews use your selected shapes.
 
+All five finger columns share the same base color. Each thumb gets its own coordinated accent, mirrored between halves. In **Caps → Colors**, eight independent palettes follow the same approach: **Sunset rows** colors whole finger rows and **Arcade thumbs** puts its bright accents on the three thumbs. **Original** keeps matching green thumbs.
+
 ![Theme gallery and coordinated rim/frame colors](images/revI-themes.png)
 
 1. Choose **Both halves**, **Left** or **Right**.
@@ -12,11 +14,15 @@ Open [the 3D explorer](https://eduarbo.github.io/flan36/), choose **Themes**, an
 
 Handheld, Retro TV, Cyberpunk, Cartridge, Arcade, Mecha and Kintsugi have four color regions. Smooth, Bevel and Facet use a single body color. Original design palettes remain available through **Restore design colors**.
 
-Changing shapes preserves customized colors. An untouched original design adopts the new shape's original palette. Switching a frame reinstalls its cover; applying a color theme does not.
+Changing shapes preserves customized colors. An untouched original design adopts the new shape's original palette. Frame and theme changes preserve cover visibility and the current inspection.
 
 ## Keep your configuration
 
 Selections save automatically on this device. **Save configuration** downloads JSON for another browser or the FreeCAD configuration macro. JSON carries explicit colors, shapes and cover installation, so a preset name never changes an old saved design. Legacy JSON still loads.
+
+To update an existing design to these colors, select its theme or cap palette again. Custom colors remain editable per key, row or column.
+
+[Palette verification](../validation/revI-thumb-themes.json) covers all 24 presets on both halves, unchanged camera state, previews and exported key colors.
 
 Eye, Solo, camera and exploded views are inspection controls. They do not remove parts from the print kit. Unchecking **Printed display cover** does remove that cover and its targets from the selected assembly.
 

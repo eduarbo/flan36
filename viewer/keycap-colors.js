@@ -6,9 +6,9 @@ import {createStore} from './storage.js';
 const sides=['left','right'],paletteStorageSlot='flan36.keycap-palettes.v1';
 export const defaultCapColor=key=>key.row===3?'#45967b':'#e9dfc6';
 export function paletteColor(palette,key){
+ if(key.row===3)return palette.thumbs[key.col];
  if(palette.pattern==='rows')return palette.colors[key.row];
- if(palette.pattern==='columns')return key.row===3?palette.accent:palette.colors[key.col-1];
- return key.row===3?palette.accent:key.col===1?palette.mods:palette.base;
+ return palette.base;
 }
 export function colorTargets(catalog,selection){
  const selected=selection.side==='both'?sides:[selection.side];

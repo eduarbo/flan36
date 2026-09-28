@@ -1,0 +1,88 @@
+{
+  "scope": "Five equal finger columns and individually accented thumbs in all built-in color presets",
+  "global_themes": 16,
+  "cap_palettes": 8,
+  "both_halves_verified": true,
+  "all_finger_rows_uniform_across_columns": true,
+  "thumb_reference_order": [
+    "K30",
+    "K31",
+    "K32"
+  ],
+  "distinct_global_previews": 16,
+  "camera_and_view_unchanged": true,
+  "mobile_widths": [
+    390,
+    320
+  ],
+  "online_sha256": "c4a31e0ac5e2b0e29b9b048ef709a51f837bb2994884767d10ae3b2c50187dbb",
+  "offline_sha256": "4d0973e829026465509e122edc6cca575383900a0469deb7fc3d4e3004c355f6",
+  "runtime_errors": [],
+  "keycolor_acceptance": {
+    "target": "local generated viewer",
+    "viewer_sha256": "4d0973e829026465509e122edc6cca575383900a0469deb7fc3d4e3004c355f6",
+    "checks": [
+      "36 normalized key colors in exported configuration",
+      "paint both/all/",
+      "paint left/all/",
+      "paint right/all/",
+      "paint both/row/0",
+      "paint left/row/1",
+      "paint right/row/2",
+      "paint both/row/3",
+      "paint both/column/1",
+      "paint left/column/3",
+      "paint right/column/5",
+      "paint left/key/K11",
+      "paint right/key/K11",
+      "columns exclude every thumb on both halves",
+      "selected key map displays actual colors",
+      "geometry preset preserves all colors",
+      "global themes color caps and preserve every selected geometry",
+      "paint right/all/",
+      "dedicated cap palette honors half and preserves geometry",
+      "paint left/key/K01",
+      "paint left/key/K01",
+      "paint both/all/",
+      "custom palette restores all 36 colors without geometry changes",
+      "palette export and valid import",
+      "invalid palette import is atomic across collection and keyboard",
+      "36 distinct colors survive configuration import/export",
+      "invalid keycap color import is atomic",
+      "GLB contains exact 36 configured colors",
+      "final reload matches exported configuration and palette collection"
+    ],
+    "keycaps": 36,
+    "distinct_glb_colors": 36,
+    "glb_sha256": "0e0b6b9fcee04b5d490d1d343e4196524e4799c9e8c99b14adb6dd661ccab896",
+    "runtime_errors": []
+  },
+  "baseline_commit": "601938d4b419aed0127dcbde3c10adc363c27015",
+  "validation_method": "Disposable Chromium profile: select all 16 global themes and all 8 cap palettes, read the resulting 36 colors, compare finger columns within each row and thumbs K30/K31/K32 on each half; compare camera/view snapshots, inspect 16 distinct generated previews and mobile overflow at 390/320px. Existing keycolors-check.cjs verifies targeting, custom palettes, JSON, persistence and all 36 actual GLB material colors.",
+  "sources": [
+    {
+      "path": "design/themes.json",
+      "sha256": "71af587d22b5d0ce9c09044c6ef21087662f66fe2382c62a84cd27a373f5bafc"
+    },
+    {
+      "path": "design/keycap-themes.json",
+      "sha256": "39c422df5764fb5d0d839eab80b98207dcf8f6313686e91eea779946a7908459"
+    },
+    {
+      "path": "viewer/keycap-colors.js",
+      "sha256": "7c6606fbc5d4e98c4b15d99b40ad01a8aee9b4c4b6e5826350d638949f30bee7"
+    },
+    {
+      "path": "viewer/appearance.js",
+      "sha256": "25779ccacbae08407a9768ee61fc5314720fda04fedacf33af15f877c62677cd"
+    },
+    {
+      "path": "viewer/keycolors-check.cjs",
+      "sha256": "006948aa5b10299d8e7802c5701856addb02dc3c0da400a4afe43a2ac972a0e4"
+    },
+    {
+      "path": "docs/images/revI-themes.png",
+      "sha256": "4cc4844b95cfe8182d2f8f23bafef9d574d8d4dcde5c7b402800584e6d0cd644"
+    }
+  ]
+}
