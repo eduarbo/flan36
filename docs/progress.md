@@ -14,7 +14,7 @@
 
 ## Revision I — approved R4 frames
 
-Talavera, Game Boy, SNES, 2000s Phone and iPod now use the approved exact paths and solid palettes. The frame and Level shell rise 0.20 mm to Z13.59; the centered glass stays at Z13.39 and the pin row gains a 0.40 mm cover. Flan, Tape, Orbit, Manga, NES and Walkman retain their existing artwork pending redesign. Flan remains the default. [Construction and verification](frames-extra.md).
+Talavera, Game Boy, SNES, 2000s Phone and iPod now use the approved exact paths and solid palettes. The frame and Level shell rise 0.20 mm to Z13.59; the centered glass stays at Z13.39 and the pin row gains a 0.40 mm cover. Flan, Tape, Orbit, Manga, NES and Walkman retain their existing artwork pending redesign. Flan remains the default. [Construction and verification](frames-extra.md). Public source, viewer, images and an actual print-kit download match the implemented files. [Public readback](../validation/revI-approved-frames-public.json).
 
 The entries below describe their historical snapshots. Their receipts retain original hashes.
 

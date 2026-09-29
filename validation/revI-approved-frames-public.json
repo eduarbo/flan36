@@ -1,0 +1,61 @@
+{
+  "status": "PUBLIC_DIGITAL_IMPLEMENTATION_VERIFIED",
+  "verified_at": "2026-09-29T04:12:15.347417+00:00",
+  "source_commit": "824dd642cabe439e15cd3e2b10535bcc4ae26691",
+  "approved_styles": [
+    "talavera",
+    "gameboy",
+    "snes",
+    "phone",
+    "ipod"
+  ],
+  "deferred_styles": [
+    "flan",
+    "tape",
+    "orbit",
+    "manga",
+    "nes",
+    "walkman"
+  ],
+  "native_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+  "anonymous_archive_and_pages": {
+    "additional_published_assets": {
+      "docs/offline.html": "160f6e1a3de9f829d0aa3181f005814c6e2e17b5aca6b02cbf783e1ff79decb5",
+      "docs/assets/printing-5826a2d5ab3e464d42e856a941023a56710a3b4b41474da8e94e8eab8ba0c3ff.bin": "5826a2d5ab3e464d42e856a941023a56710a3b4b41474da8e94e8eab8ba0c3ff"
+    },
+    "source_commit": "824dd642cabe439e15cd3e2b10535bcc4ae26691",
+    "archive_files_verified": 1446,
+    "archive_sha256": "89585a19c96ea2f303fba9249de37ae2ebffa0490fe9b8866e601ce790f812b7",
+    "pages_url": "https://eduarbo.github.io/flan36/",
+    "pages_matches_committed_html": true,
+    "viewer_sha256": "046f901a25dcc0c0698ca30609a9fcbfe88adc9af8ae48e2a0243510b920f3a8",
+    "authenticated_requests": false,
+    "method": "All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer."
+  },
+  "functional_public_viewer": {
+    "commit": "824dd642cabe439e15cd3e2b10535bcc4ae26691",
+    "public_scene_matches_local": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "public_images": {
+    "source_commit": "824dd642cabe439e15cd3e2b10535bcc4ae26691",
+    "passed": true,
+    "images": {
+      "docs/images/revI-approved-r4.png": "dcb9e9eefc2fefffb4066774fa5d821dc32442cb9c68a835a513528a4a56d240",
+      "docs/images/revI-frame-gallery.png": "84eaf5fb028ad6d902ca1f70702a2d50ad2ad150dc88b4455d6c853c569f2663",
+      "docs/images/revI-assembled.png": "a6b7d614a88c7a8f65694dfeeb0eec3d4afc0ae794d7c5221ca2dde5b8f44a44",
+      "docs/images/revI-top.png": "b91caa182d02d7210551235aa3120189b779d699598a013d55454a55860b9452",
+      "docs/images/revI-side.png": "f24bfb4334b84a6e316e072979d8af143ecb6d65e02a62358d5836d818464b4f",
+      "docs/images/revI-stack.png": "685de7b1125b52354686a60fa91fbc981b314c6620e980d266e510abd78684db",
+      "docs/images/revI-detail.png": "1fc9e9f885d1aa88121ae6b96d2dcd6c0e015b90ffccbf9994434f671ffc1085",
+      "docs/images/revI-corner.png": "934a9d2733a2a8405f2d73b74e2ce9a2a7454647067eb799cd86c0909037aba2",
+      "docs/images/revI-level.png": "a42083a5daa0bd02ce30c27a2bc8d16e095b8d57170f318b350ed7c47de561a6"
+    }
+  },
+  "physical_acceptance": false,
+  "fabrication_ready": false
+}

@@ -58,7 +58,7 @@ python3 tools/freecad/run_macos.py tools/freecad/check_approved_frames.py \
   --report build/approved-r4/reproduced/geometry.json
 ```
 
-The installer preserves its input, saved configuration, caps and deferred artwork, then saves and reopens the candidate. The exporter checks every frame, case and battery variant. [Installation receipt](../validation/revI-approved-frames-native.json) · [Current export checks](../validation/revI-mechanical.json) · [Delivery binding](../validation/revI-approved-frames.json) · [Independent review and viewer checks](../validation/revI-approved-frames-review.json).
+The installer preserves its input, saved configuration, caps and deferred artwork, then saves and reopens the candidate. The exporter checks every frame, case and battery variant. [Installation receipt](../validation/revI-approved-frames-native.json) · [Current export checks](../validation/revI-mechanical.json) · [Delivery binding](../validation/revI-approved-frames.json) · [Independent review and viewer checks](../validation/revI-approved-frames-review.json) · [Verified public files and downloads](../validation/revI-approved-frames-public.json).
 
 Render the five-design sheet with `python tools/render_frames.py --approved-only --output docs/images/revI-approved-r4.png --report validation/revI-approved-frames-render.json`; the default render command produces the full eleven-design gallery. Run `node viewer/frame-collection-check.cjs`, then `python3 tools/check_approved_3mf.py` and `python3 tools/check_approved_frames.py` to verify the rebuilt viewer and registered print kit. The browser check needs Playwright and Chromium, as described in the [CAD guide](cad.md).
 
