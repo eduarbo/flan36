@@ -1,5 +1,8 @@
 # Frame artwork R4
 
+> Historical approval record. The contextual R4 drawings incorrectly filled the entire display opening dark, hiding 0.25 mm beyond the PCB on each side. Use the separate [seam correction](../display-seam-r1/) and [actual-geometry comparison](../display-seam-r1/comparison.png). The six rejected designs now have [R5 proposals](../frame-redesign-r5/). The original proposal text below is preserved as history.
+
+
 **Revised approval drawings.** The +0.20 mm frame/case height is selected. Artwork and display centering await approval; production CAD, PCB and viewer are unchanged.
 
 ![Eleven exact frame proposals](collection.png)

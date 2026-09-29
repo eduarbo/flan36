@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "request_ref": "user:20260929:white-display-seam-and-six-redesigns",
+  "requested_outcome": "Correct the visible pale display seam with real geometry and deliver exact redesign proposals for the six rejected frames before implementing their new artwork.",
+  "requirements": [
+    {
+      "id": "seam",
+      "outcome": "Remove the visible pale display padding without concealing it in a render.",
+      "acceptance": "The actual assembly, native geometry and exports agree, with measurable clearances and a verified direct and oblique view of the corrected seam. A necessary unresolved mechanical tradeoff leaves this result pending."
+    },
+    {
+      "id": "six-proposals",
+      "outcome": "Redesign Flan, Tape, Orbit, Manga, NES and Walkman as exact dimensioned proposals.",
+      "acceptance": "Six publicly accessible solid-color proposals use the same millimetre paths as their editable approval geometry. They are visually inspected and checked for clipping, and remain proposals until the user approves them."
+    }
+  ],
+  "constraints": [
+    "Preserve approved R4 history and the five accepted artwork designs except an explicit seam correction.",
+    "Keep rejected artwork out of production until the new proposals are approved.",
+    "Do not paint nonexistent opaque material into an opening.",
+    "Preserve stack height, display position and the 0.4 mm nozzle target where physically compatible. Expose any necessary tradeoff before adopting it.",
+    "Preserve saved viewer configuration and camera. No physical fit or fabrication qualification is implied."
+  ]
+}

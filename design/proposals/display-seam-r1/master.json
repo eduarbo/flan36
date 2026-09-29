@@ -1,0 +1,2844 @@
+{
+  "schema": "flan36-frame-artwork-master-1",
+  "revision": "R4-seam-1",
+  "status": "NOMINAL_CORRECTION_CANDIDATE",
+  "original_request": "Correct exposed display side bands without a second display translation or height increase.",
+  "units": "mm",
+  "origin": "Left frame top-left envelope corner",
+  "left_xy": [
+    111,
+    11
+  ],
+  "right_transform": "KiCad x = 49 - local_x; y = 11 + local_y. CAD uses -KiCad_y.",
+  "source_sha256": {
+    "mechanical/revI/Flan36.FCStd": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2"
+  },
+  "envelope_mm": [
+    24,
+    56
+  ],
+  "outer_commands": [
+    [
+      "M",
+      1.2,
+      0
+    ],
+    [
+      "L",
+      21.6,
+      0
+    ],
+    [
+      "A",
+      2.4,
+      2.4,
+      0,
+      0,
+      1,
+      24,
+      2.4
+    ],
+    [
+      "L",
+      24,
+      54.8
+    ],
+    [
+      "A",
+      1.2,
+      1.2,
+      0,
+      0,
+      1,
+      22.8,
+      56
+    ],
+    [
+      "L",
+      1.2,
+      56
+    ],
+    [
+      "A",
+      1.2,
+      1.2,
+      0,
+      0,
+      1,
+      0,
+      54.8
+    ],
+    [
+      "L",
+      0,
+      1.2
+    ],
+    [
+      "A",
+      1.2,
+      1.2,
+      0,
+      0,
+      1,
+      1.2,
+      0
+    ],
+    [
+      "Z"
+    ]
+  ],
+  "aperture_commands": [
+    [
+      "M",
+      5.05,
+      7.55
+    ],
+    [
+      "L",
+      18.95,
+      7.55
+    ],
+    [
+      "L",
+      18.95,
+      38.05
+    ],
+    [
+      "L",
+      5.05,
+      38.05
+    ],
+    [
+      "Z"
+    ]
+  ],
+  "aperture_bounds_mm": [
+    5.05,
+    7.55,
+    18.95,
+    38.05
+  ],
+  "native_baseline": {
+    "aperture_bounds_mm": [
+      4.75,
+      7.35,
+      19.25,
+      38.45
+    ],
+    "frame_face_z_mm": 13.59
+  },
+  "bezel": {
+    "width_mm": 2.4,
+    "outer_bounds_mm": [
+      2.65,
+      5.15,
+      21.35,
+      40.45
+    ],
+    "outer_radius_mm": 2.4,
+    "definition": "Exact outward Euclidean offset of the rectangular aperture. Four straight widths and corner normal distances are 2.40 mm.",
+    "exterior_side_margins_mm": [
+      2.65,
+      2.65
+    ],
+    "screen_center_x_mm": 12
+  },
+  "printing_target": {
+    "nozzle_diameter_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "cover_layers_nominal": 2,
+    "frame_orientation": "Colored face down; cover thickness is measured from that bed-facing surface.",
+    "status": "DESIGN_TARGET_NOT_SLICED_OR_PRINT_QUALIFIED",
+    "limitations": "Nozzle diameter is not extrusion width or layer height. Raising the face does not qualify all case walls, tapered artwork tips, clearances or supports."
+  },
+  "common": {
+    "frame_face_z_mm": 13.59,
+    "glass_top_z_mm": 13.39,
+    "pcb_top_z_mm": 12.49,
+    "pcb_bottom_z_mm": 11.49,
+    "solder_reserve_top_z_mm": 12.99,
+    "pin_tip_z_mm": 12.79,
+    "relief_top_z_mm": 12.725,
+    "relief_bounds_mm": [
+      4.05,
+      4.1,
+      19.95,
+      42
+    ],
+    "header_cover_bounds_mm": [
+      5.15,
+      38.1,
+      18.85,
+      41.6
+    ],
+    "glass_bounds_mm": [
+      5.15,
+      7.65,
+      18.85,
+      37.95
+    ],
+    "outer_corner_radii_mm": {
+      "top_left": 1.2,
+      "top_right": 2.4,
+      "bottom_right": 1.2,
+      "bottom_left": 1.2
+    }
+  },
+  "construction": {
+    "ordinary_inlay_depth_mm": 0.4,
+    "ordinary_backing_mm": 1.0,
+    "collar": "Color runs through the 0.865 mm collar. Relief remains at Z12.725. No extra recess or cream gap.",
+    "xy_domains": {
+      "face": "outer minus aperture",
+      "relief_commands": [
+        [
+          "M",
+          4.05,
+          4.1
+        ],
+        [
+          "L",
+          19.95,
+          4.1
+        ],
+        [
+          "L",
+          19.95,
+          42.0
+        ],
+        [
+          "L",
+          4.05,
+          42.0
+        ],
+        [
+          "Z"
+        ]
+      ],
+      "header_commands": [
+        [
+          "M",
+          5.15,
+          38.1
+        ],
+        [
+          "L",
+          18.85,
+          38.1
+        ],
+        [
+          "L",
+          18.85,
+          41.6
+        ],
+        [
+          "L",
+          5.15,
+          41.6
+        ],
+        [
+          "Z"
+        ]
+      ],
+      "cover": "header intersect face",
+      "collar": "(relief intersect face) minus cover",
+      "ordinary": "face minus relief"
+    },
+    "cover_options": [
+      {
+        "id": "B",
+        "face_z_mm": 13.59,
+        "cover_thickness_mm": 0.4,
+        "underside_z_mm": 13.19,
+        "nominal_solder_clearance_mm": 0.2,
+        "ordinary_inlay_z_mm": [
+          13.19,
+          13.59
+        ],
+        "ordinary_roof_bottom_z_mm": 12.19,
+        "minimum_ordinary_backing_mm": 1.0,
+        "collar_z_mm": [
+          12.725,
+          13.59
+        ],
+        "collar_thickness_mm": 0.865,
+        "cover_z_mm": [
+          13.19,
+          13.59
+        ],
+        "matching_case_top_z_mm": 13.59,
+        "status": "SELECTED_BY_USER; construction remains unimplemented and physically unqualified."
+      }
+    ],
+    "option_b_extent": "Raise the whole frame face and matching case top by 0.20 mm. Retain underside Z datums. Apply the separate proposed display-chain XY translation explicitly.",
+    "selected_cover": "B",
+    "selection_authority": "User requested case +0.20 mm for the 0.40 mm cover and a 0.40 mm nozzle target.",
+    "production_ready": false
+  },
+  "transfer": {
+    "method": "Closed M/L/A/C/Z paths in millimetres. Subtract aperture. Resolve features in listed painter order, last wins. Extrude the resulting color partitions according to the approved Z schedule.",
+    "forbidden": [
+      "Redrawing from raster",
+      "Auto-scaling",
+      "Auto-repositioning",
+      "Clipping a motif to fit a support mask",
+      "Changing color values or paths after approval"
+    ],
+    "acceptance": "CAD top-face symmetric difference below 0.002 mm2 per stable role (body/detail/accent/secondary), even when HEX values match; bounds within 0.01 mm; no feature disappearance; source digest equal to approved master. Transform full curves for the right half, never only endpoints."
+  },
+  "styles": {
+    "talavera": {
+      "label": "Talavera",
+      "palette": {
+        "body": "#F1E6CA",
+        "detail": "#244E91",
+        "accent": "#C36443",
+        "secondary": "#244E91"
+      },
+      "note": "Exactly 2.40 mm cobalt bezel; centered aperture and a 12.40 mm square mirrored flower.",
+      "features": [
+        {
+          "id": "ScreenField",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              5.05,
+              5.15
+            ],
+            [
+              "L",
+              18.95,
+              5.15
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              21.349999999999998,
+              7.550000000000001
+            ],
+            [
+              "L",
+              21.349999999999998,
+              38.05
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              18.95,
+              40.449999999999996
+            ],
+            [
+              "L",
+              5.05,
+              40.449999999999996
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              2.65,
+              38.05
+            ],
+            [
+              "L",
+              2.65,
+              7.550000000000001
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              5.05,
+              5.15
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": true
+        },
+        {
+          "id": "Petal0",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              5.8,
+              42.4
+            ],
+            [
+              "C",
+              9.45,
+              42.4,
+              11.3,
+              44.32,
+              11.3,
+              46.03
+            ],
+            [
+              "C",
+              11.3,
+              48.92,
+              5.8,
+              49.88,
+              5.8,
+              42.4
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Petal1",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              18.2,
+              42.4
+            ],
+            [
+              "C",
+              14.55,
+              42.4,
+              12.7,
+              44.32,
+              12.7,
+              46.03
+            ],
+            [
+              "C",
+              12.7,
+              48.92,
+              18.2,
+              49.88,
+              18.2,
+              42.4
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Petal2",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              5.8,
+              54.800000000000004
+            ],
+            [
+              "C",
+              9.45,
+              54.800000000000004,
+              11.3,
+              52.88,
+              11.3,
+              51.17
+            ],
+            [
+              "C",
+              11.3,
+              48.28,
+              5.8,
+              47.32,
+              5.8,
+              54.800000000000004
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Petal3",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              18.2,
+              54.800000000000004
+            ],
+            [
+              "C",
+              14.55,
+              54.800000000000004,
+              12.7,
+              52.88,
+              12.7,
+              51.17
+            ],
+            [
+              "C",
+              12.7,
+              48.28,
+              18.2,
+              47.32,
+              18.2,
+              54.800000000000004
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "TerracottaStar",
+          "color": "accent",
+          "commands": [
+            [
+              "M",
+              12,
+              47.2
+            ],
+            [
+              "C",
+              12.35,
+              47.95,
+              12.65,
+              48.25,
+              13.4,
+              48.6
+            ],
+            [
+              "C",
+              12.65,
+              48.95,
+              12.35,
+              49.25,
+              12,
+              50
+            ],
+            [
+              "C",
+              11.65,
+              49.25,
+              11.35,
+              48.95,
+              10.6,
+              48.6
+            ],
+            [
+              "C",
+              11.35,
+              48.25,
+              11.65,
+              47.95,
+              12,
+              47.2
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        }
+      ]
+    },
+    "gameboy": {
+      "label": "Game Boy",
+      "palette": {
+        "body": "#DCD6BA",
+        "detail": "#42454D",
+        "accent": "#973C60",
+        "secondary": "#A6A392"
+      },
+      "note": "Uniform graphite bezel, berry buttons and three wider diagonal speaker marks.",
+      "features": [
+        {
+          "id": "ScreenField",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              5.05,
+              5.15
+            ],
+            [
+              "L",
+              18.95,
+              5.15
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              21.349999999999998,
+              7.550000000000001
+            ],
+            [
+              "L",
+              21.349999999999998,
+              38.05
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              18.95,
+              40.449999999999996
+            ],
+            [
+              "L",
+              5.05,
+              40.449999999999996
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              2.65,
+              38.05
+            ],
+            [
+              "L",
+              2.65,
+              7.550000000000001
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              5.05,
+              5.15
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": true
+        },
+        {
+          "id": "Dpad",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              5.2,
+              42.85
+            ],
+            [
+              "L",
+              7.6,
+              42.85
+            ],
+            [
+              "L",
+              7.6,
+              45.25
+            ],
+            [
+              "L",
+              10.0,
+              45.25
+            ],
+            [
+              "L",
+              10.0,
+              47.65
+            ],
+            [
+              "L",
+              7.6,
+              47.65
+            ],
+            [
+              "L",
+              7.6,
+              50.050000000000004
+            ],
+            [
+              "L",
+              5.2,
+              50.050000000000004
+            ],
+            [
+              "L",
+              5.2,
+              47.65
+            ],
+            [
+              "L",
+              2.8,
+              47.65
+            ],
+            [
+              "L",
+              2.8,
+              45.25
+            ],
+            [
+              "L",
+              5.2,
+              45.25
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "A",
+          "color": "accent",
+          "commands": [
+            [
+              "M",
+              17.3,
+              44.7
+            ],
+            [
+              "A",
+              1.9,
+              1.9,
+              0,
+              1,
+              1,
+              21.099999999999998,
+              44.7
+            ],
+            [
+              "A",
+              1.9,
+              1.9,
+              0,
+              1,
+              1,
+              17.3,
+              44.7
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "B",
+          "color": "accent",
+          "commands": [
+            [
+              "M",
+              13.6,
+              47.9
+            ],
+            [
+              "A",
+              1.9,
+              1.9,
+              0,
+              1,
+              1,
+              17.4,
+              47.9
+            ],
+            [
+              "A",
+              1.9,
+              1.9,
+              0,
+              1,
+              1,
+              13.6,
+              47.9
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Select",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              4.1,
+              52.45
+            ],
+            [
+              "L",
+              7.6,
+              52.45
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              8.2,
+              53.050000000000004
+            ],
+            [
+              "L",
+              8.2,
+              53.050000000000004
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              7.6,
+              53.650000000000006
+            ],
+            [
+              "L",
+              4.1,
+              53.650000000000006
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              3.5,
+              53.050000000000004
+            ],
+            [
+              "L",
+              3.5,
+              53.050000000000004
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              4.1,
+              52.45
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Speaker0",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              13.3,
+              51.5
+            ],
+            [
+              "L",
+              14.4,
+              51.5
+            ],
+            [
+              "L",
+              15.5,
+              54.5
+            ],
+            [
+              "L",
+              14.4,
+              54.5
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Speaker1",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              15.850000000000001,
+              51.5
+            ],
+            [
+              "L",
+              16.95,
+              51.5
+            ],
+            [
+              "L",
+              18.05,
+              54.5
+            ],
+            [
+              "L",
+              16.95,
+              54.5
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Speaker2",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              18.4,
+              51.5
+            ],
+            [
+              "L",
+              19.5,
+              51.5
+            ],
+            [
+              "L",
+              20.6,
+              54.5
+            ],
+            [
+              "L",
+              19.5,
+              54.5
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        }
+      ]
+    },
+    "snes": {
+      "label": "SNES",
+      "palette": {
+        "body": "#D1D0C9",
+        "detail": "#464751",
+        "accent": "#746198",
+        "secondary": "#ACA0C2"
+      },
+      "note": "Uniform bezel, equal header capsules and a regular lavender button diamond.",
+      "features": [
+        {
+          "id": "ScreenField",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              5.05,
+              5.15
+            ],
+            [
+              "L",
+              18.95,
+              5.15
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              21.349999999999998,
+              7.550000000000001
+            ],
+            [
+              "L",
+              21.349999999999998,
+              38.05
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              18.95,
+              40.449999999999996
+            ],
+            [
+              "L",
+              5.05,
+              40.449999999999996
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              2.65,
+              38.05
+            ],
+            [
+              "L",
+              2.65,
+              7.550000000000001
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              5.05,
+              5.15
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": true
+        },
+        {
+          "id": "Dpad",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              4.9,
+              43.3
+            ],
+            [
+              "L",
+              7.1000000000000005,
+              43.3
+            ],
+            [
+              "L",
+              7.1000000000000005,
+              45.5
+            ],
+            [
+              "L",
+              9.3,
+              45.5
+            ],
+            [
+              "L",
+              9.3,
+              47.7
+            ],
+            [
+              "L",
+              7.1000000000000005,
+              47.7
+            ],
+            [
+              "L",
+              7.1000000000000005,
+              49.9
+            ],
+            [
+              "L",
+              4.9,
+              49.9
+            ],
+            [
+              "L",
+              4.9,
+              47.7
+            ],
+            [
+              "L",
+              2.7,
+              47.7
+            ],
+            [
+              "L",
+              2.7,
+              45.5
+            ],
+            [
+              "L",
+              4.9,
+              45.5
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "A",
+          "color": "accent",
+          "commands": [
+            [
+              "M",
+              18.1,
+              47.8
+            ],
+            [
+              "A",
+              1.7,
+              1.7,
+              0,
+              1,
+              1,
+              21.5,
+              47.8
+            ],
+            [
+              "A",
+              1.7,
+              1.7,
+              0,
+              1,
+              1,
+              18.1,
+              47.8
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "B",
+          "color": "accent",
+          "commands": [
+            [
+              "M",
+              14.8,
+              51.1
+            ],
+            [
+              "A",
+              1.7,
+              1.7,
+              0,
+              1,
+              1,
+              18.2,
+              51.1
+            ],
+            [
+              "A",
+              1.7,
+              1.7,
+              0,
+              1,
+              1,
+              14.8,
+              51.1
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "X",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              14.8,
+              44.5
+            ],
+            [
+              "A",
+              1.7,
+              1.7,
+              0,
+              1,
+              1,
+              18.2,
+              44.5
+            ],
+            [
+              "A",
+              1.7,
+              1.7,
+              0,
+              1,
+              1,
+              14.8,
+              44.5
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Y",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              11.5,
+              47.8
+            ],
+            [
+              "A",
+              1.7,
+              1.7,
+              0,
+              1,
+              1,
+              14.899999999999999,
+              47.8
+            ],
+            [
+              "A",
+              1.7,
+              1.7,
+              0,
+              1,
+              1,
+              11.5,
+              47.8
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Power",
+          "color": "accent",
+          "commands": [
+            [
+              "M",
+              4.5,
+              1.8
+            ],
+            [
+              "L",
+              9.5,
+              1.8
+            ],
+            [
+              "A",
+              0.7,
+              0.7,
+              0,
+              0,
+              1,
+              10.2,
+              2.5
+            ],
+            [
+              "L",
+              10.2,
+              2.5
+            ],
+            [
+              "A",
+              0.7,
+              0.7,
+              0,
+              0,
+              1,
+              9.5,
+              3.2
+            ],
+            [
+              "L",
+              4.5,
+              3.2
+            ],
+            [
+              "A",
+              0.7,
+              0.7,
+              0,
+              0,
+              1,
+              3.8,
+              2.5
+            ],
+            [
+              "L",
+              3.8,
+              2.5
+            ],
+            [
+              "A",
+              0.7,
+              0.7,
+              0,
+              0,
+              1,
+              4.5,
+              1.8
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Reset",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              14.5,
+              1.8
+            ],
+            [
+              "L",
+              19.500000000000004,
+              1.8
+            ],
+            [
+              "A",
+              0.7,
+              0.7,
+              0,
+              0,
+              1,
+              20.200000000000003,
+              2.5
+            ],
+            [
+              "L",
+              20.200000000000003,
+              2.5
+            ],
+            [
+              "A",
+              0.7,
+              0.7,
+              0,
+              0,
+              1,
+              19.500000000000004,
+              3.2
+            ],
+            [
+              "L",
+              14.5,
+              3.2
+            ],
+            [
+              "A",
+              0.7,
+              0.7,
+              0,
+              0,
+              1,
+              13.8,
+              2.5
+            ],
+            [
+              "L",
+              13.8,
+              2.5
+            ],
+            [
+              "A",
+              0.7,
+              0.7,
+              0,
+              0,
+              1,
+              14.5,
+              1.8
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Select",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              4.3999999999999995,
+              52.7
+            ],
+            [
+              "L",
+              9.6,
+              52.7
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              10.2,
+              53.300000000000004
+            ],
+            [
+              "L",
+              10.2,
+              53.300000000000004
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              9.6,
+              53.900000000000006
+            ],
+            [
+              "L",
+              4.3999999999999995,
+              53.900000000000006
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              3.8,
+              53.300000000000004
+            ],
+            [
+              "L",
+              3.8,
+              53.300000000000004
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              4.3999999999999995,
+              52.7
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        }
+      ]
+    },
+    "phone": {
+      "label": "2000s Phone",
+      "palette": {
+        "body": "#263C55",
+        "detail": "#B8BBB5",
+        "accent": "#87AD67",
+        "secondary": "#455469"
+      },
+      "note": "Centered earpiece, uniform silver bezel, regular keypad and balanced navigation keys.",
+      "features": [
+        {
+          "id": "ScreenField",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              5.05,
+              5.15
+            ],
+            [
+              "L",
+              18.95,
+              5.15
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              21.349999999999998,
+              7.550000000000001
+            ],
+            [
+              "L",
+              21.349999999999998,
+              38.05
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              18.95,
+              40.449999999999996
+            ],
+            [
+              "L",
+              5.05,
+              40.449999999999996
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              2.65,
+              38.05
+            ],
+            [
+              "L",
+              2.65,
+              7.550000000000001
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              5.05,
+              5.15
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": true
+        },
+        {
+          "id": "Earpiece",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              8.6,
+              1.8
+            ],
+            [
+              "L",
+              15.4,
+              1.8
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              16,
+              2.4
+            ],
+            [
+              "L",
+              16,
+              2.4
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              15.4,
+              3.0
+            ],
+            [
+              "L",
+              8.6,
+              3.0
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              8,
+              2.4
+            ],
+            [
+              "L",
+              8,
+              2.4
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              8.6,
+              1.8
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Nav",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              10.5,
+              42.2
+            ],
+            [
+              "L",
+              13.500000000000002,
+              42.2
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              14.600000000000001,
+              43.300000000000004
+            ],
+            [
+              "L",
+              14.600000000000001,
+              43.300000000000004
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              13.500000000000002,
+              44.400000000000006
+            ],
+            [
+              "L",
+              10.5,
+              44.400000000000006
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              9.4,
+              43.300000000000004
+            ],
+            [
+              "L",
+              9.4,
+              43.300000000000004
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              10.5,
+              42.2
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Call",
+          "color": "accent",
+          "commands": [
+            [
+              "M",
+              4.25,
+              42.2
+            ],
+            [
+              "L",
+              6.450000000000001,
+              42.2
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              7.550000000000001,
+              43.300000000000004
+            ],
+            [
+              "L",
+              7.550000000000001,
+              43.300000000000004
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              6.450000000000001,
+              44.400000000000006
+            ],
+            [
+              "L",
+              4.25,
+              44.400000000000006
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              3.15,
+              43.300000000000004
+            ],
+            [
+              "L",
+              3.15,
+              43.300000000000004
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              4.25,
+              42.2
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "End",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              17.55,
+              42.2
+            ],
+            [
+              "L",
+              19.75,
+              42.2
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              20.85,
+              43.300000000000004
+            ],
+            [
+              "L",
+              20.85,
+              43.300000000000004
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              19.75,
+              44.400000000000006
+            ],
+            [
+              "L",
+              17.55,
+              44.400000000000006
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              16.45,
+              43.300000000000004
+            ],
+            [
+              "L",
+              16.45,
+              43.300000000000004
+            ],
+            [
+              "A",
+              1.1,
+              1.1,
+              0,
+              0,
+              1,
+              17.55,
+              42.2
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key00",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              4.4,
+              45.7
+            ],
+            [
+              "L",
+              7.2,
+              45.7
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              8.0,
+              46.5
+            ],
+            [
+              "L",
+              8.0,
+              47.00000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              7.2,
+              47.800000000000004
+            ],
+            [
+              "L",
+              4.4,
+              47.800000000000004
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              3.6,
+              47.00000000000001
+            ],
+            [
+              "L",
+              3.6,
+              46.5
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              4.4,
+              45.7
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key01",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              10.600000000000001,
+              45.7
+            ],
+            [
+              "L",
+              13.4,
+              45.7
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              14.200000000000001,
+              46.5
+            ],
+            [
+              "L",
+              14.200000000000001,
+              47.00000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              13.4,
+              47.800000000000004
+            ],
+            [
+              "L",
+              10.600000000000001,
+              47.800000000000004
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              9.8,
+              47.00000000000001
+            ],
+            [
+              "L",
+              9.8,
+              46.5
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              10.600000000000001,
+              45.7
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key02",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              16.8,
+              45.7
+            ],
+            [
+              "L",
+              19.599999999999998,
+              45.7
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              20.4,
+              46.5
+            ],
+            [
+              "L",
+              20.4,
+              47.00000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              19.599999999999998,
+              47.800000000000004
+            ],
+            [
+              "L",
+              16.8,
+              47.800000000000004
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              16.0,
+              47.00000000000001
+            ],
+            [
+              "L",
+              16.0,
+              46.5
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              16.8,
+              45.7
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key10",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              4.4,
+              48.800000000000004
+            ],
+            [
+              "L",
+              7.2,
+              48.800000000000004
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              8.0,
+              49.6
+            ],
+            [
+              "L",
+              8.0,
+              50.10000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              7.2,
+              50.900000000000006
+            ],
+            [
+              "L",
+              4.4,
+              50.900000000000006
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              3.6,
+              50.10000000000001
+            ],
+            [
+              "L",
+              3.6,
+              49.6
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              4.4,
+              48.800000000000004
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key11",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              10.600000000000001,
+              48.800000000000004
+            ],
+            [
+              "L",
+              13.4,
+              48.800000000000004
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              14.200000000000001,
+              49.6
+            ],
+            [
+              "L",
+              14.200000000000001,
+              50.10000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              13.4,
+              50.900000000000006
+            ],
+            [
+              "L",
+              10.600000000000001,
+              50.900000000000006
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              9.8,
+              50.10000000000001
+            ],
+            [
+              "L",
+              9.8,
+              49.6
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              10.600000000000001,
+              48.800000000000004
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key12",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              16.8,
+              48.800000000000004
+            ],
+            [
+              "L",
+              19.599999999999998,
+              48.800000000000004
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              20.4,
+              49.6
+            ],
+            [
+              "L",
+              20.4,
+              50.10000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              19.599999999999998,
+              50.900000000000006
+            ],
+            [
+              "L",
+              16.8,
+              50.900000000000006
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              16.0,
+              50.10000000000001
+            ],
+            [
+              "L",
+              16.0,
+              49.6
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              16.8,
+              48.800000000000004
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key20",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              4.4,
+              51.900000000000006
+            ],
+            [
+              "L",
+              7.2,
+              51.900000000000006
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              8.0,
+              52.7
+            ],
+            [
+              "L",
+              8.0,
+              53.20000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              7.2,
+              54.00000000000001
+            ],
+            [
+              "L",
+              4.4,
+              54.00000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              3.6,
+              53.20000000000001
+            ],
+            [
+              "L",
+              3.6,
+              52.7
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              4.4,
+              51.900000000000006
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key21",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              10.600000000000001,
+              51.900000000000006
+            ],
+            [
+              "L",
+              13.4,
+              51.900000000000006
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              14.200000000000001,
+              52.7
+            ],
+            [
+              "L",
+              14.200000000000001,
+              53.20000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              13.4,
+              54.00000000000001
+            ],
+            [
+              "L",
+              10.600000000000001,
+              54.00000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              9.8,
+              53.20000000000001
+            ],
+            [
+              "L",
+              9.8,
+              52.7
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              10.600000000000001,
+              51.900000000000006
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Key22",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              16.8,
+              51.900000000000006
+            ],
+            [
+              "L",
+              19.599999999999998,
+              51.900000000000006
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              20.4,
+              52.7
+            ],
+            [
+              "L",
+              20.4,
+              53.20000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              19.599999999999998,
+              54.00000000000001
+            ],
+            [
+              "L",
+              16.8,
+              54.00000000000001
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              16.0,
+              53.20000000000001
+            ],
+            [
+              "L",
+              16.0,
+              52.7
+            ],
+            [
+              "A",
+              0.8,
+              0.8,
+              0,
+              0,
+              1,
+              16.8,
+              51.900000000000006
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        }
+      ]
+    },
+    "ipod": {
+      "label": "iPod",
+      "palette": {
+        "body": "#F0EEE5",
+        "detail": "#656F79",
+        "accent": "#AFB4B1",
+        "secondary": "#D8D9D2"
+      },
+      "note": "Uniform screen surround and concentric 11 mm click wheel on the frame centerline.",
+      "features": [
+        {
+          "id": "ScreenField",
+          "color": "detail",
+          "commands": [
+            [
+              "M",
+              5.05,
+              5.15
+            ],
+            [
+              "L",
+              18.95,
+              5.15
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              21.349999999999998,
+              7.550000000000001
+            ],
+            [
+              "L",
+              21.349999999999998,
+              38.05
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              18.95,
+              40.449999999999996
+            ],
+            [
+              "L",
+              5.05,
+              40.449999999999996
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              2.65,
+              38.05
+            ],
+            [
+              "L",
+              2.65,
+              7.550000000000001
+            ],
+            [
+              "A",
+              2.4,
+              2.4,
+              0,
+              0,
+              1,
+              5.05,
+              5.15
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": true
+        },
+        {
+          "id": "Wheel",
+          "color": "accent",
+          "commands": [
+            [
+              "M",
+              6.5,
+              48.6
+            ],
+            [
+              "A",
+              5.5,
+              5.5,
+              0,
+              1,
+              1,
+              17.5,
+              48.6
+            ],
+            [
+              "A",
+              5.5,
+              5.5,
+              0,
+              1,
+              1,
+              6.5,
+              48.6
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "WheelVoid",
+          "color": "body",
+          "commands": [
+            [
+              "M",
+              8.2,
+              48.6
+            ],
+            [
+              "A",
+              3.8,
+              3.8,
+              0,
+              1,
+              1,
+              15.8,
+              48.6
+            ],
+            [
+              "A",
+              3.8,
+              3.8,
+              0,
+              1,
+              1,
+              8.2,
+              48.6
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Center",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              9.8,
+              48.6
+            ],
+            [
+              "A",
+              2.2,
+              2.2,
+              0,
+              1,
+              1,
+              14.2,
+              48.6
+            ],
+            [
+              "A",
+              2.2,
+              2.2,
+              0,
+              1,
+              1,
+              9.8,
+              48.6
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        },
+        {
+          "id": "Hold",
+          "color": "secondary",
+          "commands": [
+            [
+              "M",
+              10.2,
+              1.8
+            ],
+            [
+              "L",
+              13.799999999999999,
+              1.8
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              14.399999999999999,
+              2.4
+            ],
+            [
+              "L",
+              14.399999999999999,
+              2.4
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              13.799999999999999,
+              3.0
+            ],
+            [
+              "L",
+              10.2,
+              3.0
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              9.6,
+              2.4
+            ],
+            [
+              "L",
+              9.6,
+              2.4
+            ],
+            [
+              "A",
+              0.6,
+              0.6,
+              0,
+              0,
+              1,
+              10.2,
+              1.8
+            ],
+            [
+              "Z"
+            ]
+          ],
+          "window_cut": false
+        }
+      ]
+    }
+  },
+  "previous_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+  "correction": {
+    "glass_clearance_mm": 0.1,
+    "pcb_projection_overlap_mm": 0.05,
+    "display_translation_mm": [
+      0,
+      0,
+      0
+    ],
+    "height_change_mm": 0,
+    "oblique_occlusion_guaranteed": false,
+    "scope": "Glass-centered aperture and exact 2.40 mm screen bezel; all other approved paths and HEX colors unchanged."
+  },
+  "historical_r4_alignment": {
+    "status": "HISTORICAL_R4_CHANGE_ALREADY_APPLIED",
+    "left_display_header_translation_mm": [
+      0.2,
+      0,
+      0
+    ],
+    "right_display_header_translation_mm": [
+      -0.2,
+      0,
+      0
+    ],
+    "coupled_parts": [
+      "Display module and glass",
+      "Complete male/female connectors: housings, spacers, contacts and solder reserves",
+      "Display relief and header service well",
+      "Display header PCB footprint"
+    ],
+    "fixed_parts": [
+      "MCU",
+      "Battery",
+      "Frame envelope",
+      "Mounting datums"
+    ],
+    "reason": "Center the display and bezel on X12.00 while preserving glass and connector clearances.",
+    "acceptance": "Adopt only with the artwork. Translate the complete display mating chain; verify PCB routes and complete assembly clearances before release."
+  }
+}

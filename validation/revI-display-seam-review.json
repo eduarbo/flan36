@@ -1,0 +1,133 @@
+{
+  "scope": "Display seam correction and six exact redesign proposals",
+  "original_head": "04e1b4637645c2529e35a5e8c1727a4df1578059",
+  "reviews": [
+    {
+      "lens": "domain_constructive",
+      "round": 1,
+      "summary": "Controller-normalized transcription of the actual independent response, retaining its defects and unrun checks. Current seam fails; prepare a centered 13.90 x 30.50 mm aperture candidate with 0.10 mm clearance. All-angle zero-seam would need a physical tradeoff.",
+      "defects": [
+        {
+          "severity": "MEDIUM",
+          "code": "APERTURE_EXPOSES_LOWER_SUPPORTS"
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "PROPOSAL_RENDER_CONCEALS_GAP"
+        }
+      ],
+      "blockers": [
+        "No evidence supports a physically guaranteed invisible joint from every angle at the current height."
+      ],
+      "recommendations": [
+        "Use a glass-centered aperture; verify actual normal and oblique geometry and manufacturing clearance."
+      ],
+      "review_runtime_state": null,
+      "advisory_does_not_certify_product": true
+    },
+    {
+      "lens": "adversarial_risk",
+      "round": 1,
+      "summary": "Controller-normalized transcription of the actual independent response, retaining its defects and unrun checks. Current depiction fails. Aperture exposes 0.25 mm beyond PCB; the drawing conceals it. Center both axes explicitly. A printable overlapping lip at unchanged face height would intersect the glass.",
+      "defects": [
+        {
+          "severity": "HIGH",
+          "code": "HIGH_APERTURE_BACKGROUND_MASKED"
+        },
+        {
+          "severity": "HIGH",
+          "code": "HIGH_ZERO_SEAM_CONSTRAINT"
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "MEDIUM_Y_DATUM"
+        },
+        {
+          "severity": "MEDIUM",
+          "code": "MEDIUM_OBLIQUE_LIMIT"
+        }
+      ],
+      "blockers": [
+        "Unconditional all-angle zero-seam acceptance is unsupported."
+      ],
+      "recommendations": [
+        "Prepare aperture [5.05,7.55,18.95,38.05], uniform 2.40 mm bezel [2.65,5.15,21.35,40.45]. Retain the explicit oblique corner counterexample."
+      ],
+      "review_runtime_state": null,
+      "advisory_does_not_certify_product": true
+    },
+    {
+      "lens": "domain_constructive",
+      "round": 2,
+      "summary": "Controller-normalized transcription of the actual independent response, retaining its defects and unrun checks. PASS to integrate the nominal seam correction, subject to final production readback. Inspected candidate images remove continuous pale strips at four sample views. Six new artworks remain proposals.",
+      "defects": [
+        {
+          "severity": "LOW",
+          "code": "INHERITED_ALIGNMENT_METADATA"
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "Normalize inherited alignment metadata. Verify both halves and all selectable styles, exports and viewer continuity before adoption. No physical fit or all-angle guarantee."
+      ],
+      "review_runtime_state": null,
+      "advisory_does_not_certify_product": true
+    },
+    {
+      "lens": "adversarial_risk",
+      "round": 2,
+      "summary": "Controller-normalized transcription of the actual independent response, retaining its defects and unrun checks. PASS for bounded nominal correction after production readback. Earlier all-angle counterexample remains valid but does not block the disclosed nominal correction. Six exact proposals are presentable and are not authorized for integration.",
+      "defects": [
+        {
+          "severity": "MEDIUM",
+          "code": "PRODUCTION_COVERAGE_PENDING"
+        },
+        {
+          "severity": "LOW",
+          "code": "STALE_INHERITED_ALIGNMENT_METADATA"
+        }
+      ],
+      "blockers": [],
+      "recommendations": [
+        "Normalize historical alignment. Verify cold-reopened two-half production, every existing style, clearance, partitions, placements and exports; do not infer universal invisibility from antialiased sampled views."
+      ],
+      "review_runtime_state": null,
+      "advisory_does_not_certify_product": true
+    }
+  ],
+  "decision": "Integrate only the nominal glass-centered seam correction after full production acceptance. Six new artworks remain proposals.",
+  "dispositions": {
+    "APERTURE_EXPOSES_LOWER_SUPPORTS": "Candidate adds real material, removes normal-view side bands and retains positive nominal clearance. Full production validation required.",
+    "PROPOSAL_RENDER_CONCEALS_GAP": "New drawings use actual PCB/glass footprints. Historical R4 is retained with a correction note.",
+    "MEDIUM_Y_DATUM": "Correct both axes explicitly: [5.05,7.55,18.95,38.05].",
+    "HIGH_ZERO_SEAM_CONSTRAINT": "Do not use zero clearance or an intersecting lip. No all-angle invisibility or measured physical-fit claim.",
+    "MEDIUM_OBLIQUE_LIMIT": "Retained: the corner counterexample is not disproved by four sampled antialiased views.",
+    "STALE_INHERITED_ALIGNMENT_METADATA": "Moved old translation into historical_r4_alignment with already-applied status; current correction translation and height delta are zero. Geometry did not change.",
+    "PRODUCTION_COVERAGE_PENDING": "Mandatory gate: cold-reopened complete assembly, both halves, 22 existing frames, collisions, exports, viewer and public readback."
+  },
+  "physical_acceptance": false,
+  "six_new_designs_approved": false,
+  "retrospective": {
+    "trigger": "User observed pale side strips and six unresolved artwork designs.",
+    "verified_cause": "Opening extended beyond the PCB; proposal renderer painted missing material dark. Artwork redesign was not continued after the six were excluded.",
+    "prevention": "Exact review geometry and real component footprints before presenting proposals, plus explicit source hash and approval boundary."
+  },
+  "frozen_review2_sha256": {
+    "design/display-seam-redesign.json": "27471b8d3f37449b027458ff136bb88a8a7b585be142445a910af1a980929669",
+    "design/proposals/display-seam-r1/master.json": "c685ff915cc1debcd099527e64a2b1a8d65d6585c21866394bfcad518c5762db",
+    "design/proposals/display-seam-r1/geometry-check.json": "b59c1d7c98e3048522378e7c0df4d2ef4e065d0a4fac514fd4e322ce4a187e61",
+    "design/proposals/display-seam-r1/comparison.png": "4c89cb0c62e675773f3273c8819ebd81ab109a75083b564846e88d988f832176",
+    "design/proposals/frame-redesign-r5/master.json": "ef2bbd11dba76ecdcf68a31284468425ea415cd912505cd718164ec237a06a01",
+    "design/proposals/frame-redesign-r5/geometry-check.json": "af30583dbbefd2b3714f2d5e675f4c24a45d9fb5142d493d3be90c7a3ad4c1f3",
+    "design/proposals/frame-redesign-r5/native-review.png": "d3a94a312db79c2d73e710b3a3463dbe97a4712b18dff4911b8ecdfc04104235",
+    "tools/freecad/prepare_frame_reviews.py": "6bb58d1066e59726a471cbaafd2728792952110919d8aadb5173ee3bd085846d",
+    "tools/freecad/frame_review_geometry.py": "153890ce767695a22ae152379babeedcecc6fd56f52538dfc219f667eae94db8",
+    "tools/render_frame_reviews.py": "c199f556bbe5fd507c52b38da2ee454aa7210399e197403642cc8da2b241743a",
+    "tools/prepare_frame_redesign_r5.py": "db2b5c2acf447c0f11aa36a616ecf58005d73be585a201e2fe785f46db239f9d",
+    "design/proposals/frame-master-r4/master.json": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796"
+  },
+  "post_review_metadata_normalization": {
+    "master_sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+    "candidate_receipt_sha256": "2dcd4b4deb514dbc33608a5bb5de1b95bc11448cee8245b5d37e42fade7f02b8"
+  }
+}
