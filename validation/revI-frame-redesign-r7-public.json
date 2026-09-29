@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-29T18:46:21.018154+00:00",
+  "source_commit": "75849715c81794d424120eee85559486f6f0d3c4",
+  "gallery_url": "https://eduarbo.github.io/flan36/frame-proposals/?rev=75849715c81794d424120eee85559486f6f0d3c4",
+  "checked_assets": 37,
+  "assets": [
+    {
+      "path": "docs/frame-proposals/index.html",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/index.html?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 11261,
+      "sha256": "2034047cc142bfa8d4cc73ac5e7afd482b344d97bf2a2d29a177f8c2872da2ea",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/collection.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/collection.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 186134,
+      "sha256": "6a7ca5eca39b05363e5d1469fac8f0eccf45293a0ad085ed2d89ead86897c83e",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/hanafuda-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/hanafuda-card.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 42920,
+      "sha256": "31264c4b646c0606f0ec8120567f2bd87ad24ba4f4bd1fa82cae37d18df8512c",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/hanafuda-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/hanafuda-dimensioned.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 184121,
+      "sha256": "4b5fb1151d6459d028dfcfe5c46604ec0e9b9208913970daa45d3a799fb8e86f",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/hanafuda-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/hanafuda-preview.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 2198,
+      "sha256": "3c7062951fc7f7d40d23ec5a8d1622f842e1c0d9dc17264e42ca1d3be2a8ca38",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/hanafuda.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/hanafuda.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 1761,
+      "sha256": "18117bdf5ceb6b4d4fd4143fffb29658387118f2f11c2a7a91967d10ac70d921",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-asanoha-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-asanoha-card.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 50710,
+      "sha256": "351590587a35a61b8240ab0bace485fad1a8bdc7d565c9e3fda8a995b7c5c171",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-asanoha-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-asanoha-dimensioned.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 192061,
+      "sha256": "a994c2083277e9f8aa3871d10c0c01b59207e6fd9b1465546815a2a00b3cfd8c",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-asanoha-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-asanoha-preview.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 7314,
+      "sha256": "b16b7698db700cac4210405579b048310ab73fa52244896ef843b528518c1c57",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-asanoha.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-asanoha.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 6877,
+      "sha256": "015e4820a2a8dc89ebb9567186de58dd5db4b418d8e282a8fa89190264db6fd0",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-kasane-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-kasane-card.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 54848,
+      "sha256": "9f90cafce33a1f36a763dd23b3a0f89a80b9de944430dfdb27971b519d51a637",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-kasane-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-kasane-dimensioned.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 196852,
+      "sha256": "064b7da6ffb3fa291374aec48f7fb38e2e2dad7e1ac71f532105df992bf22885",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-kasane-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-kasane-preview.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 6816,
+      "sha256": "50e64eb52c7adba4183b2f5740a71b073dbbdb7e6d7fca14326d185f9591410b",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-kasane.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-kasane.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 6379,
+      "sha256": "cd4a0ec46adb6f52b9a5ddcdd32eebb4a29baeaac3d3398d20908836e0c62dce",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-kikko-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-kikko-card.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 46297,
+      "sha256": "c9f20b27b2ea7e1f50eb2b2c24ee827b0179be9e63dc11c56c1e12ee50c77b8d",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-kikko-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-kikko-dimensioned.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 193131,
+      "sha256": "fd54f1d135ab7ebd2a919e4dabaf07c980de9be235760134eaa2d7e39a336565",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-kikko-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-kikko-preview.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 7129,
+      "sha256": "39f98d15837e8d8eddd9cbe7d75947c85299a2002c9cb70fdad78ccd0578ca04",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko-kikko.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko-kikko.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 6692,
+      "sha256": "c1f3344691efffc40976971ee72855746fb0eea9f9cede82316f07db118fe642",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/kumiko.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/kumiko.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 123500,
+      "sha256": "92a80206ae6732315333f164580c5ab7838d2babdb890b556e97a1ebcb6a0058",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-hangar-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-hangar-card.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 42542,
+      "sha256": "9334eeebb644909b3902f0ceeb50e5c03d11afacb16fb5e623fc16ca4ef5e819",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-hangar-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-hangar-dimensioned.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 184718,
+      "sha256": "80a0a66b680965bb134e57ccdef231af22a8d4bfb4832d177888683f9c14763d",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-hangar-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-hangar-preview.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 3750,
+      "sha256": "3de1659a67fb511c4246bb0aaa7e45a987d048c7e2516c646300b6594d2fd670",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-hangar.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-hangar.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 3313,
+      "sha256": "dae65e5e682d7f7ab69c1027548ef5ff5ce899dca55ed358b15e62ba1374c358",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-reactor-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-reactor-card.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 43372,
+      "sha256": "2a85d8ea450c9bf1f82668a7b3c47279504250519db4884991b37e3de7c6b45e",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-reactor-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-reactor-dimensioned.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 181640,
+      "sha256": "ee0ff32b77c2379a2796bcc23394ac7d369e2f554a753e42356d695622a2a060",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-reactor-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-reactor-preview.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 5242,
+      "sha256": "02a1257d15a41f23669c76b4d213424b26fc40b1da51db36a65a706d4ad809a8",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-reactor.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-reactor.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 4805,
+      "sha256": "1c76f528dc328643a76ccf782db02774123c833ef3cddff7116c36653c4d0bff",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-recon-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-recon-card.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 43201,
+      "sha256": "09f5e5d72ffd86408294b0d1adfeb24fc502e16c720276da334a7080cc8da7c9",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-recon-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-recon-dimensioned.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 180480,
+      "sha256": "4ddef8a192e42b5906cc45387eb1112750717411498f28462a9619ba93e5ab30",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-recon-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-recon-preview.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 3268,
+      "sha256": "5d91d0c1aa76bcd009c752d18e548167f437ed4b34a629ab47b67c37dd771c47",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha-recon.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha-recon.svg?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 2831,
+      "sha256": "ae973b9b9c41c33044ddc23cc94b7e54aee4e8646daf52036e1beb84c9a94211",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/mecha.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/mecha.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 94259,
+      "sha256": "93e75b91ac90541365566c1f5ae9b93691eec0aa5b5c9c7621e926287ff5987a",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/native-review.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/native-review.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 104471,
+      "sha256": "649fafc57ed144fd6bf4f7bc1a5bc39eafd9fbc70647ddd834d6ed9c52f2e64e",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r7/native-top.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r7/native-top.png?rev=75849715c81794d424120eee85559486f6f0d3c4",
+      "bytes": 101453,
+      "sha256": "e6ab3b1251ac27ecf51afee3fe69b2e3e1f8f010ca63732c9ef0431805b2f62b",
+      "matches_commit": true
+    },
+    {
+      "path": "design/proposals/frame-redesign-r7/master.json",
+      "url": "https://raw.githubusercontent.com/eduarbo/flan36/75849715c81794d424120eee85559486f6f0d3c4/design/proposals/frame-redesign-r7/master.json",
+      "bytes": 173101,
+      "sha256": "fdd8da1cf8b1b0c5e88bab93dce8cc6833fc6b9a952874927eb70c9d29cefa40",
+      "matches_commit": true
+    },
+    {
+      "path": "design/proposals/frame-redesign-r7/Artwork-R7.FCStd",
+      "url": "https://raw.githubusercontent.com/eduarbo/flan36/75849715c81794d424120eee85559486f6f0d3c4/design/proposals/frame-redesign-r7/Artwork-R7.FCStd",
+      "bytes": 672164,
+      "sha256": "1ba61acc2081712084bd30a067b40508da8334689e96a80fbdb2e69307e0b01f",
+      "matches_commit": true
+    },
+    {
+      "path": "design/proposals/frame-redesign-r7/geometry-check.json",
+      "url": "https://raw.githubusercontent.com/eduarbo/flan36/75849715c81794d424120eee85559486f6f0d3c4/design/proposals/frame-redesign-r7/geometry-check.json",
+      "bytes": 43688,
+      "sha256": "ecc697a5f6b4b3a776247e1c8286d613ab21736325fa4212b170d511e691ca8b",
+      "matches_commit": true
+    }
+  ],
+  "artwork_status": "HANAFUDA_SELECTED_MECHA_AND_KUMIKO_PENDING",
+  "physical_acceptance": false
+}
