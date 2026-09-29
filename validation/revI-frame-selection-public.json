@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-29T19:47:02.365470+00:00",
+  "source_commit": "7aa1fedf346df9f1de88b626393ed5810a484758",
+  "gallery_url": "https://eduarbo.github.io/flan36/frame-proposals/?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+  "checked_assets": 26,
+  "assets": [
+    {
+      "path": "docs/frame-proposals/index.html",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/index.html?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 8270,
+      "sha256": "5252c92568aa4818598366108a65d4ac983ad3b98b85e2df476e575045fcc51c",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/gameboy-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/gameboy-card.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 41219,
+      "sha256": "4df00c6261b62577ac9572f41bde3d90990ab03e1972d6adbb562d21a6f06a4f",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/gameboy-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/gameboy-dimensioned.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 170828,
+      "sha256": "a813f40121954ceb9b8e68baac8b2e4e8da88674f6732e8907431989402402cd",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/gameboy-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/gameboy-preview.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 2125,
+      "sha256": "ea31a71f98ce1bc726c84398212f5b4ab566e89d15a73f18c6868d97625425c7",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/gameboy.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/gameboy.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 1688,
+      "sha256": "5f09e3320dfbbbd1c9cee3796607211096e5483e6286cf826fbcdfac7d87be84",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/hanafuda-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/hanafuda-card.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 43216,
+      "sha256": "566f99be9dd8be4f45a7bbc7866a7d8e72b70471afc131031538e0b2f7f19dc5",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/hanafuda-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/hanafuda-dimensioned.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 184416,
+      "sha256": "8176f676187bacdde237a87529b0496d4e320d7b0474c18d90ef1ce0bf611638",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/hanafuda-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/hanafuda-preview.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 2215,
+      "sha256": "42d64d219df49fd0ea4ecfe8dce34bed569aefb95b75bc8e3f9a4cfadfe9780c",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/hanafuda.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/hanafuda.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 1778,
+      "sha256": "c3e91262bc7d113ff72d8160685114ff7af6204380ffa0144dd910cb6a0e60d8",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/ipod-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/ipod-card.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 39695,
+      "sha256": "ff2e140829c8eba38b07f710c7b8a00b7bfb81351d8f95e42698f9c3017825fe",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/ipod-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/ipod-dimensioned.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 168325,
+      "sha256": "7cbb7b6c883d6d821adf2d196999341164aa780e76d44df4fc6a5780633ff876",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/ipod-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/ipod-preview.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 1731,
+      "sha256": "c57b92ff3ab1935b898100b9e06025b490052d526ef87aef178883419330411e",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/ipod.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/ipod.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 1294,
+      "sha256": "b1676763904d2209660c0de33e27714a92343cedc5be8f03bf116c3e6d3c8c79",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/phone-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/phone-card.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 44657,
+      "sha256": "90e7cbd787ef1e848e5da16836e160b244010dd33e28fe1cbc99293e2a253384",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/phone-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/phone-dimensioned.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 175312,
+      "sha256": "b175dd064bc1779830ea5573379e2ef74a567a9738ee472d75a03ea504e19a78",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/phone-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/phone-preview.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 3869,
+      "sha256": "ab4b36e7a12c43d9adcb7aa7e69dd3d9ae94f3ef51ba9d201851c93666d88a3e",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/phone.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/phone.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 3432,
+      "sha256": "586008f90a5002105351f20151cc0b3f2f962282555bb43d7f74a9133c70112e",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/snes-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/snes-card.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 40075,
+      "sha256": "5b10f069afdb86bc6f3856068e353a4cddf25ac37ec04857c175e0070da4d15f",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/snes-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/snes-dimensioned.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 168829,
+      "sha256": "97850520b07bc0227fcdc84f3427432bbe7c96a3f2dc96a668325147884c77fe",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/snes-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/snes-preview.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 2440,
+      "sha256": "53ad63d6cffa3c1cf4e1d4bfc1c434235b243fe895ce41dd957f6b34c37418a7",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/snes.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/snes.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 2003,
+      "sha256": "8b04cb108b98a7263193003de93c9172ffd2e15f7d1d4a327b6eb22b5e84b755",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/talavera-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/talavera-card.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 42215,
+      "sha256": "2d546c64e3bc5da7cc7964e0d4f46f6707ecc7e6bacda6613ee8e9a7fd92bb7c",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/talavera-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/talavera-dimensioned.png?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 172191,
+      "sha256": "88ec8c5d8b88033526ce1341beb596924dc5ce9b7d922ab6082d1a285a109a2d",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/talavera-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/talavera-preview.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 1909,
+      "sha256": "7993707a1aaf63b88b28fd623b9b70088d36db08409ab30008714e9072c6044c",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/r8/talavera.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/r8/talavera.svg?rev=7aa1fedf346df9f1de88b626393ed5810a484758",
+      "bytes": 1472,
+      "sha256": "7d3453cfc25763e53872508405764afc37854f7700342ec308eb3fe71c3232fc",
+      "matches_commit": true
+    },
+    {
+      "path": "design/frame-selection.json",
+      "url": "https://raw.githubusercontent.com/eduarbo/flan36/7aa1fedf346df9f1de88b626393ed5810a484758/design/frame-selection.json",
+      "bytes": 1440,
+      "sha256": "2ffc35d515977a2cd5d5e59d17ad4b22290db3954d853f9d024f91e4d40de502",
+      "matches_commit": true
+    }
+  ],
+  "artwork_status": "APPROVED_ONLY",
+  "physical_acceptance": false,
+  "removed_public_assets_404": [
+    "evangelion.png",
+    "evangelion-card.png",
+    "evangelion-dimensioned.png",
+    "evangelion-preview.svg",
+    "evangelion.svg",
+    "native-review.png",
+    "native-top.png"
+  ]
+}
