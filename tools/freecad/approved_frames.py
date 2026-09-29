@@ -13,17 +13,30 @@ MASTER=json.loads(MASTER_PATH.read_text())
 APPROVED=tuple(PLAN['approved_styles'])
 ROLES=('body','detail','accent','secondary')
 _FROZEN={}
+_CONTEXT=None
+
+def use_document(doc):
+    """Choose the recorded correction for this document, preserving R4 replay."""
+    global MASTER_PATH,MASTER,_CONTEXT
+    correction=doc.getObject('DisplaySeamCorrection')
+    path=ROOT/(correction.MasterPath if correction else PLAN['master_path'])
+    digest=correction.MasterSHA256 if correction else PLAN['master_sha256']
+    assert hashlib.sha256(path.read_bytes()).hexdigest()==digest,'Frame master changed'
+    if _CONTEXT!=digest:
+        MASTER_PATH=path;MASTER=json.loads(path.read_text());_FROZEN.clear();_CONTEXT=digest
+    return correction
 
 def frozen_regions(side,style):
     """Compare against the saved approval artifact, not only today's parser."""
     if not _FROZEN:
-        path=MASTER_PATH.parent/'Artwork-R4.FCStd'
+        corrected=MASTER.get('revision')=='R4-seam-1'
+        path=MASTER_PATH.parent/('Seam-candidate.FCStd' if corrected else 'Artwork-R4.FCStd')
         receipt=json.loads((MASTER_PATH.parent/'geometry-check.json').read_text())
-        assert hashlib.sha256(path.read_bytes()).hexdigest()==receipt['native_plan_sha256']
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==receipt['native_sha256' if corrected else 'native_plan_sha256']
         active=A.ActiveDocument
         source=A.openDocument(str(path))
         for name in APPROVED:
-            for role in ROLES:_FROZEN[name,role]=source.getObject(name+'_'+role).Shape.copy()
+            for role in ROLES:_FROZEN[name,role]=source.getObject(name+'_'+role+('_Plan' if corrected else '')).Shape.copy()
         A.closeDocument(source.Name)
         if active:A.setActiveDocument(active.Name)
     transform=A.Matrix();transform.A14=111 if side=='left' else 49;transform.A24=-11
@@ -80,6 +93,7 @@ def regions(side,style):
 
 def build(recipe,style):
     import flush_frames as F
+    correction=use_document(recipe.doc)
     side=recipe.side;doc=recipe.doc;theme=MASTER['styles'][style];flat=regions(side,style);domain,zones=domains(side)
     blank=recipe.smooth
     materials=[];occupied=[];features=[]
@@ -103,6 +117,9 @@ def build(recipe,style):
     final=recipe.add('Part::MultiFuse',style+'_Final');final.Shapes=materials;final.Refine=False
     final.Label='Frame · '+theme['label']+' · approved R4'
     for name,kind,value in [('FrameStyle','App::PropertyString',style),('MaterialParts','App::PropertyLinkList',materials),('SmoothSource','App::PropertyLink',blank),('PrototypePrintable','App::PropertyBool',True),('InlayDepth','App::PropertyLength',.4),('ApprovedMasterSHA256','App::PropertyString',PLAN['master_sha256']),('ModelStatus','App::PropertyString','Approved R4 artwork; nominal assembly only, physical fit untested'),('MaterialSpecSHA256','App::PropertyString',hashlib.sha256(json.dumps(recipe.spec['styles'][style],sort_keys=True).encode()).hexdigest()),('ArtworkFeatures','App::PropertyLinkList',features)]:F.prop(final,name,kind,value)
+    if correction:
+        F.prop(final,'SeamCorrectionSHA256','App::PropertyString',correction.MasterSHA256)
+        final.Label='Frame · '+theme['label']+' · R4 / corrected display seam'
     return final
 
 def top_faces(shape,z):
@@ -116,6 +133,7 @@ def top_faces(shape,z):
 def validate(doc,side,smooth,obj,spec=None,output_dir=None):
     import flush_frames as F
     import MeshPart
+    correction=use_document(doc)
     roof=float(doc.Parameters.FrameTop);assert abs(roof-13.59)<1e-7
     expected=regions(side,obj.FrameStyle);frozen=frozen_regions(side,obj.FrameStyle);domain,zones=domains(side);whole=obj.Shape
     assert whole.isValid() and len(whole.Solids)==1,(obj.Name,'frame disconnected')
@@ -150,4 +168,4 @@ def validate(doc,side,smooth,obj,spec=None,output_dir=None):
             mesh.write(str(p/(stem+'.stl')));shape.exportStep(str(p/(stem+'.step')))
         material_records.append(record)
     F.prop(obj,'FrameFaceRoles','App::PropertyString',json.dumps(F.face_roles(obj)))
-    return dict(style=obj.FrameStyle,side=side,approved_master_sha256=PLAN['master_sha256'],top_face_difference_mm2=role_errors,saved_planar_approval_compared=True,exact_z_domains=True,material_parts=material_records,pair_intersections_mm3=pairs,roof_mm=roof,physical_acceptance=False)
+    return dict(style=obj.FrameStyle,side=side,approved_master_sha256=PLAN['master_sha256'],seam_correction_sha256=correction.MasterSHA256 if correction else None,top_face_difference_mm2=role_errors,saved_planar_approval_compared=True,exact_z_domains=True,material_parts=material_records,pair_intersections_mm3=pairs,roof_mm=roof,physical_acceptance=False)

@@ -12,7 +12,13 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
-## Revision I — approved R4 frames
+## Revision I — corrected display seam and six exact proposals
+
+The opening is now centered on the glass with 0.10 mm nominal clearance on all sides. It closes the exposed side bands without moving the display or raising the stack. The five approved bezels remain exactly 2.40 mm wide; their other artwork and colors are unchanged. [Correction and limits](../design/display-seam-implementation.md).
+
+Flan, Tape, Orbit, Manga, NES and Walkman have [new dimensioned R5 proposals](frame-proposals.md), including editable review solids and actual mesh renders. Their new artwork awaits approval and is not installed in the main assembly.
+
+## Revision I — approved R4 frames (earlier snapshot)
 
 Talavera, Game Boy, SNES, 2000s Phone and iPod now use the approved exact paths and solid palettes. The frame and Level shell rise 0.20 mm to Z13.59; the centered glass stays at Z13.39 and the pin row gains a 0.40 mm cover. Flan, Tape, Orbit, Manga, NES and Walkman retain their existing artwork pending redesign. Flan remains the default. [Construction and verification](frames-extra.md). Public source, viewer, images and an actual print-kit download match the implemented files. [Public readback](../validation/revI-approved-frames-public.json).
 

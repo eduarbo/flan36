@@ -7389,7 +7389,7 @@
         13.59
       ],
       "visuals": [],
-      "stl_sha256": "3c542bda862eafe083ba4bd1844f6f9317ec253d652f7fb800996162b045760c"
+      "stl_sha256": "382b53a930bc4b785b9621e811b351304972020c342d58b4c5c4941d0e562d6b"
     },
     "left-pcb": {
       "object": "L_SlimPCBLeadNotch",
@@ -8067,7 +8067,7 @@
         13.59
       ],
       "visuals": [],
-      "stl_sha256": "e499c9d49167bebcc6d05fa8f18d11df6ffbb48fa52c71b34996f116fc10ff3c"
+      "stl_sha256": "7543ccc3dfc883f4c767cf3d99523b345df73ca14688789814b1ec7a7da5929b"
     },
     "right-pcb": {
       "object": "R_SlimPCBLeadNotch",
@@ -8228,7 +8228,7 @@
     "BatteryBottom": 1.4,
     "FrameTop": 13.59,
     "FrameRoof": 1.4,
-    "WindowMargin": 0.4,
+    "WindowMargin": 0.1,
     "SlotClearance": 0.1
   },
   "inputs": [
@@ -8250,7 +8250,7 @@
     },
     {
       "path": "tools/freecad/approved_frames.py",
-      "sha256": "c9255cdd597ba6230e5f03f35e0dbb66c24e463bed295f52201ed8256083d580"
+      "sha256": "8e77df4ac20f1dc1562f7a9e84fad0c85943cf44c4fb985fd18fc394d8e953f9"
     },
     {
       "path": "tools/freecad/install_approved_frames.py",
@@ -8390,10 +8390,26 @@
     },
     {
       "path": "tools/freecad/export_revI.py",
-      "sha256": "1c0df1ef9be9b97eb230d6fb101114250cce65fa83e07571d015e584f7ac5395"
+      "sha256": "e992323442c464b4470e959432838a79e28c84224f17f69b37db784d65dfa493"
+    },
+    {
+      "path": "design/proposals/display-seam-r1/master.json",
+      "sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7"
+    },
+    {
+      "path": "design/proposals/display-seam-r1/Seam-candidate.FCStd",
+      "sha256": "ae70a32d3ab1ee8cf1f137e64d20a1e9c609e52887ce9dc387ad01622413ad0e"
+    },
+    {
+      "path": "design/proposals/display-seam-r1/geometry-check.json",
+      "sha256": "2dcd4b4deb514dbc33608a5bb5de1b95bc11448cee8245b5d37e42fade7f02b8"
+    },
+    {
+      "path": "tools/freecad/install_display_seam.py",
+      "sha256": "e020a04074455bef73b39f71c8e4ddf86d4f83ef9c55e893af883d6f7192336f"
     }
   ],
-  "fcstd_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+  "fcstd_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
   "identity_migration": {
     "baseline_commit": "819a01883b2faec3682ac457328bc361dc43e355",
     "method": "Only branding tokens in native Document.xml changed; shape and mesh members preserved byte for byte",
@@ -8410,9 +8426,9 @@
           "role": "body",
           "stl": "left-frame-flan-body.stl",
           "step": "left-frame-flan-body.step",
-          "stl_sha256": "3d01b92c9ad86e12cf9d32fd515fbcc85bf72195b1d490e72165b5735da164ff",
-          "step_sha256": "beabc3417fd06cd21cad956dfeee1ca57844e7bad49faa999f1dd89084c45445",
-          "volume_mm3": 2059.4901083432273,
+          "stl_sha256": "01467b748ba84a0f758142a84f104a9ab9675de5d15ba537a4019cd8115ebfed",
+          "step_sha256": "dc4d7859b2081d32fa1421b88b9aa260d977e4c20df9f012ab08bc4845af2c52",
+          "volume_mm3": 2080.6154333432296,
           "solids": 1
         },
         {
@@ -8420,7 +8436,7 @@
           "stl": "left-frame-flan-detail.stl",
           "step": "left-frame-flan-detail.step",
           "stl_sha256": "7132ee56ef88fc501a2740813f76e5f096c1f00a416b8d85d96a0f6872cc2762",
-          "step_sha256": "74a866c07bedea85af25378343f9c30e0a2818302a747da14cfb68a5b08f414e",
+          "step_sha256": "9706b4a52cb96a02aac1b35209e69f2e632977d9635304e76f15a668f6f97077",
           "volume_mm3": 6.147221195188712,
           "solids": 2
         },
@@ -8429,7 +8445,7 @@
           "stl": "left-frame-flan-accent.stl",
           "step": "left-frame-flan-accent.step",
           "stl_sha256": "1fe33515e856f607ee20d8e2161f7d79ef73bc5a9d96e4d3759a46e368e9fab1",
-          "step_sha256": "bd4b298d3d2096507b674e87789b142627ff2e99002e9dd2797b07a7e287f044",
+          "step_sha256": "8dca10230ae2b87e4249d08365fe4d0841e1ea060980d244bc3841da716074b4",
           "volume_mm3": 77.27768804503552,
           "solids": 2
         },
@@ -8438,7 +8454,7 @@
           "stl": "left-frame-flan-secondary.stl",
           "step": "left-frame-flan-secondary.step",
           "stl_sha256": "f7994b0571b4f71a198a1ef37e04dc439b33bce9fd80b66e25c6f355efe37f57",
-          "step_sha256": "222cb65a861c2f3ae06aa0c74ebbcf57e7ab84528f237c965766cb1e0025230e",
+          "step_sha256": "f9b6649e979b4e58c45ecac6b205e14682f4d5a30d286216d0a0c7222510c375",
           "volume_mm3": 11.811024312699287,
           "solids": 1
         }
@@ -8454,9 +8470,9 @@
           "role": "body",
           "stl": "left-frame-tape-body.stl",
           "step": "left-frame-tape-body.step",
-          "stl_sha256": "3f80e5c334787f6ddba225aaf20bd02986bbb1aa94f999257c8e4beb7f71bd51",
-          "step_sha256": "3842ffc2fbadba9eec4d11b296e356afa7e54534ca28b60ade6689e9f5cebbb8",
-          "volume_mm3": 2011.7447251147805,
+          "stl_sha256": "ec31c965df3455dbc3cfa37ddc76f49b84b26c097c255b5431c01f04eefa583c",
+          "step_sha256": "cca2449ca29b3291b9e5a25ac2f0832df1e2cf4c233dda1be9a0cb997d5ec7b9",
+          "volume_mm3": 2032.8700501147835,
           "solids": 1
         },
         {
@@ -8464,7 +8480,7 @@
           "stl": "left-frame-tape-detail.stl",
           "step": "left-frame-tape-detail.step",
           "stl_sha256": "18d14882cb91e26526af3d2a2a8061924c23ddf7a75ee11cf26413cffb7bb285",
-          "step_sha256": "55fa6a20080f2cf3c3e1eccf01716d6930baf58994a155b28a67cf39f6f3c74e",
+          "step_sha256": "daa97722a54c25e280fff74fd687c6444e1def4a39f73921bfd1b8d27e49d85f",
           "volume_mm3": 119.66965549419157,
           "solids": 7
         },
@@ -8473,7 +8489,7 @@
           "stl": "left-frame-tape-accent.stl",
           "step": "left-frame-tape-accent.step",
           "stl_sha256": "70fc5770eb41a3e43fa5d9bba7282e9898e41181c6bbc107f66ee04d65e3821e",
-          "step_sha256": "5e616318f1e45bdee954bda7a8dfd72b69b7e3d7f213387ff5877b347fc4e760",
+          "step_sha256": "c4c9e76b3017e9a340a97622470c254a68eeb8542360bba615f1d202bc49e61f",
           "volume_mm3": 12.649097335529234,
           "solids": 2
         },
@@ -8482,7 +8498,7 @@
           "stl": "left-frame-tape-secondary.stl",
           "step": "left-frame-tape-secondary.step",
           "stl_sha256": "93928fb01b5cc2dd05071641108d60db3d900a779dd316de73b382a038c2c8b0",
-          "step_sha256": "972339b98eab7c2fa261bd95329eaa13404d3c5d8d24557537f349cdfb08e195",
+          "step_sha256": "b39b0dffee7c5c5cf84b819fe8776d6413fee5c1ec54e88cb63b6ebc26f8eff6",
           "volume_mm3": 10.662563951649913,
           "solids": 2
         }
@@ -8498,9 +8514,9 @@
           "role": "body",
           "stl": "left-frame-orbit-body.stl",
           "step": "left-frame-orbit-body.step",
-          "stl_sha256": "072c362ab27586c522b44e245b4981397211afc309e796ef6b600161aee27c84",
-          "step_sha256": "03565791a2be73459c1f40bdfcf094a50ec0e82b8b7f768b82ac092c6a7292a6",
-          "volume_mm3": 1949.8320193262318,
+          "stl_sha256": "b4743aa9f0b99417422bc45eec216ab5bbbea11b1ee4a379c660f31f25b7f2de",
+          "step_sha256": "d166bf2a39f18468fdfa2b6e7adcc17b660982f48db70365e322817b11913c40",
+          "volume_mm3": 1970.957344326231,
           "solids": 1
         },
         {
@@ -8508,7 +8524,7 @@
           "stl": "left-frame-orbit-detail.stl",
           "step": "left-frame-orbit-detail.step",
           "stl_sha256": "5fc3b49e4733501f26e6b084df9e757791b92c0d4a0357ee85ad9c3f048ae686",
-          "step_sha256": "107cf4a19ce6135f0cc5f81316089595f2ca1291123de594972a7917b0cc945e",
+          "step_sha256": "3c0d490477f4d6725e3d4888fbd18140d0975fefef95f38bf2ed4ae4a7753846",
           "volume_mm3": 163.4623225699189,
           "solids": 1
         },
@@ -8517,7 +8533,7 @@
           "stl": "left-frame-orbit-accent.stl",
           "step": "left-frame-orbit-accent.step",
           "stl_sha256": "9b991e7ac03000b4f5a8ba763724982181973aebc4a5023e87f51c5b8d0c099f",
-          "step_sha256": "55b1887fee5a8978cc755464209b726dfab2bf3878bd16a5ecf93e2bf6679163",
+          "step_sha256": "ef8adbc596a8bab1a20e228ce52a1a83f13f3c763923dd519dfaad004fbf1e8f",
           "volume_mm3": 32.93683346469318,
           "solids": 1
         },
@@ -8526,7 +8542,7 @@
           "stl": "left-frame-orbit-secondary.stl",
           "step": "left-frame-orbit-secondary.step",
           "stl_sha256": "4fabc1cedf9cf784f7bd0365692721915a9d4f231cca2fe51b8edbb719a3e7f7",
-          "step_sha256": "682a4419ce7f85935ce16556f80d273b4076d3beed3593729a464e961ac115e3",
+          "step_sha256": "a8881d9f543720952bad232fe15cfc6b1fc35d9983ad803cf2862e793ed19b46",
           "volume_mm3": 8.494866535306807,
           "solids": 1
         }
@@ -8542,9 +8558,9 @@
           "role": "body",
           "stl": "left-frame-manga-body.stl",
           "step": "left-frame-manga-body.step",
-          "stl_sha256": "c3903ed574612b9ca56e9c71a8217b55e33136525030146d4e1bf4bfa4fb13c8",
-          "step_sha256": "a85f74bf37c85805fb950381593304f357f09eced012986de009132c879ca88b",
-          "volume_mm3": 2015.7910518930616,
+          "stl_sha256": "bc4f55b4fedd3b1c951ecc20c7653a8cf1f21e9c2f767a7cdf69f8d60ff52a19",
+          "step_sha256": "3882cbcbcc8fcb556122a4c7f422a24420b8065b0c632a73756a6ddfc96065de",
+          "volume_mm3": 2036.9163768930605,
           "solids": 1
         },
         {
@@ -8552,7 +8568,7 @@
           "stl": "left-frame-manga-detail.stl",
           "step": "left-frame-manga-detail.step",
           "stl_sha256": "fb20aadd58a54a6c77d06c74288fc4f320872a94ae711ef25c1981db2eada404",
-          "step_sha256": "b6ed9451e83eb54a201f1102c544c198226bdc9602657288846339d42183bd68",
+          "step_sha256": "1180727317b5498372435b710da115b245cdbc40490197422f15416c54b4da62",
           "volume_mm3": 128.87399000308986,
           "solids": 6
         },
@@ -8561,7 +8577,7 @@
           "stl": "left-frame-manga-accent.stl",
           "step": "left-frame-manga-accent.step",
           "stl_sha256": "21729df3d7885561de811275db5ee6eeb1550a21f46d95cec060fa64cec3d78f",
-          "step_sha256": "392173ecf7d6803debac2750c6bea65376f5de403254e0de144b85bfd3eb06fe",
+          "step_sha256": "64608402dfef21744b64320126d4bdfe7abbda6ba16b239958198bda7e5a5384",
           "volume_mm3": 6.892999999999986,
           "solids": 1
         },
@@ -8570,7 +8586,7 @@
           "stl": "left-frame-manga-secondary.stl",
           "step": "left-frame-manga-secondary.step",
           "stl_sha256": "2fc3de35674bf75cf877370aa713a23cf2af4fafb1307f444771dad65f484adc",
-          "step_sha256": "27c712141c0469705b5cb077ad621056f878e39810b2299ea2bfc59b330d66f9",
+          "step_sha256": "7d1d2a914810f3731fef03cfda3727749f1fd31d56808b17a48a77aaa0562ce2",
           "volume_mm3": 3.1680000000000144,
           "solids": 1
         }
@@ -8586,18 +8602,18 @@
           "role": "body",
           "stl": "left-frame-talavera-body.stl",
           "step": "left-frame-talavera-body.step",
-          "stl_sha256": "3a8acbed4b19159681a0d5b09a767e97011758ad4da6903ecc23f29add2700ef",
-          "step_sha256": "621a052ea3298241fe9e84f19cd8af22016cf988d17e48b298d1596a700b03f7",
-          "volume_mm3": 1981.645999851568,
+          "stl_sha256": "1e20dc62091730042619a2b908967cb410d0f05da99caa25bb9982249aff89ce",
+          "step_sha256": "187f06d09a56831c0b3419a8a66a5000b36ebf7fce0df464d2b58e219c640232",
+          "volume_mm3": 1996.7257709385472,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-talavera-detail.stl",
           "step": "left-frame-talavera-detail.step",
-          "stl_sha256": "03f5b1647df21719f311372854b594a5b69c3d814f977bdb0fc75e41b5124696",
-          "step_sha256": "48a8046fdf3720124756ffb4911862b2fc85b5d07ec8aa09f2f1706644e6443e",
-          "volume_mm3": 135.19104204458395,
+          "stl_sha256": "f8c0fd77fc6652c0b3780854201b5464d06a00f9ac67e0a10eab86b0f0ddd68a",
+          "step_sha256": "c2e639c0c235c7bd7af1a8e3936433f835e6e7b7815bc901e32b24d4349d453e",
+          "volume_mm3": 141.23659595760492,
           "solids": 1
         },
         {
@@ -8605,7 +8621,7 @@
           "stl": "left-frame-talavera-accent.stl",
           "step": "left-frame-talavera-accent.step",
           "stl_sha256": "194d65a7346ca6b5cda4454fe39a7d508e00a2edf9ac168eb802a0f96e2b5f2f",
-          "step_sha256": "4641c1e3920ce6f6d87bc3f2c7b0ec2e9e1a384523ad1c126b557256481c21fd",
+          "step_sha256": "c3ce2099debde20075a94a88b23edf7e5c2ffcec168faccea26a8a8cad0b8b37",
           "volume_mm3": 1.136000000000002,
           "solids": 1
         },
@@ -8614,7 +8630,7 @@
           "stl": "left-frame-talavera-secondary.stl",
           "step": "left-frame-talavera-secondary.step",
           "stl_sha256": "d685908fdcffb45d09c128f6d7b06c9ea012a935b91586bd88552acd90c8edcd",
-          "step_sha256": "8630336c59e1625df73def0e2f7c41cc1044436f6e5e8a4172637e6829863762",
+          "step_sha256": "21f0fe524cf6eb7e8ceed94daac348d005113b6d27a1bad85bd08efa8db481c2",
           "volume_mm3": 36.753,
           "solids": 4
         }
@@ -8630,18 +8646,18 @@
           "role": "body",
           "stl": "left-frame-gameboy-body.stl",
           "step": "left-frame-gameboy-body.step",
-          "stl_sha256": "fa63d7e63c3abde49d9f9d925b1005219854c10c67fa6c82a7a10d09d194f4ff",
-          "step_sha256": "5bc208a4a6da47b52a722db0404b5ba507a514868a998c9ae5d9e69f27180cf0",
-          "volume_mm3": 1992.849690661253,
+          "stl_sha256": "16095df696317adb100c10ba890c3fa8229c3ef8209b42fd4246d67461da5811",
+          "step_sha256": "dd115900add30c40652251d18d4e8055526fe3c6f448e16e034663252a65bb8d",
+          "volume_mm3": 2007.9294617482299,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-gameboy-detail.stl",
           "step": "left-frame-gameboy-detail.step",
-          "stl_sha256": "6657a4824087597351d94e62e5605492d0f9518a7e7b74e97d15187848121d38",
-          "step_sha256": "a09e2f3c779a2b951a7b6b3b42de4570a2043c7c69c6d8fce1d48bec167f8757",
-          "volume_mm3": 146.71104204458393,
+          "stl_sha256": "29a51c048587d81af48eb7f3aa0a1110d1cc998f64ed20209cfc4757ad26e8b7",
+          "step_sha256": "834089cb9325186dd24505cd26aa76e2c0ed702c3216248bd846d8199722541f",
+          "volume_mm3": 152.75659595760496,
           "solids": 2
         },
         {
@@ -8649,7 +8665,7 @@
           "stl": "left-frame-gameboy-accent.stl",
           "step": "left-frame-gameboy-accent.step",
           "stl_sha256": "5f9a219c521923a0f41671accce2293880ed70526ab09d19a7b20afedd4a8732",
-          "step_sha256": "10d69835a3f00c5851fcc9340b6a7e7332c3c6aa35d5b166b263a83d625f1197",
+          "step_sha256": "db964a79c81532ae4cb5a074025f080ab8043170f69f827cf347a9e7221f4df1",
           "volume_mm3": 9.072919933615216,
           "solids": 2
         },
@@ -8658,7 +8674,7 @@
           "stl": "left-frame-gameboy-secondary.stl",
           "step": "left-frame-gameboy-secondary.step",
           "stl_sha256": "c2dde498438d394f82ed1c5c9e02a90a2ed30c32222ac993874e2adc6bcbd4c5",
-          "step_sha256": "cc842715a125d2a5c739190695bebc5617480673b1eec694d15aa3bead89b4b4",
+          "step_sha256": "8ecf4650ddadab53dd7b6832d554cf95fec0f48807b7d3c1d6b97286a4fb0600",
           "volume_mm3": 6.0923893421169355,
           "solids": 4
         }
@@ -8674,9 +8690,9 @@
           "role": "body",
           "stl": "left-frame-nes-body.stl",
           "step": "left-frame-nes-body.step",
-          "stl_sha256": "492bf4d7e06c3c68e33798ec65172c2101288e7f497b661df3e4a8476635b98b",
-          "step_sha256": "4f1489a3c8e35fb1cc0a9ec21926c6cbceb62784538daaf63a6bb86903c93548",
-          "volume_mm3": 1973.0143606680226,
+          "stl_sha256": "a5c1c32627f2327831da0970a9172848f90f10d1c6cd173f62f2ddb52d973dfd",
+          "step_sha256": "e3a2d0c6bd24ed67c842e930f91f09a797b1b15336c856de2c70baafd2bf3b03",
+          "volume_mm3": 1994.1396856680237,
           "solids": 1
         },
         {
@@ -8684,7 +8700,7 @@
           "stl": "left-frame-nes-detail.stl",
           "step": "left-frame-nes-detail.step",
           "stl_sha256": "5723ef62ad66fb040241fca2b7abb70841d4707cd3f005f06ab5b947ab4cf322",
-          "step_sha256": "76badaaae7ef5ed65b6f8883da3e28c7e01dddf38fd24aebd88aedce684a3ef4",
+          "step_sha256": "4e98686cedebbf0a631610bd09c7df924ba81d822390d9c032f623465511d3ba",
           "volume_mm3": 155.81157573449352,
           "solids": 1
         },
@@ -8693,7 +8709,7 @@
           "stl": "left-frame-nes-accent.stl",
           "step": "left-frame-nes-accent.step",
           "stl_sha256": "f3e139b1287eed1d7e414542003a6020c891b4d0faabbb140846afdcded6c893",
-          "step_sha256": "47cd004872932cad35a2076b4a63ccdd89e1419a48d8040d961493dfb83b5010",
+          "step_sha256": "3a4eca908e316e4a684acd119567953e95335665b0f0e937f33d4cf8df70d08d",
           "volume_mm3": 11.53100815810477,
           "solids": 3
         },
@@ -8702,7 +8718,7 @@
           "stl": "left-frame-nes-secondary.stl",
           "step": "left-frame-nes-secondary.step",
           "stl_sha256": "09f4b505812b231b81f66dad4b874073a05cb7937f9c0743a9bc03297241e46b",
-          "step_sha256": "3be5e02f63f248d0d4149346d5d2283ca7e45e7b14e1b17aec7612ca6c35e43a",
+          "step_sha256": "12820cd0baa0210c4265668c3198f7a1437a3048c62dbbecf429871384c20296",
           "volume_mm3": 14.369097335529233,
           "solids": 2
         }
@@ -8718,18 +8734,18 @@
           "role": "body",
           "stl": "left-frame-snes-body.stl",
           "step": "left-frame-snes-body.step",
-          "stl_sha256": "b73c831ee7fe155be8177c5d53715d3355c4aed621f4af0319584f757c062b5b",
-          "step_sha256": "41b93fa0af07f154687aa7a81c3e9f7e6a9d33e08aa78c795c8d25362c41de65",
-          "volume_mm3": 1985.548381588148,
+          "stl_sha256": "7ba305b71f9f085a1071efc170b135f3328da899b936b2dcc002868ee259aad8",
+          "step_sha256": "89906ff884706085e374d37b3c71784b14991e1c93b92589efa17874ecb25efd",
+          "volume_mm3": 2000.6281526751277,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-snes-detail.stl",
           "step": "left-frame-snes-detail.step",
-          "stl_sha256": "9c1ca353fcac7c5d3f24f13ac9c0c1e144d62e30077df25c07facdd75b6440a4",
-          "step_sha256": "c56162dc27db4a9b2a66da39c67be5f790308ebcf1012733530bc7f3c39011c7",
-          "volume_mm3": 144.8710420445839,
+          "stl_sha256": "fe532f02b87c4ff117231f436e1987ab67716c7f975fa72dea807b0021bf6870",
+          "step_sha256": "3c5f95a6c8fb5e63720b952e887e74261f644c95d5e0a15641f3d2b8b576d851",
+          "volume_mm3": 150.916595957605,
           "solids": 2
         },
         {
@@ -8737,7 +8753,7 @@
           "stl": "left-frame-snes-accent.stl",
           "step": "left-frame-snes-accent.step",
           "stl_sha256": "b64c2e9e303db594f9d2f48b2d804a0b903e4acd4309a42040ed8db23cef2f62",
-          "step_sha256": "649b351309f72450aec5bf9f074848b19c05625da3897a208bb40d4528bd855a",
+          "step_sha256": "2ae7cbb0b767c691d1a96894bbdab0de9f08615aea9037b5152e0a5923141851",
           "volume_mm3": 10.679114631544776,
           "solids": 3
         },
@@ -8746,7 +8762,7 @@
           "stl": "left-frame-snes-secondary.stl",
           "step": "left-frame-snes-secondary.step",
           "stl_sha256": "9bc1000f3098cb15dc0f866b2e2f9e9f945bc47e36930fb65d27a3d891299ac5",
-          "step_sha256": "634222401ea7b26aefb6c50f9c05c35996882fefb0573188935efb76f353f274",
+          "step_sha256": "165fdfecbc4914acaf26b5cf200083d53450a488af1b69176d56ca549ec13588",
           "volume_mm3": 13.627503973661673,
           "solids": 4
         }
@@ -8762,18 +8778,18 @@
           "role": "body",
           "stl": "left-frame-phone-body.stl",
           "step": "left-frame-phone-body.step",
-          "stl_sha256": "2925243d155bb410d1ad521bc36d9478d2300b06641f9ad21ab3c31699a65457",
-          "step_sha256": "bf103a977f7232e7a264bfde2bec0c561409e6d2625c394ea9c1dd6b714fdddd",
-          "volume_mm3": 1973.4587885025685,
+          "stl_sha256": "3964fc3dd4ed86d409aae3a8a530655d735c5a0a1deeb7d3ea444669adec1d75",
+          "step_sha256": "97dd2a58aa8500463c7a3926fede8add405b3fcd5a93c531c1bc1b1e32ce6b72",
+          "volume_mm3": 1988.5385595895489,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-phone-detail.stl",
           "step": "left-frame-phone-detail.step",
-          "stl_sha256": "b1d8ed722c7b36603ead9612e1ff2d649a3be63a38e55f66e5b7c79c972ae54c",
-          "step_sha256": "e75172ffdd476f0036b59c454acc90bdc75d38f02b11eb8723682b50e911d12e",
-          "volume_mm3": 173.65019170490916,
+          "stl_sha256": "a9a1b1606d8b4f284a76278cfdecb4d168ca99dcc9c540eb3f58efee63e7c22f",
+          "step_sha256": "ac9e95923627606b413a1079f88511e213826969625be1e783e5cd186a323aae",
+          "volume_mm3": 179.6957456179303,
           "solids": 12
         },
         {
@@ -8781,7 +8797,7 @@
           "stl": "left-frame-phone-accent.stl",
           "step": "left-frame-phone-accent.step",
           "stl_sha256": "f3cd75372536da69f75a6ed459cd5492fa8232fc7a0a5d1cc51dbb7360e5cbb2",
-          "step_sha256": "b6d26b12d0e78a9616ce0f49846388ed129065284bd3b9f7a02dfec6b64e5f0c",
+          "step_sha256": "2028a0ffde39a7e80ae5820bff1b7d51c1288eb79d699a6192e9cdf6f3e665d6",
           "volume_mm3": 3.4565308443374727,
           "solids": 1
         },
@@ -8790,7 +8806,7 @@
           "stl": "left-frame-phone-secondary.stl",
           "step": "left-frame-phone-secondary.step",
           "stl_sha256": "d2d1d9b6e621060a65d7e3ed1924fa0606da987c2e734fa10985eab973fd4266",
-          "step_sha256": "a23ae57da1da06371e742c7339d7dd3861daf353b90a8b21739e0442dffa86be",
+          "step_sha256": "ebd308a779d775a5e50c8bb63af36fc9d2bd135f18ff03ea7206b0a7b1d66115",
           "volume_mm3": 4.160530844337468,
           "solids": 1
         }
@@ -8806,9 +8822,9 @@
           "role": "body",
           "stl": "left-frame-walkman-body.stl",
           "step": "left-frame-walkman-body.step",
-          "stl_sha256": "fa03d1c7087c1ad4224075aa2c10ab6ffa81e1a93a7a40b45c300b3ff0d59c89",
-          "step_sha256": "ada83216ddc60f849b6404745b7d748265b9a4f75932a4fe6d835c0d159ef496",
-          "volume_mm3": 2006.075174999112,
+          "stl_sha256": "d04642507a81674aff28f78565aaed1552d2506fb262697be313d99e9ad49b52",
+          "step_sha256": "d8f37f710b3061571334c72a69fe02220fef51f958fab93f58df0d4b79b68f88",
+          "volume_mm3": 2027.2004999991134,
           "solids": 1
         },
         {
@@ -8816,7 +8832,7 @@
           "stl": "left-frame-walkman-detail.stl",
           "step": "left-frame-walkman-detail.step",
           "stl_sha256": "9e199eb041d2647afa6f4dec4103bf568924fbb4ee7e4396c5a4e16085039aef",
-          "step_sha256": "e512a094fc2311000fcabe81490c46c0d56a4aea7fdc3a8f7e0ba761a71bb9ff",
+          "step_sha256": "1784106e86e9528191efbd74e0740fc392d4495cfecee2f5171444728a453204",
           "volume_mm3": 107.61398211628409,
           "solids": 6
         },
@@ -8825,7 +8841,7 @@
           "stl": "left-frame-walkman-accent.stl",
           "step": "left-frame-walkman-accent.step",
           "stl_sha256": "7d0ecaba7040400771cb798d8f73544e6e3cdf279acdfa6b335a0e746022c503",
-          "step_sha256": "ef3464c07aea4c954e967740f1d087978038177590052bcbcc0e55c19066feb8",
+          "step_sha256": "e250f3de6327816b4c6afffed91cf9e469d7de1837fb2c93a40a42fd2ea8ffa0",
           "volume_mm3": 36.607822850925224,
           "solids": 2
         },
@@ -8834,7 +8850,7 @@
           "stl": "left-frame-walkman-secondary.stl",
           "step": "left-frame-walkman-secondary.step",
           "stl_sha256": "09ec1d734532ea62683aace6b3a5aff9b2ba90c4ca5104b5a868628c1ccdc3aa",
-          "step_sha256": "fc1d1158bee869948505262bb9ee4629249616e96c116adf7184db245bcb5168",
+          "step_sha256": "42b9753884113aa54413961c8449da4abe027f437aff91b9ba67fdf5a23ced39",
           "volume_mm3": 4.429061929829752,
           "solids": 2
         }
@@ -8850,18 +8866,18 @@
           "role": "body",
           "stl": "left-frame-ipod-body.stl",
           "step": "left-frame-ipod-body.step",
-          "stl_sha256": "3f60bff33c0ef71ccd25610d5ce88ef6bc2387b5075b51c159718fc94183586c",
-          "step_sha256": "7de441be61766ef78ac1ddb6c97ceb3e6ddea166434431d0c8bd8381b4dbd2ac",
-          "volume_mm3": 1991.40505498099,
+          "stl_sha256": "7e5545305bff32ff5821d40ea2905ecdbd05c8f8444abeee200d2accd565aa35",
+          "step_sha256": "44cc799369a771e065c949292ad5b2ebe589aa1391f3957b18bdf590f0002254",
+          "volume_mm3": 2006.4848260679698,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-ipod-detail.stl",
           "step": "left-frame-ipod-detail.step",
-          "stl_sha256": "03f5b1647df21719f311372854b594a5b69c3d814f977bdb0fc75e41b5124696",
-          "step_sha256": "5cd6d9253aaa0486a9b4fe33733871cbcfbf42f1982efff8da1ab8c314fe9abe",
-          "volume_mm3": 135.19104204458395,
+          "stl_sha256": "f8c0fd77fc6652c0b3780854201b5464d06a00f9ac67e0a10eab86b0f0ddd68a",
+          "step_sha256": "4ff3086e41f606635dd3160a4b907cfe19985e96580f8bd28eacb95f80f58761",
+          "volume_mm3": 141.23659595760492,
           "solids": 1
         },
         {
@@ -8869,7 +8885,7 @@
           "stl": "left-frame-ipod-accent.stl",
           "step": "left-frame-ipod-accent.step",
           "stl_sha256": "e4953445f498f81fe32321c9f797023d78a477ed9bf40786ab5ba3fd722082c5",
-          "step_sha256": "149637f1348f9219fdc7d66ff4c30d37bfdbd0cd32da6a7ff70a85c13e68f027",
+          "step_sha256": "57a435ac2d21c24e5a69afb073d9cbc53aef1a00ffae1326f02975c7d4e78172",
           "volume_mm3": 19.86743194130187,
           "solids": 1
         },
@@ -8878,7 +8894,7 @@
           "stl": "left-frame-ipod-secondary.stl",
           "step": "left-frame-ipod-secondary.step",
           "stl_sha256": "67d32c96f2a10b252f6b0422fbb382c3d641d2240b8a0c250b1af059d698620e",
-          "step_sha256": "e543cb7455e5559b0363988778cd8bb3616e6c1e9e4e46e13f4fe6807c7eb6d9",
+          "step_sha256": "f9588cd700f2478a3a5e3754027ec283014812a9ff5847649169963d2e0e3f60",
           "volume_mm3": 8.262512929275154,
           "solids": 2
         }
@@ -8894,9 +8910,9 @@
           "role": "body",
           "stl": "right-frame-flan-body.stl",
           "step": "right-frame-flan-body.step",
-          "stl_sha256": "5a7db435a046d74ea492e017dcf649016aff1f8792f9f88f6e49874705da2f97",
-          "step_sha256": "fe0529b02c138fe07ed0ebc318f1a7d9f462f3e479a97b97178954e6cf305028",
-          "volume_mm3": 2059.4901083432296,
+          "stl_sha256": "280f9eacb44a3342674490a67a8db9e5b92fc36a68b7167057cdf6aee3ec85c3",
+          "step_sha256": "c03e19c82c92ebb683199f974b9085f482fb1985287d3eaca167fe3e5deceaef",
+          "volume_mm3": 2080.6154333432332,
           "solids": 1
         },
         {
@@ -8904,7 +8920,7 @@
           "stl": "right-frame-flan-detail.stl",
           "step": "right-frame-flan-detail.step",
           "stl_sha256": "7f89d271a913b785fc04ea8742d37a80d4c837063812cfe5f4ee12fa718df012",
-          "step_sha256": "9a87aafec05518e03510b0a90ac0945fa7039e92613d6c97a00d851956b92cef",
+          "step_sha256": "971ba2be4ba820855e9dd2d58f5a360a484e172dcf71f9ad7a2270d4c7c79421",
           "volume_mm3": 6.147221195188715,
           "solids": 2
         },
@@ -8913,7 +8929,7 @@
           "stl": "right-frame-flan-accent.stl",
           "step": "right-frame-flan-accent.step",
           "stl_sha256": "e05b762967dbbc0b7cc8bf30d4d5a37c301f603455ba7afd2c53ecf152ba4251",
-          "step_sha256": "47002e5e98366cdd75db855c68369a8104262aedb58f713744baf78b47e62227",
+          "step_sha256": "dbbb4df76e86f37871c77de758d44a98cf4848701b683ce97ea28f2530a9e314",
           "volume_mm3": 77.27768804503545,
           "solids": 2
         },
@@ -8922,7 +8938,7 @@
           "stl": "right-frame-flan-secondary.stl",
           "step": "right-frame-flan-secondary.step",
           "stl_sha256": "59ce4b3491e0b6d54b07a254dc9bc9a65990db242911e819616b940e8392edf1",
-          "step_sha256": "2bb697780b981fe387b7de6c1d10008f1d6da6c7eb3931a4495f6942fcc4957f",
+          "step_sha256": "eb9782e8599b13a7f5a4c450e107b94ee8e52a87a151a46c2b8bb493a7a0da5f",
           "volume_mm3": 11.811024312699292,
           "solids": 1
         }
@@ -8938,9 +8954,9 @@
           "role": "body",
           "stl": "right-frame-tape-body.stl",
           "step": "right-frame-tape-body.step",
-          "stl_sha256": "62ed0082f648ed7f54889db8d2a7632d606d586dd642718a3a51bc2f7a4d7c11",
-          "step_sha256": "e5c5aed99a1cb8371c11b6affab3d3c154fb307411d36f63b1f0f84b4975557b",
-          "volume_mm3": 2011.7447251147826,
+          "stl_sha256": "5dd9554f59462f7980bf40664cd8ef8b6c1a3414551ee2db56c27b841b372209",
+          "step_sha256": "dc35484a0005f0669da13d8f36d8ec559095998d1844b178fe055126311a2d1b",
+          "volume_mm3": 2032.8700501147837,
           "solids": 1
         },
         {
@@ -8948,7 +8964,7 @@
           "stl": "right-frame-tape-detail.stl",
           "step": "right-frame-tape-detail.step",
           "stl_sha256": "651300e0a6674a1d9dccfd8fefb9fc539c12bc665c8b018ebe2e69446f2be55c",
-          "step_sha256": "ca21c3dcf68d6b7cc92184aa950310fd3fe2311fb69f91a5ba11c4ce675be7ee",
+          "step_sha256": "86ad117742af7ce8e0051d67c79e2e1546655345e512837af59ee99bbeaa47dc",
           "volume_mm3": 119.66965549419155,
           "solids": 7
         },
@@ -8957,7 +8973,7 @@
           "stl": "right-frame-tape-accent.stl",
           "step": "right-frame-tape-accent.step",
           "stl_sha256": "81e4e4d1b2de5f10a1f7091617f504479fb1c07fabb21a8944effa945e5e2c57",
-          "step_sha256": "4a3ec625dbcbbfceecd7a56826d518ca867a11e4df9b40443f45aef639672fea",
+          "step_sha256": "3ad34d48e59af602e08915ef8606b5e104baf5f6dd6bb9fd632723a0b6fb89ba",
           "volume_mm3": 12.64909733552922,
           "solids": 2
         },
@@ -8966,7 +8982,7 @@
           "stl": "right-frame-tape-secondary.stl",
           "step": "right-frame-tape-secondary.step",
           "stl_sha256": "33a9c4a0b3e9d5646b999349fcff909a0d03d7c07ab8f3432b7a51f1fd7283b4",
-          "step_sha256": "dec360b20879e01595be599f9006dacb5f52de4b4539e8b3772ba1e48e19e1d6",
+          "step_sha256": "ea59c959267e0993812a026f0916a851eb551eb4112a7b751c17d9964a00aaff",
           "volume_mm3": 10.662563951649911,
           "solids": 2
         }
@@ -8982,9 +8998,9 @@
           "role": "body",
           "stl": "right-frame-orbit-body.stl",
           "step": "right-frame-orbit-body.step",
-          "stl_sha256": "ec42bd95359f2dec8a09bfd40f575807c3863487db8632f3ed5812f19b76d2e1",
-          "step_sha256": "54a4a6cd2b305e26dff6595a3573f5ad186d4a28a7f4b86d5179c2ab50fe0e58",
-          "volume_mm3": 1949.8320193262302,
+          "stl_sha256": "60a89b3371c6cfe6a3abfb1306ede1570b4d05a29d1c26c0065727eab6bc55a6",
+          "step_sha256": "123b56b4790a82a57e11a7e33b026a7d0da40edc83e72e65bdc58e3568035ed5",
+          "volume_mm3": 1970.9573443262293,
           "solids": 1
         },
         {
@@ -8992,7 +9008,7 @@
           "stl": "right-frame-orbit-detail.stl",
           "step": "right-frame-orbit-detail.step",
           "stl_sha256": "d04eb998132e2104d41af672fe9d6cd91b7bdb85f15020fd9442e41f42b59558",
-          "step_sha256": "479fa5adc1ab482c7bf9d7b4e9baef68ddf0af9e9595cef26d4ec22361003425",
+          "step_sha256": "3a68f264d511af9e4c1bdc50c438fd9a8c61522794e2038c3efb41dd38cc58ba",
           "volume_mm3": 163.4623225699195,
           "solids": 1
         },
@@ -9001,7 +9017,7 @@
           "stl": "right-frame-orbit-accent.stl",
           "step": "right-frame-orbit-accent.step",
           "stl_sha256": "b087d7b491cbeaa23436dca5f33f496e2fc880c0a792bee31990cd776670e5a8",
-          "step_sha256": "a1185adbdf4d943482856b6d477fa4e32feb180c8836d6dc62545ee180419083",
+          "step_sha256": "e7214823f1ecd6d0667986feb5df240f1442ee9bf8dcf5f4999849a4b20f02f2",
           "volume_mm3": 32.936833464693166,
           "solids": 1
         },
@@ -9010,7 +9026,7 @@
           "stl": "right-frame-orbit-secondary.stl",
           "step": "right-frame-orbit-secondary.step",
           "stl_sha256": "77986dc2074d91fde6a96107fbdb8f95c90bc9ccea9b118a3e52782a9d93309f",
-          "step_sha256": "b0058e1a00437adcb4a6a0fde1b5d500c08f3149000ebb77790990853308471e",
+          "step_sha256": "01b50c6a38eb74e176808c8ef1f0e863ab6fe34060f786b83d3cdc97e8610e56",
           "volume_mm3": 8.494866535306805,
           "solids": 1
         }
@@ -9026,9 +9042,9 @@
           "role": "body",
           "stl": "right-frame-manga-body.stl",
           "step": "right-frame-manga-body.step",
-          "stl_sha256": "f80ea8d98563622cc1ddffbb15f580efeb96b03d354052dfbda6b48b8c1ab716",
-          "step_sha256": "d6f25c1d04fb76fcf8daa7504d184050e00228ef4fc395ad73843b5090af40b4",
-          "volume_mm3": 2015.791051893069,
+          "stl_sha256": "1ba53ec630e135616ff521d7ae6983f49e219e690757bbe545ea5fe678ad952c",
+          "step_sha256": "05daca637a53c83c1c29ee6d1bbf46b3e03e1746545b411b88fe43ee14a828d8",
+          "volume_mm3": 2036.916376893067,
           "solids": 1
         },
         {
@@ -9036,7 +9052,7 @@
           "stl": "right-frame-manga-detail.stl",
           "step": "right-frame-manga-detail.step",
           "stl_sha256": "ee1063d08dbff41f66949345698bf61d9232695e2e8439fb896ff03f7b5c6b30",
-          "step_sha256": "05c867b64b6e2bffd7d830b0ec63ddab445fca1913a1532a0898776d54a14795",
+          "step_sha256": "238b5f60b1a18310d8f849de35b7519f9402aa6886b3bd469ee86dbd601edfb9",
           "volume_mm3": 128.87399000308977,
           "solids": 6
         },
@@ -9045,7 +9061,7 @@
           "stl": "right-frame-manga-accent.stl",
           "step": "right-frame-manga-accent.step",
           "stl_sha256": "098f45b3daf24e0eb24fb0763244a72f1c66bdcc86909fa27cb5f522f83df908",
-          "step_sha256": "508cc934d7a6a4abcbaaa18e5a57251d12001cc7cbb347809119921c613cf880",
+          "step_sha256": "1747708abaa5762aac728da62fb34c2cd227241316c2ea8bb744efa2bdb44e4a",
           "volume_mm3": 6.892999999999985,
           "solids": 1
         },
@@ -9054,7 +9070,7 @@
           "stl": "right-frame-manga-secondary.stl",
           "step": "right-frame-manga-secondary.step",
           "stl_sha256": "98bc0a4066b7452692c55ad5d4bb80d7039f5bb9f6fbcf803eb5cdb6b055bfe1",
-          "step_sha256": "1cb408cf1035001362a0afe44a4ad7bb5f3f874b570d858ad415c15376707b36",
+          "step_sha256": "bc93cd64ae404a6f005a9291299b7c61cc22bc43af9ae46c1173fa2fef90ab62",
           "volume_mm3": 3.168000000000014,
           "solids": 1
         }
@@ -9070,18 +9086,18 @@
           "role": "body",
           "stl": "right-frame-talavera-body.stl",
           "step": "right-frame-talavera-body.step",
-          "stl_sha256": "be9e95f685f1584545d1cb0bf895d71a1501530131aaa3c240eb4e1b0ac0b611",
-          "step_sha256": "b7f20a96006aae5b3dd06dd63c604ca340201848224a55516bd792065243aae8",
-          "volume_mm3": 1981.6459998515707,
+          "stl_sha256": "8f23cede15e09d32932bf509464282d82dd90884f563b9693f1269d1745fa727",
+          "step_sha256": "7067cf14775020bbd67c0602be6f559c5765e07ecc70168a54c31958e57c39a4",
+          "volume_mm3": 1996.725770938551,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-talavera-detail.stl",
           "step": "right-frame-talavera-detail.step",
-          "stl_sha256": "94bab232343de90d755c0494505b95c864a4b40b7074e1255954354f76a5d8de",
-          "step_sha256": "0e6f9933837f988be17148be73eb9c50399e6b21f49caa917850e0cc01a0f194",
-          "volume_mm3": 135.19104204458384,
+          "stl_sha256": "e3354dbd22c8f246b074f42a69b35dec248c87ed9ee2d0a6a03bb060726bd9af",
+          "step_sha256": "dfd3308a66e45c1d20525a0d379bf112100da58f5ff530c5a1291691d49df42e",
+          "volume_mm3": 141.2365959576043,
           "solids": 1
         },
         {
@@ -9089,7 +9105,7 @@
           "stl": "right-frame-talavera-accent.stl",
           "step": "right-frame-talavera-accent.step",
           "stl_sha256": "f4e07ad1a88a7b4471e370051f1e5cc1441faa9a5ab5bd1053e93769e1e1676f",
-          "step_sha256": "da9d8b303941121e8b72a13f2d527dc094ba964c1cb03dd8b562314f21c36e41",
+          "step_sha256": "50988f02e9c3b7f60f1c1cd0bad9d43b281418fcd97afda68c49823e3683bcf2",
           "volume_mm3": 1.1359999999999997,
           "solids": 1
         },
@@ -9098,7 +9114,7 @@
           "stl": "right-frame-talavera-secondary.stl",
           "step": "right-frame-talavera-secondary.step",
           "stl_sha256": "4181e7fe21bf6838a771cf20b4cf79db7c3c6cff0cb07bda709de8a2849811ae",
-          "step_sha256": "7db1a744cca4fbac3dec03bc816c01a987f4ba938ca79185589221ecbe69f6c6",
+          "step_sha256": "8060cdae289c5d0fe24b3a829c2acc591cfa0bddab687593eca1dce8768fa256",
           "volume_mm3": 36.75300000000003,
           "solids": 4
         }
@@ -9114,18 +9130,18 @@
           "role": "body",
           "stl": "right-frame-gameboy-body.stl",
           "step": "right-frame-gameboy-body.step",
-          "stl_sha256": "d346ae24d1ff04b852fed6c6b99c37a615c86ce484de1468195eec163b22eb80",
-          "step_sha256": "58de9fa3c8f9073392fd216c7001e526d8dae071162189919d538e3f93d273bf",
-          "volume_mm3": 1992.8496906612545,
+          "stl_sha256": "57de0b6746de6f94a5def201fc5611d1a0bb8bec3bda8188db234561edb73140",
+          "step_sha256": "9b063c195e0287cd1a5fdadf68ff91ea44e6fe4f936bcd943ebe42c682024582",
+          "volume_mm3": 2007.9294617482328,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-gameboy-detail.stl",
           "step": "right-frame-gameboy-detail.step",
-          "stl_sha256": "f6849463b67c34a66e1eb2f75122540d0d8a3814efa147f5b2567e1b92ba9701",
-          "step_sha256": "3bdad97bcc4b6f175d3f20e0b8c837b16c9210524c1814873404b0777825dc41",
-          "volume_mm3": 146.71104204458376,
+          "stl_sha256": "e6b27269068dc3dcbdc21edeb64f49cc893bc775088bd6e4c9cc499230590218",
+          "step_sha256": "45c02a91042f6097996aa1dde7a0dac412f886a37789f96c9c76ba438bb6dd95",
+          "volume_mm3": 152.75659595760436,
           "solids": 2
         },
         {
@@ -9133,7 +9149,7 @@
           "stl": "right-frame-gameboy-accent.stl",
           "step": "right-frame-gameboy-accent.step",
           "stl_sha256": "03e206ecdd426739fee8f61a3d929b75ec7f8f85eb92cc90836be1447c883ac6",
-          "step_sha256": "3697930f5f92d0a9bf7f96277c7159e6a00dc618fd3881932c2dcae4a3c5a313",
+          "step_sha256": "7ca931ccc4230e814b4a9acf3d26f492677e16a2949128a006732d9f575b803e",
           "volume_mm3": 9.072919933615225,
           "solids": 2
         },
@@ -9142,7 +9158,7 @@
           "stl": "right-frame-gameboy-secondary.stl",
           "step": "right-frame-gameboy-secondary.step",
           "stl_sha256": "b69a55ef57be083e6b52a6c264500078a0f00bce9ff693d3aa8baa7d583230d7",
-          "step_sha256": "7c9ca5990e30b2cabeac6999272375518a35bdf388a20409ac127200a483f103",
+          "step_sha256": "1728621ec4a46c416f2bb017a5d17206c11707dbf50ffe9bc7af776d37fd1437",
           "volume_mm3": 6.092389342116951,
           "solids": 4
         }
@@ -9158,9 +9174,9 @@
           "role": "body",
           "stl": "right-frame-nes-body.stl",
           "step": "right-frame-nes-body.step",
-          "stl_sha256": "a94859d9275a3d77056feadadef6ea5f9f6be639cf999ff7ce430c998834b514",
-          "step_sha256": "987e512c6662f922f83d911f4c3e2a786b5f7e4fa1ed47244ff4126e749e2baf",
-          "volume_mm3": 1973.014360668028,
+          "stl_sha256": "fc36804cab801ba69fa2cc672c24829a67fdd0b3a9ba89653df0a5faa9a54090",
+          "step_sha256": "517b26b2e4baec48a1e2ce6044144e728cca763205ddf25b684dfbe02d88c3c2",
+          "volume_mm3": 1994.1396856680258,
           "solids": 1
         },
         {
@@ -9168,7 +9184,7 @@
           "stl": "right-frame-nes-detail.stl",
           "step": "right-frame-nes-detail.step",
           "stl_sha256": "5ecf423bd82e88d7c26ffb0fa19074a2d418d52efe5b3f8ff59474837f77827d",
-          "step_sha256": "cbfbaf6268c004c6d77710812fdef5fd2147c0087ac3c96acd3401fa8e7396a5",
+          "step_sha256": "ca135110fb1c9c4e15e0efba4ec74ddd2489e79c82db27a242791a32ea3f0443",
           "volume_mm3": 155.8115757344926,
           "solids": 1
         },
@@ -9177,7 +9193,7 @@
           "stl": "right-frame-nes-accent.stl",
           "step": "right-frame-nes-accent.step",
           "stl_sha256": "56e899709aa6869c7f8e67d039c626ebebb8049eed8a2961dc8d661a1ddb27cf",
-          "step_sha256": "62f006ead124efe1b1747d903b430d00858eb6236e54018a8936800e15a5c77d",
+          "step_sha256": "dbe343a8ba79a1bdeff38dc703c079f6a753c538c46b8f3c54462b3552e41fdf",
           "volume_mm3": 11.531008158104775,
           "solids": 3
         },
@@ -9186,7 +9202,7 @@
           "stl": "right-frame-nes-secondary.stl",
           "step": "right-frame-nes-secondary.step",
           "stl_sha256": "3a6c6c8e7dbd03d05285b02ba0099a47155028b07578bb10a10c6637b1a9ba75",
-          "step_sha256": "8d7f82234ad28cb372fb2101fb7ebfed910a837c45475bf741ff2880da93863e",
+          "step_sha256": "43fbecb90d26ac74e69824e07c1e4dccfb753f1ac7811ee3ea68134c335d1280",
           "volume_mm3": 14.369097335529252,
           "solids": 2
         }
@@ -9202,18 +9218,18 @@
           "role": "body",
           "stl": "right-frame-snes-body.stl",
           "step": "right-frame-snes-body.step",
-          "stl_sha256": "0fa1d7f165b6fa2ba50fa1b63cacee84dbcc4fd9c6598fd37bd968cc0329a56f",
-          "step_sha256": "ab32ac8a5addf1090d4cc8dec3692493a6e4fc7ef2075729fd4b455131a4d471",
-          "volume_mm3": 1985.5483815881523,
+          "stl_sha256": "650fe88b95a29dd2eb253e84f58bc4e4331f1970d8d97545f5e5ccfdfba88b21",
+          "step_sha256": "9f0d01216a6d9c69eb0103046035242bd249d34e9048a18632b5ce57f7cef23a",
+          "volume_mm3": 2000.6281526751316,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-snes-detail.stl",
           "step": "right-frame-snes-detail.step",
-          "stl_sha256": "4b5ff7c36e842d82c904793fa18447853a964f1a5dca2bd77e3cda346e79e9d6",
-          "step_sha256": "4e7281e845fcceac277e58ef137a4885ddb389d02a15e7e46dc5bdd26d0ef639",
-          "volume_mm3": 144.87104204458385,
+          "stl_sha256": "bc4cc451b0473920e9c8dab1be1dfeff74d5c0b96f86a7331775e6d8ed3ec9b0",
+          "step_sha256": "e4fb95aef0aaaf2bd7583476079646274e21e1b962d2cc01c68b0e8a5982a81e",
+          "volume_mm3": 150.91659595760436,
           "solids": 2
         },
         {
@@ -9221,7 +9237,7 @@
           "stl": "right-frame-snes-accent.stl",
           "step": "right-frame-snes-accent.step",
           "stl_sha256": "ff3f9fe4d179215c835de80904aa09962a37d5ffa7cef3daf5daf2a3ecaa15be",
-          "step_sha256": "45daaf7c47efe44785602493c48e629757963e633a8d943c91030411faf63304",
+          "step_sha256": "21e66edcb710792c8d5c69c484e5a5548b21246f41d02cd51c6820382653df73",
           "volume_mm3": 10.679114631544778,
           "solids": 3
         },
@@ -9230,7 +9246,7 @@
           "stl": "right-frame-snes-secondary.stl",
           "step": "right-frame-snes-secondary.step",
           "stl_sha256": "014ad51b7e8dac1a6b73c05e2ac7dd94221acbd278e6d2756ce387fb7a2ffab8",
-          "step_sha256": "6ea674738b197da422f353daa2b6b7ea33ec1c2e61c6ae5657d434a0cde595c9",
+          "step_sha256": "1ec9343eb266edbdbab8bbb7816d91f3435c4938972b1062d9d295cb695605aa",
           "volume_mm3": 13.62750397366171,
           "solids": 4
         }
@@ -9246,18 +9262,18 @@
           "role": "body",
           "stl": "right-frame-phone-body.stl",
           "step": "right-frame-phone-body.step",
-          "stl_sha256": "6f9b1bc9698f7b34f39fc261ca35428b230844224f1f04157e9f485dedf9a09f",
-          "step_sha256": "14c8a7a0406ecf1332158dc7535a1f35d24c663716917567e663228898dea6be",
-          "volume_mm3": 1973.4587885025671,
+          "stl_sha256": "6ff3706316cf9397ea72ce9b7e207bb8d29eae900032a83d06d12d2b10365f60",
+          "step_sha256": "9a816e567d27f02e44fc6bae6fcabb27f535c823d6b93d6e5e5a2311105ef8bb",
+          "volume_mm3": 1988.538559589548,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-phone-detail.stl",
           "step": "right-frame-phone-detail.step",
-          "stl_sha256": "892481f7e4df0f6b68d69bad9abcdab3c327ef105841bea906ab60f124352777",
-          "step_sha256": "4adfed3b16409afb7392b130add29c439102f6a24e07af58980d4048a766b8b0",
-          "volume_mm3": 173.650191704909,
+          "stl_sha256": "868f79b67199881fe4ed254592bce126ab485296786ab7857e2a2658142ba62c",
+          "step_sha256": "36f5381670412e3eb73f2948da4d38403c9035395cf56d16554614bac49273d1",
+          "volume_mm3": 179.6957456179295,
           "solids": 12
         },
         {
@@ -9265,7 +9281,7 @@
           "stl": "right-frame-phone-accent.stl",
           "step": "right-frame-phone-accent.step",
           "stl_sha256": "1c0a12626a11ff58403426840b16d34a5ce97f8ffc35fb7a59ac9ddc166992a7",
-          "step_sha256": "3d6f93d2f6857e58c3cb3e97f92b5df27d5d29e3677d7ec14e6f98e77bf9e1de",
+          "step_sha256": "171eaff95e73287a3e611f6ea3a183d55a39b4372a7220ea1742ea093b28de68",
           "volume_mm3": 3.45653084433747,
           "solids": 1
         },
@@ -9274,7 +9290,7 @@
           "stl": "right-frame-phone-secondary.stl",
           "step": "right-frame-phone-secondary.step",
           "stl_sha256": "0ec9cdc50e4b7067130bad86aedf413b6dd0d9f8871f58576283731b60a2b73a",
-          "step_sha256": "f36d7f80d8e167fdbc0b5967801f2c0c34e136a5008c0da4a7d9929ba45dd94f",
+          "step_sha256": "0f368d5497170aeeb92c678b2f5a1d162518cdbcf84ea38d67e90cdb96bf6c4f",
           "volume_mm3": 4.160530844337472,
           "solids": 1
         }
@@ -9290,9 +9306,9 @@
           "role": "body",
           "stl": "right-frame-walkman-body.stl",
           "step": "right-frame-walkman-body.step",
-          "stl_sha256": "e0f9792ad1064e18c030478c0d25e9e1f04f6b5e513b4347c6aaa646bee67c80",
-          "step_sha256": "d6b99b04798ed8e696ba96fe1a2237fca1a224673a0cd27811fa22c38f62c06f",
-          "volume_mm3": 2006.075174999116,
+          "stl_sha256": "4cf6629547825a1c7d357a5bc78ad4c572ca7a32b96be56f04d2c050df3b8af7",
+          "step_sha256": "6f225b9c0018ac30d830edfb7f3147c5f08aee39cce487a35cc19d39db48fb3d",
+          "volume_mm3": 2027.2004999991143,
           "solids": 1
         },
         {
@@ -9300,7 +9316,7 @@
           "stl": "right-frame-walkman-detail.stl",
           "step": "right-frame-walkman-detail.step",
           "stl_sha256": "b2a9fbca49c93eb8a911b45ef24953063e2f1e124564854297c500839564ffe9",
-          "step_sha256": "a79b31c0f7a5a999664997dfa46068e5a8063d63568d5f5d8a1f97f3571248c5",
+          "step_sha256": "7c9ce45400341c866304799850bf550f4f526332eca76ce12d75b8201a1b3340",
           "volume_mm3": 107.6139821162842,
           "solids": 6
         },
@@ -9309,7 +9325,7 @@
           "stl": "right-frame-walkman-accent.stl",
           "step": "right-frame-walkman-accent.step",
           "stl_sha256": "a1495b3198b443115a5a826c8852e6a1e0831f41b9adbae3fd6ea26df2a42578",
-          "step_sha256": "68d840dbd93178630654dfcb375749ed2fc3dad6ebc3c8a3c69fb2541129e63c",
+          "step_sha256": "0a233bb93c5b10ebd5622eee8cfed41c6d1c45e42634466127b1a78bee725518",
           "volume_mm3": 36.6078228509252,
           "solids": 2
         },
@@ -9318,7 +9334,7 @@
           "stl": "right-frame-walkman-secondary.stl",
           "step": "right-frame-walkman-secondary.step",
           "stl_sha256": "0f9af9522b82dccee8b8086259c463f197786c657b9c3ab09389ae980a039886",
-          "step_sha256": "04b90de07f2367fc79f7a8105ba8393abff54a5eddf7125c6c1afb68b196234e",
+          "step_sha256": "bea096500ae10c65c85022d8acc02747bbbbff76ea13368b7a4cd953703ffee2",
           "volume_mm3": 4.429061929829748,
           "solids": 2
         }
@@ -9334,18 +9350,18 @@
           "role": "body",
           "stl": "right-frame-ipod-body.stl",
           "step": "right-frame-ipod-body.step",
-          "stl_sha256": "b58a07d5facad2b9809b94331f89b010103bc78a78db5eb916d3656e58ae1bd6",
-          "step_sha256": "555ffb2bdb8f2e28d4d607227d1eae3f76df4a3a323327210faee2fe224f102e",
-          "volume_mm3": 1991.4050549809917,
+          "stl_sha256": "98cecbcd66c2462a282ff3ab27fc9d52bf5560026a3937782b1f96e4ce98afee",
+          "step_sha256": "60f6b91d796d4c57ea542190ed95377869b828b3220ce946ebe4d0b48c0c1fd8",
+          "volume_mm3": 2006.4848260679742,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-ipod-detail.stl",
           "step": "right-frame-ipod-detail.step",
-          "stl_sha256": "94bab232343de90d755c0494505b95c864a4b40b7074e1255954354f76a5d8de",
-          "step_sha256": "a7e1e2fb86aecb720e2c0a1802d2c8430d4bb59e6cc6ff7b5763d0efd6c6fc32",
-          "volume_mm3": 135.19104204458384,
+          "stl_sha256": "e3354dbd22c8f246b074f42a69b35dec248c87ed9ee2d0a6a03bb060726bd9af",
+          "step_sha256": "8f753ba5a05b975dae4f32be2fd51e877162b5b54b3ea04ab2a5cfe5224ed5ba",
+          "volume_mm3": 141.2365959576043,
           "solids": 1
         },
         {
@@ -9353,7 +9369,7 @@
           "stl": "right-frame-ipod-accent.stl",
           "step": "right-frame-ipod-accent.step",
           "stl_sha256": "599d217d9b76c23ffc60a8ca75401c828b8894b3ad987e3f9370b3fa736a8eb7",
-          "step_sha256": "c4f634d6f631bbc7076ce8b1a368d491e7f052ea5fd285bc9ea61e668e6467ec",
+          "step_sha256": "67cdbc13faf1ecf962910a4ff85896bfcf9894cf083a7be29640aa77e6f33ad1",
           "volume_mm3": 19.86743194130186,
           "solids": 1
         },
@@ -9362,7 +9378,7 @@
           "stl": "right-frame-ipod-secondary.stl",
           "step": "right-frame-ipod-secondary.step",
           "stl_sha256": "bb9268c46f2157fd1b75f7428e27f34a09b7d66c2a8553a704883735b510be79",
-          "step_sha256": "c7be6800e9020a98e8540d2d4bee0906557eeaba7cfc06758cc2a4375c07f574",
+          "step_sha256": "c8c11242c125c5c37041c42791158a36252d2ff2eeb3f709646d86bd5caf687e",
           "volume_mm3": 8.262512929275143,
           "solids": 2
         }
@@ -9450,8 +9466,8 @@
     "document_label_preservation": "validation/revI-document-label.json"
   },
   "export_execution": {
-    "native_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
-    "exporter_sha256": "1c0df1ef9be9b97eb230d6fb101114250cce65fa83e07571d015e584f7ac5395",
+    "native_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
+    "exporter_sha256": "e992323442c464b4470e959432838a79e28c84224f17f69b37db784d65dfa493",
     "receipt": "validation/revI-mechanical.json"
   },
   "level_stack": {
@@ -9739,5 +9755,22 @@
       "volume_mm3": 0.0,
       "physical_fit_qualified": false
     }
+  },
+  "display_seam_correction": {
+    "master_path": "design/proposals/display-seam-r1/master.json",
+    "master_sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+    "source_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+    "opening_mm": [
+      13.9,
+      30.5
+    ],
+    "glass_clearance_mm": 0.1,
+    "height_change_mm": 0,
+    "display_translation_mm": [
+      0,
+      0,
+      0
+    ],
+    "physical_acceptance": false
   }
 }

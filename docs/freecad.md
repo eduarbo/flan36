@@ -23,7 +23,7 @@ For keycaps, frame styles and colors, use the [configurator and companion macro]
 
 In **Parameters**, increase `FrameTop` by **0.4 mm** and recompute. The cover and its co-printed color volumes follow the new roof together; no decoration rises above it. Save, close and reopen to confirm the change, then restore the original value.
 
-`FrameRoof` controls roof thickness and `WindowMargin` the clearance around the glass. Start from 1.2 and 0.4 mm respectively. The supplied dimensions were checked as a nominal assembly; arbitrary edits are not automatically cleared for fit or printing. For new frame shapes, edit the outline sketch (or loft sections for Beveled/Faceted) while preserving the shared cavity and mounts.
+`FrameRoof` controls roof thickness and `WindowMargin` the nominal clearance around the glass. The current reference uses **1.4 mm** and **0.10 mm**, respectively. The glass opening is centered on both axes. These values require a measured fit sample; arbitrary edits are not automatically cleared for printing. Preserve the shared cavity and mounts when editing an outline, and use the recorded artwork master for the color partitions.
 
 ### 2. Move the display
 

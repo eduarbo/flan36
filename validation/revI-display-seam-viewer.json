@@ -1,0 +1,22 @@
+{
+  "viewer_sha256": "90bc7ce2b74a0c9aa9867ff7cfc9224a25aa1266359412d13c206df6f970f89f",
+  "checker_sha256": "83ccdfa7473216f9c6197d3b310292dda7f1c7f8d40208594e41700ada0bf9a1",
+  "real_frame_glass_and_supports_visible": true,
+  "proposal_link_verified": true,
+  "images": {
+    "top": "595cd32b257ebbd349b5d9430b5a3799233bc23fd53219d0860b3349bc41e813",
+    "iso": "5affe55b7ac2776c6770ea2cb5f53c5e7b358743e58ef7aa5b7b8cd2e14c8b71"
+  },
+  "errors": [],
+  "pixel_fit_automatically_qualified": false,
+  "visual_inspection": {
+    "views": [
+      "top",
+      "iso"
+    ],
+    "style": "talavera",
+    "result": "No continuous pale side strips visible around the glass in these actual viewer captures.",
+    "scope": "Nominal digital assembly; physical fit and every oblique ray remain unqualified."
+  },
+  "native_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7"
+}

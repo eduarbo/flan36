@@ -73,6 +73,11 @@ if doc.getObject('ApprovedFrameMasterR4'):
     # receipt describe the raised shared shell and centered display assembly.
     for side,prefix in [('left','L_'),('right','R_')]:
         metadata['halves'][side]['display_header']={'x':117.92 if side=='left' else 31.92,'y':50.8}
+if doc.getObject('DisplaySeamCorrection'):
+    seam=doc.DisplaySeamCorrection
+    metadata['display_seam_correction']={'master_path':seam.MasterPath,'master_sha256':seam.MasterSHA256,
+        'source_sha256':seam.SourceSHA256,'opening_mm':[13.9,30.5],'glass_clearance_mm':.1,
+        'height_change_mm':0,'display_translation_mm':[0,0,0],'physical_acceptance':False}
 stack_recipe=json.loads(doc.getObject('SlimStackReceipt').RecipeJSON)
 for side, recipe in stack_recipe['halves'].items():
     metadata['halves'][side]['battery_opening']=[v for point in recipe['battery_aperture_xy'] for v in point]
@@ -266,6 +271,10 @@ doc.recompute()
 metadata['inputs']=[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in [
     'design/approved-frame-master-r4.json','design/proposals/frame-master-r4/master.json','design/proposals/frame-master-r4/Artwork-R4.FCStd','design/proposals/frame-master-r4/geometry-check.json','tools/freecad/approved_frames.py','tools/freecad/install_approved_frames.py','design/level-case-workflow.json','tools/freecad/level_stack.py','tools/freecad/install_level_stack.py','design/cases.json','design/frame-finishes.json','design/frame-collection-workflow.json','design/frame-fidelity-workflow.json','tools/freecad/export_frame_domain.py','tools/check_frame_artwork.py','tools/build_frame_collection.py','tools/freecad/install_frame_collection.py','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
 metadata['fcstd_sha256']=hashlib.sha256((OUT/'Flan36.FCStd').read_bytes()).hexdigest()
+if doc.getObject('DisplaySeamCorrection'):
+    for p in ['design/proposals/display-seam-r1/master.json','design/proposals/display-seam-r1/Seam-candidate.FCStd',
+              'design/proposals/display-seam-r1/geometry-check.json','tools/freecad/install_display_seam.py']:
+        metadata['inputs'].append({'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()})
 report['source_sha256']=metadata['fcstd_sha256']
 report['checker_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 metadata['export_execution']={'native_sha256':metadata['fcstd_sha256'],

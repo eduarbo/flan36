@@ -16,7 +16,7 @@
     "walkman"
   ],
   "master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
-  "native_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+  "native_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
   "source_inputs_verified": true,
   "approved_palettes_exact": true,
   "deferred_artwork_and_palettes_preserved": true,
@@ -29,10 +29,27 @@
     "current_custom_configuration_preserved": true,
     "mobile_gallery": true
   },
-  "browser_report_sha256": "d439ebf4691119cc433aeeb3fd9329e9d8454a237bd33131af0d84ea44257cfe",
-  "viewer_sha256": "046f901a25dcc0c0698ca30609a9fcbfe88adc9af8ae48e2a0243510b920f3a8",
-  "offline_sha256": "160f6e1a3de9f829d0aa3181f005814c6e2e17b5aca6b02cbf783e1ff79decb5",
-  "checker_sha256": "e568d8127d0c45527d0c223af3bdfab19a83be70f523b03ac5b19dfb7fb7e248",
+  "browser_report_sha256": "a8019045ff74cc6f316bf3a352b56adbef9d5cf1fcc017d5fb4d4a234acd19d4",
+  "viewer_sha256": "aef7269bd70aafbc941ca1ec0769915f87fceec963cad16f69509ae80a188906",
+  "offline_sha256": "90bc7ce2b74a0c9aa9867ff7cfc9224a25aa1266359412d13c206df6f970f89f",
+  "checker_sha256": "625f64d4599fc9c0866ab78c2794ee547d6a680f19c93f4c2a89865658b24f24",
   "physical_acceptance": false,
-  "fabrication_ready": false
+  "fabrication_ready": false,
+  "display_seam_correction": {
+    "master_path": "design/proposals/display-seam-r1/master.json",
+    "master_sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+    "source_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+    "opening_mm": [
+      13.9,
+      30.5
+    ],
+    "glass_clearance_mm": 0.1,
+    "height_change_mm": 0,
+    "display_translation_mm": [
+      0,
+      0,
+      0
+    ],
+    "physical_acceptance": false
+  }
 }

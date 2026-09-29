@@ -20,6 +20,16 @@ def run():
         for style in F.STYLES:
             obj=doc.getObject(prefix+'FlushFrame_'+style+'_Final')
             report['frames'][side+'-'+style]=F.validate_variant(doc,side,F.find_smooth(doc,side),obj)
+        if doc.getObject('DisplaySeamCorrection'):
+            glass=doc.getObject(prefix+'NiceViewVisual2').Shape
+            smooth=F.find_smooth(doc,side).Shape
+            gap=smooth.distToShape(glass)[0]
+            assert abs(gap-.1)<1e-6 and smooth.common(glass).Volume<1e-8
+            window=doc.getObject(prefix+'GlassWindow').Shape.BoundBox
+            expected_window=[116.05,129.95] if side=='left' else [30.05,43.95]
+            assert abs(window.XMin-expected_window[0])<1e-6 and abs(window.XMax-expected_window[1])<1e-6
+            assert abs(window.YMin+49.05)<1e-6 and abs(window.YMax+18.55)<1e-6
+            report.setdefault('display_seam',{})[side]={'glass_gap_mm':gap,'intersection_mm3':0,'opening_mm':[window.XLength,window.YLength]}
         expected=sorted([(117.92+2.54*i) if side=='left' else (31.92+2.54*i) for i in range(5)])
         pins=doc.getObject(prefix+'SlimDisplaySocketPins').Shape
         circles=[e.Curve for e in pins.Edges if isinstance(e.Curve,Part.Circle) and abs(e.Curve.Radius-.3)<1e-6]

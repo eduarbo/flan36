@@ -18,12 +18,20 @@ for k in plan['deferred_styles']:
     current=dict(spec['styles'][k]);assert current.pop('approval_status')=='awaiting-redesign'
     assert current==prior['styles'][k],('Deferred artwork/palette changed',k)
 native=sha('mechanical/revI/Flan36.FCStd');install=read('validation/revI-approved-frames-native.json');model=read('design/revI.json');mech=read('validation/revI-mechanical.json')
+historical_install=install
+seam=model.get('display_seam_correction')
+if seam:
+    install=read('validation/revI-display-seam-native.json')
+    assert install['source_sha256']==historical_install['output_sha256']==seam['source_sha256']
+    bound(seam['master_path'],seam['master_sha256'])
+    assert install['master_sha256']==seam['master_sha256']
+    assert install['unrelated_parts_unchanged']
 assert install['output_sha256']==model['fcstd_sha256']==mech['source_sha256']==native
 assert all(install[k] for k in ['saved_reopened_recomputed','configuration_unchanged','cap_geometry_unchanged','excluded_artwork_xy_unchanged'])
 assert install['approved_styles']==plan['approved_styles'] and len(install['frames'])==22
 assert model['parameter_values_mm']['FrameTop']==13.59 and model['parameter_values_mm']['FrameRoof']==1.4
 assert len(model['frameVariants'])==22
-geometry=read('validation/revI-approved-frames-geometry.json');assert geometry['source_sha256']==native and geometry['passed'] and len(geometry['frames'])==22
+geometry=read('validation/revI-display-seam-geometry.json' if seam else 'validation/revI-approved-frames-geometry.json');assert geometry['source_sha256']==native and geometry['passed'] and len(geometry['frames'])==22
 bound('tools/freecad/check_approved_frames.py',geometry['checker_sha256'])
 for k in plan['approved_styles']:
     for side in ['left','right']:assert geometry['frames'][side+'-'+k]['saved_planar_approval_compared']
@@ -38,7 +46,7 @@ for side in ['left','right']:
     assert not mech['halves'][side]['collisions']
     assert model['r4_cap_clearance'][side]['volume_mm3']<.001
     assert model['halves'][side]['display_header']=={'x':117.92 if side=='left' else 31.92,'y':50.8}
-    checks=install['halves'][side];assert all(abs(v-.25)<1e-6 for v in checks['guide_gaps_mm'])
+    checks=historical_install['halves'][side];assert all(abs(v-.25)<1e-6 for v in checks['guide_gaps_mm'])
     assert checks['pcb_pin_radial_gap_mm']==.2
     electrical=read('validation/revI-electrical.json')['halves'][side]
     bound(f'hardware/revI/flan36-{side}.kicad_pcb',electrical['pcb_sha256']);assert not electrical['drc_violations']
@@ -56,5 +64,6 @@ printing=read('validation/revI-approved-frames-3mf.json');assert printing['passe
 bound('tools/check_approved_3mf.py',printing['checker_sha256'])
 for item in printing['registered_assemblies']:bound('build/frame-collection/acceptance/'+item['id']+'.3mf',item['sha256'])
 report={'status':'DIGITAL_IMPLEMENTATION_VERIFIED','approved_styles':plan['approved_styles'],'deferred_styles':plan['deferred_styles'],'master_sha256':plan['master_sha256'],'native_sha256':native,'source_inputs_verified':True,'approved_palettes_exact':True,'deferred_artwork_and_palettes_preserved':True,'camera_and_configuration_checks':browser['checks'],'browser_report_sha256':sha('build/frame-collection/acceptance/result.json'),'viewer_sha256':viewer['viewer_sha256'],'offline_sha256':viewer['offline_sha256'],'checker_sha256':sha('tools/check_approved_frames.py'),'physical_acceptance':False,'fabrication_ready':False}
+if seam:report['display_seam_correction']=seam
 (ROOT/'validation/revI-approved-frames.json').write_text(json.dumps(report,indent=2)+'\n')
 print('PASS: five approved designs, six deferred artworks, centered native/PCB chain, registered print assets and viewer continuity')

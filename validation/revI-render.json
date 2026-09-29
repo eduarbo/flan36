@@ -1,6 +1,6 @@
 {
   "revision": "I",
-  "model_sha256": "7eb748241e96ad8409a1b124ba5cc60b90dff6ff8099dec5e294a34969a22993",
+  "model_sha256": "9ffa36db112e6838fa12d2205e2c52e7c906db6e33c2dbac4216a07c30a63e66",
   "layout_sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3",
   "renderer_sha256": "50e3367e3e8ac71363cee81fb47c5add397b89f1a90f179b86eb5d1f2b942841",
   "meshes": [
@@ -14,7 +14,7 @@
     },
     {
       "path": "mechanical/revI/left-frame-flan-body.stl",
-      "sha256": "3d01b92c9ad86e12cf9d32fd515fbcc85bf72195b1d490e72165b5735da164ff"
+      "sha256": "01467b748ba84a0f758142a84f104a9ab9675de5d15ba537a4019cd8115ebfed"
     },
     {
       "path": "mechanical/revI/left-frame-flan-detail.stl",
@@ -290,7 +290,7 @@
     },
     {
       "path": "mechanical/revI/right-frame-flan-body.stl",
-      "sha256": "5a7db435a046d74ea492e017dcf649016aff1f8792f9f88f6e49874705da2f97"
+      "sha256": "280f9eacb44a3342674490a67a8db9e5b92fc36a68b7167057cdf6aee3ec85c3"
     },
     {
       "path": "mechanical/revI/right-frame-flan-detail.stl",
@@ -534,7 +534,7 @@
     },
     {
       "path": "mechanical/revI/left-frame-flan.stl",
-      "sha256": "3c542bda862eafe083ba4bd1844f6f9317ec253d652f7fb800996162b045760c"
+      "sha256": "382b53a930bc4b785b9621e811b351304972020c342d58b4c5c4941d0e562d6b"
     }
   ],
   "views": {
@@ -545,7 +545,7 @@
         "right"
       ],
       "exploded": false,
-      "image_sha256": "a6b7d614a88c7a8f65694dfeeb0eec3d4afc0ae794d7c5221ca2dde5b8f44a44"
+      "image_sha256": "470b8298baa67d04db48749480d6ca597e51d4c9ac63dbe1926ce92049847691"
     },
     "top": {
       "keys": 36,
@@ -554,7 +554,7 @@
         "right"
       ],
       "exploded": false,
-      "image_sha256": "b91caa182d02d7210551235aa3120189b779d699598a013d55454a55860b9452"
+      "image_sha256": "7fbc325bce17eab07b76c90caf247878e43f97ecce749df18a7a004b632f877d"
     },
     "side": {
       "keys": 18,
@@ -570,7 +570,7 @@
         "left"
       ],
       "exploded": true,
-      "image_sha256": "685de7b1125b52354686a60fa91fbc981b314c6620e980d266e510abd78684db"
+      "image_sha256": "8cb887946d2ae6ed9d8c6266fe5e94715b50c3a1c8602ad5d382c85282375c59"
     },
     "detail": {
       "keys": 18,
@@ -578,7 +578,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "1fc9e9f885d1aa88121ae6b96d2dcd6c0e015b90ffccbf9994434f671ffc1085"
+      "image_sha256": "4c44e28c70ee5bb64fb37c64b365bd7cffc519807c7ef98b11e92dee2a69d614"
     },
     "corner": {
       "keys": 18,
@@ -586,7 +586,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "934a9d2733a2a8405f2d73b74e2ce9a2a7454647067eb799cd86c0909037aba2"
+      "image_sha256": "49f8a4f90019cde71331755ce8eca763cbd31dcfd073b7db7e70689902d4914a"
     },
     "level": {
       "keys": 18,
@@ -594,7 +594,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "a42083a5daa0bd02ce30c27a2bc8d16e095b8d57170f318b350ed7c47de561a6"
+      "image_sha256": "a29ff15aaa23c4c5cef3da0fbb78977b473883b96dbfda85c88572f68252bcd5"
     }
   },
   "geometry_source": "generated CAD, no image retouching",

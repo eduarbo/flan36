@@ -3,7 +3,7 @@
   "registered_assemblies": [
     {
       "id": "left-frame-flan",
-      "sha256": "677b42bfb12ecab8e8074f8778f58a029b463b9298cbc7a35aa59a19a5ff696d",
+      "sha256": "af4dcdfb9ac7a1e46b403a6d4eeecacff6f3d0d6cab7dabfdb6f3888c312c5c1",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -34,7 +34,7 @@
     },
     {
       "id": "left-frame-tape",
-      "sha256": "cfc75845cdaeadc91fbb50542443f29c121c64f27a7d833115764e44d653989e",
+      "sha256": "0b0bec40057188726d9f7dfc0b490bc56a99974e2e13c83cda79dee602f16012",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -65,7 +65,7 @@
     },
     {
       "id": "left-frame-orbit",
-      "sha256": "05e9688d41c3857ba16002f4e67e5ccb02dd136f3e09baa3c77d8396e3065a97",
+      "sha256": "1bde73943b0fc536c5ee27d81bd5ba94047c9c8813628127a9e2a0ab7662a629",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -96,7 +96,7 @@
     },
     {
       "id": "left-frame-manga",
-      "sha256": "d5b3b8c547e3e4f477571b115181039ecf9c06aa65b61405bfeadba9f374449a",
+      "sha256": "43126797c2b6c727fbbdcc8208b1213b04bd6332cbd93b8d9ee07dd28cd3e401",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -127,7 +127,7 @@
     },
     {
       "id": "left-frame-talavera",
-      "sha256": "6b64c7c6449e867728a1e3200f8f472ab6dc33798720bb1061ed7a36b32a856e",
+      "sha256": "bbb71c85c4d9586d5eaffdbaf11c8b2aa48fc569be23feb30cb0f9db05f24d01",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -136,12 +136,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 6440,
+          "triangles": 6456,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 488,
+          "triangles": 504,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -158,7 +158,7 @@
     },
     {
       "id": "left-frame-gameboy",
-      "sha256": "dcd3549a7c3ecd4ecfb6be06c896ae695ebfd11b1c201d1b0ff08f6995f3b71b",
+      "sha256": "4d6162c01eda3c4a5dd6b44c3ed34caf295371aa652651dd209ec2dc0a15cd9f",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -167,12 +167,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 6016,
+          "triangles": 6032,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 532,
+          "triangles": 548,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -189,7 +189,7 @@
     },
     {
       "id": "left-frame-nes",
-      "sha256": "a7ad0befb013aa26c43681adb6affefad865f1c13e9c4bf2322e55e9c3276d24",
+      "sha256": "f9e41941f03c595d6acd16eb85c98e1beb0ad8d54f2ab786d1db9db232855158",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -220,7 +220,7 @@
     },
     {
       "id": "left-frame-snes",
-      "sha256": "e1be41dddf29aae8c54be6bb638d3e18db36d1746bcb749e78b8285aff633bc7",
+      "sha256": "59f92a0891eb701c18e8e6c25c58bd323b3215cb74493ee61ef98b27e8eaee0a",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -229,12 +229,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 7696,
+          "triangles": 7712,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 532,
+          "triangles": 548,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -251,7 +251,7 @@
     },
     {
       "id": "left-frame-phone",
-      "sha256": "03db95c4fbcb8cddd29961a56e62ecf55a6203a26683729dd61a993e31276fc4",
+      "sha256": "6c7e34f12dd1a385ea6d3bf18fb7be41b075b9a366d2d3c2fb0a3c19cc47791c",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -260,12 +260,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 10424,
+          "triangles": 10440,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 5356,
+          "triangles": 5372,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -282,7 +282,7 @@
     },
     {
       "id": "left-frame-walkman",
-      "sha256": "b8a8e566f6edbf132882fe7291ab7980a2a4cd756d0ae222235238b9783fec46",
+      "sha256": "740293a10a7b19a698e97bc5353cae7307b1144fec8fcc4709ca3019ddcf2f81",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -313,7 +313,7 @@
     },
     {
       "id": "left-frame-ipod",
-      "sha256": "0099e219ea892209d39547591a1512391abe951011756346fa22e512df26698e",
+      "sha256": "963d8e24e367e1d7f453d35896eb3745f03aa7584858c54217c251f1df3c568d",
       "shared_translation_mm": [
         -101.0,
         77.0,
@@ -322,12 +322,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 6344,
+          "triangles": 6360,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 488,
+          "triangles": 504,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -344,7 +344,7 @@
     },
     {
       "id": "right-frame-flan",
-      "sha256": "42c1febee2150b9b6f7ac8a6d4a2ec0bea138a4cf13ff16c1831b6e32c67c454",
+      "sha256": "6aaadbe3a645fe78cecd5129a7ee655e0415b476ed0279deee389f1c33d1a5dc",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -375,7 +375,7 @@
     },
     {
       "id": "right-frame-tape",
-      "sha256": "9050cd0bda6daeb4dcbde4bdaea3fd7fefcc5854d3817e23ddae026f71c856ea",
+      "sha256": "0b61abb43914afb732ffdec3b6add95547e81978b0e58cfaa05c0dcca4a02520",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -406,7 +406,7 @@
     },
     {
       "id": "right-frame-orbit",
-      "sha256": "1384ae9835e0e1c8b9e6efde2f9425aa25f3bda9440604a9463f005756caa3e6",
+      "sha256": "94f54c95679eda99d351ee1d061facc04022d3cc2ad9a47a941e324efc611245",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -437,7 +437,7 @@
     },
     {
       "id": "right-frame-manga",
-      "sha256": "7b91110bff7c2de7b64068ce05764ba46f2fe57288c57ba2287aaacd71f8f65a",
+      "sha256": "abfa513a821c92580c5fd747b1fe5aec4efa4e360acd47f410ab9a69d01f3462",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -468,7 +468,7 @@
     },
     {
       "id": "right-frame-talavera",
-      "sha256": "cada3f67db6eb24f9476a014a0ecb171918eefb6483b6da2c17c14849413aede",
+      "sha256": "af79bd9f9bf6848322a8c440fda8911b7570c7ca413298283c22cc70ae37b2ab",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -477,12 +477,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 6440,
+          "triangles": 6456,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 488,
+          "triangles": 504,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -499,7 +499,7 @@
     },
     {
       "id": "right-frame-gameboy",
-      "sha256": "83576d7c653b874b2db50ec4f0522a1207a00758722a6f3ceaf7b140c8b4ac60",
+      "sha256": "302209de4a5a9de8c15269ca166482efa843f31e8556a86bd82813b0f0386c14",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -508,12 +508,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 6016,
+          "triangles": 6032,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 532,
+          "triangles": 548,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -530,7 +530,7 @@
     },
     {
       "id": "right-frame-nes",
-      "sha256": "6caa3b53a5aaea89b70bacf54e8495fc88c1fda45bd548b184340e8fd5c71a2b",
+      "sha256": "54d4cf8bb8d6a3d8beb52c85f46ca5e0a314d45a871ca3df0aa9b2ef01bb7801",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -561,7 +561,7 @@
     },
     {
       "id": "right-frame-snes",
-      "sha256": "6f93dfdafdc49a1a811e1e24dea5fc78cb0c120ffa2ca4fe9521457e7f3ac371",
+      "sha256": "d778291bb2c8807451b8ee05741916b2a3ec4313d9f76ba0877cc17f58be5108",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -570,12 +570,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 7696,
+          "triangles": 7712,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 532,
+          "triangles": 548,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -592,7 +592,7 @@
     },
     {
       "id": "right-frame-phone",
-      "sha256": "a1d52021be48cbc813f81b3872b7e13d4c9bad739491065f19fdd957c1090291",
+      "sha256": "5d11324600bb1cc9af41dc07d1e93683b9205ce49bc916ba0a5067f7dd609a7c",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -601,12 +601,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 10424,
+          "triangles": 10440,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 5356,
+          "triangles": 5372,
           "maximum_coordinate_error_mm": 0
         },
         {
@@ -623,7 +623,7 @@
     },
     {
       "id": "right-frame-walkman",
-      "sha256": "2a19a2bbddd5b565208a537a8a6cbd23b8881ff8953a32096aa5f62c6d287ed4",
+      "sha256": "199ef3170ad0363b66cc9487c84bcc13e06266d26ab43f1be70e3e0c17e38667",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -654,7 +654,7 @@
     },
     {
       "id": "right-frame-ipod",
-      "sha256": "9fdfb027b0f2a4c819e41db07dca5e12f94d1ac278db701fb4030a41ad266525",
+      "sha256": "5d3c980e0db0007f39692078f95ded39b90b62c5e8b4e7842fad1d07d2e6d3f6",
       "shared_translation_mm": [
         -15.0,
         77.0,
@@ -663,12 +663,12 @@
       "materials": [
         {
           "role": "body",
-          "triangles": 6344,
+          "triangles": 6360,
           "maximum_coordinate_error_mm": 0
         },
         {
           "role": "detail",
-          "triangles": 488,
+          "triangles": 504,
           "maximum_coordinate_error_mm": 0
         },
         {

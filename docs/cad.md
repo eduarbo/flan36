@@ -8,6 +8,7 @@ The current mechanical source is [`mechanical/revI/Flan36.FCStd`](../mechanical/
 |---|---:|
 | Frame and Level shell height | 13.59 mm, including flush decoration |
 | Display glass | 13.39 mm; recessed 0.20 mm |
+| Display opening | 13.90 × 30.50 mm; 0.10 mm nominal glass clearance |
 | Battery underside / case floor top | 1.4 mm |
 | Selected flat KLP keycap top | About 17.87 mm, unchanged |
 | Key plate top | 7.6 mm |
@@ -43,7 +44,7 @@ Parts retain assembly coordinates. Screw envelopes and nominal engagement are mo
 
 For the isolated migration from the preserved source, use the [floor/level reproduction commands](level-stack.md#reproduce). This keeps manual edits and the published source intact.
 
-For the current frame-only update and validation, use the [collection commands](frames-extra.md#reproduce-the-approved-migration). They preserve the stack and write an isolated candidate.
+For the current frame-only update and validation, use the [seam correction commands](../design/display-seam-implementation.md#reproduce). They preserve the stack and write an isolated candidate. The [six R5 proposals](frame-proposals.md) are separate editable review files awaiting artwork approval.
 
 To refresh exports from the saved reference without rebuilding or overwriting its FCStd, run `python3 tools/freecad/run_macos.py tools/freecad/export_revI.py`, then rebuild the renders and viewer below. The exporter records current provenance separately from the preserved historical export record.
 
