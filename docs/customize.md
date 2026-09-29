@@ -58,7 +58,7 @@ The controls are decorative. No logos, extra switches or LEDs are required. All 
 | Glass margin, each side | 0.4 mm |
 | Magnet / steel pin | Ø2 × 3 / Ø2 × 4 mm |
 | Magnetic gap / guide radial clearance | 0.9 / 0.2 mm nominal |
-| Inlay depth / minimum backing | 0.4 / 0.8 mm; co-print the aligned volumes |
+| R4 surface inlay / backing | 0.4 / 1.0 mm outside display relief; co-print aligned volumes |
 
 The frame ends before the thumb key; the **low case and plate continue along the straight flank**. The power switch is recessed inside the side access cut. Key positions remain fixed.
 
@@ -66,7 +66,7 @@ The frame ends before the thumb key; the **low case and plate continue along the
 
 Open the native source and expand **Construction**. Duplicate a supplied theme, then edit the `FlushFrame_*` primitives or the frame section sketches. Preserve the cavity, mounting bosses, screen window and service cuts. The case outline is a native sketch with **21 intentional corners with locally bounded tangent arcs and straight faces parallel to each thumb**; mesh tessellation does not add design corners. Remove only the Block constraints you intend to edit.
 
-Keep decorations within the common envelope. Preserve the magnetic stations at left **(113, 52.8)**, **(133, 52.8)** and **(122.8, 64.7)**, the hidden structural screw reliefs at **(114.5, 65.5)** and **(130.6, 66.5)**, the current reset tool opening, and the glass window. Right-half coordinates mirror across X=80 mm. Inlays replace the upper 0.4 mm of roof material. Preserve at least 0.8 mm of backing and the shared outer surface.
+Keep decorations within the common envelope. Preserve the magnetic stations at left **(113, 52.8)**, **(133, 52.8)** and **(122.8, 64.7)**, the hidden structural screw reliefs at **(114.5, 65.5)** and **(130.6, 66.5)**, the current reset tool opening, and the glass window. Right-half coordinates mirror across X=80 mm. For the five approved R4 designs, preserve the exact ordinary, collar and pin-cover domains in the [master](../design/proposals/frame-master-r4/master.json). Ordinary inlays replace the upper 0.4 mm over 1.0 mm backing; the collar and pin cover use through-color volumes. All finish at Z13.59 mm.
 
 Use the viewer’s JSON for the eleven supplied shapes. To share a new shape, save your FCStd, export STEP/STL, rebuild the viewer and repeat collision checks; JSON alone cannot carry arbitrary geometry.
 

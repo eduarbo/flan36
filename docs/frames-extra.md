@@ -1,64 +1,65 @@
 # Frame collection
 
-Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and click a preview. Each thumbnail renders its actual native material geometry. **Flan** is the default.
+Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and click a preview. Each thumbnail uses the actual native material geometry. **Flan** remains the default; switching designs preserves the camera, colors and other selections.
 
-![Eleven native frame designs](images/revI-frame-gallery.png)
+![Five approved designs rendered from native meshes](images/revI-approved-r4.png)
 
-| Frame | Design |
+| Approved R4 design | Motif |
 |---|---|
-| **Flan** | A caramel sweep, custard shell and rounded dessert medallion. |
-| **Tape** | Diagonal orange corner, dark screen field, twin reels and three lower slats. |
-| **Orbit** | A broad forest field, asymmetric orange sweep and integrated ivory disc. |
-| **Manga** | Broad ink panels, ivory diagonals, four lower circles and a red corner. |
-| **Talavera** | Cobalt teardrop petals in four quadrants around a concave terracotta star. |
-| **Game Boy** | Pocket-console bezel, cross pad and two berry-colored buttons. |
-| **NES** | A restrained controller strip with red action buttons. |
-| **SNES** | A soft gray console with two lavender button tones. |
-| **2000s Phone** | Navy faceplate, silver keypad and green call key. |
-| **Walkman** | Cobalt portable audio, yellow controls and speaker bars. |
-| **iPod** | White face, a complete silver click wheel and a continuous screen border. |
+| **Talavera** | Uniform cobalt bezel, four curved petals and a terracotta star. |
+| **Game Boy** | Pocket-console bezel, cross pad and berry buttons. |
+| **SNES** | Soft gray console and lavender controls. |
+| **2000s Phone** | Navy faceplate, silver keypad and call key. |
+| **iPod** | White face, silver click wheel and continuous screen border. |
 
-All eleven use up to four **solid colors**, with no gradients or raised decorations. The 0.4 mm inlays finish at the existing 13.39 mm roof. The cavity, display opening, case corner and magnetic interface stay unchanged. Decorative buttons and wheels are flush color regions.
+**Flan, Tape, Orbit, Manga, NES and Walkman await redesign.** Their existing artwork remains selectable; only the common mechanical interface changed. Their proposed R4 artwork has not been implemented.
 
-**Restore design colors** applies the original frame palette. The matching global theme coordinates the rim and keys; themes change colors only. Custom HEX colors and each thumb remain editable.
+All designs use solid colors, without gradients or raised details. **Restore design colors** applies the exact palette. HEX editing and coordinated case/key themes remain available.
 
-## Reference fidelity
+## Shared dimensions
 
-[Original concepts beside actual CAD views](frame-comparison.md). Tape, Orbit, Manga and Talavera retain their distinctive compositions. Curves are editable native geometry. Tiny textures become solid regions.
+| Feature | Dimension |
+|---|---:|
+| Frame face / Level upper shell | Z13.59 mm |
+| Display glass | Z13.39 mm; recessed 0.20 mm |
+| Pin cover | 0.40 mm; underside Z13.19 mm |
+| Nominal solder clearance | 0.20 mm |
+| Glass opening | 14.50 × 31.10 mm |
+| Approved bezel width | 2.40 mm, exact outward offset |
+| Ordinary inlay / remaining backing | 0.40 / 1.00 mm |
+| Thin display collar | 0.865 mm through-color volume |
 
-The real glass opening, exposed header access and thin PCB collar remain visible. Artwork is fitted around those measured boundaries. Every authored motif must fit the supported roof intact; the generator now rejects clipping instead of silently trimming a design. The existing 13.39 mm stack and 0.8 mm backing are preserved.
+The complete display chain is centered by +0.20 mm X on the left and −0.20 mm on the right, including contacts, guides, native PCB drills and KiCad J2. Key centers, MCU, battery and mounting datums stay fixed. Heights start at the case underside, excluding feet.
 
-## Print or edit
+## Exact artwork to printable geometry
 
-Download **Files → Print kit** for registered multipart 3MF and STL files. The repo also includes STEP files for the body and each color volume. These are co-printed regions, not separate press-fit inserts. Keep all four materials aligned and assign compatible filaments in the slicer. [Print workflow](themes-printing.md).
+The approved [R4 master](../design/proposals/frame-master-r4/master.json) owns dimensions, palettes, circular arcs, Bézier curves and painter order. The [native builder](../tools/freecad/approved_frames.py) reads those paths directly. It checks each material's top face against the master on both halves, plus closed volumes, material separation and the three thickness domains. No artwork is traced or clipped to an older support mask.
 
-In [Flan36.FCStd](../mechanical/revI/Flan36.FCStd), expand **Construction → Flush frame materials**. Boxes, circular arcs, rings, sketches and Boolean cuts remain editable native features. `MaterialParts` identifies each color. The hidden internal blank is construction geometry, not a selectable frame.
+Download **Files → Print kit** for registered multipart 3MF and STL files. STEP material bodies and the editable [FreeCAD assembly](../mechanical/revI/Flan36.FCStd) share the same coordinates. These are co-print regions, not press-fit inserts. Assign compatible filament to each role, keeping the assembly registered. [Print workflow](themes-printing.md).
 
-The canonical recipes are [frame-finishes.json](../design/frame-finishes.json), generated by [build_frame_collection.py](../tools/build_frame_collection.py). Use a fresh candidate directory:
+The 0.40 mm cover targets a standard 0.4 mm nozzle workflow. Thickness and digital collision checks do not prove sliced feature retention, bridging, strength or physical fit. Inspect the toolpaths and print a sample; the PCB studies remain unrouted.
 
-```sh
-python3 tools/build_frame_collection.py
-python3 tools/freecad/run_macos.py tools/freecad/install_frame_collection.py \
-  --source mechanical/revI/Flan36.FCStd \
-  --output build/frame-collection/reproduced/Flan36.FCStd --export
-python3 tools/freecad/run_macos.py tools/freecad/check_frame_collection.py \
-  --source build/frame-collection/reproduced/Flan36.FCStd \
-  --report build/frame-collection/reproduced/sections.json
-```
+## Reproduce the approved migration
 
-To inspect the exact drawing space and catch the former clipping bug before export:
+Use the preserved pre-R4 native file from commit `2de168b54146c2b135a6438bb1d6a5b30bcc0141` as the input, in an ignored build directory. Keep the approved master unchanged.
 
 ```sh
-python3 tools/freecad/run_macos.py tools/freecad/export_frame_domain.py \
-  --source mechanical/revI/Flan36.FCStd --output build/frame-fidelity/roof.json
-/Applications/FreeCAD.app/Contents/Resources/bin/python tools/check_frame_artwork.py \
-  --domain build/frame-fidelity/roof.json
+mkdir -p build/approved-r4/source
+git show 2de168b54146c2b135a6438bb1d6a5b30bcc0141:mechanical/revI/Flan36.FCStd > build/approved-r4/source/Flan36.FCStd
+python3 tools/freecad/run_macos.py tools/freecad/install_approved_frames.py \
+  --source build/approved-r4/source/Flan36.FCStd \
+  --output build/approved-r4/reproduced/Flan36.FCStd
+FLAN36_EXPORT_OUT=build/approved-r4/reproduced \
+FLAN36_EXPORT_METADATA=build/approved-r4/reproduced/revI.json \
+FLAN36_EXPORT_REPORT=build/approved-r4/reproduced/mechanical.json \
+python3 tools/freecad/run_macos.py tools/freecad/export_revI.py
+python3 tools/freecad/run_macos.py tools/freecad/check_approved_frames.py \
+  --source build/approved-r4/reproduced/Flan36.FCStd \
+  --report build/approved-r4/reproduced/geometry.json
 ```
 
-Use the Python environment containing Shapely on other platforms. The exact native check also rejects clipped or fully obscured individual motifs.
+The installer preserves its input, saved configuration, caps and deferred artwork, then saves and reopens the candidate. The exporter checks every frame, case and battery variant. [Installation receipt](../validation/revI-approved-frames-native.json) · [Current export checks](../validation/revI-mechanical.json) · [Delivery binding](../validation/revI-approved-frames.json) · [Independent review and viewer checks](../validation/revI-approved-frames-review.json).
 
-The installer saves and reopens an isolated candidate, verifies the unchanged keys, cases, electronics and parameters, and exports the complete current collection. It never adopts the candidate automatically. The section check rejects color islands without a 0.8 mm feature core after Boolean clipping. It does not establish nozzle resolution, bonding or physical fit; inspect sliced layers and print a sample.
+Render the five-design sheet with `python tools/render_frames.py --approved-only --output docs/images/revI-approved-r4.png --report validation/revI-approved-frames-render.json`; the default render command produces the full eleven-design gallery. Run `node viewer/frame-collection-check.cjs`, then `python3 tools/check_approved_3mf.py` and `python3 tools/check_approved_frames.py` to verify the rebuilt viewer and registered print kit. The browser check needs Playwright and Chromium, as described in the [CAD guide](cad.md).
 
-## Older configurations
-
-The previous ten frame IDs migrate explicitly to Flan, preserving colors, keys, cases, batteries and cover visibility. The viewer shows a notice. Reading saved data does not overwrite it; before the first migrated autosave, the exact original is kept in **Files → Recover saved data**. Importing JSON leaves the source file unchanged. Unknown frame IDs are rejected. The old designs remain in Git history, not in the current selector or exports.
+Earlier collection installers and receipts describe older snapshots. Do not run the old artwork generator over the approved master. Ignored `build/approved-r4/` contains reproducible candidates, logs and test output from the commands above; final evidence lives in `validation/`.

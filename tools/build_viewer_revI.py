@@ -171,7 +171,8 @@ for side,keys in layout['halves'].items():
     for i,(x,y) in enumerate([(26,26),(57,15),(28,70),(125,83)]):
         add(f'Foot {i+1}',side,'fasteners','#29352e',[offset+(x if side=='left' else 160-x),-.6,y],0,
             primitive={'kind':'cylinder','radius':3,'height':1.2})
-    cx=122.8 if side=='left' else 37.2
+    display_bounds=model['parts'][side+'-display']['bounds_mm']
+    cx=(display_bounds[0]+display_bounds[3])/2
     add('LCD · illustrative content',side,'display','#c5d1ba',[offset+cx,model['parameter_values_mm']['DisplayBottom']+1.92,33.9],52,
         primitive={'kind':'screen','size':[10.744,.025,25.28],'text':'BASE / BLE / L' if side=='left' else 'LINK / BAT / R'})
 

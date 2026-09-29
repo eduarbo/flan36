@@ -1,0 +1,20 @@
+{
+  "scope": "Only J2 footprint X translation; copper routing remains absent",
+  "fabrication_ready": false,
+  "halves": {
+    "left": {
+      "target_xy": [
+        117.92,
+        50.8
+      ],
+      "sha256": "e1450cc9c1b36461d16f6a2d64805359a65778046bb2ca6922f7d63b2fb37b2f"
+    },
+    "right": {
+      "target_xy": [
+        31.92,
+        50.8
+      ],
+      "sha256": "74524e929e98fe2b48c9fd3cd2381e35158f4aa522c02fa3236c4046894c1bdb"
+    }
+  }
+}

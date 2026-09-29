@@ -1,0 +1,42 @@
+{
+  "schema": "flan36-approved-r4-1",
+  "request_ref": "user:20260928:implement-R4-excluding-flan-tape-orbit-manga-nes-walkman",
+  "requested_outcome": "Implement only approved R4 designs in native CAD, exports and public viewer, with approved whole-face height and display centering, preserving excluded artwork and camera/configuration continuity.",
+  "approved_styles": [
+    "talavera",
+    "gameboy",
+    "snes",
+    "phone",
+    "ipod"
+  ],
+  "deferred_styles": [
+    "flan",
+    "tape",
+    "orbit",
+    "manga",
+    "nes",
+    "walkman"
+  ],
+  "master_path": "design/proposals/frame-master-r4/master.json",
+  "master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+  "mechanical": {
+    "frame_top_mm": 13.59,
+    "frame_roof_mm": 1.4,
+    "glass_top_mm": 13.39,
+    "display_shift_x_mm": {
+      "left": 0.2,
+      "right": -0.2
+    },
+    "cover_thickness_mm": 0.4,
+    "solder_gap_mm": 0.2
+  },
+  "constraints": [
+    "Consume approved paths and color roles literally; compare all top-face partitions against master, including full right reflection.",
+    "Translate full display module, contacts/plastics/solder reserves, mating PCB J2, glass cutout and clearance wells; inspect fixed supports and holes.",
+    "Preserve MCU, battery, caps, keys, mount datums and excluded artwork XY. Common frame geometry may change for the approved height and centered display.",
+    "Keep original default Flan and saved configurations; do not silently switch user frame choices. Mark deferred art as awaiting redesign.",
+    "Use isolated candidate, then save/reopen, validate nominal full assembly and all variants before adoption.",
+    "Native STEP/STL/material exports, scene and preview/downloads derive from same saved file; public site readback required.",
+    "Physical print and fit remain unqualified; PCB study is unrouted. Do not imply fabrication release."
+  ]
+}

@@ -43,7 +43,7 @@ This is prototype geometry. Print [fit coupons](cases.md) before a complete set.
 
 ## Color 3MF status
 
-Decorated frames export as **multipart 3MF assemblies**: one recessed shell and separate closed volumes for the three inlay colors. All parts share one transform, so the inlays stay registered to their pockets. They occupy the upper **0.4 mm** and finish at the same height as the roof, leaving at least **0.8 mm** of backing in the checked model.
+Decorated frames export as **multipart 3MF assemblies**: one recessed shell and separate closed volumes for the three inlay colors. All parts share one transform, so the inlays stay registered to their pockets. All colors finish at the **13.59 mm** roof. The five approved R4 frames use 0.4 mm surface inlays with 1.0 mm backing outside the display relief, a 0.865 mm through-color collar and a 0.4 mm through-color pin cover. The six pending designs retain their earlier surface artwork. See the [construction rules](frames-extra.md).
 
 These are complementary volumes for **co-printing**, not separately printed press-fit inserts. Use compatible colors of the same material and qualify their bonding on a small sample. The kit also includes the original aligned material STLs and a fused single-material STL. The fused file has a plain surface and cannot reproduce the color pattern by geometry alone.
 

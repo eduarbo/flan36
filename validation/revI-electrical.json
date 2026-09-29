@@ -3,7 +3,7 @@
   "fabrication_ready": false,
   "halves": {
     "left": {
-      "pcb_sha256": "d9227ea364eb2c6fa229a68fb802c291700d9eb4cbd0d6db0e99595af8b321e3",
+      "pcb_sha256": "e1450cc9c1b36461d16f6a2d64805359a65778046bb2ca6922f7d63b2fb37b2f",
       "footprints_nets_uuid_models_preserved_except_explicit_PH_pad_and_reset_flip_changes": true,
       "allowed_transforms": {
         "H4": {
@@ -67,6 +67,13 @@
           ]
         }
       },
+      "approved_display_header": {
+        "target_xy": [
+          117.92,
+          50.8
+        ],
+        "sha256": "e1450cc9c1b36461d16f6a2d64805359a65778046bb2ca6922f7d63b2fb37b2f"
+      },
       "slim_electronics": {
         "before_sha256": "8067a0039db64fdac46166c21cda19c1b76bf86d327baf621cc906cb5f55dc8e",
         "after_sha256": "d9227ea364eb2c6fa229a68fb802c291700d9eb4cbd0d6db0e99595af8b321e3",
@@ -113,7 +120,7 @@
       "unconnected_items": 104
     },
     "right": {
-      "pcb_sha256": "dc71d07b61b01b7d1a4b8680f66f0ee17e075bf614d5ed7cc8f2d8ed98ebf290",
+      "pcb_sha256": "74524e929e98fe2b48c9fd3cd2381e35158f4aa522c02fa3236c4046894c1bdb",
       "footprints_nets_uuid_models_preserved_except_explicit_PH_pad_and_reset_flip_changes": true,
       "allowed_transforms": {
         "H3": {
@@ -176,6 +183,13 @@
             65.5
           ]
         }
+      },
+      "approved_display_header": {
+        "target_xy": [
+          31.92,
+          50.8
+        ],
+        "sha256": "74524e929e98fe2b48c9fd3cd2381e35158f4aa522c02fa3236c4046894c1bdb"
       },
       "slim_electronics": {
         "before_sha256": "18a242c11a69a41aa3ed2ebfc12a6551d43e1a9babeedad03d7d019d6028062d",

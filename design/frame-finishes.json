@@ -1,7 +1,7 @@
 {
   "schema": "flan36-frame-collection-1",
   "revision": "I",
-  "description": "Reference-bound compositions with explicit openings. Every authored motif must survive the support mask intact.",
+  "description": "Five approved styles read the exact R4 master. Six deferred styles retain their existing artwork recipes.",
   "roles": [
     "body",
     "detail",
@@ -188,7 +188,8 @@
         "detail",
         "secondary",
         "accent"
-      ]
+      ],
+      "approval_status": "awaiting-redesign"
     },
     "tape": {
       "label": "Tape",
@@ -362,7 +363,8 @@
         "accent",
         "detail",
         "secondary"
-      ]
+      ],
+      "approval_status": "awaiting-redesign"
     },
     "orbit": {
       "label": "Orbit",
@@ -505,7 +507,8 @@
         "secondary",
         "accent",
         "detail"
-      ]
+      ],
+      "approval_status": "awaiting-redesign"
     },
     "manga": {
       "label": "Manga",
@@ -660,16 +663,17 @@
           "Four black circles in a two-by-two grid",
           "Red lower-right panel"
         ]
-      }
+      },
+      "approval_status": "awaiting-redesign"
     },
     "talavera": {
       "label": "Talavera",
       "description": "Cobalt teardrop petals in four quadrants around a concave terracotta star.",
       "colors": {
-        "body": "#f1e6ca",
-        "detail": "#244e91",
-        "accent": "#c36443",
-        "secondary": "#244e91"
+        "body": "#F1E6CA",
+        "detail": "#244E91",
+        "accent": "#C36443",
+        "secondary": "#244E91"
       },
       "labels": {
         "body": "Ivory glaze",
@@ -677,210 +681,7 @@
         "accent": "Terracotta",
         "secondary": "Cobalt petals"
       },
-      "features": [
-        {
-          "id": "ScreenFieldR2",
-          "role": "detail",
-          "kind": "roundrect_ring",
-          "xy": [
-            112.2,
-            12.2,
-            133.8,
-            54.1
-          ],
-          "radius_mm": 1.1,
-          "inner_xy": [
-            114.45,
-            14.65,
-            131.15,
-            53.25
-          ],
-          "inner_radius_mm": 0.3
-        },
-        {
-          "id": "Petal0R2",
-          "role": "secondary",
-          "kind": "path",
-          "commands": [
-            [
-              "M",
-              113,
-              55.1
-            ],
-            [
-              "C",
-              118.5,
-              55.1,
-              121.5,
-              56.5,
-              121.5,
-              58.3
-            ],
-            [
-              "C",
-              121.5,
-              61.0,
-              113,
-              60.4,
-              113,
-              55.1
-            ],
-            [
-              "Z"
-            ]
-          ]
-        },
-        {
-          "id": "Petal1R2",
-          "role": "secondary",
-          "kind": "path",
-          "commands": [
-            [
-              "M",
-              133,
-              55.1
-            ],
-            [
-              "C",
-              127.5,
-              55.1,
-              124.5,
-              56.5,
-              124.5,
-              58.3
-            ],
-            [
-              "C",
-              124.5,
-              61.0,
-              133,
-              60.4,
-              133,
-              55.1
-            ],
-            [
-              "Z"
-            ]
-          ]
-        },
-        {
-          "id": "Petal2R2",
-          "role": "secondary",
-          "kind": "path",
-          "commands": [
-            [
-              "M",
-              113,
-              65.69999999999999
-            ],
-            [
-              "C",
-              118.5,
-              65.69999999999999,
-              121.5,
-              64.3,
-              121.5,
-              62.5
-            ],
-            [
-              "C",
-              121.5,
-              59.8,
-              113,
-              60.4,
-              113,
-              65.69999999999999
-            ],
-            [
-              "Z"
-            ]
-          ]
-        },
-        {
-          "id": "Petal3R2",
-          "role": "secondary",
-          "kind": "path",
-          "commands": [
-            [
-              "M",
-              133,
-              65.69999999999999
-            ],
-            [
-              "C",
-              127.5,
-              65.69999999999999,
-              124.5,
-              64.3,
-              124.5,
-              62.5
-            ],
-            [
-              "C",
-              124.5,
-              59.8,
-              133,
-              60.4,
-              133,
-              65.69999999999999
-            ],
-            [
-              "Z"
-            ]
-          ]
-        },
-        {
-          "id": "TerracottaStarR2",
-          "role": "accent",
-          "kind": "path",
-          "commands": [
-            [
-              "M",
-              123,
-              58.7
-            ],
-            [
-              "C",
-              123.45,
-              59.6,
-              123.8,
-              59.95,
-              124.75,
-              60.4
-            ],
-            [
-              "C",
-              123.8,
-              60.85,
-              123.45,
-              61.2,
-              123,
-              62.1
-            ],
-            [
-              "C",
-              122.55,
-              61.2,
-              122.2,
-              60.85,
-              121.25,
-              60.4
-            ],
-            [
-              "C",
-              122.2,
-              59.95,
-              122.55,
-              59.6,
-              123,
-              58.7
-            ],
-            [
-              "Z"
-            ]
-          ]
-        }
-      ],
+      "features": [],
       "reference": {
         "path": "design/references/frame-concepts/talavera.png",
         "signature": [
@@ -889,16 +690,21 @@
           "Concave terracotta center",
           "Ivory negative space"
         ]
-      }
+      },
+      "approved_master": "R4",
+      "approval_status": "approved",
+      "artwork_source": "design/proposals/frame-master-r4/master.json",
+      "artwork_source_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "construction": "Exact master paths and painter order; ordinary, collar and covered-header domains."
     },
     "gameboy": {
       "label": "Game Boy",
       "description": "Pocket-console bezel, cross pad and two berry-colored buttons.",
       "colors": {
-        "body": "#dcd6ba",
-        "detail": "#42454d",
-        "accent": "#973c60",
-        "secondary": "#a6a392"
+        "body": "#DCD6BA",
+        "detail": "#42454D",
+        "accent": "#973C60",
+        "secondary": "#A6A392"
       },
       "labels": {
         "body": "Warm shell",
@@ -906,145 +712,12 @@
         "accent": "Berry buttons",
         "secondary": "Speaker"
       },
-      "features": [
-        {
-          "id": "ScreenFieldR2",
-          "role": "detail",
-          "kind": "roundrect_ring",
-          "xy": [
-            112.2,
-            12.2,
-            133.8,
-            54.1
-          ],
-          "radius_mm": 1.1,
-          "inner_xy": [
-            114.45,
-            14.65,
-            131.15,
-            53.25
-          ],
-          "inner_radius_mm": 0.3
-        },
-        {
-          "id": "DpadHR2",
-          "role": "detail",
-          "kind": "box",
-          "xy": [
-            113.5,
-            57.0,
-            120.7,
-            59.2
-          ]
-        },
-        {
-          "id": "DpadVR2",
-          "role": "detail",
-          "kind": "box",
-          "xy": [
-            116,
-            54.5,
-            118.2,
-            61.7
-          ]
-        },
-        {
-          "id": "AR2",
-          "role": "accent",
-          "kind": "disc",
-          "xy": [
-            130.1,
-            56.3
-          ],
-          "radius_mm": 1.8
-        },
-        {
-          "id": "BR2",
-          "role": "accent",
-          "kind": "disc",
-          "xy": [
-            126.7,
-            59.2
-          ],
-          "radius_mm": 1.8
-        },
-        {
-          "id": "Speaker0R2",
-          "role": "secondary",
-          "kind": "stroke",
-          "points": [
-            [
-              124.0,
-              63.3
-            ],
-            [
-              125.0,
-              65.3
-            ]
-          ],
-          "width_mm": 0.9
-        },
-        {
-          "id": "Speaker1R2",
-          "role": "secondary",
-          "kind": "stroke",
-          "points": [
-            [
-              126.5,
-              63.3
-            ],
-            [
-              127.5,
-              65.3
-            ]
-          ],
-          "width_mm": 0.9
-        },
-        {
-          "id": "Speaker2R2",
-          "role": "secondary",
-          "kind": "stroke",
-          "points": [
-            [
-              129.0,
-              63.3
-            ],
-            [
-              130.0,
-              65.3
-            ]
-          ],
-          "width_mm": 0.9
-        },
-        {
-          "id": "Speaker3R2",
-          "role": "secondary",
-          "kind": "stroke",
-          "points": [
-            [
-              131.5,
-              63.3
-            ],
-            [
-              132.5,
-              65.3
-            ]
-          ],
-          "width_mm": 0.9
-        },
-        {
-          "id": "StartR2",
-          "role": "secondary",
-          "kind": "roundrect",
-          "xy": [
-            114.2,
-            64,
-            119,
-            65
-          ],
-          "radius_mm": 0.5
-        }
-      ]
+      "features": [],
+      "approved_master": "R4",
+      "approval_status": "approved",
+      "artwork_source": "design/proposals/frame-master-r4/master.json",
+      "artwork_source_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "construction": "Exact master paths and painter order; ordinary, collar and covered-header domains."
     },
     "nes": {
       "label": "NES",
@@ -1158,16 +831,17 @@
             65.7
           ]
         }
-      ]
+      ],
+      "approval_status": "awaiting-redesign"
     },
     "snes": {
       "label": "SNES",
       "description": "A soft gray console with two lavender button tones.",
       "colors": {
-        "body": "#d1d0c9",
+        "body": "#D1D0C9",
         "detail": "#464751",
         "accent": "#746198",
-        "secondary": "#aca0c2"
+        "secondary": "#ACA0C2"
       },
       "labels": {
         "body": "Console gray",
@@ -1175,133 +849,20 @@
         "accent": "Deep lavender",
         "secondary": "Lilac"
       },
-      "features": [
-        {
-          "id": "ScreenFieldR2",
-          "role": "detail",
-          "kind": "roundrect_ring",
-          "xy": [
-            112.2,
-            12.2,
-            133.8,
-            54.1
-          ],
-          "radius_mm": 1.1,
-          "inner_xy": [
-            114.45,
-            14.65,
-            131.15,
-            53.25
-          ],
-          "inner_radius_mm": 0.3
-        },
-        {
-          "id": "DpadHR2",
-          "role": "detail",
-          "kind": "box",
-          "xy": [
-            113.5,
-            57.2,
-            120.1,
-            59.2
-          ]
-        },
-        {
-          "id": "DpadVR2",
-          "role": "detail",
-          "kind": "box",
-          "xy": [
-            115.8,
-            54.9,
-            117.8,
-            61.5
-          ]
-        },
-        {
-          "id": "AR2",
-          "role": "accent",
-          "kind": "disc",
-          "xy": [
-            131,
-            59.35
-          ],
-          "radius_mm": 1.65
-        },
-        {
-          "id": "BR2",
-          "role": "accent",
-          "kind": "disc",
-          "xy": [
-            127.8,
-            62.55
-          ],
-          "radius_mm": 1.65
-        },
-        {
-          "id": "XR2",
-          "role": "secondary",
-          "kind": "disc",
-          "xy": [
-            127.8,
-            56.15
-          ],
-          "radius_mm": 1.65
-        },
-        {
-          "id": "YR2",
-          "role": "secondary",
-          "kind": "disc",
-          "xy": [
-            124.6,
-            59.35
-          ],
-          "radius_mm": 1.65
-        },
-        {
-          "id": "PowerR2",
-          "role": "accent",
-          "kind": "roundrect",
-          "xy": [
-            114,
-            12.7,
-            121,
-            14.1
-          ],
-          "radius_mm": 0.7
-        },
-        {
-          "id": "ResetR2",
-          "role": "secondary",
-          "kind": "roundrect",
-          "xy": [
-            124,
-            12.7,
-            131,
-            14.1
-          ],
-          "radius_mm": 0.7
-        },
-        {
-          "id": "SelectR2",
-          "role": "secondary",
-          "kind": "roundrect",
-          "xy": [
-            115,
-            64.7,
-            123,
-            65.9
-          ],
-          "radius_mm": 0.6
-        }
-      ]
+      "features": [],
+      "approved_master": "R4",
+      "approval_status": "approved",
+      "artwork_source": "design/proposals/frame-master-r4/master.json",
+      "artwork_source_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "construction": "Exact master paths and painter order; ordinary, collar and covered-header domains."
     },
     "phone": {
       "label": "2000s Phone",
       "description": "Navy faceplate, silver keypad and green call key.",
       "colors": {
-        "body": "#263c55",
-        "detail": "#b8bbb5",
-        "accent": "#87ad67",
+        "body": "#263C55",
+        "detail": "#B8BBB5",
+        "accent": "#87AD67",
         "secondary": "#455469"
       },
       "labels": {
@@ -1310,183 +871,12 @@
         "accent": "Call green",
         "secondary": "Navigation"
       },
-      "features": [
-        {
-          "id": "ScreenFieldR2",
-          "role": "detail",
-          "kind": "roundrect_ring",
-          "xy": [
-            112.2,
-            12.2,
-            133.8,
-            54.1
-          ],
-          "radius_mm": 1.1,
-          "inner_xy": [
-            114.45,
-            14.65,
-            131.15,
-            53.25
-          ],
-          "inner_radius_mm": 0.3
-        },
-        {
-          "id": "EarpieceR2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            119,
-            12.7,
-            127,
-            14.0
-          ],
-          "radius_mm": 0.6
-        },
-        {
-          "id": "NavR2",
-          "role": "secondary",
-          "kind": "roundrect",
-          "xy": [
-            120,
-            54.8,
-            126,
-            57.2
-          ],
-          "radius_mm": 1.2
-        },
-        {
-          "id": "CallR2",
-          "role": "accent",
-          "kind": "roundrect",
-          "xy": [
-            113.7,
-            54.8,
-            118.5,
-            57
-          ],
-          "radius_mm": 1
-        },
-        {
-          "id": "EndR2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            127.5,
-            54.8,
-            132.3,
-            57
-          ],
-          "radius_mm": 1
-        },
-        {
-          "id": "Key00R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            114.0,
-            58.2,
-            118.2,
-            60.2
-          ],
-          "radius_mm": 0.8
-        },
-        {
-          "id": "Key01R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            120.3,
-            58.2,
-            124.5,
-            60.2
-          ],
-          "radius_mm": 0.8
-        },
-        {
-          "id": "Key02R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            126.6,
-            58.2,
-            130.8,
-            60.2
-          ],
-          "radius_mm": 0.8
-        },
-        {
-          "id": "Key10R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            114.0,
-            61.1,
-            118.2,
-            63.1
-          ],
-          "radius_mm": 0.8
-        },
-        {
-          "id": "Key11R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            120.3,
-            61.1,
-            124.5,
-            63.1
-          ],
-          "radius_mm": 0.8
-        },
-        {
-          "id": "Key12R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            126.6,
-            61.1,
-            130.8,
-            63.1
-          ],
-          "radius_mm": 0.8
-        },
-        {
-          "id": "Key20R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            114.0,
-            64.0,
-            118.2,
-            66.0
-          ],
-          "radius_mm": 0.8
-        },
-        {
-          "id": "Key21R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            120.3,
-            64.0,
-            124.5,
-            66.0
-          ],
-          "radius_mm": 0.8
-        },
-        {
-          "id": "Key22R2",
-          "role": "detail",
-          "kind": "roundrect",
-          "xy": [
-            126.6,
-            64.0,
-            130.8,
-            66.0
-          ],
-          "radius_mm": 0.8
-        }
-      ]
+      "features": [],
+      "approved_master": "R4",
+      "approval_status": "approved",
+      "artwork_source": "design/proposals/frame-master-r4/master.json",
+      "artwork_source_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "construction": "Exact master paths and painter order; ordinary, collar and covered-header domains."
     },
     "walkman": {
       "label": "Walkman",
@@ -1643,16 +1033,17 @@
         "secondary",
         "accent",
         "detail"
-      ]
+      ],
+      "approval_status": "awaiting-redesign"
     },
     "ipod": {
       "label": "iPod",
       "description": "White face, a complete silver click wheel and a continuous screen border.",
       "colors": {
-        "body": "#f0eee5",
-        "detail": "#656f79",
-        "accent": "#afb4b1",
-        "secondary": "#d8d9d2"
+        "body": "#F0EEE5",
+        "detail": "#656F79",
+        "accent": "#AFB4B1",
+        "secondary": "#D8D9D2"
       },
       "labels": {
         "body": "White shell",
@@ -1660,60 +1051,13 @@
         "accent": "Wheel ring",
         "secondary": "Center key"
       },
-      "features": [
-        {
-          "id": "ScreenFieldR2",
-          "role": "detail",
-          "kind": "roundrect_ring",
-          "xy": [
-            112.2,
-            12.2,
-            133.8,
-            54.1
-          ],
-          "radius_mm": 1.1,
-          "inner_xy": [
-            114.45,
-            14.65,
-            131.15,
-            53.25
-          ],
-          "inner_radius_mm": 0.3
-        },
-        {
-          "id": "WheelR2",
-          "role": "accent",
-          "kind": "ring",
-          "xy": [
-            123,
-            60.4
-          ],
-          "radius_mm": 5.5,
-          "width_mm": 1.8
-        },
-        {
-          "id": "CenterR2",
-          "role": "secondary",
-          "kind": "disc",
-          "xy": [
-            123,
-            60.4
-          ],
-          "radius_mm": 2.2
-        },
-        {
-          "id": "HoldR2",
-          "role": "secondary",
-          "kind": "roundrect",
-          "xy": [
-            121,
-            12.8,
-            125,
-            14.2
-          ],
-          "radius_mm": 0.6
-        }
-      ]
+      "features": [],
+      "approved_master": "R4",
+      "approval_status": "approved",
+      "artwork_source": "design/proposals/frame-master-r4/master.json",
+      "artwork_source_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "construction": "Exact master paths and painter order; ordinary, collar and covered-header domains."
     }
-  }
+  },
+  "legacy_defaults_apply_to": "Styles without approved_master; approved styles use the master construction domains."
 }

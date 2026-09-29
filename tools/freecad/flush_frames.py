@@ -236,6 +236,9 @@ class Recipe:
         return obj
 
     def build(self, style):
+        if self.spec['styles'][style].get('approved_master') == 'R4':
+            import approved_frames
+            return approved_frames.build(self, style)
         theme = self.spec['styles'][style]
         raw = {role: [] for role in ROLES[1:]}
         features = []
@@ -341,6 +344,9 @@ def validate_variant(doc, side, smooth, obj, spec=None, output_dir=None):
     import MeshPart
     import Part
     spec = spec or load_spec()
+    if hasattr(obj, 'ApprovedMasterSHA256'):
+        import approved_frames
+        return approved_frames.validate(doc, side, smooth, obj, spec, output_dir)
     base, whole = smooth.Shape, obj.Shape
     roof = float(doc.Parameters.FrameTop.Value)
     if not base.isValid() or len(base.Solids) != 1 or not whole.isValid() or len(whole.Solids) != 1:

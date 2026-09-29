@@ -10,7 +10,7 @@
 
 **[Themes and print kits](docs/themes-printing.md)** — Twenty-seven coordinated themes, personal keycap palettes, linked rim/frame colors and selected STL/3MF parts.
 
-**[Lower, level stack](docs/level-stack.md)** — Glass, frame and removable switch-covering shell share a 13.39 mm plane. Connector fit remains unqualified.
+**[Lower, level stack](docs/level-stack.md)** — The frame and removable switch-covering shell reach 13.59 mm; the glass sits 0.20 mm below them. Connector fit remains unqualified.
 
 **[Case variants](docs/cases.md)** — Level, Solid, Color rim and Terrace; actual meshes in the explorer.
 

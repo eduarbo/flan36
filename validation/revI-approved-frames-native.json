@@ -1,0 +1,4695 @@
+{
+  "source_sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
+  "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+  "approved_styles": [
+    "talavera",
+    "gameboy",
+    "snes",
+    "phone",
+    "ipod"
+  ],
+  "deferred_styles": [
+    "flan",
+    "tape",
+    "orbit",
+    "manga",
+    "nes",
+    "walkman"
+  ],
+  "physical_acceptance": false,
+  "halves": {
+    "left": {
+      "translated": {
+        "L_NiceViewVisual0": {
+          "before": [
+            115.8,
+            -52.099999999999994,
+            11.49,
+            129.8,
+            -16.099999999999994,
+            12.49
+          ],
+          "after": [
+            116.0,
+            -52.099999999999994,
+            11.49,
+            130.0,
+            -16.099999999999994,
+            12.49
+          ]
+        },
+        "L_NiceViewVisual1": {
+          "before": [
+            116.82,
+            -51.699999999999996,
+            12.48,
+            128.78,
+            -49.9,
+            12.515
+          ],
+          "after": [
+            117.02,
+            -51.699999999999996,
+            12.48,
+            128.98000000000002,
+            -49.9,
+            12.515
+          ]
+        },
+        "L_NiceViewVisual2": {
+          "before": [
+            115.95,
+            -48.95,
+            12.49,
+            129.65,
+            -18.65,
+            13.39
+          ],
+          "after": [
+            116.15,
+            -48.95,
+            12.49,
+            129.85,
+            -18.65,
+            13.39
+          ]
+        },
+        "L_NiceViewVisual3": {
+          "before": [
+            116.8,
+            -44.65,
+            10.49,
+            128.8,
+            -25.65,
+            11.49
+          ],
+          "after": [
+            117.0,
+            -44.65,
+            10.49,
+            129.0,
+            -25.65,
+            11.49
+          ]
+        },
+        "L_SlimDisplaySocketHousing": {
+          "before": [
+            116.45,
+            -52.07,
+            5.4,
+            129.15,
+            -49.53,
+            9.97
+          ],
+          "after": [
+            116.65,
+            -52.07,
+            5.4,
+            129.35000000000002,
+            -49.53,
+            9.97
+          ]
+        },
+        "L_SlimDisplaySocketPins": {
+          "before": [
+            117.42,
+            -51.099999999999994,
+            2.48,
+            128.18,
+            -50.5,
+            6.92
+          ],
+          "after": [
+            117.62,
+            -51.099999999999994,
+            2.48,
+            128.38,
+            -50.5,
+            6.92
+          ]
+        },
+        "L_SlimDisplayMaleSpacer": {
+          "before": [
+            116.45,
+            -52.04,
+            9.97,
+            129.15,
+            -49.56,
+            11.49
+          ],
+          "after": [
+            116.65,
+            -52.04,
+            9.97,
+            129.35000000000002,
+            -49.56,
+            11.49
+          ]
+        },
+        "L_SlimDisplayMaleContacts": {
+          "before": [
+            117.4025,
+            -51.1175,
+            7.3,
+            128.1975,
+            -50.4825,
+            12.79
+          ],
+          "after": [
+            117.6025,
+            -51.1175,
+            7.3,
+            128.3975,
+            -50.4825,
+            12.79
+          ]
+        },
+        "L_LevelDisplaySolderReserve": {
+          "before": [
+            116.92,
+            -51.599999999999994,
+            12.49,
+            128.68,
+            -50.0,
+            12.99
+          ],
+          "after": [
+            117.12,
+            -51.599999999999994,
+            12.49,
+            128.88,
+            -50.0,
+            12.99
+          ]
+        },
+        "L_LevelDisplayPCBRelief": {
+          "before": [
+            114.85,
+            -53.0,
+            10.9,
+            130.75,
+            -15.100000000000001,
+            12.725
+          ],
+          "after": [
+            115.05,
+            -53.0,
+            10.9,
+            130.95,
+            -15.100000000000001,
+            12.725
+          ]
+        },
+        "L_LevelHeaderServiceWell": {
+          "before": [
+            115.95,
+            -52.6,
+            10.9,
+            129.65,
+            -49.1,
+            14.9
+          ],
+          "after": [
+            116.15,
+            -52.6,
+            10.9,
+            129.85,
+            -49.1,
+            13.190000000000001
+          ]
+        },
+        "L_HeaderReliefTool": {
+          "before": [
+            116.2,
+            -52.3,
+            5.3,
+            129.4,
+            -49.3,
+            12.55
+          ],
+          "after": [
+            116.4,
+            -52.3,
+            5.3,
+            129.60000000000002,
+            -49.3,
+            12.55
+          ]
+        },
+        "L_DisplayContact0": {
+          "before": [
+            117.3,
+            -51.22,
+            5.199999999999999,
+            118.14,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            117.5,
+            -51.22,
+            5.199999999999999,
+            118.34,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "L_DisplayContact1": {
+          "before": [
+            119.84,
+            -51.22,
+            5.199999999999999,
+            120.68,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            120.04,
+            -51.22,
+            5.199999999999999,
+            120.88000000000001,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "L_DisplayContact2": {
+          "before": [
+            122.38,
+            -51.22,
+            5.199999999999999,
+            123.22,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            122.58,
+            -51.22,
+            5.199999999999999,
+            123.42,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "L_DisplayContact3": {
+          "before": [
+            124.92,
+            -51.22,
+            5.199999999999999,
+            125.76,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            125.12,
+            -51.22,
+            5.199999999999999,
+            125.96000000000001,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "L_DisplayContact4": {
+          "before": [
+            127.46,
+            -51.22,
+            5.199999999999999,
+            128.29999999999998,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            127.65999999999998,
+            -51.22,
+            5.199999999999999,
+            128.49999999999997,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "L_PadDrill144": {
+          "before": [
+            117.22,
+            -51.3,
+            3.7,
+            118.22,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            117.42,
+            -51.3,
+            3.7,
+            118.42,
+            -50.3,
+            5.7
+          ]
+        },
+        "L_PadDrill145": {
+          "before": [
+            119.76,
+            -51.3,
+            3.7,
+            120.76,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            119.96000000000001,
+            -51.3,
+            3.7,
+            120.96000000000001,
+            -50.3,
+            5.7
+          ]
+        },
+        "L_PadDrill146": {
+          "before": [
+            122.3,
+            -51.3,
+            3.7,
+            123.3,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            122.5,
+            -51.3,
+            3.7,
+            123.5,
+            -50.3,
+            5.7
+          ]
+        },
+        "L_PadDrill147": {
+          "before": [
+            124.84,
+            -51.3,
+            3.7,
+            125.84,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            125.04,
+            -51.3,
+            3.7,
+            126.04,
+            -50.3,
+            5.7
+          ]
+        },
+        "L_PadDrill148": {
+          "before": [
+            127.38,
+            -51.3,
+            3.7,
+            128.38,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            127.57999999999998,
+            -51.3,
+            3.7,
+            128.57999999999998,
+            -50.3,
+            5.7
+          ]
+        },
+        "L_DisplayLedge0": {
+          "before": [
+            115.0,
+            -52.8,
+            11.09,
+            116.3,
+            -15.5,
+            11.49
+          ],
+          "after": [
+            115.2,
+            -52.8,
+            11.09,
+            116.5,
+            -15.5,
+            11.49
+          ]
+        },
+        "L_DisplayLedge1": {
+          "before": [
+            129.3,
+            -52.8,
+            11.09,
+            130.6,
+            -15.5,
+            11.49
+          ],
+          "after": [
+            129.5,
+            -52.8,
+            11.09,
+            130.79999999999998,
+            -15.5,
+            11.49
+          ]
+        },
+        "L_DisplayLedge2": {
+          "before": [
+            115.0,
+            -16.5,
+            11.09,
+            130.6,
+            -15.5,
+            11.49
+          ],
+          "after": [
+            115.2,
+            -16.5,
+            11.09,
+            130.8,
+            -15.5,
+            11.49
+          ]
+        },
+        "L_DisplaySide0": {
+          "before": [
+            115.0,
+            -52.8,
+            11.09,
+            115.55,
+            -15.5,
+            12.69
+          ],
+          "after": [
+            115.2,
+            -52.8,
+            11.09,
+            115.75,
+            -15.5,
+            12.69
+          ]
+        },
+        "L_DisplaySide1": {
+          "before": [
+            130.05,
+            -52.8,
+            11.09,
+            130.6,
+            -15.5,
+            12.69
+          ],
+          "after": [
+            130.25,
+            -52.8,
+            11.09,
+            130.79999999999998,
+            -15.5,
+            12.69
+          ]
+        }
+      },
+      "guide_gaps_mm": [
+        0.25,
+        0.25
+      ],
+      "pcb_pin_radial_gap_mm": 0.2,
+      "sled_pin_radial_gap_mm": 0.12,
+      "blank_top_difference_mm2": 0.0
+    },
+    "right": {
+      "translated": {
+        "R_NiceViewVisual0": {
+          "before": [
+            30.200000000000003,
+            -52.099999999999994,
+            11.49,
+            44.2,
+            -16.099999999999994,
+            12.49
+          ],
+          "after": [
+            30.0,
+            -52.099999999999994,
+            11.49,
+            44.0,
+            -16.099999999999994,
+            12.49
+          ]
+        },
+        "R_NiceViewVisual1": {
+          "before": [
+            31.220000000000006,
+            -51.699999999999996,
+            12.48,
+            43.18,
+            -49.9,
+            12.515
+          ],
+          "after": [
+            31.020000000000003,
+            -51.699999999999996,
+            12.48,
+            42.98,
+            -49.9,
+            12.515
+          ]
+        },
+        "R_NiceViewVisual2": {
+          "before": [
+            30.35,
+            -48.95,
+            12.49,
+            44.050000000000004,
+            -18.65,
+            13.39
+          ],
+          "after": [
+            30.15,
+            -48.95,
+            12.49,
+            43.85,
+            -18.65,
+            13.39
+          ]
+        },
+        "R_NiceViewVisual3": {
+          "before": [
+            31.200000000000003,
+            -44.65,
+            10.49,
+            43.2,
+            -25.65,
+            11.49
+          ],
+          "after": [
+            31.0,
+            -44.65,
+            10.49,
+            43.0,
+            -25.65,
+            11.49
+          ]
+        },
+        "R_SlimDisplaySocketHousing": {
+          "before": [
+            30.85,
+            -52.07,
+            5.4,
+            43.55,
+            -49.53,
+            9.97
+          ],
+          "after": [
+            30.650000000000002,
+            -52.07,
+            5.4,
+            43.349999999999994,
+            -49.53,
+            9.97
+          ]
+        },
+        "R_SlimDisplaySocketPins": {
+          "before": [
+            31.820000000000004,
+            -51.099999999999994,
+            2.48,
+            42.58,
+            -50.5,
+            6.92
+          ],
+          "after": [
+            31.620000000000005,
+            -51.099999999999994,
+            2.48,
+            42.379999999999995,
+            -50.5,
+            6.92
+          ]
+        },
+        "R_SlimDisplayMaleSpacer": {
+          "before": [
+            30.85,
+            -52.04,
+            9.97,
+            43.55,
+            -49.56,
+            11.49
+          ],
+          "after": [
+            30.650000000000002,
+            -52.04,
+            9.97,
+            43.349999999999994,
+            -49.56,
+            11.49
+          ]
+        },
+        "R_SlimDisplayMaleContacts": {
+          "before": [
+            31.802500000000006,
+            -51.1175,
+            7.3,
+            42.5975,
+            -50.4825,
+            12.79
+          ],
+          "after": [
+            31.602500000000006,
+            -51.1175,
+            7.3,
+            42.397499999999994,
+            -50.4825,
+            12.79
+          ]
+        },
+        "R_LevelDisplaySolderReserve": {
+          "before": [
+            31.320000000000004,
+            -51.599999999999994,
+            12.49,
+            43.08,
+            -50.0,
+            12.99
+          ],
+          "after": [
+            31.120000000000005,
+            -51.599999999999994,
+            12.49,
+            42.879999999999995,
+            -50.0,
+            12.99
+          ]
+        },
+        "R_LevelDisplayPCBRelief": {
+          "before": [
+            29.250000000000004,
+            -53.0,
+            10.9,
+            45.150000000000006,
+            -15.100000000000001,
+            12.725
+          ],
+          "after": [
+            29.050000000000004,
+            -53.0,
+            10.9,
+            44.95,
+            -15.100000000000001,
+            12.725
+          ]
+        },
+        "R_LevelHeaderServiceWell": {
+          "before": [
+            30.35,
+            -52.6,
+            10.9,
+            44.05,
+            -49.1,
+            14.9
+          ],
+          "after": [
+            30.150000000000002,
+            -52.6,
+            10.9,
+            43.85,
+            -49.1,
+            13.190000000000001
+          ]
+        },
+        "R_HeaderReliefTool": {
+          "before": [
+            30.599999999999994,
+            -52.3,
+            5.3,
+            43.8,
+            -49.3,
+            12.55
+          ],
+          "after": [
+            30.399999999999995,
+            -52.3,
+            5.3,
+            43.599999999999994,
+            -49.3,
+            12.55
+          ]
+        },
+        "R_DisplayContact0": {
+          "before": [
+            31.700000000000003,
+            -51.22,
+            5.199999999999999,
+            32.540000000000006,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            31.500000000000004,
+            -51.22,
+            5.199999999999999,
+            32.34,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "R_DisplayContact1": {
+          "before": [
+            34.24,
+            -51.22,
+            5.199999999999999,
+            35.080000000000005,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            34.04,
+            -51.22,
+            5.199999999999999,
+            34.88,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "R_DisplayContact2": {
+          "before": [
+            36.78,
+            -51.22,
+            5.199999999999999,
+            37.620000000000005,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            36.58,
+            -51.22,
+            5.199999999999999,
+            37.42,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "R_DisplayContact3": {
+          "before": [
+            39.32,
+            -51.22,
+            5.199999999999999,
+            40.160000000000004,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            39.12,
+            -51.22,
+            5.199999999999999,
+            39.96,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "R_DisplayContact4": {
+          "before": [
+            41.86,
+            -51.22,
+            5.199999999999999,
+            42.7,
+            -50.379999999999995,
+            17.2
+          ],
+          "after": [
+            41.66,
+            -51.22,
+            5.199999999999999,
+            42.5,
+            -50.379999999999995,
+            17.2
+          ]
+        },
+        "R_PadDrill33": {
+          "before": [
+            31.619999999999997,
+            -51.3,
+            3.7,
+            32.62,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            31.419999999999998,
+            -51.3,
+            3.7,
+            32.42,
+            -50.3,
+            5.7
+          ]
+        },
+        "R_PadDrill34": {
+          "before": [
+            34.16,
+            -51.3,
+            3.7,
+            35.16,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            33.959999999999994,
+            -51.3,
+            3.7,
+            34.959999999999994,
+            -50.3,
+            5.7
+          ]
+        },
+        "R_PadDrill35": {
+          "before": [
+            36.7,
+            -51.3,
+            3.7,
+            37.7,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            36.5,
+            -51.3,
+            3.7,
+            37.5,
+            -50.3,
+            5.7
+          ]
+        },
+        "R_PadDrill36": {
+          "before": [
+            39.24,
+            -51.3,
+            3.7,
+            40.24,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            39.04,
+            -51.3,
+            3.7,
+            40.04,
+            -50.3,
+            5.7
+          ]
+        },
+        "R_PadDrill37": {
+          "before": [
+            41.78,
+            -51.3,
+            3.7,
+            42.78,
+            -50.3,
+            5.7
+          ],
+          "after": [
+            41.58,
+            -51.3,
+            3.7,
+            42.58,
+            -50.3,
+            5.7
+          ]
+        },
+        "R_DisplayLedge0": {
+          "before": [
+            43.7,
+            -52.8,
+            11.09,
+            45.0,
+            -15.5,
+            11.49
+          ],
+          "after": [
+            43.5,
+            -52.8,
+            11.09,
+            44.8,
+            -15.5,
+            11.49
+          ]
+        },
+        "R_DisplayLedge1": {
+          "before": [
+            29.400000000000006,
+            -52.8,
+            11.09,
+            30.69999999999999,
+            -15.5,
+            11.49
+          ],
+          "after": [
+            29.200000000000006,
+            -52.8,
+            11.09,
+            30.49999999999999,
+            -15.5,
+            11.49
+          ]
+        },
+        "R_DisplayLedge2": {
+          "before": [
+            29.400000000000006,
+            -16.5,
+            11.09,
+            45.0,
+            -15.5,
+            11.49
+          ],
+          "after": [
+            29.200000000000006,
+            -16.5,
+            11.09,
+            44.8,
+            -15.5,
+            11.49
+          ]
+        },
+        "R_DisplaySide0": {
+          "before": [
+            44.45,
+            -52.8,
+            11.09,
+            45.0,
+            -15.5,
+            12.69
+          ],
+          "after": [
+            44.25,
+            -52.8,
+            11.09,
+            44.8,
+            -15.5,
+            12.69
+          ]
+        },
+        "R_DisplaySide1": {
+          "before": [
+            29.400000000000006,
+            -52.8,
+            11.09,
+            29.94999999999999,
+            -15.5,
+            12.69
+          ],
+          "after": [
+            29.200000000000006,
+            -52.8,
+            11.09,
+            29.74999999999999,
+            -15.5,
+            12.69
+          ]
+        }
+      },
+      "guide_gaps_mm": [
+        0.25000000000001066,
+        0.25
+      ],
+      "pcb_pin_radial_gap_mm": 0.2,
+      "sled_pin_radial_gap_mm": 0.12,
+      "blank_top_difference_mm2": 0.0
+    }
+  },
+  "frames": {
+    "left-talavera": {
+      "style": "talavera",
+      "side": "left",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1981.645999851568,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 135.19104204458395,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 1.1360000000000026,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 36.75300000000002,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "left-gameboy": {
+      "style": "gameboy",
+      "side": "left",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1992.849690661253,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 146.7110420445839,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 9.072919933615221,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 6.09238934211694,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "left-snes": {
+      "style": "snes",
+      "side": "left",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1985.548381588147,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 144.87104204458396,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 10.679114631544785,
+          "solids": 3,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 13.627503973661684,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "left-phone": {
+      "style": "phone",
+      "side": "left",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1973.458788502569,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 173.65019170490928,
+          "solids": 12,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 3.4565308443374745,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 4.16053084433747,
+          "solids": 1,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "left-ipod": {
+      "style": "ipod",
+      "side": "left",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1991.40505498099,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 135.19104204458395,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 19.867431941301888,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 8.262512929275157,
+          "solids": 2,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "left-flan": {
+      "object": "L_FlushFrame_flan_Final",
+      "source_object": "L_Frame_smooth_HeadRelief5",
+      "style": "flan",
+      "feature_integrity": [
+        {
+          "id": "CaramelFlowR2",
+          "role": "accent",
+          "authored_volume_mm3": 46.61820000000014,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 46.61820000000014,
+          "authored_solids": 1
+        },
+        {
+          "id": "MedallionR2",
+          "role": "accent",
+          "authored_volume_mm3": 48.61773355292335,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 30.659488045035367,
+          "authored_solids": 1
+        },
+        {
+          "id": "DessertR2",
+          "role": "secondary",
+          "authored_volume_mm3": 12.779999999999992,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 11.811024312699288,
+          "authored_solids": 1
+        },
+        {
+          "id": "GlazeR2",
+          "role": "detail",
+          "authored_volume_mm3": 2.8181592653589727,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 2.8181592653589727,
+          "authored_solids": 1
+        },
+        {
+          "id": "SaucerR2",
+          "role": "detail",
+          "authored_volume_mm3": 3.32906192982974,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.32906192982974,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "L_FlushFrame_flan_body_Material",
+          "stl": "left-frame-flan-body.stl",
+          "step": "left-frame-flan-body.step",
+          "volume_mm3": 2059.4901083432273,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            111.0,
+            -67.0,
+            6.299999999999994,
+            135.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "L_FlushFrame_flan_detail_Clipped",
+          "stl": "left-frame-flan-detail.stl",
+          "step": "left-frame-flan-detail.step",
+          "volume_mm3": 6.147221195188712,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            120.3,
+            -64.5,
+            13.19,
+            129.7,
+            -57.60000000000001,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "L_FlushFrame_flan_accent_Material",
+          "stl": "left-frame-flan-accent.stl",
+          "step": "left-frame-flan-accent.step",
+          "volume_mm3": 77.27768804503552,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.35,
+            -65.4,
+            13.19,
+            132.8,
+            -12.399999999999999,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "L_FlushFrame_flan_secondary_Material",
+          "stl": "left-frame-flan-secondary.stl",
+          "step": "left-frame-flan-secondary.step",
+          "volume_mm3": 11.811024312699287,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            120.9,
+            -62.8,
+            13.19,
+            129.1,
+            -58.61608217823125,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        111.0,
+        -67.0,
+        6.299999999999994,
+        135.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "detail",
+        "detail",
+        "secondary",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "left-tape": {
+      "object": "L_FlushFrame_tape_Final",
+      "source_object": "L_Frame_smooth_HeadRelief5",
+      "style": "tape",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 103.7834335088084,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 98.74271766517597,
+          "authored_solids": 1
+        },
+        {
+          "id": "DiagonalStripeR2",
+          "role": "accent",
+          "authored_volume_mm3": 1.7599999999999971,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 1.7599999999999971,
+          "authored_solids": 1
+        },
+        {
+          "id": "ScreenStripeR2",
+          "role": "accent",
+          "authored_volume_mm3": 10.889097335529225,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 10.889097335529225,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelBridgeR2",
+          "role": "detail",
+          "authored_volume_mm3": 2.736000000000016,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 2.736000000000016,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelLeftR2",
+          "role": "secondary",
+          "authored_volume_mm3": 6.361725123519327,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.33128197582497,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelRightR2",
+          "role": "secondary",
+          "authored_volume_mm3": 6.361725123519334,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.331281975824947,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelHub0R2",
+          "role": "detail",
+          "authored_volume_mm3": 1.0178760197630918,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 1.0178760197630918,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelHub1R2",
+          "role": "detail",
+          "authored_volume_mm3": 1.0178760197630936,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 1.0178760197630936,
+          "authored_solids": 1
+        },
+        {
+          "id": "Slat0R2",
+          "role": "detail",
+          "authored_volume_mm3": 5.385061929829751,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.385061929829751,
+          "authored_solids": 1
+        },
+        {
+          "id": "Slat1R2",
+          "role": "detail",
+          "authored_volume_mm3": 5.38506192982986,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.38506192982986,
+          "authored_solids": 1
+        },
+        {
+          "id": "Slat2R2",
+          "role": "detail",
+          "authored_volume_mm3": 5.385061929829798,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.385061929829798,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "L_FlushFrame_tape_body_Material",
+          "stl": "left-frame-tape-body.stl",
+          "step": "left-frame-tape-body.step",
+          "volume_mm3": 2011.744725114781,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            111.0,
+            -67.0,
+            6.299999999999994,
+            135.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "L_FlushFrame_tape_detail_Material",
+          "stl": "left-frame-tape-detail.stl",
+          "step": "left-frame-tape-detail.step",
+          "volume_mm3": 119.66965549419157,
+          "connected_solids": 7,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.2,
+            -65.75,
+            13.19,
+            133.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "L_FlushFrame_tape_accent_Clipped",
+          "stl": "left-frame-tape-accent.stl",
+          "step": "left-frame-tape-accent.step",
+          "volume_mm3": 12.649097335529234,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.5,
+            -55.0,
+            13.19,
+            133.5,
+            -12.3,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "L_FlushFrame_tape_secondary_Material",
+          "stl": "left-frame-tape-secondary.stl",
+          "step": "left-frame-tape-secondary.step",
+          "volume_mm3": 10.662563951649922,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            114.75099223425849,
+            -60.49998797982439,
+            13.19,
+            131.25,
+            -56.00001202017561,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        111.0,
+        -67.0,
+        6.299999999999994,
+        135.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "detail",
+        "detail",
+        "detail",
+        "secondary",
+        "detail",
+        "secondary",
+        "detail",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "detail",
+        "detail",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "left-orbit": {
+      "object": "L_FlushFrame_orbit_Final",
+      "source_object": "L_Frame_smooth_HeadRelief5",
+      "style": "orbit",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 204.87143350880845,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 163.4623225699189,
+          "authored_solids": 1
+        },
+        {
+          "id": "CrescentR2",
+          "role": "accent",
+          "authored_volume_mm3": 41.43169999999998,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 32.93683346469318,
+          "authored_solids": 1
+        },
+        {
+          "id": "IvoryDiscR2",
+          "role": "secondary",
+          "authored_volume_mm3": 8.494866535306807,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 8.494866535306807,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "L_FlushFrame_orbit_body_Material",
+          "stl": "left-frame-orbit-body.stl",
+          "step": "left-frame-orbit-body.step",
+          "volume_mm3": 1949.832019326231,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            111.0,
+            -67.0,
+            6.299999999999994,
+            135.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "L_FlushFrame_orbit_detail_Material",
+          "stl": "left-frame-orbit-detail.stl",
+          "step": "left-frame-orbit-detail.step",
+          "volume_mm3": 163.4623225699189,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.2,
+            -65.8,
+            13.19,
+            133.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "L_FlushFrame_orbit_accent_Material",
+          "stl": "left-frame-orbit-accent.stl",
+          "step": "left-frame-orbit-accent.step",
+          "volume_mm3": 32.93683346469318,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.45,
+            -64.67690127065161,
+            13.19,
+            133.5,
+            -32.5,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "L_FlushFrame_orbit_secondary_Clipped",
+          "stl": "left-frame-orbit-secondary.stl",
+          "step": "left-frame-orbit-secondary.step",
+          "volume_mm3": 8.494866535306807,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            120.20116367606289,
+            -62.99970906470671,
+            13.19,
+            125.39999999999999,
+            -57.80029093529329,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        111.0,
+        -67.0,
+        6.299999999999994,
+        135.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "detail",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "body",
+        "secondary",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "left-manga": {
+      "object": "L_FlushFrame_manga_Final",
+      "source_object": "L_Frame_smooth_HeadRelief5",
+      "style": "manga",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 109.83143350880843,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 106.72770784269059,
+          "authored_solids": 1
+        },
+        {
+          "id": "TopGutterR2",
+          "role": "secondary",
+          "authored_volume_mm3": 3.1680000000000144,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.1680000000000144,
+          "authored_solids": 1
+        },
+        {
+          "id": "DiagonalPanelR2",
+          "role": "detail",
+          "authored_volume_mm3": 10.069999999999975,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 10.069999999999975,
+          "authored_solids": 1
+        },
+        {
+          "id": "PanelDot0R2",
+          "role": "detail",
+          "authored_volume_mm3": 3.0190705400997935,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.0190705400997935,
+          "authored_solids": 1
+        },
+        {
+          "id": "PanelDot1R2",
+          "role": "detail",
+          "authored_volume_mm3": 3.0190705400997935,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.0190705400997935,
+          "authored_solids": 1
+        },
+        {
+          "id": "PanelDot2R2",
+          "role": "detail",
+          "authored_volume_mm3": 3.0190705400997935,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.0190705400997935,
+          "authored_solids": 1
+        },
+        {
+          "id": "PanelDot3R2",
+          "role": "detail",
+          "authored_volume_mm3": 3.0190705400997935,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.0190705400997935,
+          "authored_solids": 1
+        },
+        {
+          "id": "RedCornerR2",
+          "role": "accent",
+          "authored_volume_mm3": 6.892999999999986,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 6.892999999999986,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "L_FlushFrame_manga_body_Material",
+          "stl": "left-frame-manga-body.stl",
+          "step": "left-frame-manga-body.step",
+          "volume_mm3": 2015.7910518930616,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            111.0,
+            -67.0,
+            6.299999999999994,
+            135.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "L_FlushFrame_manga_detail_Material",
+          "stl": "left-frame-manga-detail.stl",
+          "step": "left-frame-manga-detail.step",
+          "volume_mm3": 128.87399000308986,
+          "connected_solids": 6,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.2,
+            -65.64982655780592,
+            13.19,
+            133.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "L_FlushFrame_manga_accent_Clipped",
+          "stl": "left-frame-manga-accent.stl",
+          "step": "left-frame-manga-accent.step",
+          "volume_mm3": 6.892999999999986,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            127.4,
+            -65.8,
+            13.19,
+            133.5,
+            -61.95,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "L_FlushFrame_manga_secondary_Material",
+          "stl": "left-frame-manga-secondary.stl",
+          "step": "left-frame-manga-secondary.step",
+          "volume_mm3": 3.1680000000000144,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            128.2,
+            -17.6,
+            13.19,
+            133.5,
+            -12.3,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        111.0,
+        -67.0,
+        6.299999999999994,
+        135.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "secondary",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "left-nes": {
+      "object": "L_FlushFrame_nes_Final",
+      "source_object": "L_Frame_smooth_HeadRelief5",
+      "style": "nes",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 103.7834335088084,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 98.21433617327918,
+          "authored_solids": 1
+        },
+        {
+          "id": "DeckR2",
+          "role": "detail",
+          "authored_volume_mm3": 74.54024771931901,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 57.597239561214266,
+          "authored_solids": 1
+        },
+        {
+          "id": "DpadHR2",
+          "role": "secondary",
+          "authored_volume_mm3": 5.200000000000001,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.200000000000001,
+          "authored_solids": 1
+        },
+        {
+          "id": "DpadVR2",
+          "role": "secondary",
+          "authored_volume_mm3": 5.200000000000001,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.200000000000003,
+          "authored_solids": 1
+        },
+        {
+          "id": "AR2",
+          "role": "accent",
+          "authored_volume_mm3": 4.071504079052368,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.071504079052368,
+          "authored_solids": 1
+        },
+        {
+          "id": "BR2",
+          "role": "accent",
+          "authored_volume_mm3": 4.071504079052378,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.071504079052378,
+          "authored_solids": 1
+        },
+        {
+          "id": "HeaderR2",
+          "role": "secondary",
+          "authored_volume_mm3": 5.569097335529209,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.569097335529209,
+          "authored_solids": 1
+        },
+        {
+          "id": "SignatureR2",
+          "role": "accent",
+          "authored_volume_mm3": 3.388000000000022,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.388000000000022,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "L_FlushFrame_nes_body_Material",
+          "stl": "left-frame-nes-body.stl",
+          "step": "left-frame-nes-body.step",
+          "volume_mm3": 1973.0143606680226,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            111.0,
+            -67.0,
+            6.299999999999994,
+            135.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "L_FlushFrame_nes_detail_Material",
+          "stl": "left-frame-nes-detail.stl",
+          "step": "left-frame-nes-detail.step",
+          "volume_mm3": 155.81157573449352,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.2,
+            -63.0,
+            13.19,
+            133.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "L_FlushFrame_nes_accent_Clipped",
+          "stl": "left-frame-nes-accent.stl",
+          "step": "left-frame-nes-accent.step",
+          "volume_mm3": 11.53100815810477,
+          "connected_solids": 3,
+          "closed_mesh": true,
+          "bounds_mm": [
+            124.2008056218897,
+            -65.7,
+            13.19,
+            132.7,
+            -56.90020141674151,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "L_FlushFrame_nes_secondary_Material",
+          "stl": "left-frame-nes-secondary.stl",
+          "step": "left-frame-nes-secondary.step",
+          "volume_mm3": 14.369097335529233,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            113.0,
+            -61.4,
+            13.19,
+            127.0,
+            -12.800000000000002,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        111.0,
+        -67.0,
+        6.299999999999994,
+        135.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "detail",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "secondary",
+        "accent",
+        "accent",
+        "secondary",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "left-walkman": {
+      "object": "L_FlushFrame_walkman_Final",
+      "source_object": "L_Frame_smooth_HeadRelief5",
+      "style": "walkman",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 103.7834335088084,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 87.04318578948937,
+          "authored_solids": 1
+        },
+        {
+          "id": "HeaderR2",
+          "role": "accent",
+          "authored_volume_mm3": 16.740247719319022,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 16.740247719319022,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker0R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358954,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358954,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker1R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358954,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358954,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker2R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358954,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358954,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker3R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358954,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358954,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker4R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358984,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358984,
+          "authored_solids": 1
+        },
+        {
+          "id": "ControlStripR2",
+          "role": "accent",
+          "authored_volume_mm3": 24.296637061435938,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 19.867575131606188,
+          "authored_solids": 1
+        },
+        {
+          "id": "PlayR2",
+          "role": "secondary",
+          "authored_volume_mm3": 1.9839999999999989,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 1.9839999999999989,
+          "authored_solids": 1
+        },
+        {
+          "id": "StopR2",
+          "role": "secondary",
+          "authored_volume_mm3": 2.4450619298297576,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 2.445061929829757,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "L_FlushFrame_walkman_body_Material",
+          "stl": "left-frame-walkman-body.stl",
+          "step": "left-frame-walkman-body.step",
+          "volume_mm3": 2006.0751749991116,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            111.0,
+            -67.0,
+            6.299999999999994,
+            135.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "L_FlushFrame_walkman_detail_Material",
+          "stl": "left-frame-walkman-detail.stl",
+          "step": "left-frame-walkman-detail.step",
+          "volume_mm3": 107.61398211628409,
+          "connected_solids": 6,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.2,
+            -64.6,
+            13.19,
+            133.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "L_FlushFrame_walkman_accent_Material",
+          "stl": "left-frame-walkman-accent.stl",
+          "step": "left-frame-walkman-accent.step",
+          "volume_mm3": 36.607822850925224,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            112.4,
+            -65.9,
+            13.19,
+            133.6,
+            -12.399999999999999,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "L_FlushFrame_walkman_secondary_Clipped",
+          "stl": "left-frame-walkman-secondary.stl",
+          "step": "left-frame-walkman-secondary.step",
+          "volume_mm3": 4.429061929829752,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            128.3,
+            -64.20000000000002,
+            13.19,
+            131.4,
+            -56.3,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        111.0,
+        -67.0,
+        6.299999999999994,
+        135.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "secondary",
+        "secondary",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "right-talavera": {
+      "style": "talavera",
+      "side": "right",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1981.6459998515707,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 135.19104204458384,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 1.1360000000000003,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 36.75300000000005,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "right-gameboy": {
+      "style": "gameboy",
+      "side": "right",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1992.849690661254,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 146.71104204458382,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 9.07291993361523,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 6.092389342116954,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "right-snes": {
+      "style": "snes",
+      "side": "right",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1985.5483815881514,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 144.87104204458387,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 10.679114631544783,
+          "solids": 3,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 13.627503973661721,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "right-phone": {
+      "style": "phone",
+      "side": "right",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1973.4587885025667,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 173.65019170490902,
+          "solids": 12,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 3.456530844337472,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 4.160530844337473,
+          "solids": 1,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "right-ipod": {
+      "style": "ipod",
+      "side": "right",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1991.4050549809913,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 135.19104204458384,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 19.867431941301874,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 8.26251292927515,
+          "solids": 2,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "right-flan": {
+      "object": "R_FlushFrame_flan_Final",
+      "source_object": "R_Frame_smooth_HeadRelief5",
+      "style": "flan",
+      "feature_integrity": [
+        {
+          "id": "CaramelFlowR2",
+          "role": "accent",
+          "authored_volume_mm3": 46.61820000000013,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 46.61820000000013,
+          "authored_solids": 1
+        },
+        {
+          "id": "MedallionR2",
+          "role": "accent",
+          "authored_volume_mm3": 48.61773355292331,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 30.659488045035296,
+          "authored_solids": 1
+        },
+        {
+          "id": "DessertR2",
+          "role": "secondary",
+          "authored_volume_mm3": 12.779999999999992,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 11.811024312699294,
+          "authored_solids": 1
+        },
+        {
+          "id": "GlazeR2",
+          "role": "detail",
+          "authored_volume_mm3": 2.8181592653589904,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 2.8181592653589904,
+          "authored_solids": 1
+        },
+        {
+          "id": "SaucerR2",
+          "role": "detail",
+          "authored_volume_mm3": 3.3290619298297286,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.3290619298297286,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "R_FlushFrame_flan_body_Material",
+          "stl": "right-frame-flan-body.stl",
+          "step": "right-frame-flan-body.step",
+          "volume_mm3": 2059.4901083432296,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            25.0,
+            -67.0,
+            6.299999999999997,
+            49.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "R_FlushFrame_flan_detail_Clipped",
+          "stl": "right-frame-flan-detail.stl",
+          "step": "right-frame-flan-detail.step",
+          "volume_mm3": 6.147221195188715,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            30.30000000000001,
+            -64.5,
+            13.19,
+            39.7,
+            -57.6,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "R_FlushFrame_flan_accent_Material",
+          "stl": "right-frame-flan-accent.stl",
+          "step": "right-frame-flan-accent.step",
+          "volume_mm3": 77.27768804503545,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            27.19999999999999,
+            -65.4,
+            13.19,
+            47.650000000000006,
+            -12.399999999999999,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "R_FlushFrame_flan_secondary_Material",
+          "stl": "right-frame-flan-secondary.stl",
+          "step": "right-frame-flan-secondary.step",
+          "volume_mm3": 11.811024312699296,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            30.900000000000006,
+            -62.8,
+            13.19,
+            39.099999999999994,
+            -58.61608217823124,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        25.0,
+        -67.0,
+        6.299999999999997,
+        49.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "detail",
+        "detail",
+        "secondary",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "right-tape": {
+      "object": "R_FlushFrame_tape_Final",
+      "source_object": "R_Frame_smooth_HeadRelief5",
+      "style": "tape",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 103.7834335088084,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 98.74271766517596,
+          "authored_solids": 1
+        },
+        {
+          "id": "DiagonalStripeR2",
+          "role": "accent",
+          "authored_volume_mm3": 1.7599999999999976,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 1.7599999999999976,
+          "authored_solids": 1
+        },
+        {
+          "id": "ScreenStripeR2",
+          "role": "accent",
+          "authored_volume_mm3": 10.889097335529211,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 10.889097335529211,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelBridgeR2",
+          "role": "detail",
+          "authored_volume_mm3": 2.736000000000016,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 2.736000000000016,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelLeftR2",
+          "role": "secondary",
+          "authored_volume_mm3": 6.361725123519332,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.331281975824949,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelRightR2",
+          "role": "secondary",
+          "authored_volume_mm3": 6.361725123519332,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.331281975824969,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelHub0R2",
+          "role": "detail",
+          "authored_volume_mm3": 1.017876019763094,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 1.017876019763094,
+          "authored_solids": 1
+        },
+        {
+          "id": "ReelHub1R2",
+          "role": "detail",
+          "authored_volume_mm3": 1.0178760197630936,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 1.0178760197630936,
+          "authored_solids": 1
+        },
+        {
+          "id": "Slat0R2",
+          "role": "detail",
+          "authored_volume_mm3": 5.38506192982976,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.38506192982976,
+          "authored_solids": 1
+        },
+        {
+          "id": "Slat1R2",
+          "role": "detail",
+          "authored_volume_mm3": 5.385061929829806,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.385061929829806,
+          "authored_solids": 1
+        },
+        {
+          "id": "Slat2R2",
+          "role": "detail",
+          "authored_volume_mm3": 5.385061929829801,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.385061929829801,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "R_FlushFrame_tape_body_Material",
+          "stl": "right-frame-tape-body.stl",
+          "step": "right-frame-tape-body.step",
+          "volume_mm3": 2011.7447251147826,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            25.0,
+            -67.0,
+            6.299999999999997,
+            49.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "R_FlushFrame_tape_detail_Material",
+          "stl": "right-frame-tape-detail.stl",
+          "step": "right-frame-tape-detail.step",
+          "volume_mm3": 119.66965549419155,
+          "connected_solids": 7,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.19999999999999,
+            -65.75,
+            13.19,
+            47.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "R_FlushFrame_tape_accent_Clipped",
+          "stl": "right-frame-tape-accent.stl",
+          "step": "right-frame-tape-accent.step",
+          "volume_mm3": 12.64909733552922,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.5,
+            -55.0,
+            13.19,
+            47.5,
+            -12.3,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "R_FlushFrame_tape_secondary_Material",
+          "stl": "right-frame-tape-secondary.stl",
+          "step": "right-frame-tape-secondary.step",
+          "volume_mm3": 10.662563951649918,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            28.75099223425849,
+            -60.49998797982439,
+            13.19,
+            45.25,
+            -56.00001202017561,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        25.0,
+        -67.0,
+        6.299999999999997,
+        49.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "secondary",
+        "secondary",
+        "detail",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "detail",
+        "detail",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "right-orbit": {
+      "object": "R_FlushFrame_orbit_Final",
+      "source_object": "R_Frame_smooth_HeadRelief5",
+      "style": "orbit",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 204.87143350880837,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 163.4623225699195,
+          "authored_solids": 1
+        },
+        {
+          "id": "CrescentR2",
+          "role": "accent",
+          "authored_volume_mm3": 41.43169999999999,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 32.936833464693166,
+          "authored_solids": 1
+        },
+        {
+          "id": "IvoryDiscR2",
+          "role": "secondary",
+          "authored_volume_mm3": 8.494866535306805,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 8.494866535306805,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "R_FlushFrame_orbit_body_Material",
+          "stl": "right-frame-orbit-body.stl",
+          "step": "right-frame-orbit-body.step",
+          "volume_mm3": 1949.8320193262293,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            25.0,
+            -67.0,
+            6.299999999999997,
+            49.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "R_FlushFrame_orbit_detail_Material",
+          "stl": "right-frame-orbit-detail.stl",
+          "step": "right-frame-orbit-detail.step",
+          "volume_mm3": 163.4623225699195,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.19999999999999,
+            -65.8,
+            13.19,
+            47.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "R_FlushFrame_orbit_accent_Material",
+          "stl": "right-frame-orbit-accent.stl",
+          "step": "right-frame-orbit-accent.step",
+          "volume_mm3": 32.936833464693166,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.5,
+            -64.67690127065161,
+            13.19,
+            47.55,
+            -32.5,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "R_FlushFrame_orbit_secondary_Clipped",
+          "stl": "right-frame-orbit-secondary.stl",
+          "step": "right-frame-orbit-secondary.step",
+          "volume_mm3": 8.494866535306805,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            34.601163676062896,
+            -62.99970906470671,
+            13.19,
+            39.800000000000004,
+            -57.80029093529329,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        25.0,
+        -67.0,
+        6.299999999999997,
+        49.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "detail",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "secondary",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "right-manga": {
+      "object": "R_FlushFrame_manga_Final",
+      "source_object": "R_Frame_smooth_HeadRelief5",
+      "style": "manga",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 109.83143350880835,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 106.72770784269066,
+          "authored_solids": 1
+        },
+        {
+          "id": "TopGutterR2",
+          "role": "secondary",
+          "authored_volume_mm3": 3.168000000000014,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.168000000000014,
+          "authored_solids": 1
+        },
+        {
+          "id": "DiagonalPanelR2",
+          "role": "detail",
+          "authored_volume_mm3": 10.069999999999979,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 10.069999999999979,
+          "authored_solids": 1
+        },
+        {
+          "id": "PanelDot0R2",
+          "role": "detail",
+          "authored_volume_mm3": 3.0190705400997926,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.0190705400997926,
+          "authored_solids": 1
+        },
+        {
+          "id": "PanelDot1R2",
+          "role": "detail",
+          "authored_volume_mm3": 3.0190705400997926,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.0190705400997926,
+          "authored_solids": 1
+        },
+        {
+          "id": "PanelDot2R2",
+          "role": "detail",
+          "authored_volume_mm3": 3.0190705400997926,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.0190705400997926,
+          "authored_solids": 1
+        },
+        {
+          "id": "PanelDot3R2",
+          "role": "detail",
+          "authored_volume_mm3": 3.0190705400997926,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.0190705400997926,
+          "authored_solids": 1
+        },
+        {
+          "id": "RedCornerR2",
+          "role": "accent",
+          "authored_volume_mm3": 6.892999999999985,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 6.892999999999985,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "R_FlushFrame_manga_body_Material",
+          "stl": "right-frame-manga-body.stl",
+          "step": "right-frame-manga-body.step",
+          "volume_mm3": 2015.791051893069,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            25.0,
+            -67.0,
+            6.299999999999997,
+            49.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "R_FlushFrame_manga_detail_Material",
+          "stl": "right-frame-manga-detail.stl",
+          "step": "right-frame-manga-detail.step",
+          "volume_mm3": 128.87399000308977,
+          "connected_solids": 6,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.19999999999999,
+            -65.64982655780592,
+            13.19,
+            47.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "R_FlushFrame_manga_accent_Clipped",
+          "stl": "right-frame-manga-accent.stl",
+          "step": "right-frame-manga-accent.step",
+          "volume_mm3": 6.892999999999985,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.5,
+            -65.8,
+            13.19,
+            32.599999999999994,
+            -61.95,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "R_FlushFrame_manga_secondary_Material",
+          "stl": "right-frame-manga-secondary.stl",
+          "step": "right-frame-manga-secondary.step",
+          "volume_mm3": 3.168000000000014,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.5,
+            -17.6,
+            13.19,
+            31.80000000000001,
+            -12.3,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        25.0,
+        -67.0,
+        6.299999999999997,
+        49.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "secondary",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "right-nes": {
+      "object": "R_FlushFrame_nes_Final",
+      "source_object": "R_Frame_smooth_HeadRelief5",
+      "style": "nes",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 103.7834335088084,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 98.21433617327918,
+          "authored_solids": 1
+        },
+        {
+          "id": "DeckR2",
+          "role": "detail",
+          "authored_volume_mm3": 74.54024771931898,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 57.597239561214266,
+          "authored_solids": 1
+        },
+        {
+          "id": "DpadHR2",
+          "role": "secondary",
+          "authored_volume_mm3": 5.200000000000001,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.200000000000001,
+          "authored_solids": 1
+        },
+        {
+          "id": "DpadVR2",
+          "role": "secondary",
+          "authored_volume_mm3": 5.200000000000001,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.200000000000003,
+          "authored_solids": 1
+        },
+        {
+          "id": "AR2",
+          "role": "accent",
+          "authored_volume_mm3": 4.071504079052374,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.071504079052374,
+          "authored_solids": 1
+        },
+        {
+          "id": "BR2",
+          "role": "accent",
+          "authored_volume_mm3": 4.071504079052375,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.071504079052375,
+          "authored_solids": 1
+        },
+        {
+          "id": "HeaderR2",
+          "role": "secondary",
+          "authored_volume_mm3": 5.569097335529225,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 5.569097335529225,
+          "authored_solids": 1
+        },
+        {
+          "id": "SignatureR2",
+          "role": "accent",
+          "authored_volume_mm3": 3.388000000000022,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 3.388000000000022,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "R_FlushFrame_nes_body_Material",
+          "stl": "right-frame-nes-body.stl",
+          "step": "right-frame-nes-body.step",
+          "volume_mm3": 1973.0143606680276,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            25.0,
+            -67.0,
+            6.299999999999997,
+            49.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "R_FlushFrame_nes_detail_Material",
+          "stl": "right-frame-nes-detail.stl",
+          "step": "right-frame-nes-detail.step",
+          "volume_mm3": 155.8115757344926,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.19999999999999,
+            -63.0,
+            13.19,
+            47.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "R_FlushFrame_nes_accent_Clipped",
+          "stl": "right-frame-nes-accent.stl",
+          "step": "right-frame-nes-accent.step",
+          "volume_mm3": 11.531008158104774,
+          "connected_solids": 3,
+          "closed_mesh": true,
+          "bounds_mm": [
+            27.30000000000001,
+            -65.7,
+            13.19,
+            35.8,
+            -56.90020141674151,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "R_FlushFrame_nes_secondary_Material",
+          "stl": "right-frame-nes-secondary.stl",
+          "step": "right-frame-nes-secondary.step",
+          "volume_mm3": 14.369097335529252,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            33.0,
+            -61.4,
+            13.19,
+            47.0,
+            -12.8,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        25.0,
+        -67.0,
+        6.299999999999997,
+        49.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "detail",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "accent",
+        "secondary",
+        "body",
+        "secondary",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    },
+    "right-walkman": {
+      "object": "R_FlushFrame_walkman_Final",
+      "source_object": "R_Frame_smooth_HeadRelief5",
+      "style": "walkman",
+      "feature_integrity": [
+        {
+          "id": "ScreenFieldR2",
+          "role": "detail",
+          "authored_volume_mm3": 103.7834335088084,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 87.04318578948943,
+          "authored_solids": 1
+        },
+        {
+          "id": "HeaderR2",
+          "role": "accent",
+          "authored_volume_mm3": 16.740247719318987,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 16.740247719318987,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker0R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358984,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358984,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker1R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358984,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358984,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker2R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358984,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358984,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker3R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358984,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358984,
+          "authored_solids": 1
+        },
+        {
+          "id": "Speaker4R2",
+          "role": "detail",
+          "authored_volume_mm3": 4.114159265358991,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 4.114159265358991,
+          "authored_solids": 1
+        },
+        {
+          "id": "ControlStripR2",
+          "role": "accent",
+          "authored_volume_mm3": 24.29663706143594,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 19.867575131606195,
+          "authored_solids": 1
+        },
+        {
+          "id": "PlayR2",
+          "role": "secondary",
+          "authored_volume_mm3": 1.9839999999999987,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 1.9839999999999987,
+          "authored_solids": 1
+        },
+        {
+          "id": "StopR2",
+          "role": "secondary",
+          "authored_volume_mm3": 2.445061929829751,
+          "clipped_volume_mm3": 0.0,
+          "visible_volume_mm3": 2.445061929829751,
+          "authored_solids": 1
+        }
+      ],
+      "material_parts": [
+        {
+          "role": "body",
+          "object": "R_FlushFrame_walkman_body_Material",
+          "stl": "right-frame-walkman-body.stl",
+          "step": "right-frame-walkman-body.step",
+          "volume_mm3": 2006.0751749991168,
+          "connected_solids": 1,
+          "closed_mesh": true,
+          "bounds_mm": [
+            25.0,
+            -67.0,
+            6.299999999999997,
+            49.0,
+            -11.0,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "detail",
+          "object": "R_FlushFrame_walkman_detail_Material",
+          "stl": "right-frame-walkman-detail.stl",
+          "step": "right-frame-walkman-detail.step",
+          "volume_mm3": 107.6139821162842,
+          "connected_solids": 6,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.19999999999999,
+            -64.6,
+            13.19,
+            47.8,
+            -12.2,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "accent",
+          "object": "R_FlushFrame_walkman_accent_Material",
+          "stl": "right-frame-walkman-accent.stl",
+          "step": "right-frame-walkman-accent.step",
+          "volume_mm3": 36.6078228509252,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            26.400000000000006,
+            -65.9,
+            13.19,
+            47.599999999999994,
+            -12.399999999999999,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        },
+        {
+          "role": "secondary",
+          "object": "R_FlushFrame_walkman_secondary_Clipped",
+          "stl": "right-frame-walkman-secondary.stl",
+          "step": "right-frame-walkman-secondary.step",
+          "volume_mm3": 4.429061929829748,
+          "connected_solids": 2,
+          "closed_mesh": true,
+          "bounds_mm": [
+            28.599999999999994,
+            -64.2,
+            13.19,
+            31.69999999999999,
+            -56.3,
+            13.59
+          ],
+          "backing_missing_volume_mm3": 0.0
+        }
+      ],
+      "disjoint_interiors": true,
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "union_removed_volume_mm3": 0.0,
+      "union_added_volume_mm3": 0.0,
+      "connected_solids": 1,
+      "bounds_mm": [
+        25.0,
+        -67.0,
+        6.299999999999997,
+        49.0,
+        -11.0,
+        13.59
+      ],
+      "roof_mm": 13.59,
+      "max_roof_relief_mm": 0.0,
+      "inlay_depth_mm": 0.4,
+      "minimum_backing_mm": 0.8,
+      "face_roles": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "accent",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "detail",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "secondary",
+        "secondary",
+        "body",
+        "accent",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body",
+        "body"
+      ],
+      "manufacturing_ready": false
+    }
+  },
+  "output_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+  "saved_reopened_recomputed": true,
+  "configuration_unchanged": true,
+  "cap_geometry_unchanged": true,
+  "excluded_artwork_xy_unchanged": true
+}

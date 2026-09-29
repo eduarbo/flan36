@@ -1,0 +1,38 @@
+{
+  "status": "DIGITAL_IMPLEMENTATION_VERIFIED",
+  "approved_styles": [
+    "talavera",
+    "gameboy",
+    "snes",
+    "phone",
+    "ipod"
+  ],
+  "deferred_styles": [
+    "flan",
+    "tape",
+    "orbit",
+    "manga",
+    "nes",
+    "walkman"
+  ],
+  "master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+  "native_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+  "source_inputs_verified": true,
+  "approved_palettes_exact": true,
+  "deferred_artwork_and_palettes_preserved": true,
+  "camera_and_configuration_checks": {
+    "distinct_actual_previews": 11,
+    "frame_changes_preserve_inspection": 11,
+    "themes_without_pinky_accents": 27,
+    "flan_reset_default": true,
+    "exact_old_configuration_preserved_on_migration": true,
+    "current_custom_configuration_preserved": true,
+    "mobile_gallery": true
+  },
+  "browser_report_sha256": "d439ebf4691119cc433aeeb3fd9329e9d8454a237bd33131af0d84ea44257cfe",
+  "viewer_sha256": "046f901a25dcc0c0698ca30609a9fcbfe88adc9af8ae48e2a0243510b920f3a8",
+  "offline_sha256": "160f6e1a3de9f829d0aa3181f005814c6e2e17b5aca6b02cbf783e1ff79decb5",
+  "checker_sha256": "e568d8127d0c45527d0c223af3bdfab19a83be70f523b03ac5b19dfb7fb7e248",
+  "physical_acceptance": false,
+  "fabrication_ready": false
+}

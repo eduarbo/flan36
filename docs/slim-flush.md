@@ -1,6 +1,6 @@
 # Previous slim stack and flush frames
 
-This page records the 14.8 mm reference at commit `9ab4b18`. The current [floor-mounted, level-stack prototype](level-stack.md) lowers the frame and glass to 13.39 mm. The dimensions and receipts below remain historical evidence.
+This page records the 14.8 mm reference at commit `9ab4b18`. The current [floor-mounted, level-stack prototype](level-stack.md) places the glass at 13.39 mm and, after the R4 frame adjustment, the frame at 13.59 mm. The dimensions and receipts below remain historical evidence.
 
 The revised stack targets a **14.8 mm frame roof**, compared with 16.6 mm for the previous plain frame and 17.2 mm for raised decoration. These are heights from the case underside, excluding feet. The selected flat KLP caps still reach about **17.87 mm**: lowering the electronics does not lower the keys.
 

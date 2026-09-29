@@ -66,6 +66,13 @@ metadata['slim_flush']={'decoration':'flush co-print material volumes',
     'inlay_depth_mm':.4,'minimum_backing_mm':.8,'physical_acceptance':False}
 if doc.getObject('LevelStackReceipt'):
     metadata['level_stack']=json.loads(doc.LevelStackReceipt.RecipeJSON)
+if doc.getObject('ApprovedFrameMasterR4'):
+    metadata['approved_frame_master_r4']=json.loads(doc.ApprovedFrameMasterR4.RecipeJSON)
+    metadata['slim_flush']['r4_construction']={'ordinary_backing_mm':1.0,'collar_through_color_mm':.865,'header_cover_mm':.4,'glass_recess_mm':.2}
+    # LevelStackReceipt remains historical; current parameters and this migration
+    # receipt describe the raised shared shell and centered display assembly.
+    for side,prefix in [('left','L_'),('right','R_')]:
+        metadata['halves'][side]['display_header']={'x':117.92 if side=='left' else 31.92,'y':50.8}
 stack_recipe=json.loads(doc.getObject('SlimStackReceipt').RecipeJSON)
 for side, recipe in stack_recipe['halves'].items():
     metadata['halves'][side]['battery_opening']=[v for point in recipe['battery_aperture_xy'] for v in point]
@@ -190,6 +197,22 @@ for side,prefix in [('left','L_'),('right','R_')]:
         hits,hit=envelope_checks[identity]
         frame_checks[obj.FrameStyle]={'component_collisions_mm3':hits,'usb_envelope_collision_mm3':round(hit,6),'volume_mm3':shape.Volume,'closed_mesh':True,'verified_envelope':identity}
         assert not hits and hit<.001,(name,frame_checks[obj.FrameStyle])
+    if doc.getObject('ApprovedFrameMasterR4'):
+        # Independent conservative cap envelopes against the actual raised walls.
+        sys.path.insert(0,str(ROOT/'tools'))
+        from keycap_config import polygon
+        from shapely.geometry import Polygon
+        from shapely.ops import unary_union
+        catalog=json.loads((ROOT/'keycaps/catalog.json').read_text())
+        cap_polys=[Polygon(polygon(v['hull_xy_mm'],key,turn))
+            for key in catalog['layout'][side] for v in catalog['variants']
+            if v['qualified_reference_positions'] for turn in v['rotations_deg']]
+        cap_union=unary_union(cap_polys).buffer(.2,quad_segs=12)
+        pieces=list(cap_union.geoms) if hasattr(cap_union,'geoms') else [cap_union]
+        sweeps=[Part.Face(Part.Wire(Part.makePolygon([A.Vector(x,-y,8.2) for x,y in poly.exterior.coords]).Edges)).extrude(A.Vector(0,0,20)) for poly in pieces]
+        cap_hit=exact_common(doc.getObject(prefix+'Case_level_plate').Shape,Part.makeCompound(sweeps)).Volume
+        assert cap_hit<.001,(side,'raised shell/cap sweep collision',cap_hit)
+        metadata.setdefault('r4_cap_clearance',{})[side]={'conservative_envelopes':len(cap_polys),'xy_clearance_mm':.2,'volume_mm3':cap_hit,'physical_fit_qualified':False}
     print(side,'checking case variants',flush=True)
     case_checks={}
     case_frame_checks={}
@@ -241,7 +264,7 @@ for side,prefix in [('left','L_'),('right','R_')]:
     print(side,'parts',len(objects),'collisions',issues,flush=True)
 doc.recompute()
 metadata['inputs']=[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in [
-    'design/level-case-workflow.json','tools/freecad/level_stack.py','tools/freecad/install_level_stack.py','design/cases.json','design/frame-finishes.json','design/frame-collection-workflow.json','design/frame-fidelity-workflow.json','tools/freecad/export_frame_domain.py','tools/check_frame_artwork.py','tools/build_frame_collection.py','tools/freecad/install_frame_collection.py','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
+    'design/approved-frame-master-r4.json','design/proposals/frame-master-r4/master.json','design/proposals/frame-master-r4/Artwork-R4.FCStd','design/proposals/frame-master-r4/geometry-check.json','tools/freecad/approved_frames.py','tools/freecad/install_approved_frames.py','design/level-case-workflow.json','tools/freecad/level_stack.py','tools/freecad/install_level_stack.py','design/cases.json','design/frame-finishes.json','design/frame-collection-workflow.json','design/frame-fidelity-workflow.json','tools/freecad/export_frame_domain.py','tools/check_frame_artwork.py','tools/build_frame_collection.py','tools/freecad/install_frame_collection.py','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
 metadata['fcstd_sha256']=hashlib.sha256((OUT/'Flan36.FCStd').read_bytes()).hexdigest()
 report['source_sha256']=metadata['fcstd_sha256']
 report['checker_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()

@@ -17,7 +17,7 @@ This is a planning BOM for the revI mechanical study and PCB outline. **It is no
 | [1N4148W SMD diodes](https://typeractive.xyz/products/smd-diodes) | **4 packs of 10** | SOD-123 family; verify supplied marking/footprint |
 | [Machine sockets and pins](https://typeractive.xyz/products/machine-sockets-and-pins) | **2 kits** | Store uses Mill-Max **310**, study references **315**; substitution needs height/pin check |
 | [EZ-Solder sockets/headers](https://typeractive.xyz/products/ez-machine-sockets-and-headers) | **2 kits**, instead of the preceding kits | Easier header handling; taller, not qualified in this stack |
-| [5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) | Optional **1 pack of 2** | Extras; nice!view includes sockets/pins. Stock alternative for the previous taller stack; the 13.39 mm prototype uses the Samtec candidate below |
+| [5-pin sockets](https://typeractive.xyz/products/5-pin-sockets) | Optional **1 pack of 2** | Extras; nice!view includes sockets/pins. Stock alternative for the previous taller stack; the current prototype uses the Samtec candidate below |
 | [110 mAh battery](https://typeractive.xyz/products/lithium-battery-110mah) | **2**, connector variant to resolve | Supported nominal envelope in the shared 12.5 mm aperture; physical pack fit pending |
 | [Battery jack](https://typeractive.xyz/products/battery-jack) | **1 pack of 2** | JST S2B-PH-K-S side-entry reference; 2 mm nominal footprint |
 | [Power switch](https://typeractive.xyz/products/power-switch) | **1 pack of 2** | Alps part differs from the C&K reference; footprint change/check required |
@@ -124,7 +124,7 @@ These are nominal clearances, not maximum finished-pack tolerances. Confirm prot
 |---|---:|---|
 | KLP Lamé keycaps | 36 | [Variant guide](customize.md); [38 source STLs](../keycaps/variants); original preset: 28 Normal + 2 Homing + 6 Thumb |
 | Case bases and key plates / upper shells | 2 each | Level, Solid, Color rim or Terrace; [editable CAD, STEP and STL](cad.md) |
-| Display frames | 2 | Seven decorated designs or three plain styles, all flush at 13.39 mm; separate color per half |
+| Display frames | 2 | Eleven selectable styles: five approved R4 designs and six awaiting redesign; 13.59 mm shared roof, separate color per half |
 | Battery locators and retainers | 2 each | Open-bottom locator and rigid cage; cell on the floor, cage feet captured under PCB |
 | Controller supports and display sleds | 2 each | Independent from the cover |
 | Printed spacers/washers | 6 | Check printed dimensions and screw fit |

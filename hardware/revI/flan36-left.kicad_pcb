@@ -13279,7 +13279,7 @@
 	(footprint "PiantorSlim:nice_view_5pin"
 		(layer "F.Cu")
 		(uuid "db6fc290-7139-407d-aee8-384a58c87d51")
-		(at 117.72 50.8)
+		(at 117.920000 50.8)
 		(property "Reference" "J2"
 			(at 0 0 0)
 			(layer "F.SilkS")

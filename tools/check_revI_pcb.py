@@ -24,8 +24,9 @@ for side in ['left','right']:
     board,actual=snapshot(new);_,original=snapshot(old);assert set(actual)==set(original)
     for ref,state in actual.items():
         before=original[ref];after=dict(state)
-        if ref in transforms['allowed_footprint_changes'] or ref=='SW2':
-            target=(slim['halves'][side]['j1_at'][:2] if ref=='J1' else slim['halves'][side]['reset_at'] if ref=='SW2' else transforms['halves'][side]['transforms'][ref]['to'])
+        if ref in transforms['allowed_footprint_changes'] or ref in ['SW2','J2']:
+            target=(slim['halves'][side]['j1_at'][:2] if ref=='J1' else slim['halves'][side]['reset_at'] if ref=='SW2' else [0,0] if ref=='J2' else transforms['halves'][side]['transforms'][ref]['to'])
+            if ref=='J2':target=json.loads((ROOT/'validation/revI-approved-display-pcb.json').read_text())['halves'][side]['target_xy']
             assert all(abs(p.ToMM(state['xy'][i])-target[i])<2e-6 for i in range(2))
             after['xy']=before['xy']
         if ref=='J1':
@@ -64,5 +65,5 @@ for side in ['left','right']:
             for i in range(poly.OutlineCount()):
                 chain=poly.COutline(i);rows.append({'ref':f.GetReference(),'pad':q.GetNumber(),'net':q.GetNetname(),'polygon':[list(p.ToMM(chain.CPoint(j))) for j in range(chain.PointCount())]})
     (ROOT/f'build/revI/pads-{side}.json').write_text(json.dumps(rows))
-    report['halves'][side]={'pcb_sha256':hashlib.sha256(new.read_bytes()).hexdigest(),'footprints_nets_uuid_models_preserved_except_explicit_PH_pad_and_reset_flip_changes':len(actual)==46,'allowed_transforms':transforms['halves'][side]['transforms'],'slim_electronics':slim['halves'][side],'locked_original_keys':18,'outline_matches_cad_to_mm':.000001,'drc_violations':counts,'unconnected_items':len(drc['unconnected_items'])}
+    report['halves'][side]={'pcb_sha256':hashlib.sha256(new.read_bytes()).hexdigest(),'footprints_nets_uuid_models_preserved_except_explicit_PH_pad_and_reset_flip_changes':len(actual)==46,'allowed_transforms':transforms['halves'][side]['transforms'],'approved_display_header':json.loads((ROOT/'validation/revI-approved-display-pcb.json').read_text())['halves'][side],'slim_electronics':slim['halves'][side],'locked_original_keys':18,'outline_matches_cad_to_mm':.000001,'drc_violations':counts,'unconnected_items':len(drc['unconnected_items'])}
 (ROOT/'validation/revI-electrical.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

@@ -1,5 +1,7 @@
 # Frame reference comparison
 
+**Historical concept comparison.** Talavera now follows the approved dimensioned R4 master; Tape, Orbit and Manga await redesign. See the [current collection](frames-extra.md).
+
 Original concepts and orthographic/oblique views from the actual native material parts. The compositions use solid-color flush regions. The real display opening and connector access determine the usable space; they are shown, not covered in the render.
 
 | Selected concept | Actual CAD |

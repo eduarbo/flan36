@@ -12,6 +12,12 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
+## Revision I — approved R4 frames
+
+Talavera, Game Boy, SNES, 2000s Phone and iPod now use the approved exact paths and solid palettes. The frame and Level shell rise 0.20 mm to Z13.59; the centered glass stays at Z13.39 and the pin row gains a 0.40 mm cover. Flan, Tape, Orbit, Manga, NES and Walkman retain their existing artwork pending redesign. Flan remains the default. [Construction and verification](frames-extra.md).
+
+The entries below describe their historical snapshots. Their receipts retain original hashes.
+
 ## Revision I — frame fidelity correction
 
 The first collection passed structural checks but did not preserve the selected compositions, and its support mask silently severed several decorations. The correction restores the reference motifs and adds per-feature rejection for unsupported artwork. [Reference comparison](frame-comparison.md) · [Digital checks](../validation/revI-frame-fidelity.json). Earlier verification receipts describe their original snapshots. Public source, images, viewer and downloaded print files match the corrected implementation. [Publication receipt](../validation/revI-frame-fidelity-public.json).
@@ -26,7 +32,7 @@ Older frame IDs migrate to Flan with the original saved bytes retained for recov
 
 The Normal and Saddle sculpted presets had the top and bottom rotations reversed. Both now place the higher edges away from the home row. This changes 20 rotations per preset, with no changes to stems, seating or key centers. Actual side-profile previews replace the former side-by-side arrangement. **Caps → Fix top/bottom slopes** repairs older configurations without replacing custom variants, colors or other components. [Directional checks](../validation/revI-cap-rows.json).
 
-## Current mechanical revision I — floor battery and Level case
+## Revision I — floor battery and Level case
 
 The glass, frame and new **Level** upper shell share a **13.39 mm** plane: **1.41 mm lower** than the previous frame. Both batteries sit directly on the 1.4 mm case floor. The nice!nano PCB is at 8.2 mm and the nice!view PCB at 11.49 mm. Key centers and the selected caps' 17.87 mm height are unchanged.
 

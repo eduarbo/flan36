@@ -1,0 +1,689 @@
+{
+  "passed": true,
+  "registered_assemblies": [
+    {
+      "id": "left-frame-flan",
+      "sha256": "677b42bfb12ecab8e8074f8778f58a029b463b9298cbc7a35aa59a19a5ff696d",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 4992,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 888,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 1624,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 92,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-tape",
+      "sha256": "cfc75845cdaeadc91fbb50542443f29c121c64f27a7d833115764e44d653989e",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 7444,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 3116,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 456,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 1660,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-orbit",
+      "sha256": "05e9688d41c3857ba16002f4e67e5ccb02dd136f3e09baa3c77d8396e3065a97",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 5012,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 1644,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 1254,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 416,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-manga",
+      "sha256": "d5b3b8c547e3e4f477571b115181039ecf9c06aa65b61405bfeadba9f374449a",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 6696,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 2484,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 12,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 12,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-talavera",
+      "sha256": "6b64c7c6449e867728a1e3200f8f472ab6dc33798720bb1061ed7a36b32a856e",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 6440,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 488,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 268,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 1520,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-gameboy",
+      "sha256": "dcd3549a7c3ecd4ecfb6be06c896ae695ebfd11b1c201d1b0ff08f6995f3b71b",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 6016,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 532,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 840,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 472,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-nes",
+      "sha256": "a7ad0befb013aa26c43681adb6affefad865f1c13e9c4bf2322e55e9c3276d24",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 5544,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 2688,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 844,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 488,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-snes",
+      "sha256": "e1be41dddf29aae8c54be6bb638d3e18db36d1746bcb749e78b8285aff633bc7",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 7696,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 532,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 1276,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 1712,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-phone",
+      "sha256": "03db95c4fbcb8cddd29961a56e62ecf55a6203a26683729dd61a993e31276fc4",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 10424,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 5356,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 436,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 436,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-walkman",
+      "sha256": "b8a8e566f6edbf132882fe7291ab7980a2a4cd756d0ae222235238b9783fec46",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 7736,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 3528,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 1356,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 452,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "left-frame-ipod",
+      "sha256": "0099e219ea892209d39547591a1512391abe951011756346fa22e512df26698e",
+      "shared_translation_mm": [
+        -101.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 6344,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 488,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 848,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 856,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-flan",
+      "sha256": "42c1febee2150b9b6f7ac8a6d4a2ec0bea138a4cf13ff16c1831b6e32c67c454",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 4992,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 888,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 1624,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 92,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-tape",
+      "sha256": "9050cd0bda6daeb4dcbde4bdaea3fd7fefcc5854d3817e23ddae026f71c856ea",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 7444,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 3116,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 456,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 1660,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-orbit",
+      "sha256": "1384ae9835e0e1c8b9e6efde2f9425aa25f3bda9440604a9463f005756caa3e6",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 5012,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 1644,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 1254,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 416,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-manga",
+      "sha256": "7b91110bff7c2de7b64068ce05764ba46f2fe57288c57ba2287aaacd71f8f65a",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 6696,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 2484,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 12,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 12,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-talavera",
+      "sha256": "cada3f67db6eb24f9476a014a0ecb171918eefb6483b6da2c17c14849413aede",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 6440,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 488,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 268,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 1520,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-gameboy",
+      "sha256": "83576d7c653b874b2db50ec4f0522a1207a00758722a6f3ceaf7b140c8b4ac60",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 6016,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 532,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 840,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 472,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-nes",
+      "sha256": "6caa3b53a5aaea89b70bacf54e8495fc88c1fda45bd548b184340e8fd5c71a2b",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 5544,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 2688,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 844,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 488,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-snes",
+      "sha256": "6f93dfdafdc49a1a811e1e24dea5fc78cb0c120ffa2ca4fe9521457e7f3ac371",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 7696,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 532,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 1276,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 1712,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-phone",
+      "sha256": "a1d52021be48cbc813f81b3872b7e13d4c9bad739491065f19fdd957c1090291",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 10424,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 5356,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 436,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 436,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-walkman",
+      "sha256": "2a19a2bbddd5b565208a537a8a6cbd23b8881ff8953a32096aa5f62c6d287ed4",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 7736,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 3528,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 1356,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 452,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    },
+    {
+      "id": "right-frame-ipod",
+      "sha256": "9fdfb027b0f2a4c819e41db07dca5e12f94d1ac278db701fb4030a41ad266525",
+      "shared_translation_mm": [
+        -15.0,
+        77.0,
+        -6.300000190734863
+      ],
+      "materials": [
+        {
+          "role": "body",
+          "triangles": 6344,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "detail",
+          "triangles": 488,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "accent",
+          "triangles": 848,
+          "maximum_coordinate_error_mm": 0
+        },
+        {
+          "role": "secondary",
+          "triangles": 856,
+          "maximum_coordinate_error_mm": 0
+        }
+      ]
+    }
+  ],
+  "checker_sha256": "324d85ab8ebcb7f5527a8ba714ee4c3904513a41323a5264d351a5f150a061b0",
+  "physical_acceptance": false
+}

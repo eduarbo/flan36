@@ -3138,7 +3138,7 @@
         47.6
       ],
       "display_header": {
-        "x": 117.72,
+        "x": 117.92,
         "y": 50.8
       },
       "electronics_cover": [
@@ -6555,7 +6555,7 @@
         47.6
       ],
       "display_header": {
-        "x": 32.120000000000005,
+        "x": 31.92,
         "y": 50.8
       },
       "electronics_cover": [
@@ -7108,10 +7108,10 @@
         6.3,
         135.0,
         -0.249999999999999,
-        13.39
+        13.59
       ],
       "visuals": [],
-      "stl_sha256": "e44195a8bcef6e49d979ff1a5d5ab11cebf23733e945b735a3daa847e933b9fb"
+      "stl_sha256": "0acd0ff42d32ead9a782dfede64a003648537569fd6f557afdded064658dc4a0"
     },
     "left-battery": {
       "object": "L_ActiveBattery",
@@ -7260,10 +7260,10 @@
       "group": "display",
       "prototype_part": false,
       "bounds_mm": [
-        115.8,
+        116.0,
         -52.099999999999994,
         7.3,
-        129.8,
+        130.0,
         -16.099999999999998,
         13.39
       ],
@@ -7304,7 +7304,7 @@
           "name": "L_LevelDisplaySolderReserve"
         }
       ],
-      "stl_sha256": "0f5637a09fe4616257b0858b3b19c278181d652e98e331ba6d0463722d53efb3"
+      "stl_sha256": "389f4329063136851c8c98ac2552b19baf319e0c1947d2aa4c361e4e4dd957b6"
     },
     "left-reset": {
       "object": "L_ResetModel",
@@ -7383,13 +7383,13 @@
       "bounds_mm": [
         111.0,
         -67.0,
-        6.299999999999996,
+        6.299999999999994,
         135.0,
         -11.0,
-        13.39
+        13.59
       ],
       "visuals": [],
-      "stl_sha256": "84bd3bf04139576478b7d3b84142231779a18539bef0e70bb45155de68f498cd"
+      "stl_sha256": "3c542bda862eafe083ba4bd1844f6f9317ec253d652f7fb800996162b045760c"
     },
     "left-pcb": {
       "object": "L_SlimPCBLeadNotch",
@@ -7405,7 +7405,7 @@
         5.4
       ],
       "visuals": [],
-      "stl_sha256": "330e4e3d8ad76f6a659f5fc01d5a6e4d20a5b25d854e9b9258412025ab1994f1"
+      "stl_sha256": "6ec7cc1745ffce57aab5afe422eba571ba564cc7e1394f731491b99373005fca"
     },
     "left-jst": {
       "object": "L_SlimJST",
@@ -7450,10 +7450,10 @@
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        116.45,
+        116.65,
         -52.07,
         2.48,
-        129.15,
+        129.35,
         -49.53,
         9.97
       ],
@@ -7469,7 +7469,7 @@
           "name": "L_SlimDisplaySocketPins"
         }
       ],
-      "stl_sha256": "3d8802fe22ff466360e4631ec115cb772449fa01b7aa6c90a3a0a82406d62dc2"
+      "stl_sha256": "46d9c55d6db73e6fdd7ef963a419fb8fa3e8cef202698daf5b1bb49d9fe4744b"
     },
     "left-display-sled": {
       "object": "L_SlimDisplayHeaderClearance",
@@ -7477,15 +7477,15 @@
       "group": "supports",
       "prototype_part": true,
       "bounds_mm": [
-        115.0,
-        -52.8,
+        115.2,
+        -52.800000000000004,
         5.4,
-        130.6,
+        130.79999999999998,
         -15.5,
         12.69
       ],
       "visuals": [],
-      "stl_sha256": "40e0841c00feff40c438ab701c143bfe1c197cbd03dddf2d74f1df433bbfc65a"
+      "stl_sha256": "9f27c297b06e9dfec777dc480e5a4cda967ebf402964abe50b58733b84fe5861"
     },
     "left-battery-lead-0": {
       "object": "L_ActiveBatteryLead0",
@@ -7786,10 +7786,10 @@
         6.3,
         141.75,
         -0.249999999999999,
-        13.39
+        13.59
       ],
       "visuals": [],
-      "stl_sha256": "11bc24956bba20f3969cc49609cf8b9aa7a4ccad5144ff854516d7636a9dc1d5"
+      "stl_sha256": "7fb266452f5b73c0a60102e29ebdf3200bde414ec07d73072b68474e2486a425"
     },
     "right-battery": {
       "object": "R_ActiveBattery",
@@ -7938,10 +7938,10 @@
       "group": "display",
       "prototype_part": false,
       "bounds_mm": [
-        30.200000000000003,
+        30.0,
         -52.099999999999994,
         7.3,
-        44.2,
+        44.0,
         -16.099999999999998,
         13.39
       ],
@@ -7982,7 +7982,7 @@
           "name": "R_LevelDisplaySolderReserve"
         }
       ],
-      "stl_sha256": "44bfce6915f371cfcb5acf4cf0e303f952cb01918d8e5927b9dd4746d8a3e334"
+      "stl_sha256": "8ea399b2c64dccc571c735ee9c3e267a5349168ba3980951de033307d9109096"
     },
     "right-reset": {
       "object": "R_ResetModel",
@@ -8061,13 +8061,13 @@
       "bounds_mm": [
         25.0,
         -67.0,
-        6.299999999999995,
+        6.299999999999997,
         49.0,
         -11.0,
-        13.39
+        13.59
       ],
       "visuals": [],
-      "stl_sha256": "5499ab5aa4c6bfeff10d5e383d7f1df538920d51aa31778ca4f2114d5060859c"
+      "stl_sha256": "e499c9d49167bebcc6d05fa8f18d11df6ffbb48fa52c71b34996f116fc10ff3c"
     },
     "right-pcb": {
       "object": "R_SlimPCBLeadNotch",
@@ -8083,7 +8083,7 @@
         5.4
       ],
       "visuals": [],
-      "stl_sha256": "a7143377c3c43dd673d0dee8b0324ca49c21daa7a77721882975b96256a5f28a"
+      "stl_sha256": "ac525b1dd91bb777ce21a803241baf1756c5e67082c44cbe4057f66f464b150e"
     },
     "right-jst": {
       "object": "R_SlimJST",
@@ -8128,10 +8128,10 @@
       "group": "connectors",
       "prototype_part": false,
       "bounds_mm": [
-        30.85,
+        30.650000000000002,
         -52.07,
         2.48,
-        43.55,
+        43.349999999999994,
         -49.53,
         9.97
       ],
@@ -8147,7 +8147,7 @@
           "name": "R_SlimDisplaySocketPins"
         }
       ],
-      "stl_sha256": "bf504d88f6ee061086d553f6ac7e59eb34ba9c5e86249aefbd0e4d692ae3a34a"
+      "stl_sha256": "bff27d6f888879967a206ccba1199b30ec2eff464675208c70ad47c634d9ad9a"
     },
     "right-display-sled": {
       "object": "R_SlimDisplayHeaderClearance",
@@ -8155,15 +8155,15 @@
       "group": "supports",
       "prototype_part": true,
       "bounds_mm": [
-        29.400000000000006,
+        29.200000000000006,
         -52.8,
         5.4,
-        45.0,
+        44.8,
         -15.5,
         12.69
       ],
       "visuals": [],
-      "stl_sha256": "0b9d3a408e0c4ec22e6ff8671a33f21101a373f1781031efacf955c4f35d5c0a"
+      "stl_sha256": "282d9e0d68d0a3762ab0dfd949a9af21951ba3040589548839caac4a8935c351"
     },
     "right-battery-lead-0": {
       "object": "R_ActiveBatteryLead0",
@@ -8226,12 +8226,36 @@
     "DisplayBottom": 11.49,
     "BatteryShiftY": 1.2,
     "BatteryBottom": 1.4,
-    "FrameTop": 13.39,
-    "FrameRoof": 1.2,
+    "FrameTop": 13.59,
+    "FrameRoof": 1.4,
     "WindowMargin": 0.4,
     "SlotClearance": 0.1
   },
   "inputs": [
+    {
+      "path": "design/approved-frame-master-r4.json",
+      "sha256": "a2d6d09ca9e4b4eead07031125409d7464bd52d37b699e7c4e069a84cd260c2b"
+    },
+    {
+      "path": "design/proposals/frame-master-r4/master.json",
+      "sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796"
+    },
+    {
+      "path": "design/proposals/frame-master-r4/Artwork-R4.FCStd",
+      "sha256": "b6c028bf200f881b46dd770cba7e5fbdbc179245a1e84de3e7eb0bcf1a2df597"
+    },
+    {
+      "path": "design/proposals/frame-master-r4/geometry-check.json",
+      "sha256": "21783053936af19a229017cfbc9275689974fa518c40c2e138ac6e4cf08158f0"
+    },
+    {
+      "path": "tools/freecad/approved_frames.py",
+      "sha256": "c9255cdd597ba6230e5f03f35e0dbb66c24e463bed295f52201ed8256083d580"
+    },
+    {
+      "path": "tools/freecad/install_approved_frames.py",
+      "sha256": "5dee9805d0cc13555f04370b9149aa8fb9f53169ce67ff82ff985c87806c9e5b"
+    },
     {
       "path": "design/level-case-workflow.json",
       "sha256": "9d51a8ac1dd3534acf98756812167481430fc045c2531faac882f184e3c43fc3"
@@ -8250,7 +8274,7 @@
     },
     {
       "path": "design/frame-finishes.json",
-      "sha256": "efceacdb7957774ec3a84d267cf84bd49859ea5187ac3608424f76cca4f27af4"
+      "sha256": "c8cc7621908f3c768a8d7b90d2a59f6df482bb26e97cb439e895f8366ff96c08"
     },
     {
       "path": "design/frame-collection-workflow.json",
@@ -8270,7 +8294,7 @@
     },
     {
       "path": "tools/build_frame_collection.py",
-      "sha256": "232b5a5e725279b6dad96194bb49fd15d41caddebd1eff23531ecf9592d0b7bf"
+      "sha256": "36c835a35009d1974bea26db2c33eca8cb9e6768c31fbc78fff6ada252eb8fab"
     },
     {
       "path": "tools/freecad/install_frame_collection.py",
@@ -8282,7 +8306,7 @@
     },
     {
       "path": "tools/freecad/flush_frames.py",
-      "sha256": "fe8b09bea894e15210bca75f1734fc014457e08258701464aff40aa8bc10d711"
+      "sha256": "68e5536c21052415b097c79909544160cf928d563a8afd292f00756c5d3be119"
     },
     {
       "path": "tools/freecad/slim_stack.py",
@@ -8366,10 +8390,10 @@
     },
     {
       "path": "tools/freecad/export_revI.py",
-      "sha256": "33d9277cff83477b946819f1a68a6680b79227c2df0c5b4ea0a4ac56d83f15c8"
+      "sha256": "1c0df1ef9be9b97eb230d6fb101114250cce65fa83e07571d015e584f7ac5395"
     }
   ],
-  "fcstd_sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
+  "fcstd_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
   "identity_migration": {
     "baseline_commit": "819a01883b2faec3682ac457328bc361dc43e355",
     "method": "Only branding tokens in native Document.xml changed; shape and mesh members preserved byte for byte",
@@ -8386,26 +8410,26 @@
           "role": "body",
           "stl": "left-frame-flan-body.stl",
           "step": "left-frame-flan-body.step",
-          "stl_sha256": "80adbd41770c4f358444af638bdfdbc7dbb2a14d43f527cccddc24ddf716ae5c",
-          "step_sha256": "b4b76b3ad46e549dabfcaa5e98f160bcdfcb888e888ec7cc083c96ba787a63a8",
-          "volume_mm3": 1872.6817456458177,
+          "stl_sha256": "3d01b92c9ad86e12cf9d32fd515fbcc85bf72195b1d490e72165b5735da164ff",
+          "step_sha256": "beabc3417fd06cd21cad956dfeee1ca57844e7bad49faa999f1dd89084c45445",
+          "volume_mm3": 2059.4901083432273,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-flan-detail.stl",
           "step": "left-frame-flan-detail.step",
-          "stl_sha256": "70776872e7d0669a08b241c6a20f675b90c103af415a69d6ff5c98927881e292",
-          "step_sha256": "91692660b83b7878d83ad2cb481baf5f9d8e748c8aef09ec5fa25030fa187edd",
-          "volume_mm3": 6.147221195188713,
+          "stl_sha256": "7132ee56ef88fc501a2740813f76e5f096c1f00a416b8d85d96a0f6872cc2762",
+          "step_sha256": "74a866c07bedea85af25378343f9c30e0a2818302a747da14cfb68a5b08f414e",
+          "volume_mm3": 6.147221195188712,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "left-frame-flan-accent.stl",
           "step": "left-frame-flan-accent.step",
-          "stl_sha256": "aac4ed818087a959f2b98d87f0d6fdbe71c30bc4f0872773ed5efe2e56f40932",
-          "step_sha256": "f7ee82b9f0a183f4a58cf3fd6a6f7d9674d0253c24929b617849c2734aae32ab",
+          "stl_sha256": "1fe33515e856f607ee20d8e2161f7d79ef73bc5a9d96e4d3759a46e368e9fab1",
+          "step_sha256": "bd4b298d3d2096507b674e87789b142627ff2e99002e9dd2797b07a7e287f044",
           "volume_mm3": 77.27768804503552,
           "solids": 2
         },
@@ -8413,13 +8437,13 @@
           "role": "secondary",
           "stl": "left-frame-flan-secondary.stl",
           "step": "left-frame-flan-secondary.step",
-          "stl_sha256": "06e959bb9d2818412dfa77cd47dcdb7ce8eb23ec395dec11d54d5aaa48ca5227",
-          "step_sha256": "1d5d71ee577cc5349db177670339155cf170b64c3b9521c3e7ac1af7bcecac2a",
-          "volume_mm3": 11.81102431269929,
+          "stl_sha256": "f7994b0571b4f71a198a1ef37e04dc439b33bce9fd80b66e25c6f355efe37f57",
+          "step_sha256": "222cb65a861c2f3ae06aa0c74ebbcf57e7ab84528f237c965766cb1e0025230e",
+          "volume_mm3": 11.811024312699287,
           "solids": 1
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-tape": {
@@ -8430,26 +8454,26 @@
           "role": "body",
           "stl": "left-frame-tape-body.stl",
           "step": "left-frame-tape-body.step",
-          "stl_sha256": "c5de2edf56428cedeab8e280de87a9d180c115492c3652ea4a66a7ca73cb0a89",
-          "step_sha256": "6acbce7295e051765e8c14a689f7e0f0792d1ac608feea8665d3e161f1be25ef",
-          "volume_mm3": 1824.9363624173716,
+          "stl_sha256": "3f80e5c334787f6ddba225aaf20bd02986bbb1aa94f999257c8e4beb7f71bd51",
+          "step_sha256": "3842ffc2fbadba9eec4d11b296e356afa7e54534ca28b60ade6689e9f5cebbb8",
+          "volume_mm3": 2011.7447251147805,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-tape-detail.stl",
           "step": "left-frame-tape-detail.step",
-          "stl_sha256": "7eb03a61ba253eceb0cf92819791cfca10e01e82779d73a467b52a9b070ef603",
-          "step_sha256": "a333045f15796ca33e71149f69b7a0c1f0de3872e3a69389581b80921fc84c5c",
-          "volume_mm3": 119.66965549419122,
+          "stl_sha256": "18d14882cb91e26526af3d2a2a8061924c23ddf7a75ee11cf26413cffb7bb285",
+          "step_sha256": "55fa6a20080f2cf3c3e1eccf01716d6930baf58994a155b28a67cf39f6f3c74e",
+          "volume_mm3": 119.66965549419157,
           "solids": 7
         },
         {
           "role": "accent",
           "stl": "left-frame-tape-accent.stl",
           "step": "left-frame-tape-accent.step",
-          "stl_sha256": "2531be35a303b928f6513fb52587ff5b05706822cd6fe5ce227d70649b41ac14",
-          "step_sha256": "a05665533ca27c4714512b84320428e7dfe2ba5b0a264d6b079e128166b079d8",
+          "stl_sha256": "70fc5770eb41a3e43fa5d9bba7282e9898e41181c6bbc107f66ee04d65e3821e",
+          "step_sha256": "5e616318f1e45bdee954bda7a8dfd72b69b7e3d7f213387ff5877b347fc4e760",
           "volume_mm3": 12.649097335529234,
           "solids": 2
         },
@@ -8457,13 +8481,13 @@
           "role": "secondary",
           "stl": "left-frame-tape-secondary.stl",
           "step": "left-frame-tape-secondary.step",
-          "stl_sha256": "06bc68174339b5c5d227b840bbd5744e3b671b927872132c5c418dad55043418",
-          "step_sha256": "55563c0955bb2bc04a595cd75123744fdd778f935cf8a08722fc04bbbd25521e",
-          "volume_mm3": 10.662563951649878,
+          "stl_sha256": "93928fb01b5cc2dd05071641108d60db3d900a779dd316de73b382a038c2c8b0",
+          "step_sha256": "972339b98eab7c2fa261bd95329eaa13404d3c5d8d24557537f349cdfb08e195",
+          "volume_mm3": 10.662563951649913,
           "solids": 2
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-orbit": {
@@ -8474,40 +8498,40 @@
           "role": "body",
           "stl": "left-frame-orbit-body.stl",
           "step": "left-frame-orbit-body.step",
-          "stl_sha256": "ea32bf469de78a6e029b35739eed73a399c593baa1ef5a9c4b31199a3c0f8b1d",
-          "step_sha256": "c5cbe42941133675bc70d923dcd7dd34cb4403c976ba79bcd726e20f0947d22b",
-          "volume_mm3": 1763.0236566288247,
+          "stl_sha256": "072c362ab27586c522b44e245b4981397211afc309e796ef6b600161aee27c84",
+          "step_sha256": "03565791a2be73459c1f40bdfcf094a50ec0e82b8b7f768b82ac092c6a7292a6",
+          "volume_mm3": 1949.8320193262318,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-orbit-detail.stl",
           "step": "left-frame-orbit-detail.step",
-          "stl_sha256": "dc04454954ba4be892b38a0555f4ed2956196e0ce42746b5df97a193c6f0c1c6",
-          "step_sha256": "9c024700e6859fc70dcd6d057b0b421f267530a7b26ad1f30b757297e4470cfb",
-          "volume_mm3": 163.4623225699194,
+          "stl_sha256": "5fc3b49e4733501f26e6b084df9e757791b92c0d4a0357ee85ad9c3f048ae686",
+          "step_sha256": "107cf4a19ce6135f0cc5f81316089595f2ca1291123de594972a7917b0cc945e",
+          "volume_mm3": 163.4623225699189,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "left-frame-orbit-accent.stl",
           "step": "left-frame-orbit-accent.step",
-          "stl_sha256": "2648e4d9b8a07515eeb0517ca06f4b10192e0ed4f6747d674bf4d1f303771e76",
-          "step_sha256": "6f823d4911d7f43c3ed91efdb6df3f36e7da9f79caf97904e4532eb60f5d30d5",
-          "volume_mm3": 32.936833464693194,
+          "stl_sha256": "9b991e7ac03000b4f5a8ba763724982181973aebc4a5023e87f51c5b8d0c099f",
+          "step_sha256": "55b1887fee5a8978cc755464209b726dfab2bf3878bd16a5ecf93e2bf6679163",
+          "volume_mm3": 32.93683346469318,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "left-frame-orbit-secondary.stl",
           "step": "left-frame-orbit-secondary.step",
-          "stl_sha256": "7db48eff671f805668b1ef8ab4b4ccf980e6a6faf83f1ae80558c586db07a34b",
-          "step_sha256": "c4d4842966234aedb17296a40457aac1cc594f1d0567c01411485a9283599531",
-          "volume_mm3": 8.494866535306809,
+          "stl_sha256": "4fabc1cedf9cf784f7bd0365692721915a9d4f231cca2fe51b8edbb719a3e7f7",
+          "step_sha256": "682a4419ce7f85935ce16556f80d273b4076d3beed3593729a464e961ac115e3",
+          "volume_mm3": 8.494866535306807,
           "solids": 1
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-manga": {
@@ -8518,26 +8542,26 @@
           "role": "body",
           "stl": "left-frame-manga-body.stl",
           "step": "left-frame-manga-body.step",
-          "stl_sha256": "bf9ea2f0e268e8b71e42b8f514e03bde2f08c93bed1350759f569a962b5488f5",
-          "step_sha256": "d9aa3000c80a80e5bfa0a580157354758eaee504df4074cd98bd3c7b5afac1cd",
-          "volume_mm3": 1828.9826891956536,
+          "stl_sha256": "c3903ed574612b9ca56e9c71a8217b55e33136525030146d4e1bf4bfa4fb13c8",
+          "step_sha256": "a85f74bf37c85805fb950381593304f357f09eced012986de009132c879ca88b",
+          "volume_mm3": 2015.7910518930616,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-manga-detail.stl",
           "step": "left-frame-manga-detail.step",
-          "stl_sha256": "45ed5a0d4f37a04898521f266b8935a17eeb4d39bac1522d7989ce3e1b7d6d28",
-          "step_sha256": "7dcc8aff1220d5ae396754f6c6b367e313a1e34ac6f2cf97a3650a994785f836",
-          "volume_mm3": 128.87399000308992,
+          "stl_sha256": "fb20aadd58a54a6c77d06c74288fc4f320872a94ae711ef25c1981db2eada404",
+          "step_sha256": "b6ed9451e83eb54a201f1102c544c198226bdc9602657288846339d42183bd68",
+          "volume_mm3": 128.87399000308986,
           "solids": 6
         },
         {
           "role": "accent",
           "stl": "left-frame-manga-accent.stl",
           "step": "left-frame-manga-accent.step",
-          "stl_sha256": "5b9bb47e78efae675ce05a55a1c21b671ddcbe851a099386e824acc36c12fcb0",
-          "step_sha256": "381e30e47bf883da718bf84b43631d05ac5bee0e4fe85c4ea9248ad95200c3bc",
+          "stl_sha256": "21729df3d7885561de811275db5ee6eeb1550a21f46d95cec060fa64cec3d78f",
+          "step_sha256": "392173ecf7d6803debac2750c6bea65376f5de403254e0de144b85bfd3eb06fe",
           "volume_mm3": 6.892999999999986,
           "solids": 1
         },
@@ -8545,13 +8569,13 @@
           "role": "secondary",
           "stl": "left-frame-manga-secondary.stl",
           "step": "left-frame-manga-secondary.step",
-          "stl_sha256": "2c051d79c9f323f2c20a680ad13e456002e15f3cd7b35311ea6fd4646d95f8ba",
-          "step_sha256": "4ee0756dbc83233f53d4f8834ff73a0281b6649cf81b477431ec25e7cf8d3b42",
+          "stl_sha256": "2fc3de35674bf75cf877370aa713a23cf2af4fafb1307f444771dad65f484adc",
+          "step_sha256": "27c712141c0469705b5cb077ad621056f878e39810b2299ea2bfc59b330d66f9",
           "volume_mm3": 3.1680000000000144,
           "solids": 1
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-talavera": {
@@ -8562,40 +8586,40 @@
           "role": "body",
           "stl": "left-frame-talavera-body.stl",
           "step": "left-frame-talavera-body.step",
-          "stl_sha256": "9ca1bfd4119fc4be014eb294c38be05da6f12841adb18f87750a0e77b87f93a5",
-          "step_sha256": "2e19482614e5ff911cfa2ef1b909b6e438b6f9688dbe6bedd1e4a6facdc16504",
-          "volume_mm3": 1816.3276456899334,
+          "stl_sha256": "3a8acbed4b19159681a0d5b09a767e97011758ad4da6903ecc23f29add2700ef",
+          "step_sha256": "621a052ea3298241fe9e84f19cd8af22016cf988d17e48b298d1596a700b03f7",
+          "volume_mm3": 1981.645999851568,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-talavera-detail.stl",
           "step": "left-frame-talavera-detail.step",
-          "stl_sha256": "890cc2e1a80c83105283c46f141d5fb87a48ff10591f20070a2ca294da009972",
-          "step_sha256": "3cd44b1c7eb4e79a53f3199586fbffe695935997df945a74291d166cd39e5f62",
-          "volume_mm3": 103.78343350880812,
+          "stl_sha256": "03f5b1647df21719f311372854b594a5b69c3d814f977bdb0fc75e41b5124696",
+          "step_sha256": "48a8046fdf3720124756ffb4911862b2fc85b5d07ec8aa09f2f1706644e6443e",
+          "volume_mm3": 135.19104204458395,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "left-frame-talavera-accent.stl",
           "step": "left-frame-talavera-accent.step",
-          "stl_sha256": "07bc809cb2939cda791bd8f56584f07144e676dd03b1fd43f67ebf963716946f",
-          "step_sha256": "86e69ba0c44966d81a5f7aa3ae425926456736bf40c54295fa8d91136ff4e9fa",
-          "volume_mm3": 1.7505999999999986,
+          "stl_sha256": "194d65a7346ca6b5cda4454fe39a7d508e00a2edf9ac168eb802a0f96e2b5f2f",
+          "step_sha256": "4641c1e3920ce6f6d87bc3f2c7b0ec2e9e1a384523ad1c126b557256481c21fd",
+          "volume_mm3": 1.136000000000002,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "left-frame-talavera-secondary.stl",
           "step": "left-frame-talavera-secondary.step",
-          "stl_sha256": "ffa8e22c2335bdb1c4d269e038e8aac31e1abe8678d282558487c35918c98c5c",
-          "step_sha256": "06a5e6b3ba37a29259b452bb524bb1916bb5f9501452cce9d1b38eb17c79f4cc",
-          "volume_mm3": 46.055999999999976,
+          "stl_sha256": "d685908fdcffb45d09c128f6d7b06c9ea012a935b91586bd88552acd90c8edcd",
+          "step_sha256": "8630336c59e1625df73def0e2f7c41cc1044436f6e5e8a4172637e6829863762",
+          "volume_mm3": 36.753,
           "solids": 4
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-gameboy": {
@@ -8606,40 +8630,40 @@
           "role": "body",
           "stl": "left-frame-gameboy-body.stl",
           "step": "left-frame-gameboy-body.step",
-          "stl_sha256": "68c0117b235369812e35be94d64bcd8ba62cb9947f272a7250b85bee2a795f07",
-          "step_sha256": "c2e1c88ea8a5dd34166c3fe954f0ba26693036d61c59c29cc036739c819fa39d",
-          "volume_mm3": 1839.183264359105,
+          "stl_sha256": "fa63d7e63c3abde49d9f9d925b1005219854c10c67fa6c82a7a10d09d194f4ff",
+          "step_sha256": "5bc208a4a6da47b52a722db0404b5ba507a514868a998c9ae5d9e69f27180cf0",
+          "volume_mm3": 1992.849690661253,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-gameboy-detail.stl",
           "step": "left-frame-gameboy-detail.step",
-          "stl_sha256": "01508533426384bcd86073c0d3ac8ecf0269210332c12f0289f55ef495eee27b",
-          "step_sha256": "fe690d82469d862ca38b15e20254ec71d20c3b8c9bbcc179b99ddfebe6affc52",
-          "volume_mm3": 114.51943350880809,
+          "stl_sha256": "6657a4824087597351d94e62e5605492d0f9518a7e7b74e97d15187848121d38",
+          "step_sha256": "a09e2f3c779a2b951a7b6b3b42de4570a2043c7c69c6d8fce1d48bec167f8757",
+          "volume_mm3": 146.71104204458393,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "left-frame-gameboy-accent.stl",
           "step": "left-frame-gameboy-accent.step",
-          "stl_sha256": "42ebac1f1c94b23a26d47e6deb067719bc4e31ac3cab290b5daf3707a163d4b4",
-          "step_sha256": "0cb4ed8d1beedbabc71813b2a6a4322504e7d92c78ffc5afff27af508e77c44d",
-          "volume_mm3": 8.143008158104744,
+          "stl_sha256": "5f9a219c521923a0f41671accce2293880ed70526ab09d19a7b20afedd4a8732",
+          "step_sha256": "10d69835a3f00c5851fcc9340b6a7e7332c3c6aa35d5b166b263a83d625f1197",
+          "volume_mm3": 9.072919933615216,
           "solids": 2
         },
         {
           "role": "secondary",
           "stl": "left-frame-gameboy-secondary.stl",
           "step": "left-frame-gameboy-secondary.step",
-          "stl_sha256": "f7e68253e434535bae5989027861def937bf91dc48516708987908569d635426",
-          "step_sha256": "0c4658ebefa0c0ffa9aad84dd3c19eb6f30d94e49f314e960a062b62f4ac5ae7",
-          "volume_mm3": 6.071973172721715,
-          "solids": 5
+          "stl_sha256": "c2dde498438d394f82ed1c5c9e02a90a2ed30c32222ac993874e2adc6bcbd4c5",
+          "step_sha256": "cc842715a125d2a5c739190695bebc5617480673b1eec694d15aa3bead89b4b4",
+          "volume_mm3": 6.0923893421169355,
+          "solids": 4
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-nes": {
@@ -8650,26 +8674,26 @@
           "role": "body",
           "stl": "left-frame-nes-body.stl",
           "step": "left-frame-nes-body.step",
-          "stl_sha256": "77fe7deb8f20e1d9fb6f21157885350fe030dca9ccd33358ad5221cc56785e32",
-          "step_sha256": "a8e53d9e3dc7ebd92eb6f471c8061dd5e6affd8e8ab50172b2d2232774a6b1a9",
-          "volume_mm3": 1786.2059979706144,
+          "stl_sha256": "492bf4d7e06c3c68e33798ec65172c2101288e7f497b661df3e4a8476635b98b",
+          "step_sha256": "4f1489a3c8e35fb1cc0a9ec21926c6cbceb62784538daaf63a6bb86903c93548",
+          "volume_mm3": 1973.0143606680226,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-nes-detail.stl",
           "step": "left-frame-nes-detail.step",
-          "stl_sha256": "81a3768e842cee128bb519ed604fd146b9140da1ca1e1bab011c1c8898b4f755",
-          "step_sha256": "37b7ed03695123bade2f77739af04c613e2eb65bcef67ae105a2e8f1b09b73c2",
-          "volume_mm3": 155.81157573449335,
+          "stl_sha256": "5723ef62ad66fb040241fca2b7abb70841d4707cd3f005f06ab5b947ab4cf322",
+          "step_sha256": "76badaaae7ef5ed65b6f8883da3e28c7e01dddf38fd24aebd88aedce684a3ef4",
+          "volume_mm3": 155.81157573449352,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "left-frame-nes-accent.stl",
           "step": "left-frame-nes-accent.step",
-          "stl_sha256": "568681d7dd9f96d3c0651958a179e10979f487a8a263f25bf6dac2a0a1121791",
-          "step_sha256": "b6268cc26fddedbdab8039fc2e3c1a9738d218429a804e1dddde3e8d446f4704",
+          "stl_sha256": "f3e139b1287eed1d7e414542003a6020c891b4d0faabbb140846afdcded6c893",
+          "step_sha256": "47cd004872932cad35a2076b4a63ccdd89e1419a48d8040d961493dfb83b5010",
           "volume_mm3": 11.53100815810477,
           "solids": 3
         },
@@ -8677,13 +8701,13 @@
           "role": "secondary",
           "stl": "left-frame-nes-secondary.stl",
           "step": "left-frame-nes-secondary.step",
-          "stl_sha256": "02554f2bcfc410175a6e3cdf52271e8e9249bdd35227774dff8a3df08a7bf0c5",
-          "step_sha256": "5737ae91ed2017ec2e2820202e04cc245ab742ed621e3649aeb10c0b56033944",
-          "volume_mm3": 14.36909733552917,
+          "stl_sha256": "09f4b505812b231b81f66dad4b874073a05cb7937f9c0743a9bc03297241e46b",
+          "step_sha256": "3be5e02f63f248d0d4149346d5d2283ca7e45e7b14e1b17aec7612ca6c35e43a",
+          "volume_mm3": 14.369097335529233,
           "solids": 2
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-snes": {
@@ -8694,40 +8718,40 @@
           "role": "body",
           "stl": "left-frame-snes-body.stl",
           "step": "left-frame-snes-body.step",
-          "stl_sha256": "ff9986ca755d7167ad1c87ac6ad091ae16182e566d34c5eaf02c98ded864df7f",
-          "step_sha256": "8bf1e85b8c881ea733b5c42c0ef67ed2edc3f8456540a0594a1b7eefdc551335",
-          "volume_mm3": 1837.7730787487783,
+          "stl_sha256": "b73c831ee7fe155be8177c5d53715d3355c4aed621f4af0319584f757c062b5b",
+          "step_sha256": "41b93fa0af07f154687aa7a81c3e9f7e6a9d33e08aa78c795c8d25362c41de65",
+          "volume_mm3": 1985.548381588148,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-snes-detail.stl",
           "step": "left-frame-snes-detail.step",
-          "stl_sha256": "7759dcdfd5c1b4b10add6152e85af2c12ef1fa2bdbdc3d5d50bfb62a4521be80",
-          "step_sha256": "ab1ad576fa3ff53d1244c1ef81e09605dd3cb157d9bea68168dc70620a1872a0",
-          "volume_mm3": 105.23992918860088,
+          "stl_sha256": "9c1ca353fcac7c5d3f24f13ac9c0c1e144d62e30077df25c07facdd75b6440a4",
+          "step_sha256": "c56162dc27db4a9b2a66da39c67be5f790308ebcf1012733530bc7f3c39011c7",
+          "volume_mm3": 144.8710420445839,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "left-frame-snes-accent.stl",
           "step": "left-frame-snes-accent.step",
-          "stl_sha256": "02d7757087eb9606ab05fe5302bfe51a81431dc36fb61e97b04a666f6cd4b7cc",
-          "step_sha256": "046f964c8199e4573c873fd53c2d73a8aa82de23fc7db39d77c29df0c8670b4a",
-          "volume_mm3": 10.594140959622152,
+          "stl_sha256": "b64c2e9e303db594f9d2f48b2d804a0b903e4acd4309a42040ed8db23cef2f62",
+          "step_sha256": "649b351309f72450aec5bf9f074848b19c05625da3897a208bb40d4528bd855a",
+          "volume_mm3": 10.679114631544776,
           "solids": 3
         },
         {
           "role": "secondary",
           "stl": "left-frame-snes-secondary.stl",
           "step": "left-frame-snes-secondary.step",
-          "stl_sha256": "dcef8b94e74a273777873be96a986282521b35af7a955c4cddeea40d05e6f274",
-          "step_sha256": "6ca156a6a3133114f24c509054ea54ae20cf63caa5f3fb38d00ebc04baf7b77d",
-          "volume_mm3": 14.31053030173916,
+          "stl_sha256": "9bc1000f3098cb15dc0f866b2e2f9e9f945bc47e36930fb65d27a3d891299ac5",
+          "step_sha256": "634222401ea7b26aefb6c50f9c05c35996882fefb0573188935efb76f353f274",
+          "volume_mm3": 13.627503973661673,
           "solids": 4
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-phone": {
@@ -8738,40 +8762,40 @@
           "role": "body",
           "stl": "left-frame-phone-body.stl",
           "step": "left-frame-phone-body.step",
-          "stl_sha256": "0cfd106571ea889d6582d6f5cb1b35f7b026474044584ac514f9143de85cd1fc",
-          "step_sha256": "7bc8a610be7ab3e3188e9b6e9585adc2303938c3f704aa70e07aee88208390a4",
-          "volume_mm3": 1822.8451847247234,
+          "stl_sha256": "2925243d155bb410d1ad521bc36d9478d2300b06641f9ad21ab3c31699a65457",
+          "step_sha256": "bf103a977f7232e7a264bfde2bec0c561409e6d2625c394ea9c1dd6b714fdddd",
+          "volume_mm3": 1973.4587885025685,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-phone-detail.stl",
           "step": "left-frame-phone-detail.step",
-          "stl_sha256": "acd1538992425412ca78c665ab025e4b1d873fdccf568eddb1709f4c04b927bd",
-          "step_sha256": "fda307e87329cb184902f5d1aa42954fb1623ca4b21a68bbb912c1dffa2e1fe7",
-          "volume_mm3": 135.92630004411464,
-          "solids": 11
+          "stl_sha256": "b1d8ed722c7b36603ead9612e1ff2d649a3be63a38e55f66e5b7c79c972ae54c",
+          "step_sha256": "e75172ffdd476f0036b59c454acc90bdc75d38f02b11eb8723682b50e911d12e",
+          "volume_mm3": 173.65019170490916,
+          "solids": 12
         },
         {
           "role": "accent",
           "stl": "left-frame-phone-accent.stl",
           "step": "left-frame-phone-accent.step",
-          "stl_sha256": "ed8adb981930ac976fc73c2c69d0d6d50178ddf2f8dcca91fa675b8d409bd80a",
-          "step_sha256": "18a79ea9e3207ce6a0be08cb69f79b26a1049b483aeb927b1a1ec92f55c139b2",
-          "volume_mm3": 3.8806370614359285,
+          "stl_sha256": "f3cd75372536da69f75a6ed459cd5492fa8232fc7a0a5d1cc51dbb7360e5cbb2",
+          "step_sha256": "b6d26b12d0e78a9616ce0f49846388ed129065284bd3b9f7a02dfec6b64e5f0c",
+          "volume_mm3": 3.4565308443374727,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "left-frame-phone-secondary.stl",
           "step": "left-frame-phone-secondary.step",
-          "stl_sha256": "2ed70212010aabedaa18c42366df455ccfec9b79577477bae50b8fe5ae873764",
-          "step_sha256": "d674d4263fc8a396ec55284f60785551c64c32e45e13333604fa2820dd64f149",
-          "volume_mm3": 5.26555736846771,
+          "stl_sha256": "d2d1d9b6e621060a65d7e3ed1924fa0606da987c2e734fa10985eab973fd4266",
+          "step_sha256": "a23ae57da1da06371e742c7339d7dd3861daf353b90a8b21739e0442dffa86be",
+          "volume_mm3": 4.160530844337468,
           "solids": 1
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-walkman": {
@@ -8782,40 +8806,40 @@
           "role": "body",
           "stl": "left-frame-walkman-body.stl",
           "step": "left-frame-walkman-body.step",
-          "stl_sha256": "1bde0a59342207200fff57008cd954a993b3116a72275926d8ee98f973e1b617",
-          "step_sha256": "1e1d9d7f30992ae9594e6ee5c0ca59050e6d52734127b19737f20a47b3ce0dcb",
-          "volume_mm3": 1819.2668123017024,
+          "stl_sha256": "fa03d1c7087c1ad4224075aa2c10ab6ffa81e1a93a7a40b45c300b3ff0d59c89",
+          "step_sha256": "ada83216ddc60f849b6404745b7d748265b9a4f75932a4fe6d835c0d159ef496",
+          "volume_mm3": 2006.075174999112,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-walkman-detail.stl",
           "step": "left-frame-walkman-detail.step",
-          "stl_sha256": "cfc1f77630f8dfddab3502a3a438bcd3c07dc39a673ce9a6b51d5789d9be39ef",
-          "step_sha256": "76a784a217b825b06e1834ca084b7e040af34ba96a18270e5b2d036999801c76",
-          "volume_mm3": 107.61398211628386,
+          "stl_sha256": "9e199eb041d2647afa6f4dec4103bf568924fbb4ee7e4396c5a4e16085039aef",
+          "step_sha256": "e512a094fc2311000fcabe81490c46c0d56a4aea7fdc3a8f7e0ba761a71bb9ff",
+          "volume_mm3": 107.61398211628409,
           "solids": 6
         },
         {
           "role": "accent",
           "stl": "left-frame-walkman-accent.stl",
           "step": "left-frame-walkman-accent.step",
-          "stl_sha256": "39fd183e31d2010f04a216d5e59ef90ef3a3dbefdeb38555acf30d4d6d823dfd",
-          "step_sha256": "8487dcddf5886871d7aa24fdd829ae095f2da85c3ceecc00a6c6fcec5230ffcb",
-          "volume_mm3": 36.60782285092523,
+          "stl_sha256": "7d0ecaba7040400771cb798d8f73544e6e3cdf279acdfa6b335a0e746022c503",
+          "step_sha256": "ef3464c07aea4c954e967740f1d087978038177590052bcbcc0e55c19066feb8",
+          "volume_mm3": 36.607822850925224,
           "solids": 2
         },
         {
           "role": "secondary",
           "stl": "left-frame-walkman-secondary.stl",
           "step": "left-frame-walkman-secondary.step",
-          "stl_sha256": "00b012e76a260214f057216d73756c064f87c498056560c4858a93772e5d1236",
-          "step_sha256": "945233844fef794b01cafa443c99e0aaa02314718b0a72a8b6f69d27af1cbbc2",
+          "stl_sha256": "09ec1d734532ea62683aace6b3a5aff9b2ba90c4ca5104b5a868628c1ccdc3aa",
+          "step_sha256": "fc1d1158bee869948505262bb9ee4629249616e96c116adf7184db245bcb5168",
           "volume_mm3": 4.429061929829752,
           "solids": 2
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "left-ipod": {
@@ -8826,40 +8850,40 @@
           "role": "body",
           "stl": "left-frame-ipod-body.stl",
           "step": "left-frame-ipod-body.step",
-          "stl_sha256": "be9f2099ba7d00bab151999505c63cfbb472e473da31be119f1c4e49786de3e0",
-          "step_sha256": "f6270a52039341d4f089acfdf88071158a14ebf663699740e3a80da484a4195e",
-          "volume_mm3": 1837.2422125752032,
+          "stl_sha256": "3f60bff33c0ef71ccd25610d5ce88ef6bc2387b5075b51c159718fc94183586c",
+          "step_sha256": "7de441be61766ef78ac1ddb6c97ceb3e6ddea166434431d0c8bd8381b4dbd2ac",
+          "volume_mm3": 1991.40505498099,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "left-frame-ipod-detail.stl",
           "step": "left-frame-ipod-detail.step",
-          "stl_sha256": "bb015877273ae31faf3ca9171d7f5e021928a0df227e70b6aa1f038c54f35a72",
-          "step_sha256": "af52e9e3c0c4de03bba19eadefd39d3c4866a6ccd0bb45d9c938084edf9eba2d",
-          "volume_mm3": 101.66704416669117,
+          "stl_sha256": "03f5b1647df21719f311372854b594a5b69c3d814f977bdb0fc75e41b5124696",
+          "step_sha256": "5cd6d9253aaa0486a9b4fe33733871cbcfbf42f1982efff8da1ab8c314fe9abe",
+          "volume_mm3": 135.19104204458395,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "left-frame-ipod-accent.stl",
           "step": "left-frame-ipod-accent.step",
-          "stl_sha256": "2a59b28a57dafd143178d100866fed6d817c635215a44d01b31ff1ee9d1959fc",
-          "step_sha256": "102eb96454a43bb76f3f65402a3cfcf8c4917c15c932691f578617d2974ff9b3",
-          "volume_mm3": 20.809909737378796,
+          "stl_sha256": "e4953445f498f81fe32321c9f797023d78a477ed9bf40786ab5ba3fd722082c5",
+          "step_sha256": "149637f1348f9219fdc7d66ff4c30d37bfdbd0cd32da6a7ff70a85c13e68f027",
+          "volume_mm3": 19.86743194130187,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "left-frame-ipod-secondary.stl",
           "step": "left-frame-ipod-secondary.step",
-          "stl_sha256": "e1676d99b80910a03760447e7e21958899b6c3bbf8b16c3822a7ba8b484a5031",
-          "step_sha256": "baecff29b33e21910bd0a499068a167747f4b5af6d36930edc9bde27542dbd5b",
-          "volume_mm3": 8.198512719466775,
+          "stl_sha256": "67d32c96f2a10b252f6b0422fbb382c3d641d2240b8a0c250b1af059d698620e",
+          "step_sha256": "e543cb7455e5559b0363988778cd8bb3616e6c1e9e4e46e13f4fe6807c7eb6d9",
+          "volume_mm3": 8.262512929275154,
           "solids": 2
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-flan": {
@@ -8870,26 +8894,26 @@
           "role": "body",
           "stl": "right-frame-flan-body.stl",
           "step": "right-frame-flan-body.step",
-          "stl_sha256": "6ec05d3ba87570d1473718dc8b3c53f123dc9768614ebd928c3de7a7b74bc150",
-          "step_sha256": "f36e1b0944c24aaabcaa8815e283608ac45d5b5a369186109f36cd46ea04beb2",
-          "volume_mm3": 1872.681745645821,
+          "stl_sha256": "5a7db435a046d74ea492e017dcf649016aff1f8792f9f88f6e49874705da2f97",
+          "step_sha256": "fe0529b02c138fe07ed0ebc318f1a7d9f462f3e479a97b97178954e6cf305028",
+          "volume_mm3": 2059.4901083432296,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-flan-detail.stl",
           "step": "right-frame-flan-detail.step",
-          "stl_sha256": "6c0ed78726eb45305f83b84f72878a905bd9a5a964be029d7febf01b9203a9ab",
-          "step_sha256": "4aba7e9614d9eba81642576e7c472d697597be1e2e5560c3449e5e12fbce9e10",
-          "volume_mm3": 6.147221195188716,
+          "stl_sha256": "7f89d271a913b785fc04ea8742d37a80d4c837063812cfe5f4ee12fa718df012",
+          "step_sha256": "9a87aafec05518e03510b0a90ac0945fa7039e92613d6c97a00d851956b92cef",
+          "volume_mm3": 6.147221195188715,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "right-frame-flan-accent.stl",
           "step": "right-frame-flan-accent.step",
-          "stl_sha256": "aa0af7049932e142127927bcc61bbfa13b19c83e8e96cc4d63082e2772ad2be3",
-          "step_sha256": "19eb6b7d506d25eb83a5aedf1831b577b971d71c844a577543b9b9d89695c7ce",
+          "stl_sha256": "e05b762967dbbc0b7cc8bf30d4d5a37c301f603455ba7afd2c53ecf152ba4251",
+          "step_sha256": "47002e5e98366cdd75db855c68369a8104262aedb58f713744baf78b47e62227",
           "volume_mm3": 77.27768804503545,
           "solids": 2
         },
@@ -8897,13 +8921,13 @@
           "role": "secondary",
           "stl": "right-frame-flan-secondary.stl",
           "step": "right-frame-flan-secondary.step",
-          "stl_sha256": "cddab8693c9f92ec96b1b791c6e56bfbb8a7397367db462bde7cb2b53f76cc87",
-          "step_sha256": "5663366c5ce7bb22f167a6e6dfae637e6edb832ad2cd7fc374dd4b28f3851a6e",
-          "volume_mm3": 11.811024312699288,
+          "stl_sha256": "59ce4b3491e0b6d54b07a254dc9bc9a65990db242911e819616b940e8392edf1",
+          "step_sha256": "2bb697780b981fe387b7de6c1d10008f1d6da6c7eb3931a4495f6942fcc4957f",
+          "volume_mm3": 11.811024312699292,
           "solids": 1
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-tape": {
@@ -8914,40 +8938,40 @@
           "role": "body",
           "stl": "right-frame-tape-body.stl",
           "step": "right-frame-tape-body.step",
-          "stl_sha256": "f3bf8ca36f8d03a4c44cdd5811c4830c9ac2269e0baa0c2ea888d79adad1b243",
-          "step_sha256": "d6acc261cb051032390554c1fb667aec4d9e9acdd01e64e071c6a03a2169f6af",
-          "volume_mm3": 1824.936362417373,
+          "stl_sha256": "62ed0082f648ed7f54889db8d2a7632d606d586dd642718a3a51bc2f7a4d7c11",
+          "step_sha256": "e5c5aed99a1cb8371c11b6affab3d3c154fb307411d36f63b1f0f84b4975557b",
+          "volume_mm3": 2011.7447251147826,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-tape-detail.stl",
           "step": "right-frame-tape-detail.step",
-          "stl_sha256": "555d7a9600bf103d5325a73a7c31afc018118393d8fa3c632dc302576e445665",
-          "step_sha256": "da27bf19ef9173eb2f3f58692f87642c23e2a20d124eb670c592ddefa20f78b9",
-          "volume_mm3": 119.6696554941914,
+          "stl_sha256": "651300e0a6674a1d9dccfd8fefb9fc539c12bc665c8b018ebe2e69446f2be55c",
+          "step_sha256": "ca21c3dcf68d6b7cc92184aa950310fd3fe2311fb69f91a5ba11c4ce675be7ee",
+          "volume_mm3": 119.66965549419155,
           "solids": 7
         },
         {
           "role": "accent",
           "stl": "right-frame-tape-accent.stl",
           "step": "right-frame-tape-accent.step",
-          "stl_sha256": "e160964e4ebf9a8639bc9387b7528eb95d63438378de8bab2b41fd05be60a041",
-          "step_sha256": "6987ed2fbe4cb20e64c4a063d0273384fbf0d9a327f2ccfce2a069ab4471eb35",
-          "volume_mm3": 12.649097335529225,
+          "stl_sha256": "81e4e4d1b2de5f10a1f7091617f504479fb1c07fabb21a8944effa945e5e2c57",
+          "step_sha256": "4a3ec625dbcbbfceecd7a56826d518ca867a11e4df9b40443f45aef639672fea",
+          "volume_mm3": 12.64909733552922,
           "solids": 2
         },
         {
           "role": "secondary",
           "stl": "right-frame-tape-secondary.stl",
           "step": "right-frame-tape-secondary.step",
-          "stl_sha256": "36a3d7c6f4f676b0a3ee263f72fb5dbe24d677d906940004a73f34359746e316",
-          "step_sha256": "1176d5b771ead7c1df7205c972a281dc0bab3139495d1191d56665ec24562a72",
-          "volume_mm3": 10.66256395164987,
+          "stl_sha256": "33a9c4a0b3e9d5646b999349fcff909a0d03d7c07ab8f3432b7a51f1fd7283b4",
+          "step_sha256": "dec360b20879e01595be599f9006dacb5f52de4b4539e8b3772ba1e48e19e1d6",
+          "volume_mm3": 10.662563951649911,
           "solids": 2
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-orbit": {
@@ -8958,40 +8982,40 @@
           "role": "body",
           "stl": "right-frame-orbit-body.stl",
           "step": "right-frame-orbit-body.step",
-          "stl_sha256": "31244ad06302d106c2935559f9fb4f44dd572832fe009686f96aff7009270805",
-          "step_sha256": "53d356127b9f804bf0a3af9be33751310fa21bf708fd92e7929b353b57ea4afa",
-          "volume_mm3": 1763.023656628825,
+          "stl_sha256": "ec42bd95359f2dec8a09bfd40f575807c3863487db8632f3ed5812f19b76d2e1",
+          "step_sha256": "54a4a6cd2b305e26dff6595a3573f5ad186d4a28a7f4b86d5179c2ab50fe0e58",
+          "volume_mm3": 1949.8320193262302,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-orbit-detail.stl",
           "step": "right-frame-orbit-detail.step",
-          "stl_sha256": "803fb883e24ff88b8d6fa71cab42ba6694e44b32b47ef7b44f0884094e0c69d8",
-          "step_sha256": "e4a141056513b7dee0ededa72d0fa9e0bf838bf2b670eedb6792545fc29314d6",
-          "volume_mm3": 163.46232256991976,
+          "stl_sha256": "d04eb998132e2104d41af672fe9d6cd91b7bdb85f15020fd9442e41f42b59558",
+          "step_sha256": "479fa5adc1ab482c7bf9d7b4e9baef68ddf0af9e9595cef26d4ec22361003425",
+          "volume_mm3": 163.4623225699195,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "right-frame-orbit-accent.stl",
           "step": "right-frame-orbit-accent.step",
-          "stl_sha256": "168afe62f3d28e0673d06f204d682e89a22d1a2bb806b4c0fa6135c7d92f41ea",
-          "step_sha256": "90af9477fec89198bd9c20382b6f06d7cf82c0d6c049c6cb13c60a5d50b8e3d6",
-          "volume_mm3": 32.93683346469318,
+          "stl_sha256": "b087d7b491cbeaa23436dca5f33f496e2fc880c0a792bee31990cd776670e5a8",
+          "step_sha256": "a1185adbdf4d943482856b6d477fa4e32feb180c8836d6dc62545ee180419083",
+          "volume_mm3": 32.936833464693166,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "right-frame-orbit-secondary.stl",
           "step": "right-frame-orbit-secondary.step",
-          "stl_sha256": "a92c36aa7dd0c432e798d4ffb18ba6c2ca3e64779b10eba42b239e51ea62acd7",
-          "step_sha256": "055f54f9d0cd19e28c24c6beae638bd017baf6fd640429dc00b7d6d93fc431dc",
+          "stl_sha256": "77986dc2074d91fde6a96107fbdb8f95c90bc9ccea9b118a3e52782a9d93309f",
+          "step_sha256": "b0058e1a00437adcb4a6a0fde1b5d500c08f3149000ebb77790990853308471e",
           "volume_mm3": 8.494866535306805,
           "solids": 1
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-manga": {
@@ -9002,26 +9026,26 @@
           "role": "body",
           "stl": "right-frame-manga-body.stl",
           "step": "right-frame-manga-body.step",
-          "stl_sha256": "d045209c4b674a1b8402d8665e7da1b8a47d3858efd5cede15e0b76912f8329b",
-          "step_sha256": "336e7b8787ea349ab7a23e1d8a8a02de3d61a320c6dcd10c326bf98751e846d5",
-          "volume_mm3": 1828.9826891956545,
+          "stl_sha256": "f80ea8d98563622cc1ddffbb15f580efeb96b03d354052dfbda6b48b8c1ab716",
+          "step_sha256": "d6f25c1d04fb76fcf8daa7504d184050e00228ef4fc395ad73843b5090af40b4",
+          "volume_mm3": 2015.791051893069,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-manga-detail.stl",
           "step": "right-frame-manga-detail.step",
-          "stl_sha256": "1d644a5b27a8c9ebfc518961554ea11dda80b0d1af57aac146dca276b8711e06",
-          "step_sha256": "7c54356459c4f561f6d1b2ab134a022c3ce1e6d62e8e742d6b52131898d60a12",
-          "volume_mm3": 128.87399000308963,
+          "stl_sha256": "ee1063d08dbff41f66949345698bf61d9232695e2e8439fb896ff03f7b5c6b30",
+          "step_sha256": "05c867b64b6e2bffd7d830b0ec63ddab445fca1913a1532a0898776d54a14795",
+          "volume_mm3": 128.87399000308977,
           "solids": 6
         },
         {
           "role": "accent",
           "stl": "right-frame-manga-accent.stl",
           "step": "right-frame-manga-accent.step",
-          "stl_sha256": "ba30dfbaebfc38899fabf6d0722c742d3e007134a9ad1c16187583a16cca7f1b",
-          "step_sha256": "425a53975c794cdc46406d1a800d5732857167c8e860286be1ccd0845e410d0a",
+          "stl_sha256": "098f45b3daf24e0eb24fb0763244a72f1c66bdcc86909fa27cb5f522f83df908",
+          "step_sha256": "508cc934d7a6a4abcbaaa18e5a57251d12001cc7cbb347809119921c613cf880",
           "volume_mm3": 6.892999999999985,
           "solids": 1
         },
@@ -9029,13 +9053,13 @@
           "role": "secondary",
           "stl": "right-frame-manga-secondary.stl",
           "step": "right-frame-manga-secondary.step",
-          "stl_sha256": "3b1d7c8f287339fd77cccd4e345208ae4cce172acc173f4149f24b78b9cc1c94",
-          "step_sha256": "2a3df3fd520201daf891ffbf0266dcb1fc89f3a55dff4cee0a7c593fc753af69",
-          "volume_mm3": 3.1680000000000144,
+          "stl_sha256": "98bc0a4066b7452692c55ad5d4bb80d7039f5bb9f6fbcf803eb5cdb6b055bfe1",
+          "step_sha256": "1cb408cf1035001362a0afe44a4ad7bb5f3f874b570d858ad415c15376707b36",
+          "volume_mm3": 3.168000000000014,
           "solids": 1
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-talavera": {
@@ -9046,40 +9070,40 @@
           "role": "body",
           "stl": "right-frame-talavera-body.stl",
           "step": "right-frame-talavera-body.step",
-          "stl_sha256": "0a6543eb4ecc4cd3aa9429309ea29ca097a4104f6d0cf923a251da5494b4d3b9",
-          "step_sha256": "35838316bb7acf07c999c8186b7e3d00aa106cd48c04b7d2564f36cb2278ac16",
-          "volume_mm3": 1816.327645689936,
+          "stl_sha256": "be9e95f685f1584545d1cb0bf895d71a1501530131aaa3c240eb4e1b0ac0b611",
+          "step_sha256": "b7f20a96006aae5b3dd06dd63c604ca340201848224a55516bd792065243aae8",
+          "volume_mm3": 1981.6459998515707,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-talavera-detail.stl",
           "step": "right-frame-talavera-detail.step",
-          "stl_sha256": "8b63403487090e9befd1a38b1b7675a6a7da68f52ee8c9b8178642706fef6893",
-          "step_sha256": "4ec8fbd2337f9ff35f0e29d296ccad9a2d23634fb257b455cf849ecd5731f59d",
-          "volume_mm3": 103.78343350880823,
+          "stl_sha256": "94bab232343de90d755c0494505b95c864a4b40b7074e1255954354f76a5d8de",
+          "step_sha256": "0e6f9933837f988be17148be73eb9c50399e6b21f49caa917850e0cc01a0f194",
+          "volume_mm3": 135.19104204458384,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "right-frame-talavera-accent.stl",
           "step": "right-frame-talavera-accent.step",
-          "stl_sha256": "e6811e76b557ed6a26619bc7e14c57c9e4f2bf7658f0459945f87b4a649cefd3",
-          "step_sha256": "c6a9095c80a929adc44be9474aef184e27888985ba010c543ed2dc2e06bdc903",
-          "volume_mm3": 1.7505999999999997,
+          "stl_sha256": "f4e07ad1a88a7b4471e370051f1e5cc1441faa9a5ab5bd1053e93769e1e1676f",
+          "step_sha256": "da9d8b303941121e8b72a13f2d527dc094ba964c1cb03dd8b562314f21c36e41",
+          "volume_mm3": 1.1359999999999997,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "right-frame-talavera-secondary.stl",
           "step": "right-frame-talavera-secondary.step",
-          "stl_sha256": "6ffa51417e6251f06219be16956d97726a079caf5eede7c469553d0be64282cf",
-          "step_sha256": "0c5dbc86e9186f00895df738ea063f2e7304e3c0918146a3e25f9f620be40ee3",
-          "volume_mm3": 46.05599999999997,
+          "stl_sha256": "4181e7fe21bf6838a771cf20b4cf79db7c3c6cff0cb07bda709de8a2849811ae",
+          "step_sha256": "7db1a744cca4fbac3dec03bc816c01a987f4ba938ca79185589221ecbe69f6c6",
+          "volume_mm3": 36.75300000000003,
           "solids": 4
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-gameboy": {
@@ -9090,40 +9114,40 @@
           "role": "body",
           "stl": "right-frame-gameboy-body.stl",
           "step": "right-frame-gameboy-body.step",
-          "stl_sha256": "560369bafa4ce571ae86af08daec0bb60339b12017c5ef7a85804dded36ddc36",
-          "step_sha256": "3cc90e8c868701a0f71542c46702573b5a8e7f8103f157ca0f6a5611a8435b9d",
-          "volume_mm3": 1839.18326435911,
+          "stl_sha256": "d346ae24d1ff04b852fed6c6b99c37a615c86ce484de1468195eec163b22eb80",
+          "step_sha256": "58de9fa3c8f9073392fd216c7001e526d8dae071162189919d538e3f93d273bf",
+          "volume_mm3": 1992.8496906612545,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-gameboy-detail.stl",
           "step": "right-frame-gameboy-detail.step",
-          "stl_sha256": "3f74d9e23eef2e6d2dbdb7d132a7a93c4a1e191fcdc4de939cf0c952b42e9386",
-          "step_sha256": "e080ae3390a6f574ac3253f9afafb6263bfd533a88ca10fbc3e290b1beb7d476",
-          "volume_mm3": 114.51943350880819,
+          "stl_sha256": "f6849463b67c34a66e1eb2f75122540d0d8a3814efa147f5b2567e1b92ba9701",
+          "step_sha256": "3bdad97bcc4b6f175d3f20e0b8c837b16c9210524c1814873404b0777825dc41",
+          "volume_mm3": 146.71104204458376,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "right-frame-gameboy-accent.stl",
           "step": "right-frame-gameboy-accent.step",
-          "stl_sha256": "4c34cec6ffb712e0a583db41f42ebba2f460aff3665e66536388e3c784aa9efc",
-          "step_sha256": "f4864886326ec528def93ad4553ae3b5b6f546c0a3922ab68a37df356cbb06d3",
-          "volume_mm3": 8.143008158104749,
+          "stl_sha256": "03e206ecdd426739fee8f61a3d929b75ec7f8f85eb92cc90836be1447c883ac6",
+          "step_sha256": "3697930f5f92d0a9bf7f96277c7159e6a00dc618fd3881932c2dcae4a3c5a313",
+          "volume_mm3": 9.072919933615225,
           "solids": 2
         },
         {
           "role": "secondary",
           "stl": "right-frame-gameboy-secondary.stl",
           "step": "right-frame-gameboy-secondary.step",
-          "stl_sha256": "5a4ea719303f98cf0bc39dfa44c88f3c387ffc296c2723a358bbe7def7a9b518",
-          "step_sha256": "68eadaf3844b20b445e0b51a05214befc5c0b0f60fd3d4da3b5964d3957b0ead",
-          "volume_mm3": 6.071973172721751,
-          "solids": 5
+          "stl_sha256": "b69a55ef57be083e6b52a6c264500078a0f00bce9ff693d3aa8baa7d583230d7",
+          "step_sha256": "7c9ca5990e30b2cabeac6999272375518a35bdf388a20409ac127200a483f103",
+          "volume_mm3": 6.092389342116951,
+          "solids": 4
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-nes": {
@@ -9134,26 +9158,26 @@
           "role": "body",
           "stl": "right-frame-nes-body.stl",
           "step": "right-frame-nes-body.step",
-          "stl_sha256": "74e6c11032253eea810c8228108c965730a4f36a0ad919342dc3f7e804bfbd49",
-          "step_sha256": "5b6072c23cfac97a23d13d5c0581e6f12848abc1f3fb0c753ed4f8189d575587",
-          "volume_mm3": 1786.2059979706173,
+          "stl_sha256": "a94859d9275a3d77056feadadef6ea5f9f6be639cf999ff7ce430c998834b514",
+          "step_sha256": "987e512c6662f922f83d911f4c3e2a786b5f7e4fa1ed47244ff4126e749e2baf",
+          "volume_mm3": 1973.014360668028,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-nes-detail.stl",
           "step": "right-frame-nes-detail.step",
-          "stl_sha256": "f18fd6574fab123cd2983fd7aff8544dffa50b85f3aad7d49bb9721ea0ad10dd",
-          "step_sha256": "0b7ecfec65a0afe735eaf6e9fd2b9e07253ec30fc7670a803c17316e682b9f4a",
-          "volume_mm3": 155.81157573449283,
+          "stl_sha256": "5ecf423bd82e88d7c26ffb0fa19074a2d418d52efe5b3f8ff59474837f77827d",
+          "step_sha256": "cbfbaf6268c004c6d77710812fdef5fd2147c0087ac3c96acd3401fa8e7396a5",
+          "volume_mm3": 155.8115757344926,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "right-frame-nes-accent.stl",
           "step": "right-frame-nes-accent.step",
-          "stl_sha256": "f3d999078fe372ad35b9c0bba088e09d1c7eba06e26a2140b1bddc273aaa23b4",
-          "step_sha256": "830001589bedf3371c82bf4fa276d1ac6b4fa43e1a30787da6ce4e2de574f131",
+          "stl_sha256": "56e899709aa6869c7f8e67d039c626ebebb8049eed8a2961dc8d661a1ddb27cf",
+          "step_sha256": "62f006ead124efe1b1747d903b430d00858eb6236e54018a8936800e15a5c77d",
           "volume_mm3": 11.531008158104775,
           "solids": 3
         },
@@ -9161,13 +9185,13 @@
           "role": "secondary",
           "stl": "right-frame-nes-secondary.stl",
           "step": "right-frame-nes-secondary.step",
-          "stl_sha256": "ebaa96d40d83c7b1f047c22efbcdb2d98711229f0f68b7e91400c06e70d049f3",
-          "step_sha256": "fff3ee03e866a81481e320b00f2f5fed326c364d51a66c05da3fd8561c62ef4c",
-          "volume_mm3": 14.369097335529174,
+          "stl_sha256": "3a6c6c8e7dbd03d05285b02ba0099a47155028b07578bb10a10c6637b1a9ba75",
+          "step_sha256": "8d7f82234ad28cb372fb2101fb7ebfed910a837c45475bf741ff2880da93863e",
+          "volume_mm3": 14.369097335529252,
           "solids": 2
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-snes": {
@@ -9178,40 +9202,40 @@
           "role": "body",
           "stl": "right-frame-snes-body.stl",
           "step": "right-frame-snes-body.step",
-          "stl_sha256": "0277f5932fb388759c5dfa391f9c60cce9b0b9d4dbfc1e25f419cd89d9d4f726",
-          "step_sha256": "ab636453231e234f8fa5f7ad9f0df4386be3a2620413b45a3558907f7da020a5",
-          "volume_mm3": 1837.7730787487815,
+          "stl_sha256": "0fa1d7f165b6fa2ba50fa1b63cacee84dbcc4fd9c6598fd37bd968cc0329a56f",
+          "step_sha256": "ab32ac8a5addf1090d4cc8dec3692493a6e4fc7ef2075729fd4b455131a4d471",
+          "volume_mm3": 1985.5483815881523,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-snes-detail.stl",
           "step": "right-frame-snes-detail.step",
-          "stl_sha256": "9749c984fee5ab4f93621ba2cdfea5dd3457b0b3a092924eab5e4b492c4acb44",
-          "step_sha256": "7e63e18fcee0c09086d7093e9b55cf3ace60168a1b99b778ce1d7fa27c5794c7",
-          "volume_mm3": 105.23992918860097,
+          "stl_sha256": "4b5ff7c36e842d82c904793fa18447853a964f1a5dca2bd77e3cda346e79e9d6",
+          "step_sha256": "4e7281e845fcceac277e58ef137a4885ddb389d02a15e7e46dc5bdd26d0ef639",
+          "volume_mm3": 144.87104204458385,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "right-frame-snes-accent.stl",
           "step": "right-frame-snes-accent.step",
-          "stl_sha256": "44368b2436f0873a7e188d94a2e8247817c9f288387d2b9f61e0f90115c7ee32",
-          "step_sha256": "879823ec3d584985045ba5644b4ff0a129fb51f7e081676afe1659d5dae831b9",
-          "volume_mm3": 10.594140959622152,
+          "stl_sha256": "ff3f9fe4d179215c835de80904aa09962a37d5ffa7cef3daf5daf2a3ecaa15be",
+          "step_sha256": "45daaf7c47efe44785602493c48e629757963e633a8d943c91030411faf63304",
+          "volume_mm3": 10.679114631544778,
           "solids": 3
         },
         {
           "role": "secondary",
           "stl": "right-frame-snes-secondary.stl",
           "step": "right-frame-snes-secondary.step",
-          "stl_sha256": "d5ed0c41eefdfaa9e8894e5d70d3aa53f503b3162bd60bee5feaa07f700796a1",
-          "step_sha256": "950ef8e08336bcaf6863daa03127ea22eaa8ccb2fcc943bccb50b85ff0933458",
-          "volume_mm3": 14.310530301739142,
+          "stl_sha256": "014ad51b7e8dac1a6b73c05e2ac7dd94221acbd278e6d2756ce387fb7a2ffab8",
+          "step_sha256": "6ea674738b197da422f353daa2b6b7ea33ec1c2e61c6ae5657d434a0cde595c9",
+          "volume_mm3": 13.62750397366171,
           "solids": 4
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-phone": {
@@ -9222,40 +9246,40 @@
           "role": "body",
           "stl": "right-frame-phone-body.stl",
           "step": "right-frame-phone-body.step",
-          "stl_sha256": "48b796e2aeaab611d56bc0eac727ba5de22c4096198e6c4524694030819c66a4",
-          "step_sha256": "0525f54f3365a5a2d52a90f1637e37ad7088fd0a0adfa00a8e88f7bc414d9910",
-          "volume_mm3": 1822.8451847247213,
+          "stl_sha256": "6f9b1bc9698f7b34f39fc261ca35428b230844224f1f04157e9f485dedf9a09f",
+          "step_sha256": "14c8a7a0406ecf1332158dc7535a1f35d24c663716917567e663228898dea6be",
+          "volume_mm3": 1973.4587885025671,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-phone-detail.stl",
           "step": "right-frame-phone-detail.step",
-          "stl_sha256": "32a33c58ae0484cdfe403ab8a6f21767e552409c01a9ee97753f83187a3b1804",
-          "step_sha256": "e464e1d887a5a523aa6c5d4313a7c123e90826e1634c380abdb9dba007922d72",
-          "volume_mm3": 135.92630004411546,
-          "solids": 11
+          "stl_sha256": "892481f7e4df0f6b68d69bad9abcdab3c327ef105841bea906ab60f124352777",
+          "step_sha256": "4adfed3b16409afb7392b130add29c439102f6a24e07af58980d4048a766b8b0",
+          "volume_mm3": 173.650191704909,
+          "solids": 12
         },
         {
           "role": "accent",
           "stl": "right-frame-phone-accent.stl",
           "step": "right-frame-phone-accent.step",
-          "stl_sha256": "b25d86a39ba0fbd5e174a2a1639dbae0add6a827028d330120a605f1f2ed0c29",
-          "step_sha256": "4684b290085f2b0889a5a4371323f7392d077e1528ad22cecf97fe241981727c",
-          "volume_mm3": 3.8806370614359285,
+          "stl_sha256": "1c0a12626a11ff58403426840b16d34a5ce97f8ffc35fb7a59ac9ddc166992a7",
+          "step_sha256": "3d6f93d2f6857e58c3cb3e97f92b5df27d5d29e3677d7ec14e6f98e77bf9e1de",
+          "volume_mm3": 3.45653084433747,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "right-frame-phone-secondary.stl",
           "step": "right-frame-phone-secondary.step",
-          "stl_sha256": "6048e67de06adf4b596899e04631d215e4f00f43028cf00b93ca8ebc7964231e",
-          "step_sha256": "69db0c300dfa1daa9f23595f490f0548401056b78e7b8c1d3e4ad5b35d08aa31",
-          "volume_mm3": 5.265557368467718,
+          "stl_sha256": "0ec9cdc50e4b7067130bad86aedf413b6dd0d9f8871f58576283731b60a2b73a",
+          "step_sha256": "f36d7f80d8e167fdbc0b5967801f2c0c34e136a5008c0da4a7d9929ba45dd94f",
+          "volume_mm3": 4.160530844337472,
           "solids": 1
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-walkman": {
@@ -9266,40 +9290,40 @@
           "role": "body",
           "stl": "right-frame-walkman-body.stl",
           "step": "right-frame-walkman-body.step",
-          "stl_sha256": "37b8efe0a502d53c06bc00b1e77c41aec1fb28d625c24d882146c3e5dc4bccc0",
-          "step_sha256": "1263d82b2f3a350b33af50885f5b4ae391a32275d0d70ae3b4d62686cd4fcc5f",
-          "volume_mm3": 1819.266812301705,
+          "stl_sha256": "e0f9792ad1064e18c030478c0d25e9e1f04f6b5e513b4347c6aaa646bee67c80",
+          "step_sha256": "d6b99b04798ed8e696ba96fe1a2237fca1a224673a0cd27811fa22c38f62c06f",
+          "volume_mm3": 2006.075174999116,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-walkman-detail.stl",
           "step": "right-frame-walkman-detail.step",
-          "stl_sha256": "ffca8c345e091d23918d91f9727b58effcd0ac6eeaec279318bde9b85a9dbe7b",
-          "step_sha256": "f8cd853805c2a6895510bdb3af19c614fa22776a1ca0b6d5a3a51431e394b0ee",
-          "volume_mm3": 107.61398211628406,
+          "stl_sha256": "b2a9fbca49c93eb8a911b45ef24953063e2f1e124564854297c500839564ffe9",
+          "step_sha256": "a79b31c0f7a5a999664997dfa46068e5a8063d63568d5f5d8a1f97f3571248c5",
+          "volume_mm3": 107.6139821162842,
           "solids": 6
         },
         {
           "role": "accent",
           "stl": "right-frame-walkman-accent.stl",
           "step": "right-frame-walkman-accent.step",
-          "stl_sha256": "e832dfac5b202eb6e9eb7bbc2ad8b4dbec3ce56cb5b2f75d3b05f3274d883720",
-          "step_sha256": "77f087fc13684f7a5c96400052057563c2e22a53b0a94622c6c91ed2d5f0d9e0",
-          "volume_mm3": 36.60782285092523,
+          "stl_sha256": "a1495b3198b443115a5a826c8852e6a1e0831f41b9adbae3fd6ea26df2a42578",
+          "step_sha256": "68d840dbd93178630654dfcb375749ed2fc3dad6ebc3c8a3c69fb2541129e63c",
+          "volume_mm3": 36.6078228509252,
           "solids": 2
         },
         {
           "role": "secondary",
           "stl": "right-frame-walkman-secondary.stl",
           "step": "right-frame-walkman-secondary.step",
-          "stl_sha256": "6d41f3158f2baf2b9bffd1bbc1746eaafbd8f5a39905e765b2cdadaf9cab771e",
-          "step_sha256": "f64f3e4c9ef636962c598ae3a0f53afe63d027ea91cdcf68126a883c17f19248",
+          "stl_sha256": "0f9af9522b82dccee8b8086259c463f197786c657b9c3ab09389ae980a039886",
+          "step_sha256": "04b90de07f2367fc79f7a8105ba8393abff54a5eddf7125c6c1afb68b196234e",
           "volume_mm3": 4.429061929829748,
           "solids": 2
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     },
     "right-ipod": {
@@ -9310,40 +9334,40 @@
           "role": "body",
           "stl": "right-frame-ipod-body.stl",
           "step": "right-frame-ipod-body.step",
-          "stl_sha256": "bdd11269fa1d0558074c6dcfe69790d50114c8192f1ea4c24d72e62fe9efe919",
-          "step_sha256": "f20befae3d76a20c9e3a93f3382c228d65dbbc1511b776125917df46af4662ef",
-          "volume_mm3": 1837.2422125752057,
+          "stl_sha256": "b58a07d5facad2b9809b94331f89b010103bc78a78db5eb916d3656e58ae1bd6",
+          "step_sha256": "555ffb2bdb8f2e28d4d607227d1eae3f76df4a3a323327210faee2fe224f102e",
+          "volume_mm3": 1991.4050549809917,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-ipod-detail.stl",
           "step": "right-frame-ipod-detail.step",
-          "stl_sha256": "976c8268075c5772a89d62bea6fa49fc224c86a64bca289ef6f98d08e12c3662",
-          "step_sha256": "8df4dc2551d3f52ac9dd173ec8a948d40abc8a9d54105317ecb16ea6121411c1",
-          "volume_mm3": 101.66704416669128,
+          "stl_sha256": "94bab232343de90d755c0494505b95c864a4b40b7074e1255954354f76a5d8de",
+          "step_sha256": "a7e1e2fb86aecb720e2c0a1802d2c8430d4bb59e6cc6ff7b5763d0efd6c6fc32",
+          "volume_mm3": 135.19104204458384,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "right-frame-ipod-accent.stl",
           "step": "right-frame-ipod-accent.step",
-          "stl_sha256": "c121c5041f761503d02ec865a6a10b07ae8abf10873a2eb821fff818d2f05ce2",
-          "step_sha256": "6945f9335be92126a6ce7705aed5d355e12d61c30f2f4d7e3ae5c97f4e058684",
-          "volume_mm3": 20.809909737378796,
+          "stl_sha256": "599d217d9b76c23ffc60a8ca75401c828b8894b3ad987e3f9370b3fa736a8eb7",
+          "step_sha256": "c4f634d6f631bbc7076ce8b1a368d491e7f052ea5fd285bc9ea61e668e6467ec",
+          "volume_mm3": 19.86743194130186,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "right-frame-ipod-secondary.stl",
           "step": "right-frame-ipod-secondary.step",
-          "stl_sha256": "132bb1db96faa2a0f8250541c8935269dc898b517427a7447638c2cb5442092d",
-          "step_sha256": "2f12bfa178892828caf4a92db5d08d06d206efdaaf67d8879aa04588f1f81b5f",
-          "volume_mm3": 8.198512719466764,
+          "stl_sha256": "bb9268c46f2157fd1b75f7428e27f34a09b7d66c2a8553a704883735b510be79",
+          "step_sha256": "c7be6800e9020a98e8540d2d4bee0906557eeaba7cfc06758cc2a4375c07f574",
+          "volume_mm3": 8.262512929275143,
           "solids": 2
         }
       ],
-      "roof_mm": 13.39,
+      "roof_mm": 13.59,
       "color_construction": "complementary co-print volumes"
     }
   },
@@ -9409,7 +9433,13 @@
     "decoration": "flush co-print material volumes",
     "inlay_depth_mm": 0.4,
     "minimum_backing_mm": 0.8,
-    "physical_acceptance": false
+    "physical_acceptance": false,
+    "r4_construction": {
+      "ordinary_backing_mm": 1.0,
+      "collar_through_color_mm": 0.865,
+      "header_cover_mm": 0.4,
+      "glass_recess_mm": 0.2
+    }
   },
   "historical_export_execution": {
     "source_template_sha256": "748d1c3dd5432c2bf0965ea09b9729b94bf4c10ee4ae576175544fb8978b2f5e",
@@ -9420,8 +9450,8 @@
     "document_label_preservation": "validation/revI-document-label.json"
   },
   "export_execution": {
-    "native_sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
-    "exporter_sha256": "33d9277cff83477b946819f1a68a6680b79227c2df0c5b4ea0a4ac56d83f15c8",
+    "native_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+    "exporter_sha256": "1c0df1ef9be9b97eb230d6fb101114250cce65fa83e07571d015e584f7ac5395",
     "receipt": "validation/revI-mechanical.json"
   },
   "level_stack": {
@@ -9650,5 +9680,64 @@
     },
     "physical_acceptance": false,
     "schema": "flan36-level-stack-1"
+  },
+  "approved_frame_master_r4": {
+    "plan": {
+      "schema": "flan36-approved-r4-1",
+      "request_ref": "user:20260928:implement-R4-excluding-flan-tape-orbit-manga-nes-walkman",
+      "requested_outcome": "Implement only approved R4 designs in native CAD, exports and public viewer, with approved whole-face height and display centering, preserving excluded artwork and camera/configuration continuity.",
+      "approved_styles": [
+        "talavera",
+        "gameboy",
+        "snes",
+        "phone",
+        "ipod"
+      ],
+      "deferred_styles": [
+        "flan",
+        "tape",
+        "orbit",
+        "manga",
+        "nes",
+        "walkman"
+      ],
+      "master_path": "design/proposals/frame-master-r4/master.json",
+      "master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "mechanical": {
+        "frame_top_mm": 13.59,
+        "frame_roof_mm": 1.4,
+        "glass_top_mm": 13.39,
+        "display_shift_x_mm": {
+          "left": 0.2,
+          "right": -0.2
+        },
+        "cover_thickness_mm": 0.4,
+        "solder_gap_mm": 0.2
+      },
+      "constraints": [
+        "Consume approved paths and color roles literally; compare all top-face partitions against master, including full right reflection.",
+        "Translate full display module, contacts/plastics/solder reserves, mating PCB J2, glass cutout and clearance wells; inspect fixed supports and holes.",
+        "Preserve MCU, battery, caps, keys, mount datums and excluded artwork XY. Common frame geometry may change for the approved height and centered display.",
+        "Keep original default Flan and saved configurations; do not silently switch user frame choices. Mark deferred art as awaiting redesign.",
+        "Use isolated candidate, then save/reopen, validate nominal full assembly and all variants before adoption.",
+        "Native STEP/STL/material exports, scene and preview/downloads derive from same saved file; public site readback required.",
+        "Physical print and fit remain unqualified; PCB study is unrouted. Do not imply fabrication release."
+      ]
+    },
+    "source_sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e"
+  },
+  "r4_cap_clearance": {
+    "left": {
+      "conservative_envelopes": 1008,
+      "xy_clearance_mm": 0.2,
+      "volume_mm3": 0.0,
+      "physical_fit_qualified": false
+    },
+    "right": {
+      "conservative_envelopes": 1008,
+      "xy_clearance_mm": 0.2,
+      "volume_mm3": 0.0,
+      "physical_fit_qualified": false
+    }
   }
 }

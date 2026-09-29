@@ -6,8 +6,8 @@ The current mechanical source is [`mechanical/revI/Flan36.FCStd`](../mechanical/
 
 | Nominal measure | Revision I |
 |---|---:|
-| Frame maximum height | 13.39 mm, including flush decoration |
-| Display glass and Level upper shell | 13.39 mm, flush with frame |
+| Frame and Level shell height | 13.59 mm, including flush decoration |
+| Display glass | 13.39 mm; recessed 0.20 mm |
 | Battery underside / case floor top | 1.4 mm |
 | Selected flat KLP keycap top | About 17.87 mm, unchanged |
 | Key plate top | 7.6 mm |
@@ -18,7 +18,7 @@ The current mechanical source is [`mechanical/revI/Flan36.FCStd`](../mechanical/
 | Battery aperture | 12.5 × 34.4 mm plus local rear lead notch |
 | North overhang past adjacent cap | 0 mm nominal |
 
-The frame is **1.41 mm lower** than the previous 14.8 mm design; this does not reduce the selected keycaps' overall height. The [Samtec display connection](level-stack.md#what-makes-the-lower-display-possible) remains a dimensional candidate with unmeasured nice!view hole tolerances. Heights exclude the illustrative 1.2 mm feet. USB is only 0.045 mm behind the adjacent keycap’s north edge: this is a nominal alignment, not a physical tolerance guarantee.
+The frame is **1.21 mm lower** than the previous 14.8 mm design; this does not reduce the selected keycaps' overall height. The [Samtec display connection](level-stack.md#what-makes-the-lower-display-possible) remains a dimensional candidate with unmeasured nice!view hole tolerances. Heights exclude the illustrative 1.2 mm feet. USB is only 0.045 mm behind the adjacent keycap’s north edge: this is a nominal alignment, not a physical tolerance guarantee.
 
 ## Files
 
@@ -43,7 +43,7 @@ Parts retain assembly coordinates. Screw envelopes and nominal engagement are mo
 
 For the isolated migration from the preserved source, use the [floor/level reproduction commands](level-stack.md#reproduce). This keeps manual edits and the published source intact.
 
-For the current frame-only update and validation, use the [collection commands](frames-extra.md#print-or-edit). They preserve the stack and write an isolated candidate.
+For the current frame-only update and validation, use the [collection commands](frames-extra.md#reproduce-the-approved-migration). They preserve the stack and write an isolated candidate.
 
 To refresh exports from the saved reference without rebuilding or overwriting its FCStd, run `python3 tools/freecad/run_macos.py tools/freecad/export_revI.py`, then rebuild the renders and viewer below. The exporter records current provenance separately from the preserved historical export record.
 
@@ -55,8 +55,8 @@ Tested tooling: FreeCAD 1.1.3, KiCad 10.0.6, StepUp 13.1.7 (package metadata 11.
 python -m pip install -r tools/requirements-render.txt
 npm ci --prefix viewer
 python3 tools/freecad/run_macos.py tools/freecad/export_revI.py
-python3 tools/freecad/run_macos.py tools/freecad/check_frame_collection.py \
-  --source mechanical/revI/Flan36.FCStd --report build/frame-collection/sections.json
+python3 tools/freecad/run_macos.py tools/freecad/check_approved_frames.py \
+  --source mechanical/revI/Flan36.FCStd --report build/approved-r4/geometry.json
 python tools/render_revI.py
 python tools/render_frames.py
 python tools/build_viewer_revI.py
@@ -66,11 +66,13 @@ node viewer/finishes-check.cjs
 node viewer/flush-print-check.cjs
 node viewer/frame-collection-check.cjs
 node viewer/reliability-check.cjs
+python3 tools/check_approved_3mf.py
+python3 tools/check_approved_frames.py
 ```
 
 Browser checks need Playwright and its Chromium runtime; set `FLAN36_PLAYWRIGHT_MODULE` and `FLAN36_BROWSER` when using an existing installation. The resulting ignored `build/frame-collection/` files are reproducible with the commands above. Checks must pass and their recorded source hashes must match the generated artifacts. Historical delivery scripts and receipts describe their pinned snapshots, not the current collection.
 
-To regenerate the current PCB without replacing existing work, use `python3 tools/build_revI_pcb.py --output build/lcd-curve/hardware` with a new empty destination and compare its two PCB files. The source remains the immutable revH placement.
+To reconstruct the pre-R4 PCB without replacing existing work, use `python3 tools/build_revI_pcb.py --output build/lcd-curve/hardware` with a new empty destination and compare its two PCB files. The source remains the immutable revH placement. The approved R4 J2 translation is a separate guarded migration in `tools/update_approved_display_pcb.py`; its receipt records the final coordinates.
 
 For a fresh PCB reconstruction, run `python3 tools/build_revI_pcb.py` only when `hardware/revI/` does not exist. Run KiCad CLI DRC for both boards with JSON outputs at `build/revI/drc-left.json` and `drc-right.json`, then run `tools/check_revI_pcb.py` with KiCad Python. It checks the explicitly allowed footprint changes, preserved keys/nets and exact new outline, and writes the actual pad polygons. Then run `python tools/check_revI_outline.py` to measure every pad-to-edge clearance. Run these PCB checks before the final delivery check.
 
@@ -78,13 +80,13 @@ The macOS helper uses an existing FreeCAD installation. It disables optional `fl
 
 After an authorized publication, `python3 tools/check_public_delivery.py COMMIT_SHA` checks an anonymous full source ZIP against every Git blob and compares public Pages with that commit. Its ZIP and receipt are reproducible under `build/revI/`; it does not publish anything.
 
-The corner check inspects all 20 saved frame bodies against the native case outline and rejects the former R1.2 overhang. The earlier height study is historical; the current installer checks the revised connector, both lead profiles and display removal before accepting the lower roof. Neither study qualifies a physical assembly. `build/corner-stack/` contains ignored regenerable logs and staging for these commands.
+The current frame check inspects all 22 saved frame bodies and compares the ten approved top faces against the exact master and the frozen native planar artifact. The earlier height and service studies retain their historical scope. The R4 readback checks the translated contacts, PCB drills and guides; the exporter checks nominal assembled collisions and cap travel. Neither study qualifies a physical assembly. `build/corner-stack/` contains ignored regenerable logs and staging for these commands.
 
 The browser check needs Playwright and a Chromium-compatible browser. Set `FLAN36_PLAYWRIGHT_MODULE` and `FLAN36_BROWSER` if they are not on the usual path. It tests the generated file with HTTP(S) requests blocked; `FLAN36_VIEWER_URL` instead selects the published URL.
 
 The native configuration test also uses the scoped subprocess exit after its assertions, file writes and save/reopen readback to avoid the same Qt teardown crash. It does not suppress failed assertions or change installed FreeCAD.
 
-The catalog build verifies SHA-256 and Git blob hashes of every pinned upstream STL. The geometry exporter checks closed printable solids, pair intersections, all four case pairs, both cell variants and all ten cover variants against components and a nominal USB plug corridor. The case checker measures the actual saved solids at the side bands, floor and raised-rim joint. The separate keycap checker includes complete-configuration envelopes and a travel/plate bound. The service checker samples frame lift, checks closed insert capture, cage capture and the cell-motion bound against lead paths. These tests do not measure force or print tolerances. Source hashes and results are under `validation/revI-*`.
+The catalog build verifies SHA-256 and Git blob hashes of every pinned upstream STL. The geometry exporter checks closed printable solids, pair intersections, all four case pairs, both cell variants and all eleven cover variants against components and a nominal USB plug corridor. The case checker measures the actual saved solids at the side bands, floor and raised-rim joint. The separate keycap checker includes complete-configuration envelopes and a travel/plate bound. The service checker samples frame lift, checks closed insert capture, cage capture and the cell-motion bound against lead paths. These tests do not measure force or print tolerances. Source hashes and results are under `validation/revI-*`.
 
 `build/` is ignored and reproducible: native save/reopen trials come from `check_revI.py`; screenshots, test GLB/JSON and UI receipts from `viewer/check.cjs`; the viewer scene from `build_viewer_revI.py`. Source generations should be compared geometrically because STEP/FCStd metadata may vary. DRC JSON and pad polygons regenerate with the PCB checks above; service coupons regenerate with `check_revI_service.py`. The rim checker rejects the retained former contour, measures 216 preserved finger/outer-thumb normal samples, verifies native local tangent arcs and LCD-aligned flanks in the actual plate solids, and compares mirrored tray/plate volumes. `tools/check_revI_fasteners.py` clips actual KLP triangles to each screw-height travel slab for all 756 qualified reference choices. `build/case-variants/`, `build/lcd-curve/` and `build/uniform-contour/` contain reproducible logs/staging from these commands; review decisions are retained in the public receipt. The disposable contour study and reference copy in `build/case-variants/` are removed after acceptance; case screenshots and selected JSON/GLB regenerate with `viewer/check.cjs`. `viewer/performance.cjs` regenerates the current interaction timing receipt under `build/viewer-sidebar/`; `viewer/finishes-check.cjs` checks triangle/material identity. The native finish checker saves its current readback under `build/viewer-multicolor/freecad.json`. On macOS offscreen Qt, it verifies native face colors and save/reopen without calling OpenGL screenshot capture; the receipt marks that capture as unavailable. VTK renders and browser material checks provide separate visual QA.
 
@@ -123,12 +125,13 @@ node viewer/finishes-check.cjs
 node viewer/battery-leads-check.cjs
 node viewer/flush-print-check.cjs
 node viewer/performance.cjs --smoke
-python tools/check_print_kit.py
+python3 tools/check_approved_3mf.py
+python3 tools/check_approved_frames.py
 python3 tools/freecad/run_macos.py tools/freecad/check_keycolors.py
-python3 tools/freecad/run_macos.py tools/freecad/check_level_stack.py \
-  --source mechanical/revI/Flan36.FCStd --output build/level-case/recheck.json
+python3 tools/freecad/run_macos.py tools/freecad/check_approved_frames.py \
+  --source mechanical/revI/Flan36.FCStd --report build/approved-r4/geometry.json
 ```
 
 `build/keycolors/` and `build/themes-print/` are ignored, reproducible test outputs: JSON/GLB downloads, palette collections, print ZIPs, screenshots and a native save/reopen copy. Native frame comparisons are included in `install_level_stack.py`; the earlier slim/flush installer and raised-frame sources are historical. The [mount study](slim-mount-study.md) produces separately named experimental geometry and a measured report under `build/`.
 
-The [slim/flush delivery receipt](../validation/revI-slim-flush.json) records the previous 14.8 mm stack and its nine print kits. It does not establish acceptance of the current 13.39 mm Level update; use the Level installation, geometry and subsequent export/viewer readbacks described in the [reproduction guide](level-stack.md#reproduce). Previous [customization](../validation/revI-customization.json) and [Label-only identity](../validation/revI-document-label.json) receipts retain their historical hashes. These digital checks do not qualify the keyboard for manufacturing.
+The [approved R4 frame implementation](frames-extra.md) supersedes the 13.39 mm shared-roof snapshot. The [slim/flush delivery receipt](../validation/revI-slim-flush.json) records the previous 14.8 mm stack and its nine print kits. It does not establish acceptance of the current 13.59 mm R4 update; use the current installation, geometry and export/viewer readbacks in the [approved-frame guide](frames-extra.md). The older `check_frame_collection.py`, `check_level_stack.py` and `check_print_kit.py` describe their historical geometries and palettes. Previous [customization](../validation/revI-customization.json) and [Label-only identity](../validation/revI-document-label.json) receipts retain their historical hashes. These digital checks do not qualify the keyboard for manufacturing.

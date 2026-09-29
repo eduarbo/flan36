@@ -44,15 +44,15 @@
     },
     {
       "path": "mechanical/revI/left-key-plate.stl",
-      "sha256": "e44195a8bcef6e49d979ff1a5d5ab11cebf23733e945b735a3daa847e933b9fb"
+      "sha256": "0acd0ff42d32ead9a782dfede64a003648537569fd6f557afdded064658dc4a0"
     },
     {
       "path": "mechanical/revI/left-electronics-lid.stl",
-      "sha256": "84bd3bf04139576478b7d3b84142231779a18539bef0e70bb45155de68f498cd"
+      "sha256": "3c542bda862eafe083ba4bd1844f6f9317ec253d652f7fb800996162b045760c"
     },
     {
       "path": "mechanical/revI/left-pcb.stl",
-      "sha256": "330e4e3d8ad76f6a659f5fc01d5a6e4d20a5b25d854e9b9258412025ab1994f1"
+      "sha256": "6ec7cc1745ffce57aab5afe422eba571ba564cc7e1394f731491b99373005fca"
     },
     {
       "path": "mechanical/revI/left-battery.stl",
@@ -108,31 +108,31 @@
     },
     {
       "path": "mechanical/revI/left-display-visual-0.stl",
-      "sha256": "67f567582f5efdfffdd91424b6034b038cfd54174a87e07a550ec59543807627"
+      "sha256": "9fb2024ddd9e2692c8f977549e06a5588867f63654e7d54b4deadb97a0104cd4"
     },
     {
       "path": "mechanical/revI/left-display-visual-1.stl",
-      "sha256": "e24225d7ac3bdaacb019ea0cca8752b080c1184840b5423beb8ade9a91025970"
+      "sha256": "7c83864f8513538123f912b6a0661d77824a74b03eee79ecca19100a0a42dd54"
     },
     {
       "path": "mechanical/revI/left-display-visual-2.stl",
-      "sha256": "81fa9334b3b3978a966756de9e6cb5585514cb523ebb993cfe95d242912b7268"
+      "sha256": "7eb9b1917ccc2ef962829af35420daddfe72b907a4cfaa608e95eb370e2d3e68"
     },
     {
       "path": "mechanical/revI/left-display-visual-3.stl",
-      "sha256": "4cf6c10881d13e802a8a3576199e096cfc1658e4bf05d72514ccc7aa2c23f237"
+      "sha256": "9980f09b9045f8d176e2dad6d9124cfd44dfc2f3a0a6ace0f4b9af4b870ae3d6"
     },
     {
       "path": "mechanical/revI/left-display-visual-4.stl",
-      "sha256": "a1cad2d0316aa43f42821f2f53694808b7f3cb0a2a0f5796a5383ecd3093fa01"
+      "sha256": "2e6560575d83069984d102c4a3b4a6f0326d583e92cea6da5e6e39ee4593898b"
     },
     {
       "path": "mechanical/revI/left-display-visual-5.stl",
-      "sha256": "b10b646b951c8b7e506c7f35782586ac877485b0c3b9b67ab6f564002ff050f7"
+      "sha256": "1263aa016ba2f64dd821a21717aff71c7353ae8dfd213601a26a4382a24b88ec"
     },
     {
       "path": "mechanical/revI/left-display-visual-6.stl",
-      "sha256": "00c11fd0dec12a34f5bdfda08cdcaf4dbaf4da379a2b2695958f6414a93facfe"
+      "sha256": "e407b79bd42785fb4623579d123f5d3a6b36013e83336eeeac4376ff00f9c6f6"
     },
     {
       "path": "mechanical/revI/left-cradle.stl",
@@ -148,7 +148,7 @@
     },
     {
       "path": "mechanical/revI/left-display-sled.stl",
-      "sha256": "40e0841c00feff40c438ab701c143bfe1c197cbd03dddf2d74f1df433bbfc65a"
+      "sha256": "9f27c297b06e9dfec777dc480e5a4cda967ebf402964abe50b58733b84fe5861"
     },
     {
       "path": "mechanical/revI/left-mcu-sockets.stl",
@@ -156,11 +156,11 @@
     },
     {
       "path": "mechanical/revI/left-display-socket-visual-0.stl",
-      "sha256": "0e07042dad4d7f611142552e708eeae502052ac042a634459d407a7a52a42871"
+      "sha256": "77dc073af6571809ee10935692d3c00e005b74fff132a0e8e9c2ab75bb3778cc"
     },
     {
       "path": "mechanical/revI/left-display-socket-visual-1.stl",
-      "sha256": "6465283e1a35336267e40c03628eb8288d556adcbbdd726e0a75e299892f7492"
+      "sha256": "059f3c3f7fd14fa6749fd3babccb4ba0d7676f9469b35ae79d5544218637fcce"
     },
     {
       "path": "mechanical/revI/left-jst-visual-0.stl",
@@ -248,227 +248,227 @@
     },
     {
       "path": "mechanical/revI/left-case-level-plate.stl",
-      "sha256": "e44195a8bcef6e49d979ff1a5d5ab11cebf23733e945b735a3daa847e933b9fb"
+      "sha256": "0acd0ff42d32ead9a782dfede64a003648537569fd6f557afdded064658dc4a0"
     },
     {
       "path": "mechanical/revI/left-frame-flan.stl",
-      "sha256": "84bd3bf04139576478b7d3b84142231779a18539bef0e70bb45155de68f498cd"
+      "sha256": "3c542bda862eafe083ba4bd1844f6f9317ec253d652f7fb800996162b045760c"
     },
     {
       "path": "mechanical/revI/left-frame-flan-body.stl",
-      "sha256": "80adbd41770c4f358444af638bdfdbc7dbb2a14d43f527cccddc24ddf716ae5c"
+      "sha256": "3d01b92c9ad86e12cf9d32fd515fbcc85bf72195b1d490e72165b5735da164ff"
     },
     {
       "path": "mechanical/revI/left-frame-flan-detail.stl",
-      "sha256": "70776872e7d0669a08b241c6a20f675b90c103af415a69d6ff5c98927881e292"
+      "sha256": "7132ee56ef88fc501a2740813f76e5f096c1f00a416b8d85d96a0f6872cc2762"
     },
     {
       "path": "mechanical/revI/left-frame-flan-accent.stl",
-      "sha256": "aac4ed818087a959f2b98d87f0d6fdbe71c30bc4f0872773ed5efe2e56f40932"
+      "sha256": "1fe33515e856f607ee20d8e2161f7d79ef73bc5a9d96e4d3759a46e368e9fab1"
     },
     {
       "path": "mechanical/revI/left-frame-flan-secondary.stl",
-      "sha256": "06e959bb9d2818412dfa77cd47dcdb7ce8eb23ec395dec11d54d5aaa48ca5227"
+      "sha256": "f7994b0571b4f71a198a1ef37e04dc439b33bce9fd80b66e25c6f355efe37f57"
     },
     {
       "path": "mechanical/revI/left-frame-tape.stl",
-      "sha256": "40a89bd5f462f394b4d55ccd7d85e8f7ffb6e300b0532ecc1c4c78b1aabc591e"
+      "sha256": "c957abd807f8e09f40dcbb3460bfe59eb63ca8a03580348fb5b04f3b8534cd11"
     },
     {
       "path": "mechanical/revI/left-frame-tape-body.stl",
-      "sha256": "c5de2edf56428cedeab8e280de87a9d180c115492c3652ea4a66a7ca73cb0a89"
+      "sha256": "3f80e5c334787f6ddba225aaf20bd02986bbb1aa94f999257c8e4beb7f71bd51"
     },
     {
       "path": "mechanical/revI/left-frame-tape-detail.stl",
-      "sha256": "7eb03a61ba253eceb0cf92819791cfca10e01e82779d73a467b52a9b070ef603"
+      "sha256": "18d14882cb91e26526af3d2a2a8061924c23ddf7a75ee11cf26413cffb7bb285"
     },
     {
       "path": "mechanical/revI/left-frame-tape-accent.stl",
-      "sha256": "2531be35a303b928f6513fb52587ff5b05706822cd6fe5ce227d70649b41ac14"
+      "sha256": "70fc5770eb41a3e43fa5d9bba7282e9898e41181c6bbc107f66ee04d65e3821e"
     },
     {
       "path": "mechanical/revI/left-frame-tape-secondary.stl",
-      "sha256": "06bc68174339b5c5d227b840bbd5744e3b671b927872132c5c418dad55043418"
+      "sha256": "93928fb01b5cc2dd05071641108d60db3d900a779dd316de73b382a038c2c8b0"
     },
     {
       "path": "mechanical/revI/left-frame-orbit.stl",
-      "sha256": "19c3e8eb0bd637a0cab635a72bc878fd781517b994bbd6cd8de811da3dd65254"
+      "sha256": "a4d577bef56ad34c9791b18a5757614c8bdeb8065adfed179ac275b4bacc22e6"
     },
     {
       "path": "mechanical/revI/left-frame-orbit-body.stl",
-      "sha256": "ea32bf469de78a6e029b35739eed73a399c593baa1ef5a9c4b31199a3c0f8b1d"
+      "sha256": "072c362ab27586c522b44e245b4981397211afc309e796ef6b600161aee27c84"
     },
     {
       "path": "mechanical/revI/left-frame-orbit-detail.stl",
-      "sha256": "dc04454954ba4be892b38a0555f4ed2956196e0ce42746b5df97a193c6f0c1c6"
+      "sha256": "5fc3b49e4733501f26e6b084df9e757791b92c0d4a0357ee85ad9c3f048ae686"
     },
     {
       "path": "mechanical/revI/left-frame-orbit-accent.stl",
-      "sha256": "2648e4d9b8a07515eeb0517ca06f4b10192e0ed4f6747d674bf4d1f303771e76"
+      "sha256": "9b991e7ac03000b4f5a8ba763724982181973aebc4a5023e87f51c5b8d0c099f"
     },
     {
       "path": "mechanical/revI/left-frame-orbit-secondary.stl",
-      "sha256": "7db48eff671f805668b1ef8ab4b4ccf980e6a6faf83f1ae80558c586db07a34b"
+      "sha256": "4fabc1cedf9cf784f7bd0365692721915a9d4f231cca2fe51b8edbb719a3e7f7"
     },
     {
       "path": "mechanical/revI/left-frame-manga.stl",
-      "sha256": "b8042f845673d4206b8fd5ab2c0a9741d1b5fea7b2405d8e673b1829bd29a56e"
+      "sha256": "36a48c15e7bf01af8277a576a66ea9098b92e60d3bd02b17d531231e63d40dc1"
     },
     {
       "path": "mechanical/revI/left-frame-manga-body.stl",
-      "sha256": "bf9ea2f0e268e8b71e42b8f514e03bde2f08c93bed1350759f569a962b5488f5"
+      "sha256": "c3903ed574612b9ca56e9c71a8217b55e33136525030146d4e1bf4bfa4fb13c8"
     },
     {
       "path": "mechanical/revI/left-frame-manga-detail.stl",
-      "sha256": "45ed5a0d4f37a04898521f266b8935a17eeb4d39bac1522d7989ce3e1b7d6d28"
+      "sha256": "fb20aadd58a54a6c77d06c74288fc4f320872a94ae711ef25c1981db2eada404"
     },
     {
       "path": "mechanical/revI/left-frame-manga-accent.stl",
-      "sha256": "5b9bb47e78efae675ce05a55a1c21b671ddcbe851a099386e824acc36c12fcb0"
+      "sha256": "21729df3d7885561de811275db5ee6eeb1550a21f46d95cec060fa64cec3d78f"
     },
     {
       "path": "mechanical/revI/left-frame-manga-secondary.stl",
-      "sha256": "2c051d79c9f323f2c20a680ad13e456002e15f3cd7b35311ea6fd4646d95f8ba"
+      "sha256": "2fc3de35674bf75cf877370aa713a23cf2af4fafb1307f444771dad65f484adc"
     },
     {
       "path": "mechanical/revI/left-frame-talavera.stl",
-      "sha256": "230c11c87a194e298c9a3430e6d613a86ac98020a7e900fd4fb9c7f70aa198cd"
+      "sha256": "e4bd1ca2530326f025ace5968ae27ea7f3ade18cbf84d50cc9e2aada156e632c"
     },
     {
       "path": "mechanical/revI/left-frame-talavera-body.stl",
-      "sha256": "9ca1bfd4119fc4be014eb294c38be05da6f12841adb18f87750a0e77b87f93a5"
+      "sha256": "3a8acbed4b19159681a0d5b09a767e97011758ad4da6903ecc23f29add2700ef"
     },
     {
       "path": "mechanical/revI/left-frame-talavera-detail.stl",
-      "sha256": "890cc2e1a80c83105283c46f141d5fb87a48ff10591f20070a2ca294da009972"
+      "sha256": "03f5b1647df21719f311372854b594a5b69c3d814f977bdb0fc75e41b5124696"
     },
     {
       "path": "mechanical/revI/left-frame-talavera-accent.stl",
-      "sha256": "07bc809cb2939cda791bd8f56584f07144e676dd03b1fd43f67ebf963716946f"
+      "sha256": "194d65a7346ca6b5cda4454fe39a7d508e00a2edf9ac168eb802a0f96e2b5f2f"
     },
     {
       "path": "mechanical/revI/left-frame-talavera-secondary.stl",
-      "sha256": "ffa8e22c2335bdb1c4d269e038e8aac31e1abe8678d282558487c35918c98c5c"
+      "sha256": "d685908fdcffb45d09c128f6d7b06c9ea012a935b91586bd88552acd90c8edcd"
     },
     {
       "path": "mechanical/revI/left-frame-gameboy.stl",
-      "sha256": "08e9f4fed223efc9c23b5abad1f7608181b80c0a7c22e6f9e52bb03a3eca49fe"
+      "sha256": "cff32c6b996d020607b62e260a0716be897a9eebf1224e4f8f94ed108737b7af"
     },
     {
       "path": "mechanical/revI/left-frame-gameboy-body.stl",
-      "sha256": "68c0117b235369812e35be94d64bcd8ba62cb9947f272a7250b85bee2a795f07"
+      "sha256": "fa63d7e63c3abde49d9f9d925b1005219854c10c67fa6c82a7a10d09d194f4ff"
     },
     {
       "path": "mechanical/revI/left-frame-gameboy-detail.stl",
-      "sha256": "01508533426384bcd86073c0d3ac8ecf0269210332c12f0289f55ef495eee27b"
+      "sha256": "6657a4824087597351d94e62e5605492d0f9518a7e7b74e97d15187848121d38"
     },
     {
       "path": "mechanical/revI/left-frame-gameboy-accent.stl",
-      "sha256": "42ebac1f1c94b23a26d47e6deb067719bc4e31ac3cab290b5daf3707a163d4b4"
+      "sha256": "5f9a219c521923a0f41671accce2293880ed70526ab09d19a7b20afedd4a8732"
     },
     {
       "path": "mechanical/revI/left-frame-gameboy-secondary.stl",
-      "sha256": "f7e68253e434535bae5989027861def937bf91dc48516708987908569d635426"
+      "sha256": "c2dde498438d394f82ed1c5c9e02a90a2ed30c32222ac993874e2adc6bcbd4c5"
     },
     {
       "path": "mechanical/revI/left-frame-nes.stl",
-      "sha256": "36ee531f4bbbe638e33fca69de2000849e0808ce1846aa9d5ded4bafcaeb8f20"
+      "sha256": "345461db6c7b1b576b9a1c3d06d20415bb37ad1721556fc75b9489c7296e51bc"
     },
     {
       "path": "mechanical/revI/left-frame-nes-body.stl",
-      "sha256": "77fe7deb8f20e1d9fb6f21157885350fe030dca9ccd33358ad5221cc56785e32"
+      "sha256": "492bf4d7e06c3c68e33798ec65172c2101288e7f497b661df3e4a8476635b98b"
     },
     {
       "path": "mechanical/revI/left-frame-nes-detail.stl",
-      "sha256": "81a3768e842cee128bb519ed604fd146b9140da1ca1e1bab011c1c8898b4f755"
+      "sha256": "5723ef62ad66fb040241fca2b7abb70841d4707cd3f005f06ab5b947ab4cf322"
     },
     {
       "path": "mechanical/revI/left-frame-nes-accent.stl",
-      "sha256": "568681d7dd9f96d3c0651958a179e10979f487a8a263f25bf6dac2a0a1121791"
+      "sha256": "f3e139b1287eed1d7e414542003a6020c891b4d0faabbb140846afdcded6c893"
     },
     {
       "path": "mechanical/revI/left-frame-nes-secondary.stl",
-      "sha256": "02554f2bcfc410175a6e3cdf52271e8e9249bdd35227774dff8a3df08a7bf0c5"
+      "sha256": "09f4b505812b231b81f66dad4b874073a05cb7937f9c0743a9bc03297241e46b"
     },
     {
       "path": "mechanical/revI/left-frame-snes.stl",
-      "sha256": "f1ddfd0ad0b06ddc749ebada4afaac6b30eb5342410ba6d95a939fa28f734d0e"
+      "sha256": "42ad227339078602cc9d7de579e61cfd90471e75164b27f2fc21008056d03838"
     },
     {
       "path": "mechanical/revI/left-frame-snes-body.stl",
-      "sha256": "ff9986ca755d7167ad1c87ac6ad091ae16182e566d34c5eaf02c98ded864df7f"
+      "sha256": "b73c831ee7fe155be8177c5d53715d3355c4aed621f4af0319584f757c062b5b"
     },
     {
       "path": "mechanical/revI/left-frame-snes-detail.stl",
-      "sha256": "7759dcdfd5c1b4b10add6152e85af2c12ef1fa2bdbdc3d5d50bfb62a4521be80"
+      "sha256": "9c1ca353fcac7c5d3f24f13ac9c0c1e144d62e30077df25c07facdd75b6440a4"
     },
     {
       "path": "mechanical/revI/left-frame-snes-accent.stl",
-      "sha256": "02d7757087eb9606ab05fe5302bfe51a81431dc36fb61e97b04a666f6cd4b7cc"
+      "sha256": "b64c2e9e303db594f9d2f48b2d804a0b903e4acd4309a42040ed8db23cef2f62"
     },
     {
       "path": "mechanical/revI/left-frame-snes-secondary.stl",
-      "sha256": "dcef8b94e74a273777873be96a986282521b35af7a955c4cddeea40d05e6f274"
+      "sha256": "9bc1000f3098cb15dc0f866b2e2f9e9f945bc47e36930fb65d27a3d891299ac5"
     },
     {
       "path": "mechanical/revI/left-frame-phone.stl",
-      "sha256": "88b3856181c6d30a8834b040c4c6a15b1e65fb67b75fb8927ce8a7d5b564aa91"
+      "sha256": "915c2e1a0317419fef8ebcad80e9878bf7e18b5c3bde750080bb4e2156f4d2a3"
     },
     {
       "path": "mechanical/revI/left-frame-phone-body.stl",
-      "sha256": "0cfd106571ea889d6582d6f5cb1b35f7b026474044584ac514f9143de85cd1fc"
+      "sha256": "2925243d155bb410d1ad521bc36d9478d2300b06641f9ad21ab3c31699a65457"
     },
     {
       "path": "mechanical/revI/left-frame-phone-detail.stl",
-      "sha256": "acd1538992425412ca78c665ab025e4b1d873fdccf568eddb1709f4c04b927bd"
+      "sha256": "b1d8ed722c7b36603ead9612e1ff2d649a3be63a38e55f66e5b7c79c972ae54c"
     },
     {
       "path": "mechanical/revI/left-frame-phone-accent.stl",
-      "sha256": "ed8adb981930ac976fc73c2c69d0d6d50178ddf2f8dcca91fa675b8d409bd80a"
+      "sha256": "f3cd75372536da69f75a6ed459cd5492fa8232fc7a0a5d1cc51dbb7360e5cbb2"
     },
     {
       "path": "mechanical/revI/left-frame-phone-secondary.stl",
-      "sha256": "2ed70212010aabedaa18c42366df455ccfec9b79577477bae50b8fe5ae873764"
+      "sha256": "d2d1d9b6e621060a65d7e3ed1924fa0606da987c2e734fa10985eab973fd4266"
     },
     {
       "path": "mechanical/revI/left-frame-walkman.stl",
-      "sha256": "a5647b6e0e8354ad9bb10aea28d3315821d644770877f6f215a974558092303e"
+      "sha256": "041c29b34db9112d84a98a5cc5a5da604eeb8d892a1464d22f3cd21910241ff8"
     },
     {
       "path": "mechanical/revI/left-frame-walkman-body.stl",
-      "sha256": "1bde0a59342207200fff57008cd954a993b3116a72275926d8ee98f973e1b617"
+      "sha256": "fa03d1c7087c1ad4224075aa2c10ab6ffa81e1a93a7a40b45c300b3ff0d59c89"
     },
     {
       "path": "mechanical/revI/left-frame-walkman-detail.stl",
-      "sha256": "cfc1f77630f8dfddab3502a3a438bcd3c07dc39a673ce9a6b51d5789d9be39ef"
+      "sha256": "9e199eb041d2647afa6f4dec4103bf568924fbb4ee7e4396c5a4e16085039aef"
     },
     {
       "path": "mechanical/revI/left-frame-walkman-accent.stl",
-      "sha256": "39fd183e31d2010f04a216d5e59ef90ef3a3dbefdeb38555acf30d4d6d823dfd"
+      "sha256": "7d0ecaba7040400771cb798d8f73544e6e3cdf279acdfa6b335a0e746022c503"
     },
     {
       "path": "mechanical/revI/left-frame-walkman-secondary.stl",
-      "sha256": "00b012e76a260214f057216d73756c064f87c498056560c4858a93772e5d1236"
+      "sha256": "09ec1d734532ea62683aace6b3a5aff9b2ba90c4ca5104b5a868628c1ccdc3aa"
     },
     {
       "path": "mechanical/revI/left-frame-ipod.stl",
-      "sha256": "3cef354cc9776d6e97b54c90f825277b905e82375eb6448c60410eb38b7d06a4"
+      "sha256": "2597399e011159dd59037480d2ef309a145c2986f9b300a15a613cb835b45961"
     },
     {
       "path": "mechanical/revI/left-frame-ipod-body.stl",
-      "sha256": "be9f2099ba7d00bab151999505c63cfbb472e473da31be119f1c4e49786de3e0"
+      "sha256": "3f60bff33c0ef71ccd25610d5ce88ef6bc2387b5075b51c159718fc94183586c"
     },
     {
       "path": "mechanical/revI/left-frame-ipod-detail.stl",
-      "sha256": "bb015877273ae31faf3ca9171d7f5e021928a0df227e70b6aa1f038c54f35a72"
+      "sha256": "03f5b1647df21719f311372854b594a5b69c3d814f977bdb0fc75e41b5124696"
     },
     {
       "path": "mechanical/revI/left-frame-ipod-accent.stl",
-      "sha256": "2a59b28a57dafd143178d100866fed6d817c635215a44d01b31ff1ee9d1959fc"
+      "sha256": "e4953445f498f81fe32321c9f797023d78a477ed9bf40786ab5ba3fd722082c5"
     },
     {
       "path": "mechanical/revI/left-frame-ipod-secondary.stl",
-      "sha256": "e1676d99b80910a03760447e7e21958899b6c3bbf8b16c3822a7ba8b484a5031"
+      "sha256": "67d32c96f2a10b252f6b0422fbb382c3d641d2240b8a0c250b1af059d698620e"
     },
     {
       "path": "keycaps/variants/Choc_Stem_Choc_Size_Normal.stl",
@@ -564,15 +564,15 @@
     },
     {
       "path": "mechanical/revI/right-key-plate.stl",
-      "sha256": "11bc24956bba20f3969cc49609cf8b9aa7a4ccad5144ff854516d7636a9dc1d5"
+      "sha256": "7fb266452f5b73c0a60102e29ebdf3200bde414ec07d73072b68474e2486a425"
     },
     {
       "path": "mechanical/revI/right-electronics-lid.stl",
-      "sha256": "5499ab5aa4c6bfeff10d5e383d7f1df538920d51aa31778ca4f2114d5060859c"
+      "sha256": "e499c9d49167bebcc6d05fa8f18d11df6ffbb48fa52c71b34996f116fc10ff3c"
     },
     {
       "path": "mechanical/revI/right-pcb.stl",
-      "sha256": "a7143377c3c43dd673d0dee8b0324ca49c21daa7a77721882975b96256a5f28a"
+      "sha256": "ac525b1dd91bb777ce21a803241baf1756c5e67082c44cbe4057f66f464b150e"
     },
     {
       "path": "mechanical/revI/right-battery.stl",
@@ -628,31 +628,31 @@
     },
     {
       "path": "mechanical/revI/right-display-visual-0.stl",
-      "sha256": "a36a00b65322b28d59a5c8aecbfbd265168eae3618e1e50b6f853460f57bbece"
+      "sha256": "886e813a1c950679fce604705b3fdb3cf2c8eae6b6eeb0b19b549e778a1cf5b8"
     },
     {
       "path": "mechanical/revI/right-display-visual-1.stl",
-      "sha256": "dd47a8f0c5458006cf630a5e72adae1fe39d12f65fc79192061736c472370756"
+      "sha256": "072acaa4dc6237cb7840099240f842469431fc8b6c800a4a270b859ecedb1f88"
     },
     {
       "path": "mechanical/revI/right-display-visual-2.stl",
-      "sha256": "42a32eda6dc7d2582ccb47af193bdd70b49b53f2ef9debe5c5d18dddde40e6e8"
+      "sha256": "ec5e3717f7a30f278446c4d7ee840af8a21bbde28fb112a3f065794c8296e63e"
     },
     {
       "path": "mechanical/revI/right-display-visual-3.stl",
-      "sha256": "1fb8eeb9bb3b04331e51cc08a54e2e4a0270f72bdaf95367d1f3dd7d5a67273c"
+      "sha256": "5ba9eef2cebe0f964e6e140c85264f8869e70697e5b449bf731c74a457876788"
     },
     {
       "path": "mechanical/revI/right-display-visual-4.stl",
-      "sha256": "8123f75b8a9073d7272a0fb389b4edcfa02d396cf78897f1fea5e0d015013eae"
+      "sha256": "346a3494b84e8c88d122ad5b1126bc946351f460e8f7818dabce97b121a0bfa9"
     },
     {
       "path": "mechanical/revI/right-display-visual-5.stl",
-      "sha256": "05df6c038198465d044447f3822fe984ccb41552cf8b71a9beae6e650e2e1991"
+      "sha256": "42d5bbb5f3385464643ff7bb72b1990056fd8727c55c490b6df18b233990dba0"
     },
     {
       "path": "mechanical/revI/right-display-visual-6.stl",
-      "sha256": "b16231673b0f8fd665efa38be468f402084926bf3518bc37f10598e9b8db9ad5"
+      "sha256": "d52192985d8b5535bc130699e2b99b78ba953242079c3ac9d4fcd1d6e724f93d"
     },
     {
       "path": "mechanical/revI/right-cradle.stl",
@@ -668,7 +668,7 @@
     },
     {
       "path": "mechanical/revI/right-display-sled.stl",
-      "sha256": "0b9d3a408e0c4ec22e6ff8671a33f21101a373f1781031efacf955c4f35d5c0a"
+      "sha256": "282d9e0d68d0a3762ab0dfd949a9af21951ba3040589548839caac4a8935c351"
     },
     {
       "path": "mechanical/revI/right-mcu-sockets.stl",
@@ -676,11 +676,11 @@
     },
     {
       "path": "mechanical/revI/right-display-socket-visual-0.stl",
-      "sha256": "b2a4d9bcaffa1db0c308fd64bff41f24488ec25867d69c6d3ff29709e1a46525"
+      "sha256": "e6ec66153dabb040120be800e85977a766a043afcc084a371040474d0b7dee6a"
     },
     {
       "path": "mechanical/revI/right-display-socket-visual-1.stl",
-      "sha256": "2588109a2529b6012189ddb1e0f32c34faa2c233deb93c603baa7d921c84cd4a"
+      "sha256": "866a47533806b5ece8014c7769bcfb854892cbcf8ec8e81050ec4881d3f3933f"
     },
     {
       "path": "mechanical/revI/right-jst-visual-0.stl",
@@ -768,227 +768,227 @@
     },
     {
       "path": "mechanical/revI/right-case-level-plate.stl",
-      "sha256": "11bc24956bba20f3969cc49609cf8b9aa7a4ccad5144ff854516d7636a9dc1d5"
+      "sha256": "7fb266452f5b73c0a60102e29ebdf3200bde414ec07d73072b68474e2486a425"
     },
     {
       "path": "mechanical/revI/right-frame-flan.stl",
-      "sha256": "5499ab5aa4c6bfeff10d5e383d7f1df538920d51aa31778ca4f2114d5060859c"
+      "sha256": "e499c9d49167bebcc6d05fa8f18d11df6ffbb48fa52c71b34996f116fc10ff3c"
     },
     {
       "path": "mechanical/revI/right-frame-flan-body.stl",
-      "sha256": "6ec05d3ba87570d1473718dc8b3c53f123dc9768614ebd928c3de7a7b74bc150"
+      "sha256": "5a7db435a046d74ea492e017dcf649016aff1f8792f9f88f6e49874705da2f97"
     },
     {
       "path": "mechanical/revI/right-frame-flan-detail.stl",
-      "sha256": "6c0ed78726eb45305f83b84f72878a905bd9a5a964be029d7febf01b9203a9ab"
+      "sha256": "7f89d271a913b785fc04ea8742d37a80d4c837063812cfe5f4ee12fa718df012"
     },
     {
       "path": "mechanical/revI/right-frame-flan-accent.stl",
-      "sha256": "aa0af7049932e142127927bcc61bbfa13b19c83e8e96cc4d63082e2772ad2be3"
+      "sha256": "e05b762967dbbc0b7cc8bf30d4d5a37c301f603455ba7afd2c53ecf152ba4251"
     },
     {
       "path": "mechanical/revI/right-frame-flan-secondary.stl",
-      "sha256": "cddab8693c9f92ec96b1b791c6e56bfbb8a7397367db462bde7cb2b53f76cc87"
+      "sha256": "59ce4b3491e0b6d54b07a254dc9bc9a65990db242911e819616b940e8392edf1"
     },
     {
       "path": "mechanical/revI/right-frame-tape.stl",
-      "sha256": "b9a8422fdadf7b108af165587d98c37cb6b8eb7adcee1ad0b2454141abc1a0f1"
+      "sha256": "fd6f9ac5ade67724be4a0ddf9f2d85e2155f1981db5e501b73ffb8ead782ebdf"
     },
     {
       "path": "mechanical/revI/right-frame-tape-body.stl",
-      "sha256": "f3bf8ca36f8d03a4c44cdd5811c4830c9ac2269e0baa0c2ea888d79adad1b243"
+      "sha256": "62ed0082f648ed7f54889db8d2a7632d606d586dd642718a3a51bc2f7a4d7c11"
     },
     {
       "path": "mechanical/revI/right-frame-tape-detail.stl",
-      "sha256": "555d7a9600bf103d5325a73a7c31afc018118393d8fa3c632dc302576e445665"
+      "sha256": "651300e0a6674a1d9dccfd8fefb9fc539c12bc665c8b018ebe2e69446f2be55c"
     },
     {
       "path": "mechanical/revI/right-frame-tape-accent.stl",
-      "sha256": "e160964e4ebf9a8639bc9387b7528eb95d63438378de8bab2b41fd05be60a041"
+      "sha256": "81e4e4d1b2de5f10a1f7091617f504479fb1c07fabb21a8944effa945e5e2c57"
     },
     {
       "path": "mechanical/revI/right-frame-tape-secondary.stl",
-      "sha256": "36a3d7c6f4f676b0a3ee263f72fb5dbe24d677d906940004a73f34359746e316"
+      "sha256": "33a9c4a0b3e9d5646b999349fcff909a0d03d7c07ab8f3432b7a51f1fd7283b4"
     },
     {
       "path": "mechanical/revI/right-frame-orbit.stl",
-      "sha256": "528f084bc06ecbb90bd35ae2724319be326c8de34e72db75a1352da12ba6d779"
+      "sha256": "db3660c2295194c6a7518288636814aae84bf428fe5025b46f2dff4183d39ca6"
     },
     {
       "path": "mechanical/revI/right-frame-orbit-body.stl",
-      "sha256": "31244ad06302d106c2935559f9fb4f44dd572832fe009686f96aff7009270805"
+      "sha256": "ec42bd95359f2dec8a09bfd40f575807c3863487db8632f3ed5812f19b76d2e1"
     },
     {
       "path": "mechanical/revI/right-frame-orbit-detail.stl",
-      "sha256": "803fb883e24ff88b8d6fa71cab42ba6694e44b32b47ef7b44f0884094e0c69d8"
+      "sha256": "d04eb998132e2104d41af672fe9d6cd91b7bdb85f15020fd9442e41f42b59558"
     },
     {
       "path": "mechanical/revI/right-frame-orbit-accent.stl",
-      "sha256": "168afe62f3d28e0673d06f204d682e89a22d1a2bb806b4c0fa6135c7d92f41ea"
+      "sha256": "b087d7b491cbeaa23436dca5f33f496e2fc880c0a792bee31990cd776670e5a8"
     },
     {
       "path": "mechanical/revI/right-frame-orbit-secondary.stl",
-      "sha256": "a92c36aa7dd0c432e798d4ffb18ba6c2ca3e64779b10eba42b239e51ea62acd7"
+      "sha256": "77986dc2074d91fde6a96107fbdb8f95c90bc9ccea9b118a3e52782a9d93309f"
     },
     {
       "path": "mechanical/revI/right-frame-manga.stl",
-      "sha256": "21beb2d0304dde47006add37ef4159d87661467f00d1aba99c6a7b0e14abcb9d"
+      "sha256": "af0a257aa3d29193104370ff27cfdaf746de029aff488e29a9ebe9f75875e8a2"
     },
     {
       "path": "mechanical/revI/right-frame-manga-body.stl",
-      "sha256": "d045209c4b674a1b8402d8665e7da1b8a47d3858efd5cede15e0b76912f8329b"
+      "sha256": "f80ea8d98563622cc1ddffbb15f580efeb96b03d354052dfbda6b48b8c1ab716"
     },
     {
       "path": "mechanical/revI/right-frame-manga-detail.stl",
-      "sha256": "1d644a5b27a8c9ebfc518961554ea11dda80b0d1af57aac146dca276b8711e06"
+      "sha256": "ee1063d08dbff41f66949345698bf61d9232695e2e8439fb896ff03f7b5c6b30"
     },
     {
       "path": "mechanical/revI/right-frame-manga-accent.stl",
-      "sha256": "ba30dfbaebfc38899fabf6d0722c742d3e007134a9ad1c16187583a16cca7f1b"
+      "sha256": "098f45b3daf24e0eb24fb0763244a72f1c66bdcc86909fa27cb5f522f83df908"
     },
     {
       "path": "mechanical/revI/right-frame-manga-secondary.stl",
-      "sha256": "3b1d7c8f287339fd77cccd4e345208ae4cce172acc173f4149f24b78b9cc1c94"
+      "sha256": "98bc0a4066b7452692c55ad5d4bb80d7039f5bb9f6fbcf803eb5cdb6b055bfe1"
     },
     {
       "path": "mechanical/revI/right-frame-talavera.stl",
-      "sha256": "c9ef17ff83b9f61ac2e96c4fc72b73d35ff5cfdb97f907291752c9f7614d062e"
+      "sha256": "80b9e3b60710e3ed99727dcd8b670d39b956e41d043d3fc7b45f141fe6b21d91"
     },
     {
       "path": "mechanical/revI/right-frame-talavera-body.stl",
-      "sha256": "0a6543eb4ecc4cd3aa9429309ea29ca097a4104f6d0cf923a251da5494b4d3b9"
+      "sha256": "be9e95f685f1584545d1cb0bf895d71a1501530131aaa3c240eb4e1b0ac0b611"
     },
     {
       "path": "mechanical/revI/right-frame-talavera-detail.stl",
-      "sha256": "8b63403487090e9befd1a38b1b7675a6a7da68f52ee8c9b8178642706fef6893"
+      "sha256": "94bab232343de90d755c0494505b95c864a4b40b7074e1255954354f76a5d8de"
     },
     {
       "path": "mechanical/revI/right-frame-talavera-accent.stl",
-      "sha256": "e6811e76b557ed6a26619bc7e14c57c9e4f2bf7658f0459945f87b4a649cefd3"
+      "sha256": "f4e07ad1a88a7b4471e370051f1e5cc1441faa9a5ab5bd1053e93769e1e1676f"
     },
     {
       "path": "mechanical/revI/right-frame-talavera-secondary.stl",
-      "sha256": "6ffa51417e6251f06219be16956d97726a079caf5eede7c469553d0be64282cf"
+      "sha256": "4181e7fe21bf6838a771cf20b4cf79db7c3c6cff0cb07bda709de8a2849811ae"
     },
     {
       "path": "mechanical/revI/right-frame-gameboy.stl",
-      "sha256": "b08dec85ad6242285a23fbe18cae8c6bcfb276abc66d097af5240631e4025ce8"
+      "sha256": "e32a50fc0c64c42dfefeaa84a2cf7c1277e92e3c7976948d04c8926477340b5c"
     },
     {
       "path": "mechanical/revI/right-frame-gameboy-body.stl",
-      "sha256": "560369bafa4ce571ae86af08daec0bb60339b12017c5ef7a85804dded36ddc36"
+      "sha256": "d346ae24d1ff04b852fed6c6b99c37a615c86ce484de1468195eec163b22eb80"
     },
     {
       "path": "mechanical/revI/right-frame-gameboy-detail.stl",
-      "sha256": "3f74d9e23eef2e6d2dbdb7d132a7a93c4a1e191fcdc4de939cf0c952b42e9386"
+      "sha256": "f6849463b67c34a66e1eb2f75122540d0d8a3814efa147f5b2567e1b92ba9701"
     },
     {
       "path": "mechanical/revI/right-frame-gameboy-accent.stl",
-      "sha256": "4c34cec6ffb712e0a583db41f42ebba2f460aff3665e66536388e3c784aa9efc"
+      "sha256": "03e206ecdd426739fee8f61a3d929b75ec7f8f85eb92cc90836be1447c883ac6"
     },
     {
       "path": "mechanical/revI/right-frame-gameboy-secondary.stl",
-      "sha256": "5a4ea719303f98cf0bc39dfa44c88f3c387ffc296c2723a358bbe7def7a9b518"
+      "sha256": "b69a55ef57be083e6b52a6c264500078a0f00bce9ff693d3aa8baa7d583230d7"
     },
     {
       "path": "mechanical/revI/right-frame-nes.stl",
-      "sha256": "bb6c081b94057a19d454b41080375eaf69d34d4274d171966fffbfe7eb39ead4"
+      "sha256": "b91498c75383369d94b225f3bd1920d8f65a3ac33d4822775cfa82d109ea29f3"
     },
     {
       "path": "mechanical/revI/right-frame-nes-body.stl",
-      "sha256": "74e6c11032253eea810c8228108c965730a4f36a0ad919342dc3f7e804bfbd49"
+      "sha256": "a94859d9275a3d77056feadadef6ea5f9f6be639cf999ff7ce430c998834b514"
     },
     {
       "path": "mechanical/revI/right-frame-nes-detail.stl",
-      "sha256": "f18fd6574fab123cd2983fd7aff8544dffa50b85f3aad7d49bb9721ea0ad10dd"
+      "sha256": "5ecf423bd82e88d7c26ffb0fa19074a2d418d52efe5b3f8ff59474837f77827d"
     },
     {
       "path": "mechanical/revI/right-frame-nes-accent.stl",
-      "sha256": "f3d999078fe372ad35b9c0bba088e09d1c7eba06e26a2140b1bddc273aaa23b4"
+      "sha256": "56e899709aa6869c7f8e67d039c626ebebb8049eed8a2961dc8d661a1ddb27cf"
     },
     {
       "path": "mechanical/revI/right-frame-nes-secondary.stl",
-      "sha256": "ebaa96d40d83c7b1f047c22efbcdb2d98711229f0f68b7e91400c06e70d049f3"
+      "sha256": "3a6c6c8e7dbd03d05285b02ba0099a47155028b07578bb10a10c6637b1a9ba75"
     },
     {
       "path": "mechanical/revI/right-frame-snes.stl",
-      "sha256": "bfcff39d8b933a82c854b09edfcc11a23eaf32094e09805de7da4d1328552d1f"
+      "sha256": "4894a711b17f05254c746612261b1c71029ae2de7b171b444569aa51b2eac816"
     },
     {
       "path": "mechanical/revI/right-frame-snes-body.stl",
-      "sha256": "0277f5932fb388759c5dfa391f9c60cce9b0b9d4dbfc1e25f419cd89d9d4f726"
+      "sha256": "0fa1d7f165b6fa2ba50fa1b63cacee84dbcc4fd9c6598fd37bd968cc0329a56f"
     },
     {
       "path": "mechanical/revI/right-frame-snes-detail.stl",
-      "sha256": "9749c984fee5ab4f93621ba2cdfea5dd3457b0b3a092924eab5e4b492c4acb44"
+      "sha256": "4b5ff7c36e842d82c904793fa18447853a964f1a5dca2bd77e3cda346e79e9d6"
     },
     {
       "path": "mechanical/revI/right-frame-snes-accent.stl",
-      "sha256": "44368b2436f0873a7e188d94a2e8247817c9f288387d2b9f61e0f90115c7ee32"
+      "sha256": "ff3f9fe4d179215c835de80904aa09962a37d5ffa7cef3daf5daf2a3ecaa15be"
     },
     {
       "path": "mechanical/revI/right-frame-snes-secondary.stl",
-      "sha256": "d5ed0c41eefdfaa9e8894e5d70d3aa53f503b3162bd60bee5feaa07f700796a1"
+      "sha256": "014ad51b7e8dac1a6b73c05e2ac7dd94221acbd278e6d2756ce387fb7a2ffab8"
     },
     {
       "path": "mechanical/revI/right-frame-phone.stl",
-      "sha256": "2fdda45c3c315b2207b1272c093545c194d2badedb52429bf98198f5ed61443f"
+      "sha256": "a3e3f0e614341a7a6dfb2481b29869d916e8da4ba0b1ba5f2fa545966a2c5840"
     },
     {
       "path": "mechanical/revI/right-frame-phone-body.stl",
-      "sha256": "48b796e2aeaab611d56bc0eac727ba5de22c4096198e6c4524694030819c66a4"
+      "sha256": "6f9b1bc9698f7b34f39fc261ca35428b230844224f1f04157e9f485dedf9a09f"
     },
     {
       "path": "mechanical/revI/right-frame-phone-detail.stl",
-      "sha256": "32a33c58ae0484cdfe403ab8a6f21767e552409c01a9ee97753f83187a3b1804"
+      "sha256": "892481f7e4df0f6b68d69bad9abcdab3c327ef105841bea906ab60f124352777"
     },
     {
       "path": "mechanical/revI/right-frame-phone-accent.stl",
-      "sha256": "b25d86a39ba0fbd5e174a2a1639dbae0add6a827028d330120a605f1f2ed0c29"
+      "sha256": "1c0a12626a11ff58403426840b16d34a5ce97f8ffc35fb7a59ac9ddc166992a7"
     },
     {
       "path": "mechanical/revI/right-frame-phone-secondary.stl",
-      "sha256": "6048e67de06adf4b596899e04631d215e4f00f43028cf00b93ca8ebc7964231e"
+      "sha256": "0ec9cdc50e4b7067130bad86aedf413b6dd0d9f8871f58576283731b60a2b73a"
     },
     {
       "path": "mechanical/revI/right-frame-walkman.stl",
-      "sha256": "3d5960efdf4d60177a9d250e8fa41b49a027c36cab5da95cf387c0fc67f954f1"
+      "sha256": "856bec4d047f901af6d5552ec60f6729f9228c26c97564cee955e1ce6c2b1626"
     },
     {
       "path": "mechanical/revI/right-frame-walkman-body.stl",
-      "sha256": "37b8efe0a502d53c06bc00b1e77c41aec1fb28d625c24d882146c3e5dc4bccc0"
+      "sha256": "e0f9792ad1064e18c030478c0d25e9e1f04f6b5e513b4347c6aaa646bee67c80"
     },
     {
       "path": "mechanical/revI/right-frame-walkman-detail.stl",
-      "sha256": "ffca8c345e091d23918d91f9727b58effcd0ac6eeaec279318bde9b85a9dbe7b"
+      "sha256": "b2a9fbca49c93eb8a911b45ef24953063e2f1e124564854297c500839564ffe9"
     },
     {
       "path": "mechanical/revI/right-frame-walkman-accent.stl",
-      "sha256": "e832dfac5b202eb6e9eb7bbc2ad8b4dbec3ce56cb5b2f75d3b05f3274d883720"
+      "sha256": "a1495b3198b443115a5a826c8852e6a1e0831f41b9adbae3fd6ea26df2a42578"
     },
     {
       "path": "mechanical/revI/right-frame-walkman-secondary.stl",
-      "sha256": "6d41f3158f2baf2b9bffd1bbc1746eaafbd8f5a39905e765b2cdadaf9cab771e"
+      "sha256": "0f9af9522b82dccee8b8086259c463f197786c657b9c3ab09389ae980a039886"
     },
     {
       "path": "mechanical/revI/right-frame-ipod.stl",
-      "sha256": "98b4441da3206c6b10a9eabf92ffdfcc961b4c3447b5509120a12a6e80b5c065"
+      "sha256": "8a480c650b417843d9b274059cdabaa6347a540601a18bd023c868a24b5da89a"
     },
     {
       "path": "mechanical/revI/right-frame-ipod-body.stl",
-      "sha256": "bdd11269fa1d0558074c6dcfe69790d50114c8192f1ea4c24d72e62fe9efe919"
+      "sha256": "b58a07d5facad2b9809b94331f89b010103bc78a78db5eb916d3656e58ae1bd6"
     },
     {
       "path": "mechanical/revI/right-frame-ipod-detail.stl",
-      "sha256": "976c8268075c5772a89d62bea6fa49fc224c86a64bca289ef6f98d08e12c3662"
+      "sha256": "94bab232343de90d755c0494505b95c864a4b40b7074e1255954354f76a5d8de"
     },
     {
       "path": "mechanical/revI/right-frame-ipod-accent.stl",
-      "sha256": "c121c5041f761503d02ec865a6a10b07ae8abf10873a2eb821fff818d2f05ce2"
+      "sha256": "599d217d9b76c23ffc60a8ca75401c828b8894b3ad987e3f9370b3fa736a8eb7"
     },
     {
       "path": "mechanical/revI/right-frame-ipod-secondary.stl",
-      "sha256": "132bb1db96faa2a0f8250541c8935269dc898b517427a7447638c2cb5442092d"
+      "sha256": "bb9268c46f2157fd1b75f7428e27f34a09b7d66c2a8553a704883735b510be79"
     },
     {
       "path": "mechanical/revI/right-screw-1.stl",
@@ -1168,7 +1168,7 @@
     },
     {
       "path": "design/revI.json",
-      "sha256": "85b90673e6d716d58ccc6826a15f833d771a357b1ed7d2253515abf7e340993f"
+      "sha256": "7eb748241e96ad8409a1b124ba5cc60b90dff6ff8099dec5e294a34969a22993"
     },
     {
       "path": "design/layout.json",
@@ -1176,7 +1176,7 @@
     },
     {
       "path": "tools/build_viewer_revI.py",
-      "sha256": "7f70842e3f3cb0161e7d71a62af6d38e92a082716a929aed4286ae585c62c200"
+      "sha256": "79983c807be593c7992fe30f28ac8ac9b6864975b3a475bd7635aa1adeb6f68e"
     },
     {
       "path": "components/switches.json",
@@ -1192,7 +1192,7 @@
     },
     {
       "path": "viewer/app.js",
-      "sha256": "68bcbd681cae0f618bd57cbe7e908013a7c031d4270da112fc3f2c8651b9a28c"
+      "sha256": "2d34c7bcf658010fe2395d96206fd32300585ad4ce6c4676f5aa2c5f22b7c22e"
     },
     {
       "path": "viewer/config.js",
@@ -1248,7 +1248,7 @@
     },
     {
       "path": "design/frame-finishes.json",
-      "sha256": "efceacdb7957774ec3a84d267cf84bd49859ea5187ac3608424f76cca4f27af4"
+      "sha256": "c8cc7621908f3c768a8d7b90d2a59f6df482bb26e97cb439e895f8366ff96c08"
     },
     {
       "path": "viewer/style.css",
@@ -1267,27 +1267,27 @@
       "sha256": "a62090e2bb0ab32205ff582bd3612ff167dc03d9db4c2b6879bb98f5bf25d550"
     }
   ],
-  "viewer_sha256": "9119cfee93c7cb7668f2db9878ca48a18d6cd04e1418660237626b5dffcd4c65",
+  "viewer_sha256": "046f901a25dcc0c0698ca30609a9fcbfe88adc9af8ae48e2a0243510b920f3a8",
   "measurements": {
     "bay_width_mm": 24,
     "plate_top_mm": 7.6,
-    "cover_top_mm": 13.39,
-    "themed_relief_top_mm": 13.39,
+    "cover_top_mm": 13.59,
+    "themed_relief_top_mm": 13.59,
     "decoration_relief_mm": 0,
     "frame_materials": "Native recessed co-print volumes; flush top",
     "cover_ahead_of_top_cap_mm": 0,
     "cover_ahead_of_adjacent_cap_mm": 0
   },
   "offline": "docs/offline.html embeds geometry, scripts, styles, deferred print files and licenses. docs/index.html fetches only the hashed print payload on export.",
-  "offline_sha256": "758bb374fa367dc6d419136d1a3416416b6c8b1cd98a2be2ce9d7bdb01fd3754",
+  "offline_sha256": "160f6e1a3de9f829d0aa3181f005814c6e2e17b5aca6b02cbf783e1ff79decb5",
   "printing": {
-    "path": "docs/assets/printing-29ca86c6ae86f28ffe4f84b6630c390b0a67dceb5858d3ad234f6919ebb4ca7f.bin",
-    "sha256": "29ca86c6ae86f28ffe4f84b6630c390b0a67dceb5858d3ad234f6919ebb4ca7f",
-    "bytes": 10448251
+    "path": "docs/assets/printing-5826a2d5ab3e464d42e856a941023a56710a3b4b41474da8e94e8eab8ba0c3ff.bin",
+    "sha256": "5826a2d5ab3e464d42e856a941023a56710a3b4b41474da8e94e8eab8ba0c3ff",
+    "bytes": 10050478
   },
-  "geometry_aliases": 16,
-  "online_bytes": 54706797,
-  "offline_bytes": 68637801,
+  "geometry_aliases": 18,
+  "online_bytes": 54185807,
+  "offline_bytes": 67586447,
   "limitations": [
     "Commercial representations combine documented nominal dimensions, licensed community CAD and inferred package detail; see components/README.md",
     "Unrouted PCB",

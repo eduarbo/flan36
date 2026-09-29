@@ -112,5 +112,8 @@ add('ipod','iPod','White face, a complete silver click wheel and a continuous sc
  ['#f0eee5','#656f79','#afb4b1','#d8d9d2'],['White shell','Screen gray','Wheel ring','Center key'],[
  field(),ring('Wheel','accent',123,60.4,5.5,1.8),disc('Center','secondary',123,60.4,2.2),box('Hold','secondary',[121,12.8,125,14.2],.6)])
 spec=dict(schema='flan36-frame-collection-1',revision='I',description='Reference-bound compositions with explicit openings. Every authored motif must survive the support mask intact.',roles=['body','detail','accent','secondary'],decoration_mode='flush-co-print',inlay_depth_mm=.4,minimum_backing_mm=.8,minimum_nominal_stroke_mm=.85,mirror_sum_x_mm=160,default_style='flan',strict_feature_containment=True,unsupported_collar_xy_mm=[114.85,15.1,130.75,53.0],retired_styles=['smooth','bevel','facet','handheld','tv','cyberpunk','cartridge','arcade','mecha','kintsugi'],styles=styles)
+current=json.loads((ROOT/'design/frame-finishes.json').read_text())
+if any(t.get('approved_master') for t in current['styles'].values()):
+ raise SystemExit('Approved artwork is installed. Use install_approved_frames.py and the exact master; this legacy generator would overwrite it.')
 (ROOT/'design/frame-finishes.json').write_text(json.dumps(spec,indent=2)+'\n')
 print('Generated',len(styles),'reference-bound frame recipes')

@@ -290,7 +290,7 @@ function card(id,label,src){
 function frameTargets(){return frameSide==='both'?['left','right']:[frameSide];}
 function setFrameSide(side){frameSide=side;syncConfigurationUI();}
 function applyFrame(change){
-  const cfg=copy(configuration);for(const side of frameTargets()){if(change.style&&!cfg.cases[side].match_frame){const f=cfg.frames[side],p=framePalette(f.style);if(f.color===p.body&&Object.entries(f.accents).every(([k,v])=>v===p[k])){const np=framePalette(change.style);f.color=np.body;f.accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,np[k]]));}}Object.assign(cfg.frames[side],change);if(cfg.cases[side].match_frame){cfg.cases[side].base_color=cfg.frames[side].color;if(cfg.cases[side].style==='level')cfg.cases[side].plate_color=cfg.frames[side].color;}if(change.style)cfg.cases[side].cover=true;}
+  const cfg=copy(configuration);for(const side of frameTargets()){if(change.style&&!cfg.cases[side].match_frame){const f=cfg.frames[side],p=framePalette(f.style);if(f.color.toLowerCase()===p.body.toLowerCase()&&Object.entries(f.accents).every(([k,v])=>v.toLowerCase()===p[k].toLowerCase())){const np=framePalette(change.style);f.color=np.body;f.accents=Object.fromEntries(['detail','accent','secondary'].map(k=>[k,np[k]]));}}Object.assign(cfg.frames[side],change);if(cfg.cases[side].match_frame){cfg.cases[side].base_color=cfg.frames[side].color;if(cfg.cases[side].style==='level')cfg.cases[side].plate_color=cfg.frames[side].color;}if(change.style)cfg.cases[side].cover=true;}
   try{
     applyConfiguration(cfg);
   }catch(e){message(e.message,true);}
@@ -307,7 +307,7 @@ for(const [id,spec] of Object.entries(catalog.case_styles)){
 for(const button of $('case-target').children)button.onclick=()=>{caseSide=button.dataset.side;syncConfigurationUI();};
 $('case-cover').onchange=e=>{const cfg=copy(configuration);for(const side of caseTargets())cfg.cases[side].cover=e.target.checked;applyConfiguration(cfg);};
 for(const id of Object.keys(catalog.frame_styles)){
-  const finish=frameFinish(id,'left'),button=card(id,catalog.frame_styles[id],preview.image([finish],[0,1,.16],{width:220,height:360,up:[0,0,-1]}));button.dataset.style=id;
+  const finish=frameFinish(id,'left'),button=card(id,catalog.frame_styles[id],preview.image([finish],[0,1,.16],{width:220,height:360,up:[0,0,-1]}));button.dataset.style=id;button.title=finishes.styles[id].approval_status==='approved'?'Approved R4 design':'Existing design · redesign pending';
   const img=button.querySelector('img');img.width=220;img.height=360;img.alt=catalog.frame_styles[id]+' frame in its original palette';
   button.onclick=()=>applyFrame({style:id});$('frame-grid').append(button);
 }
@@ -351,7 +351,7 @@ function syncConfigurationUI(){
   const frames=frameTargets().map(side=>configuration.frames[side]),styles=new Set(frames.map(f=>f.style)),colors=new Set(frames.map(f=>f.color.toLowerCase()));
   for(const button of $('frame-target').children)button.setAttribute('aria-pressed',String(button.dataset.side===frameSide));
   for(const button of $('frame-grid').children)button.setAttribute('aria-pressed',String(styles.size===1&&styles.has(button.dataset.style)));
-  $('frame-current').textContent=styles.size===1?catalog.frame_styles[frames[0].style]:'Mixed styles';
+  $('frame-current').textContent=styles.size===1?catalog.frame_styles[frames[0].style]+(finishes.styles[frames[0].style].approval_status==='awaiting-redesign'?' · redesign pending':''):'Mixed styles';
   $('color-current').textContent=colors.size===1?[...colors][0]:'Mixed colors';
   for(const button of $('swatches').children)button.setAttribute('aria-pressed',String(colors.size===1&&colors.has(button.dataset.color)));
   // The color input has no mixed state: its visible companion explicitly names it.

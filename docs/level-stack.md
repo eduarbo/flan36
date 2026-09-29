@@ -1,5 +1,8 @@
 # Floor-mounted battery and level case
 
+**Current R4 adjustment:** the frame and Level upper shell now reach **13.59 mm**. Glass remains at **13.39 mm**, recessed **0.20 mm**. A **0.40 mm** cover hides the display pins; the whole display mating chain moves 0.20 mm toward the frame center. [Approved frames and current verification](frames-extra.md).
+
+The following dimensions describe the earlier Level installation and are retained as its history.
 This prototype brings the **frame, display glass and Level upper shell to the same 13.39 mm plane**, lowering the frame by **1.41 mm** from the previous 14.8 mm design. Heights start at the case underside and exclude feet. The selected flat KLP caps still reach about **17.87 mm**, so overall keyboard height is unchanged; the switches and key positions have not moved.
 
 ![Actual Level CAD assembly](images/revI-level.png)
@@ -36,9 +39,9 @@ The [nice!view drawing](https://nicekeyboards.com/docs/nice-view/pinout-schemati
 
 **This is not a hardware-qualified connector substitution.** The finished nice!view hole diameter is not dimensioned in the available drawing. CAD retains its explicitly unmeasured 0.9 mm hole; the nominal 0.025-inch square post has a 0.898 mm diagonal, leaving no useful tolerance allowance. Measure actual hole and pin tolerances before choosing this pair. Do not enlarge or drill a purchased display based on this model. The stock 7 mm connector pair belongs to the previous taller stack.
 
-13.39 mm is the current dimensioned prototype target, not a claim of an absolute physical minimum. Further reductions require a different qualified connector or module arrangement. Actual socket engagement, soldering, printed strength, battery insulation, cable flex and service forces still need a physical prototype. Both PCB studies remain unrouted; this geometry is not a finished build kit.
+13.39 mm was the initial Level prototype target, not a claim of an absolute physical minimum. Further reductions require a different qualified connector or module arrangement. Actual socket engagement, soldering, printed strength, battery insulation, cable flex and service forces still need a physical prototype. Both PCB studies remain unrouted; this geometry is not a finished build kit.
 
-[Level geometry delivery](../validation/revI-level-delivery.json) is a historical receipt for the floor/Level installation. Its native FCStd hash is still unchanged; its viewer and builder hashes predate later cap-direction and reliability changes. [Cap direction checks](../validation/revI-cap-rows.json) cover the subsequent orientation fix. [Current viewer reliability checks](../validation/revI-reliability.json) bind the current online/offline viewer and configuration behavior. Openings preserve cap travel, so parts of the switches can still be visible from above between keys; the Level perimeter conceals their bodies from the sides.
+[Level geometry delivery](../validation/revI-level-delivery.json) is a historical receipt for the floor/Level installation. Its hashes identify that historical snapshot; the R4 adjustment supersedes its native and derived files. [Cap direction checks](../validation/revI-cap-rows.json) cover the subsequent orientation fix. [Earlier viewer reliability checks](../validation/revI-reliability.json) retain their original HTML hashes; the [approved-frame delivery](../validation/revI-approved-frames.json) binds the current viewer. Openings preserve cap travel, so parts of the switches can still be visible from above between keys; the Level perimeter conceals their bodies from the sides.
 
 ## Reproduce
 

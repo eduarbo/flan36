@@ -1,0 +1,226 @@
+{
+  "scope": "Five approved R4 designs and shared mechanics; digital implementation only",
+  "baseline_commit": "2de168b54146c2b135a6438bb1d6a5b30bcc0141",
+  "native_sha256": "64c68cf959a31661c3b667d08fa23e7afd8bf11b4ac6017287cb6ede9d6df9d2",
+  "review_roles": [
+    "constructive mechanical/geometry",
+    "adversarial fidelity/reliability"
+  ],
+  "independent_reports": 2,
+  "recommendation": "Normal authorized main synchronization after documented checker correction; public acceptance requires post-push readback",
+  "initial_findings_resolved": [
+    "guide and sled-hole translation",
+    "native drill and KiCad J2 alignment",
+    "literal painter-order artwork and three material domains",
+    "configuration preservation",
+    "leaf versus parent placement"
+  ],
+  "final_finding": {
+    "severity": "MEDIUM",
+    "code": "STALE_ACCEPTANCE_CHECK",
+    "disposition": "Controller corrected and passed domain-aware vertex/triangle checks, literal R4 feature probes and negative controls. Historical receipt wording clarified. Original risk-review record remains conditional; it was not rewritten as unconditional acceptance."
+  },
+  "reviewer_changes": [],
+  "reviewed_geometry_unchanged_after_review": true,
+  "controller_review_delta": [
+    "viewer/finishes-check.cjs domain and probe maintenance",
+    "Documentation and correction receipts only"
+  ],
+  "finishes_checker_sha256": "960925c0771f4451c31a3de8624fbc62d297067899596f98fec04fcdb8d91cb1",
+  "finishes_geometry_check": {
+    "viewer_sha256": "046f901a25dcc0c0698ca30609a9fcbfe88adc9af8ae48e2a0243510b920f3a8",
+    "scene_sha256": "5e58f21c57677ee5ad289c1ab7392fd1a763a29a60893708ee1b56d3011b9bdb",
+    "checker_sha256": "960925c0771f4451c31a3de8624fbc62d297067899596f98fec04fcdb8d91cb1",
+    "original_vertices_normals_and_triangles": true,
+    "flush_feature_probes": true,
+    "approved_thickness_domains_and_negative_controls": true,
+    "exact_native_material_volumes": true,
+    "no_raised_relief": true,
+    "max_material_groups": 4,
+    "geometry_cached": true,
+    "checked": [
+      {
+        "side": "left",
+        "style": "flan",
+        "triangles": 7596,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "flan",
+        "triangles": 7596,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "tape",
+        "triangles": 12676,
+        "groups": 4,
+        "feature_probes": 3
+      },
+      {
+        "side": "right",
+        "style": "tape",
+        "triangles": 12676,
+        "groups": 4,
+        "feature_probes": 3
+      },
+      {
+        "side": "left",
+        "style": "orbit",
+        "triangles": 8326,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "orbit",
+        "triangles": 8326,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "manga",
+        "triangles": 9204,
+        "groups": 4,
+        "feature_probes": 5
+      },
+      {
+        "side": "right",
+        "style": "manga",
+        "triangles": 9204,
+        "groups": 4,
+        "feature_probes": 5
+      },
+      {
+        "side": "left",
+        "style": "talavera",
+        "triangles": 8716,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "talavera",
+        "triangles": 8716,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "gameboy",
+        "triangles": 7860,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "gameboy",
+        "triangles": 7860,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "nes",
+        "triangles": 9564,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "nes",
+        "triangles": 9564,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "snes",
+        "triangles": 11216,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "snes",
+        "triangles": 11216,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "phone",
+        "triangles": 16652,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "phone",
+        "triangles": 16652,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "walkman",
+        "triangles": 13072,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "walkman",
+        "triangles": 13072,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "ipod",
+        "triangles": 8536,
+        "groups": 4,
+        "feature_probes": 3
+      },
+      {
+        "side": "right",
+        "style": "ipod",
+        "triangles": 8536,
+        "groups": 4,
+        "feature_probes": 3
+      }
+    ]
+  },
+  "browser_reliability": {
+    "source_snapshot": "2de168b54146c2b135a6438bb1d6a5b30bcc0141",
+    "online_sha256": "046f901a25dcc0c0698ca30609a9fcbfe88adc9af8ae48e2a0243510b920f3a8",
+    "offline_sha256": "160f6e1a3de9f829d0aa3181f005814c6e2e17b5aca6b02cbf783e1ff79decb5",
+    "checks": {
+      "camera_transitions": 17,
+      "rejected_import_atomic_glb": true,
+      "legacy_solid_kit": true,
+      "battery_targets": true,
+      "undo_redo_and_pending_paint": true,
+      "named_json_export": true,
+      "lazy_print_retry_and_hash": true,
+      "exact_native_stl_hashes": true,
+      "missing_resource_atomic_glb": true,
+      "simultaneous_tabs_preserve_both": true,
+      "close_while_save_queued": true,
+      "palette_tab_conflicts": true,
+      "rejected_storage_preserved_and_downloadable": true,
+      "offline_exact_kit_and_glb": true,
+      "mobile_controls": true,
+      "no_locks_or_random_uuid": true,
+      "denied_storage_export": true
+    },
+    "errors": [],
+    "passed": true
+  },
+  "public_verification": "Pending until publication",
+  "physical_acceptance": false
+}
