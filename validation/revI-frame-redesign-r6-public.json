@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-29T16:36:24.758712+00:00",
+  "source_commit": "fa23ccb51237d1922187532031fe8a737cae2ea4",
+  "gallery_url": "https://eduarbo.github.io/flan36/frame-proposals/?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+  "checked_assets": 34,
+  "assets": [
+    {
+      "path": "docs/frame-proposals/collection-a.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/collection-a.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 78422,
+      "sha256": "70bf059d5a892e5fcaadc30d5e3d7e66ba64ee3d5cefb0da8b5e2b8f3a7071f0",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/collection-b.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/collection-b.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 76758,
+      "sha256": "01911ded530958fa9633c348eb3990236ed8d85212041dedea9b247e75ecebf3",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/collection-c.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/collection-c.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 75475,
+      "sha256": "f5e3bd04dff48f26145287acff155f6784402e2de3d3cc90e19398d6d24d44f6",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/collection.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/collection.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 163725,
+      "sha256": "f4073e0adbd847cf897aaffd224cd42176f1e747f79e722b00c7c3de1cde3420",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/flan-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/flan-card.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 45346,
+      "sha256": "de226a8ede283236f5ea594f0a382a608afb63263d3f1414d10b26756317ae7d",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/flan-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/flan-dimensioned.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 188927,
+      "sha256": "26a56078209f7a9520052c9b62c74c689b622317e8eda16ccc150ac96dd530df",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/flan-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/flan-preview.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 8107,
+      "sha256": "64da957b72c6ca78b8bceec49395d87f5c620b2644e9b88a8807ad8ec4bb2e6c",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/flan.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/flan.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 7670,
+      "sha256": "2b6b47e6ba074a62bb1d40fdf12d6046541c07acfc5fc82f551f014d0e0cd336",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/index.html",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/index.html?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 9537,
+      "sha256": "70afb30225d7e31133438349c2b58bdf171f62669ec52a01fd6dfa55b28255b6",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/manga-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/manga-card.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 42441,
+      "sha256": "d08777c7a81ef3bfce74d2312bb70740b10ae70743d32ed7cbea6b7af5676775",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/manga-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/manga-dimensioned.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 182687,
+      "sha256": "78e5757dc3d903e80ee82b056ae2d8e6e60b6fbe8fa2111ef9c4579275733e64",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/manga-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/manga-preview.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 3166,
+      "sha256": "25c44d05dff1f956b6a49957baf9ac0f0250ddb1c0634d0c6252f8e4c3cd8b1a",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/manga.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/manga.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 2729,
+      "sha256": "dcf458af6191981edff0b572dc89fb079ca82ffb6dc0206d7c2d13a5f3f10273",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/native-review.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/native-review.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 92215,
+      "sha256": "f26fb47d771444c6dbd0dbe11a6517e09e8f1da66792ad23d3e6886e5153ddcd",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/native-top.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/native-top.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 88725,
+      "sha256": "12369596cb0a5cb5db10ab8e09aeaf262f8608dd51ac2ef453c7354b1a65343f",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/nes-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/nes-card.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 42131,
+      "sha256": "9812f9dad9b2b4f9d6cb77e4d97afdf1ce2bc2a00b3990d71b596ad127abb60b",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/nes-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/nes-dimensioned.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 184379,
+      "sha256": "7cd235229d62156b3a768de389358d811f33224de21ee888e3b9a07ecdbbef8f",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/nes-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/nes-preview.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 6049,
+      "sha256": "7f4271814ebab782588eefd90cb46fda9d763f76d6225afd3a7289c893664cf1",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/nes.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/nes.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 5612,
+      "sha256": "4e6d4e5c4301adb2647d70eab48f5e7a3dd73ae1968ccf459cf25d3facb39304",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/orbit-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/orbit-card.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 42050,
+      "sha256": "222c8958627fa5d515e6935fc186521911f30e8f708f6b236eef1af235cbc75f",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/orbit-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/orbit-dimensioned.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 188560,
+      "sha256": "34c4a41862d497c80c67501674d67ce42c8d62bd7133a5a31762b7843a92f7e4",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/orbit-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/orbit-preview.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 2198,
+      "sha256": "b932adf0190d77b7ae1f722acc17a79cd6eef846acd6c20d96de4b790a4eef89",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/orbit.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/orbit.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 1761,
+      "sha256": "1f1ff27d47a3c7329325e995727a6ea2bedcae9e78549b385046178395dbc11a",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/tape-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/tape-card.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 40625,
+      "sha256": "7c3c711fa12ec28c9d707de7ab6f8c0d8151d15d91ca1cee934ba9e63b2cc800",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/tape-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/tape-dimensioned.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 184877,
+      "sha256": "e45f086f140bcd5c7a017832893cb5b6299bf0aab51a10774ea43476045eb61b",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/tape-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/tape-preview.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 2357,
+      "sha256": "36c832e93bf7526caf58b62279a2169d1d22fe971b56e515cba69f464cfec4a3",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/tape.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/tape.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 1920,
+      "sha256": "705b3949dc3b87fe554133b1312563b11ff7ae5a08a1ac38b3ffdef91d2fa8d9",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/walkman-card.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/walkman-card.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 40724,
+      "sha256": "b605e50c233548004b2ba2b6b30cd98d9aaf0302a7d0a718917ba28344ceb11f",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/walkman-dimensioned.png",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/walkman-dimensioned.png?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 184067,
+      "sha256": "0f6ed912cb0c67f8089f619c59b986e86388620474ec024f1ea3b858146221cf",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/walkman-preview.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/walkman-preview.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 3948,
+      "sha256": "9df192de95d95ee50c6f73c8f3c2ed594903c175efd22fa3d5d84ef06f040cf5",
+      "matches_commit": true
+    },
+    {
+      "path": "docs/frame-proposals/walkman.svg",
+      "url": "https://eduarbo.github.io/flan36/frame-proposals/walkman.svg?rev=fa23ccb51237d1922187532031fe8a737cae2ea4",
+      "bytes": 3511,
+      "sha256": "4b1a8a57897356c0641b20b2fb08980f890442e3afd6870be1b05ffbf960824e",
+      "matches_commit": true
+    },
+    {
+      "path": "design/proposals/frame-redesign-r6/master.json",
+      "url": "https://raw.githubusercontent.com/eduarbo/flan36/fa23ccb51237d1922187532031fe8a737cae2ea4/design/proposals/frame-redesign-r6/master.json",
+      "bytes": 115305,
+      "sha256": "a599069941fbbafd06ac4aebb62501df3fa6af2ebb8d7aaf228051f659d5b1d2",
+      "matches_commit": true
+    },
+    {
+      "path": "design/proposals/frame-redesign-r6/Artwork-R6.FCStd",
+      "url": "https://raw.githubusercontent.com/eduarbo/flan36/fa23ccb51237d1922187532031fe8a737cae2ea4/design/proposals/frame-redesign-r6/Artwork-R6.FCStd",
+      "bytes": 524875,
+      "sha256": "b67e71017cd0f45f17efd4d6b581ca396939c25f251f9093cc9a486a9bad9e00",
+      "matches_commit": true
+    },
+    {
+      "path": "design/proposals/frame-redesign-r6/geometry-check.json",
+      "url": "https://raw.githubusercontent.com/eduarbo/flan36/fa23ccb51237d1922187532031fe8a737cae2ea4/design/proposals/frame-redesign-r6/geometry-check.json",
+      "bytes": 21651,
+      "sha256": "33b546545c26b601450771ebc4e3b972883142b7be810ddf96af038705a18e66",
+      "matches_commit": true
+    }
+  ],
+  "artwork_status": "PROPOSALS_AWAITING_USER_APPROVAL",
+  "physical_acceptance": false
+}

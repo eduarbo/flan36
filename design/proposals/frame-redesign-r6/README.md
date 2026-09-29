@@ -17,6 +17,8 @@ The 24 × 56 mm blank, 13.90 × 30.50 mm display opening, 0.10 mm nominal glass 
 
 Approval fixes these shapes and palettes. These files are not a print release: 0.4 mm nozzle / 0.2 mm layers remain a target, with thin tips, bonding, toolpaths and physical fit unqualified.
 
+[Public readback](../../../validation/revI-frame-redesign-r6-public.json) verifies the gallery and native source against committed bytes. Repeat it after the Pages build finishes with `python3 tools/check_frame_review_public.py --commit <published-commit>`.
+
 Reproduce from the repository root:
 
 ```sh

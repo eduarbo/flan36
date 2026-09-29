@@ -45,7 +45,21 @@
         "initial_severity": "LOW",
         "disposition": "Constructive reviewer retracted the claim after opening the 1680x1700 original. Risk reviewer and root verified complete framing; no image change."
       }
-    ]
+    ],
+    "reviewed_artifacts_sha256": {
+      "design/proposals/frame-redesign-r6/master.json": "d9788eccbf2321a347392fd1211f92c0e0e2b2fa46bf805a85ad47de224459e1",
+      "design/proposals/frame-redesign-r6/geometry-check.json": "af085808a0a4cfe49d96152affba18e04bb004c7c85d59d5864c4dc6be6f4635",
+      "design/proposals/frame-redesign-r6/collection-a.png": "70bf059d5a892e5fcaadc30d5e3d7e66ba64ee3d5cefb0da8b5e2b8f3a7071f0",
+      "design/proposals/frame-redesign-r6/collection-b.png": "01911ded530958fa9633c348eb3990236ed8d85212041dedea9b247e75ecebf3",
+      "design/proposals/frame-redesign-r6/collection-c.png": "f5e3bd04dff48f26145287acff155f6784402e2de3d3cc90e19398d6d24d44f6",
+      "design/proposals/frame-redesign-r6/native-review.png": "f26fb47d771444c6dbd0dbe11a6517e09e8f1da66792ad23d3e6886e5153ddcd",
+      "design/proposals/frame-redesign-r6/native-top.png": "12369596cb0a5cb5db10ab8e09aeaf262f8608dd51ac2ef453c7354b1a65343f",
+      "design/proposals/frame-redesign-r5/collection.png": "7638480fa04862a9d1940cc457453b48f04d9e8f2e9d7a5df111480542759493",
+      "tools/prepare_frame_redesign_r6.py": "433466787abe0688452bb580407dd2229f3837ac79423d9da2a04e2c55903a87",
+      "tools/render_frame_artwork.py": "2fda88886ab9d682116ad274fcd95f496173fde3267376f7a1326ac58ecb592a",
+      "tools/freecad/prepare_frame_artwork_review.py": "8b569b94cfeaf0666a2514b88cd5560bb665bcb38d8f84b63e77a0633d56771d",
+      "tools/freecad/frame_review_geometry.py": "153890ce767695a22ae152379babeedcecc6fd56f52538dfc219f667eae94db8"
+    }
   },
   "gallery_validation": {
     "checks": [
