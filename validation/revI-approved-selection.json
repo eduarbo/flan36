@@ -10,7 +10,7 @@
   ],
   "scope": "Approved active viewer catalog; unchanged native geometry archive",
   "local_status": "passed",
-  "public_status": "pending",
+  "public_status": "passed",
   "installed_styles": [
     "talavera",
     "gameboy",
@@ -170,5 +170,102 @@
     "lock_and_quota_fallback": true,
     "history_coalescing": true
   },
-  "physical_acceptance": false
+  "physical_acceptance": false,
+  "public": {
+    "commit": "3120f33d9eb4763a9bda154b76fd673356a9790b",
+    "public_scene_matches_local": true,
+    "online_and_offline_byte_exact": true,
+    "only_five_approved_frame_cards": true,
+    "talavera_default": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": [],
+    "checker_sha256": "4d32e1234a89c17c2781c9656065d054b5dbfee016030cbb90f8c1fd7e6b2566"
+  },
+  "native_material_identity": {
+    "viewer_sha256": "27e0259a48ad760b38eef981ab1ce38e93a146d42286b29a73ff99e043961a9c",
+    "scene_sha256": "bce1214444585ca17fc673a25097d971b5bd9e1a787e76c91248bf9e05e576db",
+    "checker_sha256": "960925c0771f4451c31a3de8624fbc62d297067899596f98fec04fcdb8d91cb1",
+    "original_vertices_normals_and_triangles": true,
+    "flush_feature_probes": true,
+    "approved_thickness_domains_and_negative_controls": true,
+    "exact_native_material_volumes": true,
+    "no_raised_relief": true,
+    "max_material_groups": 4,
+    "geometry_cached": true,
+    "checked": [
+      {
+        "side": "left",
+        "style": "talavera",
+        "triangles": 8748,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "talavera",
+        "triangles": 8748,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "gameboy",
+        "triangles": 7892,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "gameboy",
+        "triangles": 7892,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "snes",
+        "triangles": 11248,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "snes",
+        "triangles": 11248,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "phone",
+        "triangles": 16684,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "phone",
+        "triangles": 16684,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "ipod",
+        "triangles": 8568,
+        "groups": 4,
+        "feature_probes": 3
+      },
+      {
+        "side": "right",
+        "style": "ipod",
+        "triangles": 8568,
+        "groups": 4,
+        "feature_probes": 3
+      }
+    ]
+  }
 }
