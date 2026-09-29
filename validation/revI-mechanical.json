@@ -61,21 +61,21 @@
         "flan": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987416,
+          "volume_mm3": 1967.917679198742,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
         "tape": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987422,
+          "volume_mm3": 1967.9176791987406,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
         "orbit": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987402,
+          "volume_mm3": 1967.9176791987422,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
@@ -89,49 +89,49 @@
         "talavera": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987431,
+          "volume_mm3": 1967.917679198743,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
         "gameboy": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987425,
+          "volume_mm3": 1967.9176791987409,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
         "nes": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.917679198741,
+          "volume_mm3": 1967.9176791987406,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
         "snes": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987425,
+          "volume_mm3": 1967.9176791987393,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
         "phone": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987404,
+          "volume_mm3": 1967.91767919874,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
         "walkman": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987436,
+          "volume_mm3": 1967.9176791987413,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         },
         "ipod": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987402,
+          "volume_mm3": 1967.9176791987409,
           "closed_mesh": true,
           "verified_envelope": "L_Frame_smooth_HeadRelief5"
         }
@@ -720,21 +720,21 @@
         "flan": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987459,
+          "volume_mm3": 1967.9176791987452,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "tape": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987443,
+          "volume_mm3": 1967.9176791987422,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "orbit": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987425,
+          "volume_mm3": 1967.9176791987445,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
@@ -748,49 +748,49 @@
         "talavera": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987443,
+          "volume_mm3": 1967.9176791987434,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "gameboy": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987438,
+          "volume_mm3": 1967.9176791987443,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "nes": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.917679198744,
+          "volume_mm3": 1967.9176791987443,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "snes": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987438,
+          "volume_mm3": 1967.9176791987416,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "phone": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.917679198742,
+          "volume_mm3": 1967.9176791987425,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "walkman": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.9176791987422,
+          "volume_mm3": 1967.917679198745,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "ipod": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 1967.917679198743,
+          "volume_mm3": 1967.9176791987454,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         }
@@ -1327,6 +1327,6 @@
     "Window tolerance and PCB copper-to-edge rule",
     "Printed fits, insertion/extraction loads, charging, RF and measured power"
   ],
-  "source_sha256": "4e3531e9e955f1747e97178666e2cde1c1794896997bc44655188c986705d043",
-  "checker_sha256": "11bbc8d104daca9cda325b627693dcd4fcd23637f44e3bb4c9eb7fd9acbef640"
+  "source_sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
+  "checker_sha256": "33d9277cff83477b946819f1a68a6680b79227c2df0c5b4ea0a4ac56d83f15c8"
 }

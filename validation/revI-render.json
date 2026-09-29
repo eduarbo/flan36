@@ -1,6 +1,6 @@
 {
   "revision": "I",
-  "model_sha256": "9d8d69d876f9247da4c5bc4c4cc483fbb70c4db200b64d700b4bec5b3939b380",
+  "model_sha256": "85b90673e6d716d58ccc6826a15f833d771a357b1ed7d2253515abf7e340993f",
   "layout_sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3",
   "renderer_sha256": "640133c448b630936509e1dce19767de193bf692875243fa9d50d19ca134b689",
   "meshes": [
@@ -14,19 +14,19 @@
     },
     {
       "path": "mechanical/revI/left-frame-flan-body.stl",
-      "sha256": "d85e0453cdb06a02b787161e31fb89496671bec7c6a52fc92deda32822bb7d48"
+      "sha256": "80adbd41770c4f358444af638bdfdbc7dbb2a14d43f527cccddc24ddf716ae5c"
     },
     {
       "path": "mechanical/revI/left-frame-flan-detail.stl",
-      "sha256": "e23d58aaac86e28349dc01df4be713b8c26c361ed450ee1d69aa041ebcb12c79"
+      "sha256": "70776872e7d0669a08b241c6a20f675b90c103af415a69d6ff5c98927881e292"
     },
     {
       "path": "mechanical/revI/left-frame-flan-accent.stl",
-      "sha256": "9ed99430b078734a125684409d3d52e8693a65ef8bfc6a359830f70bbb592743"
+      "sha256": "aac4ed818087a959f2b98d87f0d6fdbe71c30bc4f0872773ed5efe2e56f40932"
     },
     {
       "path": "mechanical/revI/left-frame-flan-secondary.stl",
-      "sha256": "01538d00e14eb26eedce4570c135e7c6adf8cba00370cf37d3fa48d3e3fc2763"
+      "sha256": "06e959bb9d2818412dfa77cd47dcdb7ce8eb23ec395dec11d54d5aaa48ca5227"
     },
     {
       "path": "mechanical/revI/left-pcb.stl",
@@ -290,19 +290,19 @@
     },
     {
       "path": "mechanical/revI/right-frame-flan-body.stl",
-      "sha256": "3d1ffa44459f065f018c8f81980fb61ff3e61190c9327d790fb63ba65b99b582"
+      "sha256": "6ec05d3ba87570d1473718dc8b3c53f123dc9768614ebd928c3de7a7b74bc150"
     },
     {
       "path": "mechanical/revI/right-frame-flan-detail.stl",
-      "sha256": "f4df9bf521ae95bf00b39d11eb0cfe1e740ead4fef40765b593f5cc945cebc98"
+      "sha256": "6c0ed78726eb45305f83b84f72878a905bd9a5a964be029d7febf01b9203a9ab"
     },
     {
       "path": "mechanical/revI/right-frame-flan-accent.stl",
-      "sha256": "24dffde341c559549ff50deefa4c005fe3a131a6c5ef3f14fbd368573e231716"
+      "sha256": "aa0af7049932e142127927bcc61bbfa13b19c83e8e96cc4d63082e2772ad2be3"
     },
     {
       "path": "mechanical/revI/right-frame-flan-secondary.stl",
-      "sha256": "e76a6d6b95cce400fa9736ffdfa5949112835f71ad578475a191af765dd1da01"
+      "sha256": "cddab8693c9f92ec96b1b791c6e56bfbb8a7397367db462bde7cb2b53f76cc87"
     },
     {
       "path": "mechanical/revI/right-pcb.stl",
@@ -534,7 +534,7 @@
     },
     {
       "path": "mechanical/revI/left-frame-flan.stl",
-      "sha256": "490280581fdcf76ef651aca8be5f6e46bbcae8ae161f96d49dcbfa6a1839d5ed"
+      "sha256": "84bd3bf04139576478b7d3b84142231779a18539bef0e70bb45155de68f498cd"
     }
   ],
   "views": {
@@ -545,7 +545,7 @@
         "right"
       ],
       "exploded": false,
-      "image_sha256": "606c0250620ef61d9b17d0eff69fa410cd6a73701bd22c79935b923e1a230e93"
+      "image_sha256": "8a4c9af64f588402371e797068d55e80e610ed2313277d16c74ea967234dc4df"
     },
     "top": {
       "keys": 36,
@@ -554,7 +554,7 @@
         "right"
       ],
       "exploded": false,
-      "image_sha256": "9603bb604138d9cbb6487031d583c0c6b1896f5e80a37bf9e6397cf0590834b4"
+      "image_sha256": "bb3b751e567bca2d689b13c5f5f1581c65d8196ef6e983bade760160e0880776"
     },
     "side": {
       "keys": 18,
@@ -562,7 +562,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "2e6a276fe4ae85aca020e0dfd96b3841ef95e096b052edd4b7892e30be875d2b"
+      "image_sha256": "6d691bed63e8dab28284a4f17618a6f82239b2acdb655b62091c9bc5731c7ced"
     },
     "stack": {
       "keys": 18,
@@ -570,7 +570,7 @@
         "left"
       ],
       "exploded": true,
-      "image_sha256": "d60e7d418843bcdf56c9a5d04a200dfc1dd77b2773a6f435211e09d7b8886d88"
+      "image_sha256": "edb60683c6d1cb3b141733ab30f961305781eb6855944ef42e930969cac5b5b3"
     },
     "detail": {
       "keys": 18,
@@ -578,7 +578,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "1f71c944d781d6be210c7cbd1ac95221767c85e9bdce81ef0f37c5fa8b7d0b28"
+      "image_sha256": "16fc904fa1b1bdf536934a4a394e64657539dfea0fa0c3d0b4e3c4f66163f39e"
     },
     "corner": {
       "keys": 18,
@@ -586,7 +586,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "69933aed2a1727c2294e8ce8fe2f3562be316b8151f1c39ac6a12b3c234f806e"
+      "image_sha256": "3c7a074b37fdd61ec81a672e19d77d34d25e85840b73de7d6e6121c6d6884fd6"
     },
     "level": {
       "keys": 18,
@@ -594,7 +594,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "b5e34ebc62363618e21611dbf0251c2cce650754ea21b908fc21a9e37ccd65a9"
+      "image_sha256": "685b84984068d458d8358d96c850b7db2cbec50d98c4f4aa0814f34b2dbc3e4b"
     }
   },
   "geometry_source": "generated CAD, no image retouching",

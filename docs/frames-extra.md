@@ -6,21 +6,27 @@ Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and cli
 
 | Frame | Design |
 |---|---|
-| **Flan** | Custard shell, cocoa window and a broad caramel drip. The signature default. |
-| **Tape** | Cassette window, two reels and an orange transport stripe. |
-| **Orbit** | Seventies green, an orange orbit and a small satellite. |
-| **Manga** | Bold ink panels, broad speed lines and a vermilion corner. |
-| **Talavera** | Cobalt ceramic borders and a four-petal tile with a terracotta center. |
+| **Flan** | A caramel sweep, custard shell and rounded dessert medallion. |
+| **Tape** | Diagonal orange corner, dark screen field, twin reels and three lower slats. |
+| **Orbit** | A broad forest field, asymmetric orange sweep and integrated ivory disc. |
+| **Manga** | Broad ink panels, ivory diagonals, four lower circles and a red corner. |
+| **Talavera** | Cobalt teardrop petals in four quadrants around a concave terracotta star. |
 | **Game Boy** | Pocket-console bezel, cross pad and two berry-colored buttons. |
 | **NES** | A restrained controller strip with red action buttons. |
 | **SNES** | A soft gray console with two lavender button tones. |
 | **2000s Phone** | Navy faceplate, silver keypad and green call key. |
 | **Walkman** | Cobalt portable audio, yellow controls and speaker bars. |
-| **iPod** | White face, soft silver click wheel and a dark screen border. |
+| **iPod** | White face, a complete silver click wheel and a continuous screen border. |
 
-All eleven use four **solid colors**, with no gradients or raised decorations. The 0.4 mm inlays finish at the existing 13.39 mm roof. The cavity, display opening, case corner and magnetic interface stay unchanged. Decorative buttons and wheels are flush color regions.
+All eleven use up to four **solid colors**, with no gradients or raised decorations. The 0.4 mm inlays finish at the existing 13.39 mm roof. The cavity, display opening, case corner and magnetic interface stay unchanged. Decorative buttons and wheels are flush color regions.
 
 **Restore design colors** applies the original frame palette. The matching global theme coordinates the rim and keys; themes change colors only. Custom HEX colors and each thumb remain editable.
+
+## Reference fidelity
+
+[Original concepts beside actual CAD views](frame-comparison.md). Tape, Orbit, Manga and Talavera retain their distinctive compositions. Curves are editable native geometry. Tiny textures become solid regions.
+
+The real glass opening, exposed header access and thin PCB collar remain visible. Artwork is fitted around those measured boundaries. Every authored motif must fit the supported roof intact; the generator now rejects clipping instead of silently trimming a design. The existing 13.39 mm stack and 0.8 mm backing are preserved.
 
 ## Print or edit
 
@@ -39,6 +45,17 @@ python3 tools/freecad/run_macos.py tools/freecad/check_frame_collection.py \
   --source build/frame-collection/reproduced/Flan36.FCStd \
   --report build/frame-collection/reproduced/sections.json
 ```
+
+To inspect the exact drawing space and catch the former clipping bug before export:
+
+```sh
+python3 tools/freecad/run_macos.py tools/freecad/export_frame_domain.py \
+  --source mechanical/revI/Flan36.FCStd --output build/frame-fidelity/roof.json
+/Applications/FreeCAD.app/Contents/Resources/bin/python tools/check_frame_artwork.py \
+  --domain build/frame-fidelity/roof.json
+```
+
+Use the Python environment containing Shapely on other platforms. The exact native check also rejects clipped or fully obscured individual motifs.
 
 The installer saves and reopens an isolated candidate, verifies the unchanged keys, cases, electronics and parameters, and exports the complete current collection. It never adopts the candidate automatically. The section check rejects color islands without a 0.8 mm feature core after Boolean clipping. It does not establish nozzle resolution, bonding or physical fit; inspect sliced layers and print a sample.
 

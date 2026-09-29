@@ -13,6 +13,7 @@ def args():
     parser.add_argument("--source",type=Path,required=True)
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--export",action="store_true")
+    parser.add_argument("--reuse-validated",type=Path,help="Reuse an immutable candidate whose saved report matches this original source; only changed styles are rebuilt.")
     values=sys.argv[1:]
     while values and not values[0].startswith("--"):values.pop(0)
     return parser.parse_args(values)
@@ -32,14 +33,46 @@ def run():
     from configuration import extract,apply_finish
     from preserve_document_label import preserve_document_label
     G.showMainWindow();G.getMainWindow().hide()
-    source_hash=digest(source);doc=A.openDocument(str(source));doc.recompute();label=doc.Label
+    source_hash=digest(source);prior=None;prior_path=None
+    if options.reuse_validated:
+        prior_path=options.reuse_validated.resolve()
+        prior=json.loads((prior_path.parent/'installation.json').read_text())
+        assert prior['source_sha256']==source_hash and prior['output_sha256']==digest(prior_path)
+        assert prior['saved_reopened_recomputed'] and prior['protected_36_caps_cases_electronics_and_parameters']
+    doc=A.openDocument(str(prior_path or source));doc.recompute();label=doc.Label
     before=protected(doc);other=stable(doc)
     parameters={n:float(getattr(doc.Parameters,n)) for n in json.loads((ROOT/'design/revI.json').read_text())['parameters']}
     cfg=extract(doc);spec=F.load_spec();palette=spec['styles']['flan']['colors']
     old=[o for o in doc.Objects if o.TypeId!='App::Link' and hasattr(o,'FrameStyle') and o.FrameStyle not in F.STYLES]
     templates={side:F.find_smooth(doc,side) for side in ['left','right']}
     report={'scope':'Frame collection replacement only; unchanged stack and assembly interfaces','source_sha256':source_hash,'physical_acceptance':False}
-    report['frames']=F.apply(doc)
+    changed=list(F.STYLES)
+    unchanged={}
+    def signature(o):
+        return [hashlib.sha256(p.Shape.exportBrepToString().encode()).hexdigest() for p in [o,*o.MaterialParts,*o.ArtworkFeatures]]
+    if prior:
+        changed=[style for style in F.STYLES if any(
+            doc.getObject(prefix+'FlushFrame_'+style+'_Final').MaterialSpecSHA256 != hashlib.sha256(json.dumps(spec['styles'][style],sort_keys=True).encode()).hexdigest()
+            for prefix in ['L_','R_'])]
+        section_path=prior_path.parent/'sections.json'
+        if section_path.exists():
+            sections=json.loads(section_path.read_text())
+            assert sections['source_sha256']==digest(prior_path)
+            assert all(f['frame'].split('-',1)[1] in changed for f in sections['failures']), 'Unchanged candidate style has a failed section check'
+        for side,prefix in [('left','L_'),('right','R_')]:
+            for style in F.STYLES:
+                if style not in changed:
+                    obj=doc.getObject(prefix+'FlushFrame_'+style+'_Final');unchanged[obj.Name]=signature(obj)
+        report['frames']=prior['frames']
+        if changed:
+            update=F.apply(doc,styles=changed)
+            report['frames']['frames'].update(update['frames'])
+        for name,prior_signature in unchanged.items():assert signature(doc.getObject(name))==prior_signature,(name,'unchanged style drift')
+        report['revision_parent_sha256']=digest(prior_path)
+        report['rebuilt_styles']=changed
+        report['unchanged_style_geometry_verified']=len(unchanged)
+    else:
+        report['frames']=F.apply(doc)
     for o in old:
         style=o.FrameStyle
         F.prop(o,'FormerFrameStyle','App::PropertyString',style);o.removeProperty('FrameStyle');o.Visibility=False

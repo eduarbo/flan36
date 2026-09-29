@@ -1,0 +1,51 @@
+{
+  "request_ref": "codex:01a0c214-956e-7ff3-9dd0-6f48f74f240f:user:20260928:frame-fidelity-correction",
+  "parent_request_ref": "codex:01a0c214-956e-7ff3-9dd0-6f48f74f240f:user:20260928:replace-frame-collection",
+  "requested_outcome": "Correct the implementation to preserve the selected concept compositions and eliminate accidental clipping of decorative elements. Retain the complete eleven-frame collection, Flan default, solid flush colors, print exports, themes, camera continuity and public delivery.",
+  "baseline_commit": "3950f5118f79b9d3996ef626e53e5c647320de3d",
+  "required_outcomes": [
+    "Tape diagonal header, dark screen field, orange screen foot, complete twin reels and three lower slats",
+    "Orbit dominant forest field, asymmetric orange crescent and ivory disc",
+    "Manga broad dark panels, ivory diagonals, four lower circles and red corner",
+    "Talavera four native teardrop petals in quadrants with concave terracotta center",
+    "All eleven frames fit the measured backed roof with zero accidental per-feature clipping",
+    "The 13.39 mm roof, 0.8 mm backing, glass/header access and unrelated assembly geometry remain unchanged",
+    "Actual CAD comparison images, accurate viewer previews and verified native print downloads on the public site"
+  ],
+  "review": {
+    "baseline_checked_before_root_edits": true,
+    "baseline_sha256": "81c250c8dda3825c884b68851b489869ab47a443d03879d734f3a73d4c2e66f4",
+    "agreement": "Both independent image-and-source reviewers reject current fidelity and recommend restoring reference compositions within the existing supported native roof. No disagreement on correction route.",
+    "dispositions": {
+      "composition": "Restore the selected visual signatures using native curves; compare actual CAD views with original PNGs.",
+      "clipping": "Measure the supported roof, require zero unintentional per-feature clipping, and reject fully obscured features. Preserve the existing stack and backing.",
+      "validation_gap": "Retain structural checks, add authored-feature containment plus the old truncated-bezel regression and per-motif viewer probes.",
+      "reference_limits": "Show the real glass and connector access in CAD renders; omit gradients, raised texture and sub-resolution microdots.",
+      "physical_fit": "Unverified; not part of the digital correction acceptance."
+    },
+    "product_acceptance": "Root owns digital acceptance; see validation/revI-frame-fidelity.json for the completed native, visual and viewer checks."
+  },
+  "reference_sources": [
+    {
+      "path": "design/references/frame-concepts/tape.png",
+      "sha256": "c3be3359b3555495b2fa2781ea5a637692a640ac42c47d8d82edeee9d7c66f95"
+    },
+    {
+      "path": "design/references/frame-concepts/orbit.png",
+      "sha256": "63fd395513f9a586f4fe86a6d331065c64f3c8119ea163cefee34c9efac97b60"
+    },
+    {
+      "path": "design/references/frame-concepts/manga.png",
+      "sha256": "2082c6c914a7d1faa3df955f70e5af03ab4908bb1cdfe859342b58c7d8524b3d"
+    },
+    {
+      "path": "design/references/frame-concepts/talavera.png",
+      "sha256": "a798b000f060e23c6aaa9fe121f9be99e8dab90f971e3d31b37dfe96e4073c95"
+    },
+    {
+      "path": "design/references/frame-concepts/caramel.png",
+      "sha256": "52b86a272c9099a140a2896b575c5c1b83e4bb307356cce9eaa059bdfe685188"
+    }
+  ],
+  "acceptance_scope": "Digital correction; physical printing and assembly remain unqualified. Concepts guide composition, not hidden hardware or invented dimensions."
+}

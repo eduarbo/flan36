@@ -12,9 +12,13 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
+## Revision I — frame fidelity correction
+
+The first collection passed structural checks but did not preserve the selected compositions, and its support mask silently severed several decorations. The correction restores the reference motifs and adds per-feature rejection for unsupported artwork. [Reference comparison](frame-comparison.md) · [Digital checks](../validation/revI-frame-fidelity.json). Earlier verification receipts describe their original snapshots.
+
 ## Revision I — solid-color frame collection
 
-Flan is the default frame in the native assembly, viewer and presets. Tape, Orbit, Manga, Talavera, Game Boy, NES, SNES, 2000s Phone, Walkman and iPod complete the new collection. Every design uses four solid colors in flush 0.4 mm co-print regions. The case, keys, electronics and 13.39 mm roof remain unchanged.
+Flan is the default frame in the native assembly, viewer and presets. Tape, Orbit, Manga, Talavera, Game Boy, NES, SNES, 2000s Phone, Walkman and iPod complete the new collection. Every design uses up to four solid colors in flush 0.4 mm co-print regions. The case, keys, electronics and 13.39 mm roof remain unchanged.
 
 Older frame IDs migrate to Flan with the original saved bytes retained for recovery. Their colors, battery, cases and caps survive. The current exports contain only the eleven designs. [Collection and regeneration](frames-extra.md) · [Current digital checks](../validation/revI-frame-collection.json).
 

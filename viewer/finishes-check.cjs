@@ -8,7 +8,7 @@ const scene=JSON.parse(fs.readFileSync(path.join(root,'build/viewer-scene.json')
 const decode=(s,Type)=>{const b=Buffer.from(s,'base64');return new Type(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength));};
 const geometryFor=p=>{const s=scene.geometries[p],g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(decode(s.positions,Float32Array),3));g.setAttribute('normal',new THREE.BufferAttribute(decode(s.normals,Float32Array),3));g.setIndex(new THREE.BufferAttribute(decode(s.indices,Uint32Array),1));for(const group of s.groups||[])g.addGroup(group.start,group.count,group.materialIndex);g.computeBoundingBox();return g;};
 const make=createFrameFinishes(geometryFor,color=>({color}));
-const probes={flan:[[123,58,3,'Custard'],[122,64,1,'Saucer']],tape:[[115.8,56.8,3,'Reel']],orbit:[[122.8,58.7,1,'Core']],manga:[[131,61,2,'Corner']],talavera:[[123,58.65,2,'Center']],gameboy:[[117,57,1,'D-pad'],[130.1,54.7,2,'A']],nes:[[130.5,58.1,2,'A']],snes:[[127.8,60.5,2,'B']],phone:[[116,57,1,'Key']],walkman:[[128.8,55.8,3,'Play']],ipod:[[123,58.6,3,'Center']]};
+const probes={flan:[[123,60,3,'Custard'],[123,64,1,'Saucer']],tape:[[115.4,58.25,3,'Reel'],[128,13,2,'Diagonal stripe'],[123,62.2,1,'Slat']],orbit:[[122.8,60.4,3,'Ivory disc'],[124,64,2,'Crescent']],manga:[[132,65,2,'Corner'],[116,59.9,1,'Dot 1'],[121,59.9,1,'Dot 2'],[116,64.1,1,'Dot 3'],[121,64.1,1,'Dot 4']],talavera:[[123,60.4,2,'Concave center'],[118,57.7,3,'Teardrop']],gameboy:[[117,58,1,'D-pad'],[130.1,56.3,2,'A']],nes:[[130.5,58.7,2,'A']],snes:[[127.8,62.55,2,'B']],phone:[[116,59.2,1,'Key']],walkman:[[129,57.9,3,'Play']],ipod:[[123,60.4,3,'Center']]};
 function triangleSet(g){const ids=Array.from(g.index.array),t=[];for(let i=0;i<ids.length;i+=3)t.push(ids.slice(i,i+3).join(','));return t.sort();}
 const roof=scene.measurements.cover_top_mm;
 function topRole(g,x,z){const p=g.attributes.position;for(const group of g.groups)for(let i=group.start;i<group.start+group.count;i+=3){const a=[0,1,2].map(j=>g.index.getX(i+j));if(a.some(n=>Math.abs(p.getY(n)-roof)>.001))continue;const sides=a.map((v,j)=>{const w=a[(j+1)%3];return (p.getX(w)-p.getX(v))*(z-p.getZ(v))-(p.getZ(w)-p.getZ(v))*(x-p.getX(v));});if(sides.every(n=>n>=-1e-5)||sides.every(n=>n<=1e-5))return group.materialIndex;}return null;}
@@ -31,9 +31,7 @@ for(const style of Object.keys(scene.catalog.frame_styles))for(const side of ['l
   }
  }
  for(const [x,z,role,label] of probes[style]||[]){
-  // The Level PCB undercut leaves .665 mm here. Keep solid body material;
-  // a .4 mm inlay would violate the retained .8 mm backing requirement.
-  const expected=label==='Upper bezel'&&Math.abs(roof-13.39)<.001?0:role;
+  const expected=role;
   assert.equal(topRole(g,side==='right'?160-x:x,z),expected,`${side} ${style}: ${label}`);
  }
  const override=make(style,side,'#abcdef');assert.equal(override.material[0].color,'#abcdef');assert.equal(override.geometry,g,'Reuse geometry across body changes');

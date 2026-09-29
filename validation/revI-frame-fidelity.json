@@ -1,0 +1,481 @@
+{
+  "request_ref": "codex:01a0c214-956e-7ff3-9dd0-6f48f74f240f:user:20260928:frame-fidelity-correction",
+  "parent_request_ref": "codex:01a0c214-956e-7ff3-9dd0-6f48f74f240f:user:20260928:replace-frame-collection",
+  "baseline_commit": "3950f5118f79b9d3996ef626e53e5c647320de3d",
+  "status": "passed-digital-correction",
+  "physical_acceptance": false,
+  "correction": {
+    "prior_error": "Reference compositions were replaced with unrelated simplified motifs. The support mask silently truncated some authored shapes. Surviving-island tests did not detect this.",
+    "change": "Restore reference signatures with native curves and explicit screen fields; reject authored-feature loss before and during export. Reposition all other motifs inside the measured supported roof.",
+    "bounded_review": "All four selected references compared with front and oblique renders of the final CAD. Flan thin-sliver section failure corrected before adoption."
+  },
+  "native_checks": {
+    "frames": 22,
+    "authored_features": 178,
+    "max_clipped_volume_mm3": 0,
+    "all_motifs_visible": true,
+    "all_section_cores_survive": true,
+    "roof_mm": 13.39,
+    "inlay_depth_mm": 0.4,
+    "minimum_backing_mm": 0.8,
+    "protected_keys_cases_electronics_and_parameters": true,
+    "non_frame_exported_meshes_unchanged": true,
+    "saved_reopened_recomputed": true
+  },
+  "drawing_preflight": {
+    "features": 89,
+    "unsupported_features": 0,
+    "old_truncated_bezel_rejected": true,
+    "old_lost_area_mm2": 551.5859384521855,
+    "native_domain_source_sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e"
+  },
+  "visual_review": {
+    "method": "Manual comparison of original project concepts with orthographic and oblique actual-CAD renders. Exact byte equality checked for all 88 preview/material STL pairs.",
+    "reference_sources": [
+      {
+        "path": "design/references/frame-concepts/tape.png",
+        "sha256": "c3be3359b3555495b2fa2781ea5a637692a640ac42c47d8d82edeee9d7c66f95"
+      },
+      {
+        "path": "design/references/frame-concepts/orbit.png",
+        "sha256": "63fd395513f9a586f4fe86a6d331065c64f3c8119ea163cefee34c9efac97b60"
+      },
+      {
+        "path": "design/references/frame-concepts/manga.png",
+        "sha256": "2082c6c914a7d1faa3df955f70e5af03ab4908bb1cdfe859342b58c7d8524b3d"
+      },
+      {
+        "path": "design/references/frame-concepts/talavera.png",
+        "sha256": "a798b000f060e23c6aaa9fe121f9be99e8dab90f971e3d31b37dfe96e4073c95"
+      },
+      {
+        "path": "design/references/frame-concepts/caramel.png",
+        "sha256": "52b86a272c9099a140a2896b575c5c1b83e4bb307356cce9eaa059bdfe685188"
+      }
+    ],
+    "preserved_signatures": {
+      "flan": [
+        "Flowing caramel edge",
+        "Rounded lower medallion",
+        "Flat solid-color interpretation"
+      ],
+      "tape": [
+        "Diagonal upper orange stripe",
+        "Continuous dark screen field",
+        "Orange screen foot",
+        "Two separated reels with dark bridge",
+        "Three lower slats"
+      ],
+      "orbit": [
+        "Dominant forest field",
+        "Continuous asymmetric orange crescent",
+        "Ivory disc nested into sweep"
+      ],
+      "manga": [
+        "Broad ink screen field",
+        "Ivory diagonal gutters",
+        "Four black circles in a two-by-two grid",
+        "Red lower-right panel"
+      ],
+      "talavera": [
+        "Continuous cobalt screen field",
+        "Four teardrop petals in quadrants",
+        "Concave terracotta center",
+        "Ivory negative space"
+      ]
+    },
+    "adaptations": [
+      "Actual glass, header and thin PCB collar stay visible; proportions fit that envelope.",
+      "Solid colors replace gradients, raised texture and tiny halftone dots."
+    ]
+  },
+  "viewer_geometry": {
+    "viewer_sha256": "9119cfee93c7cb7668f2db9878ca48a18d6cd04e1418660237626b5dffcd4c65",
+    "scene_sha256": "a2cfa7bd697f59101fee29c11abcfa7589e0fda00fec20b4138ccf928f1a2526",
+    "checker_sha256": "288fab6a56715d43530bf64b7b21f55a71be90a14031e0ceec166d5cdb93445f",
+    "original_vertices_normals_and_triangles": true,
+    "flush_feature_probes": true,
+    "exact_native_material_volumes": true,
+    "no_raised_relief": true,
+    "max_material_groups": 4,
+    "geometry_cached": true,
+    "checked": [
+      {
+        "side": "left",
+        "style": "flan",
+        "triangles": 7596,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "flan",
+        "triangles": 7596,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "tape",
+        "triangles": 12676,
+        "groups": 4,
+        "feature_probes": 3
+      },
+      {
+        "side": "right",
+        "style": "tape",
+        "triangles": 12676,
+        "groups": 4,
+        "feature_probes": 3
+      },
+      {
+        "side": "left",
+        "style": "orbit",
+        "triangles": 8326,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "orbit",
+        "triangles": 8326,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "manga",
+        "triangles": 9204,
+        "groups": 4,
+        "feature_probes": 5
+      },
+      {
+        "side": "right",
+        "style": "manga",
+        "triangles": 9204,
+        "groups": 4,
+        "feature_probes": 5
+      },
+      {
+        "side": "left",
+        "style": "talavera",
+        "triangles": 9660,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "talavera",
+        "triangles": 9660,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "gameboy",
+        "triangles": 12064,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "gameboy",
+        "triangles": 12064,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "nes",
+        "triangles": 9564,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "nes",
+        "triangles": 9564,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "snes",
+        "triangles": 12056,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "snes",
+        "triangles": 12056,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "phone",
+        "triangles": 16696,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "phone",
+        "triangles": 16696,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "walkman",
+        "triangles": 13072,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "walkman",
+        "triangles": 13072,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "ipod",
+        "triangles": 9400,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "ipod",
+        "triangles": 9400,
+        "groups": 4,
+        "feature_probes": 1
+      }
+    ]
+  },
+  "browser": {
+    "styles": [
+      "flan",
+      "tape",
+      "orbit",
+      "manga",
+      "talavera",
+      "gameboy",
+      "nes",
+      "snes",
+      "phone",
+      "walkman",
+      "ipod"
+    ],
+    "viewer_sha256": "758bb374fa367dc6d419136d1a3416416b6c8b1cd98a2be2ce9d7bdb01fd3754",
+    "native_3mf": [
+      {
+        "id": "left-frame-flan",
+        "material_parts": 4,
+        "sha256": "9152c6faef5e94d93220d5e5e384b455d95df64964da5ecc4267d46aa262ec99"
+      },
+      {
+        "id": "left-frame-tape",
+        "material_parts": 4,
+        "sha256": "69759f6bf18906dd2f1a0242da9c1b11c508720481ea0e2333ad2a9191977e20"
+      },
+      {
+        "id": "left-frame-orbit",
+        "material_parts": 4,
+        "sha256": "261e9d827e3cd067ce2d1de941a3bd65076cc3a9e12c253c732e6ba68bfb999d"
+      },
+      {
+        "id": "left-frame-manga",
+        "material_parts": 4,
+        "sha256": "f6e30e4c2aec2c260fdbf8e096f7f72f42a5fe353b6b43b8cb7fe5894902b16c"
+      },
+      {
+        "id": "left-frame-talavera",
+        "material_parts": 4,
+        "sha256": "012de2ced5166cb33e31ce2c501010fa9d18fbe5749cf56694bd548a7d21c459"
+      },
+      {
+        "id": "left-frame-gameboy",
+        "material_parts": 4,
+        "sha256": "21abf1c4b794eaff588148b8e58e26f39486e0b993196c230a7a51f5d33f8443"
+      },
+      {
+        "id": "left-frame-nes",
+        "material_parts": 4,
+        "sha256": "25458fbfa39070c57a7a62ace724bc114665d00167cc8dd73f16c3fcaeb8903a"
+      },
+      {
+        "id": "left-frame-snes",
+        "material_parts": 4,
+        "sha256": "f7bbab83bcaad889f25bcde02c62a6497bf55a99dc78c8ad08e812dc5e23fbc3"
+      },
+      {
+        "id": "left-frame-phone",
+        "material_parts": 4,
+        "sha256": "417bdd1293cad78364ada7fe6f35ac53550e61e08fb6072a4d1f54af2b8afe72"
+      },
+      {
+        "id": "left-frame-walkman",
+        "material_parts": 4,
+        "sha256": "60954d7dfdffc91d663e1edf561b4c2b8d9329195dccd9b86201b2531a889f65"
+      },
+      {
+        "id": "left-frame-ipod",
+        "material_parts": 4,
+        "sha256": "d0562f48dda8f09919a0a9905763958ff14eefd2b0778bf8432e5eda359e0859"
+      },
+      {
+        "id": "right-frame-flan",
+        "material_parts": 4,
+        "sha256": "82c27b853871dc1d26a5b014310db71b167691a1b9e568785dceeee466f6ce31"
+      },
+      {
+        "id": "right-frame-tape",
+        "material_parts": 4,
+        "sha256": "ff44d67fbbd277dc06b303aafa22506aefa0addf794133f19c9d56156771f542"
+      },
+      {
+        "id": "right-frame-orbit",
+        "material_parts": 4,
+        "sha256": "8b59b317b2bf9b9a969533d54ef9d5e1c9f8ab6931922195e40bce8767cdfe7c"
+      },
+      {
+        "id": "right-frame-manga",
+        "material_parts": 4,
+        "sha256": "cec76d2d5dbe70b8438d8a558a4532949c674cb497a16cdd3317874254f44c0e"
+      },
+      {
+        "id": "right-frame-talavera",
+        "material_parts": 4,
+        "sha256": "07827c2009c2ce411c336380610a5e30aef9da27d4fe66182482297f317b3ccf"
+      },
+      {
+        "id": "right-frame-gameboy",
+        "material_parts": 4,
+        "sha256": "ba451d93c7a403b0fc08357e6a129b6a3c973b0a9cba2c69a8bd792d0140928e"
+      },
+      {
+        "id": "right-frame-nes",
+        "material_parts": 4,
+        "sha256": "d88f77c9f06963d029f0b603d7997edc73e025bdc58dad69b07a52b43bae5665"
+      },
+      {
+        "id": "right-frame-snes",
+        "material_parts": 4,
+        "sha256": "056fb51b9027f10a61b1689ac6098786caf4fa292b77ee634e3f7ae6951e0448"
+      },
+      {
+        "id": "right-frame-phone",
+        "material_parts": 4,
+        "sha256": "9245d9846a19d06ae4205d5914dfd4e5eb42d499c50b44288d092c11d7f72514"
+      },
+      {
+        "id": "right-frame-walkman",
+        "material_parts": 4,
+        "sha256": "7c68c9aaf1045b5b92723d4441e98980d96199ec5c51da4708344bff8cb0d58c"
+      },
+      {
+        "id": "right-frame-ipod",
+        "material_parts": 4,
+        "sha256": "e2873143c756142d8ddacea5cad422f839b2d1b74cad8de93b449623cddafcb0"
+      }
+    ],
+    "checks": {
+      "distinct_actual_previews": 11,
+      "frame_changes_preserve_inspection": 11,
+      "themes_without_pinky_accents": 27,
+      "flan_reset_default": true,
+      "exact_old_configuration_preserved_on_migration": true,
+      "mobile_gallery": true
+    },
+    "runtime_errors": [],
+    "passed": true
+  },
+  "additional_checks": {
+    "native_301_meshes_and_36_key_positions": "passed",
+    "multipart_3mf_registration_and_hex_roles": "passed"
+  },
+  "artifacts": [
+    {
+      "path": "mechanical/revI/Flan36.FCStd",
+      "sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e"
+    },
+    {
+      "path": "design/frame-finishes.json",
+      "sha256": "efceacdb7957774ec3a84d267cf84bd49859ea5187ac3608424f76cca4f27af4"
+    },
+    {
+      "path": "design/themes.json",
+      "sha256": "abfbfb3132bbf3f4d2b4ae3833b4905e67f3a6c7a1f617a63b55b425a793f805"
+    },
+    {
+      "path": "design/revI.json",
+      "sha256": "85b90673e6d716d58ccc6826a15f833d771a357b1ed7d2253515abf7e340993f"
+    },
+    {
+      "path": "validation/revI-frame-collection-native.json",
+      "sha256": "8f80ee6e094941f301a7e60ae4c3459b9ae8e63c04fead42251ab9334fd4274b"
+    },
+    {
+      "path": "validation/revI-frame-sections.json",
+      "sha256": "dd2e8e500776f3adb4d9051096ad56a3a70382ea377cfd992b56c25edece27ce"
+    },
+    {
+      "path": "validation/revI-mechanical.json",
+      "sha256": "ab53ffdac93626cb9eb74f4658b35573ee2e1475527cc9f8b223ec540f2714c8"
+    },
+    {
+      "path": "validation/revI-viewer.json",
+      "sha256": "e6702addf4f0cdac711af44050eca2836ec27b456d7e261b4af27499d68563ca"
+    },
+    {
+      "path": "validation/revI-frame-detail-renders.json",
+      "sha256": "0680d9eb0d5d4b8216430048074fcc1c5292a842748a253b9f409770138f2389"
+    },
+    {
+      "path": "validation/revI-frames-render.json",
+      "sha256": "d5227107dbf770b612d220832c711aa492742d520f94c7116f333b8a927eebaa"
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "9119cfee93c7cb7668f2db9878ca48a18d6cd04e1418660237626b5dffcd4c65"
+    },
+    {
+      "path": "docs/offline.html",
+      "sha256": "758bb374fa367dc6d419136d1a3416416b6c8b1cd98a2be2ce9d7bdb01fd3754"
+    },
+    {
+      "path": "docs/images/revI-frame-gallery.png",
+      "sha256": "af0568d52559db7c2353d445f5a0942c4bfc989ffeeab21de0019960cd294abf"
+    },
+    {
+      "path": "docs/images/frames/tape.png",
+      "sha256": "32a9af2e8907a8bceb75ca463072267289a363822bf73a0248724b2d6f1ef277"
+    },
+    {
+      "path": "docs/images/frames/orbit.png",
+      "sha256": "7f277fbf1d5deb8774ac97c3b35e3b9c1d3fa719007067d0f2fec5b95b043815"
+    },
+    {
+      "path": "docs/images/frames/manga.png",
+      "sha256": "5ab022db13b93299a25f9b3cb6be4f63e25ff1baa29ac0ab943589adcee3c727"
+    },
+    {
+      "path": "docs/images/frames/talavera.png",
+      "sha256": "de250dec3a7928b4f46d444a2b55cb69ee4e54cdc691c5ba2a0ed04ef6148673"
+    }
+  ],
+  "commands": [
+    "python3 tools/freecad/run_macos.py tools/freecad/check_frame_collection.py --source mechanical/revI/Flan36.FCStd --report build/frame-fidelity/sections.json",
+    "python3 tools/freecad/run_macos.py tools/freecad/export_frame_domain.py --source mechanical/revI/Flan36.FCStd --output build/frame-fidelity/roof.json",
+    "/Applications/FreeCAD.app/Contents/Resources/bin/python tools/check_frame_artwork.py --domain build/frame-fidelity/roof.json",
+    "node viewer/finishes-check.cjs",
+    "node viewer/flush-print-check.cjs",
+    "/Applications/FreeCAD.app/Contents/Resources/bin/python tools/check_viewer_revI.py",
+    "node viewer/frame-collection-check.cjs"
+  ],
+  "public_delivery": "Recorded separately after publication and anonymous readback."
+}

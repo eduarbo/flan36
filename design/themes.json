@@ -54,14 +54,14 @@
         "body": "#eee5cd",
         "detail": "#315c4e",
         "accent": "#df7339",
-        "secondary": "#d9bf73"
+        "secondary": "#eee5cd"
       },
       "keycaps": {
         "base": "#eee5cd",
         "thumbs": [
           "#315c4e",
           "#df7339",
-          "#d9bf73"
+          "#eee5cd"
         ]
       }
     },
@@ -75,14 +75,14 @@
         "body": "#f0eadb",
         "detail": "#27282e",
         "accent": "#da453d",
-        "secondary": "#99988e"
+        "secondary": "#f0eadb"
       },
       "keycaps": {
         "base": "#f0eadb",
         "thumbs": [
           "#27282e",
           "#da453d",
-          "#99988e"
+          "#f0eadb"
         ]
       }
     },
@@ -96,14 +96,14 @@
         "body": "#f1e6ca",
         "detail": "#244e91",
         "accent": "#c36443",
-        "secondary": "#3d8b89"
+        "secondary": "#244e91"
       },
       "keycaps": {
         "base": "#f1e6ca",
         "thumbs": [
           "#244e91",
           "#c36443",
-          "#3d8b89"
+          "#244e91"
         ]
       }
     },

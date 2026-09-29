@@ -1,5 +1,5 @@
 {
-  "source_sha256": "4e3531e9e955f1747e97178666e2cde1c1794896997bc44655188c986705d043",
+  "source_sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
   "section_z_mm": 13.190000000000001,
   "contour_deflection_mm": 0.001,
   "minimum_island_core_diameter_mm": 0.8,
@@ -9,37 +9,31 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 19.36860186867204,
+        "area_mm2": 8.321220519623983,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 36.38178945601194,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 41.726977552903,
+        "area_mm2": 7.04348789567201,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 22.01760709542802,
+        "area_mm2": 76.63962734970508,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 124.47095311869411,
+        "area_mm2": 116.5541559151464,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 72.070501602791,
+        "area_mm2": 29.527901192090958,
         "core_survives": true
       }
     ],
@@ -47,55 +41,67 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 111.10794770596891,
+        "area_mm2": 13.461220519623902,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 7.541264914084006,
+        "area_mm2": 13.461220519624016,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 2,
-        "area_mm2": 7.5412649140840085,
+        "area_mm2": 13.461220519624018,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 3,
-        "area_mm2": 41.72697755290297,
+        "area_mm2": 2.540962000384001,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 4,
-        "area_mm2": 41.726977552903,
+        "area_mm2": 6.840000000000038,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 2.540962000384006,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 6,
+        "area_mm2": 246.85492753608514,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 16.076568400983994,
+        "area_mm2": 27.22158224983594,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 56.983487895672,
+        "area_mm2": 4.3999999999999915,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 5.25,
+        "area_mm2": 13.323181990582011,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 33.79264821842003,
+        "area_mm2": 13.323181990581988,
         "core_survives": true
       }
     ],
@@ -103,37 +109,19 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 12.558102800678,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 1,
-        "area_mm2": 40.637316047124,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 40.63731604712398,
+        "area_mm2": 408.659979935245,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 45.864690394734964,
+        "area_mm2": 82.34577796417801,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 9.072146956402,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 1,
-        "area_mm2": 22.076568400984,
+        "area_mm2": 21.22641682312,
         "core_survives": true
       }
     ],
@@ -141,55 +129,49 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 35.158076497550155,
+        "area_mm2": 7.541264914084001,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 43.098695470684,
+        "area_mm2": 7.541264914084002,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 2,
-        "area_mm2": 43.052344946757,
+        "area_mm2": 7.5412649140840005,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 3,
-        "area_mm2": 13.91000000000001,
+        "area_mm2": 7.541264914084001,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 4,
-        "area_mm2": 11.050000000000006,
+        "area_mm2": 25.17499999999992,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 266.81581131332723,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 111.539446620968,
+        "area_mm2": 17.23249999999996,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 3.1374941575269957,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 1,
-        "area_mm2": 3.1374941575270068,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 2,
-        "area_mm2": 3.1374941575269957,
+        "area_mm2": 7.92000000000003,
         "core_survives": true
       }
     ],
@@ -197,61 +179,37 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 13.845663383874005,
+        "area_mm2": 259.4554157508684,
         "core_survives": true
       },
       {
-        "role": "detail",
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 4.381940344585997,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 28.772561668759007,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
         "island": 1,
-        "area_mm2": 13.845663383874015,
+        "area_mm2": 28.772561668758982,
         "core_survives": true
       },
       {
-        "role": "detail",
+        "role": "secondary",
         "island": 2,
-        "area_mm2": 13.845663383874005,
+        "area_mm2": 28.772561668759003,
         "core_survives": true
       },
       {
-        "role": "detail",
+        "role": "secondary",
         "island": 3,
-        "area_mm2": 13.176297067031,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 4,
-        "area_mm2": 42.282610629678985,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 5,
-        "area_mm2": 42.282610629679006,
-        "core_survives": true
-      },
-      {
-        "role": "accent",
-        "island": 0,
-        "area_mm2": 7.541264914084,
-        "core_survives": true
-      },
-      {
-        "role": "accent",
-        "island": 1,
-        "area_mm2": 23.78348789567199,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 0,
-        "area_mm2": 5.780000000000007,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 1,
-        "area_mm2": 5.7800000000000065,
+        "area_mm2": 28.77256166875901,
         "core_survives": true
       }
     ],
@@ -265,55 +223,49 @@
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 40.960342258219974,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 40.96034225821999,
+        "area_mm2": 259.45541575086804,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 10.17134091428899,
+        "area_mm2": 10.171340914288992,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 10.092821833174005,
+        "area_mm2": 10.171340914289013,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 2.6468169046779804,
+        "area_mm2": 4.583332663254001,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 2.6468169046779804,
+        "area_mm2": 2.646816904677983,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 2,
-        "area_mm2": 2.646816904677982,
+        "area_mm2": 2.646816904677983,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 3,
-        "area_mm2": 2.646816904677982,
+        "area_mm2": 2.6468169046779852,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 4,
-        "area_mm2": 4.583332663254026,
+        "area_mm2": 2.6468169046779852,
         "core_survives": true
       }
     ],
@@ -321,31 +273,19 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 150.30470911279005,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 1,
-        "area_mm2": 43.266743947836,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 43.266743947836,
+        "area_mm2": 389.5385426138233,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 9.240000000000009,
+        "area_mm2": 8.470000000000054,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 10.171340914288995,
+        "area_mm2": 10.17134091428899,
         "core_survives": true
       },
       {
@@ -363,13 +303,7 @@
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 12.049999999999997,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 2,
-        "area_mm2": 20.0,
+        "area_mm2": 13.921582249836003,
         "core_survives": true
       }
     ],
@@ -383,37 +317,31 @@
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 41.11870026811996,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 41.11870026811999,
+        "area_mm2": 240.70227894890007,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 8.546191571932987,
+        "area_mm2": 8.546191571932988,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 8.546191571933017,
+        "area_mm2": 8.546191571933011,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 2,
-        "area_mm2": 13.137607095427995,
+        "area_mm2": 9.376568400983995,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 9.288601868672018,
+        "area_mm2": 9.28860186867202,
         "core_survives": true
       },
       {
@@ -425,13 +353,13 @@
       {
         "role": "secondary",
         "island": 2,
-        "area_mm2": 7.611076532257002,
+        "area_mm2": 8.54619157193299,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 3,
-        "area_mm2": 13.137607095427995,
+        "area_mm2": 9.376568400984,
         "core_survives": true
       }
     ],
@@ -439,43 +367,43 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 7.847390941368004,
+        "area_mm2": 7.84739094136801,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 7.847390941368001,
+        "area_mm2": 7.847390941368009,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 2,
-        "area_mm2": 7.847390941368,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 3,
-        "area_mm2": 7.847390941368,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 4,
         "area_mm2": 7.847390941368001,
         "core_survives": true
       },
       {
         "role": "detail",
-        "island": 5,
+        "island": 3,
         "area_mm2": 7.847390941368002,
         "core_survives": true
       },
       {
         "role": "detail",
+        "island": 4,
+        "area_mm2": 7.847390941368002,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 7.847390941368003,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
         "island": 6,
-        "area_mm2": 40.47292502513496,
+        "area_mm2": 7.847390941368014,
         "core_survives": true
       },
       {
@@ -487,43 +415,31 @@
       {
         "role": "detail",
         "island": 8,
-        "area_mm2": 7.8473909413680065,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 9,
         "area_mm2": 7.847390941368008,
         "core_survives": true
       },
       {
         "role": "detail",
+        "island": 9,
+        "area_mm2": 9.697607095428017,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
         "island": 10,
-        "area_mm2": 6.663205321571018,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 11,
-        "area_mm2": 40.472925025135005,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 12,
-        "area_mm2": 10.088601868672006,
+        "area_mm2": 259.4554157508684,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 6.263205321571002,
+        "area_mm2": 9.697607095428012,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 11.377264920183997,
+        "area_mm2": 13.159002649732026,
         "core_survives": true
       }
     ],
@@ -531,7 +447,7 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 10.283332663254003,
+        "area_mm2": 10.283332663253935,
         "core_survives": true
       },
       {
@@ -555,37 +471,31 @@
       {
         "role": "detail",
         "island": 4,
-        "area_mm2": 10.283332663254003,
+        "area_mm2": 10.283332663254,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 5,
-        "area_mm2": 43.025535485465994,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 6,
-        "area_mm2": 43.025535485466,
+        "area_mm2": 217.60802480950005,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 49.03508344427001,
+        "area_mm2": 49.66638657580402,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 57.74739094136796,
+        "area_mm2": 41.84739094136799,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 6.111220519623995,
+        "area_mm2": 6.111220519623994,
         "core_survives": true
       },
       {
@@ -599,31 +509,25 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 41.428285493175,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 1,
-        "area_mm2": 41.42828549317501,
+        "area_mm2": 254.16681388219638,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 62.457102913558046,
+        "area_mm2": 52.01710706956693,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 15.196233607399003,
+        "area_mm2": 15.19623360739899,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 5.288601868671998,
+        "area_mm2": 5.2886018686719956,
         "core_survives": true
       }
     ],
@@ -631,37 +535,31 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 19.368601868672044,
+        "area_mm2": 8.321220519623983,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 41.72697755290301,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 36.38178945601204,
+        "area_mm2": 7.043487895672007,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 22.01760709542803,
+        "area_mm2": 76.63962734970508,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 124.47095311869406,
+        "area_mm2": 116.55415591514594,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 72.07050160279093,
+        "area_mm2": 29.527901192090972,
         "core_survives": true
       }
     ],
@@ -669,55 +567,67 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 111.107947705969,
+        "area_mm2": 13.461220519623906,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 7.541264914084008,
+        "area_mm2": 13.461220519624018,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 2,
-        "area_mm2": 7.541264914084005,
+        "area_mm2": 13.461220519624023,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 3,
-        "area_mm2": 41.726977552903,
+        "area_mm2": 2.540962000383998,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 4,
-        "area_mm2": 41.726977552903,
+        "area_mm2": 6.840000000000038,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 2.540962000384002,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 6,
+        "area_mm2": 246.85492753608523,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 16.076568400983998,
+        "area_mm2": 27.221582249835944,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 56.983487895671985,
+        "area_mm2": 4.399999999999999,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 5.25,
+        "area_mm2": 13.323181990581988,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 33.79264821841996,
+        "area_mm2": 13.323181990581984,
         "core_survives": true
       }
     ],
@@ -725,37 +635,19 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 12.558102800678002,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 1,
-        "area_mm2": 40.637316047124024,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 40.63731604712401,
+        "area_mm2": 408.6599802512567,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 45.864690394734936,
+        "area_mm2": 82.34577841854352,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 9.072146956402005,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 1,
-        "area_mm2": 22.076568400983998,
+        "area_mm2": 21.226416823120005,
         "core_survives": true
       }
     ],
@@ -763,55 +655,49 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 35.15807649754997,
+        "area_mm2": 7.541264914084001,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 43.052344946757,
+        "area_mm2": 7.541264914084001,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 2,
-        "area_mm2": 43.098695470684,
+        "area_mm2": 7.541264914084,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 3,
-        "area_mm2": 11.050000000000006,
+        "area_mm2": 7.5412649140840005,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 4,
-        "area_mm2": 13.91000000000001,
+        "area_mm2": 25.174999999999955,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 266.8158113133268,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 111.539446620968,
+        "area_mm2": 17.232499999999977,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 3.137494157526996,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 1,
-        "area_mm2": 3.1374941575270006,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 2,
-        "area_mm2": 3.137494157526999,
+        "area_mm2": 7.920000000000003,
         "core_survives": true
       }
     ],
@@ -819,61 +705,37 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 13.845663383874008,
+        "area_mm2": 259.4554157508678,
         "core_survives": true
       },
       {
-        "role": "detail",
+        "role": "accent",
+        "island": 0,
+        "area_mm2": 4.381940344585999,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
+        "island": 0,
+        "area_mm2": 28.772561668759,
+        "core_survives": true
+      },
+      {
+        "role": "secondary",
         "island": 1,
-        "area_mm2": 13.845663383874006,
+        "area_mm2": 28.77256166875899,
         "core_survives": true
       },
       {
-        "role": "detail",
+        "role": "secondary",
         "island": 2,
-        "area_mm2": 13.84566338387401,
+        "area_mm2": 28.772561668759007,
         "core_survives": true
       },
       {
-        "role": "detail",
+        "role": "secondary",
         "island": 3,
-        "area_mm2": 13.176297067030994,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 4,
-        "area_mm2": 42.282610629679,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 5,
-        "area_mm2": 42.282610629679006,
-        "core_survives": true
-      },
-      {
-        "role": "accent",
-        "island": 0,
-        "area_mm2": 7.541264914083998,
-        "core_survives": true
-      },
-      {
-        "role": "accent",
-        "island": 1,
-        "area_mm2": 23.783487895671986,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 0,
-        "area_mm2": 5.779999999999995,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 1,
-        "area_mm2": 5.779999999999996,
+        "area_mm2": 28.772561668759014,
         "core_survives": true
       }
     ],
@@ -887,55 +749,49 @@
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 40.960342258219995,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 40.960342258220024,
+        "area_mm2": 259.45541575086804,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 10.171340914288997,
+        "area_mm2": 10.171340914288995,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 10.092821833173995,
+        "area_mm2": 10.171340914288999,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 2.6468169046779906,
+        "area_mm2": 4.5833326632540015,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 2.6468169046779906,
+        "area_mm2": 2.646816904677993,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 2,
-        "area_mm2": 2.646816904678004,
+        "area_mm2": 2.646816904677993,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 3,
-        "area_mm2": 2.6468169046780035,
+        "area_mm2": 2.646816904678006,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 4,
-        "area_mm2": 4.583332663254028,
+        "area_mm2": 2.646816904678006,
         "core_survives": true
       }
     ],
@@ -943,37 +799,25 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 150.30470911278994,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 1,
-        "area_mm2": 43.266743947836,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 43.266743947836005,
+        "area_mm2": 389.5385426138221,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 9.240000000000022,
+        "area_mm2": 8.470000000000065,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 10.17134091428899,
+        "area_mm2": 10.171340914288992,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 2,
-        "area_mm2": 10.171340914288994,
+        "area_mm2": 10.171340914288995,
         "core_survives": true
       },
       {
@@ -985,13 +829,7 @@
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 12.05,
-        "core_survives": true
-      },
-      {
-        "role": "secondary",
-        "island": 2,
-        "area_mm2": 20.0,
+        "area_mm2": 13.921582249836002,
         "core_survives": true
       }
     ],
@@ -1005,31 +843,25 @@
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 41.11870026811999,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 2,
-        "area_mm2": 41.11870026812,
+        "area_mm2": 240.70227894890002,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 8.546191571932996,
+        "area_mm2": 8.546191571932994,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 8.546191571933003,
+        "area_mm2": 8.546191571932997,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 2,
-        "area_mm2": 13.137607095428,
+        "area_mm2": 9.376568400984,
         "core_survives": true
       },
       {
@@ -1041,19 +873,19 @@
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 8.546191571933004,
+        "area_mm2": 8.546191571932999,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 2,
-        "area_mm2": 7.611076532257,
+        "area_mm2": 8.546191571932999,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 3,
-        "area_mm2": 13.137607095428,
+        "area_mm2": 9.376568400984,
         "core_survives": true
       }
     ],
@@ -1061,91 +893,79 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 7.847390941367997,
+        "area_mm2": 7.847390941368003,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 1,
-        "area_mm2": 7.847390941367995,
+        "area_mm2": 7.847390941367998,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 2,
-        "area_mm2": 7.847390941367998,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 3,
-        "area_mm2": 7.847390941368,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 4,
-        "area_mm2": 6.663205321571015,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 5,
-        "area_mm2": 40.47292502513498,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 6,
-        "area_mm2": 10.088601868672004,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 7,
-        "area_mm2": 7.847390941367999,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 8,
-        "area_mm2": 7.847390941368,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 9,
-        "area_mm2": 7.847390941367998,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 10,
         "area_mm2": 7.8473909413679985,
         "core_survives": true
       },
       {
         "role": "detail",
-        "island": 11,
-        "area_mm2": 7.847390941368,
+        "island": 3,
+        "area_mm2": 7.847390941367999,
         "core_survives": true
       },
       {
         "role": "detail",
-        "island": 12,
-        "area_mm2": 40.472925025135005,
+        "island": 4,
+        "area_mm2": 9.697607095428015,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 5,
+        "area_mm2": 259.45541575086827,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 6,
+        "area_mm2": 7.847390941368005,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 7,
+        "area_mm2": 7.847390941368006,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 8,
+        "area_mm2": 7.847390941367997,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 9,
+        "area_mm2": 7.8473909413679985,
+        "core_survives": true
+      },
+      {
+        "role": "detail",
+        "island": 10,
+        "area_mm2": 7.847390941368,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 6.263205321571008,
+        "area_mm2": 9.697607095428012,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 11.377264920184002,
+        "area_mm2": 13.15900264973202,
         "core_survives": true
       }
     ],
@@ -1153,7 +973,7 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 10.283332663253999,
+        "area_mm2": 10.28333266325393,
         "core_survives": true
       },
       {
@@ -1165,13 +985,13 @@
       {
         "role": "detail",
         "island": 2,
-        "area_mm2": 10.283332663253999,
+        "area_mm2": 10.283332663253997,
         "core_survives": true
       },
       {
         "role": "detail",
         "island": 3,
-        "area_mm2": 10.283332663253997,
+        "area_mm2": 10.283332663254,
         "core_survives": true
       },
       {
@@ -1183,31 +1003,25 @@
       {
         "role": "detail",
         "island": 5,
-        "area_mm2": 43.02553548546601,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 6,
-        "area_mm2": 43.02553548546601,
+        "area_mm2": 217.60802480950025,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 49.03508344427,
+        "area_mm2": 49.666386575804005,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 1,
-        "area_mm2": 57.747390941367996,
+        "area_mm2": 41.847390941368026,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 6.111220519624001,
+        "area_mm2": 6.111220519623998,
         "core_survives": true
       },
       {
@@ -1221,31 +1035,25 @@
       {
         "role": "detail",
         "island": 0,
-        "area_mm2": 41.428285493175,
-        "core_survives": true
-      },
-      {
-        "role": "detail",
-        "island": 1,
-        "area_mm2": 41.428285493175004,
+        "area_mm2": 254.1668138821958,
         "core_survives": true
       },
       {
         "role": "accent",
         "island": 0,
-        "area_mm2": 62.45710291355807,
+        "area_mm2": 52.017107069566975,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 0,
-        "area_mm2": 15.196233607399007,
+        "area_mm2": 15.196233607398993,
         "core_survives": true
       },
       {
         "role": "secondary",
         "island": 1,
-        "area_mm2": 5.288601868672,
+        "area_mm2": 5.2886018686719956,
         "core_survives": true
       }
     ]

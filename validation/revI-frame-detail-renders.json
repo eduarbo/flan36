@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "mechanical/revI/left-frame-tape-body.stl": "c5de2edf56428cedeab8e280de87a9d180c115492c3652ea4a66a7ca73cb0a89",
+    "mechanical/revI/left-frame-tape-detail.stl": "7eb03a61ba253eceb0cf92819791cfca10e01e82779d73a467b52a9b070ef603",
+    "mechanical/revI/left-frame-tape-accent.stl": "2531be35a303b928f6513fb52587ff5b05706822cd6fe5ce227d70649b41ac14",
+    "mechanical/revI/left-frame-tape-secondary.stl": "06bc68174339b5c5d227b840bbd5744e3b671b927872132c5c418dad55043418",
+    "mechanical/revI/left-display-visual-0.stl": "67f567582f5efdfffdd91424b6034b038cfd54174a87e07a550ec59543807627",
+    "mechanical/revI/left-display-visual-1.stl": "e24225d7ac3bdaacb019ea0cca8752b080c1184840b5423beb8ade9a91025970",
+    "mechanical/revI/left-display-visual-2.stl": "81fa9334b3b3978a966756de9e6cb5585514cb523ebb993cfe95d242912b7268",
+    "mechanical/revI/left-display-visual-3.stl": "4cf6c10881d13e802a8a3576199e096cfc1658e4bf05d72514ccc7aa2c23f237",
+    "mechanical/revI/left-display-visual-4.stl": "a1cad2d0316aa43f42821f2f53694808b7f3cb0a2a0f5796a5383ecd3093fa01",
+    "mechanical/revI/left-display-visual-5.stl": "b10b646b951c8b7e506c7f35782586ac877485b0c3b9b67ab6f564002ff050f7",
+    "mechanical/revI/left-display-visual-6.stl": "00c11fd0dec12a34f5bdfda08cdcaf4dbaf4da379a2b2695958f6414a93facfe",
+    "mechanical/revI/left-frame-orbit-body.stl": "ea32bf469de78a6e029b35739eed73a399c593baa1ef5a9c4b31199a3c0f8b1d",
+    "mechanical/revI/left-frame-orbit-detail.stl": "dc04454954ba4be892b38a0555f4ed2956196e0ce42746b5df97a193c6f0c1c6",
+    "mechanical/revI/left-frame-orbit-accent.stl": "2648e4d9b8a07515eeb0517ca06f4b10192e0ed4f6747d674bf4d1f303771e76",
+    "mechanical/revI/left-frame-orbit-secondary.stl": "7db48eff671f805668b1ef8ab4b4ccf980e6a6faf83f1ae80558c586db07a34b",
+    "mechanical/revI/left-frame-manga-body.stl": "bf9ea2f0e268e8b71e42b8f514e03bde2f08c93bed1350759f569a962b5488f5",
+    "mechanical/revI/left-frame-manga-detail.stl": "45ed5a0d4f37a04898521f266b8935a17eeb4d39bac1522d7989ce3e1b7d6d28",
+    "mechanical/revI/left-frame-manga-accent.stl": "5b9bb47e78efae675ce05a55a1c21b671ddcbe851a099386e824acc36c12fcb0",
+    "mechanical/revI/left-frame-manga-secondary.stl": "2c051d79c9f323f2c20a680ad13e456002e15f3cd7b35311ea6fd4646d95f8ba",
+    "mechanical/revI/left-frame-talavera-body.stl": "9ca1bfd4119fc4be014eb294c38be05da6f12841adb18f87750a0e77b87f93a5",
+    "mechanical/revI/left-frame-talavera-detail.stl": "890cc2e1a80c83105283c46f141d5fb87a48ff10591f20070a2ca294da009972",
+    "mechanical/revI/left-frame-talavera-accent.stl": "07bc809cb2939cda791bd8f56584f07144e676dd03b1fd43f67ebf963716946f",
+    "mechanical/revI/left-frame-talavera-secondary.stl": "ffa8e22c2335bdb1c4d269e038e8aac31e1abe8678d282558487c35918c98c5c"
+  },
+  "renderer_sha256": "c91e64787e61d1505c0e1de967e380f1fceffd6613e28a62c4fa88f569170520",
+  "physical_acceptance": false
+}

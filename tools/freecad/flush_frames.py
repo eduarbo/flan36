@@ -115,6 +115,44 @@ class Recipe:
 
     def primitive(self, name, item):
         kind = item['kind']
+        if kind == 'roundrect_ring':
+            outer = self.primitive(name+'Outer', dict(kind='roundrect', xy=item['xy'], radius_mm=item['radius_mm']))[0]
+            inner = self.primitive(name+'Inner', dict(kind='roundrect', xy=item['inner_xy'], radius_mm=item['inner_radius_mm']))[0]
+            return [self.cut(name, outer, inner)]
+        if kind == 'path':
+            import Part
+            import Sketcher
+            sketch = self.add('Sketcher::SketchObject', name+'Sketch')
+            for i in reversed(range(sketch.GeometryCount)):
+                sketch.delGeometry(i)
+            first = current = None
+            for command in item['commands']:
+                op, *values = command
+                points = [self.point(values[i:i+2]) for i in range(0, len(values), 2)]
+                if op == 'M':
+                    first = current = points[0]
+                    continue
+                if op == 'C':
+                    curve = Part.BezierCurve()
+                    curve.setPoles([current, *points])
+                    geometry = curve.toBSpline()
+                    end = points[-1]
+                elif op in ('L', 'Z'):
+                    end = first if op == 'Z' else points[0]
+                    if (end-current).Length < EPS:
+                        continue
+                    geometry = Part.LineSegment(current, end)
+                else:
+                    raise ValueError((name, 'unsupported path command', op))
+                index = sketch.addGeometry(geometry, False)
+                sketch.addConstraint(Sketcher.Constraint('Block', index))
+                current = end
+            if first is None or (current-first).Length > EPS:
+                raise ValueError((name, 'path must be closed'))
+            obj = self.add('Part::Extrusion', name)
+            obj.Base, obj.Dir, obj.Solid = sketch, self.A.Vector(0,0,1), True
+            self.depth(obj, 'Placement.Base.z', 'LengthFwd')
+            return [obj]
         if kind == 'roundrect':
             import Part
             import Sketcher
@@ -180,10 +218,10 @@ class Recipe:
 
     def combine(self, name, nodes):
         if len(nodes) == 1:
-            obj = self.add('Part::Compound', name)
+            obj = self.add('Part::Compound', name+'Single')
             obj.Links = nodes
         else:
-            obj = self.add('Part::MultiFuse', name)
+            obj = self.add('Part::MultiFuse', name+'Fused')
             obj.Shapes, obj.Refine = nodes, True
         return obj
 
@@ -200,14 +238,28 @@ class Recipe:
     def build(self, style):
         theme = self.spec['styles'][style]
         raw = {role: [] for role in ROLES[1:]}
+        features = []
         for item in theme['features']:
-            raw[item['role']].extend(self.primitive(style+'_'+item['id'], item))
+            nodes = self.primitive(style+'_'+item['id'], item)
+            raw[item['role']].extend(nodes)
+            feature = self.combine(style+'_'+item['id']+'_Authored', nodes)
+            prop(feature, 'ArtworkID', 'App::PropertyString', item['id'])
+            features.append((item, feature))
         # The translated source limits every inlay to material with backing below.
         support = self.add('Part::Compound', style+'_BackingMask')
         support.Links = [self.smooth]
         prop(support, 'MinimumBacking', 'App::PropertyLength', self.spec['minimum_backing_mm'])
         support.setExpression('Placement.Base.z', 'MinimumBacking')
         mask = self.common(style+'_SupportedRoof', self.smooth, support)
+        self.doc.recompute()
+        integrity = []
+        for item, feature in features:
+            lost = feature.Shape.cut(mask.Shape).Volume
+            record = dict(id=item['id'], role=item['role'], authored_volume_mm3=feature.Shape.Volume,
+                          clipped_volume_mm3=lost, authored_solids=len(feature.Shape.Solids))
+            integrity.append(record)
+            if self.spec.get('strict_feature_containment') and lost > EPS:
+                raise ValueError((self.side, style, item['id'], 'authored motif crosses unsupported roof or opening', lost))
         material = []
         # Explicit deterministic priority: accent over secondary over detail.
         # Subtraction gives disjoint material interiors even at crossing motifs.
@@ -237,6 +289,8 @@ class Recipe:
         prop(final, 'ModelStatus', 'App::PropertyString', 'Flush co-print prototype; physical fit untested')
         prop(final, 'MaterialSpecSHA256', 'App::PropertyString',
              hashlib.sha256(json.dumps(theme, sort_keys=True).encode()).hexdigest())
+        prop(final, 'FeatureIntegrity', 'App::PropertyString', json.dumps(integrity))
+        prop(final, 'ArtworkFeatures', 'App::PropertyLinkList', [feature for _,feature in features])
         return final
 
 
@@ -338,9 +392,30 @@ def validate_variant(doc, side, smooth, obj, spec=None, output_dir=None):
             entry['stl_sha256'] = hashlib.sha256((target/entry['stl']).read_bytes()).hexdigest()
             entry['step_sha256'] = hashlib.sha256((target/entry['step']).read_bytes()).hexdigest()
         material_parts.append(entry)
+    # Recompute feature loss on export too, including documents edited manually.
+    # Whole-role/core checks alone accepted visibly severed bezels previously.
+    feature_integrity = []
+    if spec.get('strict_feature_containment'):
+        supported = base.copy()
+        supported.translate(A.Vector(0, 0, spec['minimum_backing_mm']))
+        supported = base.common(supported)
+        authored_features = {f.ArtworkID:f for f in obj.ArtworkFeatures}
+        role_parts = {p.ColorRole:p for p in parts}
+        for item in spec['styles'][obj.FrameStyle]['features']:
+            authored = authored_features.get(item['id'])
+            if authored is None:
+                raise ValueError((obj.Name, item['id'], 'missing authored motif'))
+            lost = authored.Shape.cut(supported).Volume
+            visible = authored.Shape.common(role_parts[item['role']].Shape).Volume
+            if lost > EPS or visible <= EPS:
+                raise ValueError((obj.Name, item['id'], 'clipped or fully obscured motif', lost, visible))
+            feature_integrity.append(dict(id=item['id'], role=item['role'],
+                authored_volume_mm3=authored.Shape.Volume, clipped_volume_mm3=lost,
+                visible_volume_mm3=visible, authored_solids=len(authored.Shape.Solids)))
     roles = face_roles(obj)
     prop(obj, 'FrameFaceRoles', 'App::PropertyString', json.dumps(roles))
     return dict(object=obj.Name, source_object=smooth.Name, style=obj.FrameStyle,
+                feature_integrity=feature_integrity,
                 material_parts=material_parts, disjoint_interiors=True, pair_intersections_mm3=pairs,
                 union_removed_volume_mm3=removed, union_added_volume_mm3=added,
                 connected_solids=1, bounds_mm=[getattr(whole.BoundBox, k) for k in BOUNDS],
@@ -386,6 +461,22 @@ def build_styles(doc, side, smooth=None, styles=STYLES, spec=None, validate=True
             obj.ViewObject.LineColor = (.13, .18, .17)
             obj.ViewObject.DiffuseColor = [rgb(colors[r]) for r in face_roles(obj)]
         objects[style] = obj
+    # Keep only this generation's owned construction. Otherwise stale Boolean
+    # branches accumulate at every recipe change and inflate the native file.
+    keep = {o.Name for o in recipe.used}
+    stale = [o for o in doc.Objects if o.Name.startswith(recipe.prefix)
+             and o.Name not in keep and o != recipe.group
+             and getattr(o, 'FlushFrameOwner', '') == OWNER
+             and (set(styles) == set(STYLES) or any(o.Name.startswith(recipe.prefix+s+'_') for s in styles))]
+    stale_names = {o.Name for o in stale}
+    for old in stale:
+        unexpected = [p.Name for p in old.InList if p.Name not in stale_names
+                      and p != recipe.group and p.TypeId not in ('App::Part', 'App::DocumentObjectGroup')]
+        if unexpected:
+            raise ValueError((old.Name, 'obsolete construction still referenced', unexpected))
+    for old in reversed(stale):
+        doc.removeObject(old.Name)
+    doc.recompute()
     for obj in recipe.used:
         if obj.ViewObject is not None:
             obj.ViewObject.Visibility = False
@@ -394,7 +485,7 @@ def build_styles(doc, side, smooth=None, styles=STYLES, spec=None, validate=True
     return objects, reports
 
 
-def apply(doc, output_dir=None):
+def apply(doc, output_dir=None, styles=STYLES):
     """Apply the current collection after stack edits; does not save the document."""
     import FreeCAD as A
     spec = load_spec()
@@ -408,7 +499,7 @@ def apply(doc, output_dir=None):
         try:
             assembly.Placement = A.Placement()
             doc.recompute()
-            _, reports = build_styles(doc, side, spec=spec, output_dir=output_dir)
+            _, reports = build_styles(doc, side, spec=spec, styles=styles, output_dir=output_dir)
             result['frames'].update({side+'-'+style: report for style, report in reports.items()})
         finally:
             assembly.Placement = old
