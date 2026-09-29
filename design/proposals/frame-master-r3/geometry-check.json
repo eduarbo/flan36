@@ -1,0 +1,1435 @@
+{
+  "master_sha256": "3e74ccf87921e9326e96c4f42d718a41e308b786972898cc232d057b8ba54abc",
+  "source_sha256": {
+    "mechanical/revI/Flan36.FCStd": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
+    "design/revI-frame-profiles.json": "9f75760ab53bfb554123ddc5223816a5177c9c7478eabad4337b841df38d874c",
+    "design/revI.json": "85b90673e6d716d58ccc6826a15f833d771a357b1ed7d2253515abf7e340993f"
+  },
+  "status": "PLANAR_GEOMETRY_CHECKED_NOT_PHYSICALLY_QUALIFIED",
+  "native_bounds_mm": {
+    "L_GlassWindow": [
+      115.55,
+      18.349999999999994,
+      12.39,
+      130.05,
+      49.449999999999996,
+      17.39
+    ],
+    "L_LevelDisplayPCBRelief": [
+      114.85,
+      15.100000000000001,
+      10.9,
+      130.75,
+      53.0,
+      12.725
+    ],
+    "L_LevelHeaderServiceWell": [
+      115.95,
+      49.1,
+      10.9,
+      129.65,
+      52.6,
+      14.9
+    ],
+    "L_LevelDisplaySolderReserve": [
+      116.92,
+      50.0,
+      12.49,
+      128.68,
+      51.599999999999994,
+      12.99
+    ],
+    "L_SlimDisplayMaleContacts": [
+      117.4025,
+      50.4825,
+      7.3,
+      128.1975,
+      51.1175,
+      12.79
+    ]
+  },
+  "styles": {
+    "flan": {
+      "regions": {
+        "body": {
+          "area_mm2": 322.9007996426736,
+          "faces": 1,
+          "color": "#F2DFAF"
+        },
+        "detail": {
+          "area_mm2": 122.350552987972,
+          "faces": 3,
+          "color": "#68422F"
+        },
+        "accent": {
+          "area_mm2": 414.13623727938585,
+          "faces": 2,
+          "color": "#B96732"
+        },
+        "secondary": {
+          "area_mm2": 31.499223577014835,
+          "faces": 1,
+          "color": "#DFAB50"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 312.8267027688746
+        },
+        {
+          "id": "CaramelFlow",
+          "bounds_mm": [
+            1.5999999999999996,
+            1.6,
+            20.5,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 106.38250000000016,
+          "visible_same_color_area_mm2": 106.38250000000016
+        },
+        {
+          "id": "DessertSeal",
+          "bounds_mm": [
+            5.1,
+            43.0,
+            18.9,
+            54.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 148.7768110754979,
+          "visible_same_color_area_mm2": 101.30953451051121
+        },
+        {
+          "id": "Custard",
+          "bounds_mm": [
+            7.8,
+            46.3,
+            16.2,
+            50.9
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 32.66000000000002,
+          "visible_same_color_area_mm2": 31.499223577014835
+        },
+        {
+          "id": "Glaze",
+          "bounds_mm": [
+            8.8,
+            45.3,
+            15.200000000000001,
+            46.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 7.465398163397479,
+          "visible_same_color_area_mm2": 7.465398163397479
+        },
+        {
+          "id": "Saucer",
+          "bounds_mm": [
+            7.199999999999999,
+            52.0,
+            16.800000000000004,
+            52.9
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.50265482457435,
+          "visible_same_color_area_mm2": 8.50265482457435
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "tape": {
+      "regions": {
+        "body": {
+          "area_mm2": 363.0960154940843,
+          "faces": 1,
+          "color": "#D2CEC1"
+        },
+        "detail": {
+          "area_mm2": 447.5668177947801,
+          "faces": 7,
+          "color": "#303738"
+        },
+        "accent": {
+          "area_mm2": 40.70274333882304,
+          "faces": 2,
+          "color": "#E27136"
+        },
+        "secondary": {
+          "area_mm2": 39.52123685935856,
+          "faces": 2,
+          "color": "#F0E9D6"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 378.9477624610068
+        },
+        {
+          "id": "Diagonal",
+          "bounds_mm": [
+            14.0,
+            1.5999999999999999,
+            21.5,
+            6.9
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.66,
+          "visible_same_color_area_mm2": 11.66
+        },
+        {
+          "id": "ScreenFoot",
+          "bounds_mm": [
+            1.5999999999999972,
+            40.2,
+            22.400000000000002,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 29.042743338823037,
+          "visible_same_color_area_mm2": 29.042743338823037
+        },
+        {
+          "id": "ReelBridge",
+          "bounds_mm": [
+            6.0,
+            44.3,
+            18.0,
+            46.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 26.400000000000034,
+          "visible_same_color_area_mm2": 17.9989451431277
+        },
+        {
+          "id": "LeftReel",
+          "bounds_mm": [
+            3.2999999999999994,
+            42.69999994838086,
+            8.700000000000001,
+            48.10000005161914
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 22.90221100215632,
+          "visible_same_color_area_mm2": 19.760618348566528
+        },
+        {
+          "id": "RightReel",
+          "bounds_mm": [
+            15.299999999999999,
+            42.699999933359976,
+            20.7,
+            48.10000006664002
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 22.902211164381825,
+          "visible_same_color_area_mm2": 19.760618510792032
+        },
+        {
+          "id": "LeftHub",
+          "bounds_mm": [
+            5.0,
+            44.4,
+            7.0,
+            46.4
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 3.141592653589793,
+          "visible_same_color_area_mm2": 3.141592653589793
+        },
+        {
+          "id": "RightHub",
+          "bounds_mm": [
+            17.0,
+            44.4,
+            19.0,
+            46.4
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 3.141592653589793,
+          "visible_same_color_area_mm2": 3.141592653589793
+        },
+        {
+          "id": "Slat0",
+          "bounds_mm": [
+            3.999999999999998,
+            49.9,
+            20.000000000000004,
+            50.9
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 15.82617251235192,
+          "visible_same_color_area_mm2": 15.82617251235192
+        },
+        {
+          "id": "Slat1",
+          "bounds_mm": [
+            3.999999999999998,
+            51.699999999999996,
+            20.000000000000004,
+            52.699999999999996
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 15.82617251235192,
+          "visible_same_color_area_mm2": 15.82617251235192
+        },
+        {
+          "id": "Slat2",
+          "bounds_mm": [
+            4.0,
+            53.5,
+            20.0,
+            54.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 15.826172512351945,
+          "visible_same_color_area_mm2": 15.826172512351945
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "orbit": {
+      "regions": {
+        "body": {
+          "area_mm2": 186.55761071817187,
+          "faces": 1,
+          "color": "#EEE5CD"
+        },
+        "detail": {
+          "area_mm2": 592.1528802178733,
+          "faces": 1,
+          "color": "#315C4E"
+        },
+        "accent": {
+          "area_mm2": 87.54623614685781,
+          "faces": 1,
+          "color": "#DF7339"
+        },
+        "secondary": {
+          "area_mm2": 24.630086404143952,
+          "faces": 1,
+          "color": "#EEE5CD"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            54.8
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 704.3292027688742,
+          "visible_same_color_area_mm2": 592.1528802178733
+        },
+        {
+          "id": "Crescent",
+          "bounds_mm": [
+            1.6,
+            28.0,
+            22.1,
+            53.738242316464394
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 112.16099999999997,
+          "visible_same_color_area_mm2": 87.54623614685781
+        },
+        {
+          "id": "IvoryDisc",
+          "bounds_mm": [
+            7.4,
+            44.900000000000006,
+            12.999999999999998,
+            50.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 24.630086404143952,
+          "visible_same_color_area_mm2": 24.630086404143952
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "manga": {
+      "regions": {
+        "body": {
+          "area_mm2": 385.0756667205795,
+          "faces": 1,
+          "color": "#F0EADB"
+        },
+        "detail": {
+          "area_mm2": 471.92614676646735,
+          "faces": 6,
+          "color": "#27282E"
+        },
+        "accent": {
+          "area_mm2": 22.365000000000006,
+          "faces": 1,
+          "color": "#DA453D"
+        },
+        "secondary": {
+          "area_mm2": 11.52000000000001,
+          "faces": 1,
+          "color": "#F0EADB"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 407.68920276887457
+        },
+        {
+          "id": "TopGutter",
+          "bounds_mm": [
+            15.0,
+            1.4999999999999996,
+            22.3,
+            8.8
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.52000000000001,
+          "visible_same_color_area_mm2": 11.52000000000001
+        },
+        {
+          "id": "DiagonalPanel",
+          "bounds_mm": [
+            1.6,
+            42.5,
+            22.3,
+            50.0
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 30.024999999999977,
+          "visible_same_color_area_mm2": 30.024999999999977
+        },
+        {
+          "id": "PanelDot0",
+          "bounds_mm": [
+            3.4499999999999975,
+            46.25,
+            6.750000000000002,
+            49.55
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.552985999398189,
+          "visible_same_color_area_mm2": 8.552985999398189
+        },
+        {
+          "id": "PanelDot1",
+          "bounds_mm": [
+            8.349999999999998,
+            46.25,
+            11.650000000000002,
+            49.55
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.552985999398189,
+          "visible_same_color_area_mm2": 8.552985999398189
+        },
+        {
+          "id": "PanelDot2",
+          "bounds_mm": [
+            3.45,
+            50.85,
+            6.749999999999999,
+            54.15
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.552985999398205,
+          "visible_same_color_area_mm2": 8.552985999398205
+        },
+        {
+          "id": "PanelDot3",
+          "bounds_mm": [
+            8.35,
+            50.85,
+            11.65,
+            54.15
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.552985999398214,
+          "visible_same_color_area_mm2": 8.552985999398214
+        },
+        {
+          "id": "RedCorner",
+          "bounds_mm": [
+            16.0,
+            50.0,
+            22.3,
+            54.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 22.365000000000006,
+          "visible_same_color_area_mm2": 22.365000000000006
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "talavera": {
+      "regions": {
+        "body": {
+          "area_mm2": 391.70161071817216,
+          "faces": 1,
+          "color": "#F1E6CA"
+        },
+        "detail": {
+          "area_mm2": 417.0492027688746,
+          "faces": 1,
+          "color": "#244E91"
+        },
+        "accent": {
+          "area_mm2": 2.371999999999996,
+          "faces": 1,
+          "color": "#C36443"
+        },
+        "secondary": {
+          "area_mm2": 79.764,
+          "faces": 4,
+          "color": "#244E91"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 417.0492027688746,
+          "visible_same_color_area_mm2": 417.0492027688746
+        },
+        {
+          "id": "Petal0",
+          "bounds_mm": [
+            6.199999999999999,
+            43.2,
+            11.3,
+            48.59964568732751
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 19.941,
+          "visible_same_color_area_mm2": 19.941
+        },
+        {
+          "id": "Petal1",
+          "bounds_mm": [
+            12.7,
+            43.2,
+            17.8,
+            48.59964568732751
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 19.941000000000003,
+          "visible_same_color_area_mm2": 19.941000000000003
+        },
+        {
+          "id": "Petal2",
+          "bounds_mm": [
+            6.199999999999999,
+            49.40035431267249,
+            11.3,
+            54.8
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 19.940999999999995,
+          "visible_same_color_area_mm2": 19.940999999999995
+        },
+        {
+          "id": "Petal3",
+          "bounds_mm": [
+            12.7,
+            49.40035431267249,
+            17.8,
+            54.8
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 19.941,
+          "visible_same_color_area_mm2": 19.941
+        },
+        {
+          "id": "TerracottaStar",
+          "bounds_mm": [
+            10.7,
+            47.7,
+            13.3,
+            50.3
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 2.371999999999996,
+          "visible_same_color_area_mm2": 2.371999999999996
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "gameboy": {
+      "regions": {
+        "body": {
+          "area_mm2": 405.03991272073614,
+          "faces": 1,
+          "color": "#DCD6BA"
+        },
+        "detail": {
+          "area_mm2": 448.00920276887456,
+          "faces": 2,
+          "color": "#42454D"
+        },
+        "accent": {
+          "area_mm2": 22.68229983403804,
+          "faces": 2,
+          "color": "#973C60"
+        },
+        "secondary": {
+          "area_mm2": 15.155398163397464,
+          "faces": 5,
+          "color": "#A6A392"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 419.20920276887455
+        },
+        {
+          "id": "Dpad",
+          "bounds_mm": [
+            2.4,
+            43.0,
+            9.6,
+            50.2
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 28.799999999999997,
+          "visible_same_color_area_mm2": 28.799999999999997
+        },
+        {
+          "id": "A",
+          "bounds_mm": [
+            17.6,
+            42.90000989205047,
+            21.4,
+            46.699990107949525
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.341150034262844,
+          "visible_same_color_area_mm2": 11.341150034262844
+        },
+        {
+          "id": "B",
+          "bounds_mm": [
+            13.899999999999999,
+            46.1000099229039,
+            17.700000000000003,
+            49.8999900770961
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.341149799775199,
+          "visible_same_color_area_mm2": 11.341149799775199
+        },
+        {
+          "id": "Select",
+          "bounds_mm": [
+            3.0,
+            52.2,
+            7.7,
+            53.300000000000004
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 4.955398163397462,
+          "visible_same_color_area_mm2": 4.955398163397462
+        },
+        {
+          "id": "Speaker0",
+          "bounds_mm": [
+            13.0,
+            51.5,
+            15.1,
+            54.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 2.55,
+          "visible_same_color_area_mm2": 2.55
+        },
+        {
+          "id": "Speaker1",
+          "bounds_mm": [
+            15.2,
+            51.5,
+            17.3,
+            54.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 2.5500000000000043,
+          "visible_same_color_area_mm2": 2.5500000000000043
+        },
+        {
+          "id": "Speaker2",
+          "bounds_mm": [
+            17.4,
+            51.5,
+            19.5,
+            54.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 2.5500000000000043,
+          "visible_same_color_area_mm2": 2.5500000000000043
+        },
+        {
+          "id": "Speaker3",
+          "bounds_mm": [
+            19.6,
+            51.5,
+            21.7,
+            54.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 2.5499999999999936,
+          "visible_same_color_area_mm2": 2.5499999999999936
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "nes": {
+      "regions": {
+        "body": {
+          "area_mm2": 264.04699141987413,
+          "faces": 1,
+          "color": "#C6C7BE"
+        },
+        "detail": {
+          "area_mm2": 556.8748677288756,
+          "faces": 2,
+          "color": "#32363B"
+        },
+        "accent": {
+          "area_mm2": 31.182299513722,
+          "faces": 3,
+          "color": "#C94B3E"
+        },
+        "secondary": {
+          "area_mm2": 38.78265482457438,
+          "faces": 2,
+          "color": "#8A8D8D"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 403.7465479443002
+        },
+        {
+          "id": "Deck",
+          "bounds_mm": [
+            1.5999999999999996,
+            42.6,
+            22.400000000000002,
+            52.2
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 199.1306192982975,
+          "visible_same_color_area_mm2": 153.12831978457547
+        },
+        {
+          "id": "Dpad",
+          "bounds_mm": [
+            3.2,
+            43.7,
+            9.600000000000001,
+            50.1
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 23.32000000000001,
+          "visible_same_color_area_mm2": 23.32000000000001
+        },
+        {
+          "id": "A",
+          "bounds_mm": [
+            17.200000000000003,
+            45.90000989205047,
+            21.0,
+            49.699990107949525
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.341150034262844,
+          "visible_same_color_area_mm2": 11.341150034262844
+        },
+        {
+          "id": "B",
+          "bounds_mm": [
+            12.7,
+            45.900009965050465,
+            16.5,
+            49.69999003494953
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.341149479459155,
+          "visible_same_color_area_mm2": 11.341149479459155
+        },
+        {
+          "id": "Signature",
+          "bounds_mm": [
+            13.5,
+            53.5,
+            22.0,
+            54.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.5,
+          "visible_same_color_area_mm2": 8.5
+        },
+        {
+          "id": "Header",
+          "bounds_mm": [
+            3.0,
+            2.8,
+            16.0,
+            4.0
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 15.462654824574368,
+          "visible_same_color_area_mm2": 15.462654824574368
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "snes": {
+      "regions": {
+        "body": {
+          "area_mm2": 402.22982500567315,
+          "faces": 1,
+          "color": "#D1D0C9"
+        },
+        "detail": {
+          "area_mm2": 424.65044196835663,
+          "faces": 2,
+          "color": "#464751"
+        },
+        "accent": {
+          "area_mm2": 27.537786578861976,
+          "faces": 3,
+          "color": "#746198"
+        },
+        "secondary": {
+          "area_mm2": 36.46875993415432,
+          "faces": 4,
+          "color": "#ACA0C2"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 400.4504419683566
+        },
+        {
+          "id": "Dpad",
+          "bounds_mm": [
+            2.7,
+            44.0,
+            9.3,
+            50.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 24.200000000000017,
+          "visible_same_color_area_mm2": 24.200000000000017
+        },
+        {
+          "id": "A",
+          "bounds_mm": [
+            18.400000000000002,
+            46.29999995287839,
+            21.8,
+            49.70000004712161
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 9.079203089301496,
+          "visible_same_color_area_mm2": 9.079203089301496
+        },
+        {
+          "id": "B",
+          "bounds_mm": [
+            15.100000000000003,
+            49.599999952878385,
+            18.5,
+            53.00000004712161
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 9.079203089301487,
+          "visible_same_color_area_mm2": 9.079203089301487
+        },
+        {
+          "id": "X",
+          "bounds_mm": [
+            15.100000000000003,
+            42.99999995287839,
+            18.5,
+            46.400000047121615
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 9.079203089301487,
+          "visible_same_color_area_mm2": 9.079203089301487
+        },
+        {
+          "id": "Y",
+          "bounds_mm": [
+            11.800000000000002,
+            46.29999995287839,
+            15.199999999999998,
+            49.70000004712161
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 9.079203089301476,
+          "visible_same_color_area_mm2": 9.079203089301476
+        },
+        {
+          "id": "Power",
+          "bounds_mm": [
+            3.2,
+            2.5,
+            10.2,
+            3.9
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 9.379380400258997,
+          "visible_same_color_area_mm2": 9.379380400258997
+        },
+        {
+          "id": "Reset",
+          "bounds_mm": [
+            13.5,
+            2.5,
+            20.5,
+            3.9
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 9.379380400258999,
+          "visible_same_color_area_mm2": 9.379380400258999
+        },
+        {
+          "id": "Select",
+          "bounds_mm": [
+            3.1999999999999993,
+            53.0,
+            10.900000000000002,
+            54.2
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.930973355292359,
+          "visible_same_color_area_mm2": 8.930973355292359
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "phone": {
+      "regions": {
+        "body": {
+          "area_mm2": 372.3490290562563,
+          "faces": 2,
+          "color": "#263C55"
+        },
+        "detail": {
+          "area_mm2": 496.85513020910304,
+          "faces": 11,
+          "color": "#B8BBB5"
+        },
+        "accent": {
+          "area_mm2": 9.521327110843675,
+          "faces": 1,
+          "color": "#87AD67"
+        },
+        "secondary": {
+          "area_mm2": 12.16132711084368,
+          "faces": 1,
+          "color": "#455469"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 409.1182294135822
+        },
+        {
+          "id": "Earpiece",
+          "bounds_mm": [
+            8.0,
+            2.8,
+            16.0,
+            4.1
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 10.090973355292327,
+          "visible_same_color_area_mm2": 10.090973355292327
+        },
+        {
+          "id": "Nav",
+          "bounds_mm": [
+            9.000000000000004,
+            42.7,
+            14.999999999999996,
+            44.900000000000006
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 12.16132711084368,
+          "visible_same_color_area_mm2": 12.16132711084368
+        },
+        {
+          "id": "Call",
+          "bounds_mm": [
+            2.700000000000003,
+            42.7,
+            7.5,
+            44.900000000000006
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 9.521327110843675,
+          "visible_same_color_area_mm2": 9.521327110843675
+        },
+        {
+          "id": "End",
+          "bounds_mm": [
+            16.500000000000004,
+            42.7,
+            21.299999999999997,
+            44.900000000000006
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 9.52132711084366,
+          "visible_same_color_area_mm2": 9.52132711084366
+        },
+        {
+          "id": "Key00",
+          "bounds_mm": [
+            3.0,
+            46.0,
+            7.4,
+            48.1
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297479,
+          "visible_same_color_area_mm2": 8.690619298297479
+        },
+        {
+          "id": "Key01",
+          "bounds_mm": [
+            9.3,
+            46.0,
+            13.700000000000001,
+            48.1
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297486,
+          "visible_same_color_area_mm2": 8.690619298297486
+        },
+        {
+          "id": "Key02",
+          "bounds_mm": [
+            15.6,
+            46.0,
+            20.000000000000004,
+            48.1
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297477,
+          "visible_same_color_area_mm2": 8.690619298297477
+        },
+        {
+          "id": "Key10",
+          "bounds_mm": [
+            3.0,
+            49.1,
+            7.4,
+            51.2
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297479,
+          "visible_same_color_area_mm2": 8.690619298297479
+        },
+        {
+          "id": "Key11",
+          "bounds_mm": [
+            9.3,
+            49.1,
+            13.700000000000001,
+            51.2
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297486,
+          "visible_same_color_area_mm2": 8.690619298297486
+        },
+        {
+          "id": "Key12",
+          "bounds_mm": [
+            15.6,
+            49.1,
+            20.0,
+            51.2
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297474,
+          "visible_same_color_area_mm2": 8.690619298297474
+        },
+        {
+          "id": "Key20",
+          "bounds_mm": [
+            3.0,
+            52.2,
+            7.4,
+            54.300000000000004
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297479,
+          "visible_same_color_area_mm2": 8.690619298297479
+        },
+        {
+          "id": "Key21",
+          "bounds_mm": [
+            9.3,
+            52.2,
+            13.700000000000001,
+            54.300000000000004
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297486,
+          "visible_same_color_area_mm2": 8.690619298297486
+        },
+        {
+          "id": "Key22",
+          "bounds_mm": [
+            15.6,
+            52.2,
+            20.000000000000004,
+            54.300000000000004
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 8.690619298297477,
+          "visible_same_color_area_mm2": 8.690619298297477
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "walkman": {
+      "regions": {
+        "body": {
+          "area_mm2": 351.50902724759527,
+          "faces": 1,
+          "color": "#275273"
+        },
+        "detail": {
+          "area_mm2": 434.70681318560287,
+          "faces": 6,
+          "color": "#192D3B"
+        },
+        "accent": {
+          "area_mm2": 93.56822971502571,
+          "faces": 2,
+          "color": "#E4B54B"
+        },
+        "secondary": {
+          "area_mm2": 11.102743338823096,
+          "faces": 2,
+          "color": "#ACBCC0"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 378.02982236861544
+        },
+        {
+          "id": "Header",
+          "bounds_mm": [
+            1.6,
+            1.5999999999999992,
+            22.400000000000002,
+            3.6000000000000005
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 41.179380400259,
+          "visible_same_color_area_mm2": 41.179380400259
+        },
+        {
+          "id": "Speaker0",
+          "bounds_mm": [
+            3.0,
+            43.0,
+            13.5,
+            44.1
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.335398163397471,
+          "visible_same_color_area_mm2": 11.335398163397471
+        },
+        {
+          "id": "Speaker1",
+          "bounds_mm": [
+            3.0,
+            45.4,
+            13.5,
+            46.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.335398163397471,
+          "visible_same_color_area_mm2": 11.335398163397471
+        },
+        {
+          "id": "Speaker2",
+          "bounds_mm": [
+            3.0,
+            47.8,
+            13.5,
+            48.9
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.335398163397471,
+          "visible_same_color_area_mm2": 11.335398163397471
+        },
+        {
+          "id": "Speaker3",
+          "bounds_mm": [
+            3.0,
+            50.2,
+            13.5,
+            51.300000000000004
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.335398163397471,
+          "visible_same_color_area_mm2": 11.335398163397471
+        },
+        {
+          "id": "Speaker4",
+          "bounds_mm": [
+            3.0,
+            52.6,
+            13.5,
+            53.7
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 11.335398163397471,
+          "visible_same_color_area_mm2": 11.335398163397471
+        },
+        {
+          "id": "Transport",
+          "bounds_mm": [
+            16.0,
+            42.8,
+            21.5,
+            54.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 63.4915926535898,
+          "visible_same_color_area_mm2": 52.3888493147667
+        },
+        {
+          "id": "Play",
+          "bounds_mm": [
+            17.4,
+            44.3,
+            20.3,
+            47.7
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 4.93000000000001,
+          "visible_same_color_area_mm2": 4.93000000000001
+        },
+        {
+          "id": "Stop",
+          "bounds_mm": [
+            17.5,
+            50.0,
+            20.0,
+            52.5
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 6.172743338823086,
+          "visible_same_color_area_mm2": 6.172743338823086
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    },
+    "ipod": {
+      "regions": {
+        "body": {
+          "area_mm2": 406.80372189702143,
+          "faces": 2,
+          "color": "#F0EEE5"
+        },
+        "detail": {
+          "area_mm2": 413.9182294135822,
+          "faces": 1,
+          "color": "#656F79"
+        },
+        "accent": {
+          "area_mm2": 49.668579853254684,
+          "faces": 1,
+          "color": "#AFB4B1"
+        },
+        "secondary": {
+          "area_mm2": 20.496282323187796,
+          "faces": 2,
+          "color": "#D8D9D2"
+        }
+      },
+      "features": [
+        {
+          "id": "ScreenField",
+          "bounds_mm": [
+            1.2,
+            1.199999999999999,
+            22.800000000000004,
+            41.6
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 419.20920276887455,
+          "visible_same_color_area_mm2": 413.9182294135822
+        },
+        {
+          "id": "Wheel",
+          "bounds_mm": [
+            6.5,
+            43.3,
+            17.5,
+            54.3
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 95.03317777109125,
+          "visible_same_color_area_mm2": 49.668579853254684
+        },
+        {
+          "id": "WheelVoid",
+          "bounds_mm": [
+            8.199999999999998,
+            45.00000999107046,
+            15.800000000000002,
+            52.59999000892953
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 45.36459791783656,
+          "visible_same_color_area_mm2": 30.159288949941093
+        },
+        {
+          "id": "Center",
+          "bounds_mm": [
+            9.799999999999999,
+            46.60000993939789,
+            14.200000000000001,
+            50.9999900606021
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 15.205308967895473,
+          "visible_same_color_area_mm2": 15.205308967895473
+        },
+        {
+          "id": "Hold",
+          "bounds_mm": [
+            10.0,
+            2.5,
+            14.0,
+            3.9
+          ],
+          "bounds_method": "edge samples, 0.00001 mm deflection",
+          "authored_area_mm2": 5.290973355292323,
+          "visible_same_color_area_mm2": 5.290973355292323
+        }
+      ],
+      "partition_difference_mm2": 0.0,
+      "svg_paths_and_colors_exact": true,
+      "right_full_curve_transform_checked": true
+    }
+  },
+  "construction_zone_areas_mm2": {
+    "cover": 43.15499999999998,
+    "collar": 108.50499999999988,
+    "ordinary": 739.2268134870462
+  },
+  "planar_objects_reopened": 44,
+  "native_plan_sha256": "6feea694cb863dc6ac863bf3f0015693a3d378c8c5ee4cf945a42cf3d3481221"
+}

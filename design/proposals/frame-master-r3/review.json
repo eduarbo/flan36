@@ -1,0 +1,50 @@
+{
+  "scope": "Approval proposal only. No adoption of production frames, PCB, case or viewer.",
+  "original_request": "Exact colors, paths and dimensions before approval and literal transfer to future 3D files, preserving all eleven styles.",
+  "status": "AWAITING_USER_ARTWORK_AND_COVER_APPROVAL",
+  "master_sha256": "3e74ccf87921e9326e96c4f42d718a41e308b786972898cc232d057b8ba54abc",
+  "geometry_check_sha256": "6074062d6f31f56ef83bd7071f20251ff6c04a6d087d99edc54baea57d653c44",
+  "production_before_after_sha256": {
+    "design/revI.json": "85b90673e6d716d58ccc6826a15f833d771a357b1ed7d2253515abf7e340993f",
+    "design/revI-frame-profiles.json": "9f75760ab53bfb554123ddc5223816a5177c9c7478eabad4337b841df38d874c",
+    "design/frame-finishes.json": "efceacdb7957774ec3a84d267cf84bd49859ea5187ac3608424f76cca4f27af4",
+    "tools/freecad/level_stack.py": "a4c330c8a0acd789ad51e6a9a58023b3fd6d937cf14e35acbe880f069c4399cc",
+    "tools/freecad/flush_frames.py": "fe8b09bea894e15210bca75f1734fc014457e08258701464aff40aa8bc10d711",
+    "mechanical/revI/Flan36.FCStd": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
+    "docs/index.html": "9119cfee93c7cb7668f2db9878ca48a18d6cd04e1418660237626b5dffcd4c65"
+  },
+  "independent_review": {
+    "lenses": [
+      "domain_constructive",
+      "adversarial_risk"
+    ],
+    "rounds": 2,
+    "decision": "Both recommend proposal-only presentation/sync; neither selects a cover or accepts fabrication.",
+    "material_findings_and_disposition": {
+      "z_schedule_ambiguity": "Resolved with disjoint XY zones and explicit Z intervals per A/B; B raises entire face and case.",
+      "hex_vs_role_ambiguity": "Resolved with stable-role comparison even when palettes reuse HEX.",
+      "ten_unannotated_styles": "Resolved with ten additional dimensioned sheets and analytic feature bounds.",
+      "historical_level_stack_export_digest": "Deferred to production-rebuild provenance reconciliation. Native current geometry directly read for this proposal."
+    }
+  },
+  "controller_checks": {
+    "all_eleven_dimensioned_sheets_visually_inspected": true,
+    "solid_color_collection_and_section_inspected": true,
+    "svg_master_paths_and_colors_exact": true,
+    "all_44_planar_regions_saved_reopened": true,
+    "full_curve_right_transform_checked": true,
+    "production_unchanged": true
+  },
+  "remaining": {
+    "owner": "Eduardo",
+    "decision": "Approve artwork master and choose A/B or request changes.",
+    "after_approval_owner": "Codex",
+    "after_approval_acceptance": "Extruded native geometry, exported materials and viewer must match the approved role regions and full assembly clearances; physical print/solder qualification stays separate."
+  },
+  "bounded_retrospective": {
+    "trigger": "User rejected undimensioned mockups and visually divergent CAD.",
+    "cause": "Previous artwork followed a backing mask and composition adjustments without a dimensioned approval master.",
+    "prevention": "Use one exact path source for approval SVG and editable planar CAD; prohibit silent scaling, clipping and composition edits during extrusion.",
+    "new_check": "Analytic path extrema avoid misleading dimensions from coarse native display bounding boxes."
+  }
+}
