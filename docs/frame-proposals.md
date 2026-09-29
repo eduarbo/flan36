@@ -1,11 +1,13 @@
-# Six frame proposals
+# Six new frame directions
 
-[Open the mobile gallery](https://eduarbo.github.io/flan36/frame-proposals/) to compare **Flan, Tape, Orbit, Manga, NES and Walkman**. These are new approval proposals; their artwork has not replaced the six existing designs in the explorer.
+[Open the mobile gallery](https://eduarbo.github.io/flan36/frame-proposals/) to compare **Caramelo, Lucha, Hanafuda, Mecha, Cartucho 8 and Terminal**. Tap any frame for a larger image or its dimensions. R5 was rejected; these R6 proposals await approval before integration.
 
-![Six exact frame proposals](frame-proposals/collection.png)
+![Caramelo and Lucha](frame-proposals/collection-a.png)
+![Hanafuda and Mecha](frame-proposals/collection-b.png)
+![Cartucho 8 and Terminal](frame-proposals/collection-c.png)
 
-All six use a **24 × 56 mm** envelope, solid HEX colors and flush details. The gallery, [1:1 SVGs and master](../design/proposals/frame-redesign-r5/), and [FreeCAD review](../design/proposals/frame-redesign-r5/Artwork-R5.FCStd) share the same millimetre paths. The [native render](frame-proposals/native-review.png) comes from the review solids. The LCD fill in the cards is illustrative; it does not conceal gaps around the actual glass footprint.
+All six use the existing **24 × 56 mm** mechanical blank. Their **solid HEX colors and flush shapes** come from one [millimetre master](../design/proposals/frame-redesign-r6/master.json), shared by the SVGs, dimensioned sheets and [editable FreeCAD review](../design/proposals/frame-redesign-r6/Artwork-R6.FCStd). Open the document's six labeled groups to inspect or hide candidates and their material solids.
 
-The corrected opening is **13.90 × 30.50 mm**, with **0.10 mm nominal glass clearance** on all four sides. Face height remains **Z13.59 mm**. Thin details, printed fit and the 0.4 mm nozzle / 0.2 mm layer target still require slicing and a physical sample.
+The [native render](frame-proposals/native-review.png) uses the actual review solids. The [geometry check](../design/proposals/frame-redesign-r6/geometry-check.json) verifies clipping, disjoint closed material volumes, exact top surfaces, save/reopen and clearance to the existing display. These are review artifacts; thin tips, color bonding, toolpath retention and printed fit still require a sliced sample with the **0.4 mm nozzle / 0.2 mm layer** target.
 
-The [geometry receipt](../design/proposals/frame-redesign-r5/geometry-check.json) checks clipping, material partitions, closed review solids, save/reopen and exact agreement between the planar source and top surfaces. Approval applies to these curves and palettes, not a later reinterpretation of a picture.
+The current assembly, corrected opening, stack height, themes and viewer remain unchanged. The [rejected R5 files](../design/proposals/frame-redesign-r5/) are preserved as history.

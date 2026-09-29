@@ -12,11 +12,15 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
+## Revision I — six new artwork directions, awaiting approval
+
+R5 was rejected. [R6](frame-proposals.md) proposes Caramelo, Lucha, Hanafuda, Mecha, Cartucho 8 and Terminal in its place, with exact paths, solid HEX colors, dimensioned sheets and matching editable FreeCAD review solids. The current mechanical blank, keyboard assembly, themes and explorer are unchanged. Artwork integration remains pending approval.
+
 ## Revision I — corrected display seam and six exact proposals
 
 The opening is now centered on the glass with 0.10 mm nominal clearance on all sides. It closes the exposed side bands without moving the display or raising the stack. The five approved bezels remain exactly 2.40 mm wide; their other artwork and colors are unchanged. [Correction and limits](../design/display-seam-implementation.md).
 
-Flan, Tape, Orbit, Manga, NES and Walkman have [new dimensioned R5 proposals](frame-proposals.md), including editable review solids and actual mesh renders. Their new artwork awaits approval and is not installed in the main assembly. [Verified public source, viewer, print kit and proposals](../validation/revI-display-seam-public.json).
+Flan, Tape, Orbit, Manga, NES and Walkman received [dimensioned R5 proposals](../design/proposals/frame-redesign-r5/), including editable review solids and actual mesh renders. This historical proposal was subsequently rejected and superseded by R6; its artwork was never installed. [Verified public source, viewer, print kit and R5 snapshot](../validation/revI-display-seam-public.json).
 
 ## Revision I — approved R4 frames (earlier snapshot)
 

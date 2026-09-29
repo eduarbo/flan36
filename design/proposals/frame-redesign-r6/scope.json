@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "request_ref": "user:20260929:reinvent-rejected-r5-frames",
+  "parent_objective": "../../display-seam-redesign.json",
+  "baseline_commit": "356d03fb6594d48d3e51c0049b20c22385f98c90",
+  "requested_outcome": "Replace the six rejected R5 proposals with new exact design directions for user selection before production integration.",
+  "requirements": [
+    {
+      "id": "six-new-proposals",
+      "acceptance": "Six visually distinct proposals with literal millimetre paths, HEX palettes, dimensioned sheets and matching native review solids."
+    },
+    {
+      "id": "mobile-review",
+      "acceptance": "Public gallery, individually enlargeable previews and working dimensions/source links."
+    },
+    {
+      "id": "approval-boundary",
+      "acceptance": "Existing production assembly, current main viewer and themes remain byte-identical; artwork integration waits for user approval."
+    }
+  ],
+  "supersedes_proposal": "R5, rejected by user; immutable source preserved",
+  "fixed_interface": {
+    "envelope_mm": [
+      24,
+      56
+    ],
+    "face_z_mm": 13.59,
+    "opening_mm": [
+      13.9,
+      30.5
+    ],
+    "bezel_width_mm": 2.4
+  },
+  "protected_sha256": {
+    "mechanical/revI/Flan36.FCStd": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
+    "design/frame-finishes.json": "c8cc7621908f3c768a8d7b90d2a59f6df482bb26e97cb439e895f8366ff96c08",
+    "design/themes.json": "abfbfb3132bbf3f4d2b4ae3833b4905e67f3a6c7a1f617a63b55b425a793f805",
+    "docs/index.html": "aef7269bd70aafbc941ca1ec0769915f87fceec963cad16f69509ae80a188906",
+    "docs/offline.html": "90bc7ce2b74a0c9aa9867ff7cfc9224a25aa1266359412d13c206df6f970f89f",
+    "design/revI.json": "9ffa36db112e6838fa12d2205e2c52e7c906db6e33c2dbac4216a07c30a63e66",
+    "design/proposals/frame-redesign-r5/master.json": "ef2bbd11dba76ecdcf68a31284468425ea415cd912505cd718164ec237a06a01"
+  },
+  "status": "PROPOSALS_AWAITING_APPROVAL",
+  "physical_acceptance": false
+}

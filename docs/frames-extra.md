@@ -12,7 +12,7 @@ Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and cli
 | **2000s Phone** | Navy faceplate, silver keypad and call key. |
 | **iPod** | White face, silver click wheel and continuous screen border. |
 
-**Flan, Tape, Orbit, Manga, NES and Walkman have [new R5 proposals for approval](frame-proposals.md).** Their existing artwork remains selectable until those exact designs are approved.
+**Caramelo, Lucha, Hanafuda, Mecha, Cartucho 8 and Terminal are the [new R6 proposals](frame-proposals.md)** for the six deferred artwork slots. R5 was rejected. The existing artwork remains selectable until new designs are approved.
 
 All designs use solid colors, without gradients or raised details. **Restore design colors** applies the exact palette. HEX editing and coordinated case/key themes remain available.
 
