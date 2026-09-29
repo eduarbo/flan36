@@ -5,7 +5,7 @@
 The following dimensions describe the earlier Level installation and are retained as its history.
 This prototype brings the **frame, display glass and Level upper shell to the same 13.39 mm plane**, lowering the frame by **1.41 mm** from the previous 14.8 mm design. Heights start at the case underside and exclude feet. The selected flat KLP caps still reach about **17.87 mm**, so overall keyboard height is unchanged; the switches and key positions have not moved.
 
-![Actual Level CAD assembly](images/revI-level.png)
+![Current R4 Level assembly; historical dimensions follow below](images/revI-level.png)
 
 | Part | Previous Z | New Z |
 |---|---:|---:|

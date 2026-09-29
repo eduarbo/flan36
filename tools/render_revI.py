@@ -79,7 +79,7 @@ def render(kind):
         for lead in m['batteryLeadProfiles'][side+'-'+cfg['batteries'][side]]:
             part(side,f"battery-lead-{lead['index']}",rgb(lead['color']))
         # Reflective screen artwork is illustrative, not a live hardware readback.
-        cx=122.8 if side=='left' else 37.2;hy=m['halves'][side]['display_header']['y'];dz=45 if stack else 0
+        bounds=m['parts'][side+'-display']['bounds_mm'];cx=(bounds[0]+bounds[3])/2;hy=m['halves'][side]['display_header']['y'];dz=45 if stack else 0
         screen_z=m['parameter_values_mm']['DisplayBottom']+1.915
         glass=vtk.vtkPlaneSource();glass.SetOrigin(offset+cx-5.372,hy-29.54,screen_z+dz);glass.SetPoint1(offset+cx+5.372,hy-29.54,screen_z+dz);glass.SetPoint2(offset+cx-5.372,hy-4.26,screen_z+dz)
         primitive(glass,(0,0,0),(.73,.79,.725))
@@ -112,8 +112,8 @@ def render(kind):
     if kind!='corner':label(titles[kind],105,1380,44)
     sub=('Left half  /  KLP LAME  /  Orthographic profile' if kind=='side' else '36 keys  /  KLP LAME  /  Two nice!view displays  /  24 mm bay') if kind!='stack' else 'Adafruit 1570 or 301230. Captured battery cage and magnetic frame.'
     sub='Contour / Original thumb angles / Local tangent corners' if kind=='detail' else sub
-    if kind=='level':sub='Flush glass, frame and upper shell / 13.39 mm / Original Piantor key positions'
-    if kind=='corner':sub='Color rim + Smooth frame / Shared R2.4 corner / Actual CAD meshes'
+    if kind=='level':sub=f"Frame + upper shell / {m['parameter_values_mm']['FrameTop']:g} mm / Glass recessed 0.20 mm"
+    if kind=='corner':sub='Color rim + Flan frame / Shared R2.4 corner / Actual CAD meshes'
     if kind!='corner':label(sub,108,1334,25,(.37,.44,.41))
     label('RevI CAD study. Wiring, final connectors, fit and operation remain untested.',108,60,24,(.36,.42,.39))
     cam=ren.GetActiveCamera();cam.ParallelProjectionOn()
@@ -126,7 +126,7 @@ def render(kind):
     else:focal=(88,-39,28);pos=(225,-270,205);up=(0,0,1);scale=70
     cam.SetFocalPoint(*focal);cam.SetPosition(*pos);cam.SetViewUp(*up);cam.SetParallelScale(scale);ren.ResetCameraClippingRange();win.Render()
     if kind=='side':
-        label(f"Level shell + frame + glass: {m['parameter_values_mm']['FrameTop']:g} mm",105,1235,29)
+        label(f"Level shell + frame: {m['parameter_values_mm']['FrameTop']:g} mm / Glass: {m['parameter_values_mm']['DisplayBottom']+1.9:g} mm",105,1235,29)
         label('Heights above base; feet add 1.2 mm. Switch retention plate remains at 7.6 mm.',105,170,24,(.37,.44,.41))
     if kind=='stack':
         label('nice!view  /  nice!nano  /  LiPo 100 mAh',105,1230,27)

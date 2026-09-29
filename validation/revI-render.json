@@ -1,8 +1,8 @@
 {
   "revision": "I",
-  "model_sha256": "85b90673e6d716d58ccc6826a15f833d771a357b1ed7d2253515abf7e340993f",
+  "model_sha256": "7eb748241e96ad8409a1b124ba5cc60b90dff6ff8099dec5e294a34969a22993",
   "layout_sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3",
-  "renderer_sha256": "640133c448b630936509e1dce19767de193bf692875243fa9d50d19ca134b689",
+  "renderer_sha256": "50e3367e3e8ac71363cee81fb47c5add397b89f1a90f179b86eb5d1f2b942841",
   "meshes": [
     {
       "path": "mechanical/revI/left-tray.stl",
@@ -10,27 +10,27 @@
     },
     {
       "path": "mechanical/revI/left-key-plate.stl",
-      "sha256": "e44195a8bcef6e49d979ff1a5d5ab11cebf23733e945b735a3daa847e933b9fb"
+      "sha256": "0acd0ff42d32ead9a782dfede64a003648537569fd6f557afdded064658dc4a0"
     },
     {
       "path": "mechanical/revI/left-frame-flan-body.stl",
-      "sha256": "80adbd41770c4f358444af638bdfdbc7dbb2a14d43f527cccddc24ddf716ae5c"
+      "sha256": "3d01b92c9ad86e12cf9d32fd515fbcc85bf72195b1d490e72165b5735da164ff"
     },
     {
       "path": "mechanical/revI/left-frame-flan-detail.stl",
-      "sha256": "70776872e7d0669a08b241c6a20f675b90c103af415a69d6ff5c98927881e292"
+      "sha256": "7132ee56ef88fc501a2740813f76e5f096c1f00a416b8d85d96a0f6872cc2762"
     },
     {
       "path": "mechanical/revI/left-frame-flan-accent.stl",
-      "sha256": "aac4ed818087a959f2b98d87f0d6fdbe71c30bc4f0872773ed5efe2e56f40932"
+      "sha256": "1fe33515e856f607ee20d8e2161f7d79ef73bc5a9d96e4d3759a46e368e9fab1"
     },
     {
       "path": "mechanical/revI/left-frame-flan-secondary.stl",
-      "sha256": "06e959bb9d2818412dfa77cd47dcdb7ce8eb23ec395dec11d54d5aaa48ca5227"
+      "sha256": "f7994b0571b4f71a198a1ef37e04dc439b33bce9fd80b66e25c6f355efe37f57"
     },
     {
       "path": "mechanical/revI/left-pcb.stl",
-      "sha256": "330e4e3d8ad76f6a659f5fc01d5a6e4d20a5b25d854e9b9258412025ab1994f1"
+      "sha256": "6ec7cc1745ffce57aab5afe422eba571ba564cc7e1394f731491b99373005fca"
     },
     {
       "path": "mechanical/revI/left-cradle.stl",
@@ -102,11 +102,11 @@
     },
     {
       "path": "mechanical/revI/left-display-socket-visual-0.stl",
-      "sha256": "0e07042dad4d7f611142552e708eeae502052ac042a634459d407a7a52a42871"
+      "sha256": "77dc073af6571809ee10935692d3c00e005b74fff132a0e8e9c2ab75bb3778cc"
     },
     {
       "path": "mechanical/revI/left-display-socket-visual-1.stl",
-      "sha256": "6465283e1a35336267e40c03628eb8288d556adcbbdd726e0a75e299892f7492"
+      "sha256": "059f3c3f7fd14fa6749fd3babccb4ba0d7676f9469b35ae79d5544218637fcce"
     },
     {
       "path": "mechanical/revI/left-jst-visual-0.stl",
@@ -154,35 +154,35 @@
     },
     {
       "path": "mechanical/revI/left-display-sled.stl",
-      "sha256": "40e0841c00feff40c438ab701c143bfe1c197cbd03dddf2d74f1df433bbfc65a"
+      "sha256": "9f27c297b06e9dfec777dc480e5a4cda967ebf402964abe50b58733b84fe5861"
     },
     {
       "path": "mechanical/revI/left-display-visual-0.stl",
-      "sha256": "67f567582f5efdfffdd91424b6034b038cfd54174a87e07a550ec59543807627"
+      "sha256": "9fb2024ddd9e2692c8f977549e06a5588867f63654e7d54b4deadb97a0104cd4"
     },
     {
       "path": "mechanical/revI/left-display-visual-1.stl",
-      "sha256": "e24225d7ac3bdaacb019ea0cca8752b080c1184840b5423beb8ade9a91025970"
+      "sha256": "7c83864f8513538123f912b6a0661d77824a74b03eee79ecca19100a0a42dd54"
     },
     {
       "path": "mechanical/revI/left-display-visual-2.stl",
-      "sha256": "81fa9334b3b3978a966756de9e6cb5585514cb523ebb993cfe95d242912b7268"
+      "sha256": "7eb9b1917ccc2ef962829af35420daddfe72b907a4cfaa608e95eb370e2d3e68"
     },
     {
       "path": "mechanical/revI/left-display-visual-3.stl",
-      "sha256": "4cf6c10881d13e802a8a3576199e096cfc1658e4bf05d72514ccc7aa2c23f237"
+      "sha256": "9980f09b9045f8d176e2dad6d9124cfd44dfc2f3a0a6ace0f4b9af4b870ae3d6"
     },
     {
       "path": "mechanical/revI/left-display-visual-4.stl",
-      "sha256": "a1cad2d0316aa43f42821f2f53694808b7f3cb0a2a0f5796a5383ecd3093fa01"
+      "sha256": "2e6560575d83069984d102c4a3b4a6f0326d583e92cea6da5e6e39ee4593898b"
     },
     {
       "path": "mechanical/revI/left-display-visual-5.stl",
-      "sha256": "b10b646b951c8b7e506c7f35782586ac877485b0c3b9b67ab6f564002ff050f7"
+      "sha256": "1263aa016ba2f64dd821a21717aff71c7353ae8dfd213601a26a4382a24b88ec"
     },
     {
       "path": "mechanical/revI/left-display-visual-6.stl",
-      "sha256": "00c11fd0dec12a34f5bdfda08cdcaf4dbaf4da379a2b2695958f6414a93facfe"
+      "sha256": "e407b79bd42785fb4623579d123f5d3a6b36013e83336eeeac4376ff00f9c6f6"
     },
     {
       "path": "mechanical/revI/left-washer-1.stl",
@@ -286,27 +286,27 @@
     },
     {
       "path": "mechanical/revI/right-key-plate.stl",
-      "sha256": "11bc24956bba20f3969cc49609cf8b9aa7a4ccad5144ff854516d7636a9dc1d5"
+      "sha256": "7fb266452f5b73c0a60102e29ebdf3200bde414ec07d73072b68474e2486a425"
     },
     {
       "path": "mechanical/revI/right-frame-flan-body.stl",
-      "sha256": "6ec05d3ba87570d1473718dc8b3c53f123dc9768614ebd928c3de7a7b74bc150"
+      "sha256": "5a7db435a046d74ea492e017dcf649016aff1f8792f9f88f6e49874705da2f97"
     },
     {
       "path": "mechanical/revI/right-frame-flan-detail.stl",
-      "sha256": "6c0ed78726eb45305f83b84f72878a905bd9a5a964be029d7febf01b9203a9ab"
+      "sha256": "7f89d271a913b785fc04ea8742d37a80d4c837063812cfe5f4ee12fa718df012"
     },
     {
       "path": "mechanical/revI/right-frame-flan-accent.stl",
-      "sha256": "aa0af7049932e142127927bcc61bbfa13b19c83e8e96cc4d63082e2772ad2be3"
+      "sha256": "e05b762967dbbc0b7cc8bf30d4d5a37c301f603455ba7afd2c53ecf152ba4251"
     },
     {
       "path": "mechanical/revI/right-frame-flan-secondary.stl",
-      "sha256": "cddab8693c9f92ec96b1b791c6e56bfbb8a7397367db462bde7cb2b53f76cc87"
+      "sha256": "59ce4b3491e0b6d54b07a254dc9bc9a65990db242911e819616b940e8392edf1"
     },
     {
       "path": "mechanical/revI/right-pcb.stl",
-      "sha256": "a7143377c3c43dd673d0dee8b0324ca49c21daa7a77721882975b96256a5f28a"
+      "sha256": "ac525b1dd91bb777ce21a803241baf1756c5e67082c44cbe4057f66f464b150e"
     },
     {
       "path": "mechanical/revI/right-cradle.stl",
@@ -378,11 +378,11 @@
     },
     {
       "path": "mechanical/revI/right-display-socket-visual-0.stl",
-      "sha256": "b2a4d9bcaffa1db0c308fd64bff41f24488ec25867d69c6d3ff29709e1a46525"
+      "sha256": "e6ec66153dabb040120be800e85977a766a043afcc084a371040474d0b7dee6a"
     },
     {
       "path": "mechanical/revI/right-display-socket-visual-1.stl",
-      "sha256": "2588109a2529b6012189ddb1e0f32c34faa2c233deb93c603baa7d921c84cd4a"
+      "sha256": "866a47533806b5ece8014c7769bcfb854892cbcf8ec8e81050ec4881d3f3933f"
     },
     {
       "path": "mechanical/revI/right-jst-visual-0.stl",
@@ -430,35 +430,35 @@
     },
     {
       "path": "mechanical/revI/right-display-sled.stl",
-      "sha256": "0b9d3a408e0c4ec22e6ff8671a33f21101a373f1781031efacf955c4f35d5c0a"
+      "sha256": "282d9e0d68d0a3762ab0dfd949a9af21951ba3040589548839caac4a8935c351"
     },
     {
       "path": "mechanical/revI/right-display-visual-0.stl",
-      "sha256": "a36a00b65322b28d59a5c8aecbfbd265168eae3618e1e50b6f853460f57bbece"
+      "sha256": "886e813a1c950679fce604705b3fdb3cf2c8eae6b6eeb0b19b549e778a1cf5b8"
     },
     {
       "path": "mechanical/revI/right-display-visual-1.stl",
-      "sha256": "dd47a8f0c5458006cf630a5e72adae1fe39d12f65fc79192061736c472370756"
+      "sha256": "072acaa4dc6237cb7840099240f842469431fc8b6c800a4a270b859ecedb1f88"
     },
     {
       "path": "mechanical/revI/right-display-visual-2.stl",
-      "sha256": "42a32eda6dc7d2582ccb47af193bdd70b49b53f2ef9debe5c5d18dddde40e6e8"
+      "sha256": "ec5e3717f7a30f278446c4d7ee840af8a21bbde28fb112a3f065794c8296e63e"
     },
     {
       "path": "mechanical/revI/right-display-visual-3.stl",
-      "sha256": "1fb8eeb9bb3b04331e51cc08a54e2e4a0270f72bdaf95367d1f3dd7d5a67273c"
+      "sha256": "5ba9eef2cebe0f964e6e140c85264f8869e70697e5b449bf731c74a457876788"
     },
     {
       "path": "mechanical/revI/right-display-visual-4.stl",
-      "sha256": "8123f75b8a9073d7272a0fb389b4edcfa02d396cf78897f1fea5e0d015013eae"
+      "sha256": "346a3494b84e8c88d122ad5b1126bc946351f460e8f7818dabce97b121a0bfa9"
     },
     {
       "path": "mechanical/revI/right-display-visual-5.stl",
-      "sha256": "05df6c038198465d044447f3822fe984ccb41552cf8b71a9beae6e650e2e1991"
+      "sha256": "42d5bbb5f3385464643ff7bb72b1990056fd8727c55c490b6df18b233990dba0"
     },
     {
       "path": "mechanical/revI/right-display-visual-6.stl",
-      "sha256": "b16231673b0f8fd665efa38be468f402084926bf3518bc37f10598e9b8db9ad5"
+      "sha256": "d52192985d8b5535bc130699e2b99b78ba953242079c3ac9d4fcd1d6e724f93d"
     },
     {
       "path": "mechanical/revI/right-washer-1.stl",
@@ -534,7 +534,7 @@
     },
     {
       "path": "mechanical/revI/left-frame-flan.stl",
-      "sha256": "84bd3bf04139576478b7d3b84142231779a18539bef0e70bb45155de68f498cd"
+      "sha256": "3c542bda862eafe083ba4bd1844f6f9317ec253d652f7fb800996162b045760c"
     }
   ],
   "views": {
@@ -545,7 +545,7 @@
         "right"
       ],
       "exploded": false,
-      "image_sha256": "8a4c9af64f588402371e797068d55e80e610ed2313277d16c74ea967234dc4df"
+      "image_sha256": "a6b7d614a88c7a8f65694dfeeb0eec3d4afc0ae794d7c5221ca2dde5b8f44a44"
     },
     "top": {
       "keys": 36,
@@ -554,7 +554,7 @@
         "right"
       ],
       "exploded": false,
-      "image_sha256": "bb3b751e567bca2d689b13c5f5f1581c65d8196ef6e983bade760160e0880776"
+      "image_sha256": "b91caa182d02d7210551235aa3120189b779d699598a013d55454a55860b9452"
     },
     "side": {
       "keys": 18,
@@ -562,7 +562,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "6d691bed63e8dab28284a4f17618a6f82239b2acdb655b62091c9bc5731c7ced"
+      "image_sha256": "f24bfb4334b84a6e316e072979d8af143ecb6d65e02a62358d5836d818464b4f"
     },
     "stack": {
       "keys": 18,
@@ -570,7 +570,7 @@
         "left"
       ],
       "exploded": true,
-      "image_sha256": "edb60683c6d1cb3b141733ab30f961305781eb6855944ef42e930969cac5b5b3"
+      "image_sha256": "685de7b1125b52354686a60fa91fbc981b314c6620e980d266e510abd78684db"
     },
     "detail": {
       "keys": 18,
@@ -578,7 +578,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "16fc904fa1b1bdf536934a4a394e64657539dfea0fa0c3d0b4e3c4f66163f39e"
+      "image_sha256": "1fc9e9f885d1aa88121ae6b96d2dcd6c0e015b90ffccbf9994434f671ffc1085"
     },
     "corner": {
       "keys": 18,
@@ -586,7 +586,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "3c7a074b37fdd61ec81a672e19d77d34d25e85840b73de7d6e6121c6d6884fd6"
+      "image_sha256": "934a9d2733a2a8405f2d73b74e2ce9a2a7454647067eb799cd86c0909037aba2"
     },
     "level": {
       "keys": 18,
@@ -594,7 +594,7 @@
         "left"
       ],
       "exploded": false,
-      "image_sha256": "685b84984068d458d8358d96c850b7db2cbec50d98c4f4aa0814f34b2dbc3e4b"
+      "image_sha256": "a42083a5daa0bd02ce30c27a2bc8d16e095b8d57170f318b350ed7c47de561a6"
     }
   },
   "geometry_source": "generated CAD, no image retouching",
