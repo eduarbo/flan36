@@ -14,7 +14,7 @@
 
 ## Revision I — frame fidelity correction
 
-The first collection passed structural checks but did not preserve the selected compositions, and its support mask silently severed several decorations. The correction restores the reference motifs and adds per-feature rejection for unsupported artwork. [Reference comparison](frame-comparison.md) · [Digital checks](../validation/revI-frame-fidelity.json). Earlier verification receipts describe their original snapshots.
+The first collection passed structural checks but did not preserve the selected compositions, and its support mask silently severed several decorations. The correction restores the reference motifs and adds per-feature rejection for unsupported artwork. [Reference comparison](frame-comparison.md) · [Digital checks](../validation/revI-frame-fidelity.json). Earlier verification receipts describe their original snapshots. Public source, images, viewer and downloaded print files match the corrected implementation. [Publication receipt](../validation/revI-frame-fidelity-public.json).
 
 ## Revision I — solid-color frame collection
 

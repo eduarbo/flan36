@@ -1,0 +1,58 @@
+{
+  "implementation_commit": "740fa62eff8c4d0643f8568e16b5022c52220ca2",
+  "status": "verified-public-digital-correction",
+  "acceptance": "validation/revI-frame-fidelity.json",
+  "native_sha256": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
+  "anonymous_readback": {
+    "additional_published_assets": {
+      "docs/offline.html": "758bb374fa367dc6d419136d1a3416416b6c8b1cd98a2be2ce9d7bdb01fd3754",
+      "docs/assets/printing-29ca86c6ae86f28ffe4f84b6630c390b0a67dceb5858d3ad234f6919ebb4ca7f.bin": "29ca86c6ae86f28ffe4f84b6630c390b0a67dceb5858d3ad234f6919ebb4ca7f"
+    },
+    "source_commit": "740fa62eff8c4d0643f8568e16b5022c52220ca2",
+    "archive_files_verified": 1337,
+    "archive_sha256": "c26df3f48318acde45d83d415e26b32c7d3c452181af9ead6e6705ad1190f0a4",
+    "pages_url": "https://eduarbo.github.io/flan36/",
+    "pages_matches_committed_html": true,
+    "viewer_sha256": "9119cfee93c7cb7668f2db9878ca48a18d6cd04e1418660237626b5dffcd4c65",
+    "authenticated_requests": false,
+    "method": "All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer."
+  },
+  "browser": {
+    "commit": "740fa62eff8c4d0643f8568e16b5022c52220ca2",
+    "public_scene_matches_local": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "images": [
+    {
+      "path": "docs/images/revI-frame-gallery.png",
+      "url": "https://eduarbo.github.io/flan36/images/revI-frame-gallery.png?rev=740fa62eff8c4d0643f8568e16b5022c52220ca2",
+      "sha256": "af0568d52559db7c2353d445f5a0942c4bfc989ffeeab21de0019960cd294abf"
+    },
+    {
+      "path": "docs/images/frames/tape.png",
+      "url": "https://eduarbo.github.io/flan36/images/frames/tape.png?rev=740fa62eff8c4d0643f8568e16b5022c52220ca2",
+      "sha256": "32a9af2e8907a8bceb75ca463072267289a363822bf73a0248724b2d6f1ef277"
+    },
+    {
+      "path": "docs/images/frames/orbit.png",
+      "url": "https://eduarbo.github.io/flan36/images/frames/orbit.png?rev=740fa62eff8c4d0643f8568e16b5022c52220ca2",
+      "sha256": "7f277fbf1d5deb8774ac97c3b35e3b9c1d3fa719007067d0f2fec5b95b043815"
+    },
+    {
+      "path": "docs/images/frames/manga.png",
+      "url": "https://eduarbo.github.io/flan36/images/frames/manga.png?rev=740fa62eff8c4d0643f8568e16b5022c52220ca2",
+      "sha256": "5ab022db13b93299a25f9b3cb6be4f63e25ff1baa29ac0ab943589adcee3c727"
+    },
+    {
+      "path": "docs/images/frames/talavera.png",
+      "url": "https://eduarbo.github.io/flan36/images/frames/talavera.png?rev=740fa62eff8c4d0643f8568e16b5022c52220ca2",
+      "sha256": "de250dec3a7928b4f46d444a2b55cb69ee4e54cdc691c5ba2a0ed04ef6148673"
+    }
+  ],
+  "physical_acceptance": false,
+  "scope": "Reference fidelity and intact frame artwork; physical print and assembly qualification remain pending."
+}
