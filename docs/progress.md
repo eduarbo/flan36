@@ -12,9 +12,13 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
-## Revision I — selected collection and Evangelion
+## Revision I — approved selection only
 
-The user rejected all six R7 Mecha and Kumiko candidates. [R8](frame-proposals.md) retains Talavera, Game Boy, SNES, Phone, iPod and Hanafuda unchanged and adds one Evangelion Unit-01 proposal with M1's exact palette. The public selection gallery contains only these six selected designs and the new proposal. Evangelion approval and Hanafuda integration remain pending; the main assembly and explorer are unchanged.
+The user rejected Evangelion and requested its removal. The [current gallery](frame-proposals.md) now contains only Talavera, Game Boy, SNES, Phone, iPod and Hanafuda. The rejected proposal and its public previews were removed from the gallery. There is no pending artwork approval. Hanafuda integration remains pending; the main assembly and explorer are unchanged. [Selection record](../design/frame-selection.json).
+
+## Revision I — historical R8 proposal
+
+[R8](../design/proposals/frame-redesign-r8/) retained the six approved designs and proposed an Evangelion frame using M1's palette. That proposal was subsequently rejected and never installed. Historical source and verification receipts are preserved.
 
 ## Revision I — Hanafuda retained; historical R7 choices
 

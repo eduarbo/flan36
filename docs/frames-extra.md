@@ -12,7 +12,7 @@ Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and cli
 | **2000s Phone** | Navy faceplate, silver keypad and call key. |
 | **iPod** | White face, silver click wheel and continuous screen border. |
 
-**The selected collection is Talavera, Game Boy, SNES, Phone, iPod and Hanafuda.** Hanafuda retains its R6 artwork and awaits integration. The six Mecha and Kumiko proposals in R7 were rejected. [R8 adds one Evangelion proposal](frame-proposals.md), with the exact M1 palette, for approval before integration. Rejected designs are excluded from the current proposal gallery; the existing main explorer is unchanged until integration.
+**The selected collection is Talavera, Game Boy, SNES, Phone, iPod and Hanafuda.** Hanafuda retains its R6 artwork and awaits integration. [The current gallery](frame-proposals.md) contains only these six approved designs; no new proposals await approval. Rejected designs are excluded. The existing main explorer is unchanged until integration.
 
 All designs use solid colors, without gradients or raised details. **Restore design colors** applies the exact palette. HEX editing and coordinated case/key themes remain available.
 

@@ -1,4 +1,6 @@
-# R8 — selected frames + Evangelion
+# R8 — historical selected frames + Evangelion
+
+**Subsequent decision:** Evangelion was rejected and removed from the current gallery. [The current selection](../../frame-selection.json) contains only the six approved designs. These frozen R8 sources document the historical proposal, not an active approval request.
 
 Six selected designs retain their exact paths and palettes: Talavera, Game Boy, SNES, Phone, iPod and Hanafuda. The six R7 Mecha/Kumiko candidates were rejected. **E1 / Evangelion Unit 01 is the only new proposal**, retaining M1's exact four-color palette.
 

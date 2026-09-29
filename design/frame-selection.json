@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "request_ref": "user:20260929:remove-evangelion",
+  "status": "APPROVED_ONLY",
+  "selected": [
+    "talavera",
+    "gameboy",
+    "snes",
+    "phone",
+    "ipod",
+    "hanafuda"
+  ],
+  "pending_proposals": [],
+  "preview_source": "design/proposals/frame-redesign-r8",
+  "preview_master_sha256": "291e9fb40634246b8a4f0733fed7e240ec94295adab2540a9e5445ea9057555e",
+  "decisions": [
+    {
+      "source": "user:20260929:remove-evangelion",
+      "rejected": "evangelion",
+      "action": "Remove from current gallery and public preview assets; preserve historical proposal records."
+    }
+  ],
+  "protected_sha256": {
+    "mechanical/revI/Flan36.FCStd": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
+    "design/frame-finishes.json": "c8cc7621908f3c768a8d7b90d2a59f6df482bb26e97cb439e895f8366ff96c08",
+    "design/themes.json": "abfbfb3132bbf3f4d2b4ae3833b4905e67f3a6c7a1f617a63b55b425a793f805",
+    "docs/index.html": "aef7269bd70aafbc941ca1ec0769915f87fceec963cad16f69509ae80a188906",
+    "docs/offline.html": "90bc7ce2b74a0c9aa9867ff7cfc9224a25aa1266359412d13c206df6f970f89f",
+    "design/proposals/frame-redesign-r8/master.json": "291e9fb40634246b8a4f0733fed7e240ec94295adab2540a9e5445ea9057555e"
+  },
+  "baseline_commit": "e55e84c26beab82da3e069f28e76350c9e647650",
+  "integration": "Hanafuda selected; production integration remains pending. Other five selected designs are installed."
+}
