@@ -6,13 +6,17 @@
 |---|---|---|
 | 36 Piantor key centers and angles | Checked | [Layout](../design/layout.json), upstream files and checker |
 | Editable source and CAD exchange | Available | Native FCStd, parameters and [FreeCAD/StepUp examples](freecad.md) |
-| KLP catalog and themed frames | RevI digital study | 38 source variants, 28 with qualified positions; eleven frame styles, per-key colors and configuration export/import |
+| KLP catalog and themed frames | RevI digital study | 38 source variants, 28 with qualified positions; five installed approved frame styles, Hanafuda pending, per-key colors and configuration export/import |
 | Wireless electronics and displays | Placement only | Unrouted revI PCBs; 0 geometric DRC violations, 104 unconnected items each; exact connectors pending |
 | Final BOM and manufacturing files | Pending | Close routing, clearances, retention and exact supplied parts |
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
-## Revision I — approved selection only
+## Revision I — approved viewer selection
+
+The earlier withdrawal changed only the proposal gallery, leaving rejected shapes in the main viewer. The viewer now offers Talavera (default), Game Boy, SNES, Phone and iPod; Flan, Tape, Orbit, Manga, NES and Walkman are excluded from its selector, geometry and print kit. Saved and imported retired IDs migrate to Talavera with original colors and recoverable source JSON. Hanafuda remains approved but not integrated. [Correction and reproducible checks](../design/approved-viewer-selection.md).
+
+## Revision I — approved gallery selection (earlier snapshot)
 
 The user rejected Evangelion and requested its removal. The [current gallery](frame-proposals.md) now contains only Talavera, Game Boy, SNES, Phone, iPod and Hanafuda. The rejected proposal and its public previews were removed from the gallery. There is no pending artwork approval. Hanafuda integration remains pending; the main assembly and explorer are unchanged. [Selection record](../design/frame-selection.json).
 

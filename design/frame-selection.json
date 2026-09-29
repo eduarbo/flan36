@@ -18,6 +18,18 @@
       "source": "user:20260929:remove-evangelion",
       "rejected": "evangelion",
       "action": "Remove from current gallery and public preview assets; preserve historical proposal records."
+    },
+    {
+      "source": "user:20260929:remove-rejected-viewer-frames-and-orbit",
+      "rejected": [
+        "flan",
+        "tape",
+        "orbit",
+        "manga",
+        "nes",
+        "walkman"
+      ],
+      "action": "Remove rejected frames from the active viewer and print catalog. Replace retired shapes with Talavera while preserving saved colors and other choices. Hanafuda integration remains pending."
     }
   ],
   "protected_sha256": {
@@ -29,5 +41,34 @@
     "design/proposals/frame-redesign-r8/master.json": "291e9fb40634246b8a4f0733fed7e240ec94295adab2540a9e5445ea9057555e"
   },
   "baseline_commit": "e55e84c26beab82da3e069f28e76350c9e647650",
-  "integration": "Hanafuda selected; production integration remains pending. Other five selected designs are installed."
+  "integration": "Hanafuda selected; production integration remains pending. Other five selected designs are installed.",
+  "viewer": {
+    "default_style": "talavera",
+    "installed_styles": [
+      "talavera",
+      "gameboy",
+      "snes",
+      "phone",
+      "ipod"
+    ],
+    "retired_styles": [
+      "arcade",
+      "bevel",
+      "cartridge",
+      "cyberpunk",
+      "facet",
+      "flan",
+      "handheld",
+      "kintsugi",
+      "manga",
+      "mecha",
+      "nes",
+      "orbit",
+      "smooth",
+      "tape",
+      "tv",
+      "walkman"
+    ]
+  },
+  "protected_sha256_scope": "Historical snapshot of the Evangelion gallery withdrawal at baseline_commit; viewer delivery is updated by the subsequent selector correction."
 }

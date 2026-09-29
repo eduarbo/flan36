@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFExporter} from 'three/addons/exporters/GLTFExporter.js';
 
-import {retiredFrames,copy,check,normalize} from './config.js';
+import {retiredFrames,retiredReplacementNames,copy,check,normalize} from './config.js';
 import {printKit} from './printing.js';
 import {createAppearance,setColor,savedKey} from './appearance.js';
 import {restoreConfiguration,createStore,recoveryPrefix} from './storage.js';
@@ -307,7 +307,7 @@ for(const [id,spec] of Object.entries(catalog.case_styles)){
 for(const button of $('case-target').children)button.onclick=()=>{caseSide=button.dataset.side;syncConfigurationUI();};
 $('case-cover').onchange=e=>{const cfg=copy(configuration);for(const side of caseTargets())cfg.cases[side].cover=e.target.checked;applyConfiguration(cfg);};
 for(const id of Object.keys(catalog.frame_styles)){
-  const finish=frameFinish(id,'left'),button=card(id,catalog.frame_styles[id],preview.image([finish],[0,1,.16],{width:220,height:360,up:[0,0,-1]}));button.dataset.style=id;button.title=finishes.styles[id].approval_status==='approved'?'Approved R4 design':'Existing design · new proposal awaiting approval';
+  const finish=frameFinish(id,'left'),button=card(id,catalog.frame_styles[id],preview.image([finish],[0,1,.16],{width:220,height:360,up:[0,0,-1]}));button.dataset.style=id;button.title='Approved design';
   const img=button.querySelector('img');img.width=220;img.height=360;img.alt=catalog.frame_styles[id]+' frame in its original palette';
   button.onclick=()=>applyFrame({style:id});$('frame-grid').append(button);
 }
@@ -351,7 +351,7 @@ function syncConfigurationUI(){
   const frames=frameTargets().map(side=>configuration.frames[side]),styles=new Set(frames.map(f=>f.style)),colors=new Set(frames.map(f=>f.color.toLowerCase()));
   for(const button of $('frame-target').children)button.setAttribute('aria-pressed',String(button.dataset.side===frameSide));
   for(const button of $('frame-grid').children)button.setAttribute('aria-pressed',String(styles.size===1&&styles.has(button.dataset.style)));
-  $('frame-current').textContent=styles.size===1?catalog.frame_styles[frames[0].style]+(finishes.styles[frames[0].style].approval_status==='awaiting-redesign'?' · new proposal available':''):'Mixed styles';
+  $('frame-current').textContent=styles.size===1?catalog.frame_styles[frames[0].style]:'Mixed styles';
   $('color-current').textContent=colors.size===1?[...colors][0]:'Mixed colors';
   for(const button of $('swatches').children)button.setAttribute('aria-pressed',String(colors.size===1&&colors.has(button.dataset.color)));
   // The color input has no mixed state: its visible companion explicitly names it.
@@ -412,7 +412,7 @@ explorer=createExplorer({scene,camera,canvas,objects,requestRender:render,
 $('load-trigger').onclick=()=>$('load-config').click();
 function downloadJSON(){const url=URL.createObjectURL(new Blob([JSON.stringify(configuration,null,2)+'\n'],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download=($('design-name').value.trim().replace(/[^a-z0-9_-]+/gi,'-').slice(0,60)||'Flan36-config')+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
 $('save-config').onclick=downloadJSON;
-$('load-config').onchange=async e=>{try{const f=e.target.files[0];if(f){if(f.size>100000)throw Error('File too large. Choose a configuration JSON.');const value=JSON.parse(await f.text()),migrated=retiredFrames(value,catalog).length;applyConfiguration(value);if(migrated){await store.idle();message('Retired frames replaced with Flan. Other choices are preserved; your imported file is unchanged.');}}}catch(error){message(error.message,true);}finally{e.target.value='';}};
+$('load-config').onchange=async e=>{try{const f=e.target.files[0];if(f){if(f.size>100000)throw Error('File too large. Choose a configuration JSON.');const value=JSON.parse(await f.text()),migrated=retiredFrames(value,catalog).length,replacement=retiredReplacementNames(value,catalog);applyConfiguration(value);if(migrated){await store.idle();message(`Retired frames replaced with ${replacement}. Other choices are preserved; your imported file is unchanged.`);}}}catch(error){message(error.message,true);}finally{e.target.value='';}};
 $('default-config').onclick=()=>applyConfiguration(catalog.default_configuration);
 $('load-saved').onclick=async()=>{try{keycapColors?.cancelPending();applyConfiguration(await store.load(),{persist:false});message('Loaded the saved version. Undo keeps your previous design available.');}catch(e){message(e.message,true);}};
 $('replace-saved').onclick=async()=>{try{await store.replace(configuration);refreshRecovery();}catch(e){message(e.message,true);}};

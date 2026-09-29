@@ -1,0 +1,174 @@
+{
+  "request_ref": "user:20260929:remove-unapproved-viewer-frames-including-orbit-tape",
+  "baseline_commit": "3e2554982e4dbd80dbc93d65aa09b246d43943b0",
+  "required_outcomes": [
+    "Main online and offline viewers exclude rejected Flan, Tape, Orbit, Manga, NES and Walkman.",
+    "Only approved installed designs are selectable; selected Hanafuda status remains honest.",
+    "Defaults, saved and imported configs, presets and themes cannot restore retired frames.",
+    "Keep colors, keycaps, batteries, visibility and camera where applicable; retain recoverable original config.",
+    "Public browser acceptance and native print-export hashes verify the actual affected viewer."
+  ],
+  "scope": "Approved active viewer catalog; unchanged native geometry archive",
+  "local_status": "passed",
+  "public_status": "pending",
+  "installed_styles": [
+    "talavera",
+    "gameboy",
+    "snes",
+    "phone",
+    "ipod"
+  ],
+  "pending_integration": [
+    "hanafuda"
+  ],
+  "default_style": "talavera",
+  "retired_shapes": {
+    "arcade": "talavera",
+    "bevel": "talavera",
+    "cartridge": "talavera",
+    "cyberpunk": "talavera",
+    "facet": "talavera",
+    "flan": "talavera",
+    "handheld": "talavera",
+    "kintsugi": "talavera",
+    "manga": "talavera",
+    "mecha": "talavera",
+    "nes": "talavera",
+    "orbit": "talavera",
+    "smooth": "talavera",
+    "tape": "talavera",
+    "tv": "talavera",
+    "walkman": "talavera"
+  },
+  "review": {
+    "domain": "Derive active catalog, preserve custom and implicit colors, keep native provenance.",
+    "reliability": "Retire every load/default/print path, retain original raw JSON, verify delivered browser.",
+    "agreement": true,
+    "post_review_baseline_hashes_unchanged": true,
+    "unresolved_material_objections": []
+  },
+  "protected_sha256": {
+    "mechanical/revI/Flan36.FCStd": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
+    "keycaps/catalog.json": "d0722cadd295514f48de8c944435178410bc3e42035b45e9a591d8f87c31df57",
+    "design/frame-finishes.json": "c8cc7621908f3c768a8d7b90d2a59f6df482bb26e97cb439e895f8366ff96c08",
+    "design/themes.json": "abfbfb3132bbf3f4d2b4ae3833b4905e67f3a6c7a1f617a63b55b425a793f805"
+  },
+  "viewer_sha256": {
+    "docs/index.html": "27e0259a48ad760b38eef981ab1ce38e93a146d42286b29a73ff99e043961a9c",
+    "docs/offline.html": "c9a60724efa2d2c71ed4cfa8aa4b1a6424834dea87e8c95f078f4daebba31353"
+  },
+  "frame_acceptance": {
+    "styles": [
+      "talavera",
+      "gameboy",
+      "snes",
+      "phone",
+      "ipod"
+    ],
+    "viewer_sha256": "c9a60724efa2d2c71ed4cfa8aa4b1a6424834dea87e8c95f078f4daebba31353",
+    "native_3mf": [
+      {
+        "id": "left-frame-talavera",
+        "material_parts": 4,
+        "sha256": "e720bc69ea8c735a184aea9e3042982989d6dcd7d699869dca423c58784e53fb"
+      },
+      {
+        "id": "left-frame-gameboy",
+        "material_parts": 4,
+        "sha256": "b0d11079ca2265b1fdbe0f473e775381738b354cd21445714f9537df9f313380"
+      },
+      {
+        "id": "left-frame-snes",
+        "material_parts": 4,
+        "sha256": "d3c885b3feb2dabc846044282ccaf6a6236b07fd0ad7e1c9e09542207d6e4d29"
+      },
+      {
+        "id": "left-frame-phone",
+        "material_parts": 4,
+        "sha256": "50e38fa937facdc6d2371708005621575b877b6cd5ca4de83e413763e0bcbe5e"
+      },
+      {
+        "id": "left-frame-ipod",
+        "material_parts": 4,
+        "sha256": "6645fa09883fd37d9378c8123316eaf360145f1b5c54b71f59802aff6489ce60"
+      },
+      {
+        "id": "right-frame-talavera",
+        "material_parts": 4,
+        "sha256": "31854924973e4150c06544f822cd6961ae4fe7ad915857362e1b1fe0ddddea87"
+      },
+      {
+        "id": "right-frame-gameboy",
+        "material_parts": 4,
+        "sha256": "239ee790928160f2f414ee67c55c6f7419aa5e6ef8046c21d5827e1ce8eeb36e"
+      },
+      {
+        "id": "right-frame-snes",
+        "material_parts": 4,
+        "sha256": "25e9e45be52c675ea8a99d1c79616dc0979e05acc1a4af0bb0ca1af673495044"
+      },
+      {
+        "id": "right-frame-phone",
+        "material_parts": 4,
+        "sha256": "e7d35d34c17583236cfb230ff172e00a406778ea0818d37c7a660cef36d2ff78"
+      },
+      {
+        "id": "right-frame-ipod",
+        "material_parts": 4,
+        "sha256": "b02519eb8af9568060541f9807fad4108b40075f77f956e114e575ad4395b534"
+      }
+    ],
+    "checks": {
+      "distinct_actual_previews": 5,
+      "frame_changes_preserve_inspection": 5,
+      "themes_without_pinky_accents": 27,
+      "approved_reset_default": true,
+      "all_retired_imports_preserve_view_and_implicit_colors": 16,
+      "storage_keys_and_color_fixtures": 96,
+      "native_reader_export_parity": 48,
+      "presets_cannot_restore_retired_frames": true,
+      "exact_old_configuration_preserved_on_migration": true,
+      "current_custom_configuration_preserved": true,
+      "mobile_gallery": true
+    },
+    "runtime_errors": [],
+    "passed": true
+  },
+  "reliability": {
+    "source_snapshot": "3e2554982e4dbd80dbc93d65aa09b246d43943b0",
+    "online_sha256": "27e0259a48ad760b38eef981ab1ce38e93a146d42286b29a73ff99e043961a9c",
+    "offline_sha256": "c9a60724efa2d2c71ed4cfa8aa4b1a6424834dea87e8c95f078f4daebba31353",
+    "checks": {
+      "camera_transitions": 17,
+      "rejected_import_atomic_glb": true,
+      "legacy_solid_kit": true,
+      "battery_targets": true,
+      "undo_redo_and_pending_paint": true,
+      "named_json_export": true,
+      "lazy_print_retry_and_hash": true,
+      "exact_native_stl_hashes": true,
+      "missing_resource_atomic_glb": true,
+      "simultaneous_tabs_preserve_both": true,
+      "close_while_save_queued": true,
+      "palette_tab_conflicts": true,
+      "rejected_storage_preserved_and_downloadable": true,
+      "offline_exact_kit_and_glb": true,
+      "mobile_controls": true,
+      "no_locks_or_random_uuid": true,
+      "denied_storage_export": true
+    },
+    "errors": [],
+    "passed": true
+  },
+  "configuration_contract": {
+    "fixture_count": 122,
+    "js_python_exact_parity": true,
+    "fixed_legacy_solid": true,
+    "rejected_raw_preserved": true,
+    "serialized_concurrent_saves": true,
+    "recovery_before_replace": true,
+    "lock_and_quota_fallback": true,
+    "history_coalescing": true
+  },
+  "physical_acceptance": false
+}

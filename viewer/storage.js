@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-import {check,normalize,retiredFrames} from './config.js';
+import {check,normalize,retiredFrames,retiredReplacementNames} from './config.js';
 export const savedKey='flan36.configuration.v1';
 const legacyKey='filo36.configuration.v1';
 export const recoveryPrefix='flan36.recovery.';
@@ -10,7 +10,7 @@ export function restoreConfiguration(storage,catalog){
   const raw=storage.getItem(key);if(raw===null)continue;
   if(raw.length>100000)throw Error('Oversized configuration');
   const parsed=JSON.parse(raw);if(check(parsed,catalog).errors.length)throw Error('Invalid configuration');
-  return {configuration:normalize(parsed,catalog),message:retiredFrames(parsed,catalog).length?'Retired frames were replaced with Flan. Your colors and other choices are unchanged; the original is preserved in Files → Recover saved data.':''};
+  return {configuration:normalize(parsed,catalog),message:retiredFrames(parsed,catalog).length?`Retired frames were replaced with ${retiredReplacementNames(parsed,catalog)}. Your colors and other choices are unchanged; the original is preserved in Files → Recover saved data.`:''};
  }catch{return {configuration:null,message:'Saved settings could not be loaded. The original is preserved in Files → Recover saved data.'};}
  return {configuration:null,message:''};
 }

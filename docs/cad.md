@@ -67,11 +67,9 @@ node viewer/finishes-check.cjs
 node viewer/flush-print-check.cjs
 node viewer/frame-collection-check.cjs
 node viewer/reliability-check.cjs
-python3 tools/check_approved_3mf.py
-python3 tools/check_approved_frames.py
 ```
 
-Browser checks need Playwright and its Chromium runtime; set `FLAN36_PLAYWRIGHT_MODULE` and `FLAN36_BROWSER` when using an existing installation. The resulting ignored `build/frame-collection/` files are reproducible with the commands above. Checks must pass and their recorded source hashes must match the generated artifacts. Historical delivery scripts and receipts describe their pinned snapshots, not the current collection.
+Browser checks need Playwright and its Chromium runtime; set `FLAN36_PLAYWRIGHT_MODULE` and `FLAN36_BROWSER` when using an existing installation. The resulting ignored `build/frame-collection/` files are reproducible with the commands above. Checks must pass and their recorded source hashes must match the generated artifacts. The active viewer is filtered by `design/frame-selection.json`; its frame check verifies five designs and ten multipart assemblies. `tools/check_approved_3mf.py` and `tools/check_approved_frames.py` bind the earlier eleven-design delivery. Historical delivery scripts and receipts describe their pinned snapshots, not the current collection.
 
 To reconstruct the pre-R4 PCB without replacing existing work, use `python3 tools/build_revI_pcb.py --output build/lcd-curve/hardware` with a new empty destination and compare its two PCB files. The source remains the immutable revH placement. The approved R4 J2 translation is a separate guarded migration in `tools/update_approved_display_pcb.py`; its receipt records the final coordinates.
 

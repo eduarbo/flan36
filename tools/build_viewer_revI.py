@@ -9,17 +9,21 @@ from pathlib import Path
 import numpy as np
 import vtk
 from vtk.util.numpy_support import vtk_to_numpy
+from viewer_frame_selection import selected_catalog, selected_preset
 
 ROOT = Path(__file__).resolve().parents[1]
 model = json.loads((ROOT/'design/revI.json').read_text())
 layout = json.loads((ROOT/'design/layout.json').read_text())
 scene = {'revision':'I', 'units':'mm', 'geometries':{}, 'parts':[], 'sources':[], 'batteryLeadProfiles':{}}
-catalog=json.loads((ROOT/'keycaps/catalog.json').read_text());cfg=catalog['default_configuration'];variants={v['id']:v for v in catalog['variants']}
+catalog=json.loads((ROOT/'keycaps/catalog.json').read_text())
 frame_finishes=json.loads((ROOT/'design/frame-finishes.json').read_text())
+selection=json.loads((ROOT/'design/frame-selection.json').read_text())
+catalog=selected_catalog(catalog,frame_finishes,selection)
+cfg=catalog['default_configuration'];variants={v['id']:v for v in catalog['variants']}
 decorated_styles=set(frame_finishes['styles'])
 frame_variants=model.get('frameVariants',{})
 scene['catalog']=catalog
-scene['presets']={p.stem:json.loads(p.read_text()) for p in (ROOT/'design/configurations').glob('*.json')}
+scene['presets']={p.stem:selected_preset(json.loads(p.read_text()),catalog,frame_finishes) for p in (ROOT/'design/configurations').glob('*.json')}
 for p in sorted((ROOT/'design/configurations').glob('*.json')):
     scene['sources'].append({'path':p.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
 groups = {
@@ -129,6 +133,8 @@ for side,keys in layout['halves'].items():
     offset=0 if side=='left' else 161
     for name,(label,group,color,explode) in groups.items():
         path=f'mechanical/revI/{side}-{name}.stl';visuals=model['parts'][side+'-'+name].get('visuals',[])
+        if name=='electronics-lid':
+            path=f'mechanical/revI/{side}-frame-{cfg["frames"][side]["style"]}.stl';visuals=[]
         geometry,colors=colored_mesh(path,visuals) if visuals else (mesh(path),None)
         add(label,side,group,color,[offset,0,0],explode,geometry)
         if colors:scene['parts'][-1]['materials']=colors
@@ -210,7 +216,7 @@ scene['measurements']={'bay_width_mm':24,'plate_top_mm':7.6,'cover_top_mm':frame
                        'decoration_relief_mm':0,'frame_materials':'Native recessed co-print volumes; flush top',
                        'cover_ahead_of_top_cap_mm':round(max(0,top_key-hood_min),3),
                        'cover_ahead_of_adjacent_cap_mm':round(max(0,adjacent-hood_min),3)}
-for path in ['design/revI.json','design/layout.json','tools/build_viewer_revI.py','components/switches.json','components/sources.json','keycaps/catalog.json']:
+for path in ['design/revI.json','design/layout.json','tools/build_viewer_revI.py','tools/viewer_frame_selection.py','design/frame-selection.json','design/frame-finishes.json','components/switches.json','components/sources.json','keycaps/catalog.json']:
     scene['sources'].append({'path':path,'sha256':digest(path)})
 scene['limits']=['Commercial representations combine documented nominal dimensions, licensed community CAD and inferred package detail; see components/README.md', 'Unrouted PCB',
                  'Nominal lead-storage paths; actual terminations, insulation and finished-pack tolerances unverified', 'PCB aperture 12.5 mm; both nominal cells fit. Magnetic force, print-in capture/temperature and physical fit need coupons',
