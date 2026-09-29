@@ -3,7 +3,73 @@
   "baseline": "4b59c1d8cfae7248a2109666ec81350c4c3b0f0c",
   "native_sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564",
   "local_acceptance": true,
-  "public_acceptance": "pending readback after synchronization",
+  "public_acceptance": {
+    "passed": true,
+    "implementation_commit": "6e446ec52d97a38f0f185294785d7fe2321c4f98",
+    "viewer": {
+      "commit": "6e446ec52d97a38f0f185294785d7fe2321c4f98",
+      "public_scene_matches_local": true,
+      "online_and_offline_byte_exact": true,
+      "only_five_approved_frame_cards": true,
+      "talavera_default": true,
+      "design_changes_keep_camera": true,
+      "json_matches_selection": true,
+      "lazy_public_print_assets_verified": true,
+      "exact_stl_hashes": true,
+      "errors": []
+    },
+    "orientation_and_downloads": {
+      "url": "https://eduarbo.github.io/flan36/?rev=6e446ec52d97a38f0f185294785d7fe2321c4f98",
+      "passed": true,
+      "exported_glb_roles": [
+        {
+          "role": 1,
+          "left": {
+            "area": 260.0064203776492,
+            "x": 122.37971591178616,
+            "z": 36.4196300670311
+          },
+          "right": {
+            "area": 260.0059997295539,
+            "x": 36.37970448097099,
+            "z": 36.41963347241582
+          }
+        },
+        {
+          "role": 2,
+          "left": {
+            "area": 22.669026749106706,
+            "x": 128.35000020406545,
+            "z": 57.29999997807683
+          },
+          "right": {
+            "area": 22.66901830574352,
+            "x": 42.34999993069983,
+            "z": 57.300000260179054
+          }
+        },
+        {
+          "role": 3,
+          "left": {
+            "area": 15.230360029643634,
+            "x": 124.06521309963091,
+            "z": 64.01749974634203
+          },
+          "right": {
+            "area": 15.230337104549108,
+            "x": 38.065201943264285,
+            "z": 64.0174990211619
+          }
+        }
+      ],
+      "registered_frame_materials": 8,
+      "camera_preserved": true,
+      "errors": [],
+      "viewer_sha256": "1022cae499487b4e0b04c43eea163a203bed6b82699cb1390e59db325cda9e04"
+    },
+    "screenshot_sha256": "88c7d487ccd0cf50454f25bad3e1ab134003207504d0aac66b8e56791f58761f",
+    "screenshot_visually_checked": true
+  },
   "native_receipt": "validation/revI-frame-orientation-native.json",
   "adoption_receipt": "validation/revI-frame-orientation-adoption.json",
   "review_receipt": "validation/revI-frame-orientation-review.json",
