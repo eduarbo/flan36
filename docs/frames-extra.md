@@ -12,7 +12,7 @@ Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and cli
 | **2000s Phone** | Navy faceplate, silver keypad and call key. |
 | **iPod** | White face, silver click wheel and continuous screen border. |
 
-**Caramelo, Lucha, Hanafuda, Mecha, Cartucho 8 and Terminal are the [new R6 proposals](frame-proposals.md)** for the six deferred artwork slots. R5 was rejected. The existing artwork remains selectable until new designs are approved.
+**Hanafuda was selected unchanged. [R7 presents three Mecha and three Kumiko alternatives](frame-proposals.md)** for the next choice. Caramelo, Lucha, Cartucho 8 and Terminal were rejected and will not be added. The prior Mecha also requires replacement. These decisions concern the proposal collection; integration follows the chosen artwork.
 
 All designs use solid colors, without gradients or raised details. **Restore design colors** applies the exact palette. HEX editing and coordinated case/key themes remain available.
 

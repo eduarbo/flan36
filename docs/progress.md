@@ -12,9 +12,13 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
-## Revision I — six new artwork directions, awaiting approval
+## Revision I — Hanafuda retained; Mecha and Kumiko choices
 
-R5 was rejected. [R6](frame-proposals.md) proposes Caramelo, Lucha, Hanafuda, Mecha, Cartucho 8 and Terminal in its place, with exact paths, solid HEX colors, dimensioned sheets and matching editable FreeCAD review solids. The current mechanical blank, keyboard assembly, themes and explorer are unchanged. Artwork integration remains pending approval.
+The user selected Hanafuda with its R6 shapes and palette unchanged. Caramelo, Lucha, Cartucho 8 and Terminal were rejected; the previous Mecha was rejected for redesign. [R7](frame-proposals.md) offers three Mecha and three Kumiko alternatives with exact dimensions, colors and matching review solids. Selection precedes artwork integration; the production assembly and main viewer are unchanged.
+
+## Revision I — six new artwork directions, historical R6
+
+R5 was rejected. [R6](../design/proposals/frame-redesign-r6/) proposed Caramelo, Lucha, Hanafuda, Mecha, Cartucho 8 and Terminal with exact paths, solid HEX colors, dimensioned sheets and matching editable FreeCAD review solids. Subsequent selection is recorded above; the frozen proposal files remain available.
 
 ## Revision I — corrected display seam and six exact proposals
 

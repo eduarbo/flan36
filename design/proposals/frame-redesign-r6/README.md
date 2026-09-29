@@ -1,6 +1,6 @@
 # R6 — six new directions
 
-**Proposed, not approved.** This revision responds to the rejection of R5 and the request to reinvent its six designs. It replaces the proposed art direction, not the installed frame artwork.
+**Historical proposal.** The user selected Hanafuda unchanged, rejected Caramelo, Lucha, Cartucho 8 and Terminal, and requested another Mecha redesign. [R7](../frame-redesign-r7/) retains Hanafuda and presents the new Mecha and Kumiko choices. The original R6 artwork and geometry remain frozen here.
 
 | Proposed design | Deferred slot | Reference |
 | --- | --- | --- |
@@ -17,9 +17,9 @@ The 24 × 56 mm blank, 13.90 × 30.50 mm display opening, 0.10 mm nominal glass 
 
 Approval fixes these shapes and palettes. These files are not a print release: 0.4 mm nozzle / 0.2 mm layers remain a target, with thin tips, bonding, toolpaths and physical fit unqualified.
 
-[Public readback](../../../validation/revI-frame-redesign-r6-public.json) verifies the gallery and native source against committed bytes. Repeat it after the Pages build finishes with `python3 tools/check_frame_review_public.py --commit <published-commit>`.
+[Historical public readback](../../../validation/revI-frame-redesign-r6-public.json) verified the then-current gallery and native source against committed bytes. The stable gallery now shows R7.
 
-Reproduce from the repository root:
+To reproduce the original R6 gallery, use repository commit `2d4b87a`. The current gallery builder targets R7. Historical commands from the repository root:
 
 ```sh
 python3 tools/prepare_frame_redesign_r6.py

@@ -1,13 +1,19 @@
-# Six new frame directions
+# Hanafuda, Mecha and Kumiko
 
-[Open the mobile gallery](https://eduarbo.github.io/flan36/frame-proposals/) to compare **Caramelo, Lucha, Hanafuda, Mecha, Cartucho 8 and Terminal**. Tap any frame for a larger image or its dimensions. R5 was rejected; these R6 proposals await approval before integration.
+[Open the mobile gallery](https://eduarbo.github.io/flan36/frame-proposals/). **Hanafuda is retained unchanged.** Choose one of three new Mecha directions and one of three Kumiko directions before artwork integration.
 
-![Caramelo and Lucha](frame-proposals/collection-a.png)
-![Hanafuda and Mecha](frame-proposals/collection-b.png)
-![Cartucho 8 and Terminal](frame-proposals/collection-c.png)
+![Three Mecha proposals](frame-proposals/r7/mecha.png)
+![Three Kumiko proposals](frame-proposals/r7/kumiko.png)
 
-All six use the existing **24 × 56 mm** mechanical blank. Their **solid HEX colors and flush shapes** come from one [millimetre master](../design/proposals/frame-redesign-r6/master.json), shared by the SVGs, dimensioned sheets and [editable FreeCAD review](../design/proposals/frame-redesign-r6/Artwork-R6.FCStd). Open the document's six labeled groups to inspect or hide candidates and their material solids.
+- **M1 / Recon:** purple scout armor and lime directional panels.
+- **M2 / Reactor:** pale armor, cyan reactor ring and amber core.
+- **M3 / Hangar:** sand-colored service armor and an offset access hatch.
+- **K1 / Asanoha:** warm wood tones and a sixfold leaf lattice.
+- **K2 / Kikko:** repeating walnut-colored hexagons on a pale base.
+- **K3 / Kasane:** an original indigo and wood-toned diagonal lattice.
 
-The [native render](frame-proposals/native-review.png) uses the actual review solids. The [geometry check](../design/proposals/frame-redesign-r6/geometry-check.json) verifies clipping, disjoint closed material volumes, exact top surfaces, save/reopen and clearance to the existing display. These are review artifacts; thin tips, color bonding, toolpath retention and printed fit still require a sliced sample with the **0.4 mm nozzle / 0.2 mm layer** target.
+All share the current **24 × 56 mm** blank, a **2.40 mm** screen bezel and flush details. Their [millimetre master](../design/proposals/frame-redesign-r7/master.json), 1:1 SVGs and [FreeCAD review](../design/proposals/frame-redesign-r7/Artwork-R7.FCStd) use identical paths and HEX colors. The [native render](frame-proposals/r7/native-review.png) comes from those review solids.
 
-The current assembly, corrected opening, stack height, themes and viewer remain unchanged. The [rejected R5 files](../design/proposals/frame-redesign-r5/) are preserved as history.
+Kumiko is represented by colored inlays, not open wood joinery. Nominal lattice strips are 0.80–0.85 mm wide; the 0.4 mm nozzle / 0.2 mm layer target, intersections and printed fit still need a sliced sample. Pattern vocabulary: [Tanihata](https://kumikowoodworking.com/products/category/auspicious-omens-motifs/), [Shion Kumiko](https://www.shion-kumiko.com/order-guide/kumiko-patterns/).
+
+Caramelo, Lucha, Cartucho 8 and Terminal are excluded from the active selection. Their [historical R6 files](../design/proposals/frame-redesign-r6/) remain available. The current assembly and main viewer have not been changed in this proposal round.

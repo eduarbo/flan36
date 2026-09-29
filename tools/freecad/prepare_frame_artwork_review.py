@@ -10,8 +10,10 @@ import FreeCADGui as G
 import Part,MeshPart
 from frame_review_geometry import face,regions
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'design/proposals/frame-redesign-r6'
-BUILD=ROOT/'build/frame-redesign-r6/geometry'
+FOLDER=os.environ.get('FLAN36_ARTWORK_REVIEW','frame-redesign-r6')
+assert FOLDER in ('frame-redesign-r6','frame-redesign-r7')
+OUT=ROOT/'design/proposals'/FOLDER
+BUILD=ROOT/'build'/FOLDER/'geometry'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def log(s):print(s,file=sys.__stdout__,flush=True)
 def prism(s,z0,z1):
@@ -33,7 +35,8 @@ def run():
         o=src.getObject('L_'+name)
         if o:
             s=o.Shape.copy();s.translate(A.Vector(-111,11,0));context.append((name,s));mesh(s,BUILD/(name+'.stl'))
-    doc=A.newDocument('Flan36_R6_Review');doc.Label='Flan36 R6 artwork · proposal, not for print'
+    revision=master['revision']
+    doc=A.newDocument('Flan36_'+revision+'_Review');doc.Label='Flan36 '+revision+' artwork · review, not for print'
     domain=face(master['outer_commands']).cut(face(master['aperture_commands']))
     xd=master['construction']['xy_domains'];relief=face(xd['relief_commands']);header=face(xd['header_commands'])
     zones={'ordinary':domain.cut(relief),'collar':relief.common(domain).cut(header),'cover':header.common(domain)}
@@ -47,8 +50,9 @@ def run():
     assert abs(report['glass_clearance_mm']-.1)<1e-6
     for name,s in context:assert blank.common(s).Volume<1e-6,(name,'candidate collision',blank.common(s).Volume)
     for key,style in master['styles'].items():
-        log('Checking R6/'+key);flat,features=regions(master,key)
-        group=doc.addObject('App::Part',key);group.Label=style['label']+' · proposal'
+        log('Checking '+revision+'/'+key);flat,features=regions(master,key)
+        selected=style.get('decision')=='SELECTED'
+        group=doc.addObject('App::Part',key.replace('-','_'));group.Label=style['label']+(' · selected artwork' if selected else ' · proposal')
         group.addProperty('App::PropertyString','MasterSHA256');group.MasterSHA256=digest
         group.addProperty('App::PropertyString','PaletteJSON');group.PaletteJSON=json.dumps(style['palette'])
         colored=[];parts={};record={'features':[],'roles':{}}
@@ -74,7 +78,7 @@ def run():
             for other,t in parts.items():
                 if role!=other:assert s.common(t).Volume<1e-6
             node=doc.addObject('PartDesign::Feature',key+'_'+role+'_ReviewSolid');node.Shape=s;group.addObject(node)
-            node.addProperty('App::PropertyString','Purpose');node.Purpose='Nominal review solid; not approved, sliced or physically qualified'
+            node.addProperty('App::PropertyString','Purpose');node.Purpose=('Selected artwork; ' if selected else 'Proposed artwork; ')+'nominal review solid, not sliced or physically qualified'
             node.ViewObject.ShapeColor=tuple(int(style['palette'][role][i:i+2],16)/255 for i in [1,3,5])
             mesh(s,BUILD/(key+'-'+role+'.stl'))
             record['roles'][role]={'volume_mm3':s.Volume,'solids':len(s.Solids),'closed':True,'color':style['palette'][role]}
@@ -87,16 +91,18 @@ def run():
             assert error<.002,(key,role,error)
             record['roles'][role]['top_difference_mm2']=error
         # Arrange six independently selectable candidates rather than overlapping them.
-        index=list(master['styles']).index(key)
+        ordered=[k for k,s in master['styles'].items() if s.get('decision')!='SELECTED']+[k for k,s in master['styles'].items() if s.get('decision')=='SELECTED']
+        index=ordered.index(key)
         group.Placement.Base=A.Vector((index%3)*34,-(index//3)*66,0)
         report['styles'][key]=record
     doc.recompute();G.activeDocument().activeView().viewAxonometric();G.activeDocument().activeView().fitAll()
-    doc.saveAs(str(OUT/'Artwork-R6.FCStd'));A.closeDocument(doc.Name)
-    reopened=A.openDocument(str(OUT/'Artwork-R6.FCStd'))
+    native=OUT/('Artwork-'+revision+'.FCStd')
+    doc.saveAs(str(native));A.closeDocument(doc.Name)
+    reopened=A.openDocument(str(native))
     assert all(o.Shape.isValid() for o in reopened.Objects if hasattr(o,'Shape') and not o.Shape.isNull())
-    A.closeDocument(reopened.Name);report['native_sha256']=sha(OUT/'Artwork-R6.FCStd');report['saved_reopened']=True
+    A.closeDocument(reopened.Name);report['native_sha256']=sha(native);report['saved_reopened']=True
     (OUT/'geometry-check.json').write_text(json.dumps(report,indent=2)+'\n')
-    A.closeDocument(src.Name);assert sha(source)==sourcehash;log('PASS: six exact review solids; current mechanical assembly unchanged')
+    A.closeDocument(src.Name);assert sha(source)==sourcehash;log('PASS: '+str(len(master['styles']))+' exact review designs; current mechanical assembly unchanged')
 if __name__=='__main__':
     try:run()
     except Exception:traceback.print_exc(file=sys.__stderr__);sys.__stderr__.flush();os._exit(1)
