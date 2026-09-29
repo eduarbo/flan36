@@ -7,10 +7,13 @@ import html
 import json
 import math
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'design/proposals/frame-master-r3'
+revision=sys.argv[sys.argv.index('--revision')+1] if '--revision' in sys.argv else 'R3'
+assert revision in ['R3','R4']
+OUT=ROOT/('design/proposals/frame-master-'+revision.lower())
 master=json.loads((OUT/'master.json').read_text())
 report=json.loads((OUT/'geometry-check.json').read_text())
 digest=hashlib.sha256((OUT/'master.json').read_bytes()).hexdigest()
@@ -75,12 +78,12 @@ for key,s in master['styles'].items():
         yy=230+i*29;x1,y1,x2,y2=bounds
         b+=text(380,yy,f'{i+1:02}  '+f['id'],15)
         for x,v in [(715,x1),(835,y1),(955,x2-x1),(1080,y2-y1)]:b+=text(x,yy,f'{v:.2f}',15)
-    b+=text(380,780,'OUTER RADII: TL / BL / BR R1.20; TR R2.40. Aperture: X4.55 / Y7.35.',15)
+    b+=text(380,780,f'OUTER RADII: TL / BL / BR R1.20; TR R2.40. Aperture: X{master["aperture_bounds_mm"][0]:.2f} / Y7.35.',15)
     for i,(role,col) in enumerate(s['palette'].items()):
         xx=40+i*306;b+=f'<rect x="{xx}" y="838" width="24" height="24" rx="3" fill="{col}" stroke="#BAC2B8"/>'
         b+=text(xx+32,856,role+' '+col,16)
-    b+=text(40,901,'Unapproved 2D artwork. A: face Z13.39 / 0.20 mm cover. B: face Z13.59 / 0.40 mm cover.',17)
-    b+=text(40,935,'Color regions remain flush. Pin-cover selection and physical print/fit qualification are pending.',17)
+    b+=text(40,901,('Unapproved artwork. Selected B: face Z13.59 / 0.40 mm cover. Uniform bezel: 2.40 mm.' if revision=='R4' else 'Unapproved 2D artwork. A: face Z13.39 / 0.20 mm cover. B: face Z13.59 / 0.40 mm cover.'),17)
+    b+=text(40,935,('Display chain proposed +0.20 mm X (mirrored on right). Full CAD, PCB and slicing remain pending.' if revision=='R4' else 'Color regions remain flush. Pin-cover selection and physical print/fit qualification are pending.'),17)
     b+=text(40,976,'MASTER '+digest,12)
     (OUT/(key+'-dimensioned.svg')).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1000" viewBox="0 0 1280 1000">{b}</svg>\n')
 

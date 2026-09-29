@@ -1,0 +1,111 @@
+{
+  "status": "ARTWORK_AND_DISPLAY_CENTERING_AWAIT_APPROVAL; HEIGHT_B_SELECTED",
+  "original_request": "Raise the matching case and frame 0.20 mm for a 0.40 mm nozzle target; correct unequal Talavera bezel widths and visual inconsistencies across all eleven designs. Prior instruction requires exact proposals before production adoption.",
+  "scope": "Dimensioned proposals and editable planar geometry only. No production CAD, PCB, viewer or print release.",
+  "master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+  "geometry_check_sha256": "21783053936af19a229017cfbc9275689974fa518c40c2e138ac6e4cf08158f0",
+  "native_plan_sha256": "b6c028bf200f881b46dd770cba7e5fbdbc179245a1e84de3e7eb0bcf1a2df597",
+  "production_before_after_sha256": {
+    "design/revI.json": "85b90673e6d716d58ccc6826a15f833d771a357b1ed7d2253515abf7e340993f",
+    "design/revI-frame-profiles.json": "9f75760ab53bfb554123ddc5223816a5177c9c7478eabad4337b841df38d874c",
+    "design/frame-finishes.json": "efceacdb7957774ec3a84d267cf84bd49859ea5187ac3608424f76cca4f27af4",
+    "tools/freecad/level_stack.py": "a4c330c8a0acd789ad51e6a9a58023b3fd6d937cf14e35acbe880f069c4399cc",
+    "tools/freecad/flush_frames.py": "fe8b09bea894e15210bca75f1734fc014457e08258701464aff40aa8bc10d711",
+    "mechanical/revI/Flan36.FCStd": "6276f5d20daf37cf5da4569c7ced0c7fa912095b8135c3e98d4bc6d57bc33e0e",
+    "docs/index.html": "9119cfee93c7cb7668f2db9878ca48a18d6cd04e1418660237626b5dffcd4c65"
+  },
+  "independent_review": {
+    "lenses": [
+      "domain_constructive",
+      "adversarial_risk"
+    ],
+    "rounds": 2,
+    "first_snapshot_master_sha256": "843510a0a56d0f1e89189de85bb1bb37c8ddefcda023e130fb2526fe8069a875",
+    "first_round_findings": {
+      "domain": "MEDIUM MIRROR_COVERAGE_OVERCLAIM",
+      "risk": "MEDIUM MIRROR_EVIDENCE_OVERCLAIM"
+    },
+    "finding": "The previous mirror test fused all material roles, discarding internal boundaries, so its claimed coverage was excessive.",
+    "disposition": "Resolved: independently reflect every M/L/C control and arc endpoint/sweep, reconstruct right-side color partitions and compare every native-transformed role. All 43 symmetric differences are 0.0 mm2.",
+    "final_recommendations": "Both recommend presentation and normal sync of proposals only; no unresolved material objection within that scope.",
+    "physical_acceptance": "Not performed. No claim of collision-free assembly, manufacturability or physical fit."
+  },
+  "controller_validation": {
+    "all_eleven_dimensioned_sheets_visually_inspected": true,
+    "collection_and_corrected_section_inspected": true,
+    "four_equal_bezel_widths_mm": [
+      2.4,
+      2.4,
+      2.4,
+      2.4
+    ],
+    "no_decorative_bezel_overlap": true,
+    "exact_svg_paths_and_colors": true,
+    "reopened_planar_regions": 43,
+    "maximum_reflected_role_difference_mm2": 0.0,
+    "reviewed_artifact_hashes_unchanged_after_each_round": true,
+    "only_controller_changed_files": true,
+    "production_unchanged": true
+  },
+  "bounded_retrospective": {
+    "trigger": "User identified visibly unequal border widths despite exact coordinates.",
+    "cause": "Bezel outer bounds were chosen independently of the aperture; exactness alone did not enforce visual consistency.",
+    "correction": "Use one exact 2.40 mm offset bezel for every style and keep decorative features outside it. Separate nominal PCB bottom from its schematic depiction.",
+    "prevention": "Check equal side widths, rounded-offset area, no motif overlap and every reflected color partition. R3 README records the historical mirror-test limitation without rewriting its original receipt."
+  },
+  "remaining": {
+    "owner": "Eduardo",
+    "decision": "Approve or revise the R4 artwork and proposed complete display-chain centering. Height B is already selected.",
+    "implementation_owner": "Codex",
+    "after_approval": "Adopt exact paths and HEX values; raise whole case/frame face to Z13.59; translate the complete connector/display chain and PCB footprint; validate assembly intersections, PCB routes/DRC, exported colors, viewer, 0.40 mm-nozzle slicing and a physical fit coupon."
+  },
+  "artifacts_sha256": {
+    "Artwork-R4.FCStd": "b6c028bf200f881b46dd770cba7e5fbdbc179245a1e84de3e7eb0bcf1a2df597",
+    "README.md": "abd1ea9eb1c288f18cf7ceba9be3128b6e1be52adda41405003c989c6512c8dc",
+    "collection.png": "bc98bb2bd49139189f100a56cbb93b260590c1420bd9f51964f72789bc1c5f6a",
+    "collection.svg": "fe5c1a7f591dc7a394b15aa659f1b93424698dba9289ec6440e2bdb631c2970f",
+    "flan-dimensioned.png": "2b514a8b52f364a1163a9c608027eee84414b226ad600391010c556c34dc441a",
+    "flan-dimensioned.svg": "3fd522f5a091682dd2e20e389fc4cb758798f12eb42f02e68b94a09b66e94e71",
+    "flan.svg": "ddc90ae16276ed231cd191b1f7148a583927e968542c06c3f39996eb2c965264",
+    "gameboy-dimensioned.png": "f5f6fcd11cdd3bbcda1287d4cf35ca90fa3d4224cba4e85bf09e7d4f9ac2f54b",
+    "gameboy-dimensioned.svg": "6a58a8b863d453e625c3c094b37817ab8f0666b3f2276610d94e388a257d3034",
+    "gameboy.svg": "b6994ae23f78f87cfb07b8d61700a4fc516c63a8ffc086b8830f8b84cf820198",
+    "geometry-check.json": "21783053936af19a229017cfbc9275689974fa518c40c2e138ac6e4cf08158f0",
+    "ipod-dimensioned.png": "7358383744821467266ee620f7c40e7f39f7bf2013c3f62fe7448afde21b6e25",
+    "ipod-dimensioned.svg": "1f9382179e82d875c6a7b100d927a20b70681e9eab5f2b51fae59e318af9d0a1",
+    "ipod.svg": "e98724495dd9df9e9512775d58cac8eaa861e6d8d4964b90262fb70f6259b100",
+    "manga-dimensioned.png": "e65ef2f256beb1f8d16a963069747ddedb2016263f12103cfab8207037c856d2",
+    "manga-dimensioned.svg": "9daefaf96aa4024a66677866bda934d931346ceeb3d43730da8d6724cae79f19",
+    "manga.svg": "47ff2b7ee0701c92c13c4f67e58f07af44e47a2313ed513d8c845817ecb14663",
+    "master.json": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+    "nes-dimensioned.png": "834b9484c89a3694ce4426f996b2fcbc008a17dc94b1b8f46ad523600430cc57",
+    "nes-dimensioned.svg": "621d4bc3127cb8bb0de2fbf659aa259d51ae775b2b134a2a9b1c9dc2a1a41e92",
+    "nes.svg": "9c3b28f106edc22b88522298a9a9173be1dce13f562c9d25455d066f62c3dda6",
+    "orbit-dimensioned.png": "2a2cf5a8fad361018d28f8f3512f0fedfa1407bc5a1b565a0df893eb111d4a74",
+    "orbit-dimensioned.svg": "9bbaa02065b9b8dc914ed1fe26ee9d52753e86fee98273d8271fb14112f282b2",
+    "orbit.svg": "7669f86bd51e84674512585bae904f303d01a601a02bb81c84bc3af7bfc99411",
+    "phone-dimensioned.png": "f628bf710e2146fe8ab6e89990dbae320a7062d3d2eab315dda0818fbdfd9c4e",
+    "phone-dimensioned.svg": "0ae6b9aba72e9de702cea6ad5ad3d610f5c51402549c36bb04a2f6a1dbfc94f1",
+    "phone.svg": "691add732b9a95bfd80c97b09a3fbb9d67dc98e37c8a8754ea63e5c5cc37c3d4",
+    "section.png": "c82222be4433314f93d48d66d167954ee68fca4048c493a53e5306b9662f49b4",
+    "section.svg": "79eeea556ad51e6752ad0250098a2b99f142f6b038a83712a612f452da80ae01",
+    "selected.svg": "3d2712ae088f2f7c822b04728d9c8a3b426a4a6a9ffddbc3d78ddb6541fe30d0",
+    "snes-dimensioned.png": "a6d04851bb0863d82ccca87f59fafcb2842c4b229804b4f6910278e01768bf30",
+    "snes-dimensioned.svg": "11fd32c3f71745def911ce68a8d600419cc162b113254ad9fa90a662e55617d2",
+    "snes.svg": "3248b0804bcf9413ee76965523b273aa4665088bad6a4b7e87cfe8bf1800dc4b",
+    "talavera-dimensioned.png": "579e8d781b014151d8f189b1cc4d68fc3531608abbc0d7fa85ab4e10625a326a",
+    "talavera-dimensioned.svg": "b9eb290700062ccb55e3fbfc156fa3c88c2633d9dab2533c58185af52117b616",
+    "talavera.svg": "5786110ae10774c5b254a2041a81d3aa15e61f1260bb146f5fb838b628fe2d0c",
+    "tape-dimensioned.png": "63c456d7cdb1882c5b6763362ac80a40366dcdc557a8f227dfea524d82e6ae84",
+    "tape-dimensioned.svg": "43247cfc111b233452161a7a7c17ca7510034b3de3025f45b1d2c995cb1efbe5",
+    "tape.svg": "5ba42a174b0c783e3f2e2cfed6e4afdb2e76d091c7e1e22adb56fb2704ccb7e9",
+    "walkman-dimensioned.png": "0dbb2363537bc355292c9b8571d55efb57d9d9930e98423bb3c520f829269d88",
+    "walkman-dimensioned.svg": "9f159fb05608cca434fcda77faa11277db4ba7c6db739744d4e5f0611cfc85df",
+    "walkman.svg": "89a85047278fa0fee6155c0fce64d0e3864038a717cc7a83fe8b2add42ebdeed"
+  },
+  "generator_sha256": {
+    "tools/prepare_frame_master_r4.py": "2f116f4df0475754a94f8e608c2ba3e5c397767470315a6cd7efe00e52935da4",
+    "tools/freecad/prepare_frame_master.py": "e41849449ebdc59e28593f17456afd0f1044cf39f78731ada95acd1b23864bb8",
+    "tools/render_frame_master_dimensions.py": "b3a2f32d0e91039b77049fa155b2a5040bec0dcc24bdeaf7a820bf22ef03ce2b"
+  }
+}

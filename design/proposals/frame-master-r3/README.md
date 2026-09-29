@@ -1,5 +1,7 @@
 # Frame artwork R3 — approval proposal
 
+Superseded by [R4](../frame-master-r4/README.md). Historical correction: R3's mirror check covered the merged envelope and area, not individual decorative roles. R4 verifies each reflected color partition against independently transformed paths. The original R3 artifacts and receipt are retained below.
+
 These are dimensioned vector designs, not generated concept renders. **Proposed, not approved.** Production CAD, PCB, frame recipes and viewer remain unchanged.
 
 ![Eleven frame designs with exact palettes](collection.png)
