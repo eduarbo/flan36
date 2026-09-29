@@ -8250,7 +8250,7 @@
     },
     {
       "path": "tools/freecad/approved_frames.py",
-      "sha256": "8e77df4ac20f1dc1562f7a9e84fad0c85943cf44c4fb985fd18fc394d8e953f9"
+      "sha256": "1bfd538b251d00fcd617cb0ab5c3865e9bdcc7bcb067518402f34820873fe7d5"
     },
     {
       "path": "tools/freecad/install_approved_frames.py",
@@ -8390,7 +8390,7 @@
     },
     {
       "path": "tools/freecad/export_revI.py",
-      "sha256": "e992323442c464b4470e959432838a79e28c84224f17f69b37db784d65dfa493"
+      "sha256": "63546f14609983f914f4b1ee5575cfb75c7812b8b52d2491c4e74bd2c55508ea"
     },
     {
       "path": "design/proposals/display-seam-r1/master.json",
@@ -8407,9 +8407,13 @@
     {
       "path": "tools/freecad/install_display_seam.py",
       "sha256": "e020a04074455bef73b39f71c8e4ddf86d4f83ef9c55e893af883d6f7192336f"
+    },
+    {
+      "path": "tools/freecad/install_frame_orientation.py",
+      "sha256": "7f4e9f05998112c3b08bbc6ff1554616f315e58d9804b5f0b382535bc1e1dd0c"
     }
   ],
-  "fcstd_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
+  "fcstd_sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564",
   "identity_migration": {
     "baseline_commit": "819a01883b2faec3682ac457328bc361dc43e355",
     "method": "Only branding tokens in native Document.xml changed; shape and mesh members preserved byte for byte",
@@ -9086,26 +9090,26 @@
           "role": "body",
           "stl": "right-frame-talavera-body.stl",
           "step": "right-frame-talavera-body.step",
-          "stl_sha256": "8f23cede15e09d32932bf509464282d82dd90884f563b9693f1269d1745fa727",
-          "step_sha256": "7067cf14775020bbd67c0602be6f559c5765e07ecc70168a54c31958e57c39a4",
-          "volume_mm3": 1996.725770938551,
+          "stl_sha256": "662c58bdaed777e623c81a8136fad4bd9290b2f0d14dbb7382f940ce0d432659",
+          "step_sha256": "cc293a1087690650a60792356ebff00896e4882177981c732e55b0914eafd1b2",
+          "volume_mm3": 1996.7257709385526,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-talavera-detail.stl",
           "step": "right-frame-talavera-detail.step",
-          "stl_sha256": "e3354dbd22c8f246b074f42a69b35dec248c87ed9ee2d0a6a03bb060726bd9af",
-          "step_sha256": "dfd3308a66e45c1d20525a0d379bf112100da58f5ff530c5a1291691d49df42e",
-          "volume_mm3": 141.2365959576043,
+          "stl_sha256": "b91e5bdd01238a80b4d675bc36dd451e487f1c8cea1eed7e70ef9f7f0973d096",
+          "step_sha256": "7855adfd8cae210f3dafa28a641d6209a04aa46369b373f7dc6409214276b9f4",
+          "volume_mm3": 141.23659595760466,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "right-frame-talavera-accent.stl",
           "step": "right-frame-talavera-accent.step",
-          "stl_sha256": "f4e07ad1a88a7b4471e370051f1e5cc1441faa9a5ab5bd1053e93769e1e1676f",
-          "step_sha256": "50988f02e9c3b7f60f1c1cd0bad9d43b281418fcd97afda68c49823e3683bcf2",
+          "stl_sha256": "a7685c9b47113bbbcd672c56e095b5c10cbf9d79c76f8917578db8759570d80f",
+          "step_sha256": "d8b294ca31b013c0247ee794c155e1b1b3f81a90f76207e98bf502f1da04abec",
           "volume_mm3": 1.1359999999999997,
           "solids": 1
         },
@@ -9113,9 +9117,9 @@
           "role": "secondary",
           "stl": "right-frame-talavera-secondary.stl",
           "step": "right-frame-talavera-secondary.step",
-          "stl_sha256": "4181e7fe21bf6838a771cf20b4cf79db7c3c6cff0cb07bda709de8a2849811ae",
-          "step_sha256": "8060cdae289c5d0fe24b3a829c2acc591cfa0bddab687593eca1dce8768fa256",
-          "volume_mm3": 36.75300000000003,
+          "stl_sha256": "aaa97ab594cafe2d75f899ed97295c621f8dee5720e7b1f1e2295c067ea478f9",
+          "step_sha256": "c96063d3e4a362bc8ab38d2ce218c72363aea1eb1e5c021e6b0719241c53ea18",
+          "volume_mm3": 36.753000000000036,
           "solids": 4
         }
       ],
@@ -9130,36 +9134,36 @@
           "role": "body",
           "stl": "right-frame-gameboy-body.stl",
           "step": "right-frame-gameboy-body.step",
-          "stl_sha256": "57de0b6746de6f94a5def201fc5611d1a0bb8bec3bda8188db234561edb73140",
-          "step_sha256": "9b063c195e0287cd1a5fdadf68ff91ea44e6fe4f936bcd943ebe42c682024582",
-          "volume_mm3": 2007.9294617482328,
+          "stl_sha256": "7817ff1a22142fbcef620941b0b2af542d580ccd50543e3318b7628abebad94a",
+          "step_sha256": "a61816bbefcd0868018ee99a1ccff413d156420ad7d671d3a62e3c9d3388084d",
+          "volume_mm3": 2007.9294617482356,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-gameboy-detail.stl",
           "step": "right-frame-gameboy-detail.step",
-          "stl_sha256": "e6b27269068dc3dcbdc21edeb64f49cc893bc775088bd6e4c9cc499230590218",
-          "step_sha256": "45c02a91042f6097996aa1dde7a0dac412f886a37789f96c9c76ba438bb6dd95",
-          "volume_mm3": 152.75659595760436,
+          "stl_sha256": "fc3b666e08f40350c258369d3dc54d9619f1a41550db02f25be8d8e345dcd0d6",
+          "step_sha256": "9ecba25672248839055453a3bd3c966c53bf48fb98fb448efb72211c33108ff7",
+          "volume_mm3": 152.7565959576047,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "right-frame-gameboy-accent.stl",
           "step": "right-frame-gameboy-accent.step",
-          "stl_sha256": "03e206ecdd426739fee8f61a3d929b75ec7f8f85eb92cc90836be1447c883ac6",
-          "step_sha256": "7ca931ccc4230e814b4a9acf3d26f492677e16a2949128a006732d9f575b803e",
-          "volume_mm3": 9.072919933615225,
+          "stl_sha256": "88c2abca3e23b4576972ea67923b04ad70442c828110386eb7f3e13bf7c5ccd2",
+          "step_sha256": "0aec5fdd807cf61753208816f72f97d18f9d91b99e5e08a0d5628fafe0e1f682",
+          "volume_mm3": 9.072919933615223,
           "solids": 2
         },
         {
           "role": "secondary",
           "stl": "right-frame-gameboy-secondary.stl",
           "step": "right-frame-gameboy-secondary.step",
-          "stl_sha256": "b69a55ef57be083e6b52a6c264500078a0f00bce9ff693d3aa8baa7d583230d7",
-          "step_sha256": "1728621ec4a46c416f2bb017a5d17206c11707dbf50ffe9bc7af776d37fd1437",
-          "volume_mm3": 6.092389342116951,
+          "stl_sha256": "dd32c69dbf90e67a5d234bcef45036ad43c60da4e31129a296dce85d1180149f",
+          "step_sha256": "1b761c64b23655fe0338fedc98eea10128b141efe9ba15ff56354e784220d3c5",
+          "volume_mm3": 6.092389342116949,
           "solids": 4
         }
       ],
@@ -9218,36 +9222,36 @@
           "role": "body",
           "stl": "right-frame-snes-body.stl",
           "step": "right-frame-snes-body.step",
-          "stl_sha256": "650fe88b95a29dd2eb253e84f58bc4e4331f1970d8d97545f5e5ccfdfba88b21",
-          "step_sha256": "9f0d01216a6d9c69eb0103046035242bd249d34e9048a18632b5ce57f7cef23a",
-          "volume_mm3": 2000.6281526751316,
+          "stl_sha256": "d8f1a9c9aa1eed077e97b786544d9eae129b69f6fa9f53c0bd4ed875aee39693",
+          "step_sha256": "2255893ddecaaf60e611d998cd58ed5f41715b15b3dff489f91b9d58ee5b6c07",
+          "volume_mm3": 2000.628152675133,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-snes-detail.stl",
           "step": "right-frame-snes-detail.step",
-          "stl_sha256": "bc4cc451b0473920e9c8dab1be1dfeff74d5c0b96f86a7331775e6d8ed3ec9b0",
-          "step_sha256": "e4fb95aef0aaaf2bd7583476079646274e21e1b962d2cc01c68b0e8a5982a81e",
-          "volume_mm3": 150.91659595760436,
+          "stl_sha256": "6b9fff4634c9bd8f951d67e60a33f4d274955c3eba7ab5579585a2607b9b0e04",
+          "step_sha256": "dcfb3095ff36aa72666617c6cf216c8fba63c609dccb1d13548a366a572b1dee",
+          "volume_mm3": 150.91659595760464,
           "solids": 2
         },
         {
           "role": "accent",
           "stl": "right-frame-snes-accent.stl",
           "step": "right-frame-snes-accent.step",
-          "stl_sha256": "ff3f9fe4d179215c835de80904aa09962a37d5ffa7cef3daf5daf2a3ecaa15be",
-          "step_sha256": "21e66edcb710792c8d5c69c484e5a5548b21246f41d02cd51c6820382653df73",
-          "volume_mm3": 10.679114631544778,
+          "stl_sha256": "a38b2569d70e3eda5dcccbc340e7abec2aee775456c63e096fee6b30f230b279",
+          "step_sha256": "73782e3feae20ec812be0ecfeb8e389384b8a58157a031b8be0d45d795172dc4",
+          "volume_mm3": 10.67911463154478,
           "solids": 3
         },
         {
           "role": "secondary",
           "stl": "right-frame-snes-secondary.stl",
           "step": "right-frame-snes-secondary.step",
-          "stl_sha256": "014ad51b7e8dac1a6b73c05e2ac7dd94221acbd278e6d2756ce387fb7a2ffab8",
-          "step_sha256": "1ec9343eb266edbdbab8bbb7816d91f3435c4938972b1062d9d295cb695605aa",
-          "volume_mm3": 13.62750397366171,
+          "stl_sha256": "7f57d6aa83ad12703976a6913768fd4c00cab9b627bac30fb4e5e6963932a1c2",
+          "step_sha256": "0fa95965cb213b30578a4628152df9850545141d6018e6e0541d78c908b5779a",
+          "volume_mm3": 13.627503973661716,
           "solids": 4
         }
       ],
@@ -9262,35 +9266,35 @@
           "role": "body",
           "stl": "right-frame-phone-body.stl",
           "step": "right-frame-phone-body.step",
-          "stl_sha256": "6ff3706316cf9397ea72ce9b7e207bb8d29eae900032a83d06d12d2b10365f60",
-          "step_sha256": "9a816e567d27f02e44fc6bae6fcabb27f535c823d6b93d6e5e5a2311105ef8bb",
-          "volume_mm3": 1988.538559589548,
+          "stl_sha256": "aac63a7c8161bd17add154cbea0f5604bef5cf81a826270df4c222b13ad59048",
+          "step_sha256": "35f3fa8754ddce3f5dfff5bf5b877588daea50f68ec7a6e01a2714fb131847ac",
+          "volume_mm3": 1988.538559589547,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-phone-detail.stl",
           "step": "right-frame-phone-detail.step",
-          "stl_sha256": "868f79b67199881fe4ed254592bce126ab485296786ab7857e2a2658142ba62c",
-          "step_sha256": "36f5381670412e3eb73f2948da4d38403c9035395cf56d16554614bac49273d1",
-          "volume_mm3": 179.6957456179295,
+          "stl_sha256": "f60131f610caeee49ddc7d5b90d71207b0f736531a8c82dd70460427f655c71a",
+          "step_sha256": "2a9373e1a22010526ba2b07db572c004ef359a9af595729e3573ffffd64af89b",
+          "volume_mm3": 179.69574561792996,
           "solids": 12
         },
         {
           "role": "accent",
           "stl": "right-frame-phone-accent.stl",
           "step": "right-frame-phone-accent.step",
-          "stl_sha256": "1c0a12626a11ff58403426840b16d34a5ce97f8ffc35fb7a59ac9ddc166992a7",
-          "step_sha256": "171eaff95e73287a3e611f6ea3a183d55a39b4372a7220ea1742ea093b28de68",
-          "volume_mm3": 3.45653084433747,
+          "stl_sha256": "5b3a8d6668dec3456a76c43b1ee70db6c0b24f4e3fb7645b091969eeeb37a9d9",
+          "step_sha256": "8f3af33d101731df8be8a112142fff93f7bc519757b407b22898500fc16a582c",
+          "volume_mm3": 3.4565308443374714,
           "solids": 1
         },
         {
           "role": "secondary",
           "stl": "right-frame-phone-secondary.stl",
           "step": "right-frame-phone-secondary.step",
-          "stl_sha256": "0ec9cdc50e4b7067130bad86aedf413b6dd0d9f8871f58576283731b60a2b73a",
-          "step_sha256": "0f368d5497170aeeb92c678b2f5a1d162518cdbcf84ea38d67e90cdb96bf6c4f",
+          "stl_sha256": "9982bc2b41e42fe91317fcea9ebfe5c0ab893652bfbff81183613396c895a290",
+          "step_sha256": "94e3f1d68d119fad074c0007baf6006a063ff6e8534cdf8c2be1865acccc6845",
           "volume_mm3": 4.160530844337472,
           "solids": 1
         }
@@ -9350,26 +9354,26 @@
           "role": "body",
           "stl": "right-frame-ipod-body.stl",
           "step": "right-frame-ipod-body.step",
-          "stl_sha256": "98cecbcd66c2462a282ff3ab27fc9d52bf5560026a3937782b1f96e4ce98afee",
-          "step_sha256": "60f6b91d796d4c57ea542190ed95377869b828b3220ce946ebe4d0b48c0c1fd8",
-          "volume_mm3": 2006.4848260679742,
+          "stl_sha256": "59ef587ba7548c760355832ec8a30a0749868b1ddfab1e3ffe1eb7a9c16b010b",
+          "step_sha256": "5cae084ef6352d2419a7c5a4f444cb9dac8127eaccb4a325f51d39ad9a079fc4",
+          "volume_mm3": 2006.484826067975,
           "solids": 1
         },
         {
           "role": "detail",
           "stl": "right-frame-ipod-detail.stl",
           "step": "right-frame-ipod-detail.step",
-          "stl_sha256": "e3354dbd22c8f246b074f42a69b35dec248c87ed9ee2d0a6a03bb060726bd9af",
-          "step_sha256": "8f753ba5a05b975dae4f32be2fd51e877162b5b54b3ea04ab2a5cfe5224ed5ba",
-          "volume_mm3": 141.2365959576043,
+          "stl_sha256": "b91e5bdd01238a80b4d675bc36dd451e487f1c8cea1eed7e70ef9f7f0973d096",
+          "step_sha256": "0542ae051c0bdf084d28da92c075a67c7ade067f14040d49adeeff7141676267",
+          "volume_mm3": 141.23659595760466,
           "solids": 1
         },
         {
           "role": "accent",
           "stl": "right-frame-ipod-accent.stl",
           "step": "right-frame-ipod-accent.step",
-          "stl_sha256": "599d217d9b76c23ffc60a8ca75401c828b8894b3ad987e3f9370b3fa736a8eb7",
-          "step_sha256": "67cdbc13faf1ecf962910a4ff85896bfcf9894cf083a7be29640aa77e6f33ad1",
+          "stl_sha256": "d2056c52b32a11cbbc33efcfcd65ec217c52836d1508e2dc773bd881f5e50ef6",
+          "step_sha256": "5352335e04def604491b8949b94809a1390981f2df5a18e18f2ee59d3104a9fb",
           "volume_mm3": 19.86743194130186,
           "solids": 1
         },
@@ -9377,8 +9381,8 @@
           "role": "secondary",
           "stl": "right-frame-ipod-secondary.stl",
           "step": "right-frame-ipod-secondary.step",
-          "stl_sha256": "bb9268c46f2157fd1b75f7428e27f34a09b7d66c2a8553a704883735b510be79",
-          "step_sha256": "c8c11242c125c5c37041c42791158a36252d2ff2eeb3f709646d86bd5caf687e",
+          "stl_sha256": "c15c4e8ebdb3fd8b43eb7199a8d47b4e6afdd6b660d8daf6d7adbaf8309be07a",
+          "step_sha256": "292719e0b248d2445981b7980a3213484192c527dc532adf468c73b5ccc1158d",
           "volume_mm3": 8.262512929275143,
           "solids": 2
         }
@@ -9466,8 +9470,8 @@
     "document_label_preservation": "validation/revI-document-label.json"
   },
   "export_execution": {
-    "native_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
-    "exporter_sha256": "e992323442c464b4470e959432838a79e28c84224f17f69b37db784d65dfa493",
+    "native_sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564",
+    "exporter_sha256": "63546f14609983f914f4b1ee5575cfb75c7812b8b52d2491c4e74bd2c55508ea",
     "receipt": "validation/revI-mechanical.json"
   },
   "level_stack": {
@@ -9772,5 +9776,17 @@
       0
     ],
     "physical_acceptance": false
+  },
+  "frame_artwork": {
+    "mode": "same-reading-direction",
+    "styles": [
+      "talavera",
+      "gameboy",
+      "snes",
+      "phone",
+      "ipod"
+    ],
+    "right_x_from_left_mm": -86,
+    "structural_handedness_preserved": true
   }
 }

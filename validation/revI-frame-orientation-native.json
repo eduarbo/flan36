@@ -1,0 +1,272 @@
+{
+  "source_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
+  "orientation": "same-reading-direction",
+  "right_artwork_x_from_left_mm": -86,
+  "already_corrected": false,
+  "frames": {
+    "talavera": {
+      "style": "talavera",
+      "side": "right",
+      "artwork_orientation": "same-reading-direction",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "seam_correction_sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "saved_planar_approval_compared": true,
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1996.7257709385526,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 141.23659595760466,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 1.1359999999999997,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 36.753000000000036,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "gameboy": {
+      "style": "gameboy",
+      "side": "right",
+      "artwork_orientation": "same-reading-direction",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "seam_correction_sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "saved_planar_approval_compared": true,
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 2007.9294617482356,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 152.7565959576047,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 9.072919933615223,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 6.092389342116949,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "snes": {
+      "style": "snes",
+      "side": "right",
+      "artwork_orientation": "same-reading-direction",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "seam_correction_sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "saved_planar_approval_compared": true,
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 2000.628152675133,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 150.91659595760464,
+          "solids": 2,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 10.67911463154478,
+          "solids": 3,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 13.627503973661716,
+          "solids": 4,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "phone": {
+      "style": "phone",
+      "side": "right",
+      "artwork_orientation": "same-reading-direction",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "seam_correction_sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "saved_planar_approval_compared": true,
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 1988.538559589547,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 179.69574561792996,
+          "solids": 12,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 3.4565308443374714,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 4.160530844337472,
+          "solids": 1,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    },
+    "ipod": {
+      "style": "ipod",
+      "side": "right",
+      "artwork_orientation": "same-reading-direction",
+      "approved_master_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
+      "seam_correction_sha256": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+      "top_face_difference_mm2": {
+        "body": 0.0,
+        "detail": 0.0,
+        "accent": 0.0,
+        "secondary": 0.0
+      },
+      "saved_planar_approval_compared": true,
+      "exact_z_domains": true,
+      "material_parts": [
+        {
+          "role": "body",
+          "volume_mm3": 2006.484826067975,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "detail",
+          "volume_mm3": 141.23659595760466,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "accent",
+          "volume_mm3": 19.86743194130186,
+          "solids": 1,
+          "closed_mesh": true
+        },
+        {
+          "role": "secondary",
+          "volume_mm3": 8.262512929275143,
+          "solids": 2,
+          "closed_mesh": true
+        }
+      ],
+      "pair_intersections_mm3": {
+        "body/detail": 0.0,
+        "body/accent": 0.0,
+        "body/secondary": 0.0,
+        "detail/accent": 0.0,
+        "detail/secondary": 0.0,
+        "accent/secondary": 0.0
+      },
+      "roof_mm": 13.59,
+      "physical_acceptance": false
+    }
+  },
+  "physical_acceptance": false,
+  "former_mirrored_artwork_rejected": true,
+  "output_sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564",
+  "saved_reopened_recomputed": true,
+  "configuration_preserved": true,
+  "left_materials_and_nonframe_parts_preserved": true,
+  "structural_blank_preserved": true,
+  "all_right_decorative_roles_equal_translated_left": true,
+  "document_context_replay": true
+}

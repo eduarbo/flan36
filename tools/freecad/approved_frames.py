@@ -14,10 +14,16 @@ APPROVED=tuple(PLAN['approved_styles'])
 ROLES=('body','detail','accent','secondary')
 _FROZEN={}
 _CONTEXT=None
+_READABLE_RIGHT=False
 
 def use_document(doc):
     """Choose the recorded correction for this document, preserving R4 replay."""
-    global MASTER_PATH,MASTER,_CONTEXT
+    global MASTER_PATH,MASTER,_CONTEXT,_READABLE_RIGHT
+    orientation=doc.getObject('FrameArtworkOrientation')
+    _READABLE_RIGHT=orientation is not None
+    if orientation:
+        assert orientation.Mode=='same-reading-direction'
+        assert json.loads(orientation.StylesJSON)==list(APPROVED)
     correction=doc.getObject('DisplaySeamCorrection')
     path=ROOT/(correction.MasterPath if correction else PLAN['master_path'])
     digest=correction.MasterSHA256 if correction else PLAN['master_sha256']
@@ -39,16 +45,23 @@ def frozen_regions(side,style):
             for role in ROLES:_FROZEN[name,role]=source.getObject(name+'_'+role+('_Plan' if corrected else '')).Shape.copy()
         A.closeDocument(source.Name)
         if active:A.setActiveDocument(active.Name)
-    transform=A.Matrix();transform.A14=111 if side=='left' else 49;transform.A24=-11
-    if side=='right':transform.A11=-1
+    readable=side=='right' and _READABLE_RIGHT
+    transform=A.Matrix();transform.A14=111 if side=='left' else (25 if readable else 49);transform.A24=-11
+    if side=='right' and not readable:transform.A11=-1
     result={}
     for role in ROLES:
         shape=_FROZEN[style,role].copy();shape.transformShape(transform,False,False);result[role]=shape
+    if readable:
+        # Only the artwork is translated. The structural outline has unequal
+        # corner radii, so its body region must keep the right-hand domain.
+        domain,_=domains(side)
+        for role in ROLES[1:]:domain=domain.cut(result[role])
+        result['body']=domain
     return result
 
-def face(commands,side):
+def face(commands,side,artwork=False):
     def pt(p):
-        x=111+p[0] if side=='left' else 49-p[0]
+        x=111+p[0] if side=='left' else (25+p[0] if artwork and _READABLE_RIGHT else 49-p[0])
         return A.Vector(x,-11-p[1],0)
     edges=[];p=start=None
     for op,*v in commands:
@@ -83,7 +96,7 @@ def regions(side,style):
     domain,_=domains(side);window=face(MASTER['aperture_commands'],side)
     result={r:Part.Shape() for r in ROLES};result['body']=domain
     for f in MASTER['styles'][style]['features']:
-        shape=face(f['commands'],side)
+        shape=face(f['commands'],side,artwork=True)
         if f['window_cut']:shape=shape.cut(window)
         assert shape.cut(domain).Area<1e-7,(style,f['id'],'outside master')
         for role in ROLES:
@@ -120,6 +133,8 @@ def build(recipe,style):
     if correction:
         F.prop(final,'SeamCorrectionSHA256','App::PropertyString',correction.MasterSHA256)
         final.Label='Frame · '+theme['label']+' · R4 / corrected display seam'
+    if _READABLE_RIGHT and side=='right':
+        F.prop(final,'ArtworkOrientation','App::PropertyString','same-reading-direction')
     return final
 
 def top_faces(shape,z):
@@ -168,4 +183,4 @@ def validate(doc,side,smooth,obj,spec=None,output_dir=None):
             mesh.write(str(p/(stem+'.stl')));shape.exportStep(str(p/(stem+'.step')))
         material_records.append(record)
     F.prop(obj,'FrameFaceRoles','App::PropertyString',json.dumps(F.face_roles(obj)))
-    return dict(style=obj.FrameStyle,side=side,approved_master_sha256=PLAN['master_sha256'],seam_correction_sha256=correction.MasterSHA256 if correction else None,top_face_difference_mm2=role_errors,saved_planar_approval_compared=True,exact_z_domains=True,material_parts=material_records,pair_intersections_mm3=pairs,roof_mm=roof,physical_acceptance=False)
+    return dict(style=obj.FrameStyle,side=side,artwork_orientation='same-reading-direction' if _READABLE_RIGHT else 'historical-mirrored',approved_master_sha256=PLAN['master_sha256'],seam_correction_sha256=correction.MasterSHA256 if correction else None,top_face_difference_mm2=role_errors,saved_planar_approval_compared=True,exact_z_domains=True,material_parts=material_records,pair_intersections_mm3=pairs,roof_mm=roof,physical_acceptance=False)

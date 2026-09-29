@@ -1,0 +1,234 @@
+{
+  "request": "user:20260929:no-invertir-frames-derechos",
+  "baseline": "4b59c1d8cfae7248a2109666ec81350c4c3b0f0c",
+  "native_sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564",
+  "local_acceptance": true,
+  "public_acceptance": "pending readback after synchronization",
+  "native_receipt": "validation/revI-frame-orientation-native.json",
+  "adoption_receipt": "validation/revI-frame-orientation-adoption.json",
+  "review_receipt": "validation/revI-frame-orientation-review.json",
+  "mechanical_receipt": "validation/revI-mechanical.json",
+  "finishes": {
+    "viewer_sha256": "1022cae499487b4e0b04c43eea163a203bed6b82699cb1390e59db325cda9e04",
+    "scene_sha256": "a0bc996de3a882fb31a9df03cfe726c76542a5566ab194abf085dab10e3e35c0",
+    "checker_sha256": "2d7840d4eda38d9542034fdca10d12d65806d267e31ec4541999d23d591f9967",
+    "original_vertices_normals_and_triangles": true,
+    "flush_feature_probes": true,
+    "approved_thickness_domains_and_negative_controls": true,
+    "exact_native_material_volumes": true,
+    "no_raised_relief": true,
+    "max_material_groups": 4,
+    "geometry_cached": true,
+    "checked": [
+      {
+        "side": "left",
+        "style": "talavera",
+        "triangles": 8748,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "talavera",
+        "triangles": 8748,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "gameboy",
+        "triangles": 7892,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "right",
+        "style": "gameboy",
+        "triangles": 7892,
+        "groups": 4,
+        "feature_probes": 2
+      },
+      {
+        "side": "left",
+        "style": "snes",
+        "triangles": 11248,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "snes",
+        "triangles": 11248,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "phone",
+        "triangles": 16684,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "right",
+        "style": "phone",
+        "triangles": 16684,
+        "groups": 4,
+        "feature_probes": 1
+      },
+      {
+        "side": "left",
+        "style": "ipod",
+        "triangles": 8568,
+        "groups": 4,
+        "feature_probes": 3
+      },
+      {
+        "side": "right",
+        "style": "ipod",
+        "triangles": 8568,
+        "groups": 4,
+        "feature_probes": 3
+      }
+    ]
+  },
+  "collection": {
+    "styles": [
+      "talavera",
+      "gameboy",
+      "snes",
+      "phone",
+      "ipod"
+    ],
+    "viewer_sha256": "e65b885258112684931ec684b329e81eb8e0f67ddc57ba94a3e1f650fdadb8d5",
+    "native_3mf": [
+      {
+        "id": "left-frame-talavera",
+        "material_parts": 4,
+        "sha256": "a305b11cf629dcf8ae78dd67f2e36e75df74f98a2850004238bef52a1d5fdd22"
+      },
+      {
+        "id": "left-frame-gameboy",
+        "material_parts": 4,
+        "sha256": "ad41bc024072a13ff053c64bf10aae867a6059b71e28790431053caebb32b1f2"
+      },
+      {
+        "id": "left-frame-snes",
+        "material_parts": 4,
+        "sha256": "03e3cea877c74ca1628d13908ae7c0c67a7b019bcf847722c500be2433ed429f"
+      },
+      {
+        "id": "left-frame-phone",
+        "material_parts": 4,
+        "sha256": "750441f99808b9e5bba1b7319c3e58ec3e50cd24a93037317280e318d859d8a2"
+      },
+      {
+        "id": "left-frame-ipod",
+        "material_parts": 4,
+        "sha256": "f28f6096d4ecaf2759240933722698b12af25fdcd5cf3c7f4c7fec19268881c3"
+      },
+      {
+        "id": "right-frame-talavera",
+        "material_parts": 4,
+        "sha256": "78868d2bf1b59f867b34cc7762c8a822494449082bf3eb6aee06dbb14ed6404d"
+      },
+      {
+        "id": "right-frame-gameboy",
+        "material_parts": 4,
+        "sha256": "7dfcb59e6b53eaf785f3343e87752e8e5972592a4289a30cda80328b8fcf6bce"
+      },
+      {
+        "id": "right-frame-snes",
+        "material_parts": 4,
+        "sha256": "6b83ca96cd88bfd2ef5d5775f8dd634162abc07fc0c0fcde4506159a960818ad"
+      },
+      {
+        "id": "right-frame-phone",
+        "material_parts": 4,
+        "sha256": "fa0593e84f52b7a0e2d46ed95c875368bbef2d72aae30ca1c23bf91b137c088d"
+      },
+      {
+        "id": "right-frame-ipod",
+        "material_parts": 4,
+        "sha256": "4f7b7f986599be61e425378b077a56e283a101a290bc5d5b64789358be81bff6"
+      }
+    ],
+    "checks": {
+      "distinct_actual_previews": 5,
+      "frame_changes_preserve_inspection": 5,
+      "themes_without_pinky_accents": 27,
+      "approved_reset_default": true,
+      "all_retired_imports_preserve_view_and_implicit_colors": 16,
+      "storage_keys_and_color_fixtures": 96,
+      "native_reader_export_parity": 48,
+      "presets_cannot_restore_retired_frames": true,
+      "exact_old_configuration_preserved_on_migration": true,
+      "current_custom_configuration_preserved": true,
+      "mobile_gallery": true
+    },
+    "runtime_errors": [],
+    "passed": true
+  },
+  "downloaded_exports": {
+    "url": "docs/offline.html",
+    "passed": true,
+    "exported_glb_roles": [
+      {
+        "role": 1,
+        "left": {
+          "area": 260.0064203776492,
+          "x": 122.37971591178616,
+          "z": 36.4196300670311
+        },
+        "right": {
+          "area": 260.0059997295539,
+          "x": 36.37970448097099,
+          "z": 36.41963347241582
+        }
+      },
+      {
+        "role": 2,
+        "left": {
+          "area": 22.669026749106706,
+          "x": 128.35000020406545,
+          "z": 57.29999997807683
+        },
+        "right": {
+          "area": 22.66901830574352,
+          "x": 42.34999993069983,
+          "z": 57.300000260179054
+        }
+      },
+      {
+        "role": 3,
+        "left": {
+          "area": 15.230360029643634,
+          "x": 124.06521309963091,
+          "z": 64.01749974634203
+        },
+        "right": {
+          "area": 15.230337104549108,
+          "x": 38.065201943264285,
+          "z": 64.0174990211619
+        }
+      }
+    ],
+    "registered_frame_materials": 8,
+    "camera_preserved": true,
+    "errors": [],
+    "viewer_sha256": "e65b885258112684931ec684b329e81eb8e0f67ddc57ba94a3e1f650fdadb8d5"
+  },
+  "screenshot": {
+    "path": "docs/images/revI-frame-orientation.png",
+    "sha256": "88c7d487ccd0cf50454f25bad3e1ab134003207504d0aac66b8e56791f58761f",
+    "visually_checked": true
+  },
+  "checker_sha256": "88d4bf409bac1094945c0488a48c97007b441055e8b99e3c5b944f1e64f3339b",
+  "retrospective": {
+    "cause": "The right native face transform reflected decorative motifs together with the handed structural contour.",
+    "correction": "Translate decorative motifs and frozen decorative reference regions; rebuild the body inside the existing right structural domain.",
+    "prevention": "Version the orientation per native document; reject the former mirrored Game Boy and compare reopened native top faces plus actual downloaded GLB/materials.",
+    "unaffected": "Both handed shells, heights, mounts, colors, caps, saved selections and retired-frame exclusions."
+  },
+  "physical_acceptance": false
+}

@@ -12,6 +12,10 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
+## Revision I — readable right-hand artwork
+
+Both halves now keep the same artwork direction. Game Boy's D-pad stays on the left and its buttons on the right; the right shell retains its existing corner radii and mounting geometry. The correction is recorded in the native document and carried through the material STL/STEP files, viewer and print kit. Historical documents retain their original interpretation. [Construction and checks](../design/frame-orientation.md).
+
 ## Revision I — approved viewer selection
 
 The earlier withdrawal changed only the proposal gallery, leaving rejected shapes in the main viewer. The viewer now offers Talavera (default), Game Boy, SNES, Phone and iPod; Flan, Tape, Orbit, Manga, NES and Walkman are excluded from its selector, geometry and print kit. Saved and imported retired IDs migrate to Talavera with original colors and recoverable source JSON. Hanafuda remains approved but not integrated. [Correction and reproducible checks](../design/approved-viewer-selection.md).

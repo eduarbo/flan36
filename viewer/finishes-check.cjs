@@ -57,11 +57,18 @@ for(const style of Object.keys(scene.catalog.frame_styles))for(const side of ['l
  }
  for(const [x,z,role,label] of probes[style]||[]){
   const expected=role;
-  assert.equal(topRole(g,side==='right'?160-x:x,z),expected,`${side} ${style}: ${label}`);
+  const rightX=scene.frameArtwork?.mode==='same-reading-direction'?x-86:160-x;
+  assert.equal(topRole(g,side==='right'?rightX:x,z),expected,`${side} ${style}: ${label}`);
  }
  const override=make(style,side,'#abcdef');assert.equal(override.material[0].color,'#abcdef');assert.equal(override.geometry,g,'Reuse geometry across body changes');
  checked.push({side,style,triangles:g.index.count/3,groups:g.groups.length,feature_probes:(probes[style]||[]).length});
 }
 const sha=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+if(scene.frameArtwork?.mode==='same-reading-direction'){
+ const g=make('gameboy','right').geometry;
+ assert.equal(topRole(g,31.4,57.45),1,'Right D-pad stays on the left');
+ assert.equal(topRole(g,44.2,55.7),2,'Right A button stays on the right');
+ assert.notEqual(topRole(g,42.6,57.45),1,'Reject the former mirrored D-pad');
+}
 const report={viewer_sha256:sha(path.join(root,'docs/index.html')),scene_sha256:sha(path.join(root,'build/viewer-scene.json')),checker_sha256:sha(__filename),original_vertices_normals_and_triangles:true,flush_feature_probes:true,approved_thickness_domains_and_negative_controls:true,exact_native_material_volumes:true,no_raised_relief:true,max_material_groups:4,geometry_cached:true,checked};
 fs.writeFileSync(path.join(out,'geometry.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

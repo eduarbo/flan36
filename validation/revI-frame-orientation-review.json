@@ -1,0 +1,173 @@
+{
+  "baseline": {
+    "head": "4b59c1d8cfae7248a2109666ec81350c4c3b0f0c",
+    "status": "",
+    "sha256": {
+      "tools/freecad/approved_frames.py": "8e77df4ac20f1dc1562f7a9e84fad0c85943cf44c4fb985fd18fc394d8e953f9",
+      "tools/freecad/flush_frames.py": "68e5536c21052415b097c79909544160cf928d563a8afd292f00756c5d3be119",
+      "tools/freecad/install_display_seam.py": "e020a04074455bef73b39f71c8e4ddf86d4f83ef9c55e893af883d6f7192336f",
+      "tools/freecad/export_revI.py": "e992323442c464b4470e959432838a79e28c84224f17f69b37db784d65dfa493",
+      "tools/build_viewer_revI.py": "f65c7f9dcf0571b934276bbdb400ab6d581eadb18b78ef0de0bd24b4f4426fbd",
+      "viewer/finishes-check.cjs": "960925c0771f4451c31a3de8624fbc62d297067899596f98fec04fcdb8d91cb1",
+      "design/proposals/display-seam-r1/master.json": "76759ecc8c8662ac9bc7898bd8b908224c4bf8284ca32bee958b7fa3a75997d7",
+      "design/frame-selection.json": "c21c87bb32898f09dff74f7d8be2c7f06e1dd49acf4de0a7465435117adb6bba",
+      "mechanical/revI/Flan36.FCStd": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7"
+    },
+    "request": "user:20260929:no-invertir-frames-derechos",
+    "outcomes": [
+      "Right frame artwork reads in the same orientation as left, in CAD, viewer and print exports.",
+      "Keep right-side fit geometry and all non-frame parts unchanged.",
+      "Preserve colors, selection, camera and rejected-frame exclusions; verify public delivery."
+    ]
+  },
+  "reviewed_action": "Translate only right artwork by -86 mm from the left; retain handed shell and zones.",
+  "domain": {
+    "schema_version": 1,
+    "task_id": "flan36-frame-orientation-domain-constructive-20260929",
+    "run_id": "flan36-frame-orientation-domain-constructive-20260929-provider",
+    "provider": "codex-app-subagent",
+    "role": "domain_constructive",
+    "role_assignment_sha256": "ccced7460de2c767b41137374a2a77e46c959aacb0224914734d6cad4f47b9b9",
+    "status": "completed",
+    "summary": "Corregir solo el arte derecho de los cinco estilos instalados mediante traslaci\u00f3n X-86. Conservar encaje, selecci\u00f3n, colores y exclusiones. Confianza alta en diagn\u00f3stico est\u00e1tico.",
+    "findings": [
+      {
+        "code": "MIRROR",
+        "claim": "face y frozen_regions reflejan el arte; el contorno asim\u00e9trico exige conservar domains derecho.",
+        "evidence": [
+          "approved_frames.py:42-51,76-91; master.json:180-184; baseline HEAD 4b59c1d8cfae7248a2109666ec81350c4c3b0f0c"
+        ]
+      }
+    ],
+    "recommendations": [
+      "Versionar orientaci\u00f3n por documento con fallback hist\u00f3rico. Trasladar motivos y regiones frozen no-body; reconstruir body desde dominio derecho. Reabrir y verificar uni\u00f3n=smooth, materiales cerrados/disjuntos, espesores, arte asim\u00e9trico por traslaci\u00f3n, partes ajenas intactas, replay e idempotencia. Regenerar CAD/STL/STEP/visor y verificar entrega; cambiar probes de arte, no dominios."
+    ],
+    "changed_paths": [],
+    "validations": [
+      {
+        "name": "Revisi\u00f3n est\u00e1tica",
+        "status": "passed"
+      },
+      {
+        "name": "Hashes independientes, CAD, exportaciones y entrega",
+        "status": "not_run"
+      }
+    ],
+    "defects": [
+      {
+        "severity": "MEDIUM",
+        "code": "MIRROR"
+      }
+    ],
+    "blockers": [],
+    "next_actor": "personal-ops"
+  },
+  "risk": {
+    "schema_version": 1,
+    "task_id": "flan36-frame-orientation-adversarial-risk-20260929",
+    "run_id": "flan36-frame-orientation-adversarial-risk-20260929-provider",
+    "provider": "codex-app-subagent",
+    "role": "adversarial_risk",
+    "role_assignment_sha256": "075ae20e34290ac760aeb0be7f22e690b6fafd91f0b28a054446b96363301750",
+    "status": "completed",
+    "summary": "Revisi\u00f3n est\u00e1tica completa. Corregir solo el arte derecho: x=25+local_x, equivalente al izquierdo trasladado -86 mm. Conservar ajuste y dominios derechos reflejados. Confianza alta en el diagn\u00f3stico; aceptaci\u00f3n geom\u00e9trica pendiente.",
+    "findings": [
+      {
+        "code": "MIRROR",
+        "claim": "El reflejo nace en geometr\u00eda nativa y referencia congelada; un cambio solo visual deja invertida la impresi\u00f3n.",
+        "evidence": [
+          "approved_frames.py:42-53 refleja X.",
+          "build_viewer_revI.py incorpora materiales STL nativos."
+        ]
+      },
+      {
+        "code": "FIT",
+        "claim": "Cambiar el frame completo altera su envolvente asim\u00e9trica. Trasladar solo roles decorativos congelados y reconstruir body en el dominio derecho.",
+        "evidence": [
+          "master.json:180-184: radios superiores 1.2/2.4 mm.",
+          "Snapshot declarado: 4b59c1d8cfae7248a2109666ec81350c4c3b0f0c."
+        ]
+      }
+    ],
+    "recommendations": [
+      "Usar candidato separado y marca versionada por documento; preservar replay hist\u00f3rico, selecci\u00f3n, colores, poses, piezas ajenas y exclusiones.",
+      "Verificar documento reabierto: uni\u00f3n igual al blank, materiales cerrados/disjuntos, espesores y referencia congelada. Actualizar probes asim\u00e9tricos y regenerar visor/impresi\u00f3n. Conservar baseline para rollback."
+    ],
+    "changed_paths": [],
+    "validations": [
+      {
+        "name": "Revisi\u00f3n est\u00e1tica",
+        "status": "passed"
+      },
+      {
+        "name": "Hashes independientes, FreeCAD, exports y entrega p\u00fablica",
+        "status": "not_run"
+      }
+    ],
+    "defects": [
+      {
+        "severity": "MEDIUM",
+        "code": "MIRROR"
+      },
+      {
+        "severity": "HIGH",
+        "code": "FIT"
+      }
+    ],
+    "blockers": [],
+    "next_actor": "personal-ops"
+  },
+  "agreement": true,
+  "findings_disposition": {
+    "MIRROR": "Correct native motifs and frozen non-body regions, then rebuild derivatives.",
+    "FIT": "Mechanical domains and smooth source remain unchanged; verify union and nonframe geometry.",
+    "FROZEN_BODY_ASYMMETRY": "Reconstruct frozen body as handed domain minus translated decorative regions.",
+    "DOCUMENT_REPLAY_BOUNDARY": "Explicit document marker, historical/corrected/historical context check.",
+    "EXISTING_PROBES_EXPECT_MIRROR": "Change artwork probes only, retain handed thickness checks and add negative mirror control.",
+    "EXPORT_IS_NOT_ARTWORK_ACCEPTANCE": "Validate saved/reopened native regions and downloaded material assets before delivery."
+  },
+  "role_runtime": {
+    "domain": {
+      "dispatch_binding_sha256": "9eee4fcefcd1625857ecf7df05dcdee3272028c54b9798ffd3a58b08947d52d1",
+      "event_id": "role-event-d678f51ac462eddf8ae9f315",
+      "event_sha256": "86536d4af9beda4d4f14c350b89381b510f59a8ea1c864d06df82867e0ccdc63",
+      "event_type": "agent_role_run_terminal",
+      "finalization_request_sha256": "1a2315ef9b6818a021767e57d7b402f8f8d4f92725a4e9ded617f0cff0eaea0f",
+      "finalized_at": "2026-09-29T20:44:55+00:00",
+      "handoff_sha256": "3d5ea225b93ab1914a1bfc75247b9eb13b266e42f56b248a859a908940bd8931",
+      "request_binding_sha256": "811464975ede4a1a23f7f65fb18b156e3585d7cd5ad098ebc93a935acafaca43",
+      "role_assignment_sha256": "ccced7460de2c767b41137374a2a77e46c959aacb0224914734d6cad4f47b9b9",
+      "role_contract_sha256": "57345a302e0e7531a772d133b62f55e74d7f2b220f3519cbd712715481c23cc4",
+      "role_run_id": "role-run-811464975ede4a1a23f7f65f",
+      "route_decision_sha256": "8a3be4802c873129279c9bc21e8ff6e047810698ecb56b1d41c6153d15d5303f",
+      "schema_version": 1,
+      "spawn_envelope_sha256": "d5b67126803668fd42bed25acbd2675530958e8fa5529ce029139726e699b780",
+      "task_packet_sha256": "ab9903915111ce9508b25c0aa3caa42f73636e95fc76227007cffeaf6b963390",
+      "terminal_state": "PARTIAL",
+      "termination_phase": "verified",
+      "verifier_receipt_sha256": "2ad3783eb4993cf1031e4f43d8d8e1be9ea994dbc8c7d8cbf0d25a67e4fa04d1"
+    },
+    "risk": {
+      "dispatch_binding_sha256": "a2aa3ce75aeeefff6958d077cd4d86eab9321dbeb67edbfd69150f3426c8b1ed",
+      "event_id": "role-event-72a0ed1c782214b3e333ef02",
+      "event_sha256": "6bcef5cc6f5ff8d9d0d1d452f802cb765dddd7be6fb546cccb703f201f40cc46",
+      "event_type": "agent_role_run_terminal",
+      "finalization_request_sha256": "5e24cd848a9248f4ae679bfab5766799cf8932cb12323f57e5242e47ed0c6e94",
+      "finalized_at": "2026-09-29T20:44:55+00:00",
+      "handoff_sha256": "ef3a27b71e258c2113b8df142be5443aac74d6cb6098d07c0c4063c59eb6ad86",
+      "request_binding_sha256": "2b0cd7082ae5f4e4bab20abcaf6b0ab274ce324726dbca4eebc0580858a2e766",
+      "role_assignment_sha256": "075ae20e34290ac760aeb0be7f22e690b6fafd91f0b28a054446b96363301750",
+      "role_contract_sha256": "6b62bc99b0e408647fa8a6d8373c4fbe1db5579cd1df2efc2bf5d22931796b1f",
+      "role_run_id": "role-run-2b0cd7082ae5f4e4bab20abc",
+      "route_decision_sha256": "206006cc5d4a8fe9d3fd777145d2fb74d6490077ccbb0e3a2ad4a269133928e5",
+      "schema_version": 1,
+      "spawn_envelope_sha256": "34f7d2aa32686c79932a945938d293f9a2143621a15af67adb23e95d797765c8",
+      "task_packet_sha256": "c6d16db99093f1435b84260a8ceddad8dd13ecf1fd46221e6abdfcac3fbfc280",
+      "terminal_state": "PARTIAL",
+      "termination_phase": "verified",
+      "verifier_receipt_sha256": "e9ca0b6a8f42bd5f7c0c8eea3aee969144707b886050ad844a830004b469236d"
+    },
+    "scope": "Static reviews agree. Runtime records are PARTIAL because they retain diagnostic defects and unrun implementation checks; root owns execution acceptance."
+  },
+  "unresolved_material_objections": []
+}

@@ -16,6 +16,10 @@ Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and cli
 
 All designs use solid colors, without gradients or raised details. **Restore design colors** applies the exact palette. HEX editing and coordinated case/key themes remain available.
 
+Both halves keep the same artwork orientation: controls and motifs are not mirrored
+on the right. The right shell retains its own mounting geometry and corner radii.
+[Native orientation and checks](../design/frame-orientation.md).
+
 ## Shared dimensions
 
 | Feature | Dimension |

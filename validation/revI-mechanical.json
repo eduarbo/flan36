@@ -748,14 +748,14 @@
         "talavera": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 2175.851366896155,
+          "volume_mm3": 2175.8513668961546,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "gameboy": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 2175.8513668961514,
+          "volume_mm3": 2175.851366896153,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
@@ -769,14 +769,14 @@
         "snes": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 2175.8513668961546,
+          "volume_mm3": 2175.8513668961573,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
         "phone": {
           "component_collisions_mm3": {},
           "usb_envelope_collision_mm3": 0.0,
-          "volume_mm3": 2175.8513668961514,
+          "volume_mm3": 2175.8513668961505,
           "closed_mesh": true,
           "verified_envelope": "R_Frame_smooth_HeadRelief5"
         },
@@ -1327,6 +1327,6 @@
     "Window tolerance and PCB copper-to-edge rule",
     "Printed fits, insertion/extraction loads, charging, RF and measured power"
   ],
-  "source_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
-  "checker_sha256": "e992323442c464b4470e959432838a79e28c84224f17f69b37db784d65dfa493"
+  "source_sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564",
+  "checker_sha256": "63546f14609983f914f4b1ee5575cfb75c7812b8b52d2491c4e74bd2c55508ea"
 }

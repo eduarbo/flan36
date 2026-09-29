@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 model = json.loads((ROOT/'design/revI.json').read_text())
 layout = json.loads((ROOT/'design/layout.json').read_text())
 scene = {'revision':'I', 'units':'mm', 'geometries':{}, 'parts':[], 'sources':[], 'batteryLeadProfiles':{}}
+scene['frameArtwork']=model.get('frame_artwork',{'mode':'historical-mirrored'})
 catalog=json.loads((ROOT/'keycaps/catalog.json').read_text())
 frame_finishes=json.loads((ROOT/'design/frame-finishes.json').read_text())
 selection=json.loads((ROOT/'design/frame-selection.json').read_text())

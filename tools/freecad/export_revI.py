@@ -275,6 +275,14 @@ if doc.getObject('DisplaySeamCorrection'):
     for p in ['design/proposals/display-seam-r1/master.json','design/proposals/display-seam-r1/Seam-candidate.FCStd',
               'design/proposals/display-seam-r1/geometry-check.json','tools/freecad/install_display_seam.py']:
         metadata['inputs'].append({'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()})
+orientation=doc.getObject('FrameArtworkOrientation')
+if orientation:
+    metadata['frame_artwork']={'mode':orientation.Mode,'styles':json.loads(orientation.StylesJSON),
+        'right_x_from_left_mm':-86,'structural_handedness_preserved':True}
+    p='tools/freecad/install_frame_orientation.py'
+    metadata['inputs'].append({'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()})
+else:
+    metadata.pop('frame_artwork',None)
 report['source_sha256']=metadata['fcstd_sha256']
 report['checker_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 metadata['export_execution']={'native_sha256':metadata['fcstd_sha256'],
