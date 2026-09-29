@@ -1,0 +1,120 @@
+{
+  "request_ref": "user:20260929:white-display-seam-and-six-redesigns",
+  "implementation_commit": "8d54a3cd4150bb8c4884f1041e51a3c8e2e8c633",
+  "public_source": {
+    "additional_published_assets": {
+      "docs/offline.html": "90bc7ce2b74a0c9aa9867ff7cfc9224a25aa1266359412d13c206df6f970f89f",
+      "docs/assets/printing-278eb6f7ff8f912ff14d496a86ea3380364b1ce4c31e790355102f0b083ecb7e.bin": "278eb6f7ff8f912ff14d496a86ea3380364b1ce4c31e790355102f0b083ecb7e"
+    },
+    "source_commit": "8d54a3cd4150bb8c4884f1041e51a3c8e2e8c633",
+    "archive_files_verified": 1516,
+    "archive_sha256": "7cc5bc2cbd538977610d028f9b710df202885b2cb81c7c15a27e8de3d0edcc51",
+    "pages_url": "https://eduarbo.github.io/flan36/",
+    "pages_matches_committed_html": true,
+    "viewer_sha256": "aef7269bd70aafbc941ca1ec0769915f87fceec963cad16f69509ae80a188906",
+    "authenticated_requests": false,
+    "method": "All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer."
+  },
+  "public_browser": {
+    "commit": "8d54a3cd4150bb8c4884f1041e51a3c8e2e8c633",
+    "public_scene_matches_local": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "public_proposals": {
+    "commit": "8d54a3cd4150bb8c4884f1041e51a3c8e2e8c633",
+    "url": "https://eduarbo.github.io/flan36/frame-proposals/",
+    "passed": true,
+    "assets": [
+      {
+        "path": "docs/frame-proposals/collection-a.png",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/collection-a.png",
+        "sha256": "91bf3dfc0f9fc7295e42eb6a1759f7c573601c0ae23b1b1a7b824f58e185c662",
+        "bytes": 79354
+      },
+      {
+        "path": "docs/frame-proposals/collection-b.png",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/collection-b.png",
+        "sha256": "b2365871790f33c083536571518a710be66e38fc059c7dea01ec201081c2c88a",
+        "bytes": 81539
+      },
+      {
+        "path": "docs/frame-proposals/collection.png",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/collection.png",
+        "sha256": "7638480fa04862a9d1940cc457453b48f04d9e8f2e9d7a5df111480542759493",
+        "bytes": 121079
+      },
+      {
+        "path": "docs/frame-proposals/flan-preview.svg",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/flan-preview.svg",
+        "sha256": "1962728477043c89527d2532ec89eb7f7b2a8565213fc791a0daf61a40582c4d",
+        "bytes": 6648
+      },
+      {
+        "path": "docs/frame-proposals/index.html",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/index.html",
+        "sha256": "24df506eca6f6d41c1e5184d320e3a1a57397dad561b277bc9cc4b470e78e4c1",
+        "bytes": 9492
+      },
+      {
+        "path": "docs/frame-proposals/manga-preview.svg",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/manga-preview.svg",
+        "sha256": "1c5136c8708e10c7aea9774343881cb4a3beb39dd65184bb69f57e5cf9a1b198",
+        "bytes": 4244
+      },
+      {
+        "path": "docs/frame-proposals/native-review.png",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/native-review.png",
+        "sha256": "d3a94a312db79c2d73e710b3a3463dbe97a4712b18dff4911b8ecdfc04104235",
+        "bytes": 65228
+      },
+      {
+        "path": "docs/frame-proposals/nes-preview.svg",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/nes-preview.svg",
+        "sha256": "c726216e2d0e5100f75b5971f7e0ccf6566a04d9d8cd1d103b4f230239a70854",
+        "bytes": 4787
+      },
+      {
+        "path": "docs/frame-proposals/orbit-preview.svg",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/orbit-preview.svg",
+        "sha256": "ee36d2239ac7f865c1bb6e134db0997a81876f631f24e3dab1ac150f80d62986",
+        "bytes": 1833
+      },
+      {
+        "path": "docs/frame-proposals/seam-comparison.png",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/seam-comparison.png",
+        "sha256": "4c89cb0c62e675773f3273c8819ebd81ab109a75083b564846e88d988f832176",
+        "bytes": 85870
+      },
+      {
+        "path": "docs/frame-proposals/tape-preview.svg",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/tape-preview.svg",
+        "sha256": "b6588361f93a9d93bd89f81b33421e4133b54815453a318be948381594001cce",
+        "bytes": 3400
+      },
+      {
+        "path": "docs/frame-proposals/walkman-preview.svg",
+        "url": "https://eduarbo.github.io/flan36/frame-proposals/walkman-preview.svg",
+        "sha256": "784cd530183f5fa525af6443aa6ca58118756c2ceabf336c967ad530d23e67cf",
+        "bytes": 4430
+      }
+    ]
+  },
+  "native_sha256": "1719fb3d05a78cc9afac7ed432275b66a04ba03f10e07421800c6129848a3fd7",
+  "viewer_inspection_sha256": "ee7a2ad17ffde70216ed05516ffcb5c8d19eb3278d599bb8806bbd2de3b37306",
+  "digital_seam_correction_verified": true,
+  "six_proposals_delivered": true,
+  "six_new_artworks_installed": false,
+  "awaiting_approval": [
+    "flan",
+    "tape",
+    "orbit",
+    "manga",
+    "nes",
+    "walkman"
+  ],
+  "physical_acceptance": false
+}

@@ -16,7 +16,7 @@
 
 The opening is now centered on the glass with 0.10 mm nominal clearance on all sides. It closes the exposed side bands without moving the display or raising the stack. The five approved bezels remain exactly 2.40 mm wide; their other artwork and colors are unchanged. [Correction and limits](../design/display-seam-implementation.md).
 
-Flan, Tape, Orbit, Manga, NES and Walkman have [new dimensioned R5 proposals](frame-proposals.md), including editable review solids and actual mesh renders. Their new artwork awaits approval and is not installed in the main assembly.
+Flan, Tape, Orbit, Manga, NES and Walkman have [new dimensioned R5 proposals](frame-proposals.md), including editable review solids and actual mesh renders. Their new artwork awaits approval and is not installed in the main assembly. [Verified public source, viewer, print kit and proposals](../validation/revI-display-seam-public.json).
 
 ## Revision I — approved R4 frames (earlier snapshot)
 
