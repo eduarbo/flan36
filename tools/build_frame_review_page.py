@@ -2,7 +2,7 @@
 """Mobile R7 approval gallery: selected Hanafuda and six new alternatives.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
-import hashlib,html,json,shutil
+import hashlib,html,json,os,shutil
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'design/proposals/frame-redesign-r7';OUT=ROOT/'docs/frame-proposals'
@@ -25,4 +25,8 @@ def run():
     (OUT/'index.html').write_text(page)
     print('Built R7 gallery: selected Hanafuda, three Mecha and three Kumiko proposals')
 CSS=':root{color-scheme:light;font:16px/1.5 system-ui,sans-serif;color:#253c37;background:#f6f5f0}*{box-sizing:border-box}body{margin:0}main{max-width:1180px;margin:auto;padding:28px 20px 60px}a{color:inherit;text-underline-offset:4px}a:focus-visible{outline:3px solid #527d63;outline-offset:4px;border-radius:4px}header{max-width:820px;margin:24px 0 32px}h1{font-size:clamp(32px,5vw,54px);line-height:1.1;margin:16px 0}h2{margin:0 0 10px;font-size:25px}p{margin:8px 0 16px}.status,.replaces{font-size:12px;letter-spacing:.065em;text-transform:uppercase;color:#576e60}.replaces{margin-bottom:6px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}article{background:#fffefa;border:1px solid #dce1d7;border-radius:16px;padding:22px;scroll-margin:20px}.preview{display:flex;height:340px;align-items:center;justify-content:center;margin-bottom:24px;border-radius:10px;transition:background .12s}.preview:hover{background:#f2f1e9}.preview img{height:100%;width:auto;max-width:100%}article p{font-size:14px;min-height:104px;color:#4c6058}.palette{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;font-size:12px}.palette span{display:flex;gap:6px;align-items:center}.palette code{user-select:all}.palette i{width:14px;height:14px;border:1px solid #0002;border-radius:3px;flex-shrink:0}nav{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0}nav a{padding:10px 12px;min-height:44px;border:1px solid #dce1d7;border-radius:8px;font-size:14px;text-decoration:none}nav a:hover{background:#edf1e8}.native{width:100%;height:auto;border-radius:16px;margin:18px 0}.notes{max-width:880px;margin:40px 0}.hash{overflow-wrap:anywhere;font-size:11px;color:#5d6d64}details{margin:25px 0}summary{cursor:pointer;padding:12px 0;min-height:44px}.back{display:inline-block;padding:8px 0;min-height:44px}@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.grid{grid-template-columns:1fr}article p{min-height:0}.preview{height:380px}main{padding:20px 16px}}\n\n.family{font-size:29px;margin:44px 0 20px}.family small{display:block;font-size:14px;font-weight:400;color:#617064;margin-top:4px}.kept{display:flex;align-items:center;gap:32px;padding:26px;background:#e9eddf;border-radius:16px;max-width:860px}.kept img{display:block}.kept p{max-width:570px}.kept a{flex-shrink:0}@media(max-width:520px){.kept{gap:20px;padding:20px}.kept img{width:65px;height:auto}.kept p{font-size:14px}.kept nav{gap:6px}.kept nav a{padding:8px;font-size:12px}}\n'
-if __name__=='__main__':run()
+if __name__=='__main__':
+    if os.environ.get('FLAN36_ARTWORK_REVIEW')=='frame-redesign-r7':run()
+    else:
+        from build_frame_review_r8 import run as current
+        current(CSS)

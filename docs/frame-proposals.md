@@ -1,19 +1,19 @@
-# Hanafuda, Mecha and Kumiko
+# Selected frames + Evangelion
 
-[Open the mobile gallery](https://eduarbo.github.io/flan36/frame-proposals/). **Hanafuda is retained unchanged.** Choose one of three new Mecha directions and one of three Kumiko directions before artwork integration.
+[Open the mobile gallery](https://eduarbo.github.io/flan36/frame-proposals/).
 
-![Three Mecha proposals](frame-proposals/r7/mecha.png)
-![Three Kumiko proposals](frame-proposals/r7/kumiko.png)
+**Talavera, Game Boy, SNES, Phone, iPod and Hanafuda stay.** Their exact artwork and palettes are unchanged. All six Mecha and Kumiko proposals from R7 were rejected and are excluded from the current selection.
 
-- **M1 / Recon:** purple scout armor and lime directional panels.
-- **M2 / Reactor:** pale armor, cyan reactor ring and amber core.
-- **M3 / Hangar:** sand-colored service armor and an offset access hatch.
-- **K1 / Asanoha:** warm wood tones and a sixfold leaf lattice.
-- **K2 / Kikko:** repeating walnut-colored hexagons on a pale base.
-- **K3 / Kasane:** an original indigo and wood-toned diagonal lattice.
+## One new proposal
 
-All share the current **24 × 56 mm** blank, a **2.40 mm** screen bezel and flush details. Their [millimetre master](../design/proposals/frame-redesign-r7/master.json), 1:1 SVGs and [FreeCAD review](../design/proposals/frame-redesign-r7/Artwork-R7.FCStd) use identical paths and HEX colors. The [native render](frame-proposals/r7/native-review.png) comes from those review solids.
+![Evangelion Unit 01 proposal](frame-proposals/r8/evangelion-card.png)
 
-Kumiko is represented by colored inlays, not open wood joinery. Nominal lattice strips are 0.80–0.85 mm wide; the 0.4 mm nozzle / 0.2 mm layer target, intersections and printed fit still need a sliced sample. Pattern vocabulary: [Tanihata](https://kumikowoodworking.com/products/category/auspicious-omens-motifs/), [Shion Kumiko](https://www.shion-kumiko.com/order-guide/kumiko-patterns/).
+**E1 / Evangelion Unit 01** uses the four exact M1 colors: `#382D55`, `#7561A7`, `#C7DD58`, `#F0DEBB`. A single horn, angular helmet, flat shoulder markings and a geometric 01 identifier replace the rejected scout artwork. Details remain flush; no gradients or raised decoration.
 
-Caramelo, Lucha, Cartucho 8 and Terminal are excluded from the active selection. Their [historical R6 files](../design/proposals/frame-redesign-r6/) remain available. The current assembly and main viewer have not been changed in this proposal round.
+[Dimensions](frame-proposals/r8/evangelion-dimensioned.png) · [Native 3D view](frame-proposals/r8/native-review.png) · [FreeCAD review](../design/proposals/frame-redesign-r8/Artwork-R8.FCStd) · [Exact master](../design/proposals/frame-redesign-r8/master.json)
+
+The current 24 × 56 mm blank, 2.40 mm bezel, 13.90 × 30.50 mm opening and Z13.59 mm face remain unchanged. The drawing and native solids use the same paths and HEX values. The 0.4 mm nozzle / 0.2 mm layer target still requires slicing and a sample print.
+
+Evangelion awaits artwork approval. Hanafuda is selected and awaits integration; the other five selected designs are already in the current assembly. This round changes the selection gallery, not the production assembly or main explorer. [Selection record](../design/proposals/frame-redesign-r8/scope.json).
+
+Original fan-art interpretation, using the [licensed Unit-01 model](https://www.goodsmile.com/en/product/59101/MODEROID%2BEvangelion%2BUnit-01) as a character reference. No commercial artwork was traced.

@@ -1,4 +1,6 @@
-# R7 — Hanafuda retained, Mecha and Kumiko alternatives
+# R7 — historical Mecha and Kumiko alternatives
+
+**Subsequent decision:** all six R7 candidates were rejected. Hanafuda stays; [R8](../frame-redesign-r8/) contains the current selected collection and one Evangelion proposal. The frozen R7 artwork remains historical.
 
 Hanafuda's R6 paths and palette are retained exactly following the user's selection. **M1–M3 and K1–K3 are proposals, not approved artwork.** Caramelo, Lucha, Cartucho 8 and Terminal were rejected; the old Mecha was rejected for redesign. Their historical files remain in R6, not in the active selection.
 
@@ -25,7 +27,7 @@ python3 tools/prepare_frame_redesign_r7.py
 python3 tools/render_frame_artwork.py design/proposals/frame-redesign-r7
 FLAN36_ARTWORK_REVIEW=frame-redesign-r7 python3 tools/freecad/run_macos.py tools/freecad/prepare_frame_artwork_review.py
 FLAN36_ARTWORK_REVIEW=frame-redesign-r7 python3 tools/render_frame_artwork_review.py
-python3 tools/build_frame_review_page.py
+FLAN36_ARTWORK_REVIEW=frame-redesign-r7 python3 tools/build_frame_review_page.py
 ```
 
 SVG rasterization needs `rsvg-convert`, FreeCAD supplies its runtime, and native rendering needs VTK. Ignored review meshes under `build/frame-redesign-r7/geometry/` are reproduced by these commands. Validate with the geometry receipt, master hashes and visual comparison. After publication, run `python3 tools/check_frame_review_public.py --revision R7 --commit <published-commit>` for exact public readback.

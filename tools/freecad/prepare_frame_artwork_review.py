@@ -11,7 +11,7 @@ import Part,MeshPart
 from frame_review_geometry import face,regions
 ROOT=Path(__file__).resolve().parents[2]
 FOLDER=os.environ.get('FLAN36_ARTWORK_REVIEW','frame-redesign-r6')
-assert FOLDER in ('frame-redesign-r6','frame-redesign-r7')
+assert FOLDER in ('frame-redesign-r6','frame-redesign-r7','frame-redesign-r8')
 OUT=ROOT/'design/proposals'/FOLDER
 BUILD=ROOT/'build'/FOLDER/'geometry'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

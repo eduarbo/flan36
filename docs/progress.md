@@ -12,9 +12,13 @@
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
-## Revision I — Hanafuda retained; Mecha and Kumiko choices
+## Revision I — selected collection and Evangelion
 
-The user selected Hanafuda with its R6 shapes and palette unchanged. Caramelo, Lucha, Cartucho 8 and Terminal were rejected; the previous Mecha was rejected for redesign. [R7](frame-proposals.md) offers three Mecha and three Kumiko alternatives with exact dimensions, colors and matching review solids. Selection precedes artwork integration; the production assembly and main viewer are unchanged.
+The user rejected all six R7 Mecha and Kumiko candidates. [R8](frame-proposals.md) retains Talavera, Game Boy, SNES, Phone, iPod and Hanafuda unchanged and adds one Evangelion Unit-01 proposal with M1's exact palette. The public selection gallery contains only these six selected designs and the new proposal. Evangelion approval and Hanafuda integration remain pending; the main assembly and explorer are unchanged.
+
+## Revision I — Hanafuda retained; historical R7 choices
+
+The user selected Hanafuda with its R6 shapes and palette unchanged. Caramelo, Lucha, Cartucho 8 and Terminal were rejected; the previous Mecha was rejected for redesign. [R7](../design/proposals/frame-redesign-r7/) offered three Mecha and three Kumiko alternatives with exact dimensions, colors and matching review solids. Selection precedes artwork integration; the production assembly and main viewer are unchanged.
 
 ## Revision I — six new artwork directions, historical R6
 

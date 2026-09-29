@@ -5,9 +5,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
 import argparse,concurrent.futures,datetime,hashlib,json,subprocess,urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def verify(commit,revision='R7'):
+def verify(commit,revision='R8'):
     commit=subprocess.check_output(['git','rev-parse',commit],cwd=ROOT,text=True).strip()
-    folder='frame-redesign-'+revision.lower();namespace='docs/frame-proposals'+('/r7' if revision=='R7' else '')
+    folder='frame-redesign-'+revision.lower();namespace='docs/frame-proposals'+('/'+revision.lower() if revision in ['R7','R8'] else '')
     tree=subprocess.check_output(['git','ls-tree','-r','--name-only',commit,'--',namespace],cwd=ROOT,text=True).splitlines()
     paths=[p for p in tree if not p.endswith('seam-comparison.png')]
     if 'docs/frame-proposals/index.html' not in paths:paths.insert(0,'docs/frame-proposals/index.html')
@@ -25,8 +25,8 @@ def verify(commit,revision='R7'):
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:assets=list(pool.map(check,paths))
     result={'schema_version':1,'verified_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_commit':commit,
         'gallery_url':'https://eduarbo.github.io/flan36/frame-proposals/?rev='+commit,
-        'checked_assets':len(assets),'assets':assets,'artwork_status':('HANAFUDA_SELECTED_MECHA_AND_KUMIKO_PENDING' if revision=='R7' else 'PROPOSALS_AWAITING_USER_APPROVAL'),'physical_acceptance':False}
+        'checked_assets':len(assets),'assets':assets,'artwork_status':({'R8':'SELECTED_COLLECTION_EVANGELION_PENDING','R7':'HANAFUDA_SELECTED_MECHA_AND_KUMIKO_PENDING'}.get(revision,'PROPOSALS_AWAITING_USER_APPROVAL')),'physical_acceptance':False}
     out=ROOT/('validation/revI-'+folder+'-public.json');out.write_text(json.dumps(result,indent=2)+'\n')
     print('PASS:',len(assets),'public gallery/source files match',commit)
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--commit',default='HEAD');p.add_argument('--revision',choices=['R6','R7'],default='R7');a=p.parse_args();verify(a.commit,a.revision)
+    p=argparse.ArgumentParser();p.add_argument('--commit',default='HEAD');p.add_argument('--revision',choices=['R6','R7','R8'],default='R8');a=p.parse_args();verify(a.commit,a.revision)

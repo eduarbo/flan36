@@ -24,7 +24,7 @@ def render(out):
         return b
     def svg(name,w,h,b,mm=False,png=False):
         suffix='mm' if mm else ''
-        s=f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}{suffix}" height="{h}{suffix}" viewBox="0 0 {w} {h}"><metadata>Flan36 {rev}; unapproved exact artwork; master SHA256 {digest}</metadata>{b}</svg>\n'
+        s=f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}{suffix}" height="{h}{suffix}" viewBox="0 0 {w} {h}"><metadata>Flan36 {rev}; exact artwork, selection status in master; master SHA256 {digest}</metadata>{b}</svg>\n'
         f=out/(name+'.svg');f.write_text(s)
         if png:subprocess.run(['rsvg-convert','-o',str(out/(name+'.png')),str(f)],check=True)
     def swatches(s,x,y,spacing=225):
@@ -73,7 +73,7 @@ def render(out):
     groups=master.get('presentation',{}).get('collections')
     if groups:
         sheet([k for g in groups for k in g['keys']],'collection',3)
-        for g in groups:sheet(g['keys'],g['name'],len(g['keys']),g['title'])
+        for g in groups:sheet(g['keys'],g['name'],min(3,len(g['keys'])),g['title'])
     else:
         sheet(keys,'collection',3)
         for i,name in enumerate(['collection-a','collection-b','collection-c']):sheet(keys[i*2:i*2+2],name,2)
