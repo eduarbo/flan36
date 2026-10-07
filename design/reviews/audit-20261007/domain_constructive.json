@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "task_id": "flan36-exhaustive-audit-20261007-domain-constructive",
+  "run_id": "flan36-exhaustive-audit-20261007-domain-constructive-provider",
+  "provider": "codex-app-subagent",
+  "role": "domain_constructive",
+  "role_assignment_sha256": "175b3ec9ed9f69edf0cb880d579c8681ed409a0f0128a0490a2167e37e36a5bd",
+  "status": "completed",
+  "summary": "Controller-condensed English transcription of the independent read-only reviewer final report. Review delivery completed; product acceptance failed. Snapshot 8cd6ec78527d732652e206bcf46da0365772c17b. No execution, mutations, external effects or subdelegation. Claims below distinguish static evidence from requested dynamic confirmation.",
+  "findings": [
+    {
+      "code": "CAD_DISPLAY_SHIFT_BREAKS_MATING_CHAIN",
+      "claim": "HIGH \u2014 The documented DisplayShiftY 2.4 to 3.4 mm edit shifts the display board but not the socket, male contacts or solder reserve; predicted 1 mm misregistration.",
+      "evidence": [
+        "docs/freecad.md:30; tools/freecad/level_stack.py:183-227; native Document.xml expressions"
+      ]
+    },
+    {
+      "code": "CAD_R4_ROOF_EDIT_CHANGES_INLAY_DEPTH",
+      "claim": "MEDIUM \u2014 FrameTop +0.4 leaves the ordinary inlay floor at 13.19 mm: depth grows to 0.8 mm and calculated ordinary backing falls to 0.6 mm, below the declared 0.8 mm minimum. Native section verification requested.",
+      "evidence": [
+        "docs/freecad.md:24; tools/freecad/approved_frames.py:115-121; tools/freecad/build_revI.py:368-369"
+      ]
+    },
+    {
+      "code": "MECHANICAL_BOM_OMITS_DIODES",
+      "claim": "MEDIUM \u2014 All 36 BOM diodes are absent from the nominal installed mechanical model and its collision set. This is missing coverage, not a demonstrated collision.",
+      "evidence": [
+        "docs/parts.md; tools/freecad/build_revI.py:304-363; tools/freecad/export_pcb_components.py:261-276; FCStd PartID inventory"
+      ]
+    },
+    {
+      "code": "DOC_CURRENT_FRAME_DIMENSIONS_STALE",
+      "claim": "MEDIUM \u2014 The current customization table says roof 1.2 mm and glass margin 0.4 mm, versus current parameters 1.4 and 0.1 mm.",
+      "evidence": [
+        "docs/customize.md:49-61; docs/freecad.md:26; design/revI.json parameter_values_mm"
+      ]
+    }
+  ],
+  "recommendations": [
+    "Confirm the documented CAD edits using isolated native probes, then repair shared parameter dependencies and current validation harnesses.",
+    "Retain unrouted PCB, integrated firmware, exact connector fit, retention, charging, BLE and power as unresolved product requirements.",
+    "Check the USB corridor against cases and broaden cap/screw coverage before claiming a collision; neither hypothesis was established in this static review."
+  ],
+  "changed_paths": [],
+  "validations": [
+    {
+      "name": "Static source and native XML review",
+      "status": "passed"
+    },
+    {
+      "name": "Baseline hashes preserved",
+      "status": "passed"
+    },
+    {
+      "name": "Documented parameter and validation coherence",
+      "status": "failed"
+    },
+    {
+      "name": "Functional native/browser/electrical tests and physical acceptance",
+      "status": "not_run"
+    }
+  ],
+  "defects": [
+    {
+      "severity": "HIGH",
+      "code": "CAD_DISPLAY_SHIFT_BREAKS_MATING_CHAIN"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "CAD_R4_ROOF_EDIT_CHANGES_INLAY_DEPTH"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "MECHANICAL_BOM_OMITS_DIODES"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "DOC_CURRENT_FRAME_DIMENSIONS_STALE"
+    }
+  ],
+  "blockers": [],
+  "next_actor": "personal-ops"
+}

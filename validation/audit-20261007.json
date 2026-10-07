@@ -1,0 +1,3959 @@
+{
+  "schema": "flan36-audit-20261007-1",
+  "request_ref": "user:20261007:exhaustive-flan36-audit",
+  "requested_outcome": "Exhaustive engineering audit of current Flan36: CAD/mechanics, PCB/electronics, printing, viewer/configuration, documentation and provenance; prioritized findings without unrequested product changes.",
+  "audit_delivery": "complete",
+  "overall_keyboard": "partial digital prototype",
+  "audited_commit": "8cd6ec78527d732652e206bcf46da0365772c17b",
+  "reviewed_at": "2026-10-07T08:31:57.022070+00:00",
+  "physical_acceptance": false,
+  "baseline": {
+    "clean": true,
+    "reviewed_inputs": 463,
+    "changed_reviewed_inputs": [],
+    "sha256": [
+      {
+        "path": "ATTRIBUTION.md",
+        "sha256": "d639a05187f48ac692c6345f1fd42a1d0e1f314b3dbc594af88d307cccdc4d31"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "sha256": "d227b7dee0a8644fa7cb3211abf2c9e42198e7190f45b3c6561df0945d235e8f"
+      },
+      {
+        "path": "README.md",
+        "sha256": "5c095b1cedbb345525b944c6b5a34a0099165f05ccea08503981e1a6a3df75fe"
+      },
+      {
+        "path": "components/sources.json",
+        "sha256": "4b65212f5e36c1b9fa7aba08d17187ee62f362eed34103389fa66453583b4243"
+      },
+      {
+        "path": "components/switches.json",
+        "sha256": "f4ba2ebd3125efe04f6447ed941aee8dc734a3677591fc13944170a54b410a8b"
+      },
+      {
+        "path": "design/approved-frame-implementation.md",
+        "sha256": "61861ff8a17fc90f9228c1e08fe489ea7805cb00a37cc610f9053cd28f77bb0a"
+      },
+      {
+        "path": "design/approved-frame-master-r4.json",
+        "sha256": "a2d6d09ca9e4b4eead07031125409d7464bd52d37b699e7c4e069a84cd260c2b"
+      },
+      {
+        "path": "design/approved-viewer-selection.md",
+        "sha256": "a576d10ee2962f6d61130e11197a48800e2c25d6e841f61cea11f478dff1a129"
+      },
+      {
+        "path": "design/batteries.json",
+        "sha256": "1c4d2037b6fb04ea7aab6ba1d2f780eda9d886ebf8dd1c403c2721743d0424ff"
+      },
+      {
+        "path": "design/branding-caramel-prompts.json",
+        "sha256": "e854b931c9515ff6e62dc0ddc39a24019351d0b015049f54036acaac8cf77a5f"
+      },
+      {
+        "path": "design/branding-outline-vectors.json",
+        "sha256": "b1a6a6bb209f3858ce46e0ce2a709f001590ef3767daa31fdcb74329723ee08c"
+      },
+      {
+        "path": "design/branding-prompts.json",
+        "sha256": "a617ae6cc5163d705a1a5cdcc60b813c57bb5af5850984284cbd4f7d1163a276"
+      },
+      {
+        "path": "design/branding.json",
+        "sha256": "11621d047ac000acfb17a759402678b01375c942569111bb49d569fae1cee78c"
+      },
+      {
+        "path": "design/cases.json",
+        "sha256": "567d9e00633972659874b808cb2f629d24cc63a3cd8db31ce66dda3ed4081599"
+      },
+      {
+        "path": "design/configurations/default.json",
+        "sha256": "b2e8816ac2a5755612b83845579a598c46c8616607c170d99c7d01ee9b0cf5f3"
+      },
+      {
+        "path": "design/configurations/normal-sculpted.json",
+        "sha256": "c4fc6311b243c43ae35655f5edbb5eb5185c3ca23b3d5d6c9b73b6d79ee8f2ba"
+      },
+      {
+        "path": "design/configurations/saddle-sculpted.json",
+        "sha256": "bb885cf679d8eef9f7f819e1aaffeb57408e4ed7370c6c42ef5291c845251b63"
+      },
+      {
+        "path": "design/corner-stack-workflow.json",
+        "sha256": "3c8b58eac457a10ec7196c3ef926c3e11f15ac370bab3ef1dbf9a0b5957e447c"
+      },
+      {
+        "path": "design/customization-workflow.json",
+        "sha256": "01e981c46f2981f0bf84fc905756811b10b36c489a7ef85ecdd7a0cfa00927c4"
+      },
+      {
+        "path": "design/display-seam-implementation.md",
+        "sha256": "a9f6c5b903ad188c9b3e365794ef78407261b6d6b23e92699fa55cbe7ded720c"
+      },
+      {
+        "path": "design/display-seam-redesign.json",
+        "sha256": "27471b8d3f37449b027458ff136bb88a8a7b585be142445a910af1a980929669"
+      },
+      {
+        "path": "design/frame-collection-workflow.json",
+        "sha256": "7a7896d1bc7a920464baef43119d2ea6ff46a3d3b6fd0ac9a135bd0778f9e924"
+      },
+      {
+        "path": "design/frame-fidelity-workflow.json",
+        "sha256": "4c41aafa99664e07f019034c95917899a6a50d76f5fb2c790ca5c602c08e60b8"
+      },
+      {
+        "path": "design/frame-finishes.json",
+        "sha256": "c8cc7621908f3c768a8d7b90d2a59f6df482bb26e97cb439e895f8366ff96c08"
+      },
+      {
+        "path": "design/frame-orientation.md",
+        "sha256": "965332d9a40da0468677e693b6b4e0cf0c323177ecc56fe9c646ec46dd8eea4b"
+      },
+      {
+        "path": "design/frame-selection.json",
+        "sha256": "c21c87bb32898f09dff74f7d8be2c7f06e1dd49acf4de0a7465435117adb6bba"
+      },
+      {
+        "path": "design/freecad-workflow.json",
+        "sha256": "125e4231e818a897b36260102d1571f852ebfc4beb826dc6631a22df7918054e"
+      },
+      {
+        "path": "design/keycap-themes.json",
+        "sha256": "39c422df5764fb5d0d839eab80b98207dcf8f6313686e91eea779946a7908459"
+      },
+      {
+        "path": "design/layout.json",
+        "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+      },
+      {
+        "path": "design/level-case-workflow.json",
+        "sha256": "9d51a8ac1dd3534acf98756812167481430fc045c2531faac882f184e3c43fc3"
+      },
+      {
+        "path": "design/rebrand.json",
+        "sha256": "33233ee46cb99906b291e2fd034482b8ce8a3e3906a0be405ff2f598569a69d3"
+      },
+      {
+        "path": "design/revE.json",
+        "sha256": "825dd463d708fc7ec37a2bed6a360dbcdc2d10294d5befe65548282dc194f82c"
+      },
+      {
+        "path": "design/revF-drills.json",
+        "sha256": "45102215a31b972fbf4855127f7e62219f9de2c416f0d7298af7ca26ff7c380a"
+      },
+      {
+        "path": "design/revF-footprints.json",
+        "sha256": "91b27d1a47bd01a695502c63ff7218f750e1546c252fd14d90db559dc8060884"
+      },
+      {
+        "path": "design/revF-profiles.json",
+        "sha256": "4a0735a06c5502398dee7f2589226451ce8ba6d4f987f38a407f25b0d729db48"
+      },
+      {
+        "path": "design/revF.json",
+        "sha256": "f2d2eebb083478ebc3f0b3c67841a98b59ea43548839b366c9d7efcec814ea87"
+      },
+      {
+        "path": "design/revG-frame-profiles.json",
+        "sha256": "7b5eed194cdaaadd7aac054b6c0bb4a7653ed3272c59783f87fd5d9b706036ba"
+      },
+      {
+        "path": "design/revG-workflow.json",
+        "sha256": "4077c643b240d904bc18b2d17105b6e8d809e978273f4dcf945f9fa71203f8c9"
+      },
+      {
+        "path": "design/revG.json",
+        "sha256": "d81a3b1b3673cf414f0be69061314ed9fbb9d822d4753de361b73220b868eecb"
+      },
+      {
+        "path": "design/revH-frame-profiles.json",
+        "sha256": "c590506a2f1a31d5ed8936e704c31b1c88443ce17908c7addb5c23a3449b6edf"
+      },
+      {
+        "path": "design/revH-profiles.json",
+        "sha256": "e5d3c7988c03da4f363a640a3d078e8257e0410085abb5de7d2a219d5531f79d"
+      },
+      {
+        "path": "design/revH-workflow.json",
+        "sha256": "4b71ca8fee0ca2c54e34f6b72e311100ef59f0014afcc420b2a1105637da8cbe"
+      },
+      {
+        "path": "design/revH.json",
+        "sha256": "9147697afe8e84911978ff18d697e8f97494e93b804e641de9779108e07cd1f1"
+      },
+      {
+        "path": "design/revI-frame-profiles.json",
+        "sha256": "9f75760ab53bfb554123ddc5223816a5177c9c7478eabad4337b841df38d874c"
+      },
+      {
+        "path": "design/revI-lcd-curve-baseline.json",
+        "sha256": "05281860afcfd053e811651f93af733e7c5bb994f9c8889f8a75f535a47ebffc"
+      },
+      {
+        "path": "design/revI-local-curves-baseline.json",
+        "sha256": "0aa8a3745adb7baefc40a7817ce79aa179aed94f1a6baafa93d77e3612357aac"
+      },
+      {
+        "path": "design/revI-magnets.json",
+        "sha256": "4f953719a2e36c69fd566e90c3b0e6071d90fe5a990126e73a24186910e81ca8"
+      },
+      {
+        "path": "design/revI-mounts.json",
+        "sha256": "ee6a61232b1a8c308748af1174793664c41238a6c36cd166209e6d011d5592bd"
+      },
+      {
+        "path": "design/revI-request.json",
+        "sha256": "a100153027fce124cfb4724bdf524a625cdd4f56e30af8c84dc81be186ffd02d"
+      },
+      {
+        "path": "design/revI-rim-baseline.json",
+        "sha256": "22098506a8528c77043b604dbac6c1437bf44970aa15eb780515b9b40c5d2599"
+      },
+      {
+        "path": "design/revI-wire-study.json",
+        "sha256": "ae2a204b383e6df81f59706e42a98c163f549183767da38c634fc8983d94a2f1"
+      },
+      {
+        "path": "design/revI.json",
+        "sha256": "4b81884b1099bb9429aa1f8dd5faac29fc6e7b25e0e0f85579474d1c39d2b33a"
+      },
+      {
+        "path": "design/reviews/themes-components/component-fidelity-adversarial_risk-1.json",
+        "sha256": "cf42d880b1f246865a6955d4befa3fc1982c9a8eecec7731e29580eda74eb67a"
+      },
+      {
+        "path": "design/reviews/themes-components/component-fidelity-adversarial_risk-2.json",
+        "sha256": "63849539ff30ec9e900f746df1dcb3788d942ece7f16998319dad50847140e27"
+      },
+      {
+        "path": "design/reviews/themes-components/component-fidelity-domain_constructive-1.json",
+        "sha256": "1c47183f6cf4cca363cb1c3f60c91e7b9c0f415b8be08b97d40f6b60a8983426"
+      },
+      {
+        "path": "design/reviews/themes-components/component-fidelity-domain_constructive-2.json",
+        "sha256": "60bdb91d8890d8264f8632e069185bca935eae9a791f917157fe63e6a4599cf3"
+      },
+      {
+        "path": "design/reviews/themes-components/themes-print-adversarial_risk-1.json",
+        "sha256": "9627eb4dddc0da050c2cf4210be6712fe231473c2dba551655925d1c63050cb1"
+      },
+      {
+        "path": "design/reviews/themes-components/themes-print-adversarial_risk-2.json",
+        "sha256": "f5f0f32097d92cd60faa49ac3d9baf6d1294b00a81243929b26206862fd79717"
+      },
+      {
+        "path": "design/reviews/themes-components/themes-print-domain_constructive-1.json",
+        "sha256": "5a79c487b7f89ebae192a3f772c18099d1746ce4c7b86ec9417bafef5212ef5f"
+      },
+      {
+        "path": "design/reviews/themes-components/themes-print-domain_constructive-2.json",
+        "sha256": "8619a829924801834338114e544d3762b4cd938c82ddd85fa2f17c804ef1879e"
+      },
+      {
+        "path": "design/slim-flush-workflow.json",
+        "sha256": "3e8f0fcffe66c3ea867239e088b46d574b26856c78b13e63b8aff7562cfac0be"
+      },
+      {
+        "path": "design/themes-components-workflow.json",
+        "sha256": "b4b4ea1928d0994a59f929a639ba32163a998f49b09b77f925073b7b5fddb157"
+      },
+      {
+        "path": "design/themes.json",
+        "sha256": "abfbfb3132bbf3f4d2b4ae3833b4905e67f3a6c7a1f617a63b55b425a793f805"
+      },
+      {
+        "path": "design/viewer-multicolor-workflow.json",
+        "sha256": "05c9a7349f35f6f113996d95d92fc765b4bc2571580cf4f9cd1383b00a148f8a"
+      },
+      {
+        "path": "design/viewer-sidebar-workflow.json",
+        "sha256": "722efec82a1ac04e5c8da6b80402aea7af5eda7e24a33844d4354aedeee88a16"
+      },
+      {
+        "path": "design/viewer-ux-workflow.json",
+        "sha256": "285ce6fcf79b2a1cf47a83fa4fee5ec5cfe9f2bac99588071c080bc19ad4c903"
+      },
+      {
+        "path": "docs/branding.md",
+        "sha256": "63bdbcf7dd1503b4b8036f180ef880b5f9a68b085e0bceaa5d17010c3faf6fc4"
+      },
+      {
+        "path": "docs/branding/outline/README.md",
+        "sha256": "ebbca90d068de0d81bac0ff0430c149383735d7f2044070f4f807f8de8e91f82"
+      },
+      {
+        "path": "docs/build.md",
+        "sha256": "42f20dc98a3154be4f46eb70cbb1d38860035062b40d0109cc49a42079a02967"
+      },
+      {
+        "path": "docs/cad.md",
+        "sha256": "530b0895a901cf7da63e6dde9d30c18ec93cdc272ea9735a15a55d1ca3591653"
+      },
+      {
+        "path": "docs/cases.md",
+        "sha256": "932daac33e1b370c39d7d4a094e71ccf6c597e63369361481cf7d8c0d1b8e01f"
+      },
+      {
+        "path": "docs/customize.md",
+        "sha256": "085e9af48e511c57811a9aa58f078a69a7ac7145d237b481820afdcedbf6d5de"
+      },
+      {
+        "path": "docs/design.md",
+        "sha256": "41ea86676b327bf9257937b8b9c644468563c363bf8ea1de8ea2b1d1504d4781"
+      },
+      {
+        "path": "docs/frame-comparison.md",
+        "sha256": "d91438089295d36182418868446e0e15fc937bd8c35d9f72849f8dca856b281c"
+      },
+      {
+        "path": "docs/frame-proposals.md",
+        "sha256": "8f41ff515c863f628242d3107c8ccd766e30a85106b00373c909ffa6f12dea73"
+      },
+      {
+        "path": "docs/frames-extra.md",
+        "sha256": "33227dbdcb181e07b76497e8df13df7bed438a24926fa8e94e2e21e9f9f3b11e"
+      },
+      {
+        "path": "docs/freecad.md",
+        "sha256": "aa70dbf077ea1413abb0611e0649f0803469ca09457d20fc9b9ad0da1b69366d"
+      },
+      {
+        "path": "docs/level-stack.md",
+        "sha256": "b18987fd8b3e5934493514f7c1c016138c7e2857cb76093dbd451a8d613bc76a"
+      },
+      {
+        "path": "docs/parts.md",
+        "sha256": "9ba0828ab370cc4f7842bd39da0de20730cb91c0afc5b717fa575fff78340792"
+      },
+      {
+        "path": "docs/progress.md",
+        "sha256": "3946ea99473e8715f58ab591d30b98e1e654f2bf1788d3e13d777ec7a48bab34"
+      },
+      {
+        "path": "docs/revF-review.md",
+        "sha256": "9e7bfbe04d6708084441a9ef75830386cabc660896e7120f05e2d6fc0064a5fa"
+      },
+      {
+        "path": "docs/revG-review.md",
+        "sha256": "fe1b8babcbfd8918c3ac991dd0d3db83a96050edf59607559da0e5007edf2beb"
+      },
+      {
+        "path": "docs/revH-review.md",
+        "sha256": "a413ed6014d0420a17322d896c4c374ea08b6e3eb8b6eb71789558b47377a6cd"
+      },
+      {
+        "path": "docs/revI-review.md",
+        "sha256": "38b0392dd307b3accb7d09b2c0b88e2754a60b29eb53fc12ad890df743bbb8e1"
+      },
+      {
+        "path": "docs/reviews/2026-09-28.md",
+        "sha256": "21542d1f7e5299ce798e384e277e15a9374fced76ce987fbc21fe13dde3f9ff4"
+      },
+      {
+        "path": "docs/reviews/reliability-plan.md",
+        "sha256": "ee6911caf09aae3d1f2c0cac92d59b09bda4e92578659cd2425003628ff30555"
+      },
+      {
+        "path": "docs/slim-flush.md",
+        "sha256": "62e883c8c4cb9a4acbe844fb0688a086dfc889bde028e142e22551481897ccd7"
+      },
+      {
+        "path": "docs/slim-mount-study.md",
+        "sha256": "35f6bd4c3b4de22008e53a0392f6b4154fe97ed93853fe872bb912688c5b8569"
+      },
+      {
+        "path": "docs/themes-printing.md",
+        "sha256": "8bb393819dc3a77040373e1a83e57edc12826c4741f6ed1d8e821a7663efe2a1"
+      },
+      {
+        "path": "docs/viewer.md",
+        "sha256": "690fe77466eb5ddc68816a74f8bde41f67693c2e42c92395255975676c9679c7"
+      },
+      {
+        "path": "hardware/revI/flan36-left.kicad_pro",
+        "sha256": "a9352cc6bb61091b0a61745ca0fd41fef3dd834f6e9f30e843a48bb2782a7511"
+      },
+      {
+        "path": "hardware/revI/flan36-left.kicad_sch",
+        "sha256": "ae9fe65e7c66e4794b203737a7257d5e1f35871db50395350ca9f705d220768e"
+      },
+      {
+        "path": "hardware/revI/flan36-right.kicad_pro",
+        "sha256": "24a0c91fd299f8ec03704a672b3fff97d209da99ef8c6294daf80b3e619fead9"
+      },
+      {
+        "path": "hardware/revI/flan36-right.kicad_sch",
+        "sha256": "32a1f29673392286373726a5fa3e8f64eea389a87edf94afea8955f54a658629"
+      },
+      {
+        "path": "hardware/revI/fp-lib-table",
+        "sha256": "2babe6ca95439894336d4fe8c04318de45f01cfbd76ef31689659eace9caa60c"
+      },
+      {
+        "path": "hardware/revI/libraries/Button_Switch_SMD.pretty/SW_SPDT_PCM12.kicad_mod",
+        "sha256": "588e7a56db4234dd62af532e62da069297cb9bad6dd6c761f66b7567567928a7"
+      },
+      {
+        "path": "hardware/revI/libraries/Button_Switch_SMD.pretty/SW_SPST_TL3342.kicad_mod",
+        "sha256": "81caa6cafd5ff256597f52561739fc7976cb50ca862b3b9f1605220c5e22a8f7"
+      },
+      {
+        "path": "hardware/revI/libraries/Connector_Generic.kicad_sym",
+        "sha256": "32ad1b8316a923bd5575a42023357b1848a422c913cf09bde47f8db47ccd41b2"
+      },
+      {
+        "path": "hardware/revI/libraries/Device.kicad_sym",
+        "sha256": "25182a7f13aab53c704fd0a64444b2ec382a3668a08400b1dbdfd9ea6ece2739"
+      },
+      {
+        "path": "hardware/revI/libraries/Diode_SMD.pretty/D_SOD-123.kicad_mod",
+        "sha256": "19ff31b0c962e61740b3f02f08c48f2aa8faffeaff17ca568070034a37a1bd7e"
+      },
+      {
+        "path": "hardware/revI/libraries/MountingHole.pretty/MountingHole_2.2mm_M2.kicad_mod",
+        "sha256": "ee3e3f6fe216a63a6870a93bede830e9f0273e73ba82a873c4afa902d57efe66"
+      },
+      {
+        "path": "hardware/revI/libraries/PiantorSlim.kicad_sym",
+        "sha256": "73ad0c53ed0b2b96f9de5d14c95cefa3aec978f3b37102b6336c800dec27dafc"
+      },
+      {
+        "path": "hardware/revI/libraries/PiantorSlim.pretty/Battery_pigtail_2.54.kicad_mod",
+        "sha256": "ae44c5903e60e5ad31ac039b3ab60a2a3affc6f8a8827aabe138b08c643094aa"
+      },
+      {
+        "path": "hardware/revI/libraries/PiantorSlim.pretty/JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal.kicad_mod",
+        "sha256": "599c4d80c0a1c6c539be3f4d0633b98248615ff6647c5225d8cbf9d955141867"
+      },
+      {
+        "path": "hardware/revI/libraries/PiantorSlim.pretty/nice_nano_v2_standard_edge.kicad_mod",
+        "sha256": "c0679a332074b6fb1833f1412eb1b10fb5c8cc2639c5a53bc0c4c38ce3c2384b"
+      },
+      {
+        "path": "hardware/revI/libraries/PiantorSlim.pretty/nice_view_5pin.kicad_mod",
+        "sha256": "e507b6cc27eb230516517d91b717712cabde47f2f881a251a2e602f38bceda9d"
+      },
+      {
+        "path": "hardware/revI/libraries/Switch.kicad_sym",
+        "sha256": "4c65eb0cbde9f159450e87dcd4b262b4aa2f6a4d00fdaeae93d5fd31a24df908"
+      },
+      {
+        "path": "hardware/revI/libraries/keyswitches.pretty/Kailh_socket_PG1350_optional.kicad_mod",
+        "sha256": "d16ce0a600e5bb99aa2c045f31afccc17e232835d7e607e011c2c581f630b865"
+      },
+      {
+        "path": "hardware/revI/models/left-display.step",
+        "sha256": "8948697b58c660335625731336a88cd8425f9705066abfea9d8650aa07e23bc8"
+      },
+      {
+        "path": "hardware/revI/models/left-jst.step",
+        "sha256": "80be60f9ea38475d4a0806eeebb9861348d8c498928aad95de64b4f9a72a11ee"
+      },
+      {
+        "path": "hardware/revI/models/left-slider.step",
+        "sha256": "f12fdacb2513e18ac9ca2b9fe96c591f89501db84b7ea9eae4af5f494e0699a4"
+      },
+      {
+        "path": "hardware/revI/models/right-display.step",
+        "sha256": "09fc77433d79805767683f62a5b6d18e642ff205aba71617fed034f4ac7ac179"
+      },
+      {
+        "path": "hardware/revI/models/right-jst.step",
+        "sha256": "ab37b8b218efdfe1279540b8b60629da69348997cbb4c9dcf807351d34fe66f3"
+      },
+      {
+        "path": "hardware/revI/models/right-slider.step",
+        "sha256": "ac9edd8ee0d3e51ce407a5f7e758e83ddbca5e0e243afe48e4c05f6504cd2cf5"
+      },
+      {
+        "path": "hardware/revI/sym-lib-table",
+        "sha256": "88492003598d5dcfa7b721277deebbb3b81f7a44191dd481a2f11eae8b8295ae"
+      },
+      {
+        "path": "keycaps/sources.json",
+        "sha256": "3c798e549cc17a7d3293b01ab02f28a5233dd39932b8cbebacc70b78aaa9a2be"
+      },
+      {
+        "path": "keycaps/variants-source.json",
+        "sha256": "5a9077ba592b76a05f2cdb42416cbeab1abd5e0b51e3848861af490a76eb4e4c"
+      },
+      {
+        "path": "mechanical/revI/Flan36.FCStd",
+        "sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564"
+      },
+      {
+        "path": "tools/adopt_approved_frames.py",
+        "sha256": "1226190d4b038cb8487dbf02829d9d3fcc08a3a8a18d14596d04c285cadf6001"
+      },
+      {
+        "path": "tools/adopt_display_seam.py",
+        "sha256": "2c713530dbb4199f4b98ef175c42bc4d64c9a3b3c4a79102715841da6e983f82"
+      },
+      {
+        "path": "tools/adopt_frame_collection.py",
+        "sha256": "fd21ebb7ecbabcb0dbcb760edacf52f41dcf349df97685745b09d383479e7600"
+      },
+      {
+        "path": "tools/adopt_frame_orientation.py",
+        "sha256": "f30f68053d496f02d5bcb61dce33eaf7cec33aa66dfbc24ed47b7df86a61336c"
+      },
+      {
+        "path": "tools/build_case.py",
+        "sha256": "37c5c796463b449f88ba28d544fb64278596d9bfd812d652c75588ff5345de14"
+      },
+      {
+        "path": "tools/build_frame_collection.py",
+        "sha256": "36c835a35009d1974bea26db2c33eca8cb9e6768c31fbc78fff6ada252eb8fab"
+      },
+      {
+        "path": "tools/build_frame_review_page.py",
+        "sha256": "065fd1e408c6f7b5d9f321d822b7321bb3f621b75c51b1338d48e7733d26f6fc"
+      },
+      {
+        "path": "tools/build_frame_review_r8.py",
+        "sha256": "b8aa777a8478591168b996f76e54aa08192d6beff440ea66fa7c1610238aa5fd"
+      },
+      {
+        "path": "tools/build_keycap_catalog.py",
+        "sha256": "4979a4faf2771fa8c4c7769725977cd3d98da129f12af3d2d78637bd6bcd83d1"
+      },
+      {
+        "path": "tools/build_outline_logo.py",
+        "sha256": "baa4fb96004dd9c38c50e25e18f28d2807791e93c6f8b3305ed49964731ce14b"
+      },
+      {
+        "path": "tools/build_revH_pcb.py",
+        "sha256": "0009d3689c0a1828d6885bf4fe43a31f8917110bb77bcd65eacfeabb7f4f3b4d"
+      },
+      {
+        "path": "tools/build_revH_profiles.py",
+        "sha256": "1fcc7b94432d2eb0aaed24d3aa0fd861f0de1255f5a27d673cf3d707e7775246"
+      },
+      {
+        "path": "tools/build_revI_pcb.py",
+        "sha256": "62247b76eedbef0f3b9ec81dfd7766379e57cf6b6e0f461c69463bf585844b06"
+      },
+      {
+        "path": "tools/build_revI_profiles.py",
+        "sha256": "03bc9d9add88cbb959cc3fa3530bd485071ce867aae697a69b1f7afc3a2bf9bd"
+      },
+      {
+        "path": "tools/build_revI_wire.py",
+        "sha256": "941defffcb9ba985bc6358db1f73bc70cfa722f4ef363d39f55b4c9ebe290634"
+      },
+      {
+        "path": "tools/build_viewer_revF.py",
+        "sha256": "9d68d9e037d800895a28de8ede15c3f291e454688f81f61bff3f4d52df4251ae"
+      },
+      {
+        "path": "tools/build_viewer_revG.py",
+        "sha256": "7b5e90699a6d664b50258e4cca6b5a3656bfd75e8f7f4c0178febffaece88527"
+      },
+      {
+        "path": "tools/build_viewer_revH.py",
+        "sha256": "50ac574d2d396c286f780b0c23c5cfaa7ff306fec704a402f7281c77311c5e63"
+      },
+      {
+        "path": "tools/build_viewer_revI.py",
+        "sha256": "142c259831c39948304868471b270a159f539331a21279b29fd56614439c7409"
+      },
+      {
+        "path": "tools/build_viewer_scene.py",
+        "sha256": "6498585ea3ddcda012874abe7978300715117dcf9455405810c7177c1548eaf7"
+      },
+      {
+        "path": "tools/check_approved_3mf.py",
+        "sha256": "324d85ab8ebcb7f5527a8ba714ee4c3904513a41323a5264d351a5f150a061b0"
+      },
+      {
+        "path": "tools/check_approved_frames.py",
+        "sha256": "625f64d4599fc9c0866ab78c2794ee547d6a680f19c93f4c2a89865658b24f24"
+      },
+      {
+        "path": "tools/check_artifacts.py",
+        "sha256": "557a2aa7a9c66fe596614f3765e6c8ed5bb00f9fc781437b57caf1d961ffd46a"
+      },
+      {
+        "path": "tools/check_cap_rows_delivery.py",
+        "sha256": "999cfa8e24060add2892a938c7a44333d99d1779814034f766ff1d16a6170b2a"
+      },
+      {
+        "path": "tools/check_customization_delivery.py",
+        "sha256": "66e4db065efe3d6152fd8c9add7dfe98e2d4d80e2dc35297e2c63afd64194aab"
+      },
+      {
+        "path": "tools/check_frame_artwork.py",
+        "sha256": "7acc09a000e3f1d3537fdd8822f7b9e344c493f0c5957534fd2f4f820012089c"
+      },
+      {
+        "path": "tools/check_frame_review_public.py",
+        "sha256": "1477de2fb76fcbb7e22d7bb523587164c30ba538b12dd2944a123e3326943716"
+      },
+      {
+        "path": "tools/check_geometry_checksum_policy.py",
+        "sha256": "e66b3dc28175758bf1c726fa80a021a6d40475a100313ca0160104694b559cda"
+      },
+      {
+        "path": "tools/check_keycap_registration.py",
+        "sha256": "d2eba98d5fa6444f8485730c823696b8967b56b5a9334d6923b82e74934f5558"
+      },
+      {
+        "path": "tools/check_layout.py",
+        "sha256": "1ba5415a23c12614caab4aab3bea7afb3c7705d38af5c654f793d40da8dc3be1"
+      },
+      {
+        "path": "tools/check_level_delivery.py",
+        "sha256": "f0e6befe12abbc48c0beda803017a9500ef8674beef3d5cd32d3b078f4bd3822"
+      },
+      {
+        "path": "tools/check_outline_logo.py",
+        "sha256": "ffd81534c7695da15e9abfda7f1e63c53e42a9c840a69ee89129dc7eb60d6d40"
+      },
+      {
+        "path": "tools/check_parts_links.py",
+        "sha256": "3c69eb65de7d611710db5a99404e9edd5de93cfb889fdaacd05dc5b1cfab21fa"
+      },
+      {
+        "path": "tools/check_pcb_study.py",
+        "sha256": "fb263c7c4c73f8405664dc8f39bd8280b37044309595af89205344387e372298"
+      },
+      {
+        "path": "tools/check_print_kit.py",
+        "sha256": "55fe33113c198a481f8722095658732f727b7b92022bb339de30900f73970640"
+      },
+      {
+        "path": "tools/check_public_delivery.py",
+        "sha256": "89946cf3a44a034f51e2fe6968cda28c93e1138f152a0d8fcf2044500edd3cbe"
+      },
+      {
+        "path": "tools/check_rebrand.py",
+        "sha256": "5edac0b2c2b61332faf0c9a720054ed7e4a15f223283cbe30ae004224ad60133"
+      },
+      {
+        "path": "tools/check_revF.py",
+        "sha256": "a38b01e38670ea98d47614ab9a519feb1b910154fd15fa5aa9142fed29dacaa2"
+      },
+      {
+        "path": "tools/check_revG_config.py",
+        "sha256": "80a6334c177a586e762bf4ffedf14399254fce160fc3d9f1d0666353d3a0296f"
+      },
+      {
+        "path": "tools/check_revG_delivery.py",
+        "sha256": "e9c28913fc3db1756158ff7002912abd464ada8485808b553f164c278f06e8bd"
+      },
+      {
+        "path": "tools/check_revH_config.py",
+        "sha256": "7ff8f2585dbdadd0e7f799fec285545b39bd3fb83fb1de747acae4bd8a9d4d21"
+      },
+      {
+        "path": "tools/check_revH_delivery.py",
+        "sha256": "4aec8d263a6c9348730cd9d8f8fb4d09d1303b6fd8780f7a656db62e243c533c"
+      },
+      {
+        "path": "tools/check_revH_outline.py",
+        "sha256": "cc2e9bb4871a7a71933f08f8c3a75cf9bfbc9b1cb4f7c925a9c7485b84a0ac3a"
+      },
+      {
+        "path": "tools/check_revH_pcb.py",
+        "sha256": "b8ddc0d67ea0699cb0dadaa15be23c2cbbf08cfb55b9b6d4306f2d1f63709913"
+      },
+      {
+        "path": "tools/check_revI_config.py",
+        "sha256": "99f5ae2a0230cffae8e4d79402ae25e566b9aa099068a1610247736fad949ac1"
+      },
+      {
+        "path": "tools/check_revI_delivery.py",
+        "sha256": "f7fcdfdfe23340dfb51bfd73e2bae420233e6001b3ad70ce26c88162cdb5dd56"
+      },
+      {
+        "path": "tools/check_revI_fasteners.py",
+        "sha256": "6428588754e41f411244181eeffeff2312e3cf19470245979b59b8cbf2149dee"
+      },
+      {
+        "path": "tools/check_revI_outline.py",
+        "sha256": "efc961a99b0463879dfb507648e9048494b9535fb23e5175d296edb0ac896edc"
+      },
+      {
+        "path": "tools/check_revI_pcb.py",
+        "sha256": "acb624a05fccf4afe2f9885d09759f9666c257f4c73df90fa832631027f1af74"
+      },
+      {
+        "path": "tools/check_slim_flush_delivery.py",
+        "sha256": "b256235b90de2bef0e4837ef4e80c0a4cd6a3eea3cc6fe1a0d9da6a15b574c65"
+      },
+      {
+        "path": "tools/check_stepup_readback.py",
+        "sha256": "95336da454f7ebe4e54f89b79a93245ed02deea559ba9228a316cf48c893debe"
+      },
+      {
+        "path": "tools/check_viewer.py",
+        "sha256": "d355e3729e8f912921b1a3282ade2358498d2c7c51ea8409fa35141bebedec01"
+      },
+      {
+        "path": "tools/check_viewer_revF.py",
+        "sha256": "77701eee74b0b68eeedf034d80539c47b5e5290c80f8a0c8d1d408d8d2541d75"
+      },
+      {
+        "path": "tools/check_viewer_revG.py",
+        "sha256": "35fe7ab3d99db0b80395d5be69312c8771999c1c564e70e1f71e1c2c6b2a22d5"
+      },
+      {
+        "path": "tools/check_viewer_revH.py",
+        "sha256": "1a349278347747b4d3ed384708a1173cf68e69b1b741566ef0d9a4c31c28fc97"
+      },
+      {
+        "path": "tools/check_viewer_revI.py",
+        "sha256": "fa65bff3ef52e1152bfccbb8350bd4d17aa7b1cc107ba4dbb4affbc991891ecf"
+      },
+      {
+        "path": "tools/frame_finishes.py",
+        "sha256": "826943355f831f1c933de0e02e8082c343f4ea47e482cab0751b48df0844606c"
+      },
+      {
+        "path": "tools/freecad/approved_frames.py",
+        "sha256": "1bfd538b251d00fcd617cb0ab5c3865e9bdcc7bcb067518402f34820873fe7d5"
+      },
+      {
+        "path": "tools/freecad/build_native.py",
+        "sha256": "976b02ca18392b938ea3f42cde4b5a6b24b722586010f28c5fe3fdd702b2200a"
+      },
+      {
+        "path": "tools/freecad/build_revG.py",
+        "sha256": "179fb69203a9e5ea7541ad4560fda165f091a8ed0e0c395317c02883dcc042ab"
+      },
+      {
+        "path": "tools/freecad/build_revH.py",
+        "sha256": "c5428157819f50ac4ade624a8b9e4338f8aa890239d60837b1458f653af5bd96"
+      },
+      {
+        "path": "tools/freecad/build_revI.py",
+        "sha256": "37d68494dd9c511855321854dfc77a38278a212cef96262d19e3db61d40341ec"
+      },
+      {
+        "path": "tools/freecad/check_analytic_bounds.py",
+        "sha256": "225b0b7d0f392b7e9a96519e0598a611f7592691e5969a7ea478729dff1f1cd1"
+      },
+      {
+        "path": "tools/freecad/check_approved_frames.py",
+        "sha256": "709c7716ea71adfb88f66841fdeaea95b2d7787a4875e654c3a8ec28928a6a2f"
+      },
+      {
+        "path": "tools/freecad/check_cap_rows.py",
+        "sha256": "66e998c18d2aec3da0e2c0e729359d6aa968172e9580414fd176ac5ed58fe6a0"
+      },
+      {
+        "path": "tools/freecad/check_cases.py",
+        "sha256": "3510d10fe2d228fb3bc8fa3a126a0d7b21afd5321ccd652790cf057f46b42a22"
+      },
+      {
+        "path": "tools/freecad/check_components.py",
+        "sha256": "275cb21826e2e1fa1629d5fc4398d2d98d1e6ea8348ef9eedc1233eec707c892"
+      },
+      {
+        "path": "tools/freecad/check_document_label.py",
+        "sha256": "5065321178d81cf7c5ae37543f52e8e9d10e7c8fcc2e44b7b526f1007822bb95"
+      },
+      {
+        "path": "tools/freecad/check_export_pruning.py",
+        "sha256": "cf670129ad28a94c4929d2ea6419f31af5f596cb8e1a249bd499af6b591f25a5"
+      },
+      {
+        "path": "tools/freecad/check_finishes.py",
+        "sha256": "9b1ab801386c63ca0ccc2c13ecd5b31e07184a299ea88e0139e372250905a158"
+      },
+      {
+        "path": "tools/freecad/check_frame_collection.py",
+        "sha256": "25685fed6dd2dbccedda1f7090ec94528520b24d80b63acf71822bd0b4c3616d"
+      },
+      {
+        "path": "tools/freecad/check_frame_corner.py",
+        "sha256": "8491f13bad33d8f98c6e3ee010f687d1261bfa287c61b75163b51b826d6ff422"
+      },
+      {
+        "path": "tools/freecad/check_frame_extensions.py",
+        "sha256": "a65de9d628865793dc748ef04ed47ec6889f0df80cecd2a76a272fbac68f9272"
+      },
+      {
+        "path": "tools/freecad/check_keycolors.py",
+        "sha256": "9926c0d6b1301e09b9ca5c2d51e57c2a702146e71db03c407de9d917a5da32c3"
+      },
+      {
+        "path": "tools/freecad/check_level_stack.py",
+        "sha256": "e419f2a6b2ec93759ca8cb8f3601fef4735e674831231d56cd56a97e742b6c3d"
+      },
+      {
+        "path": "tools/freecad/check_native.py",
+        "sha256": "a258da93a02b429cc37738d180c267e9a17cea70241c9d79f3007f9a9d30023b"
+      },
+      {
+        "path": "tools/freecad/check_outline_logo.py",
+        "sha256": "7e4b9252dacc0e84fe7f7437f6373031ad09fae7eb7e90546a7a937a08c2eb9c"
+      },
+      {
+        "path": "tools/freecad/check_pcb_step_registration.py",
+        "sha256": "a7d0fefa78ecef7c88e7d35490ded87d1865fb0dac056ad3bf13a41513fabd4a"
+      },
+      {
+        "path": "tools/freecad/check_rebrand.py",
+        "sha256": "0b8a4730b8b6384654dc8bddbffea8252e0e858f5e4a0c03a54b9b5558ec1726"
+      },
+      {
+        "path": "tools/freecad/check_revG.py",
+        "sha256": "6143364ec721b3a918b14bb2a1d8d8fb308418ab957d4dffa7d8589a3fd25916"
+      },
+      {
+        "path": "tools/freecad/check_revH.py",
+        "sha256": "e64506f3ab31726686caa209a8c3004acb7e8e72dc6dd76ffeef33a05b607ee6"
+      },
+      {
+        "path": "tools/freecad/check_revI.py",
+        "sha256": "6561867da691fb3fec9be1f4f489bdc779f35401231c3460bcbb800113324e65"
+      },
+      {
+        "path": "tools/freecad/check_revI_rim.py",
+        "sha256": "709f20dead6dc4a2ce959230295e95ac44d9e2910ea3eaa5cd73ce6839f6b5b2"
+      },
+      {
+        "path": "tools/freecad/check_revI_service.py",
+        "sha256": "010fcf17ba8c97e490cbfdedd1f5e01e9034207aa3b484c72b2757fd7832679d"
+      },
+      {
+        "path": "tools/freecad/check_slim_connector_service.py",
+        "sha256": "b6726bcdde3022d584302a2acd7cdc392311f7420d54bb80e1d925e0a78ec19d"
+      },
+      {
+        "path": "tools/freecad/check_stepup.py",
+        "sha256": "957ff770cec7c42f47b3ba499e563ff0487d8bb7684f894435d3f1fa552a3c0f"
+      },
+      {
+        "path": "tools/freecad/components.py",
+        "sha256": "e32a0e4e3181603d742911c788e1defb4ecd4e76ec59d67eab2915a538e4a171"
+      },
+      {
+        "path": "tools/freecad/configuration.py",
+        "sha256": "f444aef98a8d7e2ae088cdc28ecde7e8c55c551f368d5b5ad380fafd48ca5a59"
+      },
+      {
+        "path": "tools/freecad/export_frame_domain.py",
+        "sha256": "9993c41e688469a8b880bbb2b8c1616eb43fe1f065595dd537358ab4c5e23f42"
+      },
+      {
+        "path": "tools/freecad/export_frame_preview.py",
+        "sha256": "eb800f76df3331003b041a02473a0dc2b74fdf339c535672760fe16e6a077778"
+      },
+      {
+        "path": "tools/freecad/export_native.py",
+        "sha256": "8c9b38dfaf6ab1381192c23f9c8ee272383bf7cd60878eb76e743ed8a7a05ab1"
+      },
+      {
+        "path": "tools/freecad/export_pcb_components.py",
+        "sha256": "26871b34f0f5fe9cb5830fc0a3ba73f993683f88c8f806c6861ad10245212652"
+      },
+      {
+        "path": "tools/freecad/export_revG.py",
+        "sha256": "3c925514a6c4b4f44a751439d29398fa4923f7b348ba954c652a50f6809aa4e7"
+      },
+      {
+        "path": "tools/freecad/export_revH.py",
+        "sha256": "f460271265697d55556c16872ed6388473ba4819e2df250a6a9bdbc35332ef69"
+      },
+      {
+        "path": "tools/freecad/export_revI.py",
+        "sha256": "63546f14609983f914f4b1ee5575cfb75c7812b8b52d2491c4e74bd2c55508ea"
+      },
+      {
+        "path": "tools/freecad/export_switch_models.py",
+        "sha256": "e31bb60a16b0e4e193e8d39ac69c02d63c6b1963489272cc58f859409134b0c3"
+      },
+      {
+        "path": "tools/freecad/extra_frames.py",
+        "sha256": "9196ab47432608067bce66a3e26aa6034a7860f4ede7494e81e5360532a51009"
+      },
+      {
+        "path": "tools/freecad/flush_frames.py",
+        "sha256": "68e5536c21052415b097c79909544160cf928d563a8afd292f00756c5d3be119"
+      },
+      {
+        "path": "tools/freecad/frame_review_geometry.py",
+        "sha256": "153890ce767695a22ae152379babeedcecc6fd56f52538dfc219f667eae94db8"
+      },
+      {
+        "path": "tools/freecad/install_approved_frames.py",
+        "sha256": "5dee9805d0cc13555f04370b9149aa8fb9f53169ce67ff82ff985c87806c9e5b"
+      },
+      {
+        "path": "tools/freecad/install_display_seam.py",
+        "sha256": "e020a04074455bef73b39f71c8e4ddf86d4f83ef9c55e893af883d6f7192336f"
+      },
+      {
+        "path": "tools/freecad/install_extra_frames.py",
+        "sha256": "785dee9d8dfca5cfbd3c3942cf2ef4379f47a8ff1951f7d317193427d718c708"
+      },
+      {
+        "path": "tools/freecad/install_frame_collection.py",
+        "sha256": "7a6d9ed1d9a8101aeba077974346d4efde621496a189e47634c896cd7014ad7d"
+      },
+      {
+        "path": "tools/freecad/install_frame_orientation.py",
+        "sha256": "7f4e9f05998112c3b08bbc6ff1554616f315e58d9804b5f0b382535bc1e1dd0c"
+      },
+      {
+        "path": "tools/freecad/install_level_stack.py",
+        "sha256": "f2d0af8fa65df8c2ff647a6bd065399b372d9b0f321ed0fe61e359ed143c5748"
+      },
+      {
+        "path": "tools/freecad/install_slim_flush.py",
+        "sha256": "18383ce35456e06c1ac8cb9c7b339745bf61e870286fcc96fa1276a86e3e6a09"
+      },
+      {
+        "path": "tools/freecad/level_stack.py",
+        "sha256": "a4c330c8a0acd789ad51e6a9a58023b3fd6d937cf14e35acbe880f069c4399cc"
+      },
+      {
+        "path": "tools/freecad/prepare_frame_artwork_review.py",
+        "sha256": "f2a032a388de84519f50b451727e7ea086e46a951f06b74cdf5a9cdaaa5f822a"
+      },
+      {
+        "path": "tools/freecad/prepare_frame_master.py",
+        "sha256": "e41849449ebdc59e28593f17456afd0f1044cf39f78731ada95acd1b23864bb8"
+      },
+      {
+        "path": "tools/freecad/prepare_frame_reviews.py",
+        "sha256": "3e591d3a434dedbb423caf751b9177fe41dcc78aab88df3a3f26bde7b8695084"
+      },
+      {
+        "path": "tools/freecad/preserve_document_label.py",
+        "sha256": "55bd07fec3d1b30882a5a1f8fc2b7cc264ac678c96f2f96aec4e328da4167d60"
+      },
+      {
+        "path": "tools/freecad/run_macos.py",
+        "sha256": "bc3ff310449e936ae215f4f4f18e2cba86896617112d293d677d40c9a700a4dd"
+      },
+      {
+        "path": "tools/freecad/shape_equivalence.py",
+        "sha256": "cc32074ea615d322171d5ea57f0e6184c4cec5b19cd25825fdecbf01c5723a46"
+      },
+      {
+        "path": "tools/freecad/slim_stack.py",
+        "sha256": "9c50f62fdf4f88099499543369d1508178453ebbc08d46fd67ff50a429337331"
+      },
+      {
+        "path": "tools/freecad/study_slim_candidate.py",
+        "sha256": "10522f8b75656737eff2f955bd90246edae53f3fb362dc3ae2d2e229dfda06c2"
+      },
+      {
+        "path": "tools/freecad/study_slim_mounts.py",
+        "sha256": "4230d126c4852600966b7ddc9c21da4a8c1499638792a5a8e918f1e8a841f473"
+      },
+      {
+        "path": "tools/freecad/study_stack_height.py",
+        "sha256": "5cdd6dc764669b76ac18388ad6247562036e9f7fd1bd1e620c71eabddf81e868"
+      },
+      {
+        "path": "tools/freecad/switch_instances.py",
+        "sha256": "0e20afd3c092df3c3cf022e457491e38273ba8076a5a20a76eed5b46f856a401"
+      },
+      {
+        "path": "tools/keycap_config.py",
+        "sha256": "299b18fa827e69cf8ff9e6293d8a7eecc9983596950318da1d38e019c8bd5d8f"
+      },
+      {
+        "path": "tools/keycap_row_geometry.py",
+        "sha256": "471334d7a52f68bdb5ab9be4fedd472dc2fbc4006505a19134de9e13c7e08c63"
+      },
+      {
+        "path": "tools/package_slim_study.py",
+        "sha256": "bbceecf18d6b0e21ee4cfc1944e91fc6887d9579cd25f9c2911eab346c5efbc3"
+      },
+      {
+        "path": "tools/prepare_display_seam_proposal.py",
+        "sha256": "7914e32c5773ba8e252297f10ba1aa6eb9d456c566ff89387f8b6c9ff123765e"
+      },
+      {
+        "path": "tools/prepare_frame_master.py",
+        "sha256": "b267114b68c5a631da54942354a46d59af1e5fa079d34fe2ff8d645c0306539e"
+      },
+      {
+        "path": "tools/prepare_frame_master_r4.py",
+        "sha256": "2f116f4df0475754a94f8e608c2ba3e5c397767470315a6cd7efe00e52935da4"
+      },
+      {
+        "path": "tools/prepare_frame_redesign_r5.py",
+        "sha256": "45beb699d3fa95ba5da53491e20f3424fea0ca73f54f9d326a687db1d39ea799"
+      },
+      {
+        "path": "tools/prepare_frame_redesign_r6.py",
+        "sha256": "ff0a4448712c4f197291f2e3dfc1dc57638c0594b6fc76ba05a7776367488a5d"
+      },
+      {
+        "path": "tools/prepare_frame_redesign_r7.py",
+        "sha256": "fa3b5f77b1e4092a62b35fa796ced6bf0584149530180db582d1d94f2eaee350"
+      },
+      {
+        "path": "tools/prepare_frame_redesign_r8.py",
+        "sha256": "5453996f35a83cf7f417e10ae8ebf40a5f909755caf1d57fae91dd906a1f0c7d"
+      },
+      {
+        "path": "tools/record_viewer_reliability.py",
+        "sha256": "7c5c2edcb3157dca5720933f48d882afcd6ed5f96bf3cd801460ec70ffc922b5"
+      },
+      {
+        "path": "tools/render_assembled.py",
+        "sha256": "a3eef8dbb01049561ff67e4b841d4aa230176ad287e4911fac86b8e35a43e4de"
+      },
+      {
+        "path": "tools/render_frame_artwork.py",
+        "sha256": "be487d5c140c38f37865c2bd7fda120a80d0e4cd8e105960d37e156d03cc1a78"
+      },
+      {
+        "path": "tools/render_frame_artwork_review.py",
+        "sha256": "e87bb0c37e6a9c635676fb407c7e97855dcf4254e3b2ba94b2e02bce19a61464"
+      },
+      {
+        "path": "tools/render_frame_details.py",
+        "sha256": "c91e64787e61d1505c0e1de967e380f1fceffd6613e28a62c4fa88f569170520"
+      },
+      {
+        "path": "tools/render_frame_master_dimensions.py",
+        "sha256": "b3a2f32d0e91039b77049fa155b2a5040bec0dcc24bdeaf7a820bf22ef03ce2b"
+      },
+      {
+        "path": "tools/render_frame_reviews.py",
+        "sha256": "c199f556bbe5fd507c52b38da2ee454aa7210399e197403642cc8da2b241743a"
+      },
+      {
+        "path": "tools/render_frames.py",
+        "sha256": "6087cc76f6cd7d4e2430121894602792ba7ad490b71be4a2cc936ba6e79d28d8"
+      },
+      {
+        "path": "tools/render_layout.py",
+        "sha256": "8f1e79b69c2e6a88177c8fa28f87b18434187fe699ab76bf50992164f9043e90"
+      },
+      {
+        "path": "tools/render_revF.py",
+        "sha256": "8c4bfc93343ce50d1078098bb5a59f23dfcaab0a13a5cf6a3c2b0c8e826d37eb"
+      },
+      {
+        "path": "tools/render_revG.py",
+        "sha256": "5d103927aa6d62c2481a42e81f1efe104f89df29aa0c579c7f9507c23ee2ee43"
+      },
+      {
+        "path": "tools/render_revH.py",
+        "sha256": "4dbfc214d563c9d69d6d4d76907720daf6d4e987adeb21a1081747d2e7599f31"
+      },
+      {
+        "path": "tools/render_revI.py",
+        "sha256": "50e3367e3e8ac71363cee81fb47c5add397b89f1a90f179b86eb5d1f2b942841"
+      },
+      {
+        "path": "tools/render_rim.py",
+        "sha256": "7dce379f52d93f3fbb6ed9488209d53f20134d8174c159e1c49d7db01bdb4e23"
+      },
+      {
+        "path": "tools/restore_reliability_review.py",
+        "sha256": "305bba7448b1f69959c6e56d945c253ecad47e799c4f5560a8328ac7c0ecfd04"
+      },
+      {
+        "path": "tools/source_outline.py",
+        "sha256": "181fe863cace94bdf6fd32bbb432a4a7c0faedafe3ef283e3c3ce089bfc3debd"
+      },
+      {
+        "path": "tools/sync_pcb_study.py",
+        "sha256": "64129721792c2c3cd606a1e4ec34f99805d50db05035e733623ed3f34fa10604"
+      },
+      {
+        "path": "tools/update_approved_display_pcb.py",
+        "sha256": "267446a3044205697c4ebc690b355df41cd7fd9f1da8fef09aa0fd4b0d4a48ba"
+      },
+      {
+        "path": "tools/update_revI_slim_pcb.py",
+        "sha256": "7832749e789d58f6225b135cc7a7c96e3eb58e0314afd239cb46b28637dfed86"
+      },
+      {
+        "path": "tools/viewer_frame_selection.py",
+        "sha256": "b2285110b6de45a908c16814705b504839c22ea81079e4fda4382294930bbf17"
+      },
+      {
+        "path": "validation/branding-caramel-publication.json",
+        "sha256": "6ca9b95becdb9396fa23d166e65e4864eba8bfc6811fd7edd4359bcf2d087631"
+      },
+      {
+        "path": "validation/branding-caramel.json",
+        "sha256": "6511977ab652e043f62ee285df241d56902966c744aed470cda321caa8faf0f0"
+      },
+      {
+        "path": "validation/branding-outline-browser.json",
+        "sha256": "197f9813dbcea8f22d3245f6f9aa93f04973c721e20bff583d7bfb5704f05dc8"
+      },
+      {
+        "path": "validation/branding-outline-freecad.json",
+        "sha256": "50dd0cb0afa7efa5298e37d42ba91b6dc0d456e2e6936496f3d8206904bff2bc"
+      },
+      {
+        "path": "validation/branding-outline-publication.json",
+        "sha256": "7be8d9787e8ad0e26a41837ddcbfbca6cfa6bc2743780a96bebe8cea62ae0bb7"
+      },
+      {
+        "path": "validation/branding-outline-trace.json",
+        "sha256": "88c879e571e28153e971af263bfc0da698c5ed09fa2caa69a5a11adc5b632dfe"
+      },
+      {
+        "path": "validation/branding-outline-vectors.json",
+        "sha256": "e25f706baed197d926f6c5cf2a496b808a84a779c6f94620074fc16b95be637f"
+      },
+      {
+        "path": "validation/branding-publication.json",
+        "sha256": "28bf4727adedace895abca6cce5e55a5af6b32bc86f170f0ae797a403337ffde"
+      },
+      {
+        "path": "validation/branding.json",
+        "sha256": "bcbfbfcefde61f878c51b34777ba0db7d2a158db8c53cb09cf8acbe816ef7495"
+      },
+      {
+        "path": "validation/general-review-20260928.json",
+        "sha256": "f86c11fe73e545cd51041e1153cd9ba4486ac7890d91a12311ebc8b9a925d699"
+      },
+      {
+        "path": "validation/rebrand-browser.json",
+        "sha256": "666f9b87aa7ec2948625d13dfa27d9fc05bfffd2cccffb89759c53bed66e64c7"
+      },
+      {
+        "path": "validation/rebrand-config.json",
+        "sha256": "d262ef25d58e62c9c11bd3a26efa841cf3eec26589c16b5edbc657a118741fb6"
+      },
+      {
+        "path": "validation/rebrand-file-map.json",
+        "sha256": "da14efeaa21d6fbcd2a303ed55bb034adbf59a45c103be445053467e9066021d"
+      },
+      {
+        "path": "validation/rebrand-functional.json",
+        "sha256": "99f98ebedf71b52ae207a7571d6b878606f25f310368f1af9eab82265b264fdf"
+      },
+      {
+        "path": "validation/rebrand-local.json",
+        "sha256": "a981af857f389ac9872459eda061227ed163a6eacf194dd4a789e0700d22ffe0"
+      },
+      {
+        "path": "validation/rebrand-native.json",
+        "sha256": "553327348aa253e393f75bd0bbf59f46b0cc731aea736f1a2846b307d1adaa55"
+      },
+      {
+        "path": "validation/rebrand-publication.json",
+        "sha256": "c4688b7c58af087b7c84c0e25dbb932f19991edc4f08ffe95a61bee701c7f840"
+      },
+      {
+        "path": "validation/revE-mechanical.json",
+        "sha256": "9b62d69186c90f2c7946060353922dbb4fc1bd2a4fe024986ede2a6b5223ebb7"
+      },
+      {
+        "path": "validation/revE-render.json",
+        "sha256": "bdfc13b1d7726a8f91332e5fe2cf74f2181c55fee02248cc1fc9a1cb31db42fb"
+      },
+      {
+        "path": "validation/revE-viewer-ui.json",
+        "sha256": "d6cf5bb0b1f332ea30c564178eaae0ee88c62f4ca47cd5865fdb49c7359530ba"
+      },
+      {
+        "path": "validation/revE-viewer.json",
+        "sha256": "95b0847dbc83fa19d173bd80bdae27b9eebd7270231e9a0338ccc317e42e3335"
+      },
+      {
+        "path": "validation/revF-electrical.json",
+        "sha256": "ca7a55f3cfd5c179e5eabded3d3377689957693b25a790ed349435fff9fc4d49"
+      },
+      {
+        "path": "validation/revF-mechanical.json",
+        "sha256": "25d74633be21ffc70c9d2109f29a6914645882deab6223c5f75142a110c9c16f"
+      },
+      {
+        "path": "validation/revF-native.json",
+        "sha256": "1e971e2291943c900c1de229956de13a794dd20c0539374ed2e9fed5bccf7d5c"
+      },
+      {
+        "path": "validation/revF-pcb-placement.json",
+        "sha256": "d95df29533a6deacc4b7d793283fbe7308cf262957bbf64dcfb1f310187fcfe1"
+      },
+      {
+        "path": "validation/revF-publication.json",
+        "sha256": "2eddbddf7af5a827c05027d3760b1aa447e3da9e88a43cadead2b0ee79844728"
+      },
+      {
+        "path": "validation/revF-render.json",
+        "sha256": "b54e16c3b33c7682c9743fd3b8ad95193b7d3e28a44e6b39eb5365abe75818f8"
+      },
+      {
+        "path": "validation/revF-runtime.json",
+        "sha256": "d5578acaf592da6486194a061eb62de81564b0899ed0a4c19df1d6b1f1c542ac"
+      },
+      {
+        "path": "validation/revF-stepup.json",
+        "sha256": "02726d23f1ea09037dc1b123348a7db10b57fb44e85b276e4fdd6f93c44ed76f"
+      },
+      {
+        "path": "validation/revF-viewer-ui.json",
+        "sha256": "cd7a47948f7f00145daefeb36a966fc880156a139b6faf211214e5eae217d4ca"
+      },
+      {
+        "path": "validation/revF-viewer.json",
+        "sha256": "a153f62b540a501a734398d19858562e9eaa9f274171f90d213076a329b0f5a3"
+      },
+      {
+        "path": "validation/revG-frames-render.json",
+        "sha256": "40b0bc39304fc08f4cab5250306c563748a8cd06359a3e39eff8aa8fecda2372"
+      },
+      {
+        "path": "validation/revG-freecad.json",
+        "sha256": "c63f169a64de2ee427880be209a70eb970dfd68863bb6191d47023108c9d6ecf"
+      },
+      {
+        "path": "validation/revG-keycaps.json",
+        "sha256": "7c74ea62482d3a5070dc5a055ed1900d5f8de03a2605e529972e975833a541b3"
+      },
+      {
+        "path": "validation/revG-mechanical.json",
+        "sha256": "8a4d83afbc976d3050be0409bbfd0eea28e89ce0f11995200ff7c5594f41812f"
+      },
+      {
+        "path": "validation/revG-parts-links.json",
+        "sha256": "1cb60e95ec4b06db19accbdd2dfeec9b2f80d6d9afccd376d53864db27db6228"
+      },
+      {
+        "path": "validation/revG-publication.json",
+        "sha256": "75674549a9c4d43d9375a6adf7ce47b2c794e56ed68c155917df92ebd517cede"
+      },
+      {
+        "path": "validation/revG-render.json",
+        "sha256": "77fa506997e5ab0ac71035a88ed5f78582c7cce2133419dcea5b2df574ca9888"
+      },
+      {
+        "path": "validation/revG-review.json",
+        "sha256": "2fdff9a43ea2a8986a3ab5108ee90770bba934757cf497de45e24cb935ed83c1"
+      },
+      {
+        "path": "validation/revG-viewer-ui.json",
+        "sha256": "e2bec12932ce1737b4e6340b13bd3dcacd85b77d6ee63aa4cea845b8ef467c05"
+      },
+      {
+        "path": "validation/revG-viewer.json",
+        "sha256": "03f8da8e153635654ccb5b880bf354d5057be0486e6535668a08192d88af9e91"
+      },
+      {
+        "path": "validation/revH-design-review.json",
+        "sha256": "84bdf6dd8a85be652b707359e95d2bf70854cc1009b97347ae045bc629ebb993"
+      },
+      {
+        "path": "validation/revH-electrical.json",
+        "sha256": "55f2fd48fbc3e403c079ea856847564235e99a7113180afec724028fa215bc78"
+      },
+      {
+        "path": "validation/revH-frames-render.json",
+        "sha256": "3d432c51e2075e544cc02c69710fa6011f8d616049254e35738eda65157c9003"
+      },
+      {
+        "path": "validation/revH-freecad.json",
+        "sha256": "16d3587ffd4626e4d8021a2badf27b6841c3a3c153f80769412f05e47d577885"
+      },
+      {
+        "path": "validation/revH-keycaps.json",
+        "sha256": "709dd08af08e66df9c55dea27f43eac3d25a763559238ec863ed50b9eee8f41f"
+      },
+      {
+        "path": "validation/revH-mechanical.json",
+        "sha256": "45d8835555d3823224565724ddfcf88da4beddd18c42c7da1b6814d6ec8f87f6"
+      },
+      {
+        "path": "validation/revH-outline.json",
+        "sha256": "93117738c6d6ae63e6477437ce578122ef6f1c8e02a32af0f119421634eb3d07"
+      },
+      {
+        "path": "validation/revH-parts-links.json",
+        "sha256": "39b24329e9afe66bfabd96f44091070f66d465e0b7c8fc53101394c5ee8dd7e2"
+      },
+      {
+        "path": "validation/revH-pcb-outline.json",
+        "sha256": "207ece3d6abbaac9bba466e51e3eeae27a4b58a63ab7fd28277e3df82417ecaa"
+      },
+      {
+        "path": "validation/revH-publication.json",
+        "sha256": "c636cc74935fd87795e2980f098f191e9b9950bb8d2b51f826271a189fecc893"
+      },
+      {
+        "path": "validation/revH-render.json",
+        "sha256": "4971c7e51a5c4e9c76fbf0e364cc689298603811a9b9317700c8428837dfd852"
+      },
+      {
+        "path": "validation/revH-viewer.json",
+        "sha256": "0c65bf25756affceba753179381ae5b613b7cf26d3ad33e521ffad957d48127d"
+      },
+      {
+        "path": "validation/revI-analytic-bounds.json",
+        "sha256": "c96f0d6d68b5ea89a88a812310c606a3bf72a190e34d8ea26b67483306a5eeb6"
+      },
+      {
+        "path": "validation/revI-approved-display-pcb.json",
+        "sha256": "79f780d26a86d2247ce3b54f4988841969655dd70f69f9bda5433e90a5b1bec1"
+      },
+      {
+        "path": "validation/revI-approved-frames-3mf.json",
+        "sha256": "1b389bbc868671e64d87cf3db838365ad046625f00e35b55ca7b01cebeeaca13"
+      },
+      {
+        "path": "validation/revI-approved-frames-geometry.json",
+        "sha256": "f62786fb7dfdb8ebab0f0100c52b9173cbf764c3a9d98f73271c2440bb76e4fd"
+      },
+      {
+        "path": "validation/revI-approved-frames-native.json",
+        "sha256": "15eb33c4814f4b85d0a9305c55b5eb3e993dcb7c24b4d36ddd5fc32955fc674d"
+      },
+      {
+        "path": "validation/revI-approved-frames-public.json",
+        "sha256": "1d4ec3d95b9c8989d214eb094301056ce27adaae7be55ad5e8528b14424c6d0d"
+      },
+      {
+        "path": "validation/revI-approved-frames-render.json",
+        "sha256": "4183e8d8103e3be54774b383cb7e6ec0ea06de27fee793f3f37b0434bcbb4202"
+      },
+      {
+        "path": "validation/revI-approved-frames-review.json",
+        "sha256": "4676b472a671caabfd46352d0c5b59dadeb80d00b31265c4ae2e18b6a39ba00c"
+      },
+      {
+        "path": "validation/revI-approved-frames.json",
+        "sha256": "1f80d9e30373b0137fab11723f8b4c9cb82bf2a04a281e04ab97746727171953"
+      },
+      {
+        "path": "validation/revI-approved-selection.json",
+        "sha256": "fc7d9cfb52c4b14b956db3f946cdc810c291f2bd983dbe1b1287acb1056379dc"
+      },
+      {
+        "path": "validation/revI-bottom-reset-step.json",
+        "sha256": "71e12814e796b4b0f091cbbe92f1a089af8c5154ebb5602871d61beffd3003de"
+      },
+      {
+        "path": "validation/revI-bounds-correction.json",
+        "sha256": "63a0840d26cac517a841e35d01041f777d816c440d12f515cbb374876ca7918d"
+      },
+      {
+        "path": "validation/revI-cap-rows.json",
+        "sha256": "9107aaa3394fbde22fa759548f3245193ff133978a8fba3036d5f042127c3038"
+      },
+      {
+        "path": "validation/revI-case-variants-publication.json",
+        "sha256": "1a7602e4c2fb3389ef0ce8b898104529f50b4ab2a223e264e328d96e2f723f8d"
+      },
+      {
+        "path": "validation/revI-case-variants-review.json",
+        "sha256": "a3dd4ec901e6c4bc9ffdd6fd10c2911786803d560180402a7263c1001867521d"
+      },
+      {
+        "path": "validation/revI-cases-render.json",
+        "sha256": "e88345c16414b3d360e333493b89b1e6038f519d934553b243bec8c0304fcdbe"
+      },
+      {
+        "path": "validation/revI-cases.json",
+        "sha256": "1ac3dd30b8bdd49fa8b91554ab6fcb78b0f895fd22f63f697e0b71069ab36241"
+      },
+      {
+        "path": "validation/revI-color-hex.json",
+        "sha256": "5907754996b74ca6859b322bc0841fffce2d97254c19e2060067360fcf695d4a"
+      },
+      {
+        "path": "validation/revI-components.json",
+        "sha256": "9caebc6b6a5502094020f519f44f90e2092897836a49c3f3cd139ea5389985ec"
+      },
+      {
+        "path": "validation/revI-configuration-correction.json",
+        "sha256": "718feba0fbd79bda6ae94284fb1b1742eb60c23a5c513833dcff3b0cf12090c9"
+      },
+      {
+        "path": "validation/revI-connector-service.json",
+        "sha256": "8dbd50fce21c758d468606cb9227e6881a062dbecde40f097fdc51776b7d2445"
+      },
+      {
+        "path": "validation/revI-corner-stack-publication.json",
+        "sha256": "2b196772b1b956c151ffd67b41f947e8325a64cb210eba7ca7ae68a4931ba3c2"
+      },
+      {
+        "path": "validation/revI-corner-stack-review.json",
+        "sha256": "7019b6cc6e12ff68b665a1e606dee9729dd780d603bad721fe234b221e08e950"
+      },
+      {
+        "path": "validation/revI-customization-publication.json",
+        "sha256": "c670722fc45c39e98d4bf1b57a079dcdef465bcbb195fd488d9785f3485cee17"
+      },
+      {
+        "path": "validation/revI-customization-review.json",
+        "sha256": "3fc4e69e5a0816ff37fa69e060d33fab5f0174cde834e309aa5ae8af5f15228e"
+      },
+      {
+        "path": "validation/revI-customization.json",
+        "sha256": "838ff7490c64ad145c33546542d7a1c27d74cc2c66452dd98dad7f7962c3a4dd"
+      },
+      {
+        "path": "validation/revI-design-review.json",
+        "sha256": "7e49a04b4584f9e99d058309640ccc91e49aa7f80ebfd1fc70fa5cb84de04d9c"
+      },
+      {
+        "path": "validation/revI-display-seam-adoption.json",
+        "sha256": "76093fa7305ea3fbe7a120ceda77beb262c9efc506018157714dcf3fe3b4fee1"
+      },
+      {
+        "path": "validation/revI-display-seam-geometry.json",
+        "sha256": "3ac36edef231f41114e9525bb40343c2580cc7f782b37312d9087c43e3d343fa"
+      },
+      {
+        "path": "validation/revI-display-seam-native.json",
+        "sha256": "d4d89386e8f81fc23ade405926ab50eb85d041ba6784261cfd6b94ddd5cff8ca"
+      },
+      {
+        "path": "validation/revI-display-seam-public.json",
+        "sha256": "c25066deafbe04018943875079ad69ed980ec19f33755e9b7a562766f405f55b"
+      },
+      {
+        "path": "validation/revI-display-seam-review.json",
+        "sha256": "ccd5a90a3871c1df6e6690cd7775bf541f6238d753c55d3ae72f3173289c7d2d"
+      },
+      {
+        "path": "validation/revI-display-seam-viewer.json",
+        "sha256": "ee7a2ad17ffde70216ed05516ffcb5c8d19eb3278d599bb8806bbd2de3b37306"
+      },
+      {
+        "path": "validation/revI-document-label.json",
+        "sha256": "24df5df2e77bb82e43c78c1a41d45c142eaadf8ec186ffb3b2c4d426a91c3d3e"
+      },
+      {
+        "path": "validation/revI-electrical.json",
+        "sha256": "73c783bc69133944cec9279d6da3483d3b642de5a2585ff44911ef680ba95b9a"
+      },
+      {
+        "path": "validation/revI-export-pruning.json",
+        "sha256": "b9de01b49de028a8b4481f1d931e3e2e2569bd0eeca390ddce0ca23bb88b3304"
+      },
+      {
+        "path": "validation/revI-fasteners.json",
+        "sha256": "04d5b369f2aa78cfc2a3c5be5db3d467f905dde7bc468f4dbe5bf3792db77ee5"
+      },
+      {
+        "path": "validation/revI-flush-viewer.json",
+        "sha256": "eb22d12db66251b09de673723753439955a9e4e832eb45130eba4f2a70474b68"
+      },
+      {
+        "path": "validation/revI-frame-collection-native.json",
+        "sha256": "8f80ee6e094941f301a7e60ae4c3459b9ae8e63c04fead42251ab9334fd4274b"
+      },
+      {
+        "path": "validation/revI-frame-collection-public.json",
+        "sha256": "8c5e56404b4ff4e6323e704eb44491b15f571534f4c498557bfc1f09f1cced36"
+      },
+      {
+        "path": "validation/revI-frame-collection-reliability.json",
+        "sha256": "85067555934aab50449fe469523850d7848f08938f32f1bbee33201da0fbf3b1"
+      },
+      {
+        "path": "validation/revI-frame-collection-viewer.json",
+        "sha256": "d2ce3cf7fca08fbcdd7b495da26789328b1ac5ee434d417524fdd2e5aec6c1cd"
+      },
+      {
+        "path": "validation/revI-frame-collection.json",
+        "sha256": "154fa2749839d94ced7041056fecbf1498610a720e3edf7bea21053e8e8a258e"
+      },
+      {
+        "path": "validation/revI-frame-corner.json",
+        "sha256": "1002b774783f1365c63cc572bac35bd5bfda32f7adbb2dbad1a9a6024d1dbb55"
+      },
+      {
+        "path": "validation/revI-frame-detail-renders.json",
+        "sha256": "0680d9eb0d5d4b8216430048074fcc1c5292a842748a253b9f409770138f2389"
+      },
+      {
+        "path": "validation/revI-frame-extensions.json",
+        "sha256": "6cc1b4dc6e12c03ac35aef0b3e30b4b83537ffb28ffab7894173eabf7a693ea3"
+      },
+      {
+        "path": "validation/revI-frame-fidelity-public.json",
+        "sha256": "eda119aaf7c34bc90f957157b379b6b61aa2501296c3b14589921ef4439fc442"
+      },
+      {
+        "path": "validation/revI-frame-fidelity.json",
+        "sha256": "0ebe34c3db4788e7d09d23adf45ab84c84dbf2e0e811314bb8e3c93e0d0c06bf"
+      },
+      {
+        "path": "validation/revI-frame-orientation-adoption.json",
+        "sha256": "f06493e23f0b4d053767f493e56cc302710d014c352020ade68b6760e7623685"
+      },
+      {
+        "path": "validation/revI-frame-orientation-native.json",
+        "sha256": "f413ec3c5583c5ab685c67445839d3728f505edf691bd8ea5ec593bcdad765fa"
+      },
+      {
+        "path": "validation/revI-frame-orientation-review.json",
+        "sha256": "93519462d2e20ccb7d4df85fa8f604e574c3baf8a508b9484610b3e810d823cd"
+      },
+      {
+        "path": "validation/revI-frame-orientation.json",
+        "sha256": "b3338a455f29f8083bdba0f43a4320c7c371f4030996197a254adb48afa0109d"
+      },
+      {
+        "path": "validation/revI-frame-redesign-r6-public.json",
+        "sha256": "084b0eff9d329efee3eadb7b0e590d1e9abc287a708804f89a517239d5db52cb"
+      },
+      {
+        "path": "validation/revI-frame-redesign-r7-public.json",
+        "sha256": "26e2c7d48ac0830a0614425f5bc1bfdfafd45e773d5f4a3b5b263e2680fb5ba1"
+      },
+      {
+        "path": "validation/revI-frame-redesign-r8-public.json",
+        "sha256": "885967687c92a47d373c2d0f932824029bc106ff4fae9118facb36c63067dae8"
+      },
+      {
+        "path": "validation/revI-frame-sections.json",
+        "sha256": "dd2e8e500776f3adb4d9051096ad56a3a70382ea377cfd992b56c25edece27ce"
+      },
+      {
+        "path": "validation/revI-frame-selection-public.json",
+        "sha256": "d8d2138108833f2b2ccf7b4e2d251a6f077aeec665ea4529bed6d8697ef2e553"
+      },
+      {
+        "path": "validation/revI-frames-render.json",
+        "sha256": "f15c0ced570cd6d94ba670b89917e62a0fd35f2c8b8e385d568f9d6f2f81e9f3"
+      },
+      {
+        "path": "validation/revI-freecad-finishes.json",
+        "sha256": "d59c09dfc5cc55c1a6434dee84169271f66fb89458e04224258fe670b5f38952"
+      },
+      {
+        "path": "validation/revI-freecad.json",
+        "sha256": "91eb532242f8766d063c856f18afa34e90adb85e047bbc65b7db81f8ff7ad0e9"
+      },
+      {
+        "path": "validation/revI-hex-publication.json",
+        "sha256": "5ae989ac8c68cb293fd88f4113988569caea6727dcc6c18d728fc4104be612ee"
+      },
+      {
+        "path": "validation/revI-hex-review.json",
+        "sha256": "cc82285960aeeb4041294854cae8cbe4db7558c10690fa67178c668b4010eae3"
+      },
+      {
+        "path": "validation/revI-keycap-registration.json",
+        "sha256": "d6917b4cf88bfd9206064063dc175f460621f041c6f6f2376ea8fb25e32eac1d"
+      },
+      {
+        "path": "validation/revI-keycaps.json",
+        "sha256": "a67e1a36b615dc2f300c579b0738062c7cdc513e1c6b649d8346b8ad592c1bbe"
+      },
+      {
+        "path": "validation/revI-lcd-curve-publication.json",
+        "sha256": "c70c3aee73f8c05387e16827768ec98a950003c901f86af938e46fec70eb6f89"
+      },
+      {
+        "path": "validation/revI-lcd-curve-review.json",
+        "sha256": "aba1f9ca811e97e8f746708de3b4ca6f97e53324876e96d7a854c18d8c2f91ac"
+      },
+      {
+        "path": "validation/revI-level-delivery.json",
+        "sha256": "67474b8ed3961ff89e76887e64b13bc22b3997811e595f89a21588b955e96ffa"
+      },
+      {
+        "path": "validation/revI-level-geometry.json",
+        "sha256": "84741dae294f6710502c7c153adde187a1b1a7c6e15ecae3270673f5e77be7ef"
+      },
+      {
+        "path": "validation/revI-level-install.json",
+        "sha256": "2f83401f40c51dbbaa8af9b10fb4fce8fab33d74106182a1bb5985b79e70b44b"
+      },
+      {
+        "path": "validation/revI-level-review.json",
+        "sha256": "8f56ebb454ceb9a3df8f3790fc21c4c7ce881a9b03b17642f2c0591a0d87027b"
+      },
+      {
+        "path": "validation/revI-mechanical.json",
+        "sha256": "5cb5d0f629023c08d6683326b05571b76324346a94b5589f14c26c31755456df"
+      },
+      {
+        "path": "validation/revI-native-export.json",
+        "sha256": "31e807e21c5165c9ad2c9e410ff4ba22e8262fd147efd6a2131f6cd9dc1b9edf"
+      },
+      {
+        "path": "validation/revI-native-runtime-correction.json",
+        "sha256": "6ed22cbfbc4c27591163a7ce80570f0942e1cbdb1d9b956d5b0f592538416aa7"
+      },
+      {
+        "path": "validation/revI-outline.json",
+        "sha256": "3bf6a4cd84174ab2dfd3bf8ee884c5f0d12a28a647637aeb343da5e5dac74a4b"
+      },
+      {
+        "path": "validation/revI-parts-links.json",
+        "sha256": "58f9a1525e71590173028e6754c5b7440ebee5cbd6bfb70996f941f457ad6b59"
+      },
+      {
+        "path": "validation/revI-pcb-component-models.json",
+        "sha256": "2a661e989efe47c15e043da1bdf7d487cfab038c3570bfd01d6cd91a34626e88"
+      },
+      {
+        "path": "validation/revI-pcb-outline.json",
+        "sha256": "b441f0a973f9654df36353f7047a68362564b4a81e13175f73495a51a2bcc33d"
+      },
+      {
+        "path": "validation/revI-performance.json",
+        "sha256": "ce2e6a207a23895d6ec03f450a4386c462499eeaaeb69062ebb3b5ca3633ceec"
+      },
+      {
+        "path": "validation/revI-print-kit.json",
+        "sha256": "1001ce81b86ebd37ec1189f0f5172f7de73596f13ac339b91db059710e16607c"
+      },
+      {
+        "path": "validation/revI-publication-checksum.json",
+        "sha256": "202aa05f67961870056c21d0c04f9f5f7871c48a4bc490700edbb18365c3ba33"
+      },
+      {
+        "path": "validation/revI-publication.json",
+        "sha256": "849445e503065df131f0576371c4d8798ee91c56d01b2e6ed221d3357d8669bc"
+      },
+      {
+        "path": "validation/revI-reliability-public.json",
+        "sha256": "23a63b139cf591a2d2cc804e2318b9862a6f4d6236e0c1ea1753a34e4aaea057"
+      },
+      {
+        "path": "validation/revI-reliability-review.json",
+        "sha256": "9d5824083335317c1655ba9be520d6857038fc2c3cad9a051d502405ad7f5189"
+      },
+      {
+        "path": "validation/revI-reliability.json",
+        "sha256": "d86f3bb198cfd4e021f32234f75c476f96f880aee4df4e2a299ff4d4fd2e11e2"
+      },
+      {
+        "path": "validation/revI-render.json",
+        "sha256": "5adb40af36ccf4657409af65905e0c95cf3b0130636ccdb65c49a530c7e3172e"
+      },
+      {
+        "path": "validation/revI-rim-publication.json",
+        "sha256": "fa83e90f03edd40f9d9504d48a9940da5ff7f6c63fdfc2a18cfb72b68ec8b465"
+      },
+      {
+        "path": "validation/revI-rim-render.json",
+        "sha256": "e75ab7a6f0917cb8e95d51256c9b64d1950f4dceea5a5234e011bdfb272c6907"
+      },
+      {
+        "path": "validation/revI-rim-review.json",
+        "sha256": "2a28d5e2530056247582b5e60df01b4d24b7c4b2b6726e37402d108009a479bb"
+      },
+      {
+        "path": "validation/revI-rim-solids.json",
+        "sha256": "871c03baaee131dcf330ffa1cc4d7d3565fa7a947a57e04214fcd53eb343f48f"
+      },
+      {
+        "path": "validation/revI-secret-scan-correction.json",
+        "sha256": "06db8b3e64f5bed17a5ba5897ab8a4799572277903f4cf0c4ab94238dbfc4a9e"
+      },
+      {
+        "path": "validation/revI-service.json",
+        "sha256": "3d96ab9f2365c36c4b322acdca32c997b7f9b2d06d9a468b364f21c8c115e261"
+      },
+      {
+        "path": "validation/revI-slim-flush-installation.json",
+        "sha256": "a76b9f1c647996ba1e8b09b50274167f41910b64238b500d3f68c16445881ed6"
+      },
+      {
+        "path": "validation/revI-slim-flush-performance.json",
+        "sha256": "b7c0bd0b710aabd8e385e9d06a896b8dce44d631e3f02fb31f1114105bbd21c8"
+      },
+      {
+        "path": "validation/revI-slim-flush-review.json",
+        "sha256": "25ceb897f28629410e1bcc963cf298f6f484980f7a3ee4bc8a156db8f2e2964f"
+      },
+      {
+        "path": "validation/revI-slim-flush.json",
+        "sha256": "4812399ccfe4b0fe9dfa589b969cebde76d77840614bba54211d7992751978bc"
+      },
+      {
+        "path": "validation/revI-slim-pcb.json",
+        "sha256": "93372c1a0e93a9bc831ef643747d1d1dddb0707ee9236596ba40162d5f12c2a7"
+      },
+      {
+        "path": "validation/revI-stack-study.json",
+        "sha256": "68800f271cc0b56b9b467845338315663d824603464bde8ce1d7d748eda9ab19"
+      },
+      {
+        "path": "validation/revI-theme-customization.json",
+        "sha256": "d7e95f1f271814c38653855db38643f2baa59c67a6108c001e9bc5c0839f1c8d"
+      },
+      {
+        "path": "validation/revI-theme-performance.json",
+        "sha256": "bab49871659cd13ed6ee7e336ee705cb5530987128091b6097349229a20eeb0f"
+      },
+      {
+        "path": "validation/revI-themes-components-publication.json",
+        "sha256": "a9333bd4893beac69113f7ae93f233f1a759af0da8f58c2ba0cb954cf81fbd6d"
+      },
+      {
+        "path": "validation/revI-thumb-themes.json",
+        "sha256": "15927be5a354ed92529148c8aaae1e076de5f5bcf2c5f8c245b5433c7b2a5b20"
+      },
+      {
+        "path": "validation/revI-ui.json",
+        "sha256": "6440781111103b4c1dd5c202cbd4d68c3e046a92e927c9b29420deacd57e2d05"
+      },
+      {
+        "path": "validation/revI-viewer.json",
+        "sha256": "8c7c62d330a540873db8e5cc6260be3bad0fc30e1a11bbc9a596bdf098329bd9"
+      },
+      {
+        "path": "validation/viewer-multicolor-publication.json",
+        "sha256": "a817064c826a04570290650e2953fc22baf6bf7b8292d62866a95f4968623c3a"
+      },
+      {
+        "path": "validation/viewer-multicolor.json",
+        "sha256": "65ea65f286e9d80efb9e043cf11b044b4777af53c6e4de227c65b9d25ba8f780"
+      },
+      {
+        "path": "validation/viewer-sidebar-publication.json",
+        "sha256": "36f9cdb282a113ef5804950248828a597514536cc1bbb537a21b1ae7e8cae63e"
+      },
+      {
+        "path": "validation/viewer-sidebar.json",
+        "sha256": "f1027b034bd1a2e14c342e157533f1cb2980fa7200c4759407ffab0b62a63fa3"
+      },
+      {
+        "path": "validation/viewer-ux-publication.json",
+        "sha256": "b4e547702feb4410416fc78e3119e1a575ba138cecebdcd372648dad296a6633"
+      },
+      {
+        "path": "validation/viewer-ux.json",
+        "sha256": "660409d72da1ccb222b41f7b8163ac532103e7bc374dccd7e66345ca83772a59"
+      },
+      {
+        "path": "viewer/app.js",
+        "sha256": "572b465304375f4905dbe9b62d6228f6fca44a11061e26e022624215e484e7c9"
+      },
+      {
+        "path": "viewer/appearance.js",
+        "sha256": "25779ccacbae08407a9768ee61fc5314720fda04fedacf33af15f877c62677cd"
+      },
+      {
+        "path": "viewer/assets.js",
+        "sha256": "161172f2366683f7c7432b3ca9a715d298d2a6421dbd40c7e128713a9a28f4fb"
+      },
+      {
+        "path": "viewer/battery-leads-check.cjs",
+        "sha256": "aef0a28406ae155adea18115f2aab1bc8d4835ee0af94d5831fa97369985d3aa"
+      },
+      {
+        "path": "viewer/cap-rows-check.cjs",
+        "sha256": "9be00a2f82433f8447c3ef8e3da631eff8cea706928d29c2dd95763b06581109"
+      },
+      {
+        "path": "viewer/capture-customization.cjs",
+        "sha256": "e71bcdc4971f214fbd648b466c845dc740006e45ddde31123437be6bac70384d"
+      },
+      {
+        "path": "viewer/check.cjs",
+        "sha256": "61e73c4e8a7b5a1c1027274a4eb5b5447d22e9280a2ba63a7b9c4ff726ce3f2e"
+      },
+      {
+        "path": "viewer/color-input.js",
+        "sha256": "c6abbe21dd8af64db7a6d111d1757265580924e0e0028b482e9814d5ec1e1f16"
+      },
+      {
+        "path": "viewer/config-contract-check.cjs",
+        "sha256": "a4a33dac33ac17d23452b15a4b248b9402dff2997ea4543517b047df57cee970"
+      },
+      {
+        "path": "viewer/config.js",
+        "sha256": "2eec93833d1908b70e11d6b2c011e4858beb5389e77806ad673b26562f278b89"
+      },
+      {
+        "path": "viewer/customize-check.cjs",
+        "sha256": "463df21948feed1c17e4b8c7e9dcf28667a248a328e5f9a4e566bec039ebed89"
+      },
+      {
+        "path": "viewer/display-seam-check.cjs",
+        "sha256": "83ccdfa7473216f9c6197d3b310292dda7f1c7f8d40208594e41700ada0bf9a1"
+      },
+      {
+        "path": "viewer/explorer.js",
+        "sha256": "5369c88b4f2a24952ee5f5da8170348080a97d58cacbbfe332b2df11dd4b4498"
+      },
+      {
+        "path": "viewer/finishes-check.cjs",
+        "sha256": "2d7840d4eda38d9542034fdca10d12d65806d267e31ec4541999d23d591f9967"
+      },
+      {
+        "path": "viewer/finishes.js",
+        "sha256": "466fda4cc8aff474ec017ae639169d982471ae0f367f62cb104144353f2cb4ba"
+      },
+      {
+        "path": "viewer/flush-print-check.cjs",
+        "sha256": "fafbc377997245ff6c089a54f40e3036a82a5ee5235de5a26dabd99a49fde1d2"
+      },
+      {
+        "path": "viewer/frame-collection-check.cjs",
+        "sha256": "c88d8b7c0e6c0400f47fafded0687c1ae08ecc8e33783d7cdf97bb8a877d9447"
+      },
+      {
+        "path": "viewer/frame-orientation-check.cjs",
+        "sha256": "88d4bf409bac1094945c0488a48c97007b441055e8b99e3c5b944f1e64f3339b"
+      },
+      {
+        "path": "viewer/hex-check.cjs",
+        "sha256": "2fc9b403e15715318944231044f2e057a68a7ae47ec3b0bac096d524b105f59d"
+      },
+      {
+        "path": "viewer/history.js",
+        "sha256": "5c0d9f90771c5325027dc7f0aedde6e1b13bed455ddcc300997941f05fffbf31"
+      },
+      {
+        "path": "viewer/keycap-colors.js",
+        "sha256": "7c6606fbc5d4e98c4b15d99b40ad01a8aee9b4c4b6e5826350d638949f30bee7"
+      },
+      {
+        "path": "viewer/keycolors-check.cjs",
+        "sha256": "006948aa5b10299d8e7802c5701856addb02dc3c0da400a4afe43a2ac972a0e4"
+      },
+      {
+        "path": "viewer/level-check.cjs",
+        "sha256": "96a323e02134e10893c09683bd89f03a393b2542c073c76c44f583c184ccf39e"
+      },
+      {
+        "path": "viewer/loading-check.cjs",
+        "sha256": "b3838a5b76d014a5066ba1cf6c27f2b5df97f570188c1f2b9f202f18e7ebcf16"
+      },
+      {
+        "path": "viewer/package-lock.json",
+        "sha256": "a62090e2bb0ab32205ff582bd3612ff167dc03d9db4c2b6879bb98f5bf25d550"
+      },
+      {
+        "path": "viewer/package.json",
+        "sha256": "314e1be30448599a55de2b5cf49910042cd736efe2666eb0879582759915f7cc"
+      },
+      {
+        "path": "viewer/performance.cjs",
+        "sha256": "59729fe2716b04bf09e0289d0e6e72347ce82956a3c9cfcddc2a85c722bea463"
+      },
+      {
+        "path": "viewer/previews.js",
+        "sha256": "700c21e97c8896f63c5dac209ed443345b3f763b8a7bc253b5d00d78d751ed15"
+      },
+      {
+        "path": "viewer/printing.js",
+        "sha256": "b7ca61cf86752c4d66f96f770578ad29c503e28e65b875477f97b001e7cd5d66"
+      },
+      {
+        "path": "viewer/public-check.cjs",
+        "sha256": "4d32e1234a89c17c2781c9656065d054b5dbfee016030cbb90f8c1fd7e6b2566"
+      },
+      {
+        "path": "viewer/rebrand-check.cjs",
+        "sha256": "b1cbe4d89391f9576e403a986dc5b253551a1b447c93bb29a0481e30555beca6"
+      },
+      {
+        "path": "viewer/reliability-check.cjs",
+        "sha256": "41654440cea4f3050aba3c2edc568b07a43e539196d269a5fcb722c61396ec90"
+      },
+      {
+        "path": "viewer/storage.js",
+        "sha256": "7553fc33327421bab23f0de2e828b42fd94977709a1f1a6a29a99d822010678d"
+      },
+      {
+        "path": "viewer/style.css",
+        "sha256": "441d02023c2a981896bfa9ea621405d6d627f8c8fb4d823cafc815695d5fae47"
+      },
+      {
+        "path": "viewer/template.html",
+        "sha256": "c2e8cef7eb8027da6081c0f87d9b393e794fd9ad87f4b1b792cb53efbc25faa9"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "A1",
+      "severity": "MEDIUM",
+      "title": "DisplayShiftY breaks mating registration",
+      "evidence": "Native +1 mm edit: board Y delta -1 mm; male contacts delta 0; Talavera/glass intersection 2.784525 mm3 despite valid solid."
+    },
+    {
+      "id": "A2",
+      "severity": "MEDIUM",
+      "title": "R4 color solids bypass the edited aperture",
+      "evidence": "WindowMargin .10 to .30 mm retains .10 mm final gap; final minus blank 14.545225 mm3."
+    },
+    {
+      "id": "A3",
+      "severity": "MEDIUM",
+      "title": "FrameTop edit changes inlay depth and backing",
+      "evidence": "FrameTop13.99; ordinary color floor13.19; cavity ceiling12.59; depth0.8 and calculated backing0.6 mm."
+    },
+    {
+      "id": "A4",
+      "severity": "MEDIUM",
+      "title": "Case bases intersect nominal USB corridor",
+      "evidence": "3.12 mm3, Z6.1..6.3, all four styles both halves; plates0. This is the existing 12x5 mm nominal envelope, not measured cable fit."
+    },
+    {
+      "id": "A5",
+      "severity": "MEDIUM",
+      "title": "36 BOM diodes absent from mechanical checks",
+      "evidence": "18 B.Cu diode footprints per half with zero models; no installed native diode PartID. No collision claimed."
+    },
+    {
+      "id": "A6",
+      "severity": "MEDIUM",
+      "title": "Current check commands contain obsolete expectations",
+      "evidence": "hex-check retired handheld selector; level-check13.39; native roundtrip line45 expects Level for legacy Solid. Adapted HEX passes."
+    },
+    {
+      "id": "A7",
+      "severity": "MEDIUM",
+      "title": "Current documentation has stale dimensions and presentation",
+      "evidence": "customize roof1.2/window.4 vs source1.4/.1; Filo36 macro dialog strings; README hero retired Flan. Native historical collection explicitly retained."
+    }
+  ],
+  "suite": {
+    "snapshot": "8cd6ec78527d732652e206bcf46da0365772c17b",
+    "runner_sha256": "68f7c44fc1750a4791f71cc75fc684519f5b1a3137096692c85104cd79e91ca5",
+    "results": [
+      {
+        "name": "reliability",
+        "command": [
+          "node",
+          "viewer/reliability-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 22.45
+      },
+      {
+        "name": "frame-collection",
+        "command": [
+          "node",
+          "viewer/frame-collection-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 9.81
+      },
+      {
+        "name": "frame-orientation",
+        "command": [
+          "node",
+          "viewer/frame-orientation-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 3.29
+      },
+      {
+        "name": "keycolors",
+        "command": [
+          "node",
+          "viewer/keycolors-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 7.16
+      },
+      {
+        "name": "hex",
+        "command": [
+          "node",
+          "viewer/hex-check.cjs"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 31.82
+      },
+      {
+        "name": "cap-rows",
+        "command": [
+          "node",
+          "viewer/cap-rows-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 5.21
+      },
+      {
+        "name": "battery-leads",
+        "command": [
+          "node",
+          "viewer/battery-leads-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 4.31
+      },
+      {
+        "name": "display-seam",
+        "command": [
+          "node",
+          "viewer/display-seam-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 2.1
+      },
+      {
+        "name": "layout",
+        "command": [
+          "python3",
+          "tools/check_layout.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.14
+      },
+      {
+        "name": "config-contract",
+        "command": [
+          "node",
+          "viewer/config-contract-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 2.1
+      },
+      {
+        "name": "finishes",
+        "command": [
+          "node",
+          "viewer/finishes-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.64
+      },
+      {
+        "name": "flush-print",
+        "command": [
+          "node",
+          "viewer/flush-print-check.cjs"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.08
+      },
+      {
+        "name": "level",
+        "command": [
+          "node",
+          "viewer/level-check.cjs"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 0.66
+      },
+      {
+        "name": "drc-left",
+        "command": [
+          "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+          "pcb",
+          "drc",
+          "--format",
+          "json",
+          "--severity-all",
+          "--exit-code-violations",
+          "--output",
+          "$REPO/build/audit-20261007/drc-left.json",
+          "--schematic-parity",
+          "hardware/revI/flan36-left.kicad_pcb"
+        ],
+        "exit_code": 5,
+        "elapsed_seconds": 0.77
+      },
+      {
+        "name": "erc-left",
+        "command": [
+          "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+          "sch",
+          "erc",
+          "--format",
+          "json",
+          "--severity-all",
+          "--exit-code-violations",
+          "--output",
+          "$REPO/build/audit-20261007/erc-left.json",
+          "hardware/revI/flan36-left.kicad_sch"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.26
+      },
+      {
+        "name": "drc-right",
+        "command": [
+          "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+          "pcb",
+          "drc",
+          "--format",
+          "json",
+          "--severity-all",
+          "--exit-code-violations",
+          "--output",
+          "$REPO/build/audit-20261007/drc-right.json",
+          "--schematic-parity",
+          "hardware/revI/flan36-right.kicad_pcb"
+        ],
+        "exit_code": 5,
+        "elapsed_seconds": 0.36
+      },
+      {
+        "name": "erc-right",
+        "command": [
+          "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+          "sch",
+          "erc",
+          "--format",
+          "json",
+          "--severity-all",
+          "--exit-code-violations",
+          "--output",
+          "$REPO/build/audit-20261007/erc-right.json",
+          "hardware/revI/flan36-right.kicad_sch"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.25
+      }
+    ],
+    "physical_acceptance": false
+  },
+  "native_parameters_and_usb": {
+    "source_sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564",
+    "physical_acceptance": false,
+    "initial_parameters_mm": {
+      "DisplayShiftY": 2.4,
+      "FrameTop": 13.59,
+      "FrameRoof": 1.4,
+      "WindowMargin": 0.1,
+      "MCUBottom": 8.2
+    },
+    "baseline": {
+      "left": {
+        "objects": {
+          "NiceViewVisual0": [
+            116.0,
+            -52.099999999999994,
+            11.49,
+            130.0,
+            -16.099999999999994,
+            12.49
+          ],
+          "NiceViewVisual1": [
+            117.02,
+            -51.699999999999996,
+            12.48,
+            128.98000000000002,
+            -49.9,
+            12.515
+          ],
+          "NiceViewVisual2": [
+            116.15,
+            -48.95,
+            12.49,
+            129.85,
+            -18.65,
+            13.39
+          ],
+          "GlassWindow": [
+            116.05000000000001,
+            -49.05,
+            12.39,
+            129.95000000000002,
+            -18.549999999999997,
+            17.39
+          ],
+          "SlimDisplayMaleSpacer": [
+            116.65,
+            -52.04,
+            9.97,
+            129.35000000000002,
+            -49.56,
+            11.49
+          ],
+          "SlimDisplayMaleContacts": [
+            117.6025,
+            -51.1175,
+            7.3,
+            128.3975,
+            -50.4825,
+            12.79
+          ],
+          "SlimDisplaySocketHousing": [
+            116.65,
+            -52.07,
+            5.4,
+            129.35000000000002,
+            -49.53,
+            9.97
+          ],
+          "SlimDisplaySocketPins": [
+            117.62,
+            -51.099999999999994,
+            2.48,
+            128.38,
+            -50.5,
+            6.92
+          ],
+          "LevelDisplaySolderReserve": [
+            117.12,
+            -51.599999999999994,
+            12.49,
+            128.88,
+            -50.0,
+            12.99
+          ],
+          "LevelDisplayPCBRelief": [
+            115.05,
+            -53.0,
+            10.9,
+            130.95,
+            -15.100000000000001,
+            12.725
+          ],
+          "LevelHeaderServiceWell": [
+            116.15,
+            -52.6,
+            10.9,
+            129.85,
+            -49.1,
+            13.190000000000001
+          ]
+        },
+        "frames": {
+          "talavera": {
+            "glass_gap_mm": 0.09999999999999432,
+            "glass_collision_mm3": 0.0,
+            "outside_blank_mm3": 0.0,
+            "missing_from_blank_mm3": 0.0,
+            "bounds_mm": [
+              110.9999999,
+              -67.0000001,
+              6.299999999999994,
+              135.0000001,
+              -10.9999999,
+              13.5900001
+            ],
+            "valid": true,
+            "materials": {
+              "body": {
+                "bounds_mm": [
+                  110.9999999,
+                  -67.0000001,
+                  6.299999999999994,
+                  135.0000001,
+                  -10.9999999,
+                  13.5900001
+                ],
+                "valid": true
+              },
+              "detail": {
+                "bounds_mm": [
+                  113.65,
+                  -51.449999999999996,
+                  12.725,
+                  132.35,
+                  -16.149999999999995,
+                  13.59
+                ],
+                "valid": true
+              },
+              "accent": {
+                "bounds_mm": [
+                  121.5999999,
+                  -61.0000001,
+                  13.1899999,
+                  124.4000001,
+                  -58.1999999,
+                  13.5900001
+                ],
+                "valid": true
+              },
+              "secondary": {
+                "bounds_mm": [
+                  116.7999999,
+                  -65.8000001,
+                  13.1899999,
+                  129.20000009999998,
+                  -53.3999999,
+                  13.5900001
+                ],
+                "valid": true
+              }
+            },
+            "ordinary_inlay": {
+              "L_FlushFrame_talavera_R4_detail_ordinary": [
+                113.65,
+                -51.231742422927205,
+                13.19,
+                132.35,
+                -16.36825757707279,
+                13.59
+              ],
+              "L_FlushFrame_talavera_R4_accent_ordinary": [
+                121.5999999,
+                -61.0000001,
+                13.1899999,
+                124.4000001,
+                -58.1999999,
+                13.5900001
+              ],
+              "L_FlushFrame_talavera_R4_secondary_ordinary": [
+                116.7999999,
+                -65.8000001,
+                13.1899999,
+                129.20000009999998,
+                -53.3999999,
+                13.5900001
+              ]
+            },
+            "cavity_bounds_mm": [
+              112.2,
+              -65.8,
+              6.2,
+              133.8,
+              -12.2,
+              12.19
+            ]
+          }
+        }
+      }
+    },
+    "DisplayShiftY": {
+      "value_mm": 3.4,
+      "snapshot": {
+        "left": {
+          "objects": {
+            "NiceViewVisual0": [
+              116.0,
+              -53.099999999999994,
+              11.49,
+              130.0,
+              -17.099999999999994,
+              12.49
+            ],
+            "NiceViewVisual1": [
+              117.02,
+              -52.699999999999996,
+              12.48,
+              128.98000000000002,
+              -50.9,
+              12.515
+            ],
+            "NiceViewVisual2": [
+              116.15,
+              -49.95,
+              12.49,
+              129.85,
+              -19.65,
+              13.39
+            ],
+            "GlassWindow": [
+              116.05000000000001,
+              -50.05,
+              12.39,
+              129.95000000000002,
+              -19.549999999999997,
+              17.39
+            ],
+            "SlimDisplayMaleSpacer": [
+              116.65,
+              -52.04,
+              9.97,
+              129.35000000000002,
+              -49.56,
+              11.49
+            ],
+            "SlimDisplayMaleContacts": [
+              117.6025,
+              -51.1175,
+              7.3,
+              128.3975,
+              -50.4825,
+              12.79
+            ],
+            "SlimDisplaySocketHousing": [
+              116.65,
+              -52.07,
+              5.4,
+              129.35000000000002,
+              -49.53,
+              9.97
+            ],
+            "SlimDisplaySocketPins": [
+              117.62,
+              -51.099999999999994,
+              2.48,
+              128.38,
+              -50.5,
+              6.92
+            ],
+            "LevelDisplaySolderReserve": [
+              117.12,
+              -51.599999999999994,
+              12.49,
+              128.88,
+              -50.0,
+              12.99
+            ],
+            "LevelDisplayPCBRelief": [
+              115.05,
+              -53.0,
+              10.9,
+              130.95,
+              -15.100000000000001,
+              12.725
+            ],
+            "LevelHeaderServiceWell": [
+              116.15,
+              -52.6,
+              10.9,
+              129.85,
+              -49.1,
+              13.190000000000001
+            ]
+          },
+          "frames": {
+            "talavera": {
+              "glass_gap_mm": 0.0,
+              "glass_collision_mm3": 2.7845250000000505,
+              "outside_blank_mm3": 5.97152500000004,
+              "missing_from_blank_mm3": 0.0,
+              "bounds_mm": [
+                110.9999999,
+                -67.0000001,
+                6.299999999999994,
+                135.0000001,
+                -10.9999999,
+                13.5900001
+              ],
+              "valid": true,
+              "materials": {
+                "body": {
+                  "bounds_mm": [
+                    110.9999999,
+                    -67.0000001,
+                    6.299999999999994,
+                    135.0000001,
+                    -10.9999999,
+                    13.5900001
+                  ],
+                  "valid": true
+                },
+                "detail": {
+                  "bounds_mm": [
+                    113.65,
+                    -51.449999999999996,
+                    12.725,
+                    132.35,
+                    -16.149999999999995,
+                    13.59
+                  ],
+                  "valid": true
+                },
+                "accent": {
+                  "bounds_mm": [
+                    121.5999999,
+                    -61.0000001,
+                    13.1899999,
+                    124.4000001,
+                    -58.1999999,
+                    13.5900001
+                  ],
+                  "valid": true
+                },
+                "secondary": {
+                  "bounds_mm": [
+                    116.7999999,
+                    -65.8000001,
+                    13.1899999,
+                    129.20000009999998,
+                    -53.3999999,
+                    13.5900001
+                  ],
+                  "valid": true
+                }
+              },
+              "ordinary_inlay": {
+                "L_FlushFrame_talavera_R4_detail_ordinary": [
+                  113.65,
+                  -51.231742422927205,
+                  13.19,
+                  132.35,
+                  -16.36825757707279,
+                  13.59
+                ],
+                "L_FlushFrame_talavera_R4_accent_ordinary": [
+                  121.5999999,
+                  -61.0000001,
+                  13.1899999,
+                  124.4000001,
+                  -58.1999999,
+                  13.5900001
+                ],
+                "L_FlushFrame_talavera_R4_secondary_ordinary": [
+                  116.7999999,
+                  -65.8000001,
+                  13.1899999,
+                  129.20000009999998,
+                  -53.3999999,
+                  13.5900001
+                ]
+              },
+              "cavity_bounds_mm": [
+                112.2,
+                -65.8,
+                6.2,
+                133.8,
+                -12.2,
+                12.19
+              ]
+            }
+          }
+        }
+      }
+    },
+    "WindowMargin": {
+      "value_mm": 0.3,
+      "snapshot": {
+        "left": {
+          "objects": {
+            "NiceViewVisual0": [
+              116.0,
+              -52.099999999999994,
+              11.49,
+              130.0,
+              -16.099999999999994,
+              12.49
+            ],
+            "NiceViewVisual1": [
+              117.02,
+              -51.699999999999996,
+              12.48,
+              128.98000000000002,
+              -49.9,
+              12.515
+            ],
+            "NiceViewVisual2": [
+              116.15,
+              -48.95,
+              12.49,
+              129.85,
+              -18.65,
+              13.39
+            ],
+            "GlassWindow": [
+              115.85000000000001,
+              -49.24999999999999,
+              12.39,
+              130.15,
+              -18.34999999999999,
+              17.39
+            ],
+            "SlimDisplayMaleSpacer": [
+              116.65,
+              -52.04,
+              9.97,
+              129.35000000000002,
+              -49.56,
+              11.49
+            ],
+            "SlimDisplayMaleContacts": [
+              117.6025,
+              -51.1175,
+              7.3,
+              128.3975,
+              -50.4825,
+              12.79
+            ],
+            "SlimDisplaySocketHousing": [
+              116.65,
+              -52.07,
+              5.4,
+              129.35000000000002,
+              -49.53,
+              9.97
+            ],
+            "SlimDisplaySocketPins": [
+              117.62,
+              -51.099999999999994,
+              2.48,
+              128.38,
+              -50.5,
+              6.92
+            ],
+            "LevelDisplaySolderReserve": [
+              117.12,
+              -51.599999999999994,
+              12.49,
+              128.88,
+              -50.0,
+              12.99
+            ],
+            "LevelDisplayPCBRelief": [
+              115.05,
+              -53.0,
+              10.9,
+              130.95,
+              -15.100000000000001,
+              12.725
+            ],
+            "LevelHeaderServiceWell": [
+              116.15,
+              -52.6,
+              10.9,
+              129.85,
+              -49.1,
+              13.190000000000001
+            ]
+          },
+          "frames": {
+            "talavera": {
+              "glass_gap_mm": 0.09999999999999432,
+              "glass_collision_mm3": 0.0,
+              "outside_blank_mm3": 14.545225000000247,
+              "missing_from_blank_mm3": 0.0,
+              "bounds_mm": [
+                110.9999999,
+                -67.0000001,
+                6.299999999999994,
+                135.0000001,
+                -10.9999999,
+                13.5900001
+              ],
+              "valid": true,
+              "materials": {
+                "body": {
+                  "bounds_mm": [
+                    110.9999999,
+                    -67.0000001,
+                    6.299999999999994,
+                    135.0000001,
+                    -10.9999999,
+                    13.5900001
+                  ],
+                  "valid": true
+                },
+                "detail": {
+                  "bounds_mm": [
+                    113.65,
+                    -51.449999999999996,
+                    12.725,
+                    132.35,
+                    -16.149999999999995,
+                    13.59
+                  ],
+                  "valid": true
+                },
+                "accent": {
+                  "bounds_mm": [
+                    121.5999999,
+                    -61.0000001,
+                    13.1899999,
+                    124.4000001,
+                    -58.1999999,
+                    13.5900001
+                  ],
+                  "valid": true
+                },
+                "secondary": {
+                  "bounds_mm": [
+                    116.7999999,
+                    -65.8000001,
+                    13.1899999,
+                    129.20000009999998,
+                    -53.3999999,
+                    13.5900001
+                  ],
+                  "valid": true
+                }
+              },
+              "ordinary_inlay": {
+                "L_FlushFrame_talavera_R4_detail_ordinary": [
+                  113.65,
+                  -51.231742422927205,
+                  13.19,
+                  132.35,
+                  -16.36825757707279,
+                  13.59
+                ],
+                "L_FlushFrame_talavera_R4_accent_ordinary": [
+                  121.5999999,
+                  -61.0000001,
+                  13.1899999,
+                  124.4000001,
+                  -58.1999999,
+                  13.5900001
+                ],
+                "L_FlushFrame_talavera_R4_secondary_ordinary": [
+                  116.7999999,
+                  -65.8000001,
+                  13.1899999,
+                  129.20000009999998,
+                  -53.3999999,
+                  13.5900001
+                ]
+              },
+              "cavity_bounds_mm": [
+                112.2,
+                -65.8,
+                6.2,
+                133.8,
+                -12.2,
+                12.19
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FrameTop": {
+      "value_mm": 13.99,
+      "snapshot": {
+        "left": {
+          "objects": {
+            "NiceViewVisual0": [
+              116.0,
+              -52.099999999999994,
+              11.49,
+              130.0,
+              -16.099999999999994,
+              12.49
+            ],
+            "NiceViewVisual1": [
+              117.02,
+              -51.699999999999996,
+              12.48,
+              128.98000000000002,
+              -49.9,
+              12.515
+            ],
+            "NiceViewVisual2": [
+              116.15,
+              -48.95,
+              12.49,
+              129.85,
+              -18.65,
+              13.39
+            ],
+            "GlassWindow": [
+              116.05000000000001,
+              -49.05,
+              12.39,
+              129.95000000000002,
+              -18.549999999999997,
+              17.39
+            ],
+            "SlimDisplayMaleSpacer": [
+              116.65,
+              -52.04,
+              9.97,
+              129.35000000000002,
+              -49.56,
+              11.49
+            ],
+            "SlimDisplayMaleContacts": [
+              117.6025,
+              -51.1175,
+              7.3,
+              128.3975,
+              -50.4825,
+              12.79
+            ],
+            "SlimDisplaySocketHousing": [
+              116.65,
+              -52.07,
+              5.4,
+              129.35000000000002,
+              -49.53,
+              9.97
+            ],
+            "SlimDisplaySocketPins": [
+              117.62,
+              -51.099999999999994,
+              2.48,
+              128.38,
+              -50.5,
+              6.92
+            ],
+            "LevelDisplaySolderReserve": [
+              117.12,
+              -51.599999999999994,
+              12.49,
+              128.88,
+              -50.0,
+              12.99
+            ],
+            "LevelDisplayPCBRelief": [
+              115.05,
+              -53.0,
+              10.9,
+              130.95,
+              -15.100000000000001,
+              12.725
+            ],
+            "LevelHeaderServiceWell": [
+              116.15,
+              -52.6,
+              10.9,
+              129.85,
+              -49.1,
+              13.190000000000001
+            ]
+          },
+          "frames": {
+            "talavera": {
+              "glass_gap_mm": 0.09999999999999432,
+              "glass_collision_mm3": 0.0,
+              "outside_blank_mm3": 0.0,
+              "missing_from_blank_mm3": 0.0,
+              "bounds_mm": [
+                110.9999999,
+                -67.0000001,
+                6.299999999999996,
+                135.0000001,
+                -10.9999999,
+                13.9900001
+              ],
+              "valid": true,
+              "materials": {
+                "body": {
+                  "bounds_mm": [
+                    110.9999999,
+                    -67.0000001,
+                    6.299999999999996,
+                    135.0000001,
+                    -10.9999999,
+                    13.9900001
+                  ],
+                  "valid": true
+                },
+                "detail": {
+                  "bounds_mm": [
+                    113.65,
+                    -51.449999999999996,
+                    12.725,
+                    132.35,
+                    -16.149999999999995,
+                    13.99
+                  ],
+                  "valid": true
+                },
+                "accent": {
+                  "bounds_mm": [
+                    121.5999999,
+                    -61.0000001,
+                    13.1899999,
+                    124.4000001,
+                    -58.1999999,
+                    13.9900001
+                  ],
+                  "valid": true
+                },
+                "secondary": {
+                  "bounds_mm": [
+                    116.7999999,
+                    -65.8000001,
+                    13.1899999,
+                    129.20000009999998,
+                    -53.3999999,
+                    13.9900001
+                  ],
+                  "valid": true
+                }
+              },
+              "ordinary_inlay": {
+                "L_FlushFrame_talavera_R4_detail_ordinary": [
+                  113.65,
+                  -51.231742422927205,
+                  13.19,
+                  132.35,
+                  -16.36825757707279,
+                  13.99
+                ],
+                "L_FlushFrame_talavera_R4_accent_ordinary": [
+                  121.5999999,
+                  -61.0000001,
+                  13.1899999,
+                  124.4000001,
+                  -58.1999999,
+                  13.9900001
+                ],
+                "L_FlushFrame_talavera_R4_secondary_ordinary": [
+                  116.7999999,
+                  -65.8000001,
+                  13.1899999,
+                  129.20000009999998,
+                  -53.3999999,
+                  13.9900001
+                ]
+              },
+              "cavity_bounds_mm": [
+                112.2,
+                -65.8,
+                6.2,
+                133.8,
+                -12.2,
+                12.59
+              ]
+            }
+          }
+        }
+      }
+    },
+    "usb_envelope": {
+      "left": {
+        "bounds_mm": [
+          116.8,
+          -18.8,
+          6.1,
+          128.8,
+          1.1999999999999993,
+          11.1
+        ],
+        "cases": {
+          "solid-base": {
+            "collision_mm3": 3.1200000000000143,
+            "collision_bounds_mm": [
+              116.8,
+              -12.3,
+              6.1,
+              128.8,
+              -11.0,
+              6.300000000000001
+            ]
+          },
+          "solid-plate": {
+            "collision_mm3": 0.0,
+            "collision_bounds_mm": null
+          },
+          "rim-base": {
+            "collision_mm3": 3.1200000000000143,
+            "collision_bounds_mm": [
+              116.8,
+              -12.3,
+              6.1,
+              128.8,
+              -11.0,
+              6.300000000000001
+            ]
+          },
+          "rim-plate": {
+            "collision_mm3": 0.0,
+            "collision_bounds_mm": null
+          },
+          "terrace-base": {
+            "collision_mm3": 3.1200000000000143,
+            "collision_bounds_mm": [
+              116.8,
+              -12.3,
+              6.1,
+              128.8,
+              -11.0,
+              6.300000000000001
+            ]
+          },
+          "terrace-plate": {
+            "collision_mm3": 0.0,
+            "collision_bounds_mm": null
+          },
+          "level-base": {
+            "collision_mm3": 3.1200000000000143,
+            "collision_bounds_mm": [
+              116.8,
+              -12.3,
+              6.1,
+              128.8,
+              -11.0,
+              6.300000000000001
+            ]
+          },
+          "level-plate": {
+            "collision_mm3": 0.0,
+            "collision_bounds_mm": null
+          }
+        }
+      },
+      "right": {
+        "bounds_mm": [
+          31.2,
+          -18.8,
+          6.1,
+          43.2,
+          1.1999999999999993,
+          11.1
+        ],
+        "cases": {
+          "solid-base": {
+            "collision_mm3": 3.1199999999999193,
+            "collision_bounds_mm": [
+              31.2,
+              -12.3,
+              6.1,
+              43.2,
+              -11.0,
+              6.300000000000001
+            ]
+          },
+          "solid-plate": {
+            "collision_mm3": 0.0,
+            "collision_bounds_mm": null
+          },
+          "rim-base": {
+            "collision_mm3": 3.1199999999999193,
+            "collision_bounds_mm": [
+              31.2,
+              -12.3,
+              6.1,
+              43.2,
+              -11.0,
+              6.300000000000001
+            ]
+          },
+          "rim-plate": {
+            "collision_mm3": 0.0,
+            "collision_bounds_mm": null
+          },
+          "terrace-base": {
+            "collision_mm3": 3.1199999999999193,
+            "collision_bounds_mm": [
+              31.2,
+              -12.3,
+              6.1,
+              43.2,
+              -11.0,
+              6.300000000000001
+            ]
+          },
+          "terrace-plate": {
+            "collision_mm3": 0.0,
+            "collision_bounds_mm": null
+          },
+          "level-base": {
+            "collision_mm3": 3.1199999999999193,
+            "collision_bounds_mm": [
+              31.2,
+              -12.3,
+              6.1,
+              43.2,
+              -11.0,
+              6.300000000000001
+            ]
+          },
+          "level-plate": {
+            "collision_mm3": 0.0,
+            "collision_bounds_mm": null
+          }
+        }
+      }
+    },
+    "source_unchanged": true,
+    "checker_sha256": "c8b53d003ba50c48b52fe30976122d733cb478985f0572aeb28c479f43c799f1"
+  },
+  "reference_native_frames": {
+    "passed": true,
+    "source_sha256": "bd50f6d2042cd7189959c2a7cde2171475b4de766cbbf31fc6282ad2d5aca564",
+    "frames_checked": 22,
+    "display_seam": {
+      "left": {
+        "glass_gap_mm": 0.09999999999999432,
+        "intersection_mm3": 0,
+        "opening_mm": [
+          13.900000000000006,
+          30.5
+        ]
+      },
+      "right": {
+        "glass_gap_mm": 0.09999999999999432,
+        "intersection_mm3": 0,
+        "opening_mm": [
+          13.900000000000002,
+          30.5
+        ]
+      }
+    },
+    "contact_alignment": {
+      "left": {
+        "native_pin_and_drill_centers_x": [
+          117.92,
+          120.46,
+          123.0,
+          125.54,
+          128.08
+        ],
+        "radial_clearance_mm": 0.2
+      },
+      "right": {
+        "native_pin_and_drill_centers_x": [
+          31.92,
+          34.46,
+          37.0,
+          39.54,
+          42.08
+        ],
+        "radial_clearance_mm": 0.2
+      }
+    }
+  },
+  "keycap_sweeps": {
+    "scope": "Every enabled variant at every key and allowed rotation, including poses rejected by cap/frame or neighbors; conservative full 3.5 mm travel vs nominal screw heads.",
+    "pairs": 6048,
+    "minimum_gap_mm": 4.091006905764591,
+    "limiting": {
+      "variant": "choc_stem_choc_size_normal_homing",
+      "side": "left",
+      "key": "K02",
+      "rotation_deg": 180,
+      "mount": "H2"
+    },
+    "conservative_contacts": [],
+    "physical_acceptance": false
+  },
+  "homing": {
+    "default_K14": {
+      "left": {
+        "variant": "choc_stem_choc_size_normal_homing",
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
+      },
+      "right": {
+        "variant": "choc_stem_choc_size_normal_homing",
+        "rotation_deg": 0,
+        "color": "#f2dfaf"
+      }
+    },
+    "profiles": {
+      "normal": {
+        "center_normal_top_mm": 4.800000190734863,
+        "center_homing_top_mm": 5.099999904632568,
+        "relief_mm": 0.2999997138977051
+      },
+      "saddle": {
+        "center_normal_top_mm": 4.800000190734863,
+        "center_homing_top_mm": 5.099999904632568,
+        "relief_mm": 0.2999997138977051
+      }
+    },
+    "viewer_default_K14": {
+      "left": {
+        "variant": "choc_stem_choc_size_normal_homing",
+        "rotation_deg": 0,
+        "color": "#F1E6CA"
+      },
+      "right": {
+        "variant": "choc_stem_choc_size_normal_homing",
+        "rotation_deg": 0,
+        "color": "#F1E6CA"
+      }
+    }
+  },
+  "electrical": {
+    "left": {
+      "erc_violations": 0,
+      "geometric_drc_violations": 0,
+      "unconnected_items": 104,
+      "schematic_parity": {
+        "footprint_symbol_mismatch": 38,
+        "net_conflict": 146,
+        "extra_footprint": 5
+      },
+      "crosscheck": {
+        "net_nodes": 108,
+        "normalized_net_mismatches": [],
+        "symbol_path_mismatches": [],
+        "diodes": [
+          {
+            "ref": "D02",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              48.0,
+              20.1
+            ]
+          },
+          {
+            "ref": "D05",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              102.0,
+              22.1
+            ]
+          },
+          {
+            "ref": "D01",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              30.0,
+              32.1
+            ]
+          },
+          {
+            "ref": "D21",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              30.0,
+              66.099999
+            ]
+          },
+          {
+            "ref": "D13",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              66.0,
+              32.1
+            ]
+          },
+          {
+            "ref": "D03",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              66.0,
+              15.1
+            ]
+          },
+          {
+            "ref": "D30",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              79.270182,
+              75.088203
+            ]
+          },
+          {
+            "ref": "D22",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              48.0,
+              54.1
+            ]
+          },
+          {
+            "ref": "D23",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              66.0,
+              49.1
+            ]
+          },
+          {
+            "ref": "D25",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              102.0,
+              56.1
+            ]
+          },
+          {
+            "ref": "D14",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              84.0,
+              37.1
+            ]
+          },
+          {
+            "ref": "D15",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              102.0,
+              39.1
+            ]
+          },
+          {
+            "ref": "D12",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              48.0,
+              37.1
+            ]
+          },
+          {
+            "ref": "D11",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              30.0,
+              49.1
+            ]
+          },
+          {
+            "ref": "D32",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              120.689883,
+              82.809554
+            ]
+          },
+          {
+            "ref": "D24",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              84.0,
+              54.1
+            ]
+          },
+          {
+            "ref": "D31",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              100.46169,
+              76.052904
+            ]
+          },
+          {
+            "ref": "D04",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              84.0,
+              20.1
+            ]
+          }
+        ],
+        "tracks": 0,
+        "extra_footprints": [
+          "H2",
+          "H1",
+          "H5",
+          "H3",
+          "H4"
+        ]
+      }
+    },
+    "right": {
+      "erc_violations": 0,
+      "geometric_drc_violations": 0,
+      "unconnected_items": 104,
+      "schematic_parity": {
+        "footprint_symbol_mismatch": 38,
+        "net_conflict": 146,
+        "extra_footprint": 5
+      },
+      "crosscheck": {
+        "net_nodes": 108,
+        "normalized_net_mismatches": [],
+        "symbol_path_mismatches": [],
+        "diodes": [
+          {
+            "ref": "D15",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              58.0,
+              39.1
+            ]
+          },
+          {
+            "ref": "D32",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              39.310116,
+              82.809554
+            ]
+          },
+          {
+            "ref": "D05",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              58.0,
+              22.1
+            ]
+          },
+          {
+            "ref": "D31",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              59.538309,
+              76.052904
+            ]
+          },
+          {
+            "ref": "D12",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              112.0,
+              37.1
+            ]
+          },
+          {
+            "ref": "D03",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              94.0,
+              15.1
+            ]
+          },
+          {
+            "ref": "D22",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              112.0,
+              54.1
+            ]
+          },
+          {
+            "ref": "D13",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              94.0,
+              32.1
+            ]
+          },
+          {
+            "ref": "D14",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              76.0,
+              37.1
+            ]
+          },
+          {
+            "ref": "D04",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              76.0,
+              20.1
+            ]
+          },
+          {
+            "ref": "D21",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              130.0,
+              66.099999
+            ]
+          },
+          {
+            "ref": "D23",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              94.0,
+              49.1
+            ]
+          },
+          {
+            "ref": "D25",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              58.0,
+              56.1
+            ]
+          },
+          {
+            "ref": "D01",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              130.0,
+              32.1
+            ]
+          },
+          {
+            "ref": "D02",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              112.0,
+              20.1
+            ]
+          },
+          {
+            "ref": "D24",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              76.0,
+              54.1
+            ]
+          },
+          {
+            "ref": "D11",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              130.0,
+              49.1
+            ]
+          },
+          {
+            "ref": "D30",
+            "layer": "B.Cu",
+            "models": 0,
+            "xy_mm": [
+              80.729817,
+              75.088203
+            ]
+          }
+        ],
+        "tracks": 0,
+        "extra_footprints": [
+          "H5",
+          "H1",
+          "H4",
+          "H3",
+          "H2"
+        ]
+      }
+    }
+  },
+  "assets": {
+    "viewer_source_count": 256,
+    "stale_viewer_sources": [],
+    "online_matches_receipt": true,
+    "offline_matches_receipt": true,
+    "local_documents_checked": 23,
+    "local_missing_targets": [],
+    "bom_links": [
+      {
+        "url": "https://cdn-shop.adafruit.com/145x109/1570-00.jpg",
+        "status": 200,
+        "resolved_url": "https://cdn-shop.adafruit.com/145x109/1570-00.jpg"
+      },
+      {
+        "url": "https://cdn-shop.adafruit.com/product-files/1570/1570datasheet.pdf",
+        "status": 200,
+        "resolved_url": "https://cdn-shop.adafruit.com/product-files/1570/1570datasheet.pdf"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/files/ALPS-SSSS811101.pdf?v=1670451309",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/files/ALPS-SSSS811101.pdf?v=1670451309"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/files/JST-S2B-PH-K.pdf?v=1670451309",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/files/JST-S2B-PH-K.pdf?v=1670451309"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/files/PANASONIC-EVQPUC02K.pdf?v=1670451309",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/files/PANASONIC-EVQPUC02K.pdf?v=1670451309"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/files/Semtech-1N4148W.pdf?v=1670451309",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/files/Semtech-1N4148W.pdf?v=1670451309"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/battery-corner-small.jpg?v=1671314267",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/battery-corner-small.jpg?v=1671314267"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/choc-four.jpg?v=1674353978",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/choc-four.jpg?v=1674353978"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/diode-all.jpg?v=1670363837",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/diode-all.jpg?v=1670363837"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/hotswap-both.jpg?v=1671586185",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/hotswap-both.jpg?v=1671586185"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/jst-all_ea8f3d9e-2644-4b11-91c9-7098c3b8c07c.jpg?v=1674443612",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/jst-all_ea8f3d9e-2644-4b11-91c9-7098c3b8c07c.jpg?v=1674443612"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/new-nano-side-small.jpg?v=1671313846",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/new-nano-side-small.jpg?v=1671313846"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/nice-view-sockets.jpg?v=1671232737",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/nice-view-sockets.jpg?v=1671232737"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/niceviewangle-cleaned-more-small.jpg?v=1671314667",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/niceviewangle-cleaned-more-small.jpg?v=1671314667"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/reset-button-both.jpg?v=1670365788",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/reset-button-both.jpg?v=1670365788"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/sockets-and-pins-small.jpg?v=1671314084",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/sockets-and-pins-small.jpg?v=1671314084"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/switch-both.jpg?v=1670366180",
+        "status": 200,
+        "resolved_url": "https://cdn.shopify.com/s/files/1/0618/5674/3655/products/switch-both.jpg?v=1670366180"
+      },
+      {
+        "url": "https://configured-product-images.s3.amazonaws.com/2D/specs/TL3342F160QG.pdf",
+        "status": 200,
+        "resolved_url": "https://configured-product-images.s3.amazonaws.com/2D/specs/TL3342F160QG.pdf"
+      },
+      {
+        "url": "https://github.com/braindefender/KLP-Lame-Keycaps",
+        "status": 200,
+        "resolved_url": "https://github.com/braindefender/KLP-Lame-Keycaps"
+      },
+      {
+        "url": "https://lowprokb.ca/products/ambients-silent-choc-switches",
+        "status": 200,
+        "resolved_url": "https://lowprokb.ca/products/ambients-silent-choc-switches"
+      },
+      {
+        "url": "https://nicekeyboards.com/docs/nice-nano/",
+        "status": 200,
+        "resolved_url": "https://nicekeyboards.com/docs/nice-nano/"
+      },
+      {
+        "url": "https://nicekeyboards.com/docs/nice-nano/pinout-schematic/",
+        "status": 200,
+        "resolved_url": "https://nicekeyboards.com/docs/nice-nano/pinout-schematic/"
+      },
+      {
+        "url": "https://nicekeyboards.com/docs/nice-view/",
+        "status": 200,
+        "resolved_url": "https://nicekeyboards.com/docs/nice-view/"
+      },
+      {
+        "url": "https://nicekeyboards.com/docs/nice-view/pinout-schematic/",
+        "status": 200,
+        "resolved_url": "https://nicekeyboards.com/docs/nice-view/pinout-schematic/"
+      },
+      {
+        "url": "https://static.nbk1560.com/images/en/product/lowsmallheadscrew/SLH-TZB/SLH-TZB_1.pdf",
+        "status": 200,
+        "resolved_url": "https://static.nbk1560.com/images/en/product/lowsmallheadscrew/SLH-TZB/SLH-TZB_1.pdf"
+      },
+      {
+        "url": "https://static.nbk1560.com/images/en/product/lowsmallheadscrew/SSH/SSH_1.pdf",
+        "status": 200,
+        "resolved_url": "https://static.nbk1560.com/images/en/product/lowsmallheadscrew/SSH/SSH_1.pdf"
+      },
+      {
+        "url": "https://static6.arrow.com/aropdfconversion/2e225be7d9212620894362dafa7ce735623fe9ca/315-43-112-41-003000.pdf",
+        "error": "[Errno 60] Operation timed out"
+      },
+      {
+        "url": "https://suddendocs.samtec.com/catalog_english/slw.pdf",
+        "status": 200,
+        "resolved_url": "https://suddendocs.samtec.com/catalog_english/slw.pdf"
+      },
+      {
+        "url": "https://suddendocs.samtec.com/catalog_english/tlw_th.pdf",
+        "status": 200,
+        "resolved_url": "https://suddendocs.samtec.com/catalog_english/tlw_th.pdf"
+      },
+      {
+        "url": "https://typeractive.xyz/products/5-pin-sockets",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/5-pin-sockets"
+      },
+      {
+        "url": "https://typeractive.xyz/products/battery-jack",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/battery-jack"
+      },
+      {
+        "url": "https://typeractive.xyz/products/choc-switches",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/choc-switches"
+      },
+      {
+        "url": "https://typeractive.xyz/products/ez-machine-sockets-and-headers",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/ez-machine-sockets-and-headers"
+      },
+      {
+        "url": "https://typeractive.xyz/products/hotswap-sockets",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/hotswap-sockets"
+      },
+      {
+        "url": "https://typeractive.xyz/products/lithium-battery-110mah",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/lithium-battery-110mah"
+      },
+      {
+        "url": "https://typeractive.xyz/products/machine-sockets-and-pins",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/machine-sockets-and-pins"
+      },
+      {
+        "url": "https://typeractive.xyz/products/nice-nano",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/nice-nano"
+      },
+      {
+        "url": "https://typeractive.xyz/products/nice-view",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/nice-view"
+      },
+      {
+        "url": "https://typeractive.xyz/products/no-solder-spring-headers",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/no-solder-spring-headers"
+      },
+      {
+        "url": "https://typeractive.xyz/products/power-switch",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/power-switch"
+      },
+      {
+        "url": "https://typeractive.xyz/products/reset-button",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/reset-button"
+      },
+      {
+        "url": "https://typeractive.xyz/products/silicone-usb-c-cable",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/silicone-usb-c-cable"
+      },
+      {
+        "url": "https://typeractive.xyz/products/smd-diodes",
+        "status": 200,
+        "resolved_url": "https://typeractive.xyz/products/smd-diodes"
+      },
+      {
+        "url": "https://www.adafruit.com/product/1570",
+        "status": 200,
+        "resolved_url": "https://www.adafruit.com/product/1570"
+      },
+      {
+        "url": "https://www.ckswitches.com/media/1424/pcm.pdf",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.e-switch.com/product/tl3342-series-low-profile-smt-tactile-switch/",
+        "status": 200,
+        "resolved_url": "https://www.e-switch.com/product/tl3342-series-low-profile-smt-tactile-switch/"
+      },
+      {
+        "url": "https://www.kailhswitch.com/Content/upload/pdf/202115927/CPG135001S30-data-sheet.pdf",
+        "status": 200,
+        "resolved_url": "https://www.kailhswitch.com/Content/upload/pdf/202115927/CPG135001S30-data-sheet.pdf"
+      },
+      {
+        "url": "https://www.kailhswitch.com/info/kailh-kl-switches-pg1350-series-23772219.html",
+        "status": 200,
+        "resolved_url": "https://www.kailhswitch.com/info/kailh-kl-switches-pg1350-series-23772219.html"
+      },
+      {
+        "url": "https://www.supermagnete.de/stabmagnete-neodym-rund/stabmagnet-2mm-3mm_S-02-03-N",
+        "status": 200,
+        "resolved_url": "https://www.supermagnete.de/stabmagnete-neodym-rund/stabmagnet-2mm-3mm_S-02-03-N"
+      },
+      {
+        "url": "https://www.supermagnete.fr/data_sheet_S-02-03-N.pdf",
+        "status": 200,
+        "resolved_url": "https://www.supermagnete.fr/data_sheet_S-02-03-N.pdf"
+      }
+    ],
+    "active_frames": {
+      "talavera": "Talavera",
+      "gameboy": "Game Boy",
+      "snes": "SNES",
+      "phone": "2000s Phone",
+      "ipod": "iPod"
+    },
+    "native_catalog_frames": {
+      "flan": "Flan",
+      "tape": "Tape",
+      "orbit": "Orbit",
+      "manga": "Manga",
+      "talavera": "Talavera",
+      "gameboy": "Game Boy",
+      "nes": "NES",
+      "snes": "SNES",
+      "phone": "2000s Phone",
+      "walkman": "Walkman",
+      "ipod": "iPod"
+    },
+    "render_metadata_matches": false,
+    "stale_render_meshes": [],
+    "pinned_source_count": 49,
+    "modified_pinned_sources": [],
+    "physical_acceptance": false
+  },
+  "current_hex_probe": {
+    "checker_sha256": "5b0d94d0d1f612618176f9802572db7def897879fd84d568c3ecd7e8e95a4ad5",
+    "viewer_sha256": "e65b885258112684931ec684b329e81eb8e0f67ddc57ba94a3e1f650fdadb8d5",
+    "checks": [
+      "3/6 digits, optional #, trim, invalid atomicity and Escape",
+      "native picker sync, Copy, real clipboard paste to another part",
+      "mixed halves stay explicit and cannot copy a misleading value",
+      "frame body and all three accent HEX fields, linked rim",
+      "HEX follows all/row/individual targets and preserves cap geometry",
+      "reload preserves configuration",
+      "390px mobile HEX input and editing"
+    ],
+    "runtime_errors": []
+  },
+  "native_roundtrip_probe": {
+    "result": "failed",
+    "first_failure": "tools/freecad/check_revI.py:45 legacy no-case configuration compared to Level original",
+    "source_modified": false,
+    "temporary_changes": "Only report destination changed to build/audit-20261007/native-roundtrip.json."
+  },
+  "public_viewer": {
+    "commit": "8cd6ec78527d732652e206bcf46da0365772c17b",
+    "public_scene_matches_local": true,
+    "online_and_offline_byte_exact": true,
+    "only_five_approved_frame_cards": true,
+    "talavera_default": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "loading": {
+    "baseline_commit": "4d17638357f200a53fe4d6baddc9753209019ca6",
+    "browser": "149.0.7827.55",
+    "viewport": [
+      1280,
+      900
+    ],
+    "cpu_throttle": 1,
+    "method": "Three fresh isolated contexts per mode, interleaved; localhost identical server; readiness and JS heap at readiness; no forced GC, no remote-network or physical-phone claim.",
+    "samples": {
+      "baseline": [
+        {
+          "ready_ms": 3727,
+          "heap_used_bytes": 446257160
+        },
+        {
+          "ready_ms": 3625,
+          "heap_used_bytes": 446876768
+        },
+        {
+          "ready_ms": 3661,
+          "heap_used_bytes": 445691272
+        }
+      ],
+      "online": [
+        {
+          "ready_ms": 563,
+          "heap_used_bytes": 99564596
+        },
+        {
+          "ready_ms": 569,
+          "heap_used_bytes": 99900944
+        },
+        {
+          "ready_ms": 568,
+          "heap_used_bytes": 99965304
+        }
+      ],
+      "offline": [
+        {
+          "ready_ms": 585,
+          "heap_used_bytes": 99964268
+        },
+        {
+          "ready_ms": 596,
+          "heap_used_bytes": 99957272
+        },
+        {
+          "ready_ms": 593,
+          "heap_used_bytes": 100008012
+        }
+      ]
+    },
+    "summary": {
+      "baseline": {
+        "html_bytes": 67040759,
+        "sha256": "c9012c6ef63e146ace353e753d9c4c187fb2ff1ac2afb417cee4bab9adbc5a58",
+        "median_ready_ms": 3661,
+        "median_heap_used_bytes": 446257160
+      },
+      "online": {
+        "html_bytes": 49743957,
+        "sha256": "1022cae499487b4e0b04c43eea163a203bed6b82699cb1390e59db325cda9e04",
+        "median_ready_ms": 568,
+        "median_heap_used_bytes": 99900944
+      },
+      "offline": {
+        "html_bytes": 58446297,
+        "sha256": "e65b885258112684931ec684b329e81eb8e0f67ddc57ba94a3e1f650fdadb8d5",
+        "median_ready_ms": 593,
+        "median_heap_used_bytes": 99964268
+      }
+    }
+  },
+  "independent_review": {
+    "reports": [
+      "design/reviews/audit-20261007/domain_constructive.json",
+      "design/reviews/audit-20261007/adversarial_risk.json"
+    ],
+    "round2": "design/reviews/audit-20261007/round2-disposition.json",
+    "consensus": "Prioritize parameter repairs; no remaining material objection to delivering the audit.",
+    "product_verification_terminal_events": [
+      {
+        "role_run_id": "role-run-9caaec497621eaaaf7d6bf16",
+        "terminal_state": "PARTIAL",
+        "termination_phase": "verified",
+        "event_sha256": "0b64fd0d1ac354c9b403843d42b1b10fb34ad35c656c482e1bb4f3c2645a30a6"
+      },
+      {
+        "role_run_id": "role-run-5c8877abbc6ae4f7e22a1310",
+        "terminal_state": "PARTIAL",
+        "termination_phase": "verified",
+        "event_sha256": "a38e4e2bd0ceb72fa46c8c4e497c76624010ea01ea6d9578fe5eb847d39862b5"
+      }
+    ],
+    "terminal_note": "Both reviews delivered. Runtime product-verification states remain PARTIAL because findings were preserved, not erased to produce a green gate."
+  },
+  "reproduction": {
+    "guide": "docs/reviews/2026-10-07.md#reproduce",
+    "ignored_outputs": "build/audit-20261007; build/reliability-fix and existing viewer test build directories",
+    "source_helpers": [
+      {
+        "path": "tools/audit_current.py",
+        "sha256": "68f7c44fc1750a4791f71cc75fc684519f5b1a3137096692c85104cd79e91ca5"
+      },
+      {
+        "path": "tools/audit_assets.py",
+        "sha256": "f4626cc21f210ef4df7fbd6e8476909660c09509a52dc65c1a2f568e429a03b0"
+      },
+      {
+        "path": "tools/audit_electrical.py",
+        "sha256": "525ac373b838dfcb598dc8454d07be7c09a99d606349ef511246372a9baee601"
+      },
+      {
+        "path": "tools/audit_keycap_sweeps.py",
+        "sha256": "d501fb79bd65d5c801122ac973092b18170f5d7794777e6ae4ec44455c09296e"
+      },
+      {
+        "path": "tools/freecad/audit_parameters.py",
+        "sha256": "c8b53d003ba50c48b52fe30976122d733cb478985f0572aeb28c479f43c799f1"
+      }
+    ],
+    "native_probe_method": "Scoped recomputation of Talavera and dependencies; original baseline case solids frozen before parameter changes; no source save. Earlier all-document probe attempts were stopped for excessive unrelated recomputation; no result was claimed from those attempts."
+  },
+  "remaining_product_work": [
+    "Parameter/window/backing fixes and USB access",
+    "Current tests and dimensions",
+    "Diode and hot-swap registration",
+    "Routing and integrated firmware",
+    "Purchased-component, printed-fit, retention, charging, BLE and consumption qualification",
+    "Approved Hanafuda integration"
+  ]
+}

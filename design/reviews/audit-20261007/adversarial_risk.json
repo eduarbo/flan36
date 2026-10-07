@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "task_id": "flan36-exhaustive-audit-20261007-adversarial-risk",
+  "run_id": "flan36-exhaustive-audit-20261007-adversarial-risk-provider",
+  "provider": "codex-app-subagent",
+  "role": "adversarial_risk",
+  "role_assignment_sha256": "14dbc1dd602fc326137b37c337a7ac51a1f916d050993108840f0d3e4d0856e4",
+  "status": "completed",
+  "summary": "Controller-condensed English transcription of the independent read-only reviewer final report. Review delivery completed; product acceptance failed. Snapshot 8cd6ec78527d732652e206bcf46da0365772c17b. No execution, mutations, external effects or subdelegation. Claims below distinguish static evidence from requested dynamic confirmation.",
+  "findings": [
+    {
+      "code": "AR01_DISPLAY_SHIFT_BREAKS_MATING_CHAIN",
+      "claim": "MEDIUM \u2014 The documented display shift leaves the mating chain fixed in Y. High confidence in the missing dependencies; dynamic measurement reserved for root.",
+      "evidence": [
+        "docs/freecad.md:30; tools/freecad/level_stack.py:183-217; native Document.xml"
+      ]
+    },
+    {
+      "code": "AR02_WINDOW_CONTROL_BYPASSED_BY_R4_MATERIALS",
+      "claim": "MEDIUM \u2014 R4 color faces use fixed XY apertures and fuse without clipping against the edited blank; WindowMargin or DisplayShiftY may therefore refill the edited opening. Magnitude requires native probing.",
+      "evidence": [
+        "tools/freecad/approved_frames.py:110-130; tools/freecad/build_revI.py:370-375; docs/freecad.md:26"
+      ]
+    },
+    {
+      "code": "AR03_CURRENT_NATIVE_ROUNDTRIP_TEST_STALE",
+      "claim": "MEDIUM \u2014 check_revI.py compares legacy no-case normalization to Level although its contract is Solid; it also expects battery Z=2 instead of 1.4. The documented current harness and its receipt are stale.",
+      "evidence": [
+        "tools/freecad/check_revI.py:45,59; tools/keycap_config.py:38; docs/cad.md:90; validation/revI-freecad.json"
+      ]
+    }
+  ],
+  "recommendations": [
+    "Confirm the documented CAD edits using isolated native probes, then repair shared parameter dependencies and current validation harnesses.",
+    "Retain unrouted PCB, integrated firmware, exact connector fit, retention, charging, BLE and power as unresolved product requirements.",
+    "Check the USB corridor against cases and broaden cap/screw coverage before claiming a collision; neither hypothesis was established in this static review."
+  ],
+  "changed_paths": [],
+  "validations": [
+    {
+      "name": "Static source and native XML review",
+      "status": "passed"
+    },
+    {
+      "name": "Baseline hashes preserved",
+      "status": "passed"
+    },
+    {
+      "name": "Documented parameter and validation coherence",
+      "status": "failed"
+    },
+    {
+      "name": "Functional native/browser/electrical tests and physical acceptance",
+      "status": "not_run"
+    }
+  ],
+  "defects": [
+    {
+      "severity": "MEDIUM",
+      "code": "AR01_DISPLAY_SHIFT_BREAKS_MATING_CHAIN"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "AR02_WINDOW_CONTROL_BYPASSED_BY_R4_MATERIALS"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "AR03_CURRENT_NATIVE_ROUNDTRIP_TEST_STALE"
+    }
+  ],
+  "blockers": [],
+  "next_actor": "personal-ops"
+}

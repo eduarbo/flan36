@@ -1,0 +1,24 @@
+{
+  "round": 2,
+  "snapshot": "8cd6ec78527d732652e206bcf46da0365772c17b",
+  "shared_question": "Calibrate DisplayShiftY severity for a reversible digital-prototype edit, and assess prioritizing parameter repairs in the audit report.",
+  "domain_constructive": {
+    "original_severity": "HIGH",
+    "revised_severity": "MEDIUM",
+    "position": "Documented edit is defective; no fabrication or physical harm established. Prioritize the parameter repairs. No material objection to the audit report."
+  },
+  "adversarial_risk": {
+    "original_severity": "MEDIUM",
+    "revised_severity": "MEDIUM",
+    "position": "Reversible prototype error warrants MEDIUM severity and early correction priority. No material objection to the audit report."
+  },
+  "agreement": true,
+  "findings_disposition": {
+    "cap_screw_coverage_hypothesis": "Closed by root 6048-pair sweep, minimum nominal gap 4.091006905764591 mm, zero conservative contacts.",
+    "electrical_mapping": "108 normalized pin/net associations match per half; no new net-connectivity defect.",
+    "native_retired_collection": "Deliberately retained as documented provenance; not reclassified as a hidden regression.",
+    "native_parameter_probes": "Pending at review time; reviewers did not claim dynamic validation."
+  },
+  "authority": "Advisory only; publication authority comes from the owner repository instructions.",
+  "changed_paths": []
+}
