@@ -2,9 +2,11 @@
 
 **One complete 36-key split. Quantities cover both halves.**
 
-This is a planning BOM for the revI mechanical study and PCB outline. **It is not a verified build kit:** the PCBs are unrouted, and exact connectors, magnetic retention and printed threads still need physical tests. Store links identify actual products; they do not certify interchangeability.
+This is a planning BOM for the revI mechanical study and PCB outline. **It is not a verified build kit:** the PCBs are routed and digitally checked, but exact connectors, magnetic retention and printed threads still need physical tests. Store links identify actual products; they do not certify interchangeability.
 
-[Typeractive shopping list](#typeractive-shopping-list) · [Controllers](#controllers) · [Displays](#displays) · [Switches](#switches-and-hot-swap) · [Battery](#battery) · [Connectors](#removable-connectors) · [Small parts](#small-electrical-parts) · [Printed parts](#printed-parts)
+[Custom PCBs](electronics.md) · [Typeractive shopping list](#typeractive-shopping-list) · [Controllers](#controllers) · [Displays](#displays) · [Switches](#switches-and-hot-swap) · [Battery](#battery) · [Connectors](#removable-connectors) · [Small parts](#small-electrical-parts) · [Printed parts](#printed-parts)
+
+**Custom PCBs: 1 left + 1 right**, two layers, 1.6 mm FR4, nominal 1 oz copper. Use the [matched prototype fabrication packages](electronics.md), after checking the exact connector and battery fit. The supplied pin maps differ between halves; neither board is interchangeable with Piantor or the historical placement studies.
 
 ## Typeractive shopping list
 
@@ -141,7 +143,7 @@ These are nominal clearances, not maximum finished-pack tolerances. Confirm prot
 - **8 adhesive rubber feet:** approximately 1–1.5 mm. Their height adds to the case.
 - **Insulation and removable retention:** small quantity; avoid loading the battery pouch. The rigid cage and captive inserts are digitally modeled; printed retention is untested.
 - **1–2 USB-C data cables:** charging and firmware transfer. [Typeractive’s silicone cable](https://typeractive.xyz/products/silicone-usb-c-cable) is listed for power; its page does not establish data support. Do not assume it can flash firmware. Check plug dimensions against the opening.
-- Fine-tip soldering iron, solder, flux, tweezers, cutters and a multimeter. The printer makes mechanical parts; the custom PCB needs fabrication after routing and DRC are complete.
+- Fine-tip soldering iron, solder, flux, tweezers, cutters and a multimeter. The printer makes mechanical parts; the custom PCB needs fabrication. [Routed prototype files and remaining checks](electronics.md).
 
 ## Sources and images
 

@@ -1,0 +1,38 @@
+{
+  "schema": "flan36-routed-pcb-1",
+  "baseline": "fe8c7fdc1b13b8eac6383c3315af8e749b1b8d4c",
+  "kicad_version": "10.0.6",
+  "physical_acceptance": false,
+  "halves": {
+    "left": {
+      "drc_violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0,
+      "erc_violations": 0,
+      "components": 46,
+      "physical_pads_checked": 247,
+      "matrix_keys": 18,
+      "tracks_and_vias": 563,
+      "minimum_track_mm": 0.2,
+      "poses_pads_models_and_outline_preserved": true,
+      "pcb_sha256": "38c58eb3590e2dbb3abae645d75c264904683427476dbf514bda69849b4431a8",
+      "schematic_sha256": "9f992431dca90841329fb1d6099e1d8ca5f35487671626ae05d74da12859e08b",
+      "rules_sha256": "a9352cc6bb61091b0a61745ca0fd41fef3dd834f6e9f30e843a48bb2782a7511"
+    },
+    "right": {
+      "drc_violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0,
+      "erc_violations": 0,
+      "components": 46,
+      "physical_pads_checked": 247,
+      "matrix_keys": 18,
+      "tracks_and_vias": 564,
+      "minimum_track_mm": 0.2,
+      "poses_pads_models_and_outline_preserved": true,
+      "pcb_sha256": "362f58bad47711258a11dfa2d7dcf165b7345b12d5144d3c7fa9b998b0288f43",
+      "schematic_sha256": "17522642e1a1fd42eedd57e41d69bcaca3db6c4704ad92ece880b47c5cff8853",
+      "rules_sha256": "24a0c91fd299f8ec03704a672b3fff97d209da99ef8c6294daf80b3e619fead9"
+    }
+  }
+}

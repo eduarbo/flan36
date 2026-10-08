@@ -1,0 +1,48 @@
+{
+  "diode_direction": "col2row",
+  "diode_cathode": "ROW",
+  "module": "nice_nano_v2",
+  "charge_current_mA": 100,
+  "charge_boost_allowed": false,
+  "display": {
+    "model": "nice_view",
+    "sck": 0,
+    "mosi": 1,
+    "cs": 14,
+    "populated": "both; optional right without display"
+  },
+  "halves": {
+    "left": {
+      "rows": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "cols": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        16
+      ]
+    },
+    "right": {
+      "rows": [
+        21,
+        20,
+        19,
+        18
+      ],
+      "cols": [
+        15,
+        7,
+        8,
+        9,
+        10,
+        16
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+#include <dt-bindings/pinctrl/nrf-pinctrl.h>
+&pinctrl {
+ slim_spi_default: slim_spi_default { group1 {
+  psels = <NRF_PSEL(SPIM_SCK, 0, 8)>, <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+ }; };
+ slim_spi_sleep: slim_spi_sleep { group1 {
+  psels = <NRF_PSEL(SPIM_SCK, 0, 8)>, <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+  low-power-enable;
+ }; };
+};
+nice_view_spi: &spi0 {
+ compatible = "nordic,nrf-spim";
+ pinctrl-0 = <&slim_spi_default>; pinctrl-1 = <&slim_spi_sleep>;
+ pinctrl-names = "default", "sleep";
+ cs-gpios = <&pro_micro 14 GPIO_ACTIVE_HIGH>;
+};
+&uart0 { status = "disabled"; };
+&i2c0 { status = "disabled"; };

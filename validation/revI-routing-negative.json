@@ -1,0 +1,15 @@
+{
+  "cases": [
+    {
+      "mutation": "one-duplicate-pad",
+      "rejected": true,
+      "canonical_receipt_unchanged": true
+    },
+    {
+      "mutation": "disconnected-row",
+      "rejected": true,
+      "canonical_receipt_unchanged": true
+    }
+  ],
+  "isolated_copy": true
+}

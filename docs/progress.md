@@ -7,8 +7,8 @@
 | 36 Piantor key centers and angles | Checked | [Layout](../design/layout.json), upstream files and checker |
 | Editable source and CAD exchange | Available | Native FCStd, parameters and [FreeCAD/StepUp examples](freecad.md) |
 | KLP catalog and themed frames | RevI digital study | 38 source variants, 28 with qualified positions; six installed approved frame styles, per-key colors and configuration export/import |
-| Wireless electronics and displays | Placement only | Unrouted revI PCBs; 0 geometric DRC violations, 104 unconnected items each; exact connectors pending |
-| Final BOM and manufacturing files | Pending | Close routing, clearances, retention and exact supplied parts |
+| Wireless electronics and displays | Routed prototype | Both halves: DRC/ERC/parity 0, unconnected 0; exact connectors and hardware tests pending |
+| Firmware and fabrication files | Digital candidate | Three compiled UF2 variants and source-bound Gerber/drill packages; supplied parts and physical acceptance pending |
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
 
@@ -16,7 +16,7 @@
 
 The current assembly adds the approved Hanafuda frame, repairs display/frame parameter dependencies and case USB access, and includes all 36 diodes and hot-swap sockets. Current delivery evidence and remaining prototype limits are recorded in the [audit correction report](reviews/2026-10-07-corrections.md).
 
-Publication verified: **1,875 source files**, the online/offline viewer, print resources and thirteen rendered images match the tested source. The public viewer preserves the camera through case/frame changes and exports the selected configuration and exact STL kit. [Publication evidence](../validation/revI-audit-publication.json). PCB routing, integrated firmware and physical acceptance remain open.
+Publication verified: **1,875 source files**, the online/offline viewer, print resources and thirteen rendered images match the tested source. The public viewer preserves the camera through case/frame changes and exports the selected configuration and exact STL kit. [Publication evidence](../validation/revI-audit-publication.json). This is a historical publication snapshot. Current routing and firmware evidence is in the [build continuation](reviews/2026-10-08-build-continuation.md); physical acceptance remains open.
 
 The entries below retain their original historical snapshots.
 

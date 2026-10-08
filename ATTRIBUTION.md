@@ -24,7 +24,7 @@ Full texts: [GPL](LICENSE), [CC-BY-SA-4.0](LICENSES/CC-BY-SA-4.0.txt). Original 
 
 Libraries under `hardware/revF/libraries` contain KiCad sources with the design exception, daprice’s Choc footprint under CC-BY-SA-4.0, and Flan36 symbols/footprints. STEP files under `hardware/revF/models` are original nominal envelopes, not manufacturer-certified models.
 
-FreeCAD, StepUp, ZMK, Zephyr, nice!nano and nice!view retain their own names/licenses. FreeCAD/StepUp are installed separately; firmware binaries are not distributed here. Supplier links do not imply sponsorship.
+FreeCAD, StepUp, ZMK, Zephyr, nice!nano and nice!view retain their own names/licenses. FreeCAD/StepUp are installed separately; firmware candidates are distributed with pinned sources and [dependency notices](firmware/NOTICE.md). Supplier links do not imply sponsorship.
 
 ## Commercial component representations
 

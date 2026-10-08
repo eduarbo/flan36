@@ -1,0 +1,15 @@
+{
+  "cases": [
+    {
+      "mutation": "firmware/config/flan36.keymap",
+      "rejected": true,
+      "published_artifacts_unchanged": true
+    },
+    {
+      "mutation": "build/firmware-right-no-display/zephyr/zmk.uf2",
+      "rejected": true,
+      "published_artifacts_unchanged": true
+    }
+  ],
+  "isolated_copy": true
+}

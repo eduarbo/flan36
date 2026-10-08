@@ -41,7 +41,7 @@ The approved [R4 master](../design/proposals/frame-master-r4/master.json) owns p
 
 Download **Files → Print kit** for registered multipart 3MF and STL files. STEP material bodies and the editable [FreeCAD assembly](../mechanical/revI/Flan36.FCStd) share the same coordinates. These are co-print regions, not press-fit inserts. Assign compatible filament to each role, keeping the assembly registered. [Print workflow](themes-printing.md).
 
-The 0.40 mm cover targets a standard 0.4 mm nozzle workflow. Thickness and digital collision checks do not prove sliced feature retention, bridging, strength or physical fit. Inspect the toolpaths and print a sample; the PCB studies remain unrouted.
+The 0.40 mm cover targets a standard 0.4 mm nozzle workflow. Thickness and digital collision checks do not prove sliced feature retention, bridging, strength or physical fit. Inspect the toolpaths and print a sample; the [current PCBs are routed](electronics.md), with physical qualification pending.
 
 ## Reproduce the approved migration
 

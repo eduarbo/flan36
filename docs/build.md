@@ -1,13 +1,13 @@
 # Build status
 
-The current design is an inspectable digital prototype. Final Gerbers, a closed BOM and tested UF2 firmware are not available yet. Do not order the unrouted PCB studies as finished boards.
+The current design is a routed digital prototype. [Gerber/drill packages](electronics.md) and [compiled UF2 firmware](firmware.md) are available. Both boards pass DRC, ERC and schematic parity with no disconnected nets. Connectors, printed fit, retention and operation have not been physically qualified; the BOM remains a candidate until supplied parts are measured.
 
 The intended sequence is:
 
 1. Close the BOM and measure the actual components.
 2. Print a Choc fit coupon and three KLP Lamé samples. Check stem fit, return and comfort before printing the full set.
-3. After electrical layout passes review and DRC, assemble the PCBs and check continuity and polarity.
-4. Flash each half and test all 36 keys.
+3. After confirming the actual connector/pack fit, use the matching prototype PCB package. Solder the small parts, then sockets/connectors; check continuity and polarity before fitting either controller.
+4. Follow the [firmware guide](firmware.md) to flash each half and test all 36 keys, combinations, layers and key releases.
 5. Install the supported battery, controller, display and frames without loading the pouch or glass.
 6. Verify BLE, charging, sleep/wake and measured power use.
 
@@ -39,3 +39,18 @@ For the nominal assembly, seat the open-bottom locator, cell directly on the **1
 For service, power off and disconnect USB first. Lift the magnetic frame and use the [inherited nominal removal sequence](slim-flush.md) to expose and unplug the battery connector. Remove the caps, then the three plate screws and plate/Level upper shell, then the two short PCB screws and PCB before withdrawing the captured cage. The magnetic cover alone does not release the battery. Cable flex, connector grip and actual removal still need a physical trial. Reset is operated from the underside with a small tool through the recessed access hole.
 
 The [historical support study](slim-mount-study.md) records why the earlier closed cable tunnels prevented display/sled removal. The [current Level stack](level-stack.md) retains the open-bottom support relief and lowers both battery-specific cable routes with the cell. Its glass remains at 13.39 mm beneath the 13.59 mm frame/shell plane and relies on an unqualified Samtec connector substitution; the stock display connector belongs to the previous taller stack. Digital checks do not qualify bending forces or real terminal tolerances.
+
+## Hardware acceptance
+
+No item below has been physically accepted. Record the supplied part number, measurement or observation rather than checking an item from a CAD image.
+
+| Test | Acceptance evidence |
+|---|---|
+| Actual parts | Cell envelope, protection wrapping, lead exit and polarity; 301230 charge limit; controller/display connector fit and installed height |
+| Printed interfaces | Choc stem/return, screw engagement, captive magnet/pin retention, frame peel/sliding and battery service without pouch or glass loading |
+| Bare assembly | Continuity, no power short, diode orientation and 36 unique switches without stuck/reversed keys |
+| Firmware and displays | Correct half images, four layers, simultaneous keys, both screens or selected single-screen option, reset and wake recovery |
+| Wireless operation | Pairing, reconnect after power cycle, sleep/wake and usable range in the complete case |
+| Charging and power | Correct cell charge limit and polarity, SW1 behavior, measured active/idle/sleep current and no abnormal heating |
+
+The next physical step is to measure the exact connector pair and supplied cell, then print the small fit/retention coupons. The source and firmware candidates can be revised from those results without changing the key layout.

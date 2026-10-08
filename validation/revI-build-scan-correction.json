@@ -1,0 +1,26 @@
+{
+  "trigger": {
+    "scanner": "gitleaks",
+    "rule": "generic-api-key",
+    "findings": 6,
+    "file": "validation/revI-firmware.json"
+  },
+  "classification": "Public SHA-256 values, independently recomputed from two versioned source files; not credentials",
+  "public_sources": [
+    "design/key-order.json",
+    "firmware/config/flan36.keymap"
+  ],
+  "repetitions": "One occurrence of each checksum in each of three build attestations",
+  "correction": "Serialize source identity using separate path and sha256 fields; preserve before/after build attestation and reject stale outputs",
+  "scanner_configuration_changed": false,
+  "exclusions_added": false,
+  "remote_publication_before_correction": false,
+  "local_unpublished_commit_to_replace": "a1b4cab",
+  "new_builds_and_negative_tests_required": true,
+  "all_three_rebuilt": true,
+  "uf2_dts_and_config_bytes_unchanged": true,
+  "dependency_and_compiler_identity_unchanged": true,
+  "negative_controls_passed": true,
+  "corrected_receipt_scan_findings": 0,
+  "metadata_change": "Source map changed to explicit path/sha256 records; only helper source digest changed."
+}

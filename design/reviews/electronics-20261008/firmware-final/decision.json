@@ -1,0 +1,30 @@
+{
+  "recommendation": "Publish the three source-bound digital prototype candidates",
+  "reviewers": [
+    "/root/firmware_final_domain",
+    "/root/firmware_final_risk"
+  ],
+  "agreement": true,
+  "unresolved_material_objection": false,
+  "inputs_unchanged_after_second_review": true,
+  "first_round_findings": [
+    {
+      "severity": "MEDIUM",
+      "finding": "Existing binaries could be certified against changed config",
+      "disposition": "Build-time input/output attestation; all3 freshly rebuilt; source-edit and binary-corruption rejection verified"
+    },
+    {
+      "severity": "MEDIUM",
+      "finding": "Dependencies/compiler only partially pinned",
+      "disposition": "39 clean pinned repositories plus compiler input identity checked before and after builds"
+    }
+  ],
+  "conditions": [
+    "Physical tests remain pending",
+    "No promise of bit-identical output across unqualified platforms"
+  ],
+  "evidence": [
+    "validation/revI-firmware.json",
+    "validation/revI-firmware-negative.json"
+  ]
+}

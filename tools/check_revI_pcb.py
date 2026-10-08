@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Read actual KiCad transforms/pads/edges, preserving electrical state.
-Run with KiCad Python after CLI DRC for both halves. Unconnected items remain.
+Historical pre-routing check. For current routed boards use check_routed_pcb.py.
+Run with KiCad Python after CLI DRC for both historical halves.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
 import hashlib,json,re,collections,math
 from pathlib import Path
 import pcbnew as p
 ROOT=Path(__file__).resolve().parents[1]
+if any(p.LoadBoard(str(ROOT/f'hardware/revI/flan36-{s}.kicad_pcb')).GetTracks() for s in ('left','right')):
+    raise SystemExit('Current boards are routed. Use tools/check_routed_pcb.py; this gate describes the historical placement study.')
 def snapshot(path):
     board=p.LoadBoard(str(path));result={};assert len(board.GetTracks())==0
     for f in board.GetFootprints():

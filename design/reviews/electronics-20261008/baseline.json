@@ -1,0 +1,17 @@
+{
+  "head": "fe8c7fdc1b13b8eac6383c3315af8e749b1b8d4c",
+  "status": "",
+  "files": {
+    "hardware/revI/flan36-left.kicad_pcb": "8ae6bf4f726b1cce7aeb012e32bf4d815eb79d75d9ff6bf3b3ca2639ba82c472",
+    "hardware/revI/flan36-left.kicad_sch": "ae9fe65e7c66e4794b203737a7257d5e1f35871db50395350ca9f705d220768e",
+    "hardware/revI/flan36-left.kicad_pro": "a9352cc6bb61091b0a61745ca0fd41fef3dd834f6e9f30e843a48bb2782a7511",
+    "hardware/revI/flan36-right.kicad_pcb": "eefea0f850f01de5ceda7f662fe1b54815656c8b10e5226264ec7988268e365d",
+    "hardware/revI/flan36-right.kicad_sch": "32a1f29673392286373726a5fa3e8f64eea389a87edf94afea8955f54a658629",
+    "hardware/revI/flan36-right.kicad_pro": "24a0c91fd299f8ec03704a672b3fff97d209da99ef8c6294daf80b3e619fead9",
+    "design/layout.json": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3",
+    "docs/parts.md": "feffed1e67496bf07213158c5bad7279bd1b57a1de0397283e6ad0644b1d8694",
+    "docs/build.md": "42f20dc98a3154be4f46eb70cbb1d38860035062b40d0109cc49a42079a02967",
+    "docs/level-stack.md": "b18987fd8b3e5934493514f7c1c016138c7e2857cb76093dbd451a8d613bc76a",
+    "validation/revI-electrical.json": "73c783bc69133944cec9279d6da3483d3b642de5a2585ff44911ef680ba95b9a"
+  }
+}

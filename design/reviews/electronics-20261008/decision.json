@@ -1,0 +1,39 @@
+{
+  "snapshot": "fe8c7fdc1b13b8eac6383c3315af8e749b1b8d4c",
+  "reviewers": [
+    "/root/electronics_domain_20261008",
+    "/root/electronics_risk_20261008"
+  ],
+  "method": "Two independent read-only reviews of enumerated inputs; no subdelegation; baseline input hashes verified unchanged after both reports. Root concurrently prepared new scripts and disposable build candidates only.",
+  "decision": "Proceed with local routing and pinned ZMK, preserving topology, poses and outline. No physical/fabrication acceptance.",
+  "agreement": true,
+  "unresolved_material_objection": false,
+  "findings": [
+    {
+      "severity": "medium",
+      "finding": "Default nice_view_adapter conflicts with matrix GPIO",
+      "disposition": "Use explicit nice_view_spi at P0.08/P0.06/P1.11 ACTIVE_HIGH and verify compiled DTS."
+    },
+    {
+      "severity": "medium",
+      "finding": "Parity and passive ERC do not prove every physical pad or connectivity",
+      "disposition": "Check each physical pad against final netlist plus semantic matrix and zero DRC disconnects."
+    },
+    {
+      "severity": "medium",
+      "finding": "RF/display sleep and connector/cell limits unqualified",
+      "disposition": "Keep physical qualification pending; no charging boost; verify polarity and actual cell charge limits before energization."
+    },
+    {
+      "severity": "low",
+      "finding": "Switch disconnects cell and charging but USB can still power MCU",
+      "disposition": "Document switch behavior."
+    },
+    {
+      "severity": "medium",
+      "finding": "Right visual matrix differs from electrical column sequence",
+      "disposition": "Check all 36 entries against source layout and compiled transform."
+    }
+  ],
+  "version_choice": "Reuse official stable ZMK v0.3.0 edf5c0814fd3ea202e43aad2d68fd32e882a518c and existing verified toolchain; target nice_nano_v2 is tied to this version, not current main."
+}

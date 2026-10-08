@@ -35,7 +35,7 @@ Approved artwork keeps its fixed case coordinates. A moved or enlarged window cl
 
 ### 3. Inspect the PCB with StepUp
 
-Open `hardware/revI/flan36-left.kicad_pro` in KiCad. RevI matches the chosen contour and adds battery/magnet clearances. The current slim interfaces use a 2 mm JST PH footprint at J1, a bottom-mounted reset at SW2, and the revised battery opening. All key transforms and nets are preserved. Switches are locked to preserve the layout; both boards remain unrouted.
+Open `hardware/revI/flan36-left.kicad_pro` in KiCad. RevI matches the chosen contour and adds battery/magnet clearances. The current slim interfaces use a 2 mm JST PH footprint at J1, a bottom-mounted reset at SW2, and the revised battery opening. All key transforms remain unchanged and switches stay locked. Both boards are routed; the [right-half GPIO remap](electronics.md) is shared by its schematic, PCB and firmware.
 
 The project-relative STEP files show the current nominal component models in KiCad's 3D Viewer. Their source, colors and placement are checked without changing footprints. The side-entry battery connector is a nominal reconstruction; measured fit limits remain identified in the [component guide](../components/README.md).
 
@@ -58,7 +58,7 @@ The native assembly uses **X = KiCad X, Y = −KiCad Y**, with PCB top at **Z 5.
 
 Select a part and use **File → Export**. Store exports outside the reference folders and keep the edited FCStd. The generation scripts rebuild the reference from scratch and overwrite its files; do not run them over manual work.
 
-The project remains a digital prototype. Both boards have **zero geometric DRC violations and 104 unconnected items each**; measured minimum pad-to-outline clearance is about **0.524 mm**. Final cable/connector geometry, printed fit and retention, RF and power measurements remain open. [CAD reproduction and validation](cad.md).
+The project remains a digital prototype. Both routed boards have **zero DRC/ERC/parity violations and zero unconnected items**; the configured copper-to-edge clearance remains **0.50 mm**. Final cable/connector geometry, printed fit and retention, RF and power measurements remain open. [CAD reproduction and validation](cad.md).
 
 ## Interchangeable cases
 

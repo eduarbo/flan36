@@ -1,0 +1,48 @@
+{
+  "decision": "Right-only GPIO remap; preserve left, all mechanics,2layers and .20/.20/.50 rules",
+  "reviewers": [
+    "/root/right_escape_domain",
+    "/root/right_escape_risk"
+  ],
+  "agreement": true,
+  "unresolved_material_objection": false,
+  "inputs_unchanged_after_reviews": true,
+  "remap": {
+    "ROW0": [
+      "D2",
+      "D21"
+    ],
+    "ROW1": [
+      "D3",
+      "D20"
+    ],
+    "ROW2": [
+      "D4",
+      "D19"
+    ],
+    "ROW3": [
+      "D5",
+      "D18"
+    ],
+    "COL0": [
+      "D6",
+      "D15"
+    ]
+  },
+  "unchanged": [
+    "COL1-COL5",
+    "display MOSI/SCK/CS",
+    "power/reset",
+    "component poses",
+    "pad shapes/drills",
+    "outline/cutouts",
+    "two-layer stack"
+  ],
+  "conditions": [
+    "Per-half pinmap and right overlay must match final PCB/schematic",
+    "Rebuild both right UF2 variants and verify actual compiled DTS including SPI1 disabled",
+    "Serialized DRC0/parity0/unconnected0; no rule weakening or new exclusions",
+    "All pad geometries and 36 semantic positions preserved"
+  ],
+  "reason": "Northern bridge .55mm cannot fit .2mm copper with .5mm edge clearance on both sides; five signals moved from outer to free inner MCU pads before considering more layers or narrower tracks."
+}

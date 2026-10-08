@@ -1,0 +1,76 @@
+{
+  "head": "fe8c7fdc1b13b8eac6383c3315af8e749b1b8d4c",
+  "status": "?? design/key-order.json\n?? design/pinmap.json\n?? design/reviews/electronics-20261008/baseline.json\n?? design/reviews/electronics-20261008/decision.json\n?? docs/firmware.md\n?? docs/reviews/2026-10-08-build-continuation.md\n?? firmware/config/boards/shields/flan36/Kconfig.defconfig\n?? firmware/config/boards/shields/flan36/Kconfig.shield\n?? firmware/config/boards/shields/flan36/flan36-display.dtsi\n?? firmware/config/boards/shields/flan36/flan36.dtsi\n?? firmware/config/boards/shields/flan36/flan36_left.overlay\n?? firmware/config/boards/shields/flan36/flan36_right.overlay\n?? firmware/config/flan36.conf\n?? firmware/config/flan36.keymap\n?? firmware/config/no-display.conf\n?? firmware/config/west.yml\n?? firmware/licenses/CMSIS-Apache-2.0.txt\n?? firmware/licenses/Nanopb-zlib.txt\n?? firmware/licenses/ZMK-MIT.txt\n?? firmware/licenses/Zephyr-Apache-2.0.txt\n?? firmware/uf2/flan36-left.uf2\n?? firmware/uf2/flan36-right-no-display.uf2\n?? firmware/uf2/flan36-right.uf2\n?? firmware/west-frozen.yml\n?? tools/build_firmware.sh\n?? tools/check_firmware.py\n?? tools/check_routed_pcb.py\n?? tools/complete_pcb_routes.py\n?? tools/prepare_routing.py\n?? validation/revI-firmware.json\n",
+  "files": [
+    {
+      "path": "hardware/revI/flan36-right.kicad_pcb",
+      "sha256": "eefea0f850f01de5ceda7f662fe1b54815656c8b10e5226264ec7988268e365d"
+    },
+    {
+      "path": "hardware/revI/flan36-right.kicad_sch",
+      "sha256": "32a1f29673392286373726a5fa3e8f64eea389a87edf94afea8955f54a658629"
+    },
+    {
+      "path": "design/layout.json",
+      "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+    },
+    {
+      "path": "design/revI-profiles.json",
+      "sha256": "1320cd0423afc35282d9335610abc0d7cab12351e9e626a31c70808b01af4d73"
+    },
+    {
+      "path": "design/pinmap.json",
+      "sha256": "007c619e0790378eaf9670058e9ac3d1c760589073d44a950a6770b0adac97bd"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36.dtsi",
+      "sha256": "f88224b537398287c5c52028d29b4b976cbdda7f7b48fe3a0112285ef366f650"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36_right.overlay",
+      "sha256": "3eac64934ec037b251691d8026bf626813b711044ee5fa03bbba1e518d4d6916"
+    },
+    {
+      "path": "build/electronics-20261008/route/padded-right.kicad_pcb",
+      "sha256": "d1d74fab1600a83cef206097f45f0e14277cad02672827e9a31aed36af05febb"
+    },
+    {
+      "path": "build/electronics-20261008/route/padded-right.json",
+      "sha256": "2c9cbee18940542b6ecf5a44f038535e6f1289d57b9cde59415f1ec9f42daeb1"
+    }
+  ],
+  "observations": {
+    "north_outline_y_mm": 12.65,
+    "battery_cutout_north_y_mm": 13.2,
+    "north_bridge_width_mm": 0.55,
+    "copper_edge_clearance_mm": 0.5,
+    "right_unconnected_after_two_layer_autoroute": [
+      "/COL0",
+      "/ROW0",
+      "/ROW1",
+      "/ROW2"
+    ],
+    "current_outer_mcu_signal_pins": [
+      "D0",
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D8",
+      "D9"
+    ],
+    "current_inner_mcu_signal_pins": [
+      "D10",
+      "D16",
+      "D14",
+      "D15",
+      "D18",
+      "D19",
+      "D20",
+      "D21"
+    ]
+  }
+}

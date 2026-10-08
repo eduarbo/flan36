@@ -39,7 +39,7 @@ The connector check uses continuous rigid sweeps for a 5 mm unplug stroke, 24 mm
 
 The delivery check uses analytic geometry bounds, independent of display-mesh triangulation, and covers both halves, ten frames, both battery envelopes, saved native geometry, PCB placement, actual KiCad STEP registration, matching viewer meshes and aligned multicolor print exports. A separate readback compares all 2,242 exporter pair selections against analytic bounds for this saved geometry. [Historical digital checks](../validation/revI-slim-flush.json).
 
-It does **not** prove the absolute minimum physical height. Lead diameter and terminal exits remain nominal, the 105 mm routes are modeled assumptions, and actual contact engagement has not been measured. Printed fits, magnetic retention, cell tolerances, flexing during service, RF, charging and electrical operation still need hardware testing. Both PCB studies remain unrouted with 104 unconnected items per half.
+It does **not** prove the absolute minimum physical height. Lead diameter and terminal exits remain nominal, the 105 mm routes are modeled assumptions, and actual contact engagement has not been measured. Printed fits, magnetic retention, cell tolerances, flexing during service, RF, charging and electrical operation still need hardware testing. At that historical snapshot the boards were unrouted; [current routing evidence](electronics.md) supersedes its electrical status.
 
 The earlier [height and mounting study](slim-mount-study.md) is retained as historical evidence. Its tall generic connector and floating cable paths do not establish a lower limit for this revised arrangement.
 

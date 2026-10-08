@@ -31,7 +31,7 @@ The current diagram above supersedes that geometry; the previous receipt and reg
 - An initial magnet position cut a K25 pad: actual pad polygons exposed the conflict. Stations moved south; J1 and SW1 moved to preserve clearance. The power switch also moved inward. No key moved.
 - The battery cage touched the controller support: the rear support bridge moved clear of the cage.
 
-Both KiCad studies have **0 geometric violations and 104 unconnected items per half**. This is not a routed-board DRC pass or fabrication release. The original 0.5 mm copper-edge rule remains in force; measured minimum pad clearance is approximately 0.524 mm.
+At this mechanical-review snapshot, both KiCad studies had **0 geometric violations and 104 unconnected items per half**. [Current routed-board evidence](electronics.md) supersedes that electrical status; physical qualification remains pending. The original 0.5 mm copper-edge rule remains in force; measured minimum pad clearance is approximately 0.524 mm.
 
 - A frame could fit at rest yet catch the MCU while lifting. Its internal relief now opens to the lower rim; sampled extraction checks cover all six styles.
 - A FreeCAD link dropped a battery box's placement. Each battery variant now has a native compound wrapper, and independent bounds checks verify the active link, exported mesh and configuration swap.

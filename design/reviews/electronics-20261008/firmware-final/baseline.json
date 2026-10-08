@@ -1,0 +1,115 @@
+{
+  "scope": "Final firmware verification including right remap",
+  "git_head": "fe8c7fdc1b13b8eac6383c3315af8e749b1b8d4c",
+  "git_status": "?? design/key-order.json\n?? design/pinmap.json\n?? design/reviews/electronics-20261008/\n?? docs/firmware.md\n?? docs/reviews/2026-10-08-build-continuation.md\n?? firmware/\n?? tools/build_firmware.sh\n?? tools/check_firmware.py\n?? tools/check_routed_pcb.py\n?? tools/complete_pcb_routes.py\n?? tools/prepare_routing.py\n?? tools/remap_right_mcu.py\n?? validation/revI-firmware.json\n",
+  "files": [
+    {
+      "path": "design/key-order.json",
+      "sha256": "da3483b6f554b62623b69cb6ebefdc218ac383e41b25a6f89a0406a1e9632a41"
+    },
+    {
+      "path": "design/layout.json",
+      "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+    },
+    {
+      "path": "design/pinmap.json",
+      "sha256": "0e1e32f41a33682463b168814515619ecf7e4f3d9a678db80e927fddbf997b0f"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/Kconfig.defconfig",
+      "sha256": "d9ebc7de80ab92170f59b7be4114278f1d3b215e8832e1ad8bf4c987ab416b77"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/Kconfig.shield",
+      "sha256": "11e26fc4e6a7b9e261f73a6c1d9dc4226f28506293c8c2da0cb3b9585163effa"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36-display.dtsi",
+      "sha256": "c1781b54d3a54f49759e538fbf352d2df006984ccf5f936ff8b0e2f59e8092dd"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36.dtsi",
+      "sha256": "f88224b537398287c5c52028d29b4b976cbdda7f7b48fe3a0112285ef366f650"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36_left.overlay",
+      "sha256": "c2bd9d9112da0c08a099d33a178f4c861b751455ecfdd4985f55465ee826219e"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36_right.overlay",
+      "sha256": "2c70dd8dc4662327dc46c51bb4f7619db42c59cc05d25d2bfe86f73a6cdd2a34"
+    },
+    {
+      "path": "firmware/config/flan36.conf",
+      "sha256": "a6d8843a884b5325fd3c4c402ad83972eb7218534578b8d26dfd9c23a714ad38"
+    },
+    {
+      "path": "firmware/config/flan36.keymap",
+      "sha256": "efe38e2eb0b396f35952181a4b4ddd499e07af897610d64473fae6aa205fddf0"
+    },
+    {
+      "path": "firmware/config/no-display.conf",
+      "sha256": "f29864d4f443c5450c372c3efef38c68d6aa4a4bded0a6c052b8992930075f4e"
+    },
+    {
+      "path": "firmware/config/west.yml",
+      "sha256": "aae151de061642bda17766f8ca848debc0a1403a17b30a2373b243efd572d96d"
+    },
+    {
+      "path": "firmware/licenses/CMSIS-Apache-2.0.txt",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "firmware/licenses/LVGL-MIT.txt",
+      "sha256": "6a916130a36e83a79bb0dca6c6a7bfe60a67af7d118605e2b7b23bd5ad5c4eb0"
+    },
+    {
+      "path": "firmware/licenses/Nanopb-zlib.txt",
+      "sha256": "e2f2fc8fe3faa7dcb09dbe995db48c6ec5c1f72705db915101e4a83fed44f66d"
+    },
+    {
+      "path": "firmware/licenses/Nordic-nrfx.txt",
+      "sha256": "78c6c7e49c66d4337be3b38a2665724a60dcf110a94311a20cc7bc7e0faea6f4"
+    },
+    {
+      "path": "firmware/licenses/TinyCrypt-BSD.txt",
+      "sha256": "5e7341e9688463dbcda2be2e812881d92507483849d2f3a8a217de04e942a3ac"
+    },
+    {
+      "path": "firmware/licenses/ZMK-MIT.txt",
+      "sha256": "05e785a4c222b9213b452f1a2cd8b3f8ce95a56c1b77a7ca8525d0f7eb7f77b1"
+    },
+    {
+      "path": "firmware/licenses/Zephyr-Apache-2.0.txt",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "path": "firmware/uf2/flan36-left.uf2",
+      "sha256": "423de39b25680547805cf32f92f06b0c49147a9b7b7140bf6506f0f8c09d9abb"
+    },
+    {
+      "path": "firmware/uf2/flan36-right-no-display.uf2",
+      "sha256": "08190e7f6c0f8218546162afb7bf8d74a1c7885ca3a7719095c0b02bde332bb1"
+    },
+    {
+      "path": "firmware/uf2/flan36-right.uf2",
+      "sha256": "82785921609bc8fca9fc8158ce7e1b28d04281f82fba81f9f5f78fcc4f192464"
+    },
+    {
+      "path": "firmware/west-frozen.yml",
+      "sha256": "0e34b160459e8f8338470c682853e6d5d4a62017ff8ecd6ccb77715568e7759f"
+    },
+    {
+      "path": "tools/build_firmware.sh",
+      "sha256": "6cc7a4328c9b011e504294be54791f9f0f245eea96cc0111468673b1bbaeabe2"
+    },
+    {
+      "path": "tools/check_firmware.py",
+      "sha256": "bd26b3e6dcb2d5958ee8c3dc85ba84d7994bb5544b4b168b01f1634b64447535"
+    },
+    {
+      "path": "validation/revI-firmware.json",
+      "sha256": "451c0dc26ce3134854c9dd87653d172b966c48a53afcce5562f2b030363d4eb8"
+    }
+  ]
+}

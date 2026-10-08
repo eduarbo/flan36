@@ -1,0 +1,1180 @@
+{
+  "schema": "flan36-firmware-1",
+  "physical_acceptance": false,
+  "zmk_revision": "edf5c0814fd3ea202e43aad2d68fd32e882a518c",
+  "board": "nice_nano_v2",
+  "keys": [
+    {
+      "side": "left",
+      "ref": "K01",
+      "row": 0,
+      "column": 1
+    },
+    {
+      "side": "left",
+      "ref": "K02",
+      "row": 0,
+      "column": 2
+    },
+    {
+      "side": "left",
+      "ref": "K03",
+      "row": 0,
+      "column": 3
+    },
+    {
+      "side": "left",
+      "ref": "K04",
+      "row": 0,
+      "column": 4
+    },
+    {
+      "side": "left",
+      "ref": "K05",
+      "row": 0,
+      "column": 5
+    },
+    {
+      "side": "right",
+      "ref": "K05",
+      "row": 0,
+      "column": 11
+    },
+    {
+      "side": "right",
+      "ref": "K04",
+      "row": 0,
+      "column": 10
+    },
+    {
+      "side": "right",
+      "ref": "K03",
+      "row": 0,
+      "column": 9
+    },
+    {
+      "side": "right",
+      "ref": "K02",
+      "row": 0,
+      "column": 8
+    },
+    {
+      "side": "right",
+      "ref": "K01",
+      "row": 0,
+      "column": 7
+    },
+    {
+      "side": "left",
+      "ref": "K11",
+      "row": 1,
+      "column": 1
+    },
+    {
+      "side": "left",
+      "ref": "K12",
+      "row": 1,
+      "column": 2
+    },
+    {
+      "side": "left",
+      "ref": "K13",
+      "row": 1,
+      "column": 3
+    },
+    {
+      "side": "left",
+      "ref": "K14",
+      "row": 1,
+      "column": 4
+    },
+    {
+      "side": "left",
+      "ref": "K15",
+      "row": 1,
+      "column": 5
+    },
+    {
+      "side": "right",
+      "ref": "K15",
+      "row": 1,
+      "column": 11
+    },
+    {
+      "side": "right",
+      "ref": "K14",
+      "row": 1,
+      "column": 10
+    },
+    {
+      "side": "right",
+      "ref": "K13",
+      "row": 1,
+      "column": 9
+    },
+    {
+      "side": "right",
+      "ref": "K12",
+      "row": 1,
+      "column": 8
+    },
+    {
+      "side": "right",
+      "ref": "K11",
+      "row": 1,
+      "column": 7
+    },
+    {
+      "side": "left",
+      "ref": "K21",
+      "row": 2,
+      "column": 1
+    },
+    {
+      "side": "left",
+      "ref": "K22",
+      "row": 2,
+      "column": 2
+    },
+    {
+      "side": "left",
+      "ref": "K23",
+      "row": 2,
+      "column": 3
+    },
+    {
+      "side": "left",
+      "ref": "K24",
+      "row": 2,
+      "column": 4
+    },
+    {
+      "side": "left",
+      "ref": "K25",
+      "row": 2,
+      "column": 5
+    },
+    {
+      "side": "right",
+      "ref": "K25",
+      "row": 2,
+      "column": 11
+    },
+    {
+      "side": "right",
+      "ref": "K24",
+      "row": 2,
+      "column": 10
+    },
+    {
+      "side": "right",
+      "ref": "K23",
+      "row": 2,
+      "column": 9
+    },
+    {
+      "side": "right",
+      "ref": "K22",
+      "row": 2,
+      "column": 8
+    },
+    {
+      "side": "right",
+      "ref": "K21",
+      "row": 2,
+      "column": 7
+    },
+    {
+      "side": "left",
+      "ref": "K30",
+      "row": 3,
+      "column": 0
+    },
+    {
+      "side": "left",
+      "ref": "K31",
+      "row": 3,
+      "column": 1
+    },
+    {
+      "side": "left",
+      "ref": "K32",
+      "row": 3,
+      "column": 2
+    },
+    {
+      "side": "right",
+      "ref": "K32",
+      "row": 3,
+      "column": 8
+    },
+    {
+      "side": "right",
+      "ref": "K31",
+      "row": 3,
+      "column": 7
+    },
+    {
+      "side": "right",
+      "ref": "K30",
+      "row": 3,
+      "column": 6
+    }
+  ],
+  "variants": {
+    "left": {
+      "role": "central",
+      "display": true,
+      "matrix_positions": 36,
+      "sleep": true,
+      "uf2_bytes": 675840,
+      "uf2_sha256": "423de39b25680547805cf32f92f06b0c49147a9b7b7140bf6506f0f8c09d9abb",
+      "devicetree_sha256": "aef7c9c381f4efbe151e489239b31ff5bb2436a10c24f30d4a16356dbd542e7b",
+      "config_sha256": "c221ed7c09369a6405427d18266067fca43175655ac3b52ae9520b331dbd7ee9",
+      "build_attestation": {
+        "variant": "left",
+        "inputs": {
+          "sources": [
+            {
+              "path": "design/key-order.json",
+              "sha256": "da3483b6f554b62623b69cb6ebefdc218ac383e41b25a6f89a0406a1e9632a41"
+            },
+            {
+              "path": "design/layout.json",
+              "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+            },
+            {
+              "path": "design/pinmap.json",
+              "sha256": "0e1e32f41a33682463b168814515619ecf7e4f3d9a678db80e927fddbf997b0f"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/Kconfig.defconfig",
+              "sha256": "d9ebc7de80ab92170f59b7be4114278f1d3b215e8832e1ad8bf4c987ab416b77"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/Kconfig.shield",
+              "sha256": "11e26fc4e6a7b9e261f73a6c1d9dc4226f28506293c8c2da0cb3b9585163effa"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36-display.dtsi",
+              "sha256": "c1781b54d3a54f49759e538fbf352d2df006984ccf5f936ff8b0e2f59e8092dd"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36.dtsi",
+              "sha256": "f88224b537398287c5c52028d29b4b976cbdda7f7b48fe3a0112285ef366f650"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36_left.overlay",
+              "sha256": "c2bd9d9112da0c08a099d33a178f4c861b751455ecfdd4985f55465ee826219e"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36_right.overlay",
+              "sha256": "2c70dd8dc4662327dc46c51bb4f7619db42c59cc05d25d2bfe86f73a6cdd2a34"
+            },
+            {
+              "path": "firmware/config/flan36.conf",
+              "sha256": "a6d8843a884b5325fd3c4c402ad83972eb7218534578b8d26dfd9c23a714ad38"
+            },
+            {
+              "path": "firmware/config/flan36.keymap",
+              "sha256": "efe38e2eb0b396f35952181a4b4ddd499e07af897610d64473fae6aa205fddf0"
+            },
+            {
+              "path": "firmware/config/no-display.conf",
+              "sha256": "f29864d4f443c5450c372c3efef38c68d6aa4a4bded0a6c052b8992930075f4e"
+            },
+            {
+              "path": "firmware/config/west.yml",
+              "sha256": "aae151de061642bda17766f8ca848debc0a1403a17b30a2373b243efd572d96d"
+            },
+            {
+              "path": "firmware/dependencies.json",
+              "sha256": "3bab6456bf13ce77ab5593528619b48065110f51fa74aa859e50a324d66969c1"
+            },
+            {
+              "path": "firmware/west-frozen.yml",
+              "sha256": "0e34b160459e8f8338470c682853e6d5d4a62017ff8ecd6ccb77715568e7759f"
+            },
+            {
+              "path": "tools/build_firmware.sh",
+              "sha256": "a9f4b34a3a8d87f9beb51e27c4fe7cf5021bb3b2ea36a9a3937470269a73a65a"
+            },
+            {
+              "path": "tools/check_firmware.py",
+              "sha256": "13039652c8b41723b07c3ca1eedbfadf9dcd45af1f9ab464e5da8b402a1e9b34"
+            },
+            {
+              "path": "tools/firmware_inputs.py",
+              "sha256": "140c6cc8103ad8d8e7d14bbf0da0954a7cacbb4871dc18f3eed0372bab3d0054"
+            }
+          ],
+          "dependencies": {
+            "manifest": {
+              "path": "app",
+              "revision": "edf5c0814fd3ea202e43aad2d68fd32e882a518c",
+              "clean": true
+            },
+            "zephyr": {
+              "path": "zephyr",
+              "revision": "dacab4875df72109b96cc8977547a0dc04875bcd",
+              "clean": true
+            },
+            "nanopb": {
+              "path": "modules/lib/nanopb",
+              "revision": "8c60555d6277a0360c876bd85d491fc4fb0cd74a",
+              "clean": true
+            },
+            "zmk-studio-messages": {
+              "path": "modules/msgs/zmk-studio-messages",
+              "revision": "6cb4c283e76209d59c45fbcb218800cd19e9339d",
+              "clean": true
+            },
+            "acpica": {
+              "path": "modules/lib/acpica",
+              "revision": "0333c2af13179f9b33d495cf7cb9a509f751cbb1",
+              "clean": true
+            },
+            "canopennode": {
+              "path": "modules/lib/canopennode",
+              "revision": "dec12fa3f0d790cafa8414a4c2930ea71ab72ffd",
+              "clean": true
+            },
+            "cmsis": {
+              "path": "modules/hal/cmsis",
+              "revision": "5a00331455dd74e31e80efa383a489faea0590e3",
+              "clean": true
+            },
+            "cmsis-dsp": {
+              "path": "modules/lib/cmsis-dsp",
+              "revision": "ff7b5fd1ea5f094665c090c343ec44e74dc0b193",
+              "clean": true
+            },
+            "cmsis-nn": {
+              "path": "modules/lib/cmsis-nn",
+              "revision": "0c8669d81381ccf3b1a01d699f3b68b50134a99f",
+              "clean": true
+            },
+            "fatfs": {
+              "path": "modules/fs/fatfs",
+              "revision": "427159bf95ea49b7680facffaa29ad506b42709b",
+              "clean": true
+            },
+            "hal_ambiq": {
+              "path": "modules/hal/ambiq",
+              "revision": "0a7c99325aa73a1ef777501da91c2c6608661e56",
+              "clean": true
+            },
+            "hal_atmel": {
+              "path": "modules/hal/atmel",
+              "revision": "5ab43007eda3f380c125f957f03638d2e8d1144d",
+              "clean": true
+            },
+            "hal_espressif": {
+              "path": "modules/hal/espressif",
+              "revision": "31fc5758f3507f8f0af00b1dea1a0df7af99bfc0",
+              "clean": true
+            },
+            "hal_ethos_u": {
+              "path": "modules/hal/ethos_u",
+              "revision": "90ada2ea5681b2a2722a10d2898eac34c2510791",
+              "clean": true
+            },
+            "hal_gigadevice": {
+              "path": "modules/hal/gigadevice",
+              "revision": "2994b7dde8b0b0fa9b9c0ccb13474b6a486cddc3",
+              "clean": true
+            },
+            "hal_intel": {
+              "path": "modules/hal/intel",
+              "revision": "b3b43d4e3da7ba483611bbbea7ef8af92c69df31",
+              "clean": true
+            },
+            "hal_nordic": {
+              "path": "modules/hal/nordic",
+              "revision": "884c4d61746bc35fbd379c169fc87ddb56c6461d",
+              "clean": true
+            },
+            "hal_nuvoton": {
+              "path": "modules/hal/nuvoton",
+              "revision": "3e0a4c4d3328b2f72b164219add19d5308b53cb5",
+              "clean": true
+            },
+            "hal_quicklogic": {
+              "path": "modules/hal/quicklogic",
+              "revision": "b3a66fe6d04d87fd1533a5c8de51d0599fcd08d0",
+              "clean": true
+            },
+            "hal_renesas": {
+              "path": "modules/hal/renesas",
+              "revision": "a6cf2af9140e014fbbc48d2b6deb802231dd369f",
+              "clean": true
+            },
+            "hal_rpi_pico": {
+              "path": "modules/hal/rpi_pico",
+              "revision": "fba7162cc7bee06d0149622bbcaac4e41062d368",
+              "clean": true
+            },
+            "hal_stm32": {
+              "path": "modules/hal/stm32",
+              "revision": "89ef0a3383edebf661073073bcdf6e2836fe90ee",
+              "clean": true
+            },
+            "hal_telink": {
+              "path": "modules/hal/telink",
+              "revision": "38573af589173259801ae6c2b34b7d4c9e626746",
+              "clean": true
+            },
+            "hal_wurthelektronik": {
+              "path": "modules/hal/wurthelektronik",
+              "revision": "24ca9873c3d608fad1fea0431836bc8f144c132e",
+              "clean": true
+            },
+            "libmetal": {
+              "path": "modules/hal/libmetal",
+              "revision": "b91611a6f47dd29fb24c46e5621e797557f80ec6",
+              "clean": true
+            },
+            "liblc3": {
+              "path": "modules/lib/liblc3",
+              "revision": "448f3de31f49a838988a162ef1e23a89ddf2d2ed",
+              "clean": true
+            },
+            "littlefs": {
+              "path": "modules/fs/littlefs",
+              "revision": "ca583fd297ceb48bced3c2548600dc615d67af24",
+              "clean": true
+            },
+            "lvgl": {
+              "path": "modules/lib/gui/lvgl",
+              "revision": "8a6a2d1d29d17d1e4bdc94c243c146a39d635fdd",
+              "clean": true
+            },
+            "mbedtls": {
+              "path": "modules/crypto/mbedtls",
+              "revision": "c38dc78d9a8dcbe43b898cc1171ab33ba3e6fc26",
+              "clean": true
+            },
+            "mipi-sys-t": {
+              "path": "modules/debug/mipi-sys-t",
+              "revision": "a819419603a2dfcb47f7f39092e1bc112e45d1ef",
+              "clean": true
+            },
+            "nrf_hw_models": {
+              "path": "modules/bsim_hw_models/nrf_hw_models",
+              "revision": "f4595802d32d103718bf50b3d390b7a450895843",
+              "clean": true
+            },
+            "open-amp": {
+              "path": "modules/lib/open-amp",
+              "revision": "42b7c577714b8f22ce82a901e19c1814af4609a8",
+              "clean": true
+            },
+            "percepio": {
+              "path": "modules/debug/percepio",
+              "revision": "a3728efccc47dd372f40e6313589ca4c5cc7d5e9",
+              "clean": true
+            },
+            "picolibc": {
+              "path": "modules/lib/picolibc",
+              "revision": "d07c38ff051386f8e09a143ea0a6c1d6d66dd1d8",
+              "clean": true
+            },
+            "segger": {
+              "path": "modules/debug/segger",
+              "revision": "9d0191285956cef43daf411edc2f1a7788346def",
+              "clean": true
+            },
+            "tinycrypt": {
+              "path": "modules/crypto/tinycrypt",
+              "revision": "3e9a49d2672ec01435ffbf0d788db6d95ef28de0",
+              "clean": true
+            },
+            "trusted-firmware-a": {
+              "path": "modules/tee/tf-a/trusted-firmware-a",
+              "revision": "421dc050278287839f5c70019bd6aec617f2bbdb",
+              "clean": true
+            },
+            "uoscore-uedhoc": {
+              "path": "modules/lib/uoscore-uedhoc",
+              "revision": "5fe2cb613bd7e4590bd1b00c2adf181ac0229379",
+              "clean": true
+            },
+            "zcbor": {
+              "path": "modules/lib/zcbor",
+              "revision": "67fd8bb88d3136738661fa8bb5f9989103f4599e",
+              "clean": true
+            }
+          },
+          "toolchain": {
+            "gcc": "7528680ad6078c1d2dd67a414fca656e5d78e56e7bc31f422a849bb15a7db04a",
+            "as": "b0639080d13ff57cd81e2dc7019458d9e5d8cfefbf2bfa13a72d707f0f702df6",
+            "ld": "1279f14d225d3380a1aac6988d84758d3c1936940beefa8b629147f50ab4970b",
+            "objcopy": "3a6fb42288c74ebd5f8f8e85a13335c03eeecfe0d3b5282ec9b7850482823145",
+            "cc1": "a7126344a80ec6a781b853e0329e3fcd01e8b06ef17717af96c0ad3637a0a10a",
+            "libgcc.a": "9990b6524b6486bc7d0d764c8c3157f55b0840cbb1abc10138e558ebc8897f29",
+            "libc.a": "91ee109a121c5afba1ccb5614522f18d53156ece9c3f0b608587daab75de8291",
+            "version": "arm-none-eabi-gcc (crosstool-NG 1.27.0.82_7f9d704 - qmk/qmk_toolchains @ a55a2b0) 15.2.0",
+            "cmake_version": "cmake version 3.31.10",
+            "ninja_version": "1.13.0.git.kitware.jobserver-pipe-1"
+          }
+        },
+        "inputs_unchanged_after_build": true,
+        "outputs": {
+          "zmk.uf2": "423de39b25680547805cf32f92f06b0c49147a9b7b7140bf6506f0f8c09d9abb",
+          "zephyr.dts": "aef7c9c381f4efbe151e489239b31ff5bb2436a10c24f30d4a16356dbd542e7b",
+          ".config": "c221ed7c09369a6405427d18266067fca43175655ac3b52ae9520b331dbd7ee9"
+        }
+      }
+    },
+    "right": {
+      "role": "peripheral",
+      "display": true,
+      "matrix_positions": 36,
+      "sleep": true,
+      "uf2_bytes": 525312,
+      "uf2_sha256": "82785921609bc8fca9fc8158ce7e1b28d04281f82fba81f9f5f78fcc4f192464",
+      "devicetree_sha256": "0ff8ec87bd1ebb4ceeede4286bc3337f8f39e73762dcb3ac1ab791dc15ced8c7",
+      "config_sha256": "5058218e85c2633506b4c68bf80f147cd3be4e8265a41c439cf4f4be6fa3dfcc",
+      "build_attestation": {
+        "variant": "right",
+        "inputs": {
+          "sources": [
+            {
+              "path": "design/key-order.json",
+              "sha256": "da3483b6f554b62623b69cb6ebefdc218ac383e41b25a6f89a0406a1e9632a41"
+            },
+            {
+              "path": "design/layout.json",
+              "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+            },
+            {
+              "path": "design/pinmap.json",
+              "sha256": "0e1e32f41a33682463b168814515619ecf7e4f3d9a678db80e927fddbf997b0f"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/Kconfig.defconfig",
+              "sha256": "d9ebc7de80ab92170f59b7be4114278f1d3b215e8832e1ad8bf4c987ab416b77"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/Kconfig.shield",
+              "sha256": "11e26fc4e6a7b9e261f73a6c1d9dc4226f28506293c8c2da0cb3b9585163effa"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36-display.dtsi",
+              "sha256": "c1781b54d3a54f49759e538fbf352d2df006984ccf5f936ff8b0e2f59e8092dd"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36.dtsi",
+              "sha256": "f88224b537398287c5c52028d29b4b976cbdda7f7b48fe3a0112285ef366f650"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36_left.overlay",
+              "sha256": "c2bd9d9112da0c08a099d33a178f4c861b751455ecfdd4985f55465ee826219e"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36_right.overlay",
+              "sha256": "2c70dd8dc4662327dc46c51bb4f7619db42c59cc05d25d2bfe86f73a6cdd2a34"
+            },
+            {
+              "path": "firmware/config/flan36.conf",
+              "sha256": "a6d8843a884b5325fd3c4c402ad83972eb7218534578b8d26dfd9c23a714ad38"
+            },
+            {
+              "path": "firmware/config/flan36.keymap",
+              "sha256": "efe38e2eb0b396f35952181a4b4ddd499e07af897610d64473fae6aa205fddf0"
+            },
+            {
+              "path": "firmware/config/no-display.conf",
+              "sha256": "f29864d4f443c5450c372c3efef38c68d6aa4a4bded0a6c052b8992930075f4e"
+            },
+            {
+              "path": "firmware/config/west.yml",
+              "sha256": "aae151de061642bda17766f8ca848debc0a1403a17b30a2373b243efd572d96d"
+            },
+            {
+              "path": "firmware/dependencies.json",
+              "sha256": "3bab6456bf13ce77ab5593528619b48065110f51fa74aa859e50a324d66969c1"
+            },
+            {
+              "path": "firmware/west-frozen.yml",
+              "sha256": "0e34b160459e8f8338470c682853e6d5d4a62017ff8ecd6ccb77715568e7759f"
+            },
+            {
+              "path": "tools/build_firmware.sh",
+              "sha256": "a9f4b34a3a8d87f9beb51e27c4fe7cf5021bb3b2ea36a9a3937470269a73a65a"
+            },
+            {
+              "path": "tools/check_firmware.py",
+              "sha256": "13039652c8b41723b07c3ca1eedbfadf9dcd45af1f9ab464e5da8b402a1e9b34"
+            },
+            {
+              "path": "tools/firmware_inputs.py",
+              "sha256": "140c6cc8103ad8d8e7d14bbf0da0954a7cacbb4871dc18f3eed0372bab3d0054"
+            }
+          ],
+          "dependencies": {
+            "manifest": {
+              "path": "app",
+              "revision": "edf5c0814fd3ea202e43aad2d68fd32e882a518c",
+              "clean": true
+            },
+            "zephyr": {
+              "path": "zephyr",
+              "revision": "dacab4875df72109b96cc8977547a0dc04875bcd",
+              "clean": true
+            },
+            "nanopb": {
+              "path": "modules/lib/nanopb",
+              "revision": "8c60555d6277a0360c876bd85d491fc4fb0cd74a",
+              "clean": true
+            },
+            "zmk-studio-messages": {
+              "path": "modules/msgs/zmk-studio-messages",
+              "revision": "6cb4c283e76209d59c45fbcb218800cd19e9339d",
+              "clean": true
+            },
+            "acpica": {
+              "path": "modules/lib/acpica",
+              "revision": "0333c2af13179f9b33d495cf7cb9a509f751cbb1",
+              "clean": true
+            },
+            "canopennode": {
+              "path": "modules/lib/canopennode",
+              "revision": "dec12fa3f0d790cafa8414a4c2930ea71ab72ffd",
+              "clean": true
+            },
+            "cmsis": {
+              "path": "modules/hal/cmsis",
+              "revision": "5a00331455dd74e31e80efa383a489faea0590e3",
+              "clean": true
+            },
+            "cmsis-dsp": {
+              "path": "modules/lib/cmsis-dsp",
+              "revision": "ff7b5fd1ea5f094665c090c343ec44e74dc0b193",
+              "clean": true
+            },
+            "cmsis-nn": {
+              "path": "modules/lib/cmsis-nn",
+              "revision": "0c8669d81381ccf3b1a01d699f3b68b50134a99f",
+              "clean": true
+            },
+            "fatfs": {
+              "path": "modules/fs/fatfs",
+              "revision": "427159bf95ea49b7680facffaa29ad506b42709b",
+              "clean": true
+            },
+            "hal_ambiq": {
+              "path": "modules/hal/ambiq",
+              "revision": "0a7c99325aa73a1ef777501da91c2c6608661e56",
+              "clean": true
+            },
+            "hal_atmel": {
+              "path": "modules/hal/atmel",
+              "revision": "5ab43007eda3f380c125f957f03638d2e8d1144d",
+              "clean": true
+            },
+            "hal_espressif": {
+              "path": "modules/hal/espressif",
+              "revision": "31fc5758f3507f8f0af00b1dea1a0df7af99bfc0",
+              "clean": true
+            },
+            "hal_ethos_u": {
+              "path": "modules/hal/ethos_u",
+              "revision": "90ada2ea5681b2a2722a10d2898eac34c2510791",
+              "clean": true
+            },
+            "hal_gigadevice": {
+              "path": "modules/hal/gigadevice",
+              "revision": "2994b7dde8b0b0fa9b9c0ccb13474b6a486cddc3",
+              "clean": true
+            },
+            "hal_intel": {
+              "path": "modules/hal/intel",
+              "revision": "b3b43d4e3da7ba483611bbbea7ef8af92c69df31",
+              "clean": true
+            },
+            "hal_nordic": {
+              "path": "modules/hal/nordic",
+              "revision": "884c4d61746bc35fbd379c169fc87ddb56c6461d",
+              "clean": true
+            },
+            "hal_nuvoton": {
+              "path": "modules/hal/nuvoton",
+              "revision": "3e0a4c4d3328b2f72b164219add19d5308b53cb5",
+              "clean": true
+            },
+            "hal_quicklogic": {
+              "path": "modules/hal/quicklogic",
+              "revision": "b3a66fe6d04d87fd1533a5c8de51d0599fcd08d0",
+              "clean": true
+            },
+            "hal_renesas": {
+              "path": "modules/hal/renesas",
+              "revision": "a6cf2af9140e014fbbc48d2b6deb802231dd369f",
+              "clean": true
+            },
+            "hal_rpi_pico": {
+              "path": "modules/hal/rpi_pico",
+              "revision": "fba7162cc7bee06d0149622bbcaac4e41062d368",
+              "clean": true
+            },
+            "hal_stm32": {
+              "path": "modules/hal/stm32",
+              "revision": "89ef0a3383edebf661073073bcdf6e2836fe90ee",
+              "clean": true
+            },
+            "hal_telink": {
+              "path": "modules/hal/telink",
+              "revision": "38573af589173259801ae6c2b34b7d4c9e626746",
+              "clean": true
+            },
+            "hal_wurthelektronik": {
+              "path": "modules/hal/wurthelektronik",
+              "revision": "24ca9873c3d608fad1fea0431836bc8f144c132e",
+              "clean": true
+            },
+            "libmetal": {
+              "path": "modules/hal/libmetal",
+              "revision": "b91611a6f47dd29fb24c46e5621e797557f80ec6",
+              "clean": true
+            },
+            "liblc3": {
+              "path": "modules/lib/liblc3",
+              "revision": "448f3de31f49a838988a162ef1e23a89ddf2d2ed",
+              "clean": true
+            },
+            "littlefs": {
+              "path": "modules/fs/littlefs",
+              "revision": "ca583fd297ceb48bced3c2548600dc615d67af24",
+              "clean": true
+            },
+            "lvgl": {
+              "path": "modules/lib/gui/lvgl",
+              "revision": "8a6a2d1d29d17d1e4bdc94c243c146a39d635fdd",
+              "clean": true
+            },
+            "mbedtls": {
+              "path": "modules/crypto/mbedtls",
+              "revision": "c38dc78d9a8dcbe43b898cc1171ab33ba3e6fc26",
+              "clean": true
+            },
+            "mipi-sys-t": {
+              "path": "modules/debug/mipi-sys-t",
+              "revision": "a819419603a2dfcb47f7f39092e1bc112e45d1ef",
+              "clean": true
+            },
+            "nrf_hw_models": {
+              "path": "modules/bsim_hw_models/nrf_hw_models",
+              "revision": "f4595802d32d103718bf50b3d390b7a450895843",
+              "clean": true
+            },
+            "open-amp": {
+              "path": "modules/lib/open-amp",
+              "revision": "42b7c577714b8f22ce82a901e19c1814af4609a8",
+              "clean": true
+            },
+            "percepio": {
+              "path": "modules/debug/percepio",
+              "revision": "a3728efccc47dd372f40e6313589ca4c5cc7d5e9",
+              "clean": true
+            },
+            "picolibc": {
+              "path": "modules/lib/picolibc",
+              "revision": "d07c38ff051386f8e09a143ea0a6c1d6d66dd1d8",
+              "clean": true
+            },
+            "segger": {
+              "path": "modules/debug/segger",
+              "revision": "9d0191285956cef43daf411edc2f1a7788346def",
+              "clean": true
+            },
+            "tinycrypt": {
+              "path": "modules/crypto/tinycrypt",
+              "revision": "3e9a49d2672ec01435ffbf0d788db6d95ef28de0",
+              "clean": true
+            },
+            "trusted-firmware-a": {
+              "path": "modules/tee/tf-a/trusted-firmware-a",
+              "revision": "421dc050278287839f5c70019bd6aec617f2bbdb",
+              "clean": true
+            },
+            "uoscore-uedhoc": {
+              "path": "modules/lib/uoscore-uedhoc",
+              "revision": "5fe2cb613bd7e4590bd1b00c2adf181ac0229379",
+              "clean": true
+            },
+            "zcbor": {
+              "path": "modules/lib/zcbor",
+              "revision": "67fd8bb88d3136738661fa8bb5f9989103f4599e",
+              "clean": true
+            }
+          },
+          "toolchain": {
+            "gcc": "7528680ad6078c1d2dd67a414fca656e5d78e56e7bc31f422a849bb15a7db04a",
+            "as": "b0639080d13ff57cd81e2dc7019458d9e5d8cfefbf2bfa13a72d707f0f702df6",
+            "ld": "1279f14d225d3380a1aac6988d84758d3c1936940beefa8b629147f50ab4970b",
+            "objcopy": "3a6fb42288c74ebd5f8f8e85a13335c03eeecfe0d3b5282ec9b7850482823145",
+            "cc1": "a7126344a80ec6a781b853e0329e3fcd01e8b06ef17717af96c0ad3637a0a10a",
+            "libgcc.a": "9990b6524b6486bc7d0d764c8c3157f55b0840cbb1abc10138e558ebc8897f29",
+            "libc.a": "91ee109a121c5afba1ccb5614522f18d53156ece9c3f0b608587daab75de8291",
+            "version": "arm-none-eabi-gcc (crosstool-NG 1.27.0.82_7f9d704 - qmk/qmk_toolchains @ a55a2b0) 15.2.0",
+            "cmake_version": "cmake version 3.31.10",
+            "ninja_version": "1.13.0.git.kitware.jobserver-pipe-1"
+          }
+        },
+        "inputs_unchanged_after_build": true,
+        "outputs": {
+          "zmk.uf2": "82785921609bc8fca9fc8158ce7e1b28d04281f82fba81f9f5f78fcc4f192464",
+          "zephyr.dts": "0ff8ec87bd1ebb4ceeede4286bc3337f8f39e73762dcb3ac1ab791dc15ced8c7",
+          ".config": "5058218e85c2633506b4c68bf80f147cd3be4e8265a41c439cf4f4be6fa3dfcc"
+        }
+      }
+    },
+    "right-no-display": {
+      "role": "peripheral",
+      "display": false,
+      "matrix_positions": 36,
+      "sleep": true,
+      "uf2_bytes": 340992,
+      "uf2_sha256": "08190e7f6c0f8218546162afb7bf8d74a1c7885ca3a7719095c0b02bde332bb1",
+      "devicetree_sha256": "05c87bc7c487a2fec8f8d8a7f4e8b57a7699284fc9893ebe8224b108c4510f55",
+      "config_sha256": "5082d17f4aa29c47f5ed04bae5302ad642b9d4b91caf415198dc4c222636a42f",
+      "build_attestation": {
+        "variant": "right-no-display",
+        "inputs": {
+          "sources": [
+            {
+              "path": "design/key-order.json",
+              "sha256": "da3483b6f554b62623b69cb6ebefdc218ac383e41b25a6f89a0406a1e9632a41"
+            },
+            {
+              "path": "design/layout.json",
+              "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+            },
+            {
+              "path": "design/pinmap.json",
+              "sha256": "0e1e32f41a33682463b168814515619ecf7e4f3d9a678db80e927fddbf997b0f"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/Kconfig.defconfig",
+              "sha256": "d9ebc7de80ab92170f59b7be4114278f1d3b215e8832e1ad8bf4c987ab416b77"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/Kconfig.shield",
+              "sha256": "11e26fc4e6a7b9e261f73a6c1d9dc4226f28506293c8c2da0cb3b9585163effa"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36-display.dtsi",
+              "sha256": "c1781b54d3a54f49759e538fbf352d2df006984ccf5f936ff8b0e2f59e8092dd"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36.dtsi",
+              "sha256": "f88224b537398287c5c52028d29b4b976cbdda7f7b48fe3a0112285ef366f650"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36_left.overlay",
+              "sha256": "c2bd9d9112da0c08a099d33a178f4c861b751455ecfdd4985f55465ee826219e"
+            },
+            {
+              "path": "firmware/config/boards/shields/flan36/flan36_right.overlay",
+              "sha256": "2c70dd8dc4662327dc46c51bb4f7619db42c59cc05d25d2bfe86f73a6cdd2a34"
+            },
+            {
+              "path": "firmware/config/flan36.conf",
+              "sha256": "a6d8843a884b5325fd3c4c402ad83972eb7218534578b8d26dfd9c23a714ad38"
+            },
+            {
+              "path": "firmware/config/flan36.keymap",
+              "sha256": "efe38e2eb0b396f35952181a4b4ddd499e07af897610d64473fae6aa205fddf0"
+            },
+            {
+              "path": "firmware/config/no-display.conf",
+              "sha256": "f29864d4f443c5450c372c3efef38c68d6aa4a4bded0a6c052b8992930075f4e"
+            },
+            {
+              "path": "firmware/config/west.yml",
+              "sha256": "aae151de061642bda17766f8ca848debc0a1403a17b30a2373b243efd572d96d"
+            },
+            {
+              "path": "firmware/dependencies.json",
+              "sha256": "3bab6456bf13ce77ab5593528619b48065110f51fa74aa859e50a324d66969c1"
+            },
+            {
+              "path": "firmware/west-frozen.yml",
+              "sha256": "0e34b160459e8f8338470c682853e6d5d4a62017ff8ecd6ccb77715568e7759f"
+            },
+            {
+              "path": "tools/build_firmware.sh",
+              "sha256": "a9f4b34a3a8d87f9beb51e27c4fe7cf5021bb3b2ea36a9a3937470269a73a65a"
+            },
+            {
+              "path": "tools/check_firmware.py",
+              "sha256": "13039652c8b41723b07c3ca1eedbfadf9dcd45af1f9ab464e5da8b402a1e9b34"
+            },
+            {
+              "path": "tools/firmware_inputs.py",
+              "sha256": "140c6cc8103ad8d8e7d14bbf0da0954a7cacbb4871dc18f3eed0372bab3d0054"
+            }
+          ],
+          "dependencies": {
+            "manifest": {
+              "path": "app",
+              "revision": "edf5c0814fd3ea202e43aad2d68fd32e882a518c",
+              "clean": true
+            },
+            "zephyr": {
+              "path": "zephyr",
+              "revision": "dacab4875df72109b96cc8977547a0dc04875bcd",
+              "clean": true
+            },
+            "nanopb": {
+              "path": "modules/lib/nanopb",
+              "revision": "8c60555d6277a0360c876bd85d491fc4fb0cd74a",
+              "clean": true
+            },
+            "zmk-studio-messages": {
+              "path": "modules/msgs/zmk-studio-messages",
+              "revision": "6cb4c283e76209d59c45fbcb218800cd19e9339d",
+              "clean": true
+            },
+            "acpica": {
+              "path": "modules/lib/acpica",
+              "revision": "0333c2af13179f9b33d495cf7cb9a509f751cbb1",
+              "clean": true
+            },
+            "canopennode": {
+              "path": "modules/lib/canopennode",
+              "revision": "dec12fa3f0d790cafa8414a4c2930ea71ab72ffd",
+              "clean": true
+            },
+            "cmsis": {
+              "path": "modules/hal/cmsis",
+              "revision": "5a00331455dd74e31e80efa383a489faea0590e3",
+              "clean": true
+            },
+            "cmsis-dsp": {
+              "path": "modules/lib/cmsis-dsp",
+              "revision": "ff7b5fd1ea5f094665c090c343ec44e74dc0b193",
+              "clean": true
+            },
+            "cmsis-nn": {
+              "path": "modules/lib/cmsis-nn",
+              "revision": "0c8669d81381ccf3b1a01d699f3b68b50134a99f",
+              "clean": true
+            },
+            "fatfs": {
+              "path": "modules/fs/fatfs",
+              "revision": "427159bf95ea49b7680facffaa29ad506b42709b",
+              "clean": true
+            },
+            "hal_ambiq": {
+              "path": "modules/hal/ambiq",
+              "revision": "0a7c99325aa73a1ef777501da91c2c6608661e56",
+              "clean": true
+            },
+            "hal_atmel": {
+              "path": "modules/hal/atmel",
+              "revision": "5ab43007eda3f380c125f957f03638d2e8d1144d",
+              "clean": true
+            },
+            "hal_espressif": {
+              "path": "modules/hal/espressif",
+              "revision": "31fc5758f3507f8f0af00b1dea1a0df7af99bfc0",
+              "clean": true
+            },
+            "hal_ethos_u": {
+              "path": "modules/hal/ethos_u",
+              "revision": "90ada2ea5681b2a2722a10d2898eac34c2510791",
+              "clean": true
+            },
+            "hal_gigadevice": {
+              "path": "modules/hal/gigadevice",
+              "revision": "2994b7dde8b0b0fa9b9c0ccb13474b6a486cddc3",
+              "clean": true
+            },
+            "hal_intel": {
+              "path": "modules/hal/intel",
+              "revision": "b3b43d4e3da7ba483611bbbea7ef8af92c69df31",
+              "clean": true
+            },
+            "hal_nordic": {
+              "path": "modules/hal/nordic",
+              "revision": "884c4d61746bc35fbd379c169fc87ddb56c6461d",
+              "clean": true
+            },
+            "hal_nuvoton": {
+              "path": "modules/hal/nuvoton",
+              "revision": "3e0a4c4d3328b2f72b164219add19d5308b53cb5",
+              "clean": true
+            },
+            "hal_quicklogic": {
+              "path": "modules/hal/quicklogic",
+              "revision": "b3a66fe6d04d87fd1533a5c8de51d0599fcd08d0",
+              "clean": true
+            },
+            "hal_renesas": {
+              "path": "modules/hal/renesas",
+              "revision": "a6cf2af9140e014fbbc48d2b6deb802231dd369f",
+              "clean": true
+            },
+            "hal_rpi_pico": {
+              "path": "modules/hal/rpi_pico",
+              "revision": "fba7162cc7bee06d0149622bbcaac4e41062d368",
+              "clean": true
+            },
+            "hal_stm32": {
+              "path": "modules/hal/stm32",
+              "revision": "89ef0a3383edebf661073073bcdf6e2836fe90ee",
+              "clean": true
+            },
+            "hal_telink": {
+              "path": "modules/hal/telink",
+              "revision": "38573af589173259801ae6c2b34b7d4c9e626746",
+              "clean": true
+            },
+            "hal_wurthelektronik": {
+              "path": "modules/hal/wurthelektronik",
+              "revision": "24ca9873c3d608fad1fea0431836bc8f144c132e",
+              "clean": true
+            },
+            "libmetal": {
+              "path": "modules/hal/libmetal",
+              "revision": "b91611a6f47dd29fb24c46e5621e797557f80ec6",
+              "clean": true
+            },
+            "liblc3": {
+              "path": "modules/lib/liblc3",
+              "revision": "448f3de31f49a838988a162ef1e23a89ddf2d2ed",
+              "clean": true
+            },
+            "littlefs": {
+              "path": "modules/fs/littlefs",
+              "revision": "ca583fd297ceb48bced3c2548600dc615d67af24",
+              "clean": true
+            },
+            "lvgl": {
+              "path": "modules/lib/gui/lvgl",
+              "revision": "8a6a2d1d29d17d1e4bdc94c243c146a39d635fdd",
+              "clean": true
+            },
+            "mbedtls": {
+              "path": "modules/crypto/mbedtls",
+              "revision": "c38dc78d9a8dcbe43b898cc1171ab33ba3e6fc26",
+              "clean": true
+            },
+            "mipi-sys-t": {
+              "path": "modules/debug/mipi-sys-t",
+              "revision": "a819419603a2dfcb47f7f39092e1bc112e45d1ef",
+              "clean": true
+            },
+            "nrf_hw_models": {
+              "path": "modules/bsim_hw_models/nrf_hw_models",
+              "revision": "f4595802d32d103718bf50b3d390b7a450895843",
+              "clean": true
+            },
+            "open-amp": {
+              "path": "modules/lib/open-amp",
+              "revision": "42b7c577714b8f22ce82a901e19c1814af4609a8",
+              "clean": true
+            },
+            "percepio": {
+              "path": "modules/debug/percepio",
+              "revision": "a3728efccc47dd372f40e6313589ca4c5cc7d5e9",
+              "clean": true
+            },
+            "picolibc": {
+              "path": "modules/lib/picolibc",
+              "revision": "d07c38ff051386f8e09a143ea0a6c1d6d66dd1d8",
+              "clean": true
+            },
+            "segger": {
+              "path": "modules/debug/segger",
+              "revision": "9d0191285956cef43daf411edc2f1a7788346def",
+              "clean": true
+            },
+            "tinycrypt": {
+              "path": "modules/crypto/tinycrypt",
+              "revision": "3e9a49d2672ec01435ffbf0d788db6d95ef28de0",
+              "clean": true
+            },
+            "trusted-firmware-a": {
+              "path": "modules/tee/tf-a/trusted-firmware-a",
+              "revision": "421dc050278287839f5c70019bd6aec617f2bbdb",
+              "clean": true
+            },
+            "uoscore-uedhoc": {
+              "path": "modules/lib/uoscore-uedhoc",
+              "revision": "5fe2cb613bd7e4590bd1b00c2adf181ac0229379",
+              "clean": true
+            },
+            "zcbor": {
+              "path": "modules/lib/zcbor",
+              "revision": "67fd8bb88d3136738661fa8bb5f9989103f4599e",
+              "clean": true
+            }
+          },
+          "toolchain": {
+            "gcc": "7528680ad6078c1d2dd67a414fca656e5d78e56e7bc31f422a849bb15a7db04a",
+            "as": "b0639080d13ff57cd81e2dc7019458d9e5d8cfefbf2bfa13a72d707f0f702df6",
+            "ld": "1279f14d225d3380a1aac6988d84758d3c1936940beefa8b629147f50ab4970b",
+            "objcopy": "3a6fb42288c74ebd5f8f8e85a13335c03eeecfe0d3b5282ec9b7850482823145",
+            "cc1": "a7126344a80ec6a781b853e0329e3fcd01e8b06ef17717af96c0ad3637a0a10a",
+            "libgcc.a": "9990b6524b6486bc7d0d764c8c3157f55b0840cbb1abc10138e558ebc8897f29",
+            "libc.a": "91ee109a121c5afba1ccb5614522f18d53156ece9c3f0b608587daab75de8291",
+            "version": "arm-none-eabi-gcc (crosstool-NG 1.27.0.82_7f9d704 - qmk/qmk_toolchains @ a55a2b0) 15.2.0",
+            "cmake_version": "cmake version 3.31.10",
+            "ninja_version": "1.13.0.git.kitware.jobserver-pipe-1"
+          }
+        },
+        "inputs_unchanged_after_build": true,
+        "outputs": {
+          "zmk.uf2": "08190e7f6c0f8218546162afb7bf8d74a1c7885ca3a7719095c0b02bde332bb1",
+          "zephyr.dts": "05c87bc7c487a2fec8f8d8a7f4e8b57a7699284fc9893ebe8224b108c4510f55",
+          ".config": "5082d17f4aa29c47f5ed04bae5302ad642b9d4b91caf415198dc4c222636a42f"
+        }
+      }
+    }
+  },
+  "sources": [
+    {
+      "path": "firmware/config/boards/shields/flan36/Kconfig.defconfig",
+      "sha256": "d9ebc7de80ab92170f59b7be4114278f1d3b215e8832e1ad8bf4c987ab416b77"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/Kconfig.shield",
+      "sha256": "11e26fc4e6a7b9e261f73a6c1d9dc4226f28506293c8c2da0cb3b9585163effa"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36-display.dtsi",
+      "sha256": "c1781b54d3a54f49759e538fbf352d2df006984ccf5f936ff8b0e2f59e8092dd"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36.dtsi",
+      "sha256": "f88224b537398287c5c52028d29b4b976cbdda7f7b48fe3a0112285ef366f650"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36_left.overlay",
+      "sha256": "c2bd9d9112da0c08a099d33a178f4c861b751455ecfdd4985f55465ee826219e"
+    },
+    {
+      "path": "firmware/config/boards/shields/flan36/flan36_right.overlay",
+      "sha256": "2c70dd8dc4662327dc46c51bb4f7619db42c59cc05d25d2bfe86f73a6cdd2a34"
+    },
+    {
+      "path": "firmware/config/flan36.conf",
+      "sha256": "a6d8843a884b5325fd3c4c402ad83972eb7218534578b8d26dfd9c23a714ad38"
+    },
+    {
+      "path": "firmware/config/flan36.keymap",
+      "sha256": "efe38e2eb0b396f35952181a4b4ddd499e07af897610d64473fae6aa205fddf0"
+    },
+    {
+      "path": "firmware/config/no-display.conf",
+      "sha256": "f29864d4f443c5450c372c3efef38c68d6aa4a4bded0a6c052b8992930075f4e"
+    },
+    {
+      "path": "firmware/config/west.yml",
+      "sha256": "aae151de061642bda17766f8ca848debc0a1403a17b30a2373b243efd572d96d"
+    }
+  ]
+}

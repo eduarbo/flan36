@@ -1000,7 +1000,7 @@
     },
     {
       "path": "tools/build_viewer_revI.py",
-      "sha256": "db7e72bfedee442a8fad46f6239553c6ba01de3330d4d1ec5226512079a6b671"
+      "sha256": "940df15cea31c1030c07566e3c9a7f2bdb6ed6df76b2dbadde920c6bd67ed2b9"
     },
     {
       "path": "tools/viewer_frame_selection.py",
@@ -1092,7 +1092,7 @@
     },
     {
       "path": "viewer/template.html",
-      "sha256": "e06afe4f7f2081b1b0985fbae9cf53b172a7c24537fb93135e89201f4048cda4"
+      "sha256": "38c85c556f352af11306a6f9f0ce9e861a713a9230edbd165e4809eb26c4f824"
     },
     {
       "path": "viewer/build.mjs",
@@ -1103,7 +1103,7 @@
       "sha256": "a62090e2bb0ab32205ff582bd3612ff167dc03d9db4c2b6879bb98f5bf25d550"
     }
   ],
-  "viewer_sha256": "ee53b251fa7d3ff59089eaad0c91ee9cb19c7412323aca1d4376d62c29e965cd",
+  "viewer_sha256": "8fecbb70846dcbfc8d281fc99f23afc3b82a2199d3a3d9827d0d0f97f8b68084",
   "measurements": {
     "bay_width_mm": 24,
     "plate_top_mm": 7.6,
@@ -1115,18 +1115,18 @@
     "cover_ahead_of_adjacent_cap_mm": 0
   },
   "offline": "docs/offline.html embeds geometry, scripts, styles, deferred print files and licenses. docs/index.html fetches only the hashed print payload on export.",
-  "offline_sha256": "4e15a81e06dfb3abb190ffe3b99e5244b7760f6ec51b88198b9604c3754cbff8",
+  "offline_sha256": "bb771acb3e663258515cd78fd1688478562f1a170c58aebf76ddd90743b72806",
   "printing": {
     "path": "docs/assets/printing-abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93.bin",
     "sha256": "abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93",
     "bytes": 7025718
   },
   "geometry_aliases": 18,
-  "online_bytes": 52701247,
-  "offline_bytes": 62068871,
+  "online_bytes": 52701316,
+  "offline_bytes": 62068940,
   "limitations": [
     "Commercial representations combine documented nominal dimensions, licensed community CAD and inferred package detail; see components/README.md",
-    "Unrouted PCB",
+    "Routed PCB candidate; physical electrical, connector and RF qualification pending",
     "Nominal lead-storage paths; actual terminations, insulation and finished-pack tolerances unverified",
     "PCB aperture 12.5 mm; both nominal cells fit. Magnetic force, print-in capture/temperature and physical fit need coupons",
     "Generic Choc v1 source model; purchased switch fit, keycap seating and travel unmeasured. Hot-swap sockets are registered to nominal PCB datums; purchased-part fit remains unqualified. Feet illustrative; nominal screws do not prove thread strength",

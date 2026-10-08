@@ -64,5 +64,5 @@ if __name__ == '__main__':
                                           *[r['command'][1] for r in results if len(r['command'])>1 and (ROOT/r['command'][1]).is_file()]} )])
     (OUT / 'checks.json').write_text(json.dumps(report, indent=2) + '\n')
     # An audit is not a green build merely because its JSON was written. The
-    # unrouted PCB remains a failure of the full fabrication acceptance gate.
+    # any failed electrical or viewer check remains a failure. Physical acceptance is separate.
     sys.exit(0 if all(item['exit_code'] == 0 for item in results) else 1)

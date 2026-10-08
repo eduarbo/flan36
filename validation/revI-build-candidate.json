@@ -1,0 +1,63 @@
+{
+  "source_baseline": "fe8c7fdc1b13b8eac6383c3315af8e749b1b8d4c",
+  "physical_acceptance": false,
+  "required_outcomes": {
+    "electrical_candidate": "verified",
+    "firmware": "verified",
+    "build_package": "local verified; public readback recorded separately",
+    "physical_acceptance": "pending actual supplied parts and assembled prototype"
+  },
+  "native_cad_unchanged": true,
+  "review_agreement": true,
+  "routing_independent_readback": {
+    "physical_pads_per_half": 247,
+    "edge_segments_per_half": 676,
+    "pth_holes_per_half": 91,
+    "npth_holes_per_half": 97,
+    "maximum_drill_serialization_error_mm": 0.0005,
+    "rules_unchanged": true,
+    "new_exclusions": 0
+  },
+  "evidence": [
+    {
+      "path": "validation/revI-routing.json",
+      "sha256": "9dca02628d5e94360d1198c0a00475c9948472d83e347b787a373e664389c6d7"
+    },
+    {
+      "path": "validation/revI-routing-negative.json",
+      "sha256": "1018d0f3ea64fa9da041bd536925977fa712e90288b21e64efbcf285f4a49851"
+    },
+    {
+      "path": "validation/revI-fabrication.json",
+      "sha256": "49b05fa52a69f634bc9ad074d60c8e20dfe3ec879f76de18532ce469be56e38b"
+    },
+    {
+      "path": "validation/revI-firmware.json",
+      "sha256": "380a3e5c8a3fd7a1b49b758a1cf2fe0eb568d160b31956fa8f6a0d076b516de2"
+    },
+    {
+      "path": "validation/revI-firmware-negative.json",
+      "sha256": "b83a730171e817f794dc02a16e22f1e9dd5cb16189ac1191624679867d832ac2"
+    },
+    {
+      "path": "mechanical/revI/Flan36.FCStd",
+      "sha256": "9901360f74052f3892c20c9b81e839aeec534747927e547d31bdb047c8481029"
+    },
+    {
+      "path": "validation/revI-viewer.json",
+      "sha256": "12f569ee1114e8d1412e9a61e0c5d1fafda1a5ce448639ed03a500247396f0b0"
+    },
+    {
+      "path": "validation/revI-build-scan-correction.json",
+      "sha256": "02f3247a61020dc7c5cca01876e406b60856d7acf39869ed371c9ae1542ce0a0"
+    }
+  ],
+  "reviewers": [
+    "/root/routed_candidate_readback",
+    "/root/firmware_final_domain",
+    "/root/firmware_final_risk"
+  ],
+  "viewer_geometry_printing_and_transforms_unchanged": true,
+  "viewer_level_smoke_passed": true,
+  "post_review_mechanical_correction": "validation/revI-build-scan-correction.json"
+}

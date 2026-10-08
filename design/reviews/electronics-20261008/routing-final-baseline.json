@@ -1,0 +1,54 @@
+{
+  "git_head": "fe8c7fdc1b13b8eac6383c3315af8e749b1b8d4c",
+  "git_status": " M README.md\n M docs/build.md\n M docs/cad.md\n M docs/index.html\n M docs/offline.html\n M docs/parts.md\n M docs/progress.md\n M hardware/revI/flan36-left.kicad_pcb\n M hardware/revI/flan36-left.kicad_sch\n M hardware/revI/flan36-right.kicad_pcb\n M hardware/revI/flan36-right.kicad_sch\n M tools/audit_current.py\n M viewer/template.html\n?? design/key-order.json\n?? design/pinmap.json\n?? design/reviews/electronics-20261008/\n?? docs/firmware.md\n?? docs/images/revI-routed-left.svg\n?? docs/images/revI-routed-right.svg\n?? docs/reviews/2026-10-08-build-continuation.md\n?? firmware/\n?? hardware/revI/fabrication/\n?? tools/build_firmware.sh\n?? tools/check_firmware.py\n?? tools/check_routed_pcb.py\n?? tools/complete_pcb_routes.py\n?? tools/export_fabrication.py\n?? tools/firmware_inputs.py\n?? tools/prepare_routing.py\n?? tools/remap_right_mcu.py\n?? validation/revI-fabrication.json\n?? validation/revI-firmware.json\n?? validation/revI-routing.json\n",
+  "files": [
+    {
+      "path": "hardware/revI/flan36-left.kicad_pcb",
+      "sha256": "38c58eb3590e2dbb3abae645d75c264904683427476dbf514bda69849b4431a8"
+    },
+    {
+      "path": "hardware/revI/flan36-left.kicad_sch",
+      "sha256": "9f992431dca90841329fb1d6099e1d8ca5f35487671626ae05d74da12859e08b"
+    },
+    {
+      "path": "hardware/revI/flan36-left.kicad_pro",
+      "sha256": "a9352cc6bb61091b0a61745ca0fd41fef3dd834f6e9f30e843a48bb2782a7511"
+    },
+    {
+      "path": "hardware/revI/flan36-right.kicad_pcb",
+      "sha256": "362f58bad47711258a11dfa2d7dcf165b7345b12d5144d3c7fa9b998b0288f43"
+    },
+    {
+      "path": "hardware/revI/flan36-right.kicad_sch",
+      "sha256": "17522642e1a1fd42eedd57e41d69bcaca3db6c4704ad92ece880b47c5cff8853"
+    },
+    {
+      "path": "hardware/revI/flan36-right.kicad_pro",
+      "sha256": "24a0c91fd299f8ec03704a672b3fff97d209da99ef8c6294daf80b3e619fead9"
+    },
+    {
+      "path": "tools/check_routed_pcb.py",
+      "sha256": "665c8d1b5a50d9cb4bbb8a4963aae8f84ff027f69adc132d3c7b92455b8f77a2"
+    },
+    {
+      "path": "tools/export_fabrication.py",
+      "sha256": "6fbdb80fe063698b898919f88e3addd4bd3f82cdf7f0056a524a900e2173d165"
+    },
+    {
+      "path": "design/pinmap.json",
+      "sha256": "0e1e32f41a33682463b168814515619ecf7e4f3d9a678db80e927fddbf997b0f"
+    },
+    {
+      "path": "design/layout.json",
+      "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+    },
+    {
+      "path": "validation/revI-routing.json",
+      "sha256": "9dca02628d5e94360d1198c0a00475c9948472d83e347b787a373e664389c6d7"
+    },
+    {
+      "path": "validation/revI-fabrication.json",
+      "sha256": "49b05fa52a69f634bc9ad074d60c8e20dfe3ec879f76de18532ce469be56e38b"
+    }
+  ]
+}

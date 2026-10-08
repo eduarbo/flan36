@@ -36,7 +36,7 @@ The local H3 support relief provides **0.25 mm nominal K30 socket clearance** on
 - `keycaps/variants/`: all 38 unchanged Choc-stem KLP files, including unqualified study variants.
 - `keycaps/catalog.json`: provenance, actual stem axes, convex envelopes and qualification.
 - `design/configurations/`: default and two sculpted preset examples.
-- `hardware/revI/`: two KiCad projects, schematic/PCB placement, local libraries and models; **unrouted**.
+- `hardware/revI/`: two routed KiCad projects, matching schematics, local libraries and models.
 - `docs/images/revI-*.png`: renders calculated from exported meshes.
 - Viewer: lighter online page, complete self-contained offline HTML, active-configuration GLB and JSON downloads. See the [viewer guide](viewer.md).
 
@@ -77,7 +77,7 @@ Browser checks need Playwright and its Chromium runtime; set `FLAN36_PLAYWRIGHT_
 
 To reconstruct the pre-R4 PCB without replacing existing work, use `python3 tools/build_revI_pcb.py --output build/lcd-curve/hardware` with a new empty destination and compare its two PCB files. The source remains the immutable revH placement. The approved R4 J2 translation is a separate guarded migration in `tools/update_approved_display_pcb.py`; its receipt records the final coordinates.
 
-For a fresh PCB reconstruction, run `python3 tools/build_revI_pcb.py` only when `hardware/revI/` does not exist. Run KiCad CLI DRC for both boards with JSON outputs at `build/revI/drc-left.json` and `drc-right.json`, then run `tools/check_revI_pcb.py` with KiCad Python. It checks the explicitly allowed footprint changes, preserved keys/nets and exact new outline, and writes the actual pad polygons. Then run `python tools/check_revI_outline.py` to measure every pad-to-edge clearance. Run these PCB checks before the final delivery check.
+For a fresh PCB reconstruction, run `python3 tools/build_revI_pcb.py` only when `hardware/revI/` does not exist. Run KiCad CLI DRC for both boards with JSON outputs at `build/revI/drc-left.json` and `drc-right.json`, then run `tools/check_revI_pcb.py` with KiCad Python on that historical unrouted reconstruction. Use `tools/check_routed_pcb.py` for the current routed boards. It checks the explicitly allowed footprint changes, preserved keys/nets and exact new outline, and writes the actual pad polygons. Then run `python tools/check_revI_outline.py` to measure every pad-to-edge clearance. Run these PCB checks before the final delivery check.
 
 The macOS helper uses an existing FreeCAD installation. It disables optional `flatmesh` only in its subprocess because that installed extension crashes on import; it does not modify application preferences. The helper defaults to offscreen Qt. Current checks use offscreen GUI support to preserve native appearance without showing a window. On other systems, run the scripts through the equivalent installed FreeCAD Python environment.
 
@@ -105,11 +105,11 @@ python3 tools/freecad/run_macos.py tools/freecad/check_stepup.py
 
 Then run `tools/check_stepup_readback.py` with KiCad’s Python. The StepUp harness exits its own GUI subprocess after saving because that runtime crashes during Qt teardown; independent KiCad readback is required. The test must change only the example opening edge, without altering key positions, pads, connectivity or the outer contour.
 
-`tools/sync_pcb_study.py` resets reference placement; it is not an automatic synchronizer for hand-edited designs. Never use it to discard routing. The current contour/DRC receipt is [revI-electrical.json](../validation/revI-electrical.json); the full schematic/netlist validation is retained as historical [revF-electrical.json](../validation/revF-electrical.json).
+`tools/sync_pcb_study.py` resets reference placement; it is not an automatic synchronizer for hand-edited designs. Never use it to discard routing. The current routed-board receipt is [revI-routing.json](../validation/revI-routing.json). The pre-routing contour receipt remains historical [revI-electrical.json](../validation/revI-electrical.json); the full schematic/netlist validation is retained as historical [revF-electrical.json](../validation/revF-electrical.json).
 
 ## Remaining hardware work
 
-The updated opening and rear lead notch must pass the configured 0.5 mm copper-to-edge rule. Both boards have **zero geometric DRC violations and 104 unconnected items each**. They remain unrouted; do not order them as finished PCBs.
+The routed boards pass the configured 0.5 mm copper-to-edge rule. Both have **zero DRC/ERC/parity violations and zero unconnected items**. The [prototype fabrication guide](electronics.md) explains the per-half GPIO map and remaining hardware acceptance.
 
 Exact cable terminals, sockets/contact lengths, magnetic retention, printed fits, keycap insertion, screw access with real tools, RF, charging and consumption still need verification. [Revision review](revI-review.md).
 

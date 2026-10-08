@@ -31,7 +31,7 @@ groups = {
     'tray':('Base', 'base', '#253639',0),
     'key-plate':('Plate', 'plate','#34494a',9),
     'electronics-lid':('Electronics cover','lid','#304d4e',72),
-    'pcb':('PCB · unrouted outline','pcb','#22664c',3),
+    'pcb':('PCB · routed prototype','pcb','#22664c',3),
     'diodes':('18 × SOD-123 diodes · underside','pcb','#34383b',3),
     'battery':('Battery · two profiles','battery','#b8c1bf',20),
     'mcu':('nice!nano v2 · nominal model','mcu','#1b433b',36),
@@ -225,7 +225,7 @@ scene['measurements']={'bay_width_mm':24,'plate_top_mm':7.6,'cover_top_mm':frame
                        'cover_ahead_of_adjacent_cap_mm':round(max(0,adjacent-hood_min),3)}
 for path in ['design/revI.json','design/layout.json','tools/build_viewer_revI.py','tools/viewer_frame_selection.py','design/frame-selection.json','design/frame-finishes.json','components/switches.json','components/sources.json','keycaps/catalog.json']:
     scene['sources'].append({'path':path,'sha256':digest(path)})
-scene['limits']=['Commercial representations combine documented nominal dimensions, licensed community CAD and inferred package detail; see components/README.md', 'Unrouted PCB',
+scene['limits']=['Commercial representations combine documented nominal dimensions, licensed community CAD and inferred package detail; see components/README.md', 'Routed PCB candidate; physical electrical, connector and RF qualification pending',
                  'Nominal lead-storage paths; actual terminations, insulation and finished-pack tolerances unverified', 'PCB aperture 12.5 mm; both nominal cells fit. Magnetic force, print-in capture/temperature and physical fit need coupons',
                  'Generic Choc v1 source model; purchased switch fit, keycap seating and travel unmeasured. Hot-swap sockets are registered to nominal PCB datums; purchased-part fit remains unqualified. Feet illustrative; nominal screws do not prove thread strength',
                  'Exploded positions are a viewing aid, not a validated extraction path']

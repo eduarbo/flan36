@@ -22,7 +22,7 @@ Flan36 is a low-profile wireless split keyboard in development by [Eduardo Ruiz]
 - **Free tools:** KiCad for electronics, FreeCAD for the case, StepUp for exchange. Editable source, STEP/STL, offline viewer and GLB included.
 - **Intended hardware:** Choc v1 hot-swap, two nice!nano controllers and two nice!view displays. One display remains the fallback.
 
-**Status: digital prototype, not ready to manufacture.** Both PCB studies have zero geometric DRC violations and 104 unconnected items each. Routing, exact connectors, printed retention, BLE and power consumption still require work. The visual model does not establish hardware compatibility.
+**Status: routed prototype; physical qualification pending.** Both PCBs pass DRC, schematic parity and ERC with no unconnected items. Three [ZMK firmware builds](docs/firmware.md) cover two displays or a left-only display. [Prototype fabrication files and verification](docs/electronics.md) are included. Exact connectors, printed retention, BLE, charging and measured power still need hardware tests.
 
 ![Measured rim and mirrored case halves](docs/images/revI-rim.png)
 
