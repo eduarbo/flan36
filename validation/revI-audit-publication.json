@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "source_commit": "e9fd5f26cb5f5364e0bc492d4d464d15d6a549b5",
+  "scope": "A1-A7 digital audit corrections and approved Hanafuda, published readback",
+  "digital_corrections_passed": true,
+  "completion_sha256": "3b32a9e3f3877ddbc3ecb18f4ad6b2bc5cf912a49f7ab8e99d0b6b30ced827c9",
+  "public_delivery": {
+    "additional_published_assets": {
+      "docs/offline.html": "4e15a81e06dfb3abb190ffe3b99e5244b7760f6ec51b88198b9604c3754cbff8",
+      "docs/assets/printing-abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93.bin": "abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93"
+    },
+    "source_commit": "e9fd5f26cb5f5364e0bc492d4d464d15d6a549b5",
+    "archive_files_verified": 1875,
+    "archive_sha256": "20cff642b47a7268a9872ff3f548a84f3ea5f5869bd759c9a387e6deaa1a3b7a",
+    "pages_url": "https://eduarbo.github.io/flan36/",
+    "pages_matches_committed_html": true,
+    "viewer_sha256": "ee53b251fa7d3ff59089eaad0c91ee9cb19c7412323aca1d4376d62c29e965cd",
+    "authenticated_requests": false,
+    "method": "All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer."
+  },
+  "public_browser": {
+    "commit": "e9fd5f26cb5f5364e0bc492d4d464d15d6a549b5",
+    "public_scene_matches_local": true,
+    "online_and_offline_byte_exact": true,
+    "only_six_approved_frame_cards": true,
+    "talavera_default": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "published_images": {
+    "source_commit": "e9fd5f26cb5f5364e0bc492d4d464d15d6a549b5",
+    "passed": true,
+    "images": [
+      {
+        "path": "docs/images/revI-assembled.png",
+        "sha256": "e410527ac7f1cdf384d440065548e1ad9595dbb45c67cd0971bed84ddfb303b4"
+      },
+      {
+        "path": "docs/images/revI-top.png",
+        "sha256": "93daaeb10dfb4466520667db0a6938955f1f23e111ea2ff63bad3e2831e71f6b"
+      },
+      {
+        "path": "docs/images/revI-side.png",
+        "sha256": "82a4691d53127b5b3c590affc9f96792d0798ab7d51ae49b30e0e7d5b8e7f6e3"
+      },
+      {
+        "path": "docs/images/revI-stack.png",
+        "sha256": "b8ccc027d8e35febde70828884bbe18d96188c6271e585750681ae6d15693059"
+      },
+      {
+        "path": "docs/images/revI-detail.png",
+        "sha256": "f6d7023ce151fa59b8b5e278808b015cf6d2c8da764c2b591627e24986d29b60"
+      },
+      {
+        "path": "docs/images/revI-corner.png",
+        "sha256": "891e37be579682c1cea1fde708352cba94758735f4a3eaca709a625a1a58e323"
+      },
+      {
+        "path": "docs/images/revI-level.png",
+        "sha256": "e125ca9fe1d294744d527ae71582140ecc23eca12706011f8720a03459ffe489"
+      },
+      {
+        "path": "docs/images/revI-frame-gallery.png",
+        "sha256": "687846269fdf5f0dc60a3dd557989984684ce301438f50cc78a47abf84255b0a"
+      },
+      {
+        "path": "docs/images/revI-case-level.png",
+        "sha256": "ff607a9cb640e87de7f8d771387e493ab03c07360a474f9926c0516cc3ad753e"
+      },
+      {
+        "path": "docs/images/revI-case-solid.png",
+        "sha256": "f20a213fbb5344bc58e1c79e02206220a75cbf0ecf98a5fbf11b9236940ce47b"
+      },
+      {
+        "path": "docs/images/revI-case-rim.png",
+        "sha256": "ddb59ba18903c39a554f1aa5a43d8a9a791a40d21aacbd04539d7d23a9c96b19"
+      },
+      {
+        "path": "docs/images/revI-case-rim-open.png",
+        "sha256": "f471e6f19737f93de9eb32ba05ab6a503f844d82fba0b431f0f7dda6788eb32b"
+      },
+      {
+        "path": "docs/images/revI-case-terrace.png",
+        "sha256": "7b88212bb3491093f9786dbed8aa7430e1ff812cae523d02129c107fe48bbccf"
+      }
+    ]
+  },
+  "local_browser": {
+    "viewer_sha256": "4e15a81e06dfb3abb190ffe3b99e5244b7760f6ec51b88198b9604c3754cbff8",
+    "checker_sha256": "314981bdeab4748eb82fefe216e0713dca86b49fa78a2ef1fc6b8d32ca9313a3",
+    "about_measurements_match_model": true,
+    "browser": "149.0.7827.55",
+    "desktop": true,
+    "narrow_viewport_emulation": true,
+    "physical_phone_tested": false,
+    "public_embedded_scene_matches_current": false,
+    "all_12_layer_filters": true,
+    "individual_visibility": true,
+    "individual_and_group_solo": true,
+    "show_all_recovery": true,
+    "occluded_hover_xray_pixel_verified": true,
+    "persistent_view_controls": true,
+    "fit_actual_pixels_after_zoom": true,
+    "fit_empty_feedback": true,
+    "full_row_hover": true,
+    "half_filters": true,
+    "orbit_drag": true,
+    "bottom_view": true,
+    "full_reset_pixel_identical": true,
+    "persistent_component_directory": true,
+    "sidebar_line_endpoints": true,
+    "directory_visible_during_scroll_and_collapse": true,
+    "keyboard_component_selection": true,
+    "direct_canvas_picking": true,
+    "labels_follow_camera": true,
+    "frame_change_preserves_hidden_cover": true,
+    "annotation_toggle": true,
+    "orbit_does_not_select": true,
+    "touch_orbit_and_pinch_do_not_select": true,
+    "small_320px_viewport": true,
+    "approved_preview_cards": 6,
+    "multicolor_glb_roles": true,
+    "one_click_frames": true,
+    "keyboard_frame_activation": true,
+    "mixed_style_and_color_state": true,
+    "theme_applies_palette_and_body_overrides_roundtrip": true,
+    "sidebar_hover_highlight": true,
+    "sidebar_opens_frame_explorer": true,
+    "touch_frame_cards_and_sidebar": true,
+    "hidden_layer_links_removed": true,
+    "highlight_excluded_from_glb": true,
+    "dual_battery_selection_and_exact_glb": true,
+    "captive_frame_pins_preserved": true,
+    "keycap_variant_selection": true,
+    "frame_style_and_color": true,
+    "distinct_themed_geometries": 6,
+    "json_roundtrip": true,
+    "invalid_combination_rejected": true,
+    "glb_matches_custom_configuration": true,
+    "glb_selected_vertices_exact": true,
+    "glb_objects": 220,
+    "glb_keycaps": 36,
+    "glb_units": "metres",
+    "case_variants": 4,
+    "case_previews_distinct": true,
+    "case_glb_meshes_exact": true,
+    "open_cover_configuration": true,
+    "legacy_case_default": true,
+    "runtime_errors": [],
+    "offline_network_requests": 0
+  },
+  "customization": {
+    "checker_sha256": "7fe855a2d20e65beb20e69a1b395edba458db0fa80d3c50e53f6469cd4d9c1c0",
+    "viewer_sha256": "4e15a81e06dfb3abb190ffe3b99e5244b7760f6ec51b88198b9604c3754cbff8",
+    "themes": 28,
+    "preview_images_distinct": 28,
+    "linked_colors_bidirectional": true,
+    "mixed_halves": true,
+    "preserve_shapes_cover_and_keycap_geometry": true,
+    "global_keycap_colors": true,
+    "json_and_reload_roundtrip": true,
+    "invalid_import_atomic": true,
+    "storage_failure_recoverable": true,
+    "keyboard_and_reduced_motion": true,
+    "mobile_widths": [
+      390,
+      320
+    ],
+    "individual_selection_ignored_by_printkit": true,
+    "custom_case_and_four_frame_colors_in_glb": true,
+    "new_frame_print_kits": [
+      "talavera",
+      "gameboy",
+      "snes",
+      "phone",
+      "ipod",
+      "hanafuda"
+    ],
+    "runtime_errors": []
+  },
+  "isolated_desktop_loading": {
+    "baseline_commit": "4d17638357f200a53fe4d6baddc9753209019ca6",
+    "browser": "149.0.7827.55",
+    "viewport": [
+      1280,
+      900
+    ],
+    "cpu_throttle": 1,
+    "method": "Three fresh isolated contexts per mode, interleaved; localhost identical server; readiness and JS heap at readiness; no forced GC, no remote-network or physical-phone claim.",
+    "samples": {
+      "baseline": [
+        {
+          "ready_ms": 3172,
+          "heap_used_bytes": 446010908
+        },
+        {
+          "ready_ms": 3016,
+          "heap_used_bytes": 447405396
+        },
+        {
+          "ready_ms": 2963,
+          "heap_used_bytes": 447108416
+        }
+      ],
+      "online": [
+        {
+          "ready_ms": 529,
+          "heap_used_bytes": 104939728
+        },
+        {
+          "ready_ms": 518,
+          "heap_used_bytes": 105788268
+        },
+        {
+          "ready_ms": 519,
+          "heap_used_bytes": 105824788
+        }
+      ],
+      "offline": [
+        {
+          "ready_ms": 540,
+          "heap_used_bytes": 105808048
+        },
+        {
+          "ready_ms": 534,
+          "heap_used_bytes": 106105684
+        },
+        {
+          "ready_ms": 533,
+          "heap_used_bytes": 105895192
+        }
+      ]
+    },
+    "summary": {
+      "baseline": {
+        "html_bytes": 67040759,
+        "sha256": "c9012c6ef63e146ace353e753d9c4c187fb2ff1ac2afb417cee4bab9adbc5a58",
+        "median_ready_ms": 3016,
+        "median_heap_used_bytes": 447108416
+      },
+      "online": {
+        "html_bytes": 52701247,
+        "sha256": "ee53b251fa7d3ff59089eaad0c91ee9cb19c7412323aca1d4376d62c29e965cd",
+        "median_ready_ms": 519,
+        "median_heap_used_bytes": 105788268
+      },
+      "offline": {
+        "html_bytes": 62068871,
+        "sha256": "4e15a81e06dfb3abb190ffe3b99e5244b7760f6ec51b88198b9604c3754cbff8",
+        "median_ready_ms": 534,
+        "median_heap_used_bytes": 105895192
+      }
+    }
+  },
+  "assets": {
+    "local_missing_targets": [],
+    "modified_pinned_sources": [],
+    "public_bom_urls_checked": 50,
+    "unresolved_head_responses": [
+      {
+        "url": "https://static6.arrow.com/aropdfconversion/2e225be7d9212620894362dafa7ce735623fe9ca/315-43-112-41-003000.pdf",
+        "error": "The read operation timed out"
+      },
+      {
+        "url": "https://www.ckswitches.com/media/1424/pcm.pdf",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ]
+  },
+  "secret_scan": {
+    "initial_findings": 6,
+    "verified_artifact_digest_false_positives": 6,
+    "resolution": "Lossless explicit path/SHA256 record serialization",
+    "normal_push_hook": "Passed with zero findings",
+    "security_policy_unchanged": true
+  },
+  "full_fabrication_audit_passed": false,
+  "physical_acceptance": false,
+  "remaining": [
+    "PCB routing and schematic parity",
+    "Integrated firmware",
+    "Purchased component tolerances and physical fit, retention, electrical operation"
+  ]
+}

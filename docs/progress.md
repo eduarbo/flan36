@@ -16,6 +16,8 @@
 
 The current assembly adds the approved Hanafuda frame, repairs display/frame parameter dependencies and case USB access, and includes all 36 diodes and hot-swap sockets. Current delivery evidence and remaining prototype limits are recorded in the [audit correction report](reviews/2026-10-07-corrections.md).
 
+Publication verified: **1,875 source files**, the online/offline viewer, print resources and thirteen rendered images match the tested source. The public viewer preserves the camera through case/frame changes and exports the selected configuration and exact STL kit. [Publication evidence](../validation/revI-audit-publication.json). PCB routing, integrated firmware and physical acceptance remain open.
+
 The entries below retain their original historical snapshots.
 
 ## Revision I — readable right-hand artwork
