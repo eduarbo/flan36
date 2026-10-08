@@ -1,0 +1,115 @@
+{
+  "snapshot_head": "b3e44990d9272327fef042439f1a6555eaae8c4f",
+  "inputs": [
+    {
+      "path": "tools/freecad/install_socket_clearance.py",
+      "sha256": "3f30445d936dd183febcb54a81b2cf40f9fc9a8e031043ec8aff7c9686762b82"
+    },
+    {
+      "path": "tools/freecad/check_audit_delivery.py",
+      "sha256": "61253e5e192d4b42facf6f529e1e90923a55252fafd1dc5e019da23d7c875661"
+    },
+    {
+      "path": "tools/freecad/export_revI.py",
+      "sha256": "80d9803ce3b970257c4763cd79add08e48ac03885af94baf7dadedd09d3726d5"
+    },
+    {
+      "path": "tools/freecad/export_hotswap_visual.py",
+      "sha256": "00cbf48be6eeb0a092263a1aa74f86d0d2823cee83e2bab5867eee70fae452eb"
+    },
+    {
+      "path": "tools/adopt_audit_repairs.py",
+      "sha256": "ef65c1ffda38b1cec9a3065587b607186bd85ce1468472d4462b3bfd927e8568"
+    },
+    {
+      "path": "tools/check_audit_adoption.py",
+      "sha256": "572bf9cd40e6359ca437666a2bcf0d148a86bd4dcbdefb05f358498c3f562165"
+    },
+    {
+      "path": "tools/record_audit_completion.py",
+      "sha256": "3f1c2d69493794f657ebb2457e6e5b09c50a645d17e8b4884c98b033bda46b37"
+    },
+    {
+      "path": "tools/freecad/hotswap_geometry.py",
+      "sha256": "00992f0d5e56c77f84a222ccb3a80092d04da5f77715d42ef9689760a7437931"
+    },
+    {
+      "path": "design/reviews/audit-fixes-20261007/socket-clearance/disposition.json",
+      "sha256": "817a9ff6dadd9219b06ac354e9c9d8bea09fea94113804dbc81734065bd6ab60"
+    },
+    {
+      "path": "build/audit-fixes-20261007/clearance/Flan36.FCStd",
+      "sha256": "9901360f74052f3892c20c9b81e839aeec534747927e547d31bdb047c8481029"
+    },
+    {
+      "path": "build/audit-fixes-20261007/clearance/relief.json",
+      "sha256": "e744e61fa216531b006294de50c1b12045ef8f6c8b0681f6be2749f810958f16"
+    },
+    {
+      "path": "build/audit-fixes-20261007/clearance/delivery.json",
+      "sha256": "c58eb59abee7cfc3797f2eeed5fb88df25f3f47ff6dc46b58eb55e084f97ec74"
+    },
+    {
+      "path": "build/audit-fixes-20261007/clearance/hotswap.json",
+      "sha256": "9beba548066886bf0f4e5e1af4f4884c84b96794e1f360d97109849e1960e3b0"
+    },
+    {
+      "path": "build/audit-fixes-20261007/final/hotswap.json",
+      "sha256": "f44e241a40221c53f0781c6526c32bfcbd6a7d22981930ff1a953171e52c8c23"
+    },
+    {
+      "path": "docs/reviews/2026-10-07-corrections.md",
+      "sha256": "ca22e8a0694b7747b25f183053bd717882c8acc0b9caa48b72248917dc59868a"
+    }
+  ],
+  "read_only_inputs_unchanged_after_round_one": true,
+  "scope": "Digital audit corrections A1-A7 and approved Hanafuda; no fabrication or physical acceptance",
+  "reviewers": {
+    "domain_constructive": {
+      "recommendation": "Accept local H3 geometry and source lineage; promotion remains conditional on fresh export, native configuration, browser, renders and public readback.",
+      "finding": "MEDIUM: completion must validate adoption passed/native/adopter hashes and current render evidence rather than only include receipt hashes.",
+      "confidence": "High for local relief and lineage; moderate for integral delivery until pending checks finish."
+    },
+    "adversarial_risk": {
+      "recommendation": "Continue digital delivery after pending tests and stale-render gate correction.",
+      "finding": "MEDIUM: render receipts were added without validating sources, renderer or output image hashes.",
+      "confidence": "High static consistency and lineage; moderate saved-geometry assessment without independent CAD recalculation."
+    }
+  },
+  "consensus": "Both accept reviewed local geometry and lineage; completion requires correcting stale-evidence gates and passing remaining acceptance checks.",
+  "finding_disposition": "Resolved in one focal second round; pending actual delivery tests remain mandatory.",
+  "physical_acceptance": false,
+  "focal_round": {
+    "snapshot_sha256": "89977c644328f4e93386070813beb51b545a4b27e332ca58bf14f956fc29442e",
+    "inputs": [
+      {
+        "path": "tools/record_audit_completion.py",
+        "sha256": "a75ab2d25dee862c0b613080ce596b0c34fc9bd4d2c613978a189abd09090368"
+      },
+      {
+        "path": "tools/check_audit_completion.py",
+        "sha256": "836e42d6e1330c865f59e0af207ae84c798e40c52d6d63c9dfe24d567cf14a12"
+      },
+      {
+        "path": "tools/render_revI.py",
+        "sha256": "74efa8c9f2cc954a854d7d4a461200a279f2e6efc8e0cc66f25acbfd9422e0db"
+      },
+      {
+        "path": "tools/render_frames.py",
+        "sha256": "21cb1a6b7b2a5cdbad03bd5de6cecac2aea06317aff3273d13b46abd3018d5b1"
+      },
+      {
+        "path": "tools/adopt_audit_repairs.py",
+        "sha256": "ef65c1ffda38b1cec9a3065587b607186bd85ce1468472d4462b3bfd927e8568"
+      },
+      {
+        "path": "design/reviews/audit-fixes-20261007/delivery/review.json",
+        "sha256": "a98783c72e0d83719da4095f30642cc92a0b83431b9d4b1e051a1e28d7b4ed4c"
+      }
+    ],
+    "inputs_unchanged": true,
+    "both_recommendations": "GO conditional on pending actual acceptance and public readback; no remaining material objection to completion evidence gate.",
+    "controls": "One valid receipt and 23 stale/tampered evidence cases passed independently by both reviewers.",
+    "finding_disposition": "MEDIUM resolved: explicit current adoption and render source/output inventories and hashes enforced."
+  }
+}

@@ -34,12 +34,12 @@ def run(css):
     cards=''
     for key in keys:
         s=master['styles'][key]
-        state='In the current assembly' if s.get('integration')=='INSTALLED' else 'Selected · integration pending'
+        state='In the current assembly' if key in selection['viewer']['installed_styles'] else 'Selected · integration pending'
         cards+=f'<article id="{key}" data-state="selected">{preview(key)}<div class="status">{state}</div><h2>{html.escape(s["label"])}</h2>{palette(s)}{links(key)}</article>'
     page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Selected frames · Flan36</title><style>{css}</style></head><body><main>
 <a class="back" href="../">← 3D explorer</a><header><div class="status">Six selected designs</div><h1>Your frame collection.</h1><p>Talavera, Game Boy, SNES, Phone, iPod and Hanafuda. The approved artwork and palettes stay exactly as selected.</p></header>
 <section aria-label="Selected designs"><div class="grid">{cards}</div></section>
-<section class="notes"><h2>Exact artwork, editable geometry.</h2><p>The previews use the approved millimetre paths and HEX colors. The frame face stays at Z13.59 mm, with a uniform 2.40 mm screen bezel and the current 13.90 × 30.50 mm opening.</p><nav><a href="{base}frame-selection.json">Selection record</a></nav><details><summary>Printing and integration</summary><p>The design targets a 0.4 mm nozzle and 0.2 mm layers. Features, bonding and physical fit still need slicing and a sample print. No decoration rises above the frame face. The LCD content in the previews is illustrative.</p><p>Hanafuda still awaits production integration. The main keyboard assembly and explorer remain unchanged by this selection update.</p></details></section>
+<section class="notes"><h2>Exact artwork, editable geometry.</h2><p>The previews use the approved millimetre paths and HEX colors. The frame face stays at Z13.59 mm, with a uniform 2.40 mm screen bezel and the current 13.90 × 30.50 mm opening.</p><nav><a href="{base}frame-selection.json">Selection record</a></nav><details><summary>Printing and integration</summary><p>The design targets a 0.4 mm nozzle and 0.2 mm layers. Features, bonding and physical fit still need slicing and a sample print. No decoration rises above the frame face. The LCD content in the previews is illustrative.</p><p>All six designs are integrated into the native assembly, main explorer and registered print kit. The frozen proposal files remain the approval reference.</p></details></section>
 </main></body></html>'''
     (OUT/'index.html').write_text(page)
     print('Built gallery: six selected designs, no pending proposals')

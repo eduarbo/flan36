@@ -1,0 +1,13 @@
+{
+  "review_snapshot": "build/audit-fixes-20261007/socket-baseline.json",
+  "consensus": "Proceed with source-pinned nominal registration using both NPTH axes and metal contact plane, preserving PCB placements.",
+  "disagreements": [],
+  "post_review_artifact_changes": [],
+  "conditions": {
+    "contact_plane": "Complete source probe finds four coplanar upper faces on two terminals; all four fall within the two actual SMD pad rectangles. Nominal bottom 1.95 mm.",
+    "coverage": "Root probe covers all 36 sockets against all current native PartID solids: zero intersections on either half, including PCB and diodes. Final saved native and actual KiCad STEP readback still required before adoption."
+  },
+  "physical_acceptance": false,
+  "archived_snapshot": "design/reviews/audit-fixes-20261007/socket/baseline.json",
+  "archived_probe": "design/reviews/audit-fixes-20261007/socket/source-probe.json"
+}

@@ -1,0 +1,46 @@
+{
+  "snapshot_sha256": "47900d03bc2e6458e32610b09a9945f2ff71ab86d972fa8ebe557fff54c034be",
+  "inputs": [
+    {
+      "path": "tools/audit_receipt_format.py",
+      "sha256": "84698561319d1610898081034689933d1d3315ae04c65b41abcfbdc48ff63b5a"
+    },
+    {
+      "path": "tools/check_audit_receipt_format.py",
+      "sha256": "ee0dde9d1f7f8e73298f3ad661d65f35abf9f2e2db11e4b9217851de271cea53"
+    },
+    {
+      "path": "tools/record_audit_completion.py",
+      "sha256": "96b83b8f0d9a04deaff9266a931e11fd50e043c6dda338e90fdcaff02bb5611d"
+    },
+    {
+      "path": "tools/check_audit_completion.py",
+      "sha256": "836e42d6e1330c865f59e0af207ae84c798e40c52d6d63c9dfe24d567cf14a12"
+    },
+    {
+      "path": "validation/revI-audit-delivery.json",
+      "sha256": "c58eb59abee7cfc3797f2eeed5fb88df25f3f47ff6dc46b58eb55e084f97ec74"
+    },
+    {
+      "path": "validation/revI-mechanical.json",
+      "sha256": "a12ac5102bd8c904d20b7b3b6945eb214271eb529879c5509ab0aeb392170548"
+    },
+    {
+      "path": ".gitleaks.toml",
+      "sha256": "17c32f4384ea64d08855873a72b83b3f135f52d03ec3ccfc760a41423048b5e7"
+    }
+  ],
+  "read_only_inputs_unchanged": true,
+  "both_recommendations": "Apply exact lossless format, regenerate completion, amend only own unpublished commit and retry normal unchanged hook; no remaining material objection.",
+  "independent_actual_report_roundtrips": {
+    "revI-audit-delivery.json": 14,
+    "revI-mechanical.json": 448
+  },
+  "independent_controls": {
+    "receipt_format": 41,
+    "completion": 24
+  },
+  "security_policy_unchanged": true,
+  "remaining_condition": "Real application and hook/public readback must pass.",
+  "physical_acceptance": false
+}

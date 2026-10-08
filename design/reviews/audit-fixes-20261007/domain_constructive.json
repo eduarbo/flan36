@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "task_id": "flan36-audit-fix-domain-constructive-20261007",
+  "role": "domain_constructive",
+  "run_id": "flan36-fixes-domain_constructive-20261007",
+  "provider": "codex-app-subagent",
+  "status": "completed",
+  "role_assignment_sha256": "33b96ee97f15864b028f3a1d6bbc88f390ce3aa47977a352405600ef6ed3fdcb",
+  "summary": "PASS for bounded, native source-preserving A1–A7 repairs subject to stated acceptance. Static review completed; implementation and runtime acceptance belong to root and remain unverified. Preserve approved reference artwork, handed structural geometry and historical receipts. Hanafuda remains a separate approved-but-pending integration. Digital repairs do not establish electrical, firmware or physical product completion.",
+  "findings": [
+    {
+      "code": "SNAPSHOT_AND_CONFIDENCE",
+      "claim": "Reviewed the enumerated snapshot recorded as clean commit b3e44990d9272327fef042439f1a6555eaae8c4f. Confidence: high for A1–A4/A6 source diagnoses; medium for exact diode installation and presentation details.",
+      "evidence": [
+        "build/audit-fixes-20261007/baseline.json records commit, status and artifact hashes.",
+        "Only enumerated artifacts were read; no mutations, tests, product execution, network effects or subdelegation occurred.",
+        "Native geometry, PCB files and presentation assets were outside this review's readable scope. Different current hashes, geometry or package identity would require renewed comparison."
+      ]
+    },
+    {
+      "code": "A1_SHARED_DISPLAY_DATUM",
+      "claim": "Bind display mating members and clearance tools to one DisplayShiftY delta, preserving separate PCB-fixed socket Z and DisplayBottom-relative removable-member Z.",
+      "evidence": [
+        "level_stack.py:183–226 binds visuals/window Y but leaves socket, spacer, contacts, solder, relief and service-well Y fixed.",
+        "Retain install_display_seam.py:40 corrected window expression using -46.55 mm; native sled and drill dependencies already exist in build_revI.py.",
+        "Acceptance: both halves, DisplayShiftY 2.4→3.4 produces -1 mm Y movement throughout the chain, unchanged relative mating positions and intended Z, no glass collision, and successful save/reopen. KiCad footprints/nets/tracks remain unchanged.",
+        "An intentionally fixed service region requires explicit datum evidence before exclusion."
+      ]
+    },
+    {
+      "code": "A2_NATIVE_MATERIAL_PARTITION",
+      "claim": "Keep approved paths fixed in case XY; intersect color volumes with the current structural blank through native Boolean dependencies before subtracting their union from the body.",
+      "evidence": [
+        "approved_frames.py:89–130 uses fixed apertures and directly fuses color extrusions; flush_frames.py supplies native Common/Cut patterns.",
+        "Acceptance: both halves/all supported active styles, reference and edited states: bidirectional blank/union difference below 1e-5 mm³, disjoint interiors, connected structural body, closed meshes and no glass intersection.",
+        "Reference top regions must match frozen approval within 0.002 mm². Edited regions must match explicitly clipped reference artwork, recording clipping/body-colored fill.",
+        "Export-only clipping or replacing the union with the blank conceals native defects. If motifs must remain intact, reject incompatible edits."
+      ]
+    },
+    {
+      "code": "A3_ZONE_SPECIFIC_Z_INVARIANTS",
+      "claim": "Make ordinary inlay floors roof-relative; verify actual backing. Preserve distinct collar/header-cover construction and derive moving zones from actual relief/service geometry.",
+      "evidence": [
+        "approved_frames.py:115–121 fixes floors while extrusion height grows; its validator hardcodes roof 13.59 and fixed floors.",
+        "export_revI.py distinguishes ordinary backing 1.0 mm, through-color collar 0.865 mm and header cover 0.4 mm.",
+        "Acceptance: FrameTop 13.59→13.99 retains ordinary depth 0.4 mm and actual backing at least 0.8 mm using section or lower-face probes; baseline zone solids remain unchanged.",
+        "Test collar/cover interfaces separately, including moved display zones. Through-color collar floor should follow the actual relief ceiling; a blanket backing rule would alter approved construction.",
+        "Reject incompatible edits. Native sections establishing different approved relationships would change collar/cover formulas."
+      ]
+    },
+    {
+      "code": "A4_USB_CORRIDOR_ALL_VARIANTS",
+      "claim": "Apply the smallest local native cut clearing the existing nominal USB corridor, and check every base, plate and frame on both halves.",
+      "evidence": [
+        "export_revI.py checks its 12×20×5 mm corridor only against frames; the audit reports 3.120 mm³ interference in every base at Z6.10–6.30.",
+        "Reuse shared tray construction where appropriate, while checking added variant geometry.",
+        "Acceptance: corridor intersections below established tolerance, single-solid cases, closed meshes and all geometry changes confined to the intended access region; mounts remain unchanged.",
+        "If MCU movement is supported, corridor and cut must follow its datum. Purchased-cable geometry may require later clearance changes; nominal repair does not qualify every cable."
+      ]
+    },
+    {
+      "code": "A5_DIODE_COVERAGE_AND_REGISTRATION",
+      "claim": "Install 36 pinned SOD-123 instances using current footprint references, poses and B.Cu layers; add calibrated native/PCB registration and collision coverage.",
+      "evidence": [
+        "sources.json pins D_SOD-123.step; export_pcb_components.py has calibrated bottom transforms but omits diodes.",
+        "sync_pcb_study.py resets historical revF placement/connectivity and clears models; do not use it for this repair.",
+        "Acceptance: exactly 18 expected unique refs per half, verified source hash, closed geometry, actual KiCad STEP/native registration and unchanged electrical/footprint state except intended model references.",
+        "Check PCB, every base, sockets and access; report minimum floor clearance and collisions.",
+        "Unqualified hot-swap registration leaves that comparison unresolved. Package mismatch, hash failure, registration differences or collisions change the recommendation."
+      ]
+    },
+    {
+      "code": "A6_CURRENT_EXECUTABLE_ACCEPTANCE",
+      "claim": "Repair stale assertions, add meaningful parameter/save-reopen coverage and make the aggregate audit fail when required children fail.",
+      "evidence": [
+        "check_revI.py assumes legacy Level, battery Z2 and validates edited frames mainly by ZMax; current contracts are legacy Solid and battery Z1.4.",
+        "The audit records retired HEX selector handheld and stale roof expectations. audit_parameters.py probes only left Talavera; audit_current.py records failures without a failing aggregate exit.",
+        "Acceptance: current Game Boy/current roof expectations, independent legacy normalization and battery assertions, mixed roundtrip, negative inputs, both-half/style edit coverage and one combined edit.",
+        "Validate geometry invariants after save/reopen and restoration. Inject a failing child to verify aggregate failure; retain unrouted findings and historical receipts."
+      ]
+    },
+    {
+      "code": "A7_PRESENTATION_AND_HISTORY",
+      "claim": "Align current dimensions, macro-visible naming/export defaults and hero to Flan36/Talavera; preserve historical identifiers and collections.",
+      "evidence": [
+        "The audit identifies stale roof/margin, Filo36 dialogs and retired Flan hero; docs/freecad.md states current 1.4 mm roof and 0.10 mm margin.",
+        "Acceptance: source-matched dimensions, inspected current imagery, correct current labels and working macro export/roundtrip without indiscriminate legacy renaming.",
+        "approved-viewer-selection.md identifies five active designs and Hanafuda pending integration. No Hanafuda geometry/approval artifacts were reviewed; its integration requires a separate supported decision."
+      ]
+    }
+  ],
+  "recommendations": [
+    "Proceed with preserved-candidate native repairs and execute each finding's acceptance before replacing reference artifacts.",
+    "Close findings individually with current input hashes and measured results; any unresolved required repair keeps A1–A7 partial.",
+    "Keep routing, integrated firmware, purchased-part fit and physical qualification distinct from digital repair acceptance."
+  ],
+  "validations": [
+    {
+      "name": "Enumerated static source review",
+      "status": "passed"
+    },
+    {
+      "name": "Independent recommendation and falsifiable acceptance criteria",
+      "status": "passed"
+    }
+  ],
+  "defects": [
+    {
+      "severity": "MEDIUM",
+      "code": "A1_SHARED_DISPLAY_DATUM"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A2_NATIVE_MATERIAL_PARTITION"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A3_ZONE_SPECIFIC_Z_INVARIANTS"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A4_USB_CORRIDOR_ALL_VARIANTS"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A5_DIODE_COVERAGE_AND_REGISTRATION"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A6_CURRENT_EXECUTABLE_ACCEPTANCE"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A7_PRESENTATION_AND_HISTORY"
+    }
+  ],
+  "blockers": [],
+  "changed_paths": [],
+  "next_actor": "personal-ops"
+}

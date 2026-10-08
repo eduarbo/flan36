@@ -14,7 +14,7 @@ for name,labels in [('choc-body',['Upper_Housing','Lower_Housing','Pin_1','Pin_2
  records[name]=entries
 A.closeDocument(d.Name)
 # Preserve the socket source in its own coordinate frame for inspection; do not
-# invent an assembly transform until pad datums and the floor clearance are checked.
-d=A.openDocument(str(ROOT/'components/sources/SW_Hotswap_Kailh_Choc_v1.FCStd'));o=d.getObject('Feature');s=o.Shape;p=OUT/'component-choc-socket.stl';MeshPart.meshFromShape(Shape=s,LinearDeflection=.06,AngularDeflection=.2,Relative=False).write(str(p));records['socket_source']={'path':str(p.relative_to(ROOT)),'bounds_mm':[getattr(s.BoundBox,k) for k in ['XMin','YMin','ZMin','XMax','YMax','ZMax']],'status':'Source coordinates only; assembly placement unqualified'}
+# modify source coordinates here; hotswap_geometry.py owns the verified assembly datum.
+d=A.openDocument(str(ROOT/'components/sources/SW_Hotswap_Kailh_Choc_v1.FCStd'));o=d.getObject('Feature');s=o.Shape;p=OUT/'component-choc-socket.stl';MeshPart.meshFromShape(Shape=s,LinearDeflection=.06,AngularDeflection=.2,Relative=False).write(str(p));records['socket_source']={'path':str(p.relative_to(ROOT)),'bounds_mm':[getattr(s.BoundBox,k) for k in ['XMin','YMin','ZMin','XMax','YMax','ZMax']],'status':'Source coordinates preserved for inspection; nominal assembly registration uses both mounting bores and both solder terminals. See validation/revI-hotswap-registration.json. Physical fit remains unqualified.','registration_recipe':'tools/freecad/hotswap_geometry.py'}
 (ROOT/'components/switches.json').write_text(json.dumps(records,indent=2)+'\n');A.closeDocument(d.Name)
 if os.environ.get('FILO_FREECAD_SUBPROCESS')=='1':os._exit(0)

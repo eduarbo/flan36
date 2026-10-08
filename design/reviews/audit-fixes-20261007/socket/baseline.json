@@ -1,0 +1,50 @@
+{
+  "head": "b3e44990d9272327fef042439f1a6555eaae8c4f",
+  "status": " M README.md\n M components/README.md\n M design/approved-viewer-selection.md\n M design/configurations/default.json\n M design/frame-finishes.json\n M design/frame-selection.json\n M design/themes.json\n M docs/customize.md\n M docs/frames-extra.md\n M docs/freecad.md\n M docs/themes-printing.md\n M hardware/revI/flan36-left.kicad_pcb\n M hardware/revI/flan36-right.kicad_pcb\n M keycaps/catalog.json\n M tools/audit_current.py\n M tools/build_frame_review_r8.py\n M tools/build_viewer_revI.py\n M tools/freecad/Configure.FCMacro\n M tools/freecad/approved_frames.py\n M tools/freecad/check_revI.py\n M tools/freecad/export_revI.py\n M tools/render_frames.py\n M tools/render_revI.py\n M viewer/frame-collection-check.cjs\n M viewer/hex-check.cjs\n M viewer/level-check.cjs\n?? design/reviews/audit-fixes-20261007/\n?? hardware/revI/models/diode-sod123.step\n?? tools/freecad/audit_repairs.py\n?? tools/freecad/check_audit_repairs.py\n?? tools/freecad/install_audit_repairs.py\n?? tools/freecad/install_diode_models.py\n?? tools/integrate_hanafuda.py\n",
+  "artifacts": [
+    {
+      "path": "components/sources/SW_Hotswap_Kailh_Choc_v1.FCStd",
+      "sha256": "9edce0ece1a32a929694912a38509c972078767c0f6456d6e5040359c57bae78"
+    },
+    {
+      "path": "components/sources.json",
+      "sha256": "4b65212f5e36c1b9fa7aba08d17187ee62f362eed34103389fa66453583b4243"
+    },
+    {
+      "path": "components/switches.json",
+      "sha256": "f4ba2ebd3125efe04f6447ed941aee8dc734a3677591fc13944170a54b410a8b"
+    },
+    {
+      "path": "hardware/revI/libraries/keyswitches.pretty/Kailh_socket_PG1350_optional.kicad_mod",
+      "sha256": "d16ce0a600e5bb99aa2c045f31afccc17e232835d7e607e011c2c581f630b865"
+    },
+    {
+      "path": "hardware/revI/flan36-left.kicad_pcb",
+      "sha256": "49d531c89e750978e65edd6f4bb4e235533ed0fcf49c61150c98d966f2c8fd1a"
+    },
+    {
+      "path": "hardware/revI/flan36-right.kicad_pcb",
+      "sha256": "f4288a015bdc3db233ccae710da6b67e19d23b9dd89a88d225c9e11e30a3cd55"
+    },
+    {
+      "path": "tools/freecad/export_switch_models.py",
+      "sha256": "e31bb60a16b0e4e193e8d39ac69c02d63c6b1963489272cc58f859409134b0c3"
+    },
+    {
+      "path": "tools/freecad/check_pcb_step_registration.py",
+      "sha256": "a7d0fefa78ecef7c88e7d35490ded87d1865fb0dac056ad3bf13a41513fabd4a"
+    },
+    {
+      "path": "tools/freecad/export_pcb_components.py",
+      "sha256": "26871b34f0f5fe9cb5830fc0a3ba73f993683f88c8f806c6861ad10245212652"
+    },
+    {
+      "path": "build/audit-fixes-20261007/socket-probe.py",
+      "sha256": "75033ae49d5934a8c34af2cb8db3b4eec8c24b5ad3b9fb31fff6d3e85a552465"
+    },
+    {
+      "path": "build/audit-fixes-20261007/socket-probe.log",
+      "sha256": "a751739167f855bfb7116399e80f88f25fd098852bd233fd5e977df4551a978c"
+    }
+  ]
+}

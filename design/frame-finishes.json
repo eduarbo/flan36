@@ -1057,6 +1057,28 @@
       "artwork_source": "design/proposals/frame-master-r4/master.json",
       "artwork_source_sha256": "3b6f6da77c9e1edf83e7e45ed456a756ff6194797d1730a81fcaa24204f7d796",
       "construction": "Exact master paths and painter order; ordinary, collar and covered-header domains."
+    },
+    "hanafuda": {
+      "label": "Hanafuda",
+      "description": "A lacquer-card landscape: vermilion sun above an ink mountain, ivory snowcap and pine-green foothills. Broad color regions keep the tiny landscape legible.",
+      "colors": {
+        "body": "#F1E7D2",
+        "detail": "#252B2E",
+        "accent": "#D84932",
+        "secondary": "#456348"
+      },
+      "labels": {
+        "body": "Ivory card",
+        "detail": "Ink",
+        "accent": "Vermilion sun",
+        "secondary": "Pine green"
+      },
+      "features": [],
+      "approved_master": "R4",
+      "approval_status": "approved",
+      "artwork_source": "design/proposals/frame-redesign-r8/master.json",
+      "artwork_source_sha256": "291e9fb40634246b8a4f0733fed7e240ec94295adab2540a9e5445ea9057555e",
+      "construction": "Approved R8 paths and painter order; native roof-relative material partitions."
     }
   },
   "legacy_defaults_apply_to": "Styles without approved_master; approved styles use the master construction domains."

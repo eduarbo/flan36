@@ -1,0 +1,19 @@
+{
+  "runner_sha256": "67aca7ddd89a28c06b79c0686b447a428ef460e3db1a6045f79867fa84777011",
+  "checker_sha256": "69eebb16fa642f40517eaada2562515d35223059bf287e927681c15c19c2a1bb",
+  "synthetic_entrypoint_controls": [
+    {
+      "child_status": 0,
+      "aggregate_exit": 0
+    },
+    {
+      "child_status": 1,
+      "aggregate_exit": 1
+    },
+    {
+      "child_status": "timeout",
+      "aggregate_exit": 1
+    }
+  ],
+  "passed": true
+}

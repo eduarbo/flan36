@@ -12,6 +12,9 @@ const hash=buffer=>crypto.createHash('sha256').update(buffer).digest('hex');
 const html=fs.readFileSync(path.join(root,'docs/offline.html'),'utf8');
 const scene=JSON.parse(require('node:zlib').gunzipSync(Buffer.from(html.match(/<script id="scene-data" type="application\/octet-stream">([\s\S]*?)<\/script>/)[1],'base64')));
 for(const [alias,id] of Object.entries(scene.geometryAliases||{}))scene.geometries[alias]=scene.geometries[id];
+const frameStyles=['talavera','gameboy','snes','phone','ipod','hanafuda'];
+assert.deepEqual(Object.keys(scene.catalog.frame_styles),frameStyles);
+const palettes=JSON.parse(fs.readFileSync(path.join(root,'design/frame-finishes.json')));
 const expectedCount=scene.parts.length;
 const sideCount=side=>scene.parts.filter(p=>p.side===side).length;
 const coverCount=side=>scene.parts.filter(p=>p.side===side&&p.group==='lid').length;
@@ -185,16 +188,16 @@ async function checkLink(page,group){
   assert.equal(await page.locator('#key-rotation').inputValue(),'90');
   await page.click('#apply-keys');
   await page.click('#part-lid');await page.click('#frame-target [data-side=left]');
-  assert.equal(await page.locator('#frame-grid button').count(),10);
-  assert.equal(new Set(await page.locator('#frame-grid img').evaluateAll(imgs=>imgs.map(i=>i.src))).size,10,'Ten previews use distinct actual geometries');
+  assert.deepEqual(await page.locator('#frame-grid button').evaluateAll(nodes=>nodes.map(n=>n.dataset.style)),frameStyles);
+  assert.equal(new Set(await page.locator('#frame-grid img').evaluateAll(imgs=>imgs.map(i=>i.src))).size,frameStyles.length,'All approved previews use distinct actual geometries');
   const themePixels=[];
-  for(const theme of ['smooth','bevel','facet','handheld','tv','cyberpunk','cartridge','arcade','mecha','kintsugi']){
+  for(const theme of frameStyles){
     await page.click(`[data-style=${theme}]`);
     assert.equal(await page.locator(`[data-style=${theme}]`).getAttribute('aria-pressed'),'true');
     assert.equal(await page.locator('#config-status').getAttribute('data-error'),'false');
     themePixels.push(hash(await page.locator('#canvas').screenshot({style:'.stage > :not(canvas),#leader-lines{opacity:0!important}'})));
   }
-  assert.equal(new Set(themePixels).size,10,'All ten covers must change actual rendered geometry');
+  assert.equal(new Set(themePixels).size,frameStyles.length,'Every approved cover must change actual rendered geometry');
   await page.locator('#frame-color').fill('#ad7656');
   await page.click('#frame-target [data-side=right]');await page.click('[data-color="#ded8c6"]');
   await page.click('#frame-target [data-side=both]');
@@ -202,11 +205,11 @@ async function checkLink(page,group){
   assert.equal(await page.locator('#color-current').textContent(),'Mixed colors');
   assert.equal(await page.locator('#frame-grid [aria-pressed=true]').count(),0);
   // Keyboard activation changes shape without erasing custom colors; restore explicitly selects its design palette.
-  await page.locator('[data-style=tv]').focus();await page.keyboard.press('Enter');
+  await page.locator('[data-style=phone]').focus();await page.keyboard.press('Enter');
   assert.equal(await page.locator('#color-current').textContent(),'Mixed colors');await page.click('#theme-colors');
-  assert.equal(await page.locator('#frame-color').inputValue(),'#976044');
-  await page.click('#frame-target [data-side=left]');await page.click('[data-style=cyberpunk]');
-  assert.equal(await page.locator('#frame-color').inputValue(),'#303440');
+  assert.equal(await page.locator('#frame-color').inputValue(),palettes.styles.phone.colors.body.toLowerCase());
+  await page.click('#frame-target [data-side=left]');await page.locator('#frame-link-colors').uncheck();await page.click('[data-style=hanafuda]');
+  assert.equal(await page.locator('#frame-color').inputValue(),palettes.styles.hanafuda.colors.body.toLowerCase(),'An uncustomized, unlinked frame adopts the newly selected palette');
   await page.locator('#frame-color').fill('#ad7656');
   await page.click('#frame-target [data-side=right]');await page.click('[data-color="#ded8c6"]');
   await page.click('#frame-target [data-side=left]');
@@ -216,14 +219,14 @@ async function checkLink(page,group){
   const downloadedConfig=await configDownload;const configPath=path.join(root,'build/revI/viewer-config.json');await downloadedConfig.saveAs(configPath);
   const config=JSON.parse(fs.readFileSync(configPath));
   assert.equal(config.keycaps.left.K30.variant,'choc_stem_mx_size_normal_90deg');assert.equal(config.keycaps.left.K30.rotation_deg,90);
-  assert.deepEqual({style:config.frames.left.style,color:config.frames.left.color},{style:'cyberpunk',color:'#ad7656'});
+  assert.deepEqual({style:config.frames.left.style,color:config.frames.left.color},{style:'hanafuda',color:'#ad7656'});
   assert.equal(Object.keys(config.frames.left.accents).length,3);
-  assert.deepEqual({style:config.frames.right.style,color:config.frames.right.color},{style:'tv',color:'#ded8c6'});
+  assert.deepEqual({style:config.frames.right.style,color:config.frames.right.color},{style:'phone',color:'#ded8c6'});
   assert.equal(Object.keys(config.frames.right.accents).length,3);
   assert.deepEqual(config.batteries,{left:'301230',right:'301230'});
   await page.click('#default-config');await page.locator('#load-config').setInputFiles(configPath);
-  await page.waitForFunction(()=>document.querySelector('[data-style=cyberpunk]').getAttribute('aria-pressed')==='true');
-  assert.equal(await page.locator('[data-style=cyberpunk]').getAttribute('aria-pressed'),'true');
+  await page.waitForFunction(()=>document.querySelector('[data-style=hanafuda]').getAttribute('aria-pressed')==='true');
+  assert.equal(await page.locator('[data-style=hanafuda]').getAttribute('aria-pressed'),'true');
   assert.equal(await page.locator('#frame-color').inputValue(),'#ad7656');
   assert.notEqual(hash(await page.locator('#canvas').screenshot({style:'.stage > :not(canvas),#leader-lines{opacity:0!important}'})),baseline,'Custom configuration changes the actual assembly');
   // An incompatible mixed configuration must not replace the current one.
@@ -253,12 +256,11 @@ async function checkLink(page,group){
   assert.ok(assembly.extras.attribution.includes('braindefender'));
   assert.deepEqual(assembly.extras.configuration,config);
   const customCap=gltf.nodes.find(n=>n.name==='left · KLP K30');assert.equal(customCap.extras.variant,config.keycaps.left.K30.variant);
-  const customFrame=gltf.nodes.find(n=>n.extras?.side==='left'&&n.extras?.group==='lid'&&n.extras?.frame_style);assert.equal(customFrame.extras.frame_style,'cyberpunk');
+  const customFrame=gltf.nodes.find(n=>n.extras?.side==='left'&&n.extras?.group==='lid'&&n.extras?.frame_style);assert.equal(customFrame.extras.frame_style,'hanafuda');
   const frameMaterial=gltf.materials[gltf.meshes[customFrame.mesh].primitives[0].material];
   const linear=n=>{n/=255;return n<=.04045?n/12.92:((n+.055)/1.055)**2.4;};
   const expected=[173,118,86].map(linear);
   frameMaterial.pbrMetallicRoughness.baseColorFactor.slice(0,3).forEach((n,i)=>assert.ok(Math.abs(n-expected[i])<1e-5,'Highlight must not affect exported frame color'));
-  const palettes=JSON.parse(fs.readFileSync(path.join(root,'design/frame-finishes.json')));
   for(const node of gltf.nodes.filter(n=>n.extras?.group==='lid'&&n.extras?.frame_style)){
     const primitives=gltf.meshes[node.mesh].primitives,style=node.extras.frame_style;
     assert.equal(primitives.length,4,'Themed GLB retains four surface colors');
@@ -286,7 +288,7 @@ async function checkLink(page,group){
   }
   const capPath=scene.catalog.variants.find(v=>v.id===config.keycaps.left.K30.variant).path;
   assert.deepEqual(positionBytes(customCap),Buffer.from(scene.geometries[capPath].positions,'base64'),'GLB must contain selected cap vertices');
-  assert.deepEqual(positionBytes(customFrame),Buffer.from(scene.geometries['mechanical/revI/left-frame-cyberpunk.stl'].positions,'base64'),'GLB must contain selected frame vertices');
+  assert.deepEqual(positionBytes(customFrame),Buffer.from(scene.geometries['mechanical/revI/left-frame-hanafuda.stl'].positions,'base64'),'GLB must contain selected frame vertices');
   await page.click('#default-config');await page.keyboard.press('Escape');await page.click('#reset');
   assert.equal(hash(await page.locator('#canvas').screenshot({style:'.stage > :not(canvas),#leader-lines{opacity:0!important}'})),baseline,'Default config plus reset restores exact rendered assembly');
   await page.click('#part-keycaps');
@@ -299,10 +301,10 @@ async function checkLink(page,group){
   await page.locator('#part-mcu').hover();await checkLink(page,'mcu');
   await page.selectOption('#view','front');
   await page.locator('#part-mcu').hover();await checkLink(page,'mcu');
-  await page.click('#part-lid');await page.click('[data-style=handheld]');
+  await page.click('#part-lid');await page.click('[data-style=gameboy]');
   assert.equal(await page.locator('#layer-lid').isChecked(),false,'Changing a frame preserves a hidden cover');
   assert.equal(await page.locator('#explode').inputValue(),'55');
-  await page.click('#frame-target [data-side=both]');await page.click('[data-style=tv]');
+  await page.click('#frame-target [data-side=both]');await page.click('[data-style=phone]');
   assert.equal(await page.locator('#half').inputValue(),'left','Editing both halves preserves the inspected half');
   await page.click('#reset');await page.locator('#part-lid').focus();await page.keyboard.press('Enter');
   assert.equal(await page.locator('#selection-title').textContent(),'Display frame');
@@ -325,8 +327,8 @@ async function checkLink(page,group){
   await checkFramedPixels(phone);
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'No horizontal overflow');
   await phone.locator('[data-case=rim]').tap();await checkDirectory(phone);
-  await phone.locator('#part-lid').tap();await phone.locator('[data-style=handheld]').tap();
-  assert.equal(await phone.locator('[data-style=handheld]').getAttribute('aria-pressed'),'true');
+  await phone.locator('#part-lid').tap();await phone.locator('[data-style=gameboy]').tap();
+  assert.equal(await phone.locator('[data-style=gameboy]').getAttribute('aria-pressed'),'true');
   assert.ok((await phone.locator('#canvas').boundingBox()).y>=0,'Model stays visible while browsing cards');
   await phone.locator('#part-lid').tap();await checkLink(phone,'lid');await checkDirectory(phone);
   assert.equal(await phone.locator('#selection-title').textContent(),'Display frame');
@@ -356,7 +358,7 @@ async function checkLink(page,group){
   assert.equal(await phone.locator('#selection').isVisible(),false,'Pinch/pan does not select');
   await phone.setViewportSize({width:320,height:568});await phone.locator('#reset').tap();
   assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'No overflow at 320px');
-  await phone.locator('[data-style=tv]').tap();await checkDirectory(phone);
+  await phone.locator('[data-style=phone]').tap();await checkDirectory(phone);
   await phone.locator('#part-lid').tap();await checkLink(phone,'lid');
   await phone.locator('#collapse-detail').tap();await checkDirectory(phone);
   await phone.locator('#collapse-detail').tap();await checkDirectory(phone);
@@ -366,15 +368,15 @@ async function checkLink(page,group){
   // Capture the actual designs and readable palette cards, including mobile.
   fs.mkdirSync(path.join(root,'build/viewer-multicolor'),{recursive:true});
   await page.click('#reset');await page.click('#part-lid');await page.click('#frame-target [data-side=both]');
-  for(const style of ['handheld','tv','cyberpunk']){
+  for(const style of frameStyles){
     await page.click(`[data-style=${style}]`);await page.click('#theme-colors');await page.mouse.move(10,100);
-    assert.equal(await page.locator('#frame-color').inputValue(),palettes.styles[style].colors.body);
+    assert.equal(await page.locator('#frame-color').inputValue(),palettes.styles[style].colors.body.toLowerCase());
     await page.screenshot({path:path.join(root,`build/viewer-multicolor/${style}.png`)});
   }
   await page.locator('#frame-color').fill('#ad7656');await page.click('#theme-colors');
-  assert.equal(await page.locator('#frame-color').inputValue(),palettes.styles.cyberpunk.colors.body);
+  assert.equal(await page.locator('#frame-color').inputValue(),palettes.styles.hanafuda.colors.body.toLowerCase());
   await page.locator('#frame-grid').screenshot({path:path.join(root,'build/viewer-multicolor/previews.png')});
-  await phone.setViewportSize({width:390,height:844});await phone.locator('#reset').tap();await phone.locator('#part-lid').tap();await phone.locator('[data-style=cyberpunk]').tap();
+  await phone.setViewportSize({width:390,height:844});await phone.locator('#reset').tap();await phone.locator('#part-lid').tap();await phone.locator('[data-style=hanafuda]').tap();
   await phone.evaluate(()=>document.querySelector('#inspector').scrollTop=0);await checkDirectory(phone);
   await phone.screenshot({path:path.join(root,'build/viewer-multicolor/mobile.png')});
   await page.click('#nav-files');await page.click('#default-config');await page.click('#reset');await page.click('#part-base');await page.click('#case-target [data-side=both]');await page.click('[data-case=rim]');await page.keyboard.press('Escape');await page.mouse.move(10,20);await page.evaluate(()=>document.querySelector('#inspector').scrollTop=0);await checkDirectory(page);
@@ -387,8 +389,8 @@ async function checkLink(page,group){
     browser:await browser.version(),desktop:true,narrow_viewport_emulation:true,physical_phone_tested:false,public_embedded_scene_matches_current:!offline,
     all_12_layer_filters:true,individual_visibility:true,individual_and_group_solo:true,show_all_recovery:true,occluded_hover_xray_pixel_verified:true,persistent_view_controls:true,fit_actual_pixels_after_zoom:true,fit_empty_feedback:true,full_row_hover:true,half_filters:true,orbit_drag:true,bottom_view:true,full_reset_pixel_identical:true,
     persistent_component_directory:true,sidebar_line_endpoints:true,directory_visible_during_scroll_and_collapse:true,keyboard_component_selection:true,direct_canvas_picking:true,labels_follow_camera:true,frame_change_preserves_hidden_cover:true,annotation_toggle:true,orbit_does_not_select:true,touch_orbit_and_pinch_do_not_select:true,small_320px_viewport:true,
-    ten_preview_cards:true,multicolor_glb_roles:true,one_click_frames:true,keyboard_frame_activation:true,mixed_style_and_color_state:true,theme_applies_palette_and_body_overrides_roundtrip:true,sidebar_hover_highlight:true,sidebar_opens_frame_explorer:true,touch_frame_cards_and_sidebar:true,hidden_layer_links_removed:true,highlight_excluded_from_glb:true,
-    dual_battery_selection_and_exact_glb:true,captive_frame_pins_preserved:true,keycap_variant_selection:true,frame_style_and_color:true,three_distinct_themed_geometries:true,json_roundtrip:true,invalid_combination_rejected:true,glb_matches_custom_configuration:true,glb_selected_vertices_exact:true,glb_objects:expectedCount,glb_keycaps:36,glb_units:'metres',case_variants:Object.keys(scene.catalog.case_styles).length,case_previews_distinct:true,case_glb_meshes_exact:true,open_cover_configuration:true,legacy_case_default:true,runtime_errors:errors,offline_network_requests:requests.length};
+    approved_preview_cards:frameStyles.length,multicolor_glb_roles:true,one_click_frames:true,keyboard_frame_activation:true,mixed_style_and_color_state:true,theme_applies_palette_and_body_overrides_roundtrip:true,sidebar_hover_highlight:true,sidebar_opens_frame_explorer:true,touch_frame_cards_and_sidebar:true,hidden_layer_links_removed:true,highlight_excluded_from_glb:true,
+    dual_battery_selection_and_exact_glb:true,captive_frame_pins_preserved:true,keycap_variant_selection:true,frame_style_and_color:true,distinct_themed_geometries:frameStyles.length,json_roundtrip:true,invalid_combination_rejected:true,glb_matches_custom_configuration:true,glb_selected_vertices_exact:true,glb_objects:expectedCount,glb_keycaps:36,glb_units:'metres',case_variants:Object.keys(scene.catalog.case_styles).length,case_previews_distinct:true,case_glb_meshes_exact:true,open_cover_configuration:true,legacy_case_default:true,runtime_errors:errors,offline_network_requests:requests.length};
   const caseImages={};for(const [name,source] of [['level','level'],['solid','solid'],['rim','rim'],['terrace','terrace'],['rim-open','rim-open-top']]){const buffer=fs.readFileSync(path.join(root,`build/case-variants/${source}.png`));fs.writeFileSync(path.join(root,`docs/images/revI-case-${name}.png`),buffer);caseImages[name]=hash(buffer);}
   fs.writeFileSync(path.join(root,'validation/revI-cases-render.json'),JSON.stringify({viewer_sha256:hash(Buffer.from(html)),checker_sha256:hash(fs.readFileSync(__filename)),images:caseImages,source:'Unretouched screenshots of the actual selected native STL meshes in the viewer'},null,2)+'\n');
   fs.writeFileSync(path.join(root,'build/viewer-ui-check.json'),JSON.stringify(receipt,null,2)+'\n');

@@ -21,19 +21,19 @@ for(const theme of themes){
  assert.equal(painted.cases.left.plate_color,'#abcdef');assert.equal(painted.frames.left.color,themed.frames.left.color);
 }
 if(process.argv.includes('--colors-only')){console.log(`PASS: ${themes.length} Level themes, linked HEX editing and independent colors`);process.exit(0);}
-const scene=read('build/viewer-scene.json');
+const scene=read('build/viewer-scene.json'),roof=read('design/revI.json').parameter_values_mm.FrameTop;
 function stlBounds(base64){const b=Buffer.from(base64,'base64'),lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];for(let i=0,n=b.readUInt32LE(80);i<n;i++)for(let v=0;v<3;v++)for(let a=0;a<3;a++){const x=b.readFloatLE(84+50*i+12+12*v+4*a);lo[a]=Math.min(lo[a],x);hi[a]=Math.max(hi[a],x);}return [lo,hi];}
 const parts=selectedParts(cfg,scene.printing,'both','complete');
 for(const side of ['left','right']){
  const shell=parts.find(p=>p.id===`${side}-case-level-plate`);assert.ok(shell,'Selected kit lost Level shell');
- const bounds=stlBounds(shell.stl);assert.ok(Math.abs(bounds[0][2]-6.3)<1e-4);assert.ok(Math.abs(bounds[1][2]-13.39)<1e-4);
+ const bounds=stlBounds(shell.stl);assert.ok(Math.abs(bounds[0][2]-6.3)<1e-4);assert.ok(Math.abs(bounds[1][2]-roof)<1e-4);
  assert.equal(crypto.createHash('sha256').update(Buffer.from(shell.stl,'base64')).digest('hex'),crypto.createHash('sha256').update(fs.readFileSync(path.join(root,shell.path))).digest('hex'));
  assert.ok(mesh3MF(shell).bytes.length>1000);
- for(const style of Object.keys(catalog.frame_styles)){
-  const asset=scene.printing.assets[`${side}-frame-${style}`];assert.ok(Math.abs(stlBounds(asset.stl)[1][2]-13.39)<1e-4);
+ for(const style of Object.keys(scene.catalog.frame_styles)){
+  const asset=scene.printing.assets[`${side}-frame-${style}`];assert.ok(Math.abs(stlBounds(asset.stl)[1][2]-roof)<1e-4);
  }
 }
-const report={themes:themes.length,case_style:'level',frame_and_shell_top_mm:13.39,selected_parts:parts.map(p=>p.id),native_stl_bytes_match:true,print_3mf_generated:true,physical_acceptance:false};
+const report={themes:themes.length,case_style:'level',frame_and_shell_top_mm:roof,selected_parts:parts.map(p=>p.id),native_stl_bytes_match:true,print_3mf_generated:true,physical_acceptance:false};
 fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(report,null,2)+'\n');console.log('PASS: Level themes, exact native print bytes, 3MF and all frame heights');
 global.requestAnimationFrame=callback=>setTimeout(callback,0);
 printKit(cfg,scene.printing,{half:'both',scope:'shells'}).then(kit=>{

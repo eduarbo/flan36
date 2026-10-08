@@ -12,6 +12,7 @@ assert hashlib.sha256(MASTER_PATH.read_bytes()).hexdigest()==PLAN['master_sha256
 MASTER=json.loads(MASTER_PATH.read_text())
 APPROVED=tuple(PLAN['approved_styles'])
 ROLES=('body','detail','accent','secondary')
+HANAFUDA_PATH=ROOT/'design/proposals/frame-redesign-r8/master.json'
 _FROZEN={}
 _CONTEXT=None
 _READABLE_RIGHT=False
@@ -23,13 +24,21 @@ def use_document(doc):
     _READABLE_RIGHT=orientation is not None
     if orientation:
         assert orientation.Mode=='same-reading-direction'
-        assert json.loads(orientation.StylesJSON)==list(APPROVED)
+        styles=json.loads(orientation.StylesJSON)
+        assert styles==list(APPROVED) or (doc.getObject('HanafudaApproval') is not None and styles==[*APPROVED,'hanafuda'])
     correction=doc.getObject('DisplaySeamCorrection')
     path=ROOT/(correction.MasterPath if correction else PLAN['master_path'])
     digest=correction.MasterSHA256 if correction else PLAN['master_sha256']
     assert hashlib.sha256(path.read_bytes()).hexdigest()==digest,'Frame master changed'
-    if _CONTEXT!=digest:
-        MASTER_PATH=path;MASTER=json.loads(path.read_text());_FROZEN.clear();_CONTEXT=digest
+    hanafuda=doc.getObject('HanafudaApproval')
+    context=(digest,hanafuda.MasterSHA256 if hanafuda else None)
+    if _CONTEXT!=context:
+        MASTER_PATH=path;MASTER=json.loads(path.read_text());_FROZEN.clear();_CONTEXT=context
+        if hanafuda:
+            assert hashlib.sha256(HANAFUDA_PATH.read_bytes()).hexdigest()==hanafuda.MasterSHA256
+            approved=json.loads(HANAFUDA_PATH.read_text())
+            assert approved['styles']['hanafuda']['decision']=='SELECTED'
+            MASTER['styles']['hanafuda']=approved['styles']['hanafuda']
     return correction
 
 def frozen_regions(side,style):
@@ -43,6 +52,14 @@ def frozen_regions(side,style):
         source=A.openDocument(str(path))
         for name in APPROVED:
             for role in ROLES:_FROZEN[name,role]=source.getObject(name+'_'+role+('_Plan' if corrected else '')).Shape.copy()
+        A.closeDocument(source.Name)
+        if active:A.setActiveDocument(active.Name)
+    if style=='hanafuda' and (style,'body') not in _FROZEN:
+        path=HANAFUDA_PATH.parent/'Artwork-R8.FCStd'
+        receipt=json.loads((path.parent/'geometry-check.json').read_text())
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==receipt['native_sha256']
+        active=A.ActiveDocument;source=A.openDocument(str(path))
+        for role in ROLES:_FROZEN[style,role]=source.getObject(style+'_'+role+'_Plan').Shape.copy()
         A.closeDocument(source.Name)
         if active:A.setActiveDocument(active.Name)
     readable=side=='right' and _READABLE_RIGHT
@@ -92,12 +109,13 @@ def domains(side):
     relief=face(xd['relief_commands'],side);header=face(xd['header_commands'],side)
     return domain,dict(ordinary=domain.cut(relief),collar=relief.common(domain).cut(header),cover=header.common(domain))
 
-def regions(side,style):
+def regions(side,style,uncut=False):
     domain,_=domains(side);window=face(MASTER['aperture_commands'],side)
+    if uncut:domain=face(MASTER['outer_commands'],side)
     result={r:Part.Shape() for r in ROLES};result['body']=domain
     for f in MASTER['styles'][style]['features']:
         shape=face(f['commands'],side,artwork=True)
-        if f['window_cut']:shape=shape.cut(window)
+        if f['window_cut'] and not uncut:shape=shape.cut(window)
         assert shape.cut(domain).Area<1e-7,(style,f['id'],'outside master')
         for role in ROLES:
             if not result[role].isNull():result[role]=result[role].cut(shape)
@@ -107,6 +125,9 @@ def regions(side,style):
 def build(recipe,style):
     import flush_frames as F
     correction=use_document(recipe.doc)
+    if recipe.doc.getObject('AuditRepairs20261007'):
+        from audit_repairs import build_materials
+        return build_materials(recipe,style,MASTER)
     side=recipe.side;doc=recipe.doc;theme=MASTER['styles'][style];flat=regions(side,style);domain,zones=domains(side)
     blank=recipe.smooth
     materials=[];occupied=[];features=[]
@@ -149,6 +170,9 @@ def validate(doc,side,smooth,obj,spec=None,output_dir=None):
     import flush_frames as F
     import MeshPart
     correction=use_document(doc)
+    if getattr(obj,'ParametricMaterialPartition',False):
+        from audit_repairs import validate_materials
+        return validate_materials(doc,side,smooth,obj,output_dir)
     roof=float(doc.Parameters.FrameTop);assert abs(roof-13.59)<1e-7
     expected=regions(side,obj.FrameStyle);frozen=frozen_regions(side,obj.FrameStyle);domain,zones=domains(side);whole=obj.Shape
     assert whole.isValid() and len(whole.Solids)==1,(obj.Name,'frame disconnected')

@@ -2,17 +2,27 @@
 Only temporary copies under build/revI are saved.
 SPDX-License-Identifier: GPL-3.0-or-later
 """
-import sys,json,hashlib,copy,os
+import sys,json,hashlib,copy,os,argparse
 from pathlib import Path
 import FreeCAD as A
 import FreeCADGui as G
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'tools/freecad'))
 from configuration import apply,extract
 from keycap_config import normalize
+argv=sys.argv[1:]
+while argv and not argv[0].startswith('--'):argv.pop(0)
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--source',type=Path,default=ROOT/'mechanical/revI/Flan36.FCStd')
+parser.add_argument('--report',type=Path,default=ROOT/'validation/revI-freecad.json')
+args=parser.parse_args(argv)
+trial_directory=ROOT/'build/revI' if args.report.resolve()==(ROOT/'validation/revI-freecad.json').resolve() else args.report.parent
+trial_directory.mkdir(parents=True,exist_ok=True)
+args.report.parent.mkdir(parents=True,exist_ok=True)
+assert args.source.resolve()!=(trial_directory/'customized.FCStd').resolve(),'The source must not be the temporary study'
 G.showMainWindow();G.getMainWindow().hide()
 print('Opening native configuration source',file=sys.__stdout__,flush=True)
-doc=A.openDocument(str(ROOT/'mechanical/revI/Flan36.FCStd'));doc.recompute()
-sourcehash=hashlib.sha256((ROOT/'mechanical/revI/Flan36.FCStd').read_bytes()).hexdigest()
+doc=A.openDocument(str(args.source));doc.recompute()
+sourcehash=hashlib.sha256(args.source.read_bytes()).hexdigest()
 reference_roof=float(doc.Parameters.FrameTop)
 opaque_samples=0
 for obj in [o for o in doc.Objects if hasattr(o,'FrameStyle')]:
@@ -33,8 +43,8 @@ nextconfig=json.loads((ROOT/'design/configurations/saddle-sculpted.json').read_t
 nextconfig['keycaps']['left']['K30']={'variant':'choc_stem_mx_size_normal_90deg','rotation_deg':90}
 nextconfig['batteries']={'left':'301230','right':'adafruit-1570'}
 nextconfig['cases']={'left':{'style':'rim','cover':False},'right':{'style':'terrace','cover':True}}
-nextconfig['frames']['left']={'style':'handheld','color':'#ad7656'}
-nextconfig['frames']['right']={'style':'tv','color':'#596c7a'}
+nextconfig['frames']['left']={'style':'gameboy','color':'#ad7656'}
+nextconfig['frames']['right']={'style':'talavera','color':'#596c7a'}
 nextconfig=normalize(nextconfig)
 nextconfig['cases']['left'].update(base_color='#e4a266',plate_color='#202735',match_frame=True)
 nextconfig['frames']['left'].update(color='#e4a266',accents={'detail':'#181c29','accent':'#abe8bc','secondary':'#9364c7'})
@@ -42,7 +52,8 @@ margin=apply(doc,nextconfig);assert extract(doc)==nextconfig
 assert not doc.L_ActiveFrame.Visibility and doc.R_ActiveFrame.Visibility
 assert not doc.L_SteelTarget0.Visibility
 assert doc.L_ActiveTray.LinkedObject.CaseStyle=='rim' and doc.R_ActiveTray.LinkedObject.CaseStyle=='terrace'
-legacy=copy.deepcopy(original);legacy.pop('cases');apply(doc,legacy);assert extract(doc)==original
+legacy=copy.deepcopy(original);legacy.pop('cases');apply(doc,legacy);assert extract(doc)==normalize(legacy)
+assert all(extract(doc)['cases'][side]['style']=='solid' for side in ['left','right'])
 apply(doc,nextconfig)
 bad=copy.deepcopy(nextconfig);bad['cases']['right']['style']='unknown'
 try:apply(doc,bad);raise AssertionError('Invalid case accepted')
@@ -56,23 +67,23 @@ for side,prefix in [('left','L_'),('right','R_')]:
     battery=doc.getObject(prefix+'ActiveBattery')
     assert battery.LinkedObject.BatteryStyle==nextconfig['batteries'][side]
     assert all(abs(getattr(battery.Shape.BoundBox,k)-getattr(battery.LinkedObject.Shape.BoundBox,k))<1e-6 for k in ['XMin','YMin','ZMin','XMax','YMax','ZMax'])
-    assert abs(battery.Shape.BoundBox.ZMin-2)<1e-6
+    assert abs(battery.Shape.BoundBox.ZMin-float(doc.Parameters.BatteryBottom))<1e-6
 invalid=copy.deepcopy(nextconfig);invalid['keycaps']['left']['K30']['rotation_deg']=0
 try:apply(doc,invalid);raise AssertionError('Invalid rotation accepted')
 except ValueError:pass
 assert extract(doc)==nextconfig
-cell=doc.Parameters.getCellFromAlias('FrameTop');doc.Parameters.set(cell,'17.2 mm');doc.recompute()
+cell=doc.Parameters.getCellFromAlias('FrameTop');doc.Parameters.set(cell,str(reference_roof+.4)+' mm');doc.recompute()
 for obj in doc.Objects:assert 'Invalid' not in obj.State,(obj.Name,obj.State)
 for prefix in ['L_','R_']:
     obj=doc.getObject(prefix+'ActiveFrame')
     print('Edited frame readback',prefix,obj.LinkedObject.Name,obj.Shape.BoundBox.ZMax,flush=True)
-    assert abs(obj.Shape.BoundBox.ZMax-17.2)<1e-6
-path=ROOT/'build/revI/customized.FCStd';doc.saveAs(str(path));A.closeDocument(doc.Name)
+    assert abs(obj.Shape.BoundBox.ZMax-(reference_roof+.4))<1e-6
+path=trial_directory/'customized.FCStd';doc.saveAs(str(path));A.closeDocument(doc.Name)
 doc=A.openDocument(str(path));doc.recompute();assert extract(doc)==nextconfig
-for prefix in ['L_','R_']:assert abs(doc.getObject(prefix+'ActiveFrame').Shape.BoundBox.ZMax-17.2)<1e-6
-assert hashlib.sha256((ROOT/'mechanical/revI/Flan36.FCStd').read_bytes()).hexdigest()==sourcehash
-report={'source_sha256':sourcehash,'native_features_no_custom_proxy':True,'configuration_roundtrip':True,'mixed_battery_profiles_roundtrip':True,'mixed_cases_and_open_cover_roundtrip':True,'legacy_configuration_normalized':True,'reopened_customized_file':True,'all_36_key_centres_unchanged':True,'stem_tip_datum_mm':11.7,'FrameTop_edit_mm':[reference_roof,17.2],'preset':'saddle-sculpted','thumb_variant':'MX-size Normal 90deg','frames':['handheld','tv'],'invalid_configuration_rejected_atomically':True,'xy_margin_mm':margin,'source_file_unchanged':True,'opaque_side_wall_samples':opaque_samples}
-(ROOT/'validation/revI-freecad.json').write_text(json.dumps(report,indent=2)+'\n')
+for prefix in ['L_','R_']:assert abs(doc.getObject(prefix+'ActiveFrame').Shape.BoundBox.ZMax-(reference_roof+.4))<1e-6
+assert hashlib.sha256(args.source.read_bytes()).hexdigest()==sourcehash
+report={'source_sha256':sourcehash,'checker_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'native_features_no_custom_proxy':True,'configuration_roundtrip':True,'mixed_battery_profiles_roundtrip':True,'mixed_cases_and_open_cover_roundtrip':True,'legacy_configuration_normalized':True,'reopened_customized_file':True,'all_36_key_centres_unchanged':True,'stem_tip_datum_mm':11.7,'FrameTop_edit_mm':[reference_roof,reference_roof+.4],'preset':'saddle-sculpted','thumb_variant':'MX-size Normal 90deg','frames':['gameboy','talavera'],'invalid_configuration_rejected_atomically':True,'xy_margin_mm':margin,'source_file_unchanged':True,'opaque_side_wall_samples':opaque_samples}
+args.report.write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report),flush=True)
 A.closeDocument(doc.Name)
 

@@ -61,6 +61,8 @@ An exact Pro Red manufacturer PDF has not been verified here; the family page is
 
 **Datasheet/drawing:** [Kailh CPG135001S30 PDF](https://www.kailhswitch.com/Content/upload/pdf/202115927/CPG135001S30-data-sheet.pdf). **Info and purchase:** [Typeractive — select Choc](https://typeractive.xyz/products/hotswap-sockets). The product photo includes both families; the **MX** variant is incompatible.
 
+All 36 sockets are represented in the nominal assembly and registered to their PCB mounting bores and solder-contact planes. The case includes a local H3 support relief, measured at **0.25 mm nominal clearance** from thumb socket K30 on both halves. [Component geometry and clearance evidence](../components/README.md) do not qualify a purchased variant, solder thickness or printed fit.
+
 ## Battery
 
 <a href="https://www.adafruit.com/product/1570"><img src="https://cdn-shop.adafruit.com/145x109/1570-00.jpg" width="210" alt="Adafruit 1570 battery — supplier product photo"></a>
@@ -124,7 +126,7 @@ These are nominal clearances, not maximum finished-pack tolerances. Confirm prot
 |---|---:|---|
 | KLP Lamé keycaps | 36 | [Variant guide](customize.md); [38 source STLs](../keycaps/variants); original preset: 28 Normal + 2 Homing + 6 Thumb |
 | Case bases and key plates / upper shells | 2 each | Level, Solid, Color rim or Terrace; [editable CAD, STEP and STL](cad.md) |
-| Display frames | 2 | Five selectable approved designs; Hanafuda pending integration; 13.59 mm shared roof, separate color per half |
+| Display frames | 2 | Six selectable approved designs; 13.59 mm shared roof, separate color per half |
 | Battery locators and retainers | 2 each | Open-bottom locator and rigid cage; cell on the floor, cage feet captured under PCB |
 | Controller supports and display sleds | 2 each | Independent from the cover |
 | Printed spacers/washers | 6 | Check printed dimensions and screw fit |

@@ -1,0 +1,60 @@
+{
+  "source_sha256": "6df45264bcceb4c0cca9aa8e761292f651f8931cf2286471a839ffe713dca73a",
+  "measurements": {
+    "left": {
+      "distance_mm": 0.13628068749809746,
+      "witness": {
+        "socket_object": "L_Hotswap_K30",
+        "pcb_reference": "K30",
+        "socket_solid_index": 0,
+        "target_face_index": 346,
+        "socket_point_mm": [
+          79.52006661639749,
+          -63.68854088003116,
+          3.6499999999999977
+        ],
+        "target_point_mm": [
+          79.5469131336343,
+          -63.55493066224372,
+          3.6499999999999977
+        ]
+      },
+      "exact_face_pairs_evaluated": 8,
+      "bounding_box_pairs": 23220,
+      "exact_geometry_cache_key": "c017a0cf8b78d2e689368306d110c10f4270d2a3e1026daad841dfd69abc4069:e266d6bfc34a30869bd4bc1ce3436812616e97c2250cabeca7ab5c45acfad708",
+      "target_object": "L_ActiveTray",
+      "producing_checker_sha256": "4b9078c4eeddbab764608bcb8f77291dc53264610a8a756b4ea6813f67f96789"
+    },
+    "right": {
+      "distance_mm": 0.04773897503873764,
+      "witness": {
+        "socket_object": "R_Hotswap_K30",
+        "pcb_reference": "K30",
+        "socket_solid_index": 0,
+        "target_face_index": 350,
+        "socket_point_mm": [
+          80.27275689824425,
+          -63.631840897097426,
+          3.6499999999999977
+        ],
+        "target_point_mm": [
+          80.26721065358274,
+          -63.584425193919,
+          3.6499999999999977
+        ]
+      },
+      "exact_face_pairs_evaluated": 4,
+      "bounding_box_pairs": 23220,
+      "exact_geometry_cache_key": "3a113ee154836b7883a43d6558fafb7ca7b98c6786d730ed24c7ab63cde5b9a5:d242cfa7283550d1ce9c06317d4f3ca7ef711908d73301041cb21c69a1b0d5d4",
+      "producing_checker_sha256": "2c7996a1fb399337e512f70e0a4f7212aef864d06903425ff4f099b7c151dd4e",
+      "target_object": "R_ActiveTray"
+    }
+  },
+  "user_constraints": [
+    "Preserve Piantor key centers and angles",
+    "Preserve exterior case contour and height",
+    "Retain both battery variants and removable magnetic frames",
+    "No physical acceptance claim"
+  ],
+  "status": "Digital socket-to-case clearance gate failed on right K30"
+}

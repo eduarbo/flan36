@@ -6,11 +6,17 @@
 |---|---|---|
 | 36 Piantor key centers and angles | Checked | [Layout](../design/layout.json), upstream files and checker |
 | Editable source and CAD exchange | Available | Native FCStd, parameters and [FreeCAD/StepUp examples](freecad.md) |
-| KLP catalog and themed frames | RevI digital study | 38 source variants, 28 with qualified positions; five installed approved frame styles, Hanafuda pending, per-key colors and configuration export/import |
+| KLP catalog and themed frames | RevI digital study | 38 source variants, 28 with qualified positions; six installed approved frame styles, per-key colors and configuration export/import |
 | Wireless electronics and displays | Placement only | Unrouted revI PCBs; 0 geometric DRC violations, 104 unconnected items each; exact connectors pending |
 | Final BOM and manufacturing files | Pending | Close routing, clearances, retention and exact supplied parts |
 | Printing and assembly | Pending | Fit coupon, sample caps and actual component measurements |
 | Working keyboard | Pending | All keys, BLE, charging, sleep/wake and measured consumption |
+
+## Revision I — October audit corrections
+
+The current assembly adds the approved Hanafuda frame, repairs display/frame parameter dependencies and case USB access, and includes all 36 diodes and hot-swap sockets. Current delivery evidence and remaining prototype limits are recorded in the [audit correction report](reviews/2026-10-07-corrections.md).
+
+The entries below retain their original historical snapshots.
 
 ## Revision I — readable right-hand artwork
 

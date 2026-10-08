@@ -41,7 +41,7 @@
     "design/proposals/frame-redesign-r8/master.json": "291e9fb40634246b8a4f0733fed7e240ec94295adab2540a9e5445ea9057555e"
   },
   "baseline_commit": "e55e84c26beab82da3e069f28e76350c9e647650",
-  "integration": "Hanafuda selected; production integration remains pending. Other five selected designs are installed.",
+  "integration": "All six selected designs installed from their approved paths; physical fit remains unqualified.",
   "viewer": {
     "default_style": "talavera",
     "installed_styles": [
@@ -49,7 +49,8 @@
       "gameboy",
       "snes",
       "phone",
-      "ipod"
+      "ipod",
+      "hanafuda"
     ],
     "retired_styles": [
       "arcade",

@@ -234,6 +234,26 @@
       }
     },
     {
+      "id": "hanafuda",
+      "name": "Hanafuda",
+      "base": "#f1e7d2",
+      "plate": "#252b2e",
+      "frame": {
+        "body": "#f1e7d2",
+        "detail": "#252b2e",
+        "accent": "#d84932",
+        "secondary": "#456348"
+      },
+      "keycaps": {
+        "base": "#f1e7d2",
+        "thumbs": [
+          "#252b2e",
+          "#d84932",
+          "#456348"
+        ]
+      }
+    },
+    {
       "id": "piantor-red",
       "name": "Piantor Red",
       "base": "#d93957",

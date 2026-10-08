@@ -1,0 +1,109 @@
+{
+  "datums": {
+    "source_path": "components/sources/SW_Hotswap_Kailh_Choc_v1.FCStd",
+    "source_sha256": "9edce0ece1a32a929694912a38509c972078767c0f6456d6e5040359c57bae78",
+    "source_bore_centers_xy_mm": [
+      [
+        0.0061635862700075705,
+        5.923944371039996
+      ],
+      [
+        5.006163586270008,
+        3.7239443710399955
+      ]
+    ],
+    "footprint_holes_cad_xy_mm": [
+      [
+        0,
+        5.95
+      ],
+      [
+        5,
+        3.75
+      ]
+    ],
+    "source_solder_contact_z_mm": -1.6183213351419934,
+    "source_to_pcb_underside_translation_mm": [
+      -0.0061635862700075705,
+      0.026055628960004462,
+      1.6183213351419934
+    ],
+    "solder_contact_faces": 4,
+    "solder_terminals": 2,
+    "solder_contacts_inside_pads": true,
+    "local_bounds_mm": [
+      -4.075000100005001,
+      1.424999899999997,
+      -1.8500001232436933,
+      9.075000099999999,
+      8.275000099999996,
+      1.2000001001808058
+    ],
+    "datum": "Top of the two metal solder-contact faces on nominal PCB underside; body shoulder remains 0.15 mm below it.",
+    "qualification": "Nominal source registration only; no physical fit or solder-thickness qualification."
+  },
+  "models": {
+    "choc-hotswap": {
+      "path": "hardware/revI/models/choc-hotswap.step",
+      "sha256": "6471900e513fba2792fbfc81c5e1d535cb789c94ac1a71dda14a08407ace4aec",
+      "import_difference_mm3": 0.0,
+      "native_placement_difference_mm3": 0.0,
+      "distinct_colors": 2,
+      "color_area_error_mm2": 5.618089460313058e-07,
+      "footprint_pose_xy_deg": null,
+      "footprint_layer": null,
+      "local_z_correction_mm": 0.0
+    }
+  },
+  "halves": {
+    "left": {
+      "count": 18,
+      "socket_solids": 54,
+      "actual_step_difference_mm3": 0.0,
+      "actual_step_sha256": "4795ce376797641caccf88ce99eed969f494cd8f7a53d406b81d68bc371516b9",
+      "native_bounds_mm": [
+        25.924999999995002,
+        -81.87483389304077,
+        1.944113364837699,
+        132.164560988757,
+        -3.7060502183967947,
+        5.10395895941252
+      ],
+      "nominal_floor_gap_mm": 0.55,
+      "footprints_pads_nets_tracks_contours_unchanged": true,
+      "pcb_sha256": "8ae6bf4f726b1cce7aeb012e32bf4d815eb79d75d9ff6bf3b3ca2639ba82c472"
+    },
+    "right": {
+      "count": 18,
+      "socket_solids": 54,
+      "actual_step_difference_mm3": 0.0,
+      "actual_step_sha256": "e7705f982f5984f3de7958a1d856cc92e18923ac619f5f84207dcad4fbeda395",
+      "native_bounds_mm": [
+        31.43666244378268,
+        -77.57854135528578,
+        1.944113364837699,
+        139.075,
+        -3.7060502183967947,
+        5.10395895941252
+      ],
+      "nominal_floor_gap_mm": 0.55,
+      "footprints_pads_nets_tracks_contours_unchanged": true,
+      "pcb_sha256": "eefea0f850f01de5ceda7f662fe1b54815656c8b10e5226264ec7988268e365d"
+    }
+  },
+  "physical_acceptance": false,
+  "source_sha256": "9901360f74052f3892c20c9b81e839aeec534747927e547d31bdb047c8481029",
+  "native_saved_reopened": true,
+  "passed": true,
+  "inherited_registration": {
+    "report_path": "build/audit-fixes-20261007/final/hotswap.json",
+    "report_sha256": "f44e241a40221c53f0781c6526c32bfcbd6a7d22981930ff1a953171e52c8c23",
+    "native_sha256": "6df45264bcceb4c0cca9aa8e761292f651f8931cf2286471a839ffe713dca73a",
+    "basis": "Exact saved component equivalence from independently reopened parent and candidate; unchanged PCB hashes; only local case support subtraction",
+    "saved_socket_equivalence": {
+      "L_": "empty bidirectional Boolean difference for all 54 matched solids",
+      "R_": "empty bidirectional Boolean difference for all 54 matched solids"
+    },
+    "relief_report_sha256": "e744e61fa216531b006294de50c1b12045ef8f6c8b0681f6be2749f810958f16"
+  }
+}

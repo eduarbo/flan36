@@ -1,33 +1,33 @@
 {
-  "image_sha256": "0920fee6003ddd70ac9b1bcc2092e1397c4f7ed1340833c2e4b365e0889c0d5d",
+  "image_sha256": "687846269fdf5f0dc60a3dd557989984684ce301438f50cc78a47abf84255b0a",
   "sources": [
     {
       "path": "design/revI.json",
-      "sha256": "9ffa36db112e6838fa12d2205e2c52e7c906db6e33c2dbac4216a07c30a63e66"
+      "sha256": "af1053d1eefce5850a6b3b142eb10b8108f92b932850c8d216e1c422e445d19b"
     },
     {
       "path": "design/frame-finishes.json",
-      "sha256": "c8cc7621908f3c768a8d7b90d2a59f6df482bb26e97cb439e895f8366ff96c08"
+      "sha256": "71305ec43927d0877ce43b490191b898666e80cd52421e5a87196daeaf69eb0e"
     },
     {
       "path": "tools/frame_finishes.py",
       "sha256": "826943355f831f1c933de0e02e8082c343f4ea47e482cab0751b48df0844606c"
     },
     {
-      "path": "mechanical/revI/left-frame-flan-body.stl",
-      "sha256": "01467b748ba84a0f758142a84f104a9ab9675de5d15ba537a4019cd8115ebfed"
+      "path": "mechanical/revI/left-frame-talavera-body.stl",
+      "sha256": "964427c68acb38fbaee21c7ab640b00f70abc7057527f35f0e3090d80fe6fef7"
     },
     {
-      "path": "mechanical/revI/left-frame-flan-detail.stl",
-      "sha256": "7132ee56ef88fc501a2740813f76e5f096c1f00a416b8d85d96a0f6872cc2762"
+      "path": "mechanical/revI/left-frame-talavera-detail.stl",
+      "sha256": "bd6c91e7601ba24f916b1907ddb83839c65fb38b7116348fd2a50ba96bae935d"
     },
     {
-      "path": "mechanical/revI/left-frame-flan-accent.stl",
-      "sha256": "1fe33515e856f607ee20d8e2161f7d79ef73bc5a9d96e4d3759a46e368e9fab1"
+      "path": "mechanical/revI/left-frame-talavera-accent.stl",
+      "sha256": "bcfe8317192ab760055a196873fe053c529d451a5b01453503c0cf6f49381e99"
     },
     {
-      "path": "mechanical/revI/left-frame-flan-secondary.stl",
-      "sha256": "f7994b0571b4f71a198a1ef37e04dc439b33bce9fd80b66e25c6f355efe37f57"
+      "path": "mechanical/revI/left-frame-talavera-secondary.stl",
+      "sha256": "aed8fab26d0c89d6b83ce083cd9e3cae7d3cc03a32e8ec44da0d74d2efdeca61"
     },
     {
       "path": "mechanical/revI/left-display-visual-0.stl",
@@ -58,179 +58,94 @@
       "sha256": "e407b79bd42785fb4623579d123f5d3a6b36013e83336eeeac4376ff00f9c6f6"
     },
     {
-      "path": "mechanical/revI/left-frame-tape-body.stl",
-      "sha256": "ec31c965df3455dbc3cfa37ddc76f49b84b26c097c255b5431c01f04eefa583c"
-    },
-    {
-      "path": "mechanical/revI/left-frame-tape-detail.stl",
-      "sha256": "18d14882cb91e26526af3d2a2a8061924c23ddf7a75ee11cf26413cffb7bb285"
-    },
-    {
-      "path": "mechanical/revI/left-frame-tape-accent.stl",
-      "sha256": "70fc5770eb41a3e43fa5d9bba7282e9898e41181c6bbc107f66ee04d65e3821e"
-    },
-    {
-      "path": "mechanical/revI/left-frame-tape-secondary.stl",
-      "sha256": "93928fb01b5cc2dd05071641108d60db3d900a779dd316de73b382a038c2c8b0"
-    },
-    {
-      "path": "mechanical/revI/left-frame-orbit-body.stl",
-      "sha256": "b4743aa9f0b99417422bc45eec216ab5bbbea11b1ee4a379c660f31f25b7f2de"
-    },
-    {
-      "path": "mechanical/revI/left-frame-orbit-detail.stl",
-      "sha256": "5fc3b49e4733501f26e6b084df9e757791b92c0d4a0357ee85ad9c3f048ae686"
-    },
-    {
-      "path": "mechanical/revI/left-frame-orbit-accent.stl",
-      "sha256": "9b991e7ac03000b4f5a8ba763724982181973aebc4a5023e87f51c5b8d0c099f"
-    },
-    {
-      "path": "mechanical/revI/left-frame-orbit-secondary.stl",
-      "sha256": "4fabc1cedf9cf784f7bd0365692721915a9d4f231cca2fe51b8edbb719a3e7f7"
-    },
-    {
-      "path": "mechanical/revI/left-frame-manga-body.stl",
-      "sha256": "bc4f55b4fedd3b1c951ecc20c7653a8cf1f21e9c2f767a7cdf69f8d60ff52a19"
-    },
-    {
-      "path": "mechanical/revI/left-frame-manga-detail.stl",
-      "sha256": "fb20aadd58a54a6c77d06c74288fc4f320872a94ae711ef25c1981db2eada404"
-    },
-    {
-      "path": "mechanical/revI/left-frame-manga-accent.stl",
-      "sha256": "21729df3d7885561de811275db5ee6eeb1550a21f46d95cec060fa64cec3d78f"
-    },
-    {
-      "path": "mechanical/revI/left-frame-manga-secondary.stl",
-      "sha256": "2fc3de35674bf75cf877370aa713a23cf2af4fafb1307f444771dad65f484adc"
-    },
-    {
-      "path": "mechanical/revI/left-frame-talavera-body.stl",
-      "sha256": "1e20dc62091730042619a2b908967cb410d0f05da99caa25bb9982249aff89ce"
-    },
-    {
-      "path": "mechanical/revI/left-frame-talavera-detail.stl",
-      "sha256": "f8c0fd77fc6652c0b3780854201b5464d06a00f9ac67e0a10eab86b0f0ddd68a"
-    },
-    {
-      "path": "mechanical/revI/left-frame-talavera-accent.stl",
-      "sha256": "194d65a7346ca6b5cda4454fe39a7d508e00a2edf9ac168eb802a0f96e2b5f2f"
-    },
-    {
-      "path": "mechanical/revI/left-frame-talavera-secondary.stl",
-      "sha256": "d685908fdcffb45d09c128f6d7b06c9ea012a935b91586bd88552acd90c8edcd"
-    },
-    {
       "path": "mechanical/revI/left-frame-gameboy-body.stl",
-      "sha256": "16095df696317adb100c10ba890c3fa8229c3ef8209b42fd4246d67461da5811"
+      "sha256": "91555134b1c646d68a238ff65f9957c732b2419fb158629342e0747334489067"
     },
     {
       "path": "mechanical/revI/left-frame-gameboy-detail.stl",
-      "sha256": "29a51c048587d81af48eb7f3aa0a1110d1cc998f64ed20209cfc4757ad26e8b7"
+      "sha256": "ed718d1c3198cf0cb84c541556a279db27fcee9278bd15ede46d08f117c55909"
     },
     {
       "path": "mechanical/revI/left-frame-gameboy-accent.stl",
-      "sha256": "5f9a219c521923a0f41671accce2293880ed70526ab09d19a7b20afedd4a8732"
+      "sha256": "934860d84bc5398f761d37e03b131240f82e703eafcf5afdcb035e0def711218"
     },
     {
       "path": "mechanical/revI/left-frame-gameboy-secondary.stl",
-      "sha256": "c2dde498438d394f82ed1c5c9e02a90a2ed30c32222ac993874e2adc6bcbd4c5"
-    },
-    {
-      "path": "mechanical/revI/left-frame-nes-body.stl",
-      "sha256": "a5c1c32627f2327831da0970a9172848f90f10d1c6cd173f62f2ddb52d973dfd"
-    },
-    {
-      "path": "mechanical/revI/left-frame-nes-detail.stl",
-      "sha256": "5723ef62ad66fb040241fca2b7abb70841d4707cd3f005f06ab5b947ab4cf322"
-    },
-    {
-      "path": "mechanical/revI/left-frame-nes-accent.stl",
-      "sha256": "f3e139b1287eed1d7e414542003a6020c891b4d0faabbb140846afdcded6c893"
-    },
-    {
-      "path": "mechanical/revI/left-frame-nes-secondary.stl",
-      "sha256": "09f4b505812b231b81f66dad4b874073a05cb7937f9c0743a9bc03297241e46b"
+      "sha256": "31573626460dd0efbae22dee9ea1a5dfef256b1407f5eb65fcb64cb125fd2480"
     },
     {
       "path": "mechanical/revI/left-frame-snes-body.stl",
-      "sha256": "7ba305b71f9f085a1071efc170b135f3328da899b936b2dcc002868ee259aad8"
+      "sha256": "419416502c55b29b63e5d8b3c13ff7bec6e8026d93e6ccf42d6ea87ff19951bf"
     },
     {
       "path": "mechanical/revI/left-frame-snes-detail.stl",
-      "sha256": "fe532f02b87c4ff117231f436e1987ab67716c7f975fa72dea807b0021bf6870"
+      "sha256": "7fa2b401738c94c21b9ef5dc33f326e2bb60bcd43f6f139e0241f796e5da5556"
     },
     {
       "path": "mechanical/revI/left-frame-snes-accent.stl",
-      "sha256": "b64c2e9e303db594f9d2f48b2d804a0b903e4acd4309a42040ed8db23cef2f62"
+      "sha256": "e4bfc6110afdc2346ed0506b4eecb9661ff1b58b3606694f6392b91c6bcc3f1b"
     },
     {
       "path": "mechanical/revI/left-frame-snes-secondary.stl",
-      "sha256": "9bc1000f3098cb15dc0f866b2e2f9e9f945bc47e36930fb65d27a3d891299ac5"
+      "sha256": "7d7a3acc32fee59e8bf66a837efcaa3a8a4e0fa8542e28ba315d701a9a73099c"
     },
     {
       "path": "mechanical/revI/left-frame-phone-body.stl",
-      "sha256": "3964fc3dd4ed86d409aae3a8a530655d735c5a0a1deeb7d3ea444669adec1d75"
+      "sha256": "9986d4d7352e0f0b9cf3b69e7c0dcd97bc9bd3780dda0ab2e599dea3ae74df0b"
     },
     {
       "path": "mechanical/revI/left-frame-phone-detail.stl",
-      "sha256": "a9a1b1606d8b4f284a76278cfdecb4d168ca99dcc9c540eb3f58efee63e7c22f"
+      "sha256": "c2d05bbf4d05779c652fd9358b63f2fa9ff9536edebff9d81f1e35cd3bb4e49c"
     },
     {
       "path": "mechanical/revI/left-frame-phone-accent.stl",
-      "sha256": "f3cd75372536da69f75a6ed459cd5492fa8232fc7a0a5d1cc51dbb7360e5cbb2"
+      "sha256": "8cc4a5200b46558b10d5b00901b5e45c28f0f75e526437a835e21b54891037ef"
     },
     {
       "path": "mechanical/revI/left-frame-phone-secondary.stl",
-      "sha256": "d2d1d9b6e621060a65d7e3ed1924fa0606da987c2e734fa10985eab973fd4266"
-    },
-    {
-      "path": "mechanical/revI/left-frame-walkman-body.stl",
-      "sha256": "d04642507a81674aff28f78565aaed1552d2506fb262697be313d99e9ad49b52"
-    },
-    {
-      "path": "mechanical/revI/left-frame-walkman-detail.stl",
-      "sha256": "9e199eb041d2647afa6f4dec4103bf568924fbb4ee7e4396c5a4e16085039aef"
-    },
-    {
-      "path": "mechanical/revI/left-frame-walkman-accent.stl",
-      "sha256": "7d0ecaba7040400771cb798d8f73544e6e3cdf279acdfa6b335a0e746022c503"
-    },
-    {
-      "path": "mechanical/revI/left-frame-walkman-secondary.stl",
-      "sha256": "09ec1d734532ea62683aace6b3a5aff9b2ba90c4ca5104b5a868628c1ccdc3aa"
+      "sha256": "78e7fedafa945600c6f3093ef032f1e1391fd09839d0f81d14eb05666587c965"
     },
     {
       "path": "mechanical/revI/left-frame-ipod-body.stl",
-      "sha256": "7e5545305bff32ff5821d40ea2905ecdbd05c8f8444abeee200d2accd565aa35"
+      "sha256": "4cc2690d0b54f82559b0cd7c283ed3126579d564f1c4f6e36130f1ae3f2c5067"
     },
     {
       "path": "mechanical/revI/left-frame-ipod-detail.stl",
-      "sha256": "f8c0fd77fc6652c0b3780854201b5464d06a00f9ac67e0a10eab86b0f0ddd68a"
+      "sha256": "bd6c91e7601ba24f916b1907ddb83839c65fb38b7116348fd2a50ba96bae935d"
     },
     {
       "path": "mechanical/revI/left-frame-ipod-accent.stl",
-      "sha256": "e4953445f498f81fe32321c9f797023d78a477ed9bf40786ab5ba3fd722082c5"
+      "sha256": "3b5cac64609e673929d13d871583fe4bca84fd4f8d1124bd0516076987e142a4"
     },
     {
       "path": "mechanical/revI/left-frame-ipod-secondary.stl",
-      "sha256": "67d32c96f2a10b252f6b0422fbb382c3d641d2240b8a0c250b1af059d698620e"
+      "sha256": "dcbdc2056d06988224d0013017bd81b826de54c953e806bf8e417558042947fe"
+    },
+    {
+      "path": "mechanical/revI/left-frame-hanafuda-body.stl",
+      "sha256": "87e85fb3b04c5647d2fc9b546b50466b87040fbdf887e005fc87ced74788547b"
+    },
+    {
+      "path": "mechanical/revI/left-frame-hanafuda-detail.stl",
+      "sha256": "9ea7ea374a4051db97a23aa13c1094c500486b11b80c96af4b6f3dd5734518d4"
+    },
+    {
+      "path": "mechanical/revI/left-frame-hanafuda-accent.stl",
+      "sha256": "fdfc928670f8b02f940edd271625746f6a28f92d237b2c6f4617393322805303"
+    },
+    {
+      "path": "mechanical/revI/left-frame-hanafuda-secondary.stl",
+      "sha256": "8ce7e8ee6bd074941522bc1e3196bf29cd3fd1e73a023eaa36319bb865fda5e6"
     }
   ],
-  "renderer_sha256": "6087cc76f6cd7d4e2430121894602792ba7ad490b71be4a2cc936ba6e79d28d8",
+  "renderer_sha256": "2ef92d72e182e8c0247613f01bb1fe930f63fc9b77186f218325608f341090aa",
   "geometry_changed": false,
   "styles": [
-    "flan",
-    "tape",
-    "orbit",
-    "manga",
     "talavera",
     "gameboy",
-    "nes",
     "snes",
     "phone",
-    "walkman",
-    "ipod"
+    "ipod",
+    "hanafuda"
   ]
 }

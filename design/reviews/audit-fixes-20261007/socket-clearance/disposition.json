@@ -1,0 +1,61 @@
+{
+  "snapshot_sha256": "b6dcf94d3b9555425b467d6d78e8e275c5f0c7cee8de1f7904c698cc20ffabbe",
+  "read_only_inputs_unchanged": true,
+  "reviewers": {
+    "domain_constructive": {
+      "initial_recommendation": "Local K30/Pillar3 scallop, nominal gap 0.25 mm and pilot annulus at least 1.20 mm.",
+      "evidence": "Both case witnesses lie on Pillar3 radius 2.3 mm centered (80,-61.3), not the exterior. Pilot radius 0.85; floor1.4, support top3.8.",
+      "confidence": "High feature identification; moderate unprinted allowance.",
+      "second_round": "Agrees without material objection to 0.25 mm gap and minimum1.20 mm annulus, provided all geometry gates pass."
+    },
+    "adversarial_risk": {
+      "initial_recommendation": "Local K30/Pillar3 scallop, nominal gap0.30 mm and pilot annulus at least1.05 mm.",
+      "evidence": "Witness-based remaining annulus at0.30 mm is1.197739 right and1.286281 left; an oversized box cannot inherit this bound.",
+      "confidence": "High feature identification; moderate unprinted allowance.",
+      "second_round": "Agrees without material objection to0.25 mm gap and minimum1.20 mm annulus; extra clearance lacked physical qualification and retained material is preferable here."
+    }
+  },
+  "disagreement": "Initial nominal clearance and annulus choices differed; resolved in one focused second round with identical facts.",
+  "decision": {
+    "gap_mm": 0.25,
+    "minimum_pilot_annulus_mm": 1.2,
+    "scope": "Local subtractive relief confined to both Pillar3 supports, dependent on actual registered K30 sockets."
+  },
+  "conditions": [
+    "Complete real geometry checks, not witness or bounding-box claims",
+    "All36 sockets and4case bases; no lower global gate",
+    "Exterior, floor, pilot, support center/height, battery and magnetic interfaces preserved",
+    "Valid connected solids; quantify removed support area",
+    "No automatic relaxation if candidate fails"
+  ],
+  "physical_acceptance": false,
+  "local_geometry_acceptance": {
+    "source_sha256": "9901360f74052f3892c20c9b81e839aeec534747927e547d31bdb047c8481029",
+    "report": "validation/revI-socket-clearance.json",
+    "saved_reopened": true,
+    "unchanged_parts": 66,
+    "halves": {
+      "left": {
+        "socket_to_relieved_post_mm": 0.2500000999999941,
+        "minimum_pilot_web_mm": 1.3362805874981043,
+        "bearing_area_removed_mm2": 0.10884842698137653,
+        "bearing_area_remaining_mm2": 14.24037601829
+      },
+      "right": {
+        "socket_to_relieved_post_mm": 0.25000009999997613,
+        "minimum_pilot_web_mm": 1.2477388750387568,
+        "bearing_area_removed_mm2": 0.2566687674125028,
+        "bearing_area_remaining_mm2": 14.092555677858874
+      }
+    },
+    "complete_assembly_delivery_gate": "Separate current report validation/revI-audit-delivery.json; pending at this local geometry checkpoint"
+  },
+  "complete_assembly_delivery_acceptance": {
+    "report": "validation/revI-audit-delivery.json",
+    "source_sha256": "9901360f74052f3892c20c9b81e839aeec534747927e547d31bdb047c8481029",
+    "passed": true,
+    "original_report_sha256": "c58eb59abee7cfc3797f2eeed5fb88df25f3f47ff6dc46b58eb55e084f97ec74",
+    "report_sha256": "116ad6748995659461819e0c16cb011f4180651b7955c506064afd1c15dd35d2",
+    "serialization": "Lossless ordered path/SHA256 entries; original bytes hash retained and recovery verified."
+  }
+}

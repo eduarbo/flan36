@@ -13,7 +13,7 @@ The source opens and recomputes without StepUp, CadQuery or custom Python proxie
 
 ## Navigate the assembly
 
-The tree contains **Parameters**, **Left** and **Right**. Select a part and press **Space** to hide or show it. Expand **Construction** for sketches and operations. Each half has an **ActiveFrame** link to one of ten cover bodies; an **ActiveBattery** link selects Adafruit 1570 or 301230. Hidden alternatives do not represent extra installed parts.
+The tree contains **Parameters**, **Left** and **Right**. Select a part and press **Space** to hide or show it. Expand **Construction** for sketches and operations. Each half has an **ActiveFrame** link to one of six approved cover designs (historical alternatives remain under Construction); an **ActiveBattery** link selects Adafruit 1570 or 301230. Hidden alternatives do not represent extra installed parts.
 
 For keycaps, frame styles and colors, use the [configurator and companion macro](customize.md#save-a-configuration-for-freecad). Keep a personal copy with **File → Save As** before editing dimensions.
 
@@ -21,13 +21,15 @@ For keycaps, frame styles and colors, use the [configurator and companion macro]
 
 ### 1. Change the cover
 
-In **Parameters**, increase `FrameTop` by **0.4 mm** and recompute. The cover and its co-printed color volumes follow the new roof together; no decoration rises above it. Save, close and reopen to confirm the change, then restore the original value.
+In **Parameters**, increase `FrameTop` by **0.4 mm** and recompute. The cover and its co-printed color volumes follow the new roof together; ordinary inlays remain 0.4 mm deep. No decoration rises above it. Save, close and reopen to confirm the change, then restore the original value.
 
 `FrameRoof` controls roof thickness and `WindowMargin` the nominal clearance around the glass. The current reference uses **1.4 mm** and **0.10 mm**, respectively. The glass opening is centered on both axes. These values require a measured fit sample; arbitrary edits are not automatically cleared for printing. Preserve the shared cavity and mounts when editing an outline, and use the recorded artwork master for the color partitions.
 
 ### 2. Move the display
 
-Hide the active frame and keycaps. Change `DisplayShiftY` from **2.4 to 3.4 mm**. The complete display, sled and window move together; do not drag the glass alone. Restore 2.4 mm before comparison with the published PCB.
+Hide the active frame and keycaps. Change `DisplayShiftY` from **2.4 to 3.4 mm**. The complete display, mating contacts, retained socket, solder reserve, sled, service clearances and window move together. Do not drag the glass alone. Restore 2.4 mm before comparison with the published PCB.
+
+Approved artwork keeps its fixed case coordinates. A moved or enlarged window clips its color partitions to the edited shell; it does not stretch the motif. These are mechanical study edits, not automatically approved print configurations.
 
 `MCUShiftY`, `MCUBottom`, `BatteryShiftY`, `BatteryBottom` and plate dimensions provide other study controls. **Moving a part in FreeCAD does not update KiCad footprints or traces.**
 

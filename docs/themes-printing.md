@@ -1,6 +1,6 @@
 # Make it yours
 
-Open [the 3D explorer](https://eduarbo.github.io/flan36/), choose **Themes**, and pick a starting palette. Twenty-seven presets coordinate the case, frame and keycaps. Their previews use your selected shapes.
+Open [the 3D explorer](https://eduarbo.github.io/flan36/), choose **Themes**, and pick a starting palette. Twenty-eight presets coordinate the case, frame and keycaps. Their previews use your selected shapes.
 
 All five finger columns share the same base color. Each thumb gets its own coordinated accent, mirrored between halves. In **Caps → Colors**, eight independent palettes follow the same approach: **Sunset rows** colors whole finger rows and **Arcade thumbs** puts its bright accents on the three thumbs. **Original** keeps matching green thumbs.
 
@@ -12,7 +12,7 @@ All five finger columns share the same base color. Each thumb gets its own coord
 4. Enable **Match frame and rim** for continuous color. Editing either linked color updates the other; with Level, the upper shell joins the linked base and frame color.
 5. Use **Files → Download print kit** for the selected parts.
 
-The [five installed approved frames](frames-extra.md) have four solid-color regions. Talavera is the default. Each design has a matching global palette; **Restore design colors** restores the selected frame palette.
+The [six installed approved frames](frames-extra.md) have four solid-color regions. Talavera is the default. Each design has a matching global palette; **Restore design colors** restores the selected frame palette.
 
 Changing shapes preserves customized colors. An untouched original design adopts the new shape's original palette. Frame and theme changes preserve cover visibility and the current inspection.
 
@@ -43,7 +43,7 @@ This is prototype geometry. Print [fit coupons](cases.md) before a complete set.
 
 ## Color 3MF status
 
-Decorated frames export as **multipart 3MF assemblies**: one recessed shell and separate closed volumes for the three inlay colors. All parts share one transform, so the inlays stay registered to their pockets. All colors finish at the **13.59 mm** roof. The five approved R4 frames use 0.4 mm surface inlays with 1.0 mm backing outside the display relief, a 0.865 mm through-color collar and a 0.4 mm through-color pin cover. Rejected shapes are excluded from the active viewer and its print kit. Hanafuda remains pending integration. See the [construction rules](frames-extra.md).
+Decorated frames export as **multipart 3MF assemblies**: one recessed shell and separate closed volumes for the three inlay colors. All parts share one transform, so the inlays stay registered to their pockets. All colors finish at the **13.59 mm** roof. The five approved R4 frames use 0.4 mm surface inlays with 1.0 mm backing outside the display relief, a 0.865 mm through-color collar and a 0.4 mm through-color pin cover. Rejected shapes are excluded from the active viewer and its print kit. Hanafuda uses its exact approved R8 paths with the same construction. See the [construction rules](frames-extra.md).
 
 These are complementary volumes for **co-printing**, not separately printed press-fit inserts. Use compatible colors of the same material and qualify their bonding on a small sample. The kit also includes the original aligned material STLs and a fused single-material STL. The fused file has a plain surface and cannot reproduce the color pattern by geometry alone.
 

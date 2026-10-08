@@ -1,0 +1,4029 @@
+{
+  "source_sha256": "9901360f74052f3892c20c9b81e839aeec534747927e547d31bdb047c8481029",
+  "checker_sha256": "74d2915fa634bb0a399ae988e653cf9ecdd9b9f74d5a30b0017861c3c58679d7",
+  "states": {
+    "reference": {
+      "left-talavera": {
+        "style": "talavera",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1996.7254994089174,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 141.23659595760583,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019588,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125474,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441016,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 36.75301263568439,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 91.8825947676331,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-gameboy": {
+        "style": "gameboy",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2007.9294617482324,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 152.7565959576053,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.98107587019585,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.072919848197634,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.68229983403806,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.092389342116928,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292289,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-snes": {
+        "style": "snes",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2000.6281526751281,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 150.91659595760538,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019584,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.679114460650453,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.697786578861887,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.62750380276721,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 34.06875993415419,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-phone": {
+        "style": "phone",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1988.5385595895461,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 179.69574561793118,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 190.32895002100932,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 3.4565308443374425,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 8.641327110843653,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 4.16053084433744,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 10.401327110843681,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-ipod": {
+        "style": "ipod",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2006.4848260679685,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 141.23659595760583,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019588,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.66857985325471,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.26251292927515,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.656282323187845,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-hanafuda": {
+        "style": "hanafuda",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1955.7114571292486,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 162.74511784696276,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.95237883109152,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 21.531753557471472,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 52.95326863258498,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914535,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918448,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-talavera": {
+        "style": "talavera",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1996.7254994089185,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 141.23659595760483,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019412,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125465,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441065,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 36.75301263568437,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 91.8825947676327,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-gameboy": {
+        "style": "gameboy",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2007.9294617482312,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 152.75659595760513,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.98107587019413,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.072919848197607,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.682299834038048,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.0923893421169035,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292356,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-snes": {
+        "style": "snes",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2000.6281526751332,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 150.91659595760513,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019414,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.679114460650421,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.69778657886193,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.627503802767281,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 34.06875993415426,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-phone": {
+        "style": "phone",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1988.5385595895473,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 179.6957456179299,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 190.32895002100736,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 3.45653084433745,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 8.641327110843681,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 4.160530844337464,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 10.401327110843695,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-ipod": {
+        "style": "ipod",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2006.484826067971,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 141.23659595760483,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019412,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.668579853254656,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.26251292927514,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.65628232318785,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-hanafuda": {
+        "style": "hanafuda",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": true,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1955.7114571335294,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 162.7451178469623,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.95237883109138,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 21.531753557480567,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 52.95326863258403,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914551,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918362,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      }
+    },
+    "display": {
+      "left-talavera": {
+        "style": "talavera",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1989.3919152977141,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 147.60709595760494,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019645,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125474,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441016,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 37.71608860639796,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.29209041771857,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-gameboy": {
+        "style": "gameboy",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2001.2862574643182,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 159.29449595760377,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.62107587019642,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.178224132109007,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.4558390084233,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.092389342116928,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292289,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-snes": {
+        "style": "snes",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1994.157223487182,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 157.28709595760384,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019641,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.679114460650453,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.697786578861887,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.727932990708142,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 33.85278318588706,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-phone": {
+        "style": "phone",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1979.5867005672164,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 186.89730214111717,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 187.7856986374347,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 4.287587367527521,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 6.0980757272645265,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 5.079776820303762,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 6.752387935973526,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-ipod": {
+        "style": "ipod",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2000.1143260679603,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 147.60709595760494,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019645,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.66857985325471,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.26251292927515,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.656282323187845,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-hanafuda": {
+        "style": "hanafuda",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1948.6229730521213,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 169.11561784696164,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.9523788310921,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 22.249737634624644,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 50.32353379481975,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914535,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918448,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-talavera": {
+        "style": "talavera",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1989.3919152977107,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 147.607095957605,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019446,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125465,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441065,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 37.71608860639792,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.2920904177198,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-gameboy": {
+        "style": "gameboy",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2001.286257464324,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 159.29449595760494,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.62107587019446,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.178224132109166,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.455839008421904,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.0923893421169035,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292356,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-snes": {
+        "style": "snes",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1994.1572234871874,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 157.28709595760506,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019448,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.679114460650421,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.69778657886193,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.727932990711382,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 33.8527831858865,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-phone": {
+        "style": "phone",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1979.5867005672046,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 186.89730214111907,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 187.78569863743184,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 4.287587367528032,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 6.098075727264346,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 5.079776820304319,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 6.75238793597361,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-ipod": {
+        "style": "ipod",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2000.114326067972,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 147.607095957605,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019446,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.668579853254656,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.26251292927514,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.65628232318785,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-hanafuda": {
+        "style": "hanafuda",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1948.6229730563316,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 169.1156178469624,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.95237883109172,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 22.249737634625042,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 50.32353379481793,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914551,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918362,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      }
+    },
+    "window": {
+      "left-talavera": {
+        "style": "talavera",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1996.7254994089174,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 126.69137095760577,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019588,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125474,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441016,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 36.75301263568439,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 91.8825947676331,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-gameboy": {
+        "style": "gameboy",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2007.9294617482324,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 138.21137095760545,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.98107587019585,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.072919848197634,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.68229983403806,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.092389342116928,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292289,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-snes": {
+        "style": "snes",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2000.6281526751281,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 136.3713709576053,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019584,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.679114460650453,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.697786578861887,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.62750380276721,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 34.06875993415419,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-phone": {
+        "style": "phone",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1988.5385595895452,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 165.1505206179312,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 190.32895002100932,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 3.4565308443374425,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 8.641327110843653,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 4.16053084433744,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 10.401327110843681,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-ipod": {
+        "style": "ipod",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2006.4848260679685,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 126.69137095760577,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019588,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.66857985325471,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.26251292927515,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.656282323187845,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-hanafuda": {
+        "style": "hanafuda",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1955.7114571292486,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 148.1998928469628,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.95237883109152,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 21.531753557471472,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 52.95326863258498,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914535,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918448,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-talavera": {
+        "style": "talavera",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1996.7254994089185,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 126.69137095760489,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019412,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125465,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441065,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 36.75301263568437,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 91.8825947676327,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-gameboy": {
+        "style": "gameboy",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2007.9294617482312,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 138.21137095760503,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.98107587019413,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.072919848197607,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.682299834038048,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.0923893421169035,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292356,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-snes": {
+        "style": "snes",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2000.6281526751332,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 136.3713709576052,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019414,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.679114460650421,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.69778657886193,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.627503802767281,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 34.06875993415426,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-phone": {
+        "style": "phone",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1988.5385595895473,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 165.15052061793003,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 190.32895002100736,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 3.45653084433745,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 8.641327110843681,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 4.160530844337464,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 10.401327110843695,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-ipod": {
+        "style": "ipod",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2006.484826067971,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 126.69137095760489,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019412,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.668579853254656,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.26251292927514,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.65628232318785,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-hanafuda": {
+        "style": "hanafuda",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.59,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 1955.7114571335298,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 148.1998928469622,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.95237883109138,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 21.531753557480567,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 52.95326863258403,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914551,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918362,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.59,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      }
+    },
+    "roof": {
+      "left-talavera": {
+        "style": "talavera",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2080.829899425341,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 183.1723950833993,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019588,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125505,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441016,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 36.75301263568447,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 91.8825947676331,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-gameboy": {
+        "style": "gameboy",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2092.0338796012593,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 194.69239508339837,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.98107587019585,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.072919848197632,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.68229983403806,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.092389342116928,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292289,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-snes": {
+        "style": "snes",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2084.7325705281523,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 192.85239508339848,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019584,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.67911446065045,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.697786578861887,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.62750380276721,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 34.06875993415419,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-phone": {
+        "style": "phone",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2072.6429774425687,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 221.6315447437252,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 190.32895002100932,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 3.4565308443374425,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 8.641327110843653,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 4.16053084433744,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 10.401327110843681,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-ipod": {
+        "style": "ipod",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2090.589243920996,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 183.1723950833993,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019588,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.66857985325471,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.262512929275152,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.656282323187845,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-hanafuda": {
+        "style": "hanafuda",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2039.6538189801947,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 204.68091697275653,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.9523788310918,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 21.693809559520083,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 52.95326863258498,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914545,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918448,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-talavera": {
+        "style": "talavera",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2080.8298994253423,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 183.17239508339756,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019412,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125496,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441065,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 36.75301263568445,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 91.8825947676327,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-gameboy": {
+        "style": "gameboy",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2092.0338796012607,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 194.692395083398,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.98107587019413,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.072919848197605,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.682299834038048,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.0923893421169035,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292356,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-snes": {
+        "style": "snes",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2084.7325705281587,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 192.85239508339802,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019414,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.679114460650421,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.69778657886193,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.627503802767281,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 34.06875993415426,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-phone": {
+        "style": "phone",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2072.6429774425733,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 221.6315447437227,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 190.32895002100736,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 3.45653084433745,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 8.641327110843681,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 4.160530844337464,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 10.401327110843695,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-ipod": {
+        "style": "ipod",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2090.5892439209993,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 183.17239508339756,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019412,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.668579853254656,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.262512929275141,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.65628232318785,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-hanafuda": {
+        "style": "hanafuda",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.1,
+          "DisplayShiftY": 2.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2039.6538189847802,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 204.6809169727552,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.95237883109132,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 21.693809559537193,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 52.95326863258403,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914561,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918362,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.09999999999999432,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      }
+    },
+    "combined": {
+      "left-talavera": {
+        "style": "talavera",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2067.187783373889,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 174.13167008339786,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019645,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125505,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441016,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 38.54454715110061,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.29209041771858,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-gameboy": {
+        "style": "gameboy",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2079.6760909871,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 185.96307008339602,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.62107587019642,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.26880846235535,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.4558390084233,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.092389342116928,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292289,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-snes": {
+        "style": "snes",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2072.69525064091,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 183.81167008339608,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019641,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.67911446065045,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.697786578861887,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.814323690012186,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 33.85278318588706,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-phone": {
+        "style": "phone",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2055.990594530059,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 214.13676359868444,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 187.7856986374347,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 5.002474699303991,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 6.0980757272645265,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 5.870526046941629,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 6.752387935973526,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-ipod": {
+        "style": "ipod",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2078.7387439209906,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 174.13167008339786,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019645,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.66857985325471,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.262512929275152,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.656282323187845,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "left-hanafuda": {
+        "style": "hanafuda",
+        "side": "left",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2026.467714191555,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 195.64019197275465,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.95237883109237,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 23.029414348202774,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 50.32353379481975,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914545,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918448,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-talavera": {
+        "style": "talavera",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2067.1877833738804,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 174.13167008339784,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019446,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 1.1359999029125496,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 2.8399992718441065,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 38.544547151100495,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.29209041771979,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-gameboy": {
+        "style": "gameboy",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2079.6760909871023,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 185.963070083398,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 122.62107587019446,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 9.268808462355674,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 22.455839008421904,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 6.0923893421169035,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 15.230973355292356,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-snes": {
+        "style": "snes",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2072.695250640907,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 183.81167008339813,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 118.38107587019448,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 10.679114460650421,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 26.69778657886193,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 13.814323690018137,
+            "solids": 4,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 33.8527831858865,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-phone": {
+        "style": "phone",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2055.9905945300443,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 214.13676359868754,
+            "solids": 12,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 187.78569863743184,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 5.002474699304879,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 6.098075727264346,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 5.870526046942482,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 6.75238793597361,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-ipod": {
+        "style": "ipod",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2078.7387439209983,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 174.13167008339784,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 94.18107587019446,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 19.86743194130188,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 49.668579853254656,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 8.262512929275141,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 20.65628232318785,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      },
+      "right-hanafuda": {
+        "style": "hanafuda",
+        "side": "right",
+        "parameters_mm": {
+          "FrameTop": 13.99,
+          "FrameRoof": 1.4,
+          "WindowMargin": 0.3,
+          "DisplayShiftY": 3.4
+        },
+        "top_face_difference_mm2": {
+          "body": 0.0,
+          "detail": 0.0,
+          "accent": 0.0,
+          "secondary": 0.0
+        },
+        "saved_planar_approval_compared": false,
+        "material_parts": [
+          {
+            "role": "body",
+            "volume_mm3": 2026.467714196061,
+            "solids": 1,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 0.0,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "detail",
+            "volume_mm3": 195.64019197275547,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 147.95237883109166,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "accent",
+            "volume_mm3": 23.029414348203595,
+            "solids": 2,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 50.32353379481793,
+            "missing_backing_volume_mm3": 0.0
+          },
+          {
+            "role": "secondary",
+            "volume_mm3": 35.86303760914561,
+            "solids": 3,
+            "closed_mesh": true,
+            "ordinary_backing_probe_area_mm2": 89.65759201918362,
+            "missing_backing_volume_mm3": 0.0
+          }
+        ],
+        "pair_intersections_mm3": {
+          "body/detail": 0.0,
+          "body/accent": 0.0,
+          "body/secondary": 0.0,
+          "detail/accent": 0.0,
+          "detail/secondary": 0.0,
+          "accent/secondary": 0.0
+        },
+        "union_removed_volume_mm3": 0.0,
+        "union_added_volume_mm3": 0.0,
+        "glass_gap_mm": 0.29999999999999005,
+        "roof_mm": 13.99,
+        "ordinary_inlay_depth_mm": 0.4,
+        "minimum_ordinary_backing_mm": 0.8,
+        "physical_acceptance": false
+      }
+    }
+  },
+  "usb": {
+    "L_Case_level_base": 0.0,
+    "L_Case_level_plate": 0.0,
+    "L_Case_solid_base": 0.0,
+    "L_Case_solid_plate": 0.0,
+    "L_Case_rim_base": 0.0,
+    "L_Case_rim_plate": 0.0,
+    "L_Case_terrace_base": 0.0,
+    "L_Case_terrace_plate": 0.0,
+    "R_Case_level_base": 0.0,
+    "R_Case_level_plate": 0.0,
+    "R_Case_solid_base": 0.0,
+    "R_Case_solid_plate": 0.0,
+    "R_Case_rim_base": 0.0,
+    "R_Case_rim_plate": 0.0,
+    "R_Case_terrace_base": 0.0,
+    "R_Case_terrace_plate": 0.0
+  },
+  "diodes": {
+    "left": {
+      "count": 18,
+      "underside_bounds_mm": [
+        28.099999999999998,
+        -84.07555170465741,
+        2.5399999999999996,
+        122.54921873043536,
+        -14.2999999,
+        3.8
+      ],
+      "nominal_floor_z_mm": 1.4,
+      "nominal_floor_gap_mm": 1.1399999999999997
+    },
+    "right": {
+      "count": 18,
+      "underside_bounds_mm": [
+        37.45078026956464,
+        -84.07555170465741,
+        2.5399999999999996,
+        131.9,
+        -14.2999999,
+        3.8
+      ],
+      "nominal_floor_z_mm": 1.4,
+      "nominal_floor_gap_mm": 1.1399999999999997
+    }
+  },
+  "physical_acceptance": false,
+  "complete_display_chain_y_delta_mm": -1,
+  "combined_saved_reopened": true,
+  "unsupported_roof_rejected": true,
+  "reference_restored": true,
+  "source_unchanged": true,
+  "passed": true
+}

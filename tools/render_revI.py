@@ -54,13 +54,15 @@ def render(kind):
         stack=kind=='stack';lid_dx=32 if stack else 0;lid_dz=13 if stack else 0
         if kind=='corner':
             part(side,'case-rim-base',(.64,.12,.23));part(side,'case-rim-plate',plate_color)
-            part(side,'frame-flan',(.64,.12,.23))
+            part(side,'frame-'+cfg['frames'][side]['style'],(.64,.12,.23))
         else:
             part(side,'tray',body);part(side,'key-plate',plate_color)
             colors={'body':cfg['frames'][side]['color'],**cfg['frames'][side]['accents']}
             for volume in m['frameVariants'][side+'-'+cfg['frames'][side]['style']]['material_parts']:
                 actor(mesh('mechanical/revI/'+volume['stl']),(offset+lid_dx,0,lid_dz),rgb(colors[volume['role']]))
         part(side,'pcb',(.10,.32,.26))
+        part(side,'diodes',(.14,.15,.16))
+        part(side,'hotswap-sockets',(.23,.23,.23))
         part(side,'cradle',(.30,.38,.39),10 if stack else 0)
         part(side,'battery-retainer',(.30,.38,.39),15 if stack else 0)
         part(side,'battery',(.67,.70,.71),10 if stack else 0)
@@ -113,7 +115,7 @@ def render(kind):
     sub=('Left half  /  KLP LAME  /  Orthographic profile' if kind=='side' else '36 keys  /  KLP LAME  /  Two nice!view displays  /  24 mm bay') if kind!='stack' else 'Adafruit 1570 or 301230. Captured battery cage and magnetic frame.'
     sub='Contour / Original thumb angles / Local tangent corners' if kind=='detail' else sub
     if kind=='level':sub=f"Frame + upper shell / {m['parameter_values_mm']['FrameTop']:g} mm / Glass recessed 0.20 mm"
-    if kind=='corner':sub='Color rim + Flan frame / Shared R2.4 corner / Actual CAD meshes'
+    if kind=='corner':sub='Color rim + selected frame / Shared R2.4 corner / Actual CAD meshes'
     if kind!='corner':label(sub,108,1334,25,(.37,.44,.41))
     label('RevI CAD study. Wiring, final connectors, fit and operation remain untested.',108,60,24,(.36,.42,.39))
     cam=ren.GetActiveCamera();cam.ParallelProjectionOn()
@@ -141,8 +143,10 @@ for kind in ['assembled','top','side','stack','detail','corner','level']:render(
 receipt={'revision':'I','model_sha256':hashlib.sha256((ROOT/'design/revI.json').read_bytes()).hexdigest(),
          'layout_sha256':hashlib.sha256((ROOT/'design/layout.json').read_bytes()).hexdigest(),
          'renderer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+         'sources':[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in
+                    ['design/revI.json','design/layout.json','keycaps/catalog.json','components/switches.json','tools/render_revI.py']],
          'meshes':[{'path':p,'sha256':h} for p,h in used.items()],
          'views':views,'geometry_source':'generated CAD, no image retouching',
          'illustrative':['component envelopes','feet','screen artwork','unmeasured cap stem-tip datum Z=11.7'],
-         'unresolved':['battery cable routing','routed PCB','exact sockets and connectors','physical fit and tests']}
+         'unresolved':['battery cable routing','routed PCB','purchased component tolerances','physical fit and tests']}
 (ROOT/'validation/revI-render.json').write_text(json.dumps(receipt,indent=2)+'\n')

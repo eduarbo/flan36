@@ -11,30 +11,44 @@ const make=createFrameFinishes(geometryFor,color=>({color}));
 const probes={flan:[[123,60,3,'Custard'],[123,64,1,'Saucer']],tape:[[115.4,58.25,3,'Reel'],[128,13,2,'Diagonal stripe'],[123,62.2,1,'Slat']],orbit:[[122.8,60.4,3,'Ivory disc'],[124,64,2,'Crescent']],manga:[[132,65,2,'Corner'],[116,59.9,1,'Dot 1'],[121,59.9,1,'Dot 2'],[116,64.1,1,'Dot 3'],[121,64.1,1,'Dot 4']],talavera:[[123,60.4,2,'Concave center'],[118,57.7,3,'Teardrop']],gameboy:[[117,58,1,'D-pad'],[130.1,56.3,2,'A']],nes:[[130.5,58.7,2,'A']],snes:[[127.8,62.55,2,'B']],phone:[[116,59.2,1,'Key']],walkman:[[129,57.9,3,'Play']],ipod:[[123,60.4,3,'Center']]};
 function triangleSet(g){const ids=Array.from(g.index.array),t=[];for(let i=0;i<ids.length;i+=3)t.push(ids.slice(i,i+3).join(','));return t.sort();}
 const roof=scene.measurements.cover_top_mm;
-const r4=JSON.parse(fs.readFileSync(path.join(root,'design/proposals/frame-master-r4/master.json')));
+const masters=new Map();
+function approvedMaster(style){
+ const spec=finishes.styles[style];assert(spec,style+' must have an approved material contract');
+ const source=spec.artwork_source||(spec.approved_master==='R4'?'design/proposals/frame-master-r4/master.json':null);
+ assert(source,style+' has no supported approved artwork source');
+ if(!masters.has(source)){
+  const bytes=fs.readFileSync(path.join(root,source));
+  if(spec.artwork_source_sha256)assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),spec.artwork_source_sha256);
+  const master=JSON.parse(bytes);assert(master.common&&master.styles[style]);masters.set(source,master);
+ }
+ const master=masters.get(source);assert(master.styles[style],style+' is absent from its approved master');return master;
+}
 // Check the actual three approved thickness domains, including shared boundaries.
 // The former uniform 0.4 mm test incorrectly rejected the through-color collar.
 function materialFloor(style,side,x,z){
- if(finishes.styles[style].approved_master!=='R4')return roof-.4;
- const localX=side==='left'?x-111:49-x,localY=z-11,epsilon=1e-4;
+ const master=approvedMaster(style),common=master.common,[originX,originY]=master.left_xy;
+ const localX=side==='left'?x-originX:finishes.mirror_sum_x_mm-originX-x,localY=z-originY,epsilon=1e-4;
  const inside=(b,e)=>localX>=b[0]-e&&localX<=b[2]+e&&localY>=b[1]-e&&localY<=b[3]+e;
- const collar=inside(r4.common.relief_bounds_mm,epsilon)&&!inside(r4.common.header_cover_bounds_mm,-epsilon);
- return collar?r4.common.relief_top_z_mm:roof-.4;
+ const collar=inside(common.relief_bounds_mm,epsilon)&&!inside(common.header_cover_bounds_mm,-epsilon);
+ return collar?common.relief_top_z_mm:roof-.4;
 }
 function assertMaterialPoint(style,side,x,y,z){assert.ok(y>=materialFloor(style,side,x,z)-1e-4&&y<=roof+1e-4,`${side} ${style}: color must stay within its approved thickness domain`);}
 // Negative controls reject excess material below the ordinary face and pin cover.
-for(const side of ['left','right']){
- const x=local=>side==='left'?111+local:49-local;
- assert.throws(()=>assertMaterialPoint('talavera',side,x(2),13,61));
- assert.throws(()=>assertMaterialPoint('talavera',side,x(12),13,51));
- assertMaterialPoint('talavera',side,x(4.3),12.725,31);
- assert.throws(()=>assertMaterialPoint('talavera',side,x(4.3),12.5,31));
+for(const style of ['talavera','hanafuda'])for(const side of ['left','right']){
+ const master=approvedMaster(style),[originX,originY]=master.left_xy,common=master.common;
+ const x=local=>side==='left'?originX+local:finishes.mirror_sum_x_mm-originX-local;
+ const test=(localX,y,localY)=>assertMaterialPoint(style,side,x(localX),y,originY+localY);
+ assert.throws(()=>test(2,roof-.6,50)); // Ordinary face.
+ assert.throws(()=>test(12,roof-.6,40)); // Thin header cover.
+ test(4.3,common.relief_top_z_mm,20); // Through-color collar.
+ assert.throws(()=>test(4.3,common.relief_top_z_mm-.2,20));
 }
 Object.assign(probes,{
  talavera:[[123,59.6,2,'R4 star'],[119.5,56.5,3,'R4 petal']],
  gameboy:[[117.4,57.45,1,'R4 D-pad'],[130.2,55.7,2,'R4 A']],
  snes:[[127.5,62.1,2,'R4 B']],phone:[[116.8,57.75,1,'R4 Key00']],
- ipod:[[123,59.6,3,'R4 center'],[126,59.6,0,'R4 wheel void'],[127.5,59.6,2,'R4 wheel']]
+ ipod:[[123,59.6,3,'R4 center'],[126,59.6,0,'R4 wheel void'],[127.5,59.6,2,'R4 wheel']],
+ hanafuda:[[123,13.6,2,'R8 header sun'],[123,54.5,2,'R8 rising sun'],[119,61.5,1,'R8 mountain'],[123,58,0,'R8 snowcap'],[123,65,3,'R8 pine ground']]
 });
 function topRole(g,x,z){const p=g.attributes.position;for(const group of g.groups)for(let i=group.start;i<group.start+group.count;i+=3){const a=[0,1,2].map(j=>g.index.getX(i+j));if(a.some(n=>Math.abs(p.getY(n)-roof)>.001))continue;const sides=a.map((v,j)=>{const w=a[(j+1)%3];return (p.getX(w)-p.getX(v))*(z-p.getZ(v))-(p.getZ(w)-p.getZ(v))*(x-p.getX(v));});if(sides.every(n=>n>=-1e-5)||sides.every(n=>n<=1e-5))return group.materialIndex;}return null;}
 const checked=[];

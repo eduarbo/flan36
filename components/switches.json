@@ -78,6 +78,7 @@
       8.248944371039995,
       -0.41832133496118695
     ],
-    "status": "Source coordinates only; assembly placement unqualified"
+    "status": "Source coordinates preserved for inspection; nominal assembly registration uses both mounting bores and both solder terminals. See validation/revI-hotswap-registration.json. Physical fit remains unqualified.",
+    "registration_recipe": "tools/freecad/hotswap_geometry.py"
   }
 }

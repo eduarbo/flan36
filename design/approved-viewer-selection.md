@@ -5,9 +5,10 @@ Flan, Tape, Orbit, Manga, NES and Walkman therefore remained selectable, and Fla
 remained the fallback. Tape still had its old border; it was not repaired.
 
 The active viewer now derives its catalog from `frame-selection.json`. It delivers
-only Talavera (default), Game Boy, SNES, Phone and iPod, including previews and
-print assets. Hanafuda remains approved and pending integration. No new artwork
-or mechanical geometry is introduced by this correction.
+only Talavera (default), Game Boy, SNES, Phone, iPod and Hanafuda, including
+previews and print assets. Hanafuda uses its approved R8 paths; the other five
+retain their approved R4 artwork. Current geometry and acceptance are recorded
+in the [October correction report](../docs/reviews/2026-10-07-corrections.md).
 
 Saved and imported retired shapes resolve directly to Talavera. Explicit colors,
 implicit old accent palettes, cases, batteries and caps are preserved. Startup

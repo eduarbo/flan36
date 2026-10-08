@@ -6,15 +6,15 @@ from PySide import QtWidgets
 import FreeCAD as App
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from configuration import apply,extract
-choice,ok=QtWidgets.QInputDialog.getItem(None,'Filo36 · configuration','Action',['Import viewer configuration','Export configuration to viewer'],0,False)
+choice,ok=QtWidgets.QInputDialog.getItem(None,'Flan36 · configuration','Action',['Import viewer configuration','Export configuration to viewer'],0,False)
 if ok:
     try:
         if choice.startswith('Import'):
-            path,_=QtWidgets.QFileDialog.getOpenFileName(None,'Filo36 configuration','','JSON (*.json)')
+            path,_=QtWidgets.QFileDialog.getOpenFileName(None,'Flan36 configuration','','JSON (*.json)')
             if path:
                 margin=apply(App.ActiveDocument,json.loads(Path(path).read_text()))
                 QtWidgets.QMessageBox.information(None,'Applied',f'Conservative clearance: {margin:.3f} mm. Use Save As to keep your edits. Physical fit is untested.')
         else:
-            path,_=QtWidgets.QFileDialog.getSaveFileName(None,'Save configuration','Filo36-config.json','JSON (*.json)')
+            path,_=QtWidgets.QFileDialog.getSaveFileName(None,'Save configuration','Flan36-config.json','JSON (*.json)')
             if path:Path(path).write_text(json.dumps(extract(App.ActiveDocument),indent=2)+'\n')
     except Exception as error:QtWidgets.QMessageBox.critical(None,'Configuration was not applied',str(error))

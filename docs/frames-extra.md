@@ -2,7 +2,7 @@
 
 Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and click a preview. Each thumbnail uses the actual native material geometry. **Talavera** is the default; switching designs preserves the camera, colors and other selections.
 
-![Five approved designs rendered from native meshes](images/revI-approved-r4.png)
+![Approved native frame designs rendered from native meshes](images/revI-approved-r4.png)
 
 | Approved R4 design | Motif |
 |---|---|
@@ -12,7 +12,7 @@ Choose **Frame** in the [3D explorer](https://eduarbo.github.io/flan36/) and cli
 | **2000s Phone** | Navy faceplate, silver keypad and call key. |
 | **iPod** | White face, silver click wheel and continuous screen border. |
 
-**The selected collection is Talavera, Game Boy, SNES, Phone, iPod and Hanafuda.** Hanafuda retains its R6 artwork and awaits integration. [The current gallery](frame-proposals.md) contains only these six approved designs; no new proposals await approval. The main explorer and print kit include only the five installed approved designs. Flan, Tape, Orbit, Manga, NES and Walkman are retired; saved files substitute Talavera while preserving colors and other choices.
+**The selected collection is Talavera, Game Boy, SNES, Phone, iPod and Hanafuda.** Hanafuda retains its approved R6/R8 artwork and is installed. [The current gallery](frame-proposals.md) contains only these six approved designs; no new proposals await approval. The main explorer and print kit include all six installed approved designs. Flan, Tape, Orbit, Manga, NES and Walkman are retired; saved files substitute Talavera while preserving colors and other choices.
 
 All designs use solid colors, without gradients or raised details. **Restore design colors** applies the exact palette. HEX editing and coordinated case/key themes remain available.
 
@@ -64,6 +64,6 @@ python3 tools/freecad/run_macos.py tools/freecad/check_approved_frames.py \
 
 The installers preserve their inputs, saved configuration, caps and deferred artwork, then save and reopen the candidate. The exporter checks every frame, case and battery variant. [Current installation](../validation/revI-display-seam-native.json) · [Current export checks](../validation/revI-mechanical.json) · [Delivery binding](../validation/revI-approved-frames.json) · [Seam review](../validation/revI-display-seam-review.json) · [Historical seam public readback](../validation/revI-display-seam-public.json). The [R4 installation](../validation/revI-approved-frames-native.json) and [R4 public readback](../validation/revI-approved-frames-public.json) remain historical evidence.
 
-Render the five-design sheet with `python tools/render_frames.py --approved-only --output docs/images/revI-approved-r4.png --report validation/revI-approved-frames-render.json`; the default render command produces the full eleven-design gallery. Run `node viewer/frame-collection-check.cjs` to verify the rebuilt active viewer and its ten registered frame assemblies. The earlier `check_approved_3mf.py` and `check_approved_frames.py` delivery scripts bind the historical eleven-design snapshot, not this filtered viewer. [Selection correction and checks](../design/approved-viewer-selection.md). The browser check needs Playwright and Chromium, as described in the [CAD guide](cad.md).
+Render the six-design sheet with `python tools/render_frames.py --approved-only --output docs/images/revI-approved-r4.png --report validation/revI-approved-frames-render.json`; the default command also renders the selected collection; `--include-historical` is for provenance review. Run `node viewer/frame-collection-check.cjs` to verify the rebuilt active viewer and its twelve registered frame assemblies. The earlier `check_approved_3mf.py` and `check_approved_frames.py` delivery scripts bind the historical eleven-design snapshot, not this filtered viewer. [Selection correction and checks](../design/approved-viewer-selection.md). The browser check needs Playwright and Chromium, as described in the [CAD guide](cad.md).
 
 Earlier collection installers and receipts describe older snapshots. Do not run the old artwork generator over the approved master. Ignored `build/approved-r4/` contains reproducible candidates, logs and test output from the commands above; final evidence lives in `validation/`.

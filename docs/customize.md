@@ -42,20 +42,20 @@ Older saved configurations keep their explicit rotations. In **Caps**, **Fix top
 
 ## Print a themed display frame
 
-![Five approved native frame designs](images/revI-approved-r4.png)
+![Six approved native frame designs](images/revI-frame-gallery.png)
 
 Open **Frame** in the directory, then choose Both halves, Left or Right, then click a theme thumbnail to apply it immediately. Each preview shows that actual mesh with its original palette. Switching shapes preserves customized colors. Use **Restore design colors** to apply the original palette. **Body** changes the shell color without changing the accent colors; **Restore design colors** restores the palette for the selected half or halves. You can also select the frame directly on the model to open its sidebar options for that half.
 
-See the [five installed frame designs](frames-extra.md): Talavera, Game Boy, SNES, 2000s Phone and iPod. All use solid colors, with Talavera as the default. Hanafuda is approved and awaits integration.
+See the [six installed frame designs](frames-extra.md): Talavera, Game Boy, SNES, 2000s Phone, iPod and Hanafuda. All use solid colors, with Talavera as the default.
 
-The controls are decorative. No logos, extra switches or LEDs are required. All five installed styles use the same window, cavity, three magnetic stations and independent display support. Each decorated design includes a closed shell plus complementary color volumes for co-printing. The assembled surface is flush and stays within the 24 mm bay. A fused single-material STL is also included.
+The controls are decorative. No logos, extra switches or LEDs are required. All six installed styles use the same window, cavity, three magnetic stations and independent display support. Each decorated design includes a closed shell plus complementary color volumes for co-printing. The assembled surface is flush and stays within the 24 mm bay. A fused single-material STL is also included.
 
 | Interface | Nominal dimension |
 |---|---:|
 | Frame envelope | 24 × 56 mm; R2.4 at the shared case corner beside USB, R1.2 at the other corners |
 | Plain and decorated top | Same height; see the [current stack](level-stack.md) |
-| Structural roof / side wall | 1.2 / 1.2 mm |
-| Glass margin, each side | 0.4 mm |
+| Structural roof / side wall | 1.4 / 1.2 mm |
+| Glass margin, each side | 0.10 mm |
 | Magnet / steel pin | Ø2 × 3 / Ø2 × 4 mm |
 | Magnetic gap / guide radial clearance | 0.9 / 0.2 mm nominal |
 | R4 surface inlay / backing | 0.4 / 1.0 mm outside display relief; co-print aligned volumes |
@@ -68,7 +68,7 @@ Open the native source and expand **Construction**. Duplicate a supplied theme, 
 
 Keep decorations within the common envelope. Preserve the magnetic stations at left **(113, 52.8)**, **(133, 52.8)** and **(122.8, 64.7)**, the hidden structural screw reliefs at **(114.5, 65.5)** and **(130.6, 66.5)**, the current reset tool opening, and the glass window. Right-half coordinates mirror across X=80 mm. For the five approved R4 designs, preserve the exact ordinary, collar and pin-cover domains in the [master](../design/proposals/frame-master-r4/master.json). Ordinary inlays replace the upper 0.4 mm over 1.0 mm backing; the collar and pin cover use through-color volumes. All finish at Z13.59 mm.
 
-Use the viewer’s JSON for the five installed shapes. To share a new shape, save your FCStd, export STEP/STL, rebuild the viewer and repeat collision checks; JSON alone cannot carry arbitrary geometry.
+Use the viewer’s JSON for the six installed shapes. To share a new shape, save your FCStd, export STEP/STL, rebuild the viewer and repeat collision checks; JSON alone cannot carry arbitrary geometry.
 
 ### First print
 
@@ -102,7 +102,7 @@ Choose **Base → Solid / Color rim / Terrace** in the explorer. Each half has i
 
 ## Coordinated themes and print kits
 
-See [Make it yours](themes-printing.md) for twenty-seven palettes, linked frame/rim colors, individual color regions, device saving and the selected-parts print kit.
+See [Make it yours](themes-printing.md) for twenty-eight palettes, linked frame/rim colors, individual color regions, device saving and the selected-parts print kit.
 
 ### Copy and paste colors
 

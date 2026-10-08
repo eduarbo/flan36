@@ -18,7 +18,9 @@ def selected_catalog(source, finishes, selection):
     # then replace only its shape. Historical IDs formerly fell back to Flan.
     catalog['retired_frame_palette_styles']={key:source.get('retired_frame_styles',{}).get(key,key) for key in sorted(retired)}
     catalog['pending_frame_styles']=[key for key in selection['selected'] if key not in active]
-    colors=finishes['styles'][default]['colors']
+    # Native FreeCAD extraction serializes HEX in lowercase. Keep the generated
+    # default byte-compatible while imported user colors retain their own spelling.
+    colors={role:color.lower() for role,color in finishes['styles'][default]['colors'].items()}
     for side in ['left','right']:
         config=catalog['default_configuration'];config['frames'][side]={'style':default,'color':colors['body'],'accents':{k:colors[k] for k in ['detail','accent','secondary']}}
         case=config['cases'][side]

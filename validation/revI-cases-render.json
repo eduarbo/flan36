@@ -1,12 +1,12 @@
 {
-  "viewer_sha256": "31eb89f14b7b1257b87424b60a4b78e6f6bbdbd743cda6054a4c6ea662520d37",
-  "checker_sha256": "e3b1b5bea5d977976cf23a0020625aa128419162337d7c9d5fc7659bab10bf6f",
+  "viewer_sha256": "4e15a81e06dfb3abb190ffe3b99e5244b7760f6ec51b88198b9604c3754cbff8",
+  "checker_sha256": "314981bdeab4748eb82fefe216e0713dca86b49fa78a2ef1fc6b8d32ca9313a3",
   "images": {
-    "level": "ff29fcf98d83f0a63c06e67ea91d2f7f824a411a6808e112ad3a09e713a35850",
-    "solid": "4d07eda00bc127807bb8edfd7655cd21ead22d7d97c3c5145368177aad85502a",
-    "rim": "4b5759fadb6211cbfffee04f9587f1cec261de9a0aca56abe8e97218dcec7a8a",
-    "terrace": "8d53f2112c99dc68a3335f2532f4327da36e6a3e51d2f1f3eeed7b84b617fd8f",
-    "rim-open": "36ed4097d170d3ab0764cb8476d5be0164dccadcd7843f3a383a83970547c4f3"
+    "level": "ff607a9cb640e87de7f8d771387e493ab03c07360a474f9926c0516cc3ad753e",
+    "solid": "f20a213fbb5344bc58e1c79e02206220a75cbf0ecf98a5fbf11b9236940ce47b",
+    "rim": "ddb59ba18903c39a554f1aa5a43d8a9a791a40d21aacbd04539d7d23a9c96b19",
+    "terrace": "7b88212bb3491093f9786dbed8aa7430e1ff812cae523d02129c107fe48bbccf",
+    "rim-open": "f471e6f19737f93de9eb32ba05ab6a503f844d82fba0b431f0f7dda6788eb32b"
   },
   "source": "Unretouched screenshots of the actual selected native STL meshes in the viewer"
 }

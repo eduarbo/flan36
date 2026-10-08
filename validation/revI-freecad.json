@@ -1,5 +1,6 @@
 {
-  "source_sha256": "b50e747b660825b202fcdaf8f8ddc3ea70913f465d488bbcf155e8ed1058a1fc",
+  "source_sha256": "9901360f74052f3892c20c9b81e839aeec534747927e547d31bdb047c8481029",
+  "checker_sha256": "adab0ebf5e1a1c0a6d59fd8e6347a25daf2461467df576c5a0f62f95f53b81f7",
   "native_features_no_custom_proxy": true,
   "configuration_roundtrip": true,
   "mixed_battery_profiles_roundtrip": true,
@@ -9,17 +10,17 @@
   "all_36_key_centres_unchanged": true,
   "stem_tip_datum_mm": 11.7,
   "FrameTop_edit_mm": [
-    14.8,
-    17.2
+    13.59,
+    13.99
   ],
   "preset": "saddle-sculpted",
   "thumb_variant": "MX-size Normal 90deg",
   "frames": [
-    "handheld",
-    "tv"
+    "gameboy",
+    "talavera"
   ],
   "invalid_configuration_rejected_atomically": true,
   "xy_margin_mm": 0.247659,
   "source_file_unchanged": true,
-  "opaque_side_wall_samples": 264
+  "opaque_side_wall_samples": 312
 }

@@ -14,7 +14,7 @@ so earlier documents without the marker still reproduce their original geometry.
 Acceptance covers the saved/reopened native source, exact material regions,
 STL/STEP exports, the online/offline viewer and its downloaded print kit. Asymmetric
 Game Boy and SNES features must match by translation and reject the former mirrored
-arrangement. Hanafuda remains pending integration; retired shapes stay excluded.
+arrangement. Hanafuda uses the same reading direction; retired shapes stay excluded.
 
 ![Both Game Boy frames read in the same direction](../docs/images/revI-frame-orientation.png)
 

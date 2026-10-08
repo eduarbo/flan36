@@ -1,0 +1,54 @@
+{
+  "snapshot_sha256": "19d97ba86e420c9cee95e6b2b59373d0f8c9f80e22f0fe6532b17b3ec1a99bd2",
+  "inputs": [
+    {
+      "path": "tools/adopt_audit_repairs.py",
+      "sha256": "e855a7fc56eb8667fad0b1b645144c71699f396a747e923200c582e7819cdae4"
+    },
+    {
+      "path": "tools/check_audit_adoption.py",
+      "sha256": "001cc10dce686e85f827c475ff8fab5ed2fe5f8ee2ef468f05ff0fb93c7b9f59"
+    },
+    {
+      "path": "tools/record_audit_completion.py",
+      "sha256": "a75ab2d25dee862c0b613080ce596b0c34fc9bd4d2c613978a189abd09090368"
+    },
+    {
+      "path": "mechanical/revI/right-frame-manga.stl",
+      "sha256": "f0f7b2f1a4ae5900b2df238fbe5bf7635277ce7c486c272f9a5391fff64a15b1"
+    },
+    {
+      "path": "mechanical/revI/left-frame-tape-body.stl",
+      "sha256": "ec31c965df3455dbc3cfa37ddc76f49b84b26c097c255b5431c01f04eefa583c"
+    },
+    {
+      "path": "mechanical/revI/left-frame-flan.stl",
+      "sha256": "382b53a930bc4b785b9621e811b351304972020c342d58b4c5c4941d0e562d6b"
+    },
+    {
+      "path": "build/audit-fixes-20261007/clearance/right-frame-manga.stl",
+      "sha256": "e81565bd2f741c9b5306cde164e5b9ff2dcb330f767e8793804dd3765d147920"
+    },
+    {
+      "path": "build/audit-fixes-20261007/clearance/left-frame-tape-body.stl",
+      "sha256": "8f7545f98040e5d8e728a7256c632a16a5187ea8baf5c93f1074cb3c09a2c779"
+    },
+    {
+      "path": "build/audit-fixes-20261007/clearance/left-frame-flan.stl",
+      "sha256": "e9a7ee0d269d4f610bc987a47b959bece84894df7f86dd9a8bf79e253434d4b9"
+    }
+  ],
+  "read_only_inputs_unchanged": true,
+  "domain_recommendation": "GO for tightly scoped vertical-rectangle diagonal change proof; exact raw float32 vertices and oriented boundaries, original bytes retained.",
+  "risk_recommendation": "GO with existing gates; closed24-file scope and exact surface proof add no geometric tolerance.",
+  "both_executed_controls": 16,
+  "both_verified_examples": {
+    "right-frame-manga.stl": 5,
+    "left-frame-tape-body.stl": 68,
+    "left-frame-flan.stl": 68
+  },
+  "remaining_condition": "All24 actual pairs must individually pass before any copy; adoption must preserve original bytes and report hashes.",
+  "confidence": "High for proof correctness and containment; no physical acceptance.",
+  "material_objections": [],
+  "physical_acceptance": false
+}

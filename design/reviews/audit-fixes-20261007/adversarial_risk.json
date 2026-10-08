@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "task_id": "flan36-audit-fix-adversarial-risk-20261007",
+  "provider": "codex-app-subagent",
+  "role": "adversarial_risk",
+  "run_id": "flan36-fixes-adversarial_risk-20261007",
+  "role_assignment_sha256": "d6f8f48889078d9e5362f03fbfb4ba25a4f899eb3d4bf236607adb525cba5c4c",
+  "summary": "PASS to proceed with a contained native correction candidate under the acceptance criteria below. Reviewed snapshot: baseline b3e44990d9272327fef042439f1a6555eaae8c4f and enumerated artifacts. Static review completed without execution, mutation, network effects or subdelegation. Product acceptance remains unverified; root owns runtime checks and post-review baseline comparison. Preserve approved reference artwork, handed structural domains, key layout and historical native collection. A7 presentation defects rely partly on the audited report. Hanafuda is approved but its exact geometry was outside this review.",
+  "status": "completed",
+  "findings": [
+    {
+      "code": "A1_DATUM_CHAIN",
+      "claim": "MEDIUM; confidence high. Bind the complete display mating chain and service clearances to DisplayShiftY, using the nominal-relative delta for geometry already containing ROW_Y.",
+      "evidence": [
+        "level_stack.py gives board/window Y expressions, but socket, male contacts/spacer, solder reserve and clearance tools retain authored Y coordinates. docs/freecad.md promises joint movement.",
+        "Action: bind authored nominal solids with Y delta 2.4 mm - Parameters.DisplayShiftY, avoiding a second absolute-row translation.",
+        "Acceptance: both halves at 2.4 -> 3.4 move board, glass, contacts, spacer, socket, solder, sled and service tools exactly -1 mm in Y; relative alignment and X/Z remain unchanged after save/reopen. KiCad footprints/nets stay unchanged.",
+        "Recommendation changes only with an explicit alternative contract rejecting mechanical movement while fixing the socket to the PCB."
+      ]
+    },
+    {
+      "code": "A2_PARTITION_CURRENT_BLANK",
+      "claim": "MEDIUM; confidence high. Clip approved color volumes to the current blank and derive structural body by subtraction, preserving reference artwork and right-hand structural asymmetry.",
+      "evidence": [
+        "approved_frames.py:95-130 uses fixed MASTER apertures and fuses unclipped extrusions into the edited blank. Its validator assumes reference roof and unchanged approval regions.",
+        "Acceptance: all retained frames/both halves preserve reference geometry and material top regions. WindowMargin 0.30 and DisplayShiftY 3.4 edits yield bidirectional final/blank differences and pairwise material overlap below 1e-5 mm3, no glass collision, and actual requested glass margin; verify save/reopen and exported materials.",
+        "Separate reference-fidelity checks from documented edited-state clipping. Cutter or bounding-box checks alone can miss material remaining inside an opening.",
+        "An explicitly approved artwork-deformation policy would change the recommendation; none was reviewed."
+      ]
+    },
+    {
+      "code": "A3_ZONE_SPECIFIC_BACKING",
+      "claim": "MEDIUM; confidence high for ordinary backing, medium for final collar policy pending sections. Make ordinary depth roof-relative; preserve and separately validate collar and pin-cover construction.",
+      "evidence": [
+        "approved_frames.py fixes ordinary/cover floors at 13.19 and collar at 12.725 while extrusion length grows with FrameTop. flush_frames.py already contains roof-relative depth and geometric backing probes.",
+        "Acceptance: FrameTop 13.59 -> 13.99 retains ordinary 0.4 mm depth and at least 0.8 mm actual backing. Independently measure collar and pin-cover closure/connectivity/service clearance, including supported combined edits.",
+        "Nominal collar depth is 0.865 mm. Applying universal 0.4 mm depth or 0.8 mm backing clipping would change approved construction.",
+        "Reject unsupported edits before export. Native section evidence establishing different zone requirements would change the exact invariant."
+      ]
+    },
+    {
+      "code": "A4_USB_ALL_VARIANTS",
+      "claim": "MEDIUM; confidence high. Remove demonstrated interference with a local USB clearance cut and test every base, plate and frame.",
+      "evidence": [
+        "export_revI.py checks its 12 x 20 x 5 mm insertion corridor against frames but omits that corridor from case checks. The audit reports 3.120 mm3 overlap per base at Z6.10-6.30.",
+        "Acceptance: all eight bases, eight plates and every frame have corridor overlap below 0.001 mm3; case parts remain valid closed single solids, with unchanged mounting and mating interfaces. Verify native and exported geometry.",
+        "Changing only the active Level base leaves alternate downloads defective. Purchased-plug dimensions could enlarge the necessary local cut; nominal clearance does not qualify every physical cable."
+      ]
+    },
+    {
+      "code": "A5_DIODE_REGISTRATION",
+      "claim": "MEDIUM; confidence high. Install the pinned SOD-123 geometry from actual revI diode footprints using calibrated bottom-side rigid transforms.",
+      "evidence": [
+        "components/sources.json pins D_SOD-123.step; export_pcb_components.py omits diodes but provides Rz(angle) Rx(180) bottom placement at PCB bottom Z3.8.",
+        "Acceptance: exactly 18 references per board, correct XY/angle/layer/cathode orientation and underside extent; verify source hash and KiCad STEP registration for all 36. Check base, PCB and hot-swap collisions with only identified intended contact exclusions.",
+        "Preserve footprints, pads, nets, tracks, contours and unrelated model references. sync_pcb_study.py resets historical revF boards and is unsuitable.",
+        "Measured package/solder differences would change the reserve envelope, not authoritative footprint placement."
+      ]
+    },
+    {
+      "code": "A6_CURRENT_ACCEPTANCE",
+      "claim": "MEDIUM; confidence high for native/runner defects. Repair tests against explicit current contracts and propagate aggregate acceptance failure.",
+      "evidence": [
+        "check_revI.py expects legacy no-case import to restore current defaults, asserts obsolete battery Z2, and checks edited bounds without material/backing invariants. The audit documents retired browser selector and stale roof expectations.",
+        "audit_current.py records child failures/timeouts but exits without aggregate failure propagation.",
+        "Acceptance: explicitly test legacy Solid normalization, current active-frame edit/save/reopen invariants, historical native imports separately, retired-viewer fallback and invalid-input atomicity. A deliberately failing child must fail current acceptance.",
+        "Keep unresolved routing/parity visible. A documented JSON-only runner contract could replace exit propagation only if that contract is tested."
+      ]
+    },
+    {
+      "code": "A7_PRESENTATION_AND_SCOPE",
+      "claim": "MEDIUM dimensions; LOW naming/presentation. Confidence high on selection/dimensions, medium on uninspected presentation files. Align current entry points without rewriting history.",
+      "evidence": [
+        "docs/freecad.md specifies roof 1.4 and margin 0.10; the audit records conflicting customization values, Filo36 labels and retired hero artwork. approved-viewer-selection.md specifies Talavera default and retained historical sources.",
+        "Acceptance: compare documentation with native readback, inspect current hero, verify Flan36 macro labels/export names and configuration compatibility.",
+        "Hanafuda remains approved pending integration; its exact approved geometry was not enumerated. Review that artifact separately. Do not revive rejected artwork or globally rename historical identifiers."
+      ]
+    }
+  ],
+  "recommendations": [
+    "Use an additive native correction candidate with preserved source and historical receipts; do not blindly replay hash-guarded level_stack migration.",
+    "Promote only after root verifies reference fidelity, scope-limited changes, A1-A7 acceptance, repeated recompute/save/reopen and post-review baseline integrity.",
+    "Retain runtime and physical qualification exceptions explicitly; completed review does not complete the product."
+  ],
+  "validations": [
+    {
+      "name": "Static read-only review of enumerated repair sources and frozen baseline record",
+      "status": "passed"
+    }
+  ],
+  "defects": [
+    {
+      "severity": "MEDIUM",
+      "code": "A1_DATUM_CHAIN"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A2_PARTITION_CURRENT_BLANK"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A3_ZONE_SPECIFIC_BACKING"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A4_USB_ALL_VARIANTS"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A5_DIODE_REGISTRATION"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A6_CURRENT_ACCEPTANCE"
+    },
+    {
+      "severity": "MEDIUM",
+      "code": "A7_PRESENTATION_AND_SCOPE"
+    }
+  ],
+  "blockers": [],
+  "changed_paths": [],
+  "next_actor": "personal-ops"
+}

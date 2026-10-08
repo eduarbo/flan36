@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import subprocess
 import time
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'build/audit-20261007'
@@ -57,5 +58,11 @@ if __name__ == '__main__':
         results = [r for future in futures for r in future.result()]
     report = dict(snapshot=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
                   runner_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-                  results=results, physical_acceptance=False)
+                  results=results, physical_acceptance=False,
+                  inputs=[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()}
+                          for p in sorted({'docs/index.html','docs/offline.html','design/revI.json','mechanical/revI/Flan36.FCStd',
+                                          *[r['command'][1] for r in results if len(r['command'])>1 and (ROOT/r['command'][1]).is_file()]} )])
     (OUT / 'checks.json').write_text(json.dumps(report, indent=2) + '\n')
+    # An audit is not a green build merely because its JSON was written. The
+    # unrouted PCB remains a failure of the full fabrication acceptance gate.
+    sys.exit(0 if all(item['exit_code'] == 0 for item in results) else 1)

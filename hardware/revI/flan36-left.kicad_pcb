@@ -1314,7 +1314,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -2029,7 +2030,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -2744,7 +2746,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "MountingHole:MountingHole_2.2mm_M2"
 		(layer "F.Cu")
 		(uuid "303e1230-531d-41ce-9673-5fc25c740ee5")
@@ -3557,7 +3560,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -4272,7 +4276,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "MountingHole:MountingHole_2.2mm_M2"
 		(layer "F.Cu")
 		(uuid "47e5bb22-1e05-49b4-8ecf-c49b50d50688")
@@ -5085,7 +5090,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "MountingHole:MountingHole_2.2mm_M2"
 		(layer "F.Cu")
 		(uuid "6ca22abe-880e-467b-885e-ad98f90b9864")
@@ -5898,7 +5904,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "PiantorSlim:nice_nano_v2_standard_edge"
 		(layer "F.Cu")
 		(uuid "83909765-0501-4259-817d-c9f924a46e25")
@@ -6893,7 +6900,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -7608,7 +7616,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Button_Switch_SMD:SW_SPST_TL3342"
 		(layer "B.Cu")
 		(uuid "a21d2dd3-8236-4123-8fd8-387ec7d72d9e")
@@ -8887,7 +8896,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -9602,7 +9612,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -10317,7 +10328,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -11032,7 +11044,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -11747,7 +11760,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -12462,7 +12476,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "MountingHole:MountingHole_2.2mm_M2"
 		(layer "F.Cu")
 		(uuid "d5ef78c1-11eb-493a-b98b-0b741cbc57db")
@@ -13275,7 +13290,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "PiantorSlim:nice_view_5pin"
 		(layer "F.Cu")
 		(uuid "db6fc290-7139-407d-aee8-384a58c87d51")
@@ -14104,7 +14120,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "keyswitches:Kailh_socket_PG1350_optional"
 		(locked yes)
 		(layer "F.Cu")
@@ -14819,7 +14836,8 @@
 				(xyz 0 0 0)
 			)
 		)
-	)
+(model "${KIPRJMOD}/models/choc-hotswap.step" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "MountingHole:MountingHole_2.2mm_M2"
 		(layer "F.Cu")
 		(uuid "fdb47efa-1512-4080-bddf-5a18e4fcf316")
@@ -15192,7 +15210,9 @@
 			(uuid "ed673b6f-81af-4c75-9b78-acbcc24f331a")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "0f57452b-0274-4a31-b3ef-3d575d367f10")
@@ -15467,7 +15487,9 @@
 			(uuid "369c8c4f-0efe-4019-b268-c0c7e5194236")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "1a6e0a34-12ca-4dbf-9d37-675de1151fc4")
@@ -15742,7 +15764,9 @@
 			(uuid "219c1a49-bffe-4cdc-aa0e-e58f47c1bea0")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "30d19115-c029-4a55-8415-be7457833da1")
@@ -16017,7 +16041,9 @@
 			(uuid "d3e52673-ae28-44e1-8ac8-00d013e84ffd")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "42518302-8ac2-4011-932d-ade1dcdc904b")
@@ -16292,7 +16318,9 @@
 			(uuid "a450e45f-6852-43ea-9fc6-df6dd122e710")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "55173269-08cf-49cf-8ff1-a070972db79e")
@@ -16567,7 +16595,9 @@
 			(uuid "005219e7-febb-4ba6-9f5a-9ed87dabc10e")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "603d0d96-e678-4594-acc0-601fcb2a7d3b")
@@ -16842,7 +16872,9 @@
 			(uuid "42a833e5-cd24-4ec3-aadb-5651507f487d")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "7875a5ea-e95d-492d-a32c-98b8b6ef75de")
@@ -17117,7 +17149,9 @@
 			(uuid "6ed34f36-851c-476d-bd11-3ba24da25000")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "7a53f635-53b9-4039-b41f-9741b76beac8")
@@ -17392,7 +17426,9 @@
 			(uuid "f64aa4df-5392-4da4-8af6-95b4f0ddf862")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "93aea0f1-0fcb-4bbd-ad48-be78e846d116")
@@ -17667,7 +17703,9 @@
 			(uuid "abefccd0-f957-49ea-a937-7f965dd3298a")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "9726b1aa-52ea-482b-ac40-b0b53f82830f")
@@ -17942,7 +17980,9 @@
 			(uuid "d6f3683a-2b1f-4c91-aac7-877d83e01b80")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "a2694393-9550-4044-99ac-b337c4bc8ed2")
@@ -18217,7 +18257,9 @@
 			(uuid "3fd8b9a5-935c-450b-a5b4-388b19300de3")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "b585b5d0-4e2b-41a7-b5bb-c2ed51e15186")
@@ -18492,7 +18534,9 @@
 			(uuid "e3f1ed0c-0e2c-4bf4-8b0a-2f68a96d919d")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "bcdb173d-1851-45f1-87b1-88df22bda28a")
@@ -18767,7 +18811,9 @@
 			(uuid "19f812b8-d065-4203-b8e0-4f371f3e6cfc")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "c1c50239-a3b3-487e-a2b7-89bad469f488")
@@ -19042,7 +19088,9 @@
 			(uuid "4ea4246c-9d8a-4a75-92b0-4fa68c82bcc1")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "db7feb5f-63e0-40d5-9a91-d182a2bac0e0")
@@ -19317,7 +19365,9 @@
 			(uuid "96b3b1c8-e562-4837-8caa-f3f81b473ffd")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "e5836f00-c3e1-4f34-ae92-96e54a5b3877")
@@ -19592,7 +19642,9 @@
 			(uuid "223ac51f-bc86-4042-a8e0-35f35ca3916a")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 	(footprint "Diode_SMD:D_SOD-123"
 		(layer "B.Cu")
 		(uuid "eaf46e6a-70f2-4e7f-b4a0-6e9c274ad12f")
@@ -19867,7 +19919,9 @@
 			(uuid "e885eb27-460c-4f75-af01-85b702384899")
 		)
 		(embedded_fonts no)
-	)
+(model "${KIPRJMOD}/models/diode-sod123.step"
+ (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
 
 
 

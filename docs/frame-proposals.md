@@ -6,4 +6,4 @@ The collection contains only **Talavera, Game Boy, SNES, Phone, iPod and Hanafud
 
 Each gallery card includes an enlarged preview, dimensions and a 1:1 SVG. All designs use solid colors and flush details on the current 24 × 56 mm frame.
 
-Hanafuda is selected and awaits integration; the other five designs are already in the current assembly. The main explorer exposes those five installed designs; the native archive retains earlier geometry. [Current selection record](../design/frame-selection.json).
+All six designs are installed in the current assembly, explorer and print exports. The native archive retains earlier geometry. [Current selection record](../design/frame-selection.json).

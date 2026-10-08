@@ -3,7 +3,7 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'build/frame-collection/acceptance');fs.mkdirSync(out,{recursive:true});
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p))),spec=read('design/frame-finishes.json'),scene=read('build/viewer-scene.json'),catalog=scene.catalog,selection=read('design/frame-selection.json'),themes=read('design/themes.json').themes,styles=Object.keys(catalog.frame_styles),fallback=catalog.default_frame_style;
-assert.deepEqual(styles,selection.viewer.installed_styles);assert.equal(fallback,'talavera');assert.deepEqual(catalog.pending_frame_styles,['hanafuda']);
+assert.deepEqual(styles,selection.viewer.installed_styles);assert.equal(fallback,'talavera');assert.deepEqual(catalog.pending_frame_styles,[]);
 require('esbuild').buildSync({stdin:{contents:"export * from './printing.js';export * from './config.js';export * from './storage.js';export {unzipSync,strFromU8} from 'three/addons/libs/fflate.module.js';",resolveDir:__dirname},bundle:true,platform:'node',format:'cjs',outfile:path.join(out,'printing.cjs')});
 const {mesh3MF,unzipSync,strFromU8,normalize,check,restoreConfiguration}=require(path.join(out,'printing.cjs')),materials=[];
 for(const side of ['left','right'])for(const style of styles){

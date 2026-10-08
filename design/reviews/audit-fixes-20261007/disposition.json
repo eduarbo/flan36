@@ -1,0 +1,98 @@
+{
+  "baseline": {
+    "head": "b3e44990d9272327fef042439f1a6555eaae8c4f",
+    "status": "",
+    "files": [
+      {
+        "path": "docs/reviews/2026-10-07.md",
+        "sha256": "9778a8d5c018283a2aed884cd850d49c4ad33af678720db00d98c1d8196375cd"
+      },
+      {
+        "path": "tools/freecad/approved_frames.py",
+        "sha256": "1bfd538b251d00fcd617cb0ab5c3865e9bdcc7bcb067518402f34820873fe7d5"
+      },
+      {
+        "path": "tools/freecad/level_stack.py",
+        "sha256": "a4c330c8a0acd789ad51e6a9a58023b3fd6d937cf14e35acbe880f069c4399cc"
+      },
+      {
+        "path": "tools/freecad/install_display_seam.py",
+        "sha256": "e020a04074455bef73b39f71c8e4ddf86d4f83ef9c55e893af883d6f7192336f"
+      },
+      {
+        "path": "tools/freecad/flush_frames.py",
+        "sha256": "68e5536c21052415b097c79909544160cf928d563a8afd292f00756c5d3be119"
+      },
+      {
+        "path": "tools/freecad/export_revI.py",
+        "sha256": "63546f14609983f914f4b1ee5575cfb75c7812b8b52d2491c4e74bd2c55508ea"
+      },
+      {
+        "path": "tools/freecad/export_pcb_components.py",
+        "sha256": "26871b34f0f5fe9cb5830fc0a3ba73f993683f88c8f806c6861ad10245212652"
+      },
+      {
+        "path": "tools/freecad/build_revI.py",
+        "sha256": "37d68494dd9c511855321854dfc77a38278a212cef96262d19e3db61d40341ec"
+      },
+      {
+        "path": "tools/freecad/components.py",
+        "sha256": "e32a0e4e3181603d742911c788e1defb4ecd4e76ec59d67eab2915a538e4a171"
+      },
+      {
+        "path": "tools/freecad/check_revI.py",
+        "sha256": "6561867da691fb3fec9be1f4f489bdc779f35401231c3460bcbb800113324e65"
+      },
+      {
+        "path": "tools/audit_current.py",
+        "sha256": "68f7c44fc1750a4791f71cc75fc684519f5b1a3137096692c85104cd79e91ca5"
+      },
+      {
+        "path": "tools/freecad/audit_parameters.py",
+        "sha256": "c8b53d003ba50c48b52fe30976122d733cb478985f0572aeb28c479f43c799f1"
+      },
+      {
+        "path": "design/approved-viewer-selection.md",
+        "sha256": "a576d10ee2962f6d61130e11197a48800e2c25d6e841f61cea11f478dff1a129"
+      },
+      {
+        "path": "design/display-seam-redesign.json",
+        "sha256": "27471b8d3f37449b027458ff136bb88a8a7b585be142445a910af1a980929669"
+      },
+      {
+        "path": "docs/freecad.md",
+        "sha256": "aa70dbf077ea1413abb0611e0649f0803469ca09457d20fc9b9ad0da1b69366d"
+      },
+      {
+        "path": "components/sources.json",
+        "sha256": "4b65212f5e36c1b9fa7aba08d17187ee62f362eed34103389fa66453583b4243"
+      },
+      {
+        "path": "tools/sync_pcb_study.py",
+        "sha256": "64129721792c2c3cd606a1e4ec34f99805d50db05035e733623ed3f34fa10604"
+      }
+    ]
+  },
+  "review_consensus": "Proceed with source-preserving contained A1-A7 corrections; verify each finding before adoption. No material disagreement.",
+  "reviewed_source_changes_at_readback": [
+    "tools/freecad/approved_frames.py",
+    "tools/freecad/export_revI.py",
+    "tools/freecad/check_revI.py",
+    "tools/audit_current.py",
+    "design/approved-viewer-selection.md",
+    "docs/freecad.md"
+  ],
+  "change_owner": "Root implementation, tracked in this turn; reviewers reported no writes.",
+  "unexplained_mutations": [],
+  "finding_disposition": {
+    "A1": "Accepted; implement and execute current acceptance before closure.",
+    "A2": "Accepted; implement and execute current acceptance before closure.",
+    "A3": "Accepted; implement and execute current acceptance before closure.",
+    "A4": "Accepted; implement and execute current acceptance before closure.",
+    "A5": "Accepted; implement and execute current acceptance before closure.",
+    "A6": "Accepted; implement and execute current acceptance before closure.",
+    "A7": "Accepted; implement and execute current acceptance before closure."
+  },
+  "hanafuda_disposition": "Separate already-authorized mechanical transfer of exact frozen R8 artwork; not a new design choice. Source hash and frozen planar approval comparison required.",
+  "physical_completion": false
+}

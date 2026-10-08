@@ -1,0 +1,73 @@
+{
+  "findings": [
+    {
+      "report": "validation/revI-audit-delivery.json",
+      "line": 1026,
+      "field": "tools/keycap_config.py",
+      "sha256": "299b18fa827e69cf8ff9e6293d8a7eecc9983596950318da1d38e019c8bd5d8f",
+      "verified_file": "tools/keycap_config.py",
+      "kind": "SHA-256 of source code or generated mechanical mesh; not an authentication value"
+    },
+    {
+      "report": "validation/revI-mechanical.json",
+      "line": 1687,
+      "field": "left-key-plate.step",
+      "sha256": "9f55aaaf655cba933666bbca7e9adb0aa63145c497bfa180b3450b881a76cd49",
+      "verified_file": "build/audit-fixes-20261007/clearance/left-key-plate.step",
+      "kind": "SHA-256 of source code or generated mechanical mesh; not an authentication value"
+    },
+    {
+      "report": "validation/revI-mechanical.json",
+      "line": 1688,
+      "field": "left-key-plate.stl",
+      "sha256": "0acd0ff42d32ead9a782dfede64a003648537569fd6f557afdded064658dc4a0",
+      "verified_file": "build/audit-fixes-20261007/clearance/left-key-plate.stl",
+      "kind": "SHA-256 of source code or generated mechanical mesh; not an authentication value"
+    },
+    {
+      "report": "validation/revI-mechanical.json",
+      "line": 1911,
+      "field": "right-key-plate.step",
+      "sha256": "a8216495c6739dd524aeeaacfa2275f7972ab41a169d8f86a3949f56502901a5",
+      "verified_file": "build/audit-fixes-20261007/clearance/right-key-plate.step",
+      "kind": "SHA-256 of source code or generated mechanical mesh; not an authentication value"
+    },
+    {
+      "report": "validation/revI-mechanical.json",
+      "line": 1912,
+      "field": "right-key-plate.stl",
+      "sha256": "7fb266452f5b73c0a60102e29ebdf3200bde414ec07d73072b68474e2486a425",
+      "verified_file": "build/audit-fixes-20261007/clearance/right-key-plate.stl",
+      "kind": "SHA-256 of source code or generated mechanical mesh; not an authentication value"
+    },
+    {
+      "report": "validation/revI-audit-completion.json",
+      "line": 5352,
+      "field": "tools/keycap_config.py",
+      "sha256": "299b18fa827e69cf8ff9e6293d8a7eecc9983596950318da1d38e019c8bd5d8f",
+      "verified_file": "tools/keycap_config.py",
+      "kind": "SHA-256 of source code or generated mechanical mesh; not an authentication value"
+    }
+  ],
+  "all_exact_file_digests": true,
+  "scanner_policy_unchanged": true,
+  "scanner": "Gitleaks staged scan",
+  "scanned_bytes": 175415504,
+  "findings_count": 6,
+  "false_positives": 6,
+  "independent_reviewers": [
+    "domain_constructive",
+    "adversarial_risk"
+  ],
+  "consensus": "Publish this exact content with explicit SHA-256 false-positive adjudication; no material unresolved exposure among these six findings.",
+  "reviewed_inputs_unchanged": true,
+  "policy_matches_baseline": true,
+  "scope": "These six reported values only; this is not a claim of zero scanner findings.",
+  "resolution": {
+    "original_scanned_unpublished_commit": "fd7c1f48f1f6a45d2a9840b4642258c59a02067d",
+    "method": "Lossless serialization of digest maps as explicit path/SHA256 entries; verification reconstructs exact original producer bytes.",
+    "security_policy_unchanged": true,
+    "verified_command": "python3 tools/audit_receipt_format.py --check",
+    "final_hook": "Must pass normally before publication; no bypass or added exceptions."
+  }
+}

@@ -8,6 +8,7 @@ import json
 import os
 import sys
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 import FreeCAD as A
 import Part
 import MeshPart
@@ -54,7 +55,7 @@ metadata=json.loads((ROOT/'design/revI.json').read_text())
 # Preserve the prior label-only export bridge as history, not current provenance.
 if 'analyzed_native_sha256' in metadata.get('export_execution',{}):
     metadata['historical_export_execution']=metadata.pop('export_execution')
-report={'scope':'Native PartID solids only; switch/keycap meshes and unqualified socket registration excluded; not a manufacturing release','halves':{},'unresolved':[
+report={'scope':'Native PartID solids including nominal registered diodes and hot-swap sockets; switch/keycap meshes excluded; not a manufacturing release','halves':{},'unresolved':[
     'No routed PCB or integrated firmware', 'Actual module/socket/contact dimensions and retention',
     'Battery cable routing, strain relief and bending radii', 'Window tolerance and PCB copper-to-edge rule',
     'Printed fits, insertion/extraction loads, charging, RF and measured power']}
@@ -109,7 +110,7 @@ for side,prefix in [('left','L_'),('right','R_')]:
         metadata['parts'][name]={'object':o.Name,'role':o.Label,'group':o.Layer,'prototype_part':o.PrototypePrintable,
             'bounds_mm':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax],
             'visuals':visuals,'stl_sha256':hashlib.sha256((OUT/(name+'.stl')).read_bytes()).hexdigest()}
-    print(side,'active parts exported; checking intersections',flush=True)
+    print(side,'active parts exported; checking intersections',file=sys.__stdout__,flush=True)
     # Pair checks include real PCB battery opening and mounting holes.
     issues=[];pairs={}
     for i,(a,sa) in enumerate(shapes.items()):
@@ -128,7 +129,7 @@ for side,prefix in [('left','L_'),('right','R_')]:
                     allowed=exact_common(sa,sb).common(thread).Volume
                 if v-allowed>.001:issues.append({'a':a,'b':b,'volume_mm3':round(v,6),'allowed_thread_volume_mm3':round(allowed,6)})
             pairs[a+' / '+b]=round(v,6)
-    print(side,'active pairs checked; checking batteries',flush=True)
+    print(side,'active pairs checked; checking batteries',file=sys.__stdout__,flush=True)
     battery_checks={}
     for obj in [o for o in doc.Objects if hasattr(o,'BatteryStyle') and o.TypeId!='App::Link' and o.Name.startswith(prefix)]:
         shape=obj.Shape;ident=obj.BatteryStyle
@@ -151,12 +152,12 @@ for side,prefix in [('left','L_'),('right','R_')]:
                     'color':'#'+''.join(f'{round(c*255):02x}' for c in wire_color[:3])})
             metadata['batteryLeadProfiles'][side+'-'+profile]=wires
     # Check every interchangeable cover, not just the selected frame.
-    print(side,'checking frame variants',flush=True)
+    print(side,'checking frame variants',file=sys.__stdout__,flush=True)
     frame_checks={}
     frame_envelopes={}
     envelope_checks={}
     for obj in [o for o in doc.Objects if hasattr(o,'FrameStyle') and o.Name.startswith(prefix) and o.TypeId!='App::Link']:
-        print(side,'frame',obj.FrameStyle,flush=True)
+        print(side,'frame',obj.FrameStyle,file=sys.__stdout__,flush=True)
         shape=obj.Shape;assert shape.isValid() and len(shape.Solids)==1,(obj.Name,'invalid cover')
         frame_mesh=MeshPart.meshFromShape(Shape=shape,LinearDeflection=.03,AngularDeflection=.12,Relative=False)
         assert frame_mesh.isSolid();name=side+'-frame-'+obj.FrameStyle
@@ -189,6 +190,9 @@ for side,prefix in [('left','L_'),('right','R_')]:
             assert shape.cut(blank.Shape).Volume<1e-5 and blank.Shape.cut(shape).Volume<1e-5,(name,'frame envelope drift')
             envelope,identity=blank.Shape,blank.Name
         else:envelope,identity=shape,obj.Name
+        if getattr(obj,'ParametricMaterialPartition',False):
+            from audit_repairs import validate_materials
+            validate_materials(doc,side,blank,obj)
         frame_envelopes[obj.Name]=(envelope,identity)
         if identity not in envelope_checks:
             hits={}
@@ -196,8 +200,8 @@ for side,prefix in [('left','L_'),('right','R_')]:
                 if n=='electronics-lid':continue
                 hit=exact_common(envelope,other).Volume
                 if hit>.001:hits[n]=round(hit,6)
-            px=116.8 if side=='left' else 160-128.8
-            plug=Part.makeBox(12,20,5,A.Vector(px,-18.8,doc.Parameters.MCUBottom.Value-2.1))
+            from audit_repairs import usb_corridor
+            plug=usb_corridor(doc,side)
             envelope_checks[identity]=(hits,exact_common(envelope,plug).Volume)
         hits,hit=envelope_checks[identity]
         frame_checks[obj.FrameStyle]={'component_collisions_mm3':hits,'usb_envelope_collision_mm3':round(hit,6),'volume_mm3':shape.Volume,'closed_mesh':True,'verified_envelope':identity}
@@ -218,17 +222,21 @@ for side,prefix in [('left','L_'),('right','R_')]:
         cap_hit=exact_common(doc.getObject(prefix+'Case_level_plate').Shape,Part.makeCompound(sweeps)).Volume
         assert cap_hit<.001,(side,'raised shell/cap sweep collision',cap_hit)
         metadata.setdefault('r4_cap_clearance',{})[side]={'conservative_envelopes':len(cap_polys),'xy_clearance_mm':.2,'volume_mm3':cap_hit,'physical_fit_qualified':False}
-    print(side,'checking case variants',flush=True)
+    from audit_repairs import usb_corridor
+    plug=usb_corridor(doc,side)
+    print(side,'checking case variants',file=sys.__stdout__,flush=True)
     case_checks={}
     case_frame_checks={}
     for style in json.loads((ROOT/'design/cases.json').read_text())['styles']:
-        print(side,'case',style,flush=True)
+        print(side,'case',style,file=sys.__stdout__,flush=True)
         pair={g:doc.getObject(prefix+'Case_'+style+'_'+g).Shape for g in ['base','plate']}
         hits={}
         for group,shape in pair.items():
             assert shape.isValid() and len(shape.Solids)==1,(side,style,group,'invalid case')
             mm=MeshPart.meshFromShape(Shape=shape,LinearDeflection=.03,AngularDeflection=.12,Relative=False)
             assert mm.isSolid(),(side,style,group,'open case mesh')
+            usb_hit=exact_common(shape,plug).Volume
+            if usb_hit>.001:hits[group+' / USB insertion corridor']=usb_hit
             name=side+'-case-'+style+'-'+group
             mm.write(str(OUT/(name+'.stl')));shape.exportStep(str(OUT/(name+'.step')))
             for name,other in shapes.items():
@@ -249,6 +257,7 @@ for side,prefix in [('left','L_'),('right','R_')]:
         if hit>.001:hits['base / plate']=hit
         assert not hits,(side,style,hits)
         case_checks[style]={'closed_meshes':True,'connected_solids':True,'component_collisions_mm3':hits,
+            'usb_envelope_collisions_mm3':{g:exact_common(s,plug).Volume for g,s in pair.items()},
             'base_volume_mm3':pair['base'].Volume,'plate_volume_mm3':pair['plate'].Volume}
     compound=Part.makeCompound(list(shapes.values()));compound.exportStep(str(OUT/(side+'-assembly.step')))
     b=compound.BoundBox
@@ -266,10 +275,10 @@ for side,prefix in [('left','L_'),('right','R_')]:
         'nominal_copper_to_opening_mm':.62-doc.Parameters.SlotClearance.Value}
     metadata['halves'][side]['size_mm']=[b.XLength,b.YLength]
     assembly.Placement=old
-    print(side,'parts',len(objects),'collisions',issues,flush=True)
+    print(side,'parts',len(objects),'collisions',issues,file=sys.__stdout__,flush=True)
 doc.recompute()
 metadata['inputs']=[{'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in [
-    'design/approved-frame-master-r4.json','design/proposals/frame-master-r4/master.json','design/proposals/frame-master-r4/Artwork-R4.FCStd','design/proposals/frame-master-r4/geometry-check.json','tools/freecad/approved_frames.py','tools/freecad/install_approved_frames.py','design/level-case-workflow.json','tools/freecad/level_stack.py','tools/freecad/install_level_stack.py','design/cases.json','design/frame-finishes.json','design/frame-collection-workflow.json','design/frame-fidelity-workflow.json','tools/freecad/export_frame_domain.py','tools/check_frame_artwork.py','tools/build_frame_collection.py','tools/freecad/install_frame_collection.py','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
+    'tools/freecad/install_socket_clearance.py','tools/freecad/audit_repairs.py','tools/freecad/install_audit_repairs.py','tools/freecad/install_diode_models.py','tools/freecad/hotswap_geometry.py','tools/freecad/install_hotswap_models.py','tools/integrate_hanafuda.py','design/proposals/frame-redesign-r8/master.json','design/proposals/frame-redesign-r8/Artwork-R8.FCStd','design/approved-frame-master-r4.json','design/proposals/frame-master-r4/master.json','design/proposals/frame-master-r4/Artwork-R4.FCStd','design/proposals/frame-master-r4/geometry-check.json','tools/freecad/approved_frames.py','tools/freecad/install_approved_frames.py','design/level-case-workflow.json','tools/freecad/level_stack.py','tools/freecad/install_level_stack.py','design/cases.json','design/frame-finishes.json','design/frame-collection-workflow.json','design/frame-fidelity-workflow.json','tools/freecad/export_frame_domain.py','tools/check_frame_artwork.py','tools/build_frame_collection.py','tools/freecad/install_frame_collection.py','design/slim-flush-workflow.json','tools/freecad/flush_frames.py','tools/freecad/slim_stack.py','tools/freecad/install_slim_flush.py','tools/freecad/extra_frames.py','tools/freecad/install_extra_frames.py','tools/freecad/components.py','tools/freecad/switch_instances.py','components/switches.json','components/sources.json','tools/frame_finishes.py','tools/keycap_config.py','tools/freecad/configuration.py','design/layout.json','design/revI-profiles.json','design/revI-frame-profiles.json','keycaps/catalog.json','design/revI-mounts.json','design/batteries.json','design/revI-magnets.json','design/revI-wire-study.json','tools/freecad/build_revI.py','tools/freecad/export_revI.py']]
 metadata['fcstd_sha256']=hashlib.sha256((OUT/'Flan36.FCStd').read_bytes()).hexdigest()
 if doc.getObject('DisplaySeamCorrection'):
     for p in ['design/proposals/display-seam-r1/master.json','design/proposals/display-seam-r1/Seam-candidate.FCStd',
@@ -283,6 +292,7 @@ if orientation:
     metadata['inputs'].append({'path':p,'sha256':hashlib.sha256((ROOT/p).read_bytes()).hexdigest()})
 else:
     metadata.pop('frame_artwork',None)
+report['exported_files']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(OUT.iterdir()) if p.suffix in ('.stl','.step') and p.name.startswith(('left-','right-'))}
 report['source_sha256']=metadata['fcstd_sha256']
 report['checker_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 metadata['export_execution']={'native_sha256':metadata['fcstd_sha256'],
@@ -290,7 +300,7 @@ metadata['export_execution']={'native_sha256':metadata['fcstd_sha256'],
 META_OUT.write_text(json.dumps(metadata,indent=2)+'\n')
 REPORT_OUT.write_text(json.dumps(report,indent=2)+'\n')
 assert not any(v['collisions'] for v in report['halves'].values()),'Unresolved nominal intersections; see validation/revI-mechanical.json'
-print('PASS: native solids, closed printable meshes, nominal part intersections',flush=True)
+print('PASS: native solids, closed printable meshes, nominal part intersections',file=sys.__stdout__,flush=True)
 if standalone:
     assert hashlib.sha256(saved_source.read_bytes()).hexdigest()==saved_source_hash,'Saved source changed during export'
     A.closeDocument(doc.Name)

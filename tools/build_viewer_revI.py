@@ -32,6 +32,7 @@ groups = {
     'key-plate':('Plate', 'plate','#34494a',9),
     'electronics-lid':('Electronics cover','lid','#304d4e',72),
     'pcb':('PCB · unrouted outline','pcb','#22664c',3),
+    'diodes':('18 × SOD-123 diodes · underside','pcb','#34383b',3),
     'battery':('Battery · two profiles','battery','#b8c1bf',20),
     'mcu':('nice!nano v2 · nominal model','mcu','#1b433b',36),
     'display':('nice!view · nominal model','display','#172c2a',52),
@@ -128,6 +129,7 @@ def add(name,side,group,color,position,explode,geometry=None,primitive=None,angl
     scene['parts'].append(part)
 
 
+socket_geometry,socket_colors=colored_mesh('choc-hotswap',model['hotswap_model']['visuals'])
 switches=json.loads((ROOT/'components/switches.json').read_text());switch_meshes={name:colored_mesh(name,entries) for name,entries in switches.items() if isinstance(entries,list)}
 
 for side,keys in layout['halves'].items():
@@ -139,6 +141,10 @@ for side,keys in layout['halves'].items():
         geometry,colors=colored_mesh(path,visuals) if visuals else (mesh(path),None)
         add(label,side,group,color,[offset,0,0],explode,geometry)
         if colors:scene['parts'][-1]['materials']=colors
+    for socket in model['hotswap_model']['instances'][side]:
+        position=list(socket['position_mm']);position[0]+=offset
+        add('Hot-swap '+socket['reference'],side,'pcb',socket_colors[0],position,3,socket_geometry,angle=socket['angle_deg'])
+        scene['parts'][-1]['materials']=socket_colors
     for i in range(1,4):
         add(f'Washer {i}',side,'fasteners','#89918a',[offset,0,0],9,mesh(f'mechanical/revI/{side}-washer-{i}.stl'))
     for style in catalog['case_styles']:
@@ -221,7 +227,7 @@ for path in ['design/revI.json','design/layout.json','tools/build_viewer_revI.py
     scene['sources'].append({'path':path,'sha256':digest(path)})
 scene['limits']=['Commercial representations combine documented nominal dimensions, licensed community CAD and inferred package detail; see components/README.md', 'Unrouted PCB',
                  'Nominal lead-storage paths; actual terminations, insulation and finished-pack tolerances unverified', 'PCB aperture 12.5 mm; both nominal cells fit. Magnetic force, print-in capture/temperature and physical fit need coupons',
-                 'Generic Choc v1 source model; purchased switch fit, keycap seating and travel unmeasured. Hotswap socket placement remains unqualified. Feet illustrative; nominal screws do not prove thread strength',
+                 'Generic Choc v1 source model; purchased switch fit, keycap seating and travel unmeasured. Hot-swap sockets are registered to nominal PCB datums; purchased-part fit remains unqualified. Feet illustrative; nominal screws do not prove thread strength',
                  'Exploded positions are a viewing aid, not a validated extraction path']
 (ROOT/'build').mkdir(exist_ok=True)
 (ROOT/'build/viewer-scene.json').write_text(json.dumps(scene,separators=(',',':'))+'\n')

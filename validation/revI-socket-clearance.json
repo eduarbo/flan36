@@ -1,0 +1,153 @@
+{
+  "parent_source_sha256": "6df45264bcceb4c0cca9aa8e761292f651f8931cf2286471a839ffe713dca73a",
+  "installer_sha256": "60cec3b5c9a7e256f0ae644ba5b5a2e1fde66ac5118864b175fedec8e22b8aac",
+  "halves": {
+    "left": {
+      "old_socket_to_post_mm": 0.13628068749809746,
+      "normal_xy": [
+        -0.1969942897242166,
+        -0.9804046357581401
+      ],
+      "support_plane_radius_mm": 2.1862805874981035,
+      "socket_to_relieved_post_mm": 0.2500000999999941,
+      "minimum_pilot_web_mm": 1.3362805874981043,
+      "thread_envelope_web_mm": 1.1862805874981035,
+      "bearing_area_removed_mm2": 0.10884842698137653,
+      "bearing_area_remaining_mm2": 14.24037601829,
+      "changes": {
+        "solid": {
+          "removed_mm3": 0.2612362247553542,
+          "added_mm3": 0,
+          "valid_single_solid": true,
+          "removal_confined_to_pillar3": true
+        },
+        "rim": {
+          "removed_mm3": 0.2612362247553542,
+          "added_mm3": 0,
+          "valid_single_solid": true,
+          "removal_confined_to_pillar3": true
+        },
+        "terrace": {
+          "removed_mm3": 0.2612362247553542,
+          "added_mm3": 0,
+          "valid_single_solid": true,
+          "removal_confined_to_pillar3": true
+        }
+      },
+      "floor_exterior_pilot_center_height_preserved": true
+    },
+    "right": {
+      "old_socket_to_post_mm": 0.04773897503873764,
+      "normal_xy": [
+        0.11617854503597543,
+        -0.9932283451821761
+      ],
+      "support_plane_radius_mm": 2.0977388750387576,
+      "socket_to_relieved_post_mm": 0.25000009999997613,
+      "minimum_pilot_web_mm": 1.2477388750387568,
+      "thread_envelope_web_mm": 1.0977388750387576,
+      "bearing_area_removed_mm2": 0.2566687674125028,
+      "bearing_area_remaining_mm2": 14.092555677858874,
+      "changes": {
+        "solid": {
+          "removed_mm3": 0.6160050417899007,
+          "added_mm3": 0,
+          "valid_single_solid": true,
+          "removal_confined_to_pillar3": true
+        },
+        "rim": {
+          "removed_mm3": 0.6160050417899007,
+          "added_mm3": 0,
+          "valid_single_solid": true,
+          "removal_confined_to_pillar3": true
+        },
+        "terrace": {
+          "removed_mm3": 0.6160050417899007,
+          "added_mm3": 0,
+          "valid_single_solid": true,
+          "removal_confined_to_pillar3": true
+        }
+      },
+      "floor_exterior_pilot_center_height_preserved": true
+    }
+  },
+  "physical_acceptance": false,
+  "source_sha256": "9901360f74052f3892c20c9b81e839aeec534747927e547d31bdb047c8481029",
+  "saved_reopened": true,
+  "unrelated_parts_geometrically_unchanged": true,
+  "unchanged_part_comparisons": {
+    "L_Washer1": "identical serialized BRep",
+    "L_Washer2": "identical serialized BRep",
+    "L_Washer3": "identical serialized BRep",
+    "L_Screw1": "identical serialized BRep",
+    "L_Screw2": "identical serialized BRep",
+    "L_Screw3": "identical serialized BRep",
+    "L_Screw4": "identical serialized BRep",
+    "L_Screw5": "identical serialized BRep",
+    "L_Magnet0": "identical serialized BRep",
+    "L_SteelTarget0": "empty bidirectional Boolean difference for all 1 matched solids",
+    "L_Magnet1": "identical serialized BRep",
+    "L_SteelTarget1": "empty bidirectional Boolean difference for all 1 matched solids",
+    "L_Magnet2": "identical serialized BRep",
+    "L_SteelTarget2": "empty bidirectional Boolean difference for all 1 matched solids",
+    "L_ActivePlate": "empty bidirectional Boolean difference for all 1 matched solids",
+    "L_ActiveBattery": "empty bidirectional Boolean difference for all 1 matched solids",
+    "L_KeeperCableExit": "identical serialized BRep",
+    "L_Riser": "identical serialized BRep",
+    "L_NanoV2": "identical serialized BRep",
+    "L_MCUSockets": "identical serialized BRep",
+    "L_NiceView": "identical serialized BRep",
+    "L_ResetModel": "identical serialized BRep",
+    "L_SliderModel": "identical serialized BRep",
+    "L_ActiveFrame": "empty bidirectional Boolean difference for all 1 matched solids",
+    "R_Washer1": "identical serialized BRep",
+    "R_Washer2": "identical serialized BRep",
+    "R_Washer3": "identical serialized BRep",
+    "R_Screw1": "identical serialized BRep",
+    "R_Screw2": "identical serialized BRep",
+    "R_Screw3": "identical serialized BRep",
+    "R_Screw4": "identical serialized BRep",
+    "R_Screw5": "identical serialized BRep",
+    "R_Magnet0": "identical serialized BRep",
+    "R_SteelTarget0": "empty bidirectional Boolean difference for all 1 matched solids",
+    "R_Magnet1": "identical serialized BRep",
+    "R_SteelTarget1": "empty bidirectional Boolean difference for all 1 matched solids",
+    "R_Magnet2": "identical serialized BRep",
+    "R_SteelTarget2": "empty bidirectional Boolean difference for all 1 matched solids",
+    "R_ActivePlate": "empty bidirectional Boolean difference for all 1 matched solids",
+    "R_ActiveBattery": "empty bidirectional Boolean difference for all 1 matched solids",
+    "R_KeeperCableExit": "identical serialized BRep",
+    "R_Riser": "identical serialized BRep",
+    "R_NanoV2": "identical serialized BRep",
+    "R_MCUSockets": "identical serialized BRep",
+    "R_NiceView": "identical serialized BRep",
+    "R_ResetModel": "identical serialized BRep",
+    "R_SliderModel": "identical serialized BRep",
+    "R_ActiveFrame": "empty bidirectional Boolean difference for all 1 matched solids",
+    "L_SlimPCBLeadNotch": "empty bidirectional Boolean difference for all 1 matched solids",
+    "L_SlimJST": "identical serialized BRep",
+    "L_SlimDisplaySocket": "identical serialized BRep",
+    "L_SlimDisplayHeaderClearance": "identical serialized BRep",
+    "L_ActiveBatteryLead0": "identical serialized BRep",
+    "L_ActiveBatteryLead1": "identical serialized BRep",
+    "R_SlimPCBLeadNotch": "empty bidirectional Boolean difference for all 1 matched solids",
+    "R_SlimJST": "identical serialized BRep",
+    "R_SlimDisplaySocket": "identical serialized BRep",
+    "R_SlimDisplayHeaderClearance": "identical serialized BRep",
+    "R_ActiveBatteryLead0": "identical serialized BRep",
+    "R_ActiveBatteryLead1": "identical serialized BRep",
+    "L_LevelCradleCableExit": "empty bidirectional Boolean difference for all 1 matched solids",
+    "R_LevelCradleCableExit": "empty bidirectional Boolean difference for all 1 matched solids",
+    "L_Diodes": "empty bidirectional Boolean difference for all 18 matched solids",
+    "R_Diodes": "empty bidirectional Boolean difference for all 18 matched solids",
+    "L_HotswapSockets": "empty bidirectional Boolean difference for all 54 matched solids",
+    "R_HotswapSockets": "empty bidirectional Boolean difference for all 54 matched solids"
+  },
+  "passed": true,
+  "receipt_path_correction": {
+    "current_installer_sha256": "3f30445d936dd183febcb54a81b2cf40f9fc9a8e031043ec8aff7c9686762b82",
+    "old_expression": "str(old_path.relative_to(ROOT))",
+    "new_expression": "str(old_path.resolve().relative_to(ROOT))",
+    "scope": "Only the final inherited-report path serialization failed after geometry and save/reopen validation; no geometry-producing statement changed."
+  }
+}
