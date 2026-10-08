@@ -1,0 +1,59 @@
+{
+  "additional_published_assets": {
+    "docs/offline.html": "bb771acb3e663258515cd78fd1688478562f1a170c58aebf76ddd90743b72806",
+    "docs/assets/printing-abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93.bin": "abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93"
+  },
+  "source_commit": "570b31af390b998a33adfd9cca3718c78d6367a5",
+  "archive_files_verified": 1936,
+  "archive_sha256": "bece5d1f63f42d2075a9e9f40e242a7e580a98f819d4d710bd65577ba07605d9",
+  "pages_url": "https://eduarbo.github.io/flan36/",
+  "pages_matches_committed_html": true,
+  "viewer_sha256": "8fecbb70846dcbfc8d281fc99f23afc3b82a2199d3a3d9827d0d0f97f8b68084",
+  "authenticated_requests": false,
+  "method": "All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer.",
+  "packages": [
+    {
+      "path": "firmware/uf2/flan36-left.uf2",
+      "bytes": 675840,
+      "sha256": "423de39b25680547805cf32f92f06b0c49147a9b7b7140bf6506f0f8c09d9abb",
+      "anonymous_readback": true
+    },
+    {
+      "path": "firmware/uf2/flan36-right.uf2",
+      "bytes": 525312,
+      "sha256": "82785921609bc8fca9fc8158ce7e1b28d04281f82fba81f9f5f78fcc4f192464",
+      "anonymous_readback": true
+    },
+    {
+      "path": "firmware/uf2/flan36-right-no-display.uf2",
+      "bytes": 340992,
+      "sha256": "08190e7f6c0f8218546162afb7bf8d74a1c7885ca3a7719095c0b02bde332bb1",
+      "anonymous_readback": true
+    },
+    {
+      "path": "hardware/revI/fabrication/flan36-left-revI-prototype.zip",
+      "bytes": 81778,
+      "sha256": "468bf9ce0f6f806a9651153aa023a776de25a9ec8da788caa9023470265058d5",
+      "anonymous_readback": true
+    },
+    {
+      "path": "hardware/revI/fabrication/flan36-right-revI-prototype.zip",
+      "bytes": 81284,
+      "sha256": "14044e39912999dc4ddc59ffcfec6cb97be6ff42d05aa62a66d1ba2de9959b08",
+      "anonymous_readback": true
+    }
+  ],
+  "physical_acceptance": false,
+  "scanner": {
+    "pre_push_hook_enabled": true,
+    "findings": 0,
+    "exclusions_added": false
+  },
+  "digital_requirements": {
+    "electrical_candidate": "verified",
+    "firmware": "verified",
+    "public_build_package": "verified"
+  },
+  "remaining_requirement": "Physical acceptance: supplied connector/cell measurements, printed fit and retention, continuity, keys/displays, BLE, charging and current tests.",
+  "candidate_receipt_sha256": "583fe30392bf991ed78aed7bdbeaa80ec907ffe8fed86b589262287d1e3665d4"
+}
