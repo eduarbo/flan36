@@ -15,7 +15,7 @@
 | **Color rim** | 0.9 mm wide rim flush with the plate, 1.1 mm plate inset, 0.2 mm joint | Red base + black plate |
 | **Terrace** | Two 0.25 mm deep, 0.6 mm high recessed side bands | Sage base + dark plate |
 
-All four follow the same Piantor key positions. Straight thumb faces stay parallel to their keys; tangent arcs soften their joins. Finger corners use up to R2.4, reduced locally at short steps. The pinky backbone remains 90°. No screw adds an outward bulge, and the thumb flank stays within the display-panel edge.
+All four follow the same Flan36 key positions. Straight thumb faces stay parallel to their keys; tangent arcs soften their joins. Finger corners use up to R2.4, reduced locally at short steps. The pinky backbone remains 90°. No screw adds an outward bulge, and the thumb flank stays within the display-panel edge.
 
 The shared outline is **116.75 × 94.57 mm per half**. Its 4.75 mm straight-face allowance protects the existing pads on both boards. The Color rim changes the visible plate edge without reducing that PCB budget. Terrace leaves at least 1.05 mm nominal sidewall away from intentional service openings; the 1.4 mm floor stays unchanged.
 

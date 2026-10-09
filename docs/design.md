@@ -1,6 +1,6 @@
 # Design
 
-Keep Piantor’s angles, a thin key area and serviceable electronics.
+Keep Flan36’s key arrangement, a thin key area and serviceable electronics.
 
 | Choice | Reason |
 |---|---|

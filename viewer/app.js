@@ -127,13 +127,15 @@ function resize(){
   camera.updateProjectionMatrix();explorer?.layoutChanged();render();
 }
 new ResizeObserver(()=>resize()).observe(canvas);
-const compactLayout=matchMedia('(max-width: 700px), (max-width: 1000px) and (orientation: portrait)');
-let previewVisible=true;
-function previewShortcut(){ $('back-to-model').hidden=!compactLayout.matches||previewVisible; }
-new IntersectionObserver(([entry])=>{previewVisible=entry.isIntersecting;previewShortcut();}).observe(canvas);
-compactLayout.addEventListener('change',previewShortcut);
-$('back-to-model').onclick=()=>{document.querySelector('.stage').scrollIntoView({block:'start',behavior:'instant'});canvas.focus({preventScroll:true});};
 canvas.tabIndex=0;
+function setPreviewHidden(hidden){document.body.dataset.previewHidden=String(hidden);$('toggle-preview').textContent=hidden?'Show 3D':'Hide 3D';$('toggle-preview').setAttribute('aria-expanded',String(!hidden));explorer?.layoutChanged();}
+$('toggle-preview').onclick=()=>setPreviewHidden(document.body.dataset.previewHidden!=='true');
+function workspaceHeight(){
+  const height=window.visualViewport?.height||innerHeight;document.documentElement.style.setProperty('--app-height',height+'px');
+  const input=document.activeElement;
+  if(innerWidth<=700&&height<520&&input?.matches('input:not([type]),input[type=text],textarea'))setPreviewHidden(true);
+}
+window.addEventListener('resize',workspaceHeight);window.visualViewport?.addEventListener('resize',workspaceHeight);document.addEventListener('focusin',workspaceHeight);workspaceHeight();
 
 
 function visibleBounds(){
@@ -177,22 +179,41 @@ function reset(){
   for(const key of Object.keys(labels))state.layers[key]=true;
   sync();fit(directions.iso);
 }
-function setCollapsed(value){
-  document.querySelector('main').classList.toggle('detail-collapsed',value);$('collapse-detail').setAttribute('aria-expanded',String(!value));$('collapse-detail').textContent=value?'›':'‹';$('collapse-detail').setAttribute('aria-label',value?'Expand details':'Collapse details');explorer?.layoutChanged();
+let activeMode='customize',activePanel='cases';
+const editablePanel={base:'cases',plate:'cases',lid:'frames',keycaps:'keycaps',battery:'battery'};
+function showWorkspace({focus=false}={}){
+  document.body.dataset.mode=activeMode;
+  for(const name of ['customize','inspect','files','about']){
+    const button=$('nav-'+name);if(name===activeMode)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
+  }
+  for(const name of ['cases','frames','themes','keycaps','battery','inspect','files','about'])$('panel-'+name).hidden=!(activeMode==='customize'?name===activePanel:name===activeMode);
+  for(const button of document.querySelectorAll('[data-panel]'))button.setAttribute('aria-pressed',String(button.dataset.panel===activePanel));
+  $('inspector').scrollTop=0;
+  if(focus)$('inspector').focus({preventScroll:true});
+  explorer?.layoutChanged();appearance?.sync();keycapColors?.sync();
 }
-function openPanel(id,section=id){
-  setCollapsed(false);
-  for(const name of ['cases','frames','themes','keycaps','battery','files','about'])$('panel-'+name).hidden=id!==name;
-  for(const button of document.querySelectorAll('.part-item'))button.setAttribute('aria-expanded',String(button.dataset.group===section));
-  for(const name of ['themes','files','about'])$('nav-'+name).setAttribute('aria-expanded',String(name===section));
-  $('inspector').scrollTop=0;appearance?.sync();keycapColors?.sync();
+function openPanel(id){
+  if(['files','about','inspect'].includes(id))activeMode=id;
+  else {activeMode='customize';activePanel=id;}
+  showWorkspace();
 }
-$('collapse-detail').onclick=()=>setCollapsed($('collapse-detail').getAttribute('aria-expanded')==='true');
-for(const name of ['themes','files','about'])$('nav-'+name).onclick=()=>{if(name!=='files')explorer?.clear();openPanel(name);if(name==='files')refreshRecovery();};
+for(const button of document.querySelectorAll('.app-nav button'))button.onclick=()=>{
+  activeMode=button.dataset.mode;showWorkspace({focus:true});if(activeMode==='files')refreshRecovery();
+};
+for(const button of document.querySelectorAll('[data-panel]'))button.onclick=()=>{activePanel=button.dataset.panel;showWorkspace({focus:true});};
+function editPart(ref){
+  if(!ref||!editablePanel[ref.group])return;
+  if(ref.group==='lid')setFrameSide(ref.side||'both');
+  else if(ref.group==='keycaps'){if(ref.key)$('key-target').value=ref.side+':'+ref.key;else $('key-target').value='all';chooseKeyTarget();keycapColors?.focus(ref.side,ref.key);if(ref.key)$('cap-colors').open=true;}
+  else if(['base','plate'].includes(ref.group)){caseSide=ref.side||'both';syncConfigurationUI();}
+  else if(ref.group==='battery'){batterySide=ref.side||'both';syncConfigurationUI();}
+  openPanel(editablePanel[ref.group]);
+}
+$('edit-selection').onclick=()=>editPart(explorer.selected);
 $('layers').replaceChildren();
 for(const [id,label] of Object.entries(labels)){
   const row=document.createElement('div');row.className='part-row';row.dataset.group=id;
-  const button=document.createElement('button');button.type='button';button.className='part-item';button.dataset.group=id;button.id='part-'+id;button.setAttribute('aria-expanded',String(id==='lid'));button.setAttribute('aria-controls','inspector');button.title=partInfo[id].name;button.setAttribute('aria-label',partInfo[id].name);
+  const button=document.createElement('button');button.type='button';button.className='part-item';button.dataset.group=id;button.id='part-'+id;button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','inspector');button.title=partInfo[id].name;button.setAttribute('aria-label',partInfo[id].name);
   const item=objects.find(o=>o.userData.group===id),color='#'+(Array.isArray(item.material)?item.material[0]:item.material).color.getHexString();
   const dot=document.createElement('span');dot.className='part-anchor';dot.dataset.group=id;dot.style.setProperty('--part-color',color);
   const name=document.createElement('span');name.className='part-name';name.textContent=partInfo[id].short;button.append(dot,name);
@@ -214,7 +235,11 @@ $('explode').addEventListener('input',e=>{state.explode=Number(e.target.value)/1
 $('complete').onclick=reset;$('reset').onclick=()=>{reset();$('view-feedback').textContent='View and layers reset. Your parts are unchanged.';};$('fit').onclick=()=>{fit();$('view-feedback').textContent=objects.some(o=>o.visible)?'Visible parts centered and fitted.':'Nothing visible. Show a layer or choose Assembled.';};
 $('inside').onclick=()=>{reset();for(const k of ['base','plate','lid','keycaps','switches','fasteners'])state.layers[k]=false;sync();fit();};
 $('stack').onclick=()=>{reset();state.half='left';state.explode=.55;for(const k of Object.keys(labels))state.layers[k]=['battery','mcu','display','supports','connectors'].includes(k);sync();fit();};
-$('credits').onclick=()=>$('licenses').showModal();$('close-credits').onclick=()=>$('licenses').close();
+for(const [opener,dialog,closer] of [['credits','licenses','close-credits'],['view-options','view-dialog','close-view']]){
+  $(opener).onclick=()=>{$(dialog).showModal();$(dialog).querySelector('.dialog-body').scrollTop=0;};
+  $(closer).onclick=()=>$(dialog).close();
+  $(dialog).addEventListener('close',()=>$(opener).focus({preventScroll:true}));
+}
 canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();$('error').hidden=false;$('error').textContent='Graphics context lost. Reload the page to restore the viewer.';});
 $('print-kit').onclick=async()=>{const b=$('print-kit');b.disabled=true;try{const selected=copy(configuration),half=$('print-half').value,scope=$('print-scope').value;b.textContent='Loading print files…';const registry=await loadPrinting();const {bytes,manifest}=await printKit(selected,registry,{half,scope,progress:(i,n)=>b.textContent=`Preparing ${i} / ${n}…`});const url=URL.createObjectURL(new Blob([bytes],{type:'application/zip'})),a=document.createElement('a');a.href=url;a.download=`Flan36-${manifest.half}-${manifest.scope}.zip`;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);$('print-status').textContent=`${manifest.parts.length} printed parts exported. See the included joining instructions.`;}catch(e){$('print-status').textContent='Export failed: '+e.message;}finally{b.disabled=false;b.textContent='Download print kit';}};
 $('glb').onclick=async()=>{
@@ -223,7 +248,7 @@ $('glb').onclick=async()=>{
     const assembly=new THREE.Group();assembly.name=`Flan36 rev${data.revision} · nominal`;assembly.scale.setScalar(.001);
     for(const object of objects){if(object.userData.installed===false)continue;const clone=object.clone();clone.visible=true;clone.position.fromArray(object.userData.base);assembly.add(clone);}
     assembly.userData={configuration:copy(configuration),units:'metres',source:'https://github.com/eduarbo/flan36',limitations:data.limits,
-      attribution:'Flan36 / Eduardo Ruiz, derived from Piantor by beekeeb (GPL-3.0); KLP Lame keycaps by braindefender (CC-BY-SA-4.0), unchanged meshes, placed and coloured. Choc models by keyswitch-kicad-library contributors (MIT); reset and power switch geometry by KiCad (CC-BY-SA-4.0 with library exception).',
+      attribution:'Flan36 / Eduardo Ruiz, original keyboard and CAD design; Piantor by beekeeb inspired the key count; KLP Lame keycaps by braindefender (CC-BY-SA-4.0), unchanged meshes, placed and coloured. Choc models by keyswitch-kicad-library contributors (MIT); reset and power switch geometry by KiCad (CC-BY-SA-4.0 with library exception).',
       licenses:['https://www.gnu.org/licenses/gpl-3.0.html','https://creativecommons.org/licenses/by-sa/4.0/'],
       component_sources:'https://github.com/eduarbo/flan36/blob/main/components/sources.json',
       component_licenses:'https://github.com/eduarbo/flan36/blob/main/components/README.md',
@@ -420,15 +445,14 @@ $('toggle-selection').onclick=()=>{
 $('show-all').onclick=()=>{hiddenObjects.clear();state.half='both';for(const key of Object.keys(labels))state.layers[key]=true;sync();fit();$('view-feedback').textContent='All parts visible.';};
 explorer=createExplorer({scene,camera,canvas,objects,requestRender:render,
   onSelect(ref){
-    $('selection').hidden=false;$('selection').classList.toggle('compact',['lid','keycaps'].includes(ref.group));$('selection-meta').textContent=(ref.side?ref.side+' half':'Both halves')+(ref.key?' / '+ref.key:'');
+    $('selection').hidden=false;$('selection-meta').textContent=(ref.side?ref.side+' half':'Both halves')+(ref.key?' / '+ref.key:'');
     populatePartVisibility(ref);
     $('selection-title').textContent=partInfo[ref.group].name;$('selection-info').textContent=partInfo[ref.group].info;
-    if(ref.group==='lid'){setFrameSide(ref.side||'both');openPanel('frames','lid');}
-    else if(ref.group==='keycaps'){openPanel('keycaps','keycaps');$('key-details').open=true;if(ref.key)$('key-target').value=ref.side+':'+ref.key;else $('key-target').value='all';chooseKeyTarget();keycapColors?.focus(ref.side,ref.key);}
-    else if(['base','plate'].includes(ref.group)){caseSide=ref.side||'both';syncConfigurationUI();openPanel('cases',ref.group);}
-    else if(ref.group==='battery'){batterySide=ref.side||'both';syncConfigurationUI();openPanel('battery','battery');}
-    else openPanel('none',ref.group);
-  },onClear(){$('selection').hidden=true;}
+    $('edit-selection').hidden=!editablePanel[ref.group];
+    for(const button of document.querySelectorAll('.part-item'))button.setAttribute('aria-expanded',String(button.dataset.group===ref.group));
+    if(activeMode==='customize'&&editablePanel[ref.group])editPart(ref);
+    else {openPanel('inspect');$('selection').scrollIntoView({block:'nearest',behavior:'instant'});}
+  },onClear(){$('selection').hidden=true;for(const button of document.querySelectorAll('.part-item'))button.setAttribute('aria-expanded','false');}
 });
 $('load-trigger').onclick=()=>$('load-config').click();
 function downloadJSON(){const url=URL.createObjectURL(new Blob([JSON.stringify(configuration,null,2)+'\n'],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download=($('design-name').value.trim().replace(/[^a-z0-9_-]+/gi,'-').slice(0,60)||'Flan36-config')+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
@@ -450,7 +474,7 @@ window.addEventListener('storage',e=>{if(e.key===savedKey)message('Another tab c
 appearance=createAppearance({$,get:()=>configuration,apply:applyConfiguration,targets:kind=>kind==='case'?caseTargets():frameTargets(),preview,frameFinish,material,resize,catalog,geometryFor});
 keycapColors=createKeycapColors({$,catalog,get:()=>configuration,apply:applyConfiguration,message,storageNotice:(text,error)=>storageNotice(text,error,'palettes')});
 applyConfiguration(configuration,{record:false,persist:false});
-if(storageMessage)storageNotice(storageMessage,true,'configuration');else if(restored)message('Restored your saved configuration.');else message('Choose your parts. Changes save on this device.');
+if(storageMessage)storageNotice(storageMessage,true,'configuration');else if(restored)message('Restored your saved configuration.');else message('Changes save on this device.');
 if(keycapColors.initialWarning)storageNotice(keycapColors.initialWarning,true,'palettes');
 
 

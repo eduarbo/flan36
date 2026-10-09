@@ -1028,7 +1028,7 @@
     },
     {
       "path": "viewer/app.js",
-      "sha256": "2bbf5fbcfe965e8fffb289ffd256871f4622bea08ad5c1f5505be2bc8efb7222"
+      "sha256": "b8086da27b6586f990a69f783a8fdebfc5c77ce14c870cdda5ab0b2252d44d04"
     },
     {
       "path": "viewer/config.js",
@@ -1072,7 +1072,7 @@
     },
     {
       "path": "viewer/explorer.js",
-      "sha256": "46d5d86700baaa6f2a5a3befc0c2496cd7f0ca9349951ead74a65b473b5947a3"
+      "sha256": "3b1aefee22c55cdf937d31522988a24b9523caddd3f689e5281d53ef824fc622"
     },
     {
       "path": "viewer/previews.js",
@@ -1088,22 +1088,22 @@
     },
     {
       "path": "viewer/style.css",
-      "sha256": "6029913d6b44ffc1061d0b6e5e6e16c1c1077652a285087b42597c22f9ff38d3"
+      "sha256": "2d53e8eaf7c97bba1b6765298123b21b88062859f4cabb08b374738fb10f196d"
     },
     {
       "path": "viewer/template.html",
-      "sha256": "76308371c0bd98da283e1ba5ffcf19d1d0dc9bbbb837ef33ed66c3ae043abb4b"
+      "sha256": "3b8d5b75c11bb4b51f1e96932c669508cab1c33bf0b2435fd363f192a76fee3b"
     },
     {
       "path": "viewer/build.mjs",
-      "sha256": "3ad5a9d6db6026877bd9e20b0b7cf93668fd2701eb5f88d78ad429324c5b1774"
+      "sha256": "eca81f94e6551f57bd5cacd659cb0d2ee83b54bbef5324ed4c67c1452a8e6707"
     },
     {
       "path": "viewer/package-lock.json",
       "sha256": "a62090e2bb0ab32205ff582bd3612ff167dc03d9db4c2b6879bb98f5bf25d550"
     }
   ],
-  "viewer_sha256": "33cfb63175a8ca3c2d0b540c733bc5a73a9739b67691adce0a2b01afd3435593",
+  "viewer_sha256": "c615d3ad4215a2eebff2f9146f5c074d5b1e7157df6df4cc0cf783f9fa045f12",
   "measurements": {
     "bay_width_mm": 24,
     "plate_top_mm": 7.6,
@@ -1115,15 +1115,15 @@
     "cover_ahead_of_adjacent_cap_mm": 0
   },
   "offline": "docs/offline.html embeds geometry, scripts, styles, deferred print files and licenses. docs/index.html fetches only the hashed print payload on export.",
-  "offline_sha256": "ac5120b184a132516948681bfbe10dd528b105b2f825a0dbe5ba0d735849b670",
+  "offline_sha256": "a0841db613776601b0b509df592f64745622a96ca89660b1820a3e8b5643d34b",
   "printing": {
     "path": "docs/assets/printing-abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93.bin",
     "sha256": "abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93",
     "bytes": 7025718
   },
   "geometry_aliases": 18,
-  "online_bytes": 52703812,
-  "offline_bytes": 62071436,
+  "online_bytes": 52711120,
+  "offline_bytes": 62078744,
   "limitations": [
     "Commercial representations combine documented nominal dimensions, licensed community CAD and inferred package detail; see components/README.md",
     "Routed PCB candidate; physical electrical, connector and RF qualification pending",

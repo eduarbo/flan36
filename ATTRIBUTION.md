@@ -1,6 +1,6 @@
 # Credits and licenses
 
-Flan36 is a derivative project developed by Eduardo Ruiz. Its case and wireless electronics are developed here; its key layout comes from Piantor. There is no implied affiliation or certification by beekeeb or component manufacturers.
+Flan36 and its CAD are an original design by Eduardo Ruiz. Piantor by beekeeb was an inspiration for the number of keys. Imported reference files and third-party component meshes are credited individually below; their provenance does not make the complete Flan36 CAD a derivative of Piantor. There is no implied affiliation or certification by beekeeb or component manufacturers.
 
 | Material | Author / source | License and changes |
 |---|---|---|
@@ -9,10 +9,10 @@ Flan36 is a derivative project developed by Eduardo Ruiz. Its case and wireless 
 | `Keebio-Parts:TRRS-PJ-320A` footprint | [Keebio](https://github.com/keebio/Keebio-Parts.pretty), commit `063565dcba9a8ee807d49772de0ed75ecaedcc26` | MIT; copyright/permission in [LICENSES/Keebio-MIT.txt](LICENSES/Keebio-MIT.txt) |
 | `RPi_Pico:RPi_Pico_SMD_TH` footprint | [TPCWare / Nicola Carandini](https://github.com/ncarandini/KiCad-RP-Pico), commit `dc6f9b9f213dc36eebce626aa9ee72a333fa0db3` | [TPCWare license](LICENSES/TPCWare-KiCad.txt): CC-BY-SA-4.0 with design exception |
 | Standard KiCad footprints, including `Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder` | [KiCad libraries](https://www.kicad.org/libraries/license/) | [CC-BY-SA-4.0 with design exception](LICENSES/KiCad-Libraries.md) |
-| `design/layout.json`, layout diagram | Derived from Piantor coordinates | GPL-3.0; outer column removed and origin translated, relative centers and angles retained |
+| `design/layout.json`, layout diagram | Archived coordinate-reference provenance: Piantor source commit and source-coordinate fields | GPL-3.0; existing reference metadata retained unchanged. This is file-level historical provenance, not attribution of the complete CAD |
 | `keycaps/*.stl`, `keycaps/variants/*.stl`, KLP meshes in FCStd/viewer/GLB | [KLP Lamé by braindefender](https://github.com/braindefender/KLP-Lame-Keycaps), commit `4a67a824232d3054c61599ea047c56a340faaba2` | CC-BY-SA-4.0; unchanged meshes, placed and colored. RevG catalogs all 38 Choc-stem files, Choc/MX body sizes. [Original three sources](keycaps/sources.json), [complete pinned sources](keycaps/variants-source.json) |
-| `docs/images/revE-*.png` through `revI-*.png`, including case screenshots | Flan36 CAD renders incorporating Piantor-derived design and KLP Lamé | CC-BY-SA-4.0; calculated from attributed meshes, no image retouching |
-| Derived CAD, project tools and original documentation | Eduardo Ruiz / Flan36 contributors | GPL-3.0-or-later, except identified materials above |
+| `docs/images/revE-*.png` through `revI-*.png`, including case screenshots | Original Flan36 CAD renders incorporating credited KLP Lamé meshes | CC-BY-SA-4.0; calculated from attributed meshes, no image retouching |
+| Original CAD, project tools and original documentation | Eduardo Ruiz / Flan36 contributors | GPL-3.0-or-later, except identified materials above |
 | Embedded 3D engine | [Three.js](https://github.com/mrdoob/three.js), 0.180.0 | MIT; full [notice](LICENSES/Three-MIT.txt) also embedded in offline HTML |
 | External product photos in the parts guide | Typeractive, Adafruit and respective rights holders | Linked/embedded from supplier listings; not copied into the asset tree or relicensed under the repository license |
 
@@ -31,3 +31,7 @@ FreeCAD, StepUp, ZMK, Zephyr, nice!nano and nice!view retain their own names/lic
 KiSwitch Choc v1 source CAD is used under its MIT option (copyright 2019–2022 keyswitch-kicad-library contributors). KiCad PCM12, TL3342 and SOD-123 assets use CC-BY-SA-4.0 with the KiCad library exception. See [per-file sources, transformations and limits](components/README.md) and [asset hashes](components/sources.json). nice!nano v2 is an original nominal reconstruction referenced to official photographs and the Woovie community drawing; no official photograph is embedded or relicensed.
 
 The `docs/branding/outline/flan36-*.svg` artwork is a deterministic vector conversion of the selected Outline board’s monochrome reference. Letterforms are traced paths, not a bundled or substituted font. Source, reference hash and contour checks are recorded in `tools/build_outline_logo.py`, `validation/branding-outline-trace.json` and `design/branding-outline-vectors.json`. The preview and SVG kit follow GPL-3.0-or-later to the extent applicable.
+
+## CAD authorship correction · 2026-10-09
+
+Earlier viewer credits, GLB metadata and project descriptions incorrectly described the whole CAD as derived from Piantor. Eduardo Ruiz clarified that the CAD is his original design and Piantor inspired the key count. Current descriptions and exports reflect that correction. Historical coordinate-reference metadata, archived upstream copies and third-party license notices are preserved; no geometry or license terms changed.

@@ -1,5 +1,7 @@
 # Responsive viewer audit and restyle
 
+**Historical delivery, superseded:** Eduardo rejected this delivery as an insufficient redesign on 2026-10-09. The technical measurements below apply to their original snapshot; they did not establish satisfactory mobile information architecture. See the [corrective mobile design audit](mobile-redesign.md).
+
 Scope: the existing FLAN36 viewer, following the 2026-10-09 request to correct its mobile responsiveness and restyle the final design. Baseline: `80f43d3d88a93da135663317855489f6ed3bf043`. The repository was clean.
 
 ## Findings and changes

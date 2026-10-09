@@ -2,9 +2,16 @@
 
 [Open Flan36](https://eduarbo.github.io/flan36/) · [Download the complete offline viewer](https://eduarbo.github.io/flan36/offline.html)
 
-Drag to orbit, scroll or pinch to zoom, and right-drag or use two fingers to pan. **Fit view** recenters the visible parts. Open **View settings** for angle, half, layer separation, part links and reset. Changing a case, frame, keycap, color or battery keeps your camera, hidden parts and layer separation. Resizing or rotating the screen preserves your viewing angle, pan and zoom; the projection adapts to the available canvas so a fitted model stays framed.
+Drag to orbit, scroll or pinch to zoom, and right-drag or use two fingers to pan. **Fit view** recenters the visible parts. Open **View** for angle, half, layer separation, part links and reset. Changing a case, frame, keycap, color or battery keeps your camera, hidden parts and layer separation. Resizing or rotating the screen preserves your viewing angle, pan and zoom; the projection adapts to the available canvas so a fitted model stays framed.
 
-Hover or focus a component to highlight it, including through the case. A subtle line connects it to the sidebar. Click a component in the model or directory to inspect it; Escape clears the selection. The sidebar arrow collapses details while keeping the directory available. On phones and compact layouts, swipe the two-row component directory to reach all parts. On a phone, **Back to model** returns to the preview after editing farther down the page.
+The bottom navigation on phones (top navigation on desktop) separates four tasks:
+
+- **Customize**: choose Case, Frame, Keys, Colors or Battery. The live model stays visible while the editor scrolls. On phones, **Hide 3D / Show 3D** gives the editor more room. When a text field is focused in a short keyboard-sized viewport, the preview hides until you choose Show 3D. Secondary colors, finishes and key-shape controls expand on demand.
+- **Parts**: inspect the twelve component groups and toggle visibility. Select a part for details, then use **Customize this part** to edit it. Selecting an editable part directly in the model while in Customize opens its editor and targets that half/key.
+- **Files**: save/open JSON, download a print kit, export GLB or the offline viewer, and recover saved data.
+- **About**: original design and CAD by Eduardo Ruiz, build status, dimensions, resources and credits. Full license texts are individually expandable; the close control stays visible.
+
+Changing destinations preserves the camera, configuration, visibility and history. On mobile, Files and About use the full workspace. Returning to Customize restores the model without Reset. Hover or focus a component in Parts to highlight it, including through the case; its line hides when the anchor is clipped. Escape clears selection outside dialogs.
 
 The eye controls affect visibility. Open **Individual parts** to toggle one piece. **Show all** restores the assembly. **Solo** isolates the selected component. Case, frame and battery controls have explicit **Both / Left / Right** targets; the battery target follows the component you select.
 
@@ -16,7 +23,7 @@ In **Files**, give your design a name and save its JSON. Load that file to retur
 
 Opening the viewer never overwrites saved data. If an older or damaged value cannot be read, it stays intact and a **Save warning** links to recovery.
 
-Two current viewer tabs cannot silently replace one another's changes. A stale tab keeps a separate recovery draft. **Files → Recover saved data** lets you download the original values and those drafts. You can load the saved version, export your current design separately, or explicitly use it as the saved version; replacement keeps a recovery copy first. Palette conflicts use the same protection. Import recovered palette files through **My palettes**.
+Two current viewer tabs cannot silently replace one another's changes. A stale tab keeps a separate recovery draft. **Files → Saved data & recovery** lets you download the original values and those drafts. You can load the saved version, export your current design separately, or explicitly use it as the saved version; replacement keeps a recovery copy first. Palette conflicts use the same protection. Import recovered palette files through **My palettes**.
 
 If browser storage is unavailable, the design remains editable and exportable in that tab. Export before closing. Session undo does not survive a reload.
 
@@ -24,7 +31,7 @@ If browser storage is unavailable, the design remains editable and exportable in
 
 The online viewer loads print files only when you request a print kit. A failed download can be retried without changing the design. Files are matched to the viewer version before use.
 
-Use the **Download offline HTML** link for a complete, single-file copy. It opens without a server or network and includes configuration, GLB and print-kit export. The smaller online `index.html` alone is not the offline download.
+Use the **Download offline viewer** link for a complete, single-file copy. It opens without a server or network and includes configuration, GLB and print-kit export. The smaller online `index.html` alone is not the offline download.
 
 GLB exports all installed parts assembled, regardless of hidden layers or exploded offsets. Its units are meters; use FreeCAD/STEP for solid editing.
 
@@ -59,4 +66,4 @@ Save serialization uses the browser [Web Locks API](https://developer.mozilla.or
 
 ## Responsive design verification
 
-The [responsive audit](reviews/responsive-viewer.md) covers phone, tablet, short landscape and desktop layouts. `responsive-check.cjs` measures rendered model pixels across viewport transitions without Reset, preserves interactive camera state, checks touch targets and gestures, and verifies clipped selection lines and the return-to-model action. Outputs under `build/responsive-review/` are ignored and reproducible with the commands above. Browser emulation is not a physical iPhone test.
+The [mobile redesign audit](reviews/mobile-redesign.md) supersedes the first responsive restyle as the current design review. `responsive-check.cjs` covers all four destinations, five editor categories, license and view dialogs, one-half color editing, component visibility, selection, undo/redo, touch gestures and model framing through seven viewport sizes. Outputs under `build/mobile-redesign/` and `build/reliability-fix/` are ignored and reproducible with the commands above. Browser emulation is not a physical iPhone test.

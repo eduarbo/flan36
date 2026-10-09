@@ -1,0 +1,2610 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-09T16:01:34.607115+00:00",
+  "request_ref": "user:20261009:revisa-flan32-visor-responsivo",
+  "correction_ref": "user:20261009:mobile-redesign-and-cad-authorship-correction",
+  "baseline": "e5c7e0833582fab0f4f55b332cc163cec097f8d2",
+  "status": "LOCAL_VERIFIED_PUBLIC_READBACK_PENDING",
+  "online_sha256": "c615d3ad4215a2eebff2f9146f5c074d5b1e7157df6df4cc0cf783f9fa045f12",
+  "offline_sha256": "a0841db613776601b0b509df592f64745622a96ca89660b1820a3e8b5643d34b",
+  "sources": [
+    {
+      "path": "ATTRIBUTION.md",
+      "sha256": "36357ba145564db91d61e3377317d1873f486112c3e4597f3e784f6ffdd3416d"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6f7eb6b6619caefda04906419909da26e6154f2c26899b40d42dfe6eb390a3f0"
+    },
+    {
+      "path": "viewer/app.js",
+      "sha256": "b8086da27b6586f990a69f783a8fdebfc5c77ce14c870cdda5ab0b2252d44d04"
+    },
+    {
+      "path": "viewer/explorer.js",
+      "sha256": "3b1aefee22c55cdf937d31522988a24b9523caddd3f689e5281d53ef824fc622"
+    },
+    {
+      "path": "viewer/build.mjs",
+      "sha256": "eca81f94e6551f57bd5cacd659cb0d2ee83b54bbef5324ed4c67c1452a8e6707"
+    },
+    {
+      "path": "viewer/template.html",
+      "sha256": "3b8d5b75c11bb4b51f1e96932c669508cab1c33bf0b2435fd363f192a76fee3b"
+    },
+    {
+      "path": "viewer/style.css",
+      "sha256": "2d53e8eaf7c97bba1b6765298123b21b88062859f4cabb08b374738fb10f196d"
+    },
+    {
+      "path": "viewer/responsive-check.cjs",
+      "sha256": "7b1df936bf540ab53ebaa79c31a62559eb082a7964af7b842f565ab5f661ce31"
+    },
+    {
+      "path": "viewer/reliability-check.cjs",
+      "sha256": "74adb311e18bdc5787722dd17415b62fe188e92e0b377a9a3a1a7dcd1c54d09e"
+    },
+    {
+      "path": "viewer/public-check.cjs",
+      "sha256": "999c8317618888c618e1c11aa83ca1dd7b692d18a8d1649d5d62c4aeba36f36a"
+    },
+    {
+      "path": "docs/viewer.md",
+      "sha256": "5a5eb72da93532b93000b11b2f61133e837c5d4fbd826c9fb6ed8ef58731986e"
+    },
+    {
+      "path": "docs/reviews/mobile-redesign.md",
+      "sha256": "cddef6760f0f503e03feffb0583de40faa840704fec9d01a79542f712864cdfb"
+    },
+    {
+      "path": "docs/reviews/responsive-viewer.md",
+      "sha256": "4ba00b7cbae3dc242c494efaaf64d73fcc659feac1aa1c7fa3468fdab5580eab"
+    },
+    {
+      "path": "docs/cases.md",
+      "sha256": "00349575e012e9d3f5a59e317d65eba3b5140830e1336f6d32552677c9279481"
+    },
+    {
+      "path": "docs/design.md",
+      "sha256": "7b1ab78f433a1ae1fc1da4803f7095270c34b99bc9ab3a55a151188296dc88d2"
+    },
+    {
+      "path": "docs/level-stack.md",
+      "sha256": "1940f42f32ac3a2b8cad78421dba9e5292046f983c8eb304cb064a4fa53d6484"
+    },
+    {
+      "path": "design/layout.json",
+      "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+    },
+    {
+      "path": "docs/images/viewer-mobile-customize.png",
+      "sha256": "44e1a0b5751432bd476c1cd20cabbd5fa913954229b20cafb1c3e576b7f73f07"
+    },
+    {
+      "path": "docs/images/viewer-mobile-files.png",
+      "sha256": "5d4f3c67f6385fe6bb5a245915b1d92f83c16d2199e4c397c1b96d793954d902"
+    },
+    {
+      "path": "docs/images/viewer-mobile-inspect.png",
+      "sha256": "893140dd863e0ec9f2bd932bec7267481693fc45e69c1f23bb5e6cbfa1780537"
+    },
+    {
+      "path": "docs/images/viewer-mobile-about.png",
+      "sha256": "e32b0eeade1bb75adcda90f2ab8791d4471dd0a8e0b84e94dd2db21107812cb2"
+    },
+    {
+      "path": "docs/images/viewer-mobile-licenses.png",
+      "sha256": "3a8cce8063f82ac82aaccf3ae8f271ee9e96b29d65903c11d65944a2f5080bc4"
+    },
+    {
+      "path": "docs/images/viewer-redesign-desktop.png",
+      "sha256": "9366f381787e7ce957fb070532b8f47b7e272dacd6725bddbda2453952449e3a"
+    }
+  ],
+  "embedded_scene_unchanged": true,
+  "print_payload_unchanged": true,
+  "coordinate_metadata_unchanged": true,
+  "contract_fixtures": 122,
+  "js_python_contract_parity": true,
+  "responsive": {
+    "chromium": {
+      "engine": "chromium",
+      "target": "offline",
+      "checks": [
+        {
+          "label": "1440x960 customize",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 768,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 113.3125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 69,
+            "y0": 250,
+            "x1": 929,
+            "y1": 508,
+            "w": 998,
+            "h": 766
+          }
+        },
+        {
+          "label": "1440x960 inspect",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 768,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 81.53125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 69,
+            "y0": 250,
+            "x1": 929,
+            "y1": 508,
+            "w": 998,
+            "h": 766
+          }
+        },
+        {
+          "label": "1440x960 files",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 768,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 77.796875,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 69,
+            "y0": 250,
+            "x1": 929,
+            "y1": 508,
+            "w": 998,
+            "h": 766
+          }
+        },
+        {
+          "label": "1440x960 about",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 768,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 86.09375,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 69,
+            "y0": 250,
+            "x1": 929,
+            "y1": 508,
+            "w": 998,
+            "h": 766
+          }
+        },
+        {
+          "label": "390x690 customize",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 122.09375,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 56,
+            "y0": 18,
+            "x1": 331,
+            "y1": 99,
+            "w": 388,
+            "h": 120
+          }
+        },
+        {
+          "label": "390x690 inspect",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 122.09375,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 56,
+            "y0": 18,
+            "x1": 331,
+            "y1": 99,
+            "w": 388,
+            "h": 120
+          }
+        },
+        {
+          "label": "390x690 files",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "390x690 about",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "320x568 customize",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 102,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 15,
+            "x1": 274,
+            "y1": 83,
+            "w": 318,
+            "h": 100
+          }
+        },
+        {
+          "label": "320x568 inspect",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 102,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 15,
+            "x1": 274,
+            "y1": 83,
+            "w": 318,
+            "h": 100
+          }
+        },
+        {
+          "label": "320x568 files",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "320x568 about",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "430x820 customize",
+          "width": 430,
+          "height": 820,
+          "overflow": false,
+          "canvasHeight": 159.796875,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 22,
+            "x1": 394,
+            "y1": 131,
+            "w": 428,
+            "h": 157
+          }
+        },
+        {
+          "label": "430x820 inspect",
+          "width": 430,
+          "height": 820,
+          "overflow": false,
+          "canvasHeight": 159.796875,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 22,
+            "x1": 394,
+            "y1": 131,
+            "w": 428,
+            "h": 157
+          }
+        },
+        {
+          "label": "430x820 files",
+          "width": 430,
+          "height": 820,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "430x820 about",
+          "width": 430,
+          "height": 820,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "844x390 customize",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 202,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 33,
+            "x1": 467,
+            "y1": 163,
+            "w": 502,
+            "h": 200
+          }
+        },
+        {
+          "label": "844x390 inspect",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 202,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 33,
+            "x1": 467,
+            "y1": 163,
+            "w": 502,
+            "h": 200
+          }
+        },
+        {
+          "label": "844x390 files",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 202,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 33,
+            "x1": 467,
+            "y1": 163,
+            "w": 502,
+            "h": 200
+          }
+        },
+        {
+          "label": "844x390 about",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 202,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 33,
+            "x1": 467,
+            "y1": 163,
+            "w": 502,
+            "h": 200
+          }
+        },
+        {
+          "label": "768x1024 customize",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 218.953125,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 136,
+            "y0": 30,
+            "x1": 630,
+            "y1": 180,
+            "w": 766,
+            "h": 216
+          }
+        },
+        {
+          "label": "768x1024 inspect",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 218.953125,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 136,
+            "y0": 30,
+            "x1": 630,
+            "y1": 180,
+            "w": 766,
+            "h": 216
+          }
+        },
+        {
+          "label": "768x1024 files",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "768x1024 about",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "1024x768 customize",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 576,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 113.3125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 202,
+            "x1": 589,
+            "y1": 366,
+            "w": 632,
+            "h": 574
+          }
+        },
+        {
+          "label": "1024x768 inspect",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 576,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 81.53125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 202,
+            "x1": 589,
+            "y1": 366,
+            "w": 632,
+            "h": 574
+          }
+        },
+        {
+          "label": "1024x768 files",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 576,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 77.796875,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 202,
+            "x1": 589,
+            "y1": 366,
+            "w": 632,
+            "h": 574
+          }
+        },
+        {
+          "label": "1024x768 about",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 576,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 86.09375,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 202,
+            "x1": 589,
+            "y1": 366,
+            "w": 632,
+            "h": 574
+          }
+        },
+        {
+          "label": "fit after gestures",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 122.09375,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 176,
+            "y0": 9,
+            "x1": 217,
+            "y1": 112,
+            "w": 388,
+            "h": 120
+          }
+        }
+      ],
+      "errors": [],
+      "physical_phone_tested": false,
+      "browser": "151.0.7922.34",
+      "passed": true,
+      "interactions": [
+        "navigation preserves view and design",
+        "independent section scroll",
+        "five editors",
+        "12 component eyes",
+        "solo and restore",
+        "edit selected part",
+        "one-half color edit",
+        "undo redo",
+        "long license close and focus",
+        "Escape preserves selection in view dialog",
+        "clear removes active row",
+        "selection lines clip with inspector scroll",
+        "view dialog",
+        "touch orbit and pinch",
+        "responsive pan/zoom",
+        "short keyboard viewport and explicit preview restore"
+      ]
+    },
+    "webkit": {
+      "engine": "webkit",
+      "target": "offline",
+      "checks": [
+        {
+          "label": "1440x960 customize",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 768,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 113.3125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 69,
+            "y0": 250,
+            "x1": 929,
+            "y1": 508,
+            "w": 998,
+            "h": 766
+          }
+        },
+        {
+          "label": "1440x960 inspect",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 768,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 81.53125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 69,
+            "y0": 250,
+            "x1": 929,
+            "y1": 508,
+            "w": 998,
+            "h": 766
+          }
+        },
+        {
+          "label": "1440x960 files",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 768,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 77.8125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 69,
+            "y0": 250,
+            "x1": 929,
+            "y1": 508,
+            "w": 998,
+            "h": 766
+          }
+        },
+        {
+          "label": "1440x960 about",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 768,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 86.09375,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 69,
+            "y0": 250,
+            "x1": 929,
+            "y1": 508,
+            "w": 998,
+            "h": 766
+          }
+        },
+        {
+          "label": "390x690 customize",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 122.09375,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 56,
+            "y0": 18,
+            "x1": 331,
+            "y1": 99,
+            "w": 388,
+            "h": 120
+          }
+        },
+        {
+          "label": "390x690 inspect",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 122.09375,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 56,
+            "y0": 18,
+            "x1": 331,
+            "y1": 99,
+            "w": 388,
+            "h": 120
+          }
+        },
+        {
+          "label": "390x690 files",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "390x690 about",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "320x568 customize",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 102,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 15,
+            "x1": 274,
+            "y1": 83,
+            "w": 318,
+            "h": 100
+          }
+        },
+        {
+          "label": "320x568 inspect",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 102,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 15,
+            "x1": 274,
+            "y1": 83,
+            "w": 318,
+            "h": 100
+          }
+        },
+        {
+          "label": "320x568 files",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "320x568 about",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 71,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "430x820 customize",
+          "width": 430,
+          "height": 820,
+          "overflow": false,
+          "canvasHeight": 159.796875,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 22,
+            "x1": 394,
+            "y1": 131,
+            "w": 428,
+            "h": 157
+          }
+        },
+        {
+          "label": "430x820 inspect",
+          "width": 430,
+          "height": 820,
+          "overflow": false,
+          "canvasHeight": 159.796875,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 22,
+            "x1": 394,
+            "y1": 131,
+            "w": 428,
+            "h": 157
+          }
+        },
+        {
+          "label": "430x820 files",
+          "width": 430,
+          "height": 820,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "430x820 about",
+          "width": 430,
+          "height": 820,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 98.5,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "844x390 customize",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 202,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 33,
+            "x1": 467,
+            "y1": 163,
+            "w": 502,
+            "h": 200
+          }
+        },
+        {
+          "label": "844x390 inspect",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 202,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 33,
+            "x1": 467,
+            "y1": 163,
+            "w": 502,
+            "h": 200
+          }
+        },
+        {
+          "label": "844x390 files",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 202,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 33,
+            "x1": 467,
+            "y1": 163,
+            "w": 502,
+            "h": 200
+          }
+        },
+        {
+          "label": "844x390 about",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 202,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            },
+            {
+              "width": 202,
+              "height": 51,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 34,
+            "y0": 33,
+            "x1": 467,
+            "y1": 163,
+            "w": 502,
+            "h": 200
+          }
+        },
+        {
+          "label": "768x1024 customize",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 218.953125,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 136,
+            "y0": 30,
+            "x1": 630,
+            "y1": 180,
+            "w": 766,
+            "h": 216
+          }
+        },
+        {
+          "label": "768x1024 inspect",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 218.953125,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 136,
+            "y0": 30,
+            "x1": 630,
+            "y1": 180,
+            "w": 766,
+            "h": 216
+          }
+        },
+        {
+          "label": "768x1024 files",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "768x1024 about",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 0,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 183,
+              "height": 53,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "label": "1024x768 customize",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 576,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 113.3125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 202,
+            "x1": 589,
+            "y1": 366,
+            "w": 632,
+            "h": 574
+          }
+        },
+        {
+          "label": "1024x768 inspect",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 576,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 81.53125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 202,
+            "x1": 589,
+            "y1": 366,
+            "w": 632,
+            "h": 574
+          }
+        },
+        {
+          "label": "1024x768 files",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 576,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 77.8125,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 83.921875,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 202,
+            "x1": 589,
+            "y1": 366,
+            "w": 632,
+            "h": 574
+          }
+        },
+        {
+          "label": "1024x768 about",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 576,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 109.734375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 79.234375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 76.015625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "width": 86.09375,
+              "height": 44,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 44,
+            "y0": 202,
+            "x1": 589,
+            "y1": 366,
+            "w": 632,
+            "h": 574
+          }
+        },
+        {
+          "label": "fit after gestures",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 122.09375,
+          "overlap": 0,
+          "nav": [
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            },
+            {
+              "width": 88.5,
+              "height": 53,
+              "visible": true
+            }
+          ],
+          "pixels": {
+            "x0": 56,
+            "y0": 18,
+            "x1": 331,
+            "y1": 99,
+            "w": 388,
+            "h": 120
+          }
+        }
+      ],
+      "errors": [],
+      "physical_phone_tested": false,
+      "browser": "26.5",
+      "passed": true,
+      "interactions": [
+        "navigation preserves view and design",
+        "independent section scroll",
+        "five editors",
+        "12 component eyes",
+        "solo and restore",
+        "edit selected part",
+        "one-half color edit",
+        "undo redo",
+        "long license close and focus",
+        "Escape preserves selection in view dialog",
+        "clear removes active row",
+        "selection lines clip with inspector scroll",
+        "view dialog",
+        "touch orbit and pinch",
+        "responsive pan/zoom",
+        "short keyboard viewport and explicit preview restore"
+      ]
+    }
+  },
+  "independent_reviews": {
+    "lenses": [
+      "constructive-design",
+      "adversarial-reliability"
+    ],
+    "initial_agreement": "Four navigation destinations, progressive editor settings, separate information and licenses; correct CAD authorship without erasing asset provenance.",
+    "final_recommendation": "Deliver after passing final browser checks. No material objections remain.",
+    "findings_addressed": [
+      "dialog Escape preserves selection",
+      "clear resets selected row",
+      "links clip to actual scroll container",
+      "no link from hidden canvas",
+      "WebKit select dimensions"
+    ],
+    "snapshot_mutations": "Only enumerated root edits; neither reviewer wrote files."
+  },
+  "limits": [
+    "Physical iPhone and physical iOS keyboard not tested. Keyboard space is simulated.",
+    "Review and browser checks do not represent Eduardo design approval."
+  ],
+  "regenerate": "See docs/reviews/mobile-redesign.md; build/mobile-redesign and build/reliability-fix are ignored reproducible outputs.",
+  "reliability": {
+    "source_snapshot": "e5c7e0833582fab0f4f55b332cc163cec097f8d2",
+    "online_sha256": "c615d3ad4215a2eebff2f9146f5c074d5b1e7157df6df4cc0cf783f9fa045f12",
+    "offline_sha256": "a0841db613776601b0b509df592f64745622a96ca89660b1820a3e8b5643d34b",
+    "checks": {
+      "camera_transitions": 17,
+      "rejected_import_atomic_glb": true,
+      "legacy_solid_kit": true,
+      "battery_targets": true,
+      "undo_redo_and_pending_paint": true,
+      "named_json_export": true,
+      "lazy_print_retry_and_hash": true,
+      "exact_native_stl_hashes": true,
+      "missing_resource_atomic_glb": true,
+      "simultaneous_tabs_preserve_both": true,
+      "close_while_save_queued": true,
+      "palette_tab_conflicts": true,
+      "rejected_storage_preserved_and_downloadable": true,
+      "offline_exact_kit_and_glb": true,
+      "mobile_controls": true,
+      "no_locks_or_random_uuid": true,
+      "denied_storage_export": true
+    },
+    "errors": [],
+    "passed": true
+  },
+  "review_baselines": {
+    "baseline": {
+      "head": "e5c7e0833582fab0f4f55b332cc163cec097f8d2",
+      "status": "",
+      "artifacts": [
+        {
+          "path": "viewer/template.html",
+          "sha256": "76308371c0bd98da283e1ba5ffcf19d1d0dc9bbbb837ef33ed66c3ae043abb4b"
+        },
+        {
+          "path": "viewer/style.css",
+          "sha256": "6029913d6b44ffc1061d0b6e5e6e16c1c1077652a285087b42597c22f9ff38d3"
+        },
+        {
+          "path": "viewer/app.js",
+          "sha256": "2bbf5fbcfe965e8fffb289ffd256871f4622bea08ad5c1f5505be2bc8efb7222"
+        },
+        {
+          "path": "viewer/explorer.js",
+          "sha256": "46d5d86700baaa6f2a5a3befc0c2496cd7f0ca9349951ead74a65b473b5947a3"
+        },
+        {
+          "path": "viewer/build.mjs",
+          "sha256": "3ad5a9d6db6026877bd9e20b0b7cf93668fd2701eb5f88d78ad429324c5b1774"
+        },
+        {
+          "path": "README.md",
+          "sha256": "5a5dde7cc07c8053ce9c008c25de83ba9db6fd70b3ee5d8dedaeecccfdf9fb9f"
+        },
+        {
+          "path": "ATTRIBUTION.md",
+          "sha256": "af99f04d106d49e242209cf31f908b05f967bdf8de36810b48bba37d7dd23379"
+        },
+        {
+          "path": "design/layout.json",
+          "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+        },
+        {
+          "path": "tools/render_layout.py",
+          "sha256": "8f1e79b69c2e6a88177c8fa28f87b18434187fe699ab76bf50992164f9043e90"
+        },
+        {
+          "path": "docs/viewer.md",
+          "sha256": "8f5fb7603a7f83068f807fca0d1cacadf4368b22be59aca80a6782f9f4b6401f"
+        }
+      ]
+    },
+    "review-baseline": [
+      {
+        "path": "viewer/template.html",
+        "sha256": "7201a118916bc66e65e78e567dc6ee3376835f1a35e5acc3f2331aea3a5fffcd"
+      },
+      {
+        "path": "viewer/style.css",
+        "sha256": "edfc6ba4a6e18914b8b8a0cc7f2441c3f4d4e2605f6ff3715255a71cbe77a41f"
+      },
+      {
+        "path": "viewer/app.js",
+        "sha256": "6fa5569b6acef708c62726790d047977d3b5c30557bc6977f1505f5954358821"
+      },
+      {
+        "path": "viewer/explorer.js",
+        "sha256": "c5293a1bde599bb3a4a5e936452e5906f75ef4a92d4307757fb5362de44c7c74"
+      },
+      {
+        "path": "viewer/build.mjs",
+        "sha256": "eca81f94e6551f57bd5cacd659cb0d2ee83b54bbef5324ed4c67c1452a8e6707"
+      },
+      {
+        "path": "README.md",
+        "sha256": "6f7eb6b6619caefda04906419909da26e6154f2c26899b40d42dfe6eb390a3f0"
+      },
+      {
+        "path": "ATTRIBUTION.md",
+        "sha256": "36357ba145564db91d61e3377317d1873f486112c3e4597f3e784f6ffdd3416d"
+      },
+      {
+        "path": "design/layout.json",
+        "sha256": "7c250ff02fb09d913379783bce71d7fc18e037e93ae33a8006cf40280c4d6af3"
+      },
+      {
+        "path": "viewer/responsive-check.cjs",
+        "sha256": "5bb65dc8a56b7206c585cb1616520e98d0690c20a254fe826e6c24d40878c0a4"
+      },
+      {
+        "path": "viewer/reliability-check.cjs",
+        "sha256": "85f6c603d104b1d1ee47720c9b2c2af8474090d444c2710309e70425b6fd0706"
+      },
+      {
+        "path": "viewer/public-check.cjs",
+        "sha256": "999c8317618888c618e1c11aa83ca1dd7b692d18a8d1649d5d62c4aeba36f36a"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1440-licenses.png",
+        "sha256": "bd498a49e74a7c76de8d03ceb9057a489b0d94799ef64bb6ee1362daa5139ba1"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-768-files.png",
+        "sha256": "cf99e3a3b732589a825216bbf15a939278c27ebd638a0b5a1fc42ab3f2dcbe02"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-320-view.png",
+        "sha256": "4ca5e58c3397d104ad9e9b8a826eeb195d2bc6df2105bf8b4429e301440b9b20"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-390-files.png",
+        "sha256": "a1df4a7f48188bc8a1f2237e3fd1aa5b731eedbd8c257088330b755f97a36daa"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-320-licenses.png",
+        "sha256": "ccd9bf4d25c7f6538fdcd48f5d70835204937e8593bedbd89316141977e0fa27"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-844-customize.png",
+        "sha256": "7c7d4f528edb8ff4847daf7723fa6ee1d0d3e3b379db8f959a0d060f1a85a666"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1024-inspect.png",
+        "sha256": "e1f65438edce8998d0f50cca7ee0419399f0c2cf676052b6124e13efc6921730"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-430-about.png",
+        "sha256": "b7663cbf04c18e624eaca0f7036144f762407c8250bcf3b1f093c52b204fa47e"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1024-customize.png",
+        "sha256": "b078cde1fd9dee9ee9071d643775bc8c4303f17379e5741be695ef6e5332bc46"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1440-about.png",
+        "sha256": "285187990e8df0901d329b549ce80f1a4774d901336c1f00efb4bbc7d0109beb"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-430-view.png",
+        "sha256": "baa4d1d47ab29c0e06dcc6b97d6b4810fb21f3e5a87f2bd80ca6af6d3e96444d"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-390-view.png",
+        "sha256": "5045f5fe4f9e0fe4cdfba8cdd9e9f7e5f6a96f68d441f374b38695cec5c16d11"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-844-view.png",
+        "sha256": "7b82c71374a8eff2136dc22610d59dd876f144e9eca6de7f44a587711cad25f0"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-844-files.png",
+        "sha256": "46fbf285ee9a71390b253bb5df7cc49c1f70a7b5f12c9aa3eb64fba1aa6a9163"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1024-licenses.png",
+        "sha256": "4cf65e55c3de4190e86b391927cf1adc57157c34b89a4e4a48dbe0eccb7166e6"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1024-files.png",
+        "sha256": "8791ea851b594a55a2f2075dfd1acaed903e9801544d624833a81495db4e49dc"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-editor-battery.png",
+        "sha256": "66941f91c520f96a3c294d79733e71c2e3a8bee3880265ba6445eedaf99d907d"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-editor-frames.png",
+        "sha256": "78d84631bbcf4c87401e803fbb4dc0dfe2e135eec894b119f24c4de5503497b8"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-editor-keycaps.png",
+        "sha256": "54d00a43872a6d3012caf2ecc594b467dec5a71bfd90b42c23518a57d987ef84"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-editor-cases.png",
+        "sha256": "f6529bac95709e498ce2748c63a012dd3028e66530525037578096dcb946be2b"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-844-licenses.png",
+        "sha256": "eee5477810e452db373444a1dab2a0d15a175e53ecd21789f20a9a473d54cbee"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-320-about.png",
+        "sha256": "bfe3910c984188e21403271e3611ce2e0ab1488db1ad2b8402c65201e2d95f0f"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-768-inspect.png",
+        "sha256": "d20bd8766b16b359d719d43162887487159817e4e896cdd7d9b54aa9d027a16f"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-canvas.png",
+        "sha256": "06b04f4c15776b6eaa1c09c5f9e5cbe24c5d096fadeea3431e907c33179514f0"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-320-customize.png",
+        "sha256": "da806ed633b56b328fb5c4498287273a8f99c9ee9877a965537276a9747518e1"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1440-inspect.png",
+        "sha256": "cb2757842462328526dc2897747f6396a0f70293ec47bc2f1fed40212981c25b"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-430-customize.png",
+        "sha256": "590bbc06f1c1059cb72ee2cd86625dd6ce2a29f83dd4e1d6d589fe65744c1790"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-768-about.png",
+        "sha256": "821c17377bf97dac273742281253644f96ddc559055518f05a30e689cdee2b85"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1440-customize.png",
+        "sha256": "65bd1ef4a4e6375e37efab0aaa6764b6e4ddbb815cf80edc868af0f4fdf65598"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-768-view.png",
+        "sha256": "afd285756d8258fcd8ef53a26826420c252b1722a4ebe70731a35d7095b56a9e"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1024-view.png",
+        "sha256": "5d1a3705abed74f1fcb793a1bbace05b62f4d9fb2d6bc903e53ced0e3337763e"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-390-about.png",
+        "sha256": "38e9cb4ebd26ab296f036e8ea3f06838e15e2f8eed3fc29a233b1150ffeb08f5"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-390-licenses.png",
+        "sha256": "d9d1e6ccc4681a1f1bdc9d0304580c31acf357230bc6d90ce98001fc90c6d687"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-430-files.png",
+        "sha256": "10d5f9ba0eaef7e732c6fca9349e0c7836a0161a9ba6094094bc252857181312"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-390-inspect.png",
+        "sha256": "c1a35d5854452c2321c7b226fbacf137fff445ecbd0598a52cc72fc7eff86e07"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1440-files.png",
+        "sha256": "57e390eceb5bbf635e05ff8fdb0baaa0d12119b0508b363a06615b55c4c93c0e"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1440-view.png",
+        "sha256": "1b1e3af209953979088619d8d7bf3ffd0b6879cdf2ec5fde31a0ad197ee3148d"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-390-customize.png",
+        "sha256": "1d416441810ff51ecdf1283e687d7babbb344b30b60964e48333d4673516f4c5"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-844-about.png",
+        "sha256": "b8bf82e66b9d171dd6672355b781fe38a949298f348991bd671ac2ffcda55dde"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-1024-about.png",
+        "sha256": "454f7090fc23669bc35c5bb608d41c387d5321355ec1c8804fe0b22e9c08da50"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-430-licenses.png",
+        "sha256": "b2cb3587590d0672fa55343a3c4e953cf7ccfeaa5e59369a704e2e9c0c03ce54"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-844-inspect.png",
+        "sha256": "13896ace03f40bc8743a3304384e4e1dca532c88219840b83b1db86e5f177b21"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-768-customize.png",
+        "sha256": "f433c91ff1b2d3e00865b975df0935cce5612210293e259df4302d27f6f763b3"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-768-licenses.png",
+        "sha256": "c0220a7855c1de1c2f71c2ae3185a91bb96b983cdb1d39c7d485c11a436d3a0d"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-320-inspect.png",
+        "sha256": "c9cb7d25d8c1c33f703a84e778a0386d18de77d289030b606558084dba13a5e4"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-320-files.png",
+        "sha256": "69999f684449d8040f9ae8e3d12d3e177b64d9de0f4aabe1f54d46be864e365e"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-430-inspect.png",
+        "sha256": "df621667d93ec5de0bc372d7ea296da118abdf48adb410d0ed80db31a93b7fab"
+      },
+      {
+        "path": "build/mobile-redesign/chromium-editor-themes.png",
+        "sha256": "dc9b4f97f2576dab6a129d348c9e3fb8865a572d445ade961444cd4164abbee6"
+      }
+    ],
+    "final-review-baseline": [
+      {
+        "path": "viewer/template.html",
+        "sha256": "3b8d5b75c11bb4b51f1e96932c669508cab1c33bf0b2435fd363f192a76fee3b"
+      },
+      {
+        "path": "viewer/style.css",
+        "sha256": "2d53e8eaf7c97bba1b6765298123b21b88062859f4cabb08b374738fb10f196d"
+      },
+      {
+        "path": "viewer/app.js",
+        "sha256": "b8086da27b6586f990a69f783a8fdebfc5c77ce14c870cdda5ab0b2252d44d04"
+      },
+      {
+        "path": "viewer/explorer.js",
+        "sha256": "6ea9b41a6a0a9165765c462c64a13464348704d0646a7c9d923e6c9d4415eb11"
+      },
+      {
+        "path": "viewer/build.mjs",
+        "sha256": "eca81f94e6551f57bd5cacd659cb0d2ee83b54bbef5324ed4c67c1452a8e6707"
+      },
+      {
+        "path": "viewer/responsive-check.cjs",
+        "sha256": "9727a84d8c1ab0b752583214525d0a51c77d370b226ff2325ecefb445be5a59b"
+      },
+      {
+        "path": "docs/viewer.md",
+        "sha256": "5a5eb72da93532b93000b11b2f61133e837c5d4fbd826c9fb6ed8ef58731986e"
+      },
+      {
+        "path": "docs/reviews/mobile-redesign.md",
+        "sha256": "4786a3d81d3f904007e7c3d92dbcf9452a2ad485920d915a693f3e54040bf7c5"
+      }
+    ]
+  }
+}

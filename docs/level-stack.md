@@ -21,7 +21,7 @@ The battery locator now has an open bottom. Its walls locate the cell; they add 
 
 ## Level case
 
-Choose **Level** in the case explorer. Its upper shell hides the switch housings from the sides and meets the display frame at the same height. The Piantor key centers, angles and outer silhouette remain unchanged.
+Choose **Level** in the case explorer. Its upper shell hides the switch housings from the sides and meets the display frame at the same height. The Flan36 key centers, angles and outer silhouette remain unchanged.
 
 The shell and original 1.3 mm switch-retaining plate form one removable part. It uses the same three plate screws, reached from above after removing the caps. The magnetic display frame remains independently removable. There are no new perimeter bosses or raised decorations.
 

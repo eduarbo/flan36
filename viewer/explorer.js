@@ -5,11 +5,11 @@ export const partInfo={
   lid:{name:'Display frame',short:'Frame',info:'Magnetic frame with captive steel targets and vertical release. Pick a design below; PCB and battery remain mechanically secured.'},
   keycaps:{name:'KLP Lamé keycaps',short:'Caps',info:'Original Choc-stem meshes. Choose a shape preset; color all keys, rows, columns or individual keys.'},
   display:{name:'nice!view display',short:'Display',info:'14 × 36 × 2.9 mm nominal nice!view. Illustrative screen content; flush frame details. The 6.09 mm connector stack is a dimensional candidate pending a physical fit test.'},
-  base:{name:'Printed base',short:'Base',info:'Key-aligned local curves and a shared contour. Pick a real case variant below; native parts are editable in FreeCAD.'},
-  plate:{name:'Switch plate',short:'Plate',info:'Holds the 36 Piantor switch positions and angles. Nominal plate height: 7.6 mm.'},
+  base:{name:'Printed base',short:'Base',info:'Key-aligned local curves and a shared contour. Use Customize this part to choose a case. Native parts are editable in FreeCAD.'},
+  plate:{name:'Switch plate',short:'Plate',info:'Holds the 36 switch positions and angles of Flan36. Nominal plate height: 7.6 mm.'},
   switches:{name:'Choc switches',short:'Switch',info:'Licensed KiSwitch Choc v1 housings, pins and stems. Generic model; seating, travel and printed keycap stems need physical fit tests.'},
-  pcb:{name:'PCB',short:'PCB',info:'Custom wireless board outline. Zero geometric DRC violations, but routing remains unfinished; this is not a manufacturing file.'},
-  battery:{name:'LiPo battery',short:'Battery',info:'Adafruit 1570 and 301230 nominal profiles share the insulated case floor and captured cage. Choose a profile below. Verify actual pack, leads and insulation.'},
+  pcb:{name:'PCB',short:'PCB',info:'Custom wireless PCB. See the build guide for fabrication files and electrical validation.'},
+  battery:{name:'LiPo battery',short:'Battery',info:'Adafruit 1570 and 301230 nominal profiles share the insulated case floor and captured cage. Use Customize this part to choose a profile. Verify actual pack, leads and insulation.'},
   mcu:{name:'nice!nano v2 controller',short:'MCU',info:'Nominal v2 reconstruction with separate PCB, ENIG pads, mid-mount USB-C, ICs and passives. Community outline dimensions; package detail inferred from official photos.'},
   supports:{name:'Insulating supports',short:'Mounts',info:'Cradle, display sled and controller supports. Retention is a nominal CAD proposal.'},
   connectors:{name:'Connectors & controls',short:'Ports',info:'Sockets, battery connector, reset and power-switch references. Final supplied dimensions and cabling remain open.'},
@@ -80,7 +80,7 @@ export function createExplorer({scene,camera,canvas,objects,onSelect,onClear,req
   canvas.addEventListener('pointerup',e=>{const tap=down&&down.id===e.pointerId&&!down.moved&&pointers.size===1;pointers.delete(e.pointerId);down=null;if(tap){const found=hit(e);if(found)select(refOf(found.object),{point:found.point.clone(),object:found.object});else clear();}});
   canvas.addEventListener('pointercancel',e=>{pointers.delete(e.pointerId);down=null;clearTimeout(pickTimer);});
   canvas.addEventListener('pointerleave',()=>{clearTimeout(pickTimer);setHover(null);canvas.style.cursor='';});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('licenses').open)clear();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.querySelector('dialog[open]'))clear();});
   $('clear-selection').onclick=clear;
   $('annotations').onclick=()=>{enabled=!enabled;$('annotations').setAttribute('aria-pressed',String(enabled));scheduleAnchor();$('view-feedback').textContent=!enabled?'Part links hidden.':!(hovered||selected)?'Part links on. Hover or select a visible component.':'Part links on. The line appears when the selected surface is visible.';requestRender();};
   new ResizeObserver(()=>{layoutDirty=true;requestRender();}).observe(main);
@@ -103,11 +103,11 @@ export function createExplorer({scene,camera,canvas,objects,onSelect,onClear,req
     if(!enabled||moving||!active||!anchor||(!anchor.object.visible&&!hovered))return;
     if(layoutDirty){
       const r=main.getBoundingClientRect(),stage=canvas.getBoundingClientRect();layout={r,stage,targets:new Map()};
-      for(const e of document.querySelectorAll('.part-anchor')){const b=e.getBoundingClientRect(),clip=$('layers').getBoundingClientRect(),dir=document.querySelector('.directory').getBoundingClientRect();if(b.left<Math.max(0,clip.left,dir.left)||b.right>Math.min(innerWidth,clip.right,dir.right)||b.top<Math.max(0,clip.top,dir.top)||b.bottom>Math.min(innerHeight,clip.bottom,dir.bottom))continue;layout.targets.set(e.dataset.group,{x:b.x+b.width/2-r.x,y:b.y+b.height/2-r.y});}
+      for(const e of document.querySelectorAll('.part-anchor')){const b=e.getBoundingClientRect(),clip=$('layers').getBoundingClientRect(),dir=document.querySelector('.directory').getBoundingClientRect(),inspector=$('inspector').getBoundingClientRect();if(b.left<Math.max(0,clip.left,dir.left,inspector.left)||b.right>Math.min(innerWidth,clip.right,dir.right,inspector.right)||b.top<Math.max(0,clip.top,dir.top,inspector.top)||b.bottom>Math.min(innerHeight,clip.bottom,dir.bottom,inspector.bottom))continue;layout.targets.set(e.dataset.group,{x:b.x+b.width/2-r.x,y:b.y+b.height/2-r.y});}
       svg.setAttribute('viewBox',`0 0 ${r.width} ${r.height}`);layoutDirty=false;
     }
     const p=anchor.point.clone().project(camera);if(Math.abs(p.x)>1||Math.abs(p.y)>1||Math.abs(p.z)>1)return;
-    const {r,stage}=layout,to=layout.targets.get(active.group);if(!to)return;
+    const {r,stage}=layout,to=layout.targets.get(active.group);if(!to||stage.width<1||stage.height<1)return;
     const x=stage.x-r.x+(p.x+1)*stage.width/2,y=stage.y-r.y+(1-p.y)*stage.height/2;
     if(x+r.x<0||x+r.x>innerWidth||y+r.y<0||y+r.y>innerHeight)return;
     const edge=x<stage.width/2?8:stage.width-8;

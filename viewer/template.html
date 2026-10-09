@@ -2,54 +2,56 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="theme-color" content="#f4f3ee">
 <title>Flan36 · Explore in 3D</title>
 <style>/*__STYLE__*/</style>
 </head>
-<body>
-<header><div class="brand"><strong>FLAN36<span class="brand-dot" aria-hidden="true">.</span></strong><span class="brand-caption">A split keyboard, made yours.</span></div><div class="history-controls" aria-label="Design history"><button id="save-warning" hidden title="Open saved-data recovery">Save warning</button><button id="undo" title="Undo design change (Ctrl/Cmd Z)" disabled>↶ Undo</button><button id="redo" title="Redo design change (Ctrl/Cmd Shift Z)" disabled>↷ Redo</button></div><a href="https://github.com/eduarbo/flan36">Repository ↗</a></header>
+<body data-mode="customize">
+<header><div class="brand"><strong>FLAN36<span class="brand-dot" aria-hidden="true">.</span></strong><span class="brand-caption">A split keyboard, made yours.</span></div><div class="history-controls" aria-label="Design history"><button id="save-warning" hidden title="Open saved-data recovery">Save warning</button><button id="undo" aria-label="Undo design change" title="Undo design change (Ctrl/Cmd Z)" disabled><span aria-hidden="true">↶</span><span class="history-label"> Undo</span></button><button id="redo" aria-label="Redo design change" title="Redo design change (Ctrl/Cmd Shift Z)" disabled><span aria-hidden="true">↷</span><span class="history-label"> Redo</span></button></div><button id="toggle-preview" aria-expanded="true" aria-controls="canvas">Hide 3D</button><a href="https://github.com/eduarbo/flan36">Repository ↗</a></header>
+<nav class="app-nav" aria-label="Main navigation">
+  <button id="nav-customize" data-mode="customize" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg><span>Customize</span></button>
+  <button id="nav-inspect" data-mode="inspect"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg><span>Parts</span></button>
+  <button id="nav-files" data-mode="files"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H5V3h2Zm7 0v6h5M9 13h6m-6 4h6"/></svg><span>Files</span></button>
+  <button id="nav-about" data-mode="about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-11v2"/></svg><span>About</span></button>
+</nav>
 <main>
 <section class="stage" aria-label="3D keyboard view">
   <canvas id="canvas" aria-label="Drag to rotate; pinch or scroll to zoom; tap a part to inspect"></canvas>
-  <div class="stage-label"><span class="dot"></span><span id="status" role="status">Loading geometry…</span></div>
+  <div class="stage-label"><span class="dot"></span><span class="gesture-hint">Drag to rotate · Pinch or scroll to zoom</span><span id="status" role="status">Loading geometry…</span></div>
   <div class="view-controls" role="region" aria-label="View controls">
     <div class="toolbar-primary">
       <div class="presets" role="group" aria-label="Assembly views"><button id="complete" aria-pressed="true">Assembled</button><button id="inside" aria-pressed="false">Inside</button><button id="stack" aria-pressed="false">Stack</button></div>
-      <button id="fit" aria-describedby="view-feedback" title="Center and fit all visible parts; preserve the viewing angle">Fit view</button>
+      <button id="view-options" aria-haspopup="dialog" aria-controls="view-dialog">View <span aria-hidden="true">⌄</span></button><button id="fit" aria-describedby="view-feedback" title="Center and fit all visible parts; preserve the viewing angle" aria-label="Fit view">⌖</button>
     </div>
-    <details class="view-settings"><summary>View settings <span>Angle, layers &amp; visibility</span></summary>
-    <div class="toolbar-secondary">
-      <label class="toolbar-select"><span>Half</span><select id="half"><option value="both">Both</option><option value="left">Left</option><option value="right">Right</option></select></label>
-      <button id="reset" aria-label="Reset view and visible layers" title="Reset view and layers; keep your parts">↺</button>
-
-      <label class="toolbar-select"><span>View</span><select id="view"><option value="iso">3D</option><option value="top">Top</option><option value="front">Front</option><option value="right">Right side</option><option value="left">Left side</option><option value="back">Back</option><option value="bottom">Bottom</option></select></label>
-      <button id="annotations" aria-pressed="true" aria-describedby="view-feedback" title="Show lines between visible parts and their explorer entries">Part links</button>
-    </div>
-    <div class="toolbar-explode"><label for="explode">Separate layers</label><input id="explode" type="range" min="0" max="100" value="0" step="1"><output id="explosion" for="explode">0 %</output></div>
-    </details>
   </div>
   <p id="view-feedback" role="status" class="view-feedback">Drag to orbit · Pinch or scroll to zoom</p>
   <div id="error" role="alert" hidden></div>
 </section>
-<aside aria-label="Object explorer">
-  <nav class="directory" aria-label="Components and sections">
-    <div class="directory-heading"><span class="eyebrow">Components<span class="scroll-hint"> · Swipe to explore →</span></span><button id="collapse-detail" aria-label="Collapse details" aria-expanded="true" aria-controls="inspector" title="Collapse or expand details">‹</button></div>
-    <div id="layers" tabindex="0" aria-label="Component directory. Scroll for more parts."></div>
-    <div class="section-links" aria-label="Other sections"><button id="nav-themes" aria-expanded="false" aria-controls="panel-themes">Themes</button><button id="nav-files" aria-expanded="false" aria-controls="panel-files">Files</button><button id="nav-about" aria-expanded="false" aria-controls="panel-about">About</button></div>
+<aside aria-label="Keyboard workspace">
+  <nav class="customize-nav" aria-label="Customize parts">
+    <button id="edit-cases" data-panel="cases" aria-pressed="true">Case</button>
+    <button id="edit-frames" data-panel="frames" aria-pressed="false">Frame</button>
+    <button id="edit-keycaps" data-panel="keycaps" aria-pressed="false">Keys</button>
+    <button id="nav-themes" data-panel="themes" aria-pressed="false">Colors</button>
+    <button id="edit-battery" data-panel="battery" aria-pressed="false">Battery</button>
   </nav>
-  <div id="inspector" class="inspector">
-    <button id="back-to-model" class="back-to-model" hidden>↑ Back to model</button>
-    <section id="selection" class="selection" role="region" aria-live="polite" aria-label="Selected component" hidden><button id="clear-selection" aria-label="Clear selected component">×</button><p id="selection-meta" class="eyebrow"></p><h2 id="selection-title"></h2><p id="selection-info"></p><p id="selection-visibility" class="micro"></p><div class="selection-actions"><button id="toggle-selection">Hide</button><button id="isolate-selection" title="Hide everything except this selection">Solo</button><button id="show-all" title="Restore every part and both halves">Show all</button></div><details id="individual-parts"><summary>Individual parts <span id="individual-count"></span></summary><div id="part-visibility-list"></div></details></section>
+  <div id="inspector" class="inspector" tabindex="-1">
+    <section id="panel-inspect" hidden aria-labelledby="parts-title">
+      <p class="eyebrow">Explore the assembly</p><h2 id="parts-title">Parts</h2>
+      <p class="hint">Select a part for details. Use its eye to show or hide it.</p>
+      <nav class="directory" aria-label="Components"><div id="layers" tabindex="0" aria-label="Component directory"></div></nav>
+    <section id="selection" class="selection" role="region" aria-live="polite" aria-label="Selected component" hidden><button id="clear-selection" aria-label="Clear selected component">×</button><p id="selection-meta" class="eyebrow"></p><h2 id="selection-title"></h2><p id="selection-info"></p><p id="selection-visibility" class="micro"></p><div class="selection-actions"><button id="toggle-selection">Hide</button><button id="isolate-selection" title="Hide everything except this selection">Solo</button><button id="show-all" title="Restore every part and both halves">Show all</button></div><details id="individual-parts"><summary>Individual parts <span id="individual-count"></span></summary><div id="part-visibility-list"></div></details><button id="edit-selection" class="primary">Customize this part →</button></section>
+    </section>
   <section id="panel-cases" aria-label="Case options">
-    <div class="panel-heading"><h2>Cases</h2><span id="case-current"></span></div>
-    <p class="hint">One contour. Four interchangeable designs.</p>
+    <div class="panel-heading"><h2>Make it yours.</h2><span id="case-current"></span></div>
+    <p class="hint">Four case styles. One shared silhouette.</p>
     <div id="case-target" class="segments" role="group" aria-label="Apply case changes to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div>
     <div id="case-grid" class="preview-grid case-grid" role="group" aria-label="Case styles"></div>
-    <div id="case-colors" class="color-fields"></div><label class="cover-option"><input type="checkbox" id="case-link-colors"> Match frame and rim</label>
-    <label class="cover-option"><input type="checkbox" id="case-cover" checked> Printed display cover <small id="cover-state"></small></label>
-    <p class="micro">Uncheck to expose the stack while keeping the display. This choice is saved in JSON and GLB. Eye controls only change the view.</p>
+    <details class="option-group"><summary>Colors &amp; finish</summary><div id="case-colors" class="color-fields"></div><label class="cover-option"><input type="checkbox" id="case-link-colors"> Match frame and rim</label></details>
+    <details class="option-group"><summary>Display cover</summary><label class="cover-option"><input type="checkbox" id="case-cover" checked> Printed display cover <small id="cover-state"></small></label>
+    <p class="micro">Remove the printed cover while keeping the display installed.</p></details>
     <a class="case-guide" href="https://github.com/eduarbo/flan36/blob/main/docs/cases.md">Case files &amp; printing guide ↗</a>
   </section>
   <section id="panel-frames" aria-label="Frame options">
@@ -57,17 +59,17 @@
     <p class="hint">Pick a shape. Keep your colors, or restore its original palette.</p>
     <div id="frame-target" class="segments" role="group" aria-label="Apply frame changes to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div>
     <div id="frame-grid" class="preview-grid" role="group" aria-label="Frame styles"></div>
-    <div class="finish-row"><span>Body <small id="color-current" hidden></small></span><div id="swatches" role="group" aria-label="Frame body colors"></div></div><div class="color-field"><input type="color" id="frame-color" value="#304d4e" aria-label="Frame body color"></div>
+    <details class="option-group"><summary>Colors &amp; finish</summary><div class="finish-row"><span>Body <small id="color-current" hidden></small></span><div id="swatches" role="group" aria-label="Frame body colors"></div></div><div class="color-field"><input type="color" id="frame-color" value="#304d4e" aria-label="Frame body color"></div>
     <div id="theme-palette" class="color-fields" aria-label="Frame accent colors"></div><label class="cover-option"><input type="checkbox" id="frame-link-colors"> Match frame and rim</label>
     <button id="theme-colors" class="palette-reset">Restore design colors</button>
-    <p class="micro">Previews show original palettes. Custom colors are saved with your parts. All frame details sit flush with the top.</p>
+    <p class="micro">Previews show original palettes. Custom colors are saved with your parts. All frame details sit flush with the top.</p></details>
     <a class="case-guide" href="https://eduarbo.github.io/flan36/frame-proposals/" target="_blank" rel="noopener">Six selected designs ↗</a>
   </section>
   <section id="panel-themes" aria-label="Color themes" hidden><div class="panel-heading"><h2>Themes</h2><span id="theme-current"></span></div><p class="hint">Coordinated palettes for the case, frame and keycaps.</p><div id="theme-target" class="segments" aria-label="Apply theme to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div><div id="themes-grid" class="preview-grid" aria-label="Color themes"></div><p id="theme-preview-note" class="micro"></p></section>
   <section id="panel-keycaps" aria-label="Keycap options" hidden>
-    <div class="panel-heading"><h2>KLP Lamé</h2><span>Choc stems</span></div>
+    <div class="panel-heading"><h2>Keycaps</h2><span>KLP Lamé</span></div>
     <p class="hint">Start with a set, then tune individual keys.</p>
-    <details id="cap-colors" open><summary>Colors <span>all / row / column / key</span></summary>
+    <details id="cap-colors" class="option-group"><summary>Colors <span>all / row / column / key</span></summary>
 <div id="cap-side" class="segments" aria-label="Keycap color half"><button data-side="both" aria-pressed="true">Both</button><button data-side="left">Left</button><button data-side="right">Right</button></div>
 <label>Paint<select id="cap-mode"><option value="all">All keys</option><option value="row">Row</option><option value="column">Column</option><option value="key">Individual key</option></select></label>
 <label id="cap-row-label" hidden>Row<select id="cap-row"><option value="0">Top</option><option value="1">Home</option><option value="2">Bottom</option><option value="3">Thumbs</option></select></label>
@@ -77,28 +79,51 @@
 <p class="micro">Tap a key to choose it, or to select its row or column. Columns exclude the thumb row.</p><div id="cap-palettes" class="cap-palettes" aria-label="Keycap color presets"></div>
 <details><summary>My palettes <span>save / import / export</span></summary><label>Palette name<input id="cap-palette-name" maxlength="40" placeholder="My palette"></label><button id="save-cap-palette">Save current key colors</button><p id="cap-library-empty" class="micro">Save both halves as a reusable palette.</p><div id="custom-cap-palettes"></div><div class="config-actions"><button id="export-cap-palettes">Export palettes</button><button id="import-cap-palettes">Import palettes</button><input id="cap-palette-file" type="file" accept=".json,application/json" hidden></div></details></details>
 <div id="key-presets" class="preview-grid key-presets" role="group" aria-label="Keycap presets"></div>
-    <details id="key-details"><summary>Edit keys <span>position / shape / rotation</span></summary>
+    <details id="key-details" class="option-group"><summary>Shape &amp; rotation <span>Advanced</span></summary>
       <label>Positions<select id="key-target"></select></label><label>Variant<select id="key-variant"></select></label><label>Rotation relative to switch<select id="key-rotation"></select></label>
       <p id="key-fit" class="micro"></p><button id="apply-keys" class="primary">Apply to these keys</button>
       <p class="micro">38 source variants; 28 qualify somewhere. No 1.5U reference configuration qualifies. Physical fit remains untested.</p>
     </details>
   </section>
   <section id="panel-battery" aria-label="Battery options" hidden><div class="panel-heading"><h2>Battery profile</h2><span id="battery-current"></span></div><div id="battery-target" class="segments" role="group" aria-label="Apply battery changes to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div><div id="battery-options" class="segments" aria-label="Battery profiles"></div><p class="hint">Both nominal sizes sit on the insulated case floor inside the same retaining cage.</p><p class="micro">Check the finished pack, insulation and leads before assembly.</p></section>
-  <p id="config-status" class="micro config-status" role="status"></p>
-  <section id="panel-files" aria-label="Files and export" hidden><details id="project-menu" open><summary>Save &amp; export <span>JSON / GLB / offline</span></summary>
-    <label>Design name<input id="design-name" maxlength="60" placeholder="Flan36-config"></label><div class="config-actions"><button id="save-config">Save configuration</button><button id="load-trigger">Load JSON</button><input id="load-config" type="file" accept=".json,application/json" hidden><button id="default-config">Restore default parts</button></div>
-    <p class="micro">Name and save a JSON design to keep or share it. Load JSON to return to it. Undo/redo keeps the last 40 design steps in this session. Reset view keeps your choices.</p>
-
-    <details id="recovery"><summary>Recover saved data</summary><p class="micro">Downloads preserve the original saved bytes and separate drafts. Load a recovered design with Load JSON, or import a palette from My palettes.</p><div id="recovery-list" class="config-actions"></div><div class="config-actions"><button id="load-saved">Load saved version</button><button id="replace-saved">Use this design as saved version</button></div><p class="micro">Replacing the saved version first keeps its previous contents as a recovery copy.</p></details>
-    <h3>Print your parts</h3><label>Halves<select id="print-half"><option value="both">Both</option><option value="left">Left</option><option value="right">Right</option></select></label><label>Parts<select id="print-scope"><option value="shells">Case, plate &amp; installed frame</option><option value="complete">Complete printed set, with supports &amp; washers</option></select></label><button id="print-kit" class="primary">Download print kit</button><p id="print-status" class="micro">ZIP with STL, generic color 3MF, configuration and part list. Bambu palette setup is manual. Screwed case; captive magnetic frame. No clips modeled.</p>
-    <div class="downloads"><button id="glb">Download assembled GLB</button><a href="./offline.html" download="Flan36-revI.html">Download offline HTML</a><a href="https://github.com/eduarbo/flan36/blob/main/docs/freecad.md">Edit in FreeCAD + KiCad ↗</a></div>
-  </details>
-  </section><section id="panel-about" aria-label="Prototype information" hidden><details open><summary>About this prototype</summary><div class="notes"><p><b>Bay:</b> <span data-measurement="bay_width_mm"></span> mm · <b>Frame roof:</b> <span data-measurement="cover_top_mm"></span> mm · <b>Plate:</b> <span data-measurement="plate_top_mm"></span> mm. All frame details are flush. Heights above the base, without feet.</p><p>36 Piantor positions. Original KLP Lamé meshes. Units: mm. The directory includes all 12 component groups. A fine line connects the active visible part to its entry.</p><p>Routed digital prototype. Both PCBs pass DRC, ERC and schematic parity with no unconnected items. Both battery profiles fit the modeled aperture. Magnetic frames, printed threads, actual cables/contacts and hardware operation require physical tests. Commercial models mix documented dimensions, licensed library CAD and reconstructed details. See the component guide for remaining fit reserves.</p></div><a href="https://github.com/eduarbo/flan36/blob/main/components/README.md">Component models &amp; dimensions ↗</a><a href="https://github.com/eduarbo/flan36/blob/main/docs/slim-flush.md">Slim stack &amp; flush frames ↗</a><button id="credits">Credits and licenses</button></details>
-</section></div>
+  <section id="panel-files" aria-labelledby="files-title" hidden>
+    <p class="eyebrow">Keep, share, build</p><h2 id="files-title">Your design files</h2><p class="hint">Save a design to revisit it, or export the parts you chose.</p>
+    <section class="content-card" id="project-menu"><h3>Save your design</h3><p class="hint">A small JSON file keeps all your choices.</p>
+      <label>Design name<input id="design-name" maxlength="60" placeholder="Flan36-config"></label>
+      <div class="config-actions"><button id="save-config" class="primary">Save JSON</button><button id="load-trigger">Open JSON</button><input id="load-config" type="file" accept=".json,application/json" hidden></div>
+    </section>
+    <section class="content-card"><h3>Print your parts</h3><p class="hint">Export the case, plate and selected frame, ready for your slicer.</p>
+      <div class="form-pair"><label>Halves<select id="print-half"><option value="both">Both halves</option><option value="left">Left</option><option value="right">Right</option></select></label><label>Include<select id="print-scope"><option value="shells">Shells + frame</option><option value="complete">Complete kit</option></select></label></div>
+      <button id="print-kit" class="primary">Download print kit</button><p id="print-status" class="micro">ZIP · STL + color 3MF + part list. Set Bambu colors manually. Fit still requires physical testing.</p>
+    </section>
+    <section class="content-card"><h3>3D &amp; offline</h3><div class="downloads"><button id="glb">Download assembled GLB <span>3D model</span></button><a href="./offline.html" download="Flan36-revI.html">Download offline viewer <span>Self-contained HTML ↓</span></a><a href="https://github.com/eduarbo/flan36/blob/main/docs/freecad.md">Edit the source CAD <span>FreeCAD + KiCad ↗</span></a></div></section>
+    <details id="recovery" class="option-group"><summary>Saved data &amp; recovery</summary><p class="micro">Downloads preserve the original saved bytes and separate drafts. Load a recovered design with Open JSON, or import a palette from My palettes.</p><div id="recovery-list" class="config-actions"></div><div class="config-actions"><button id="load-saved">Load saved version</button><button id="replace-saved">Use this design as saved version</button><button id="default-config">Restore default parts</button></div><p class="micro">Replacing saved data keeps a recovery copy. Undo restores changes made in this session.</p></details>
+  </section>
+  <section id="panel-about" aria-labelledby="about-title" hidden>
+    <p class="eyebrow">Designed by Eduardo Ruiz</p><h2 id="about-title" class="about-title">Small keyboard.<br>Personal by design.</h2>
+    <p class="about-intro">FLAN36 is an original wireless split keyboard with 36 keys, interchangeable cases and flush display frames.</p>
+    <div class="spec-strip"><div><strong>36</strong><span>keys</span></div><div><strong>2</strong><span>wireless halves</span></div><div><strong>4</strong><span>case styles</span></div></div>
+    <section class="content-card"><h3>An original design</h3><p>The keyboard and its CAD are designed by Eduardo Ruiz. Piantor by beekeeb was an inspiration for the number of keys.</p><p>Keycap meshes and some component models come from credited third-party libraries.</p><button id="credits" class="text-action">Credits &amp; licenses <span aria-hidden="true">↗</span></button></section>
+    <details class="option-group"><summary>Build status &amp; dimensions</summary><div class="notes"><p>Routed digital prototype. PCB DRC, ERC and schematic parity checks pass. Physical assembly and hardware operation still need validation.</p><dl class="measurements"><div><dt>Electronics bay</dt><dd><span data-measurement="bay_width_mm"></span> mm</dd></div><div><dt>Frame roof</dt><dd><span data-measurement="cover_top_mm"></span> mm</dd></div><div><dt>Plate height</dt><dd><span data-measurement="plate_top_mm"></span> mm</dd></div></dl><p>Heights above the base, without feet. Magnetic frames, printed threads, cables and contacts require physical tests. Component models combine library CAD and nominal reconstructions.</p></div></details>
+    <div class="resource-links"><a href="https://github.com/eduarbo/flan36/blob/main/components/README.md"><span>Component models &amp; dimensions</span><span aria-hidden="true">↗</span></a><a href="https://github.com/eduarbo/flan36/blob/main/docs/slim-flush.md"><span>Stack &amp; frame construction</span><span aria-hidden="true">↗</span></a><a href="https://github.com/eduarbo/flan36"><span>Source repository</span><span aria-hidden="true">↗</span></a></div>
+  </section>
+  </div>
+  <p id="config-status" class="config-status" role="status"></p>
 </aside>
 <svg id="leader-lines" aria-hidden="true"><path id="part-link" hidden></path><circle id="part-link-dot" r="2.5" hidden></circle></svg>
 </main>
-<dialog id="licenses"><button id="close-credits">Close</button><h2>Sources and licenses</h2><!--__LICENSES__--></dialog>
+<dialog id="licenses" aria-labelledby="licenses-title"><div class="dialog-heading"><h2 id="licenses-title">Credits &amp; licenses</h2><button id="close-credits" aria-label="Close credits">Close</button></div><div class="dialog-body"><!--__LICENSES__--></div></dialog>
+<dialog id="view-dialog" aria-labelledby="view-title"><div class="dialog-heading"><h2 id="view-title">View settings</h2><button id="close-view">Done</button></div><div class="dialog-body">    <div class="view-settings">
+    <div class="toolbar-secondary">
+      <label class="toolbar-select"><span>Half</span><select id="half"><option value="both">Both</option><option value="left">Left</option><option value="right">Right</option></select></label>
+      <button id="reset" aria-label="Reset view and visible layers" title="Reset view and layers; keep your parts">Reset view</button>
+
+      <label class="toolbar-select"><span>View</span><select id="view"><option value="iso">3D</option><option value="top">Top</option><option value="front">Front</option><option value="right">Right side</option><option value="left">Left side</option><option value="back">Back</option><option value="bottom">Bottom</option></select></label>
+      <button id="annotations" aria-pressed="true" aria-describedby="view-feedback" title="Show lines between visible parts and their explorer entries">Part links</button>
+    </div>
+    <div class="toolbar-explode"><label for="explode">Separate layers</label><input id="explode" type="range" min="0" max="100" value="0" step="1"><output id="explosion" for="explode">0 %</output></div>
+    </div>
+</div></dialog>
 <script id="print-data" type="application/octet-stream">/*__PRINT__*/</script>
 <script id="scene-data" type="application/octet-stream">/*__DATA__*/</script>
 <script>/*__APP__*/</script>

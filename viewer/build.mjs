@@ -17,8 +17,13 @@ const bundle=await build({entryPoints:[path.join(here,'app.js')],bundle:true,wri
 const license=fs.readFileSync(path.join(here,'node_modules/three/LICENSE'),'utf8');
 fs.writeFileSync(path.join(root,'LICENSES/Three-MIT.txt'),license);
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-const licenses=['LICENSE','LICENSES/CC-BY-SA-4.0.txt','LICENSES/Three-MIT.txt','LICENSES/fflate-MIT.txt','components/sources/KiSwitch-MIT.txt'].map(p=>`<h3>${p}</h3><pre>${escape(fs.readFileSync(path.join(root,p),'utf8'))}</pre>`).join('');
-const credits=`<p>Flan36: Eduardo Ruiz. CAD derived from Piantor (beekeeb, GPL-3.0). KLP Lamé by braindefender, CC-BY-SA-4.0, commit 4a67a824232d3054c61599ea047c56a340faaba2; unchanged meshes, placed and colored. KiSwitch Choc v1: MIT; KiCad component models: CC-BY-SA-4.0 with library exception. See the component guide for per-file provenance. Three.js 0.180.0: MIT. Source code and full notices: <a href="https://github.com/eduarbo/flan36">github.com/eduarbo/flan36</a>.</p>`;
+const licenses=[['LICENSE','Flan36 · GPL-3.0'],['LICENSES/CC-BY-SA-4.0.txt','Keycap meshes · CC-BY-SA-4.0'],['LICENSES/Three-MIT.txt','Three.js · MIT'],['LICENSES/fflate-MIT.txt','fflate · MIT'],['components/sources/KiSwitch-MIT.txt','KiSwitch · MIT']].map(([p,label])=>`<details class="option-group"><summary>${label}</summary><pre>${escape(fs.readFileSync(path.join(root,p),'utf8'))}</pre></details>`).join('');
+const credits=`<dl class="credit-list">
+<div><dt>Original keyboard &amp; CAD</dt><dd>Designed by Eduardo Ruiz. Piantor by beekeeb was an inspiration for the number of keys. Flan36 is not affiliated with beekeeb.</dd></div>
+<div><dt>KLP Lamé keycaps</dt><dd>braindefender · CC-BY-SA-4.0. Original meshes, placed and colored. <a href="https://github.com/braindefender/KLP-Lame-Keycaps/tree/4a67a824232d3054c61599ea047c56a340faaba2">Pinned source ↗</a></dd></div>
+<div><dt>Component models</dt><dd>KiSwitch Choc v1 · MIT. KiCad library models · CC-BY-SA-4.0 with library exception. <a href="https://github.com/eduarbo/flan36/blob/main/components/README.md">Per-file sources &amp; changes ↗</a></dd></div>
+<div><dt>Viewer libraries</dt><dd>Three.js 0.180.0 and fflate · MIT.</dd></div>
+</dl><p><a href="https://github.com/eduarbo/flan36/blob/main/ATTRIBUTION.md">All source notices and reference-file provenance ↗</a></p><h3>Full license texts</h3>`;
 const template=fs.readFileSync(path.join(here,'template.html'),'utf8');
 // Share byte-identical meshes without changing any vertex, normal or triangle.
 const geometryAliases={},unique={},seen=new Map();
