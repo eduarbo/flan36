@@ -1,0 +1,1090 @@
+{
+  "recorded_at": "2026-10-09T16:05:45.042035+00:00",
+  "published_commit": "dcac6041b7dbc6e556ad926412cf4667679e520f",
+  "pages_build_status": "built",
+  "url": "https://eduarbo.github.io/flan36/?rev=dcac6041b7dbc6e556ad926412cf4667679e520f",
+  "public_checks": {
+    "commit": "dcac6041b7dbc6e556ad926412cf4667679e520f",
+    "public_scene_matches_local": true,
+    "online_and_offline_byte_exact": true,
+    "only_six_approved_frame_cards": true,
+    "talavera_default": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "public_mobile_checks": {
+    "engine": "webkit",
+    "target": "https://eduarbo.github.io/flan36/?rev=dcac6041b7dbc6e556ad926412cf4667679e520f",
+    "checks": [
+      {
+        "label": "1440x960 customize",
+        "width": 1440,
+        "height": 960,
+        "overflow": false,
+        "canvasHeight": 768,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 113.3125,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 79.234375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 76.015625,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 83.921875,
+            "height": 44,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 69,
+          "y0": 250,
+          "x1": 929,
+          "y1": 508,
+          "w": 998,
+          "h": 766
+        }
+      },
+      {
+        "label": "1440x960 inspect",
+        "width": 1440,
+        "height": 960,
+        "overflow": false,
+        "canvasHeight": 768,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 109.734375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 81.53125,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 76.015625,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 83.921875,
+            "height": 44,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 69,
+          "y0": 250,
+          "x1": 929,
+          "y1": 508,
+          "w": 998,
+          "h": 766
+        }
+      },
+      {
+        "label": "1440x960 files",
+        "width": 1440,
+        "height": 960,
+        "overflow": false,
+        "canvasHeight": 768,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 109.734375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 79.234375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 77.8125,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 83.921875,
+            "height": 44,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 69,
+          "y0": 250,
+          "x1": 929,
+          "y1": 508,
+          "w": 998,
+          "h": 766
+        }
+      },
+      {
+        "label": "1440x960 about",
+        "width": 1440,
+        "height": 960,
+        "overflow": false,
+        "canvasHeight": 768,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 109.734375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 79.234375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 76.015625,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 86.09375,
+            "height": 44,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 69,
+          "y0": 250,
+          "x1": 929,
+          "y1": 508,
+          "w": 998,
+          "h": 766
+        }
+      },
+      {
+        "label": "390x690 customize",
+        "width": 390,
+        "height": 690,
+        "overflow": false,
+        "canvasHeight": 122.09375,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 56,
+          "y0": 18,
+          "x1": 331,
+          "y1": 99,
+          "w": 388,
+          "h": 120
+        }
+      },
+      {
+        "label": "390x690 inspect",
+        "width": 390,
+        "height": 690,
+        "overflow": false,
+        "canvasHeight": 122.09375,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 56,
+          "y0": 18,
+          "x1": 331,
+          "y1": 99,
+          "w": 388,
+          "h": 120
+        }
+      },
+      {
+        "label": "390x690 files",
+        "width": 390,
+        "height": 690,
+        "overflow": false,
+        "canvasHeight": 0,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "label": "390x690 about",
+        "width": 390,
+        "height": 690,
+        "overflow": false,
+        "canvasHeight": 0,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "label": "320x568 customize",
+        "width": 320,
+        "height": 568,
+        "overflow": false,
+        "canvasHeight": 102,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 44,
+          "y0": 15,
+          "x1": 274,
+          "y1": 83,
+          "w": 318,
+          "h": 100
+        }
+      },
+      {
+        "label": "320x568 inspect",
+        "width": 320,
+        "height": 568,
+        "overflow": false,
+        "canvasHeight": 102,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 44,
+          "y0": 15,
+          "x1": 274,
+          "y1": 83,
+          "w": 318,
+          "h": 100
+        }
+      },
+      {
+        "label": "320x568 files",
+        "width": 320,
+        "height": 568,
+        "overflow": false,
+        "canvasHeight": 0,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "label": "320x568 about",
+        "width": 320,
+        "height": 568,
+        "overflow": false,
+        "canvasHeight": 0,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 71,
+            "height": 53,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "label": "430x820 customize",
+        "width": 430,
+        "height": 820,
+        "overflow": false,
+        "canvasHeight": 159.796875,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 34,
+          "y0": 22,
+          "x1": 394,
+          "y1": 131,
+          "w": 428,
+          "h": 157
+        }
+      },
+      {
+        "label": "430x820 inspect",
+        "width": 430,
+        "height": 820,
+        "overflow": false,
+        "canvasHeight": 159.796875,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 34,
+          "y0": 22,
+          "x1": 394,
+          "y1": 131,
+          "w": 428,
+          "h": 157
+        }
+      },
+      {
+        "label": "430x820 files",
+        "width": 430,
+        "height": 820,
+        "overflow": false,
+        "canvasHeight": 0,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "label": "430x820 about",
+        "width": 430,
+        "height": 820,
+        "overflow": false,
+        "canvasHeight": 0,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 98.5,
+            "height": 53,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "label": "844x390 customize",
+        "width": 844,
+        "height": 390,
+        "overflow": false,
+        "canvasHeight": 202,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 34,
+          "y0": 33,
+          "x1": 467,
+          "y1": 163,
+          "w": 502,
+          "h": 200
+        }
+      },
+      {
+        "label": "844x390 inspect",
+        "width": 844,
+        "height": 390,
+        "overflow": false,
+        "canvasHeight": 202,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 34,
+          "y0": 33,
+          "x1": 467,
+          "y1": 163,
+          "w": 502,
+          "h": 200
+        }
+      },
+      {
+        "label": "844x390 files",
+        "width": 844,
+        "height": 390,
+        "overflow": false,
+        "canvasHeight": 202,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 34,
+          "y0": 33,
+          "x1": 467,
+          "y1": 163,
+          "w": 502,
+          "h": 200
+        }
+      },
+      {
+        "label": "844x390 about",
+        "width": 844,
+        "height": 390,
+        "overflow": false,
+        "canvasHeight": 202,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          },
+          {
+            "width": 202,
+            "height": 51,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 34,
+          "y0": 33,
+          "x1": 467,
+          "y1": 163,
+          "w": 502,
+          "h": 200
+        }
+      },
+      {
+        "label": "768x1024 customize",
+        "width": 768,
+        "height": 1024,
+        "overflow": false,
+        "canvasHeight": 218.953125,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 136,
+          "y0": 30,
+          "x1": 630,
+          "y1": 180,
+          "w": 766,
+          "h": 216
+        }
+      },
+      {
+        "label": "768x1024 inspect",
+        "width": 768,
+        "height": 1024,
+        "overflow": false,
+        "canvasHeight": 218.953125,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 136,
+          "y0": 30,
+          "x1": 630,
+          "y1": 180,
+          "w": 766,
+          "h": 216
+        }
+      },
+      {
+        "label": "768x1024 files",
+        "width": 768,
+        "height": 1024,
+        "overflow": false,
+        "canvasHeight": 0,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "label": "768x1024 about",
+        "width": 768,
+        "height": 1024,
+        "overflow": false,
+        "canvasHeight": 0,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 183,
+            "height": 53,
+            "visible": true
+          }
+        ]
+      },
+      {
+        "label": "1024x768 customize",
+        "width": 1024,
+        "height": 768,
+        "overflow": false,
+        "canvasHeight": 576,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 113.3125,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 79.234375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 76.015625,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 83.921875,
+            "height": 44,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 44,
+          "y0": 202,
+          "x1": 589,
+          "y1": 366,
+          "w": 632,
+          "h": 574
+        }
+      },
+      {
+        "label": "1024x768 inspect",
+        "width": 1024,
+        "height": 768,
+        "overflow": false,
+        "canvasHeight": 576,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 109.734375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 81.53125,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 76.015625,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 83.921875,
+            "height": 44,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 44,
+          "y0": 202,
+          "x1": 589,
+          "y1": 366,
+          "w": 632,
+          "h": 574
+        }
+      },
+      {
+        "label": "1024x768 files",
+        "width": 1024,
+        "height": 768,
+        "overflow": false,
+        "canvasHeight": 576,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 109.734375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 79.234375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 77.8125,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 83.921875,
+            "height": 44,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 44,
+          "y0": 202,
+          "x1": 589,
+          "y1": 366,
+          "w": 632,
+          "h": 574
+        }
+      },
+      {
+        "label": "1024x768 about",
+        "width": 1024,
+        "height": 768,
+        "overflow": false,
+        "canvasHeight": 576,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 109.734375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 79.234375,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 76.015625,
+            "height": 44,
+            "visible": true
+          },
+          {
+            "width": 86.09375,
+            "height": 44,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 44,
+          "y0": 202,
+          "x1": 589,
+          "y1": 366,
+          "w": 632,
+          "h": 574
+        }
+      },
+      {
+        "label": "fit after gestures",
+        "width": 390,
+        "height": 690,
+        "overflow": false,
+        "canvasHeight": 122.09375,
+        "overlap": 0,
+        "nav": [
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          },
+          {
+            "width": 88.5,
+            "height": 53,
+            "visible": true
+          }
+        ],
+        "pixels": {
+          "x0": 56,
+          "y0": 18,
+          "x1": 331,
+          "y1": 99,
+          "w": 388,
+          "h": 120
+        }
+      }
+    ],
+    "errors": [],
+    "physical_phone_tested": false,
+    "browser": "26.5",
+    "passed": true,
+    "interactions": [
+      "navigation preserves view and design",
+      "independent section scroll",
+      "five editors",
+      "12 component eyes",
+      "solo and restore",
+      "edit selected part",
+      "one-half color edit",
+      "undo redo",
+      "long license close and focus",
+      "Escape preserves selection in view dialog",
+      "clear removes active row",
+      "selection lines clip with inspector scroll",
+      "view dialog",
+      "touch orbit and pinch",
+      "responsive pan/zoom",
+      "short keyboard viewport and explicit preview restore"
+    ]
+  },
+  "local_receipt": "validation/revI-mobile-redesign.json",
+  "online_sha256": "c615d3ad4215a2eebff2f9146f5c074d5b1e7157df6df4cc0cf783f9fa045f12",
+  "offline_sha256": "a0841db613776601b0b509df592f64745622a96ca89660b1820a3e8b5643d34b",
+  "cad_credit": "Original keyboard and CAD by Eduardo Ruiz; Piantor inspired key count. Third-party assets remain credited.",
+  "physical_iphone_tested": false,
+  "eduardo_design_approval_claimed": false
+}
