@@ -1,0 +1,702 @@
+{
+  "scope": "FLAN36 responsive viewer audit and restyle",
+  "request_ref": "user:20261009:revisa-flan32-visor-responsivo",
+  "observed_at": "2026-10-09T09:50:33.348026+00:00",
+  "baseline_commit": "80f43d3d88a93da135663317855489f6ed3bf043",
+  "baseline_clean": true,
+  "requirements": {
+    "responsive-view": "PASS: model pixels and interactive state across seven sizes and 16 layout states in Chromium and WebKit",
+    "restyle": "PASS: visual review, 44px primary/visibility targets, compact directory and return to model",
+    "preserve-function": "PASS: unchanged embedded scene/printing plus configuration, recovery, history and export tests",
+    "delivery": "Pending public readback; separate receipt after push"
+  },
+  "sources": [
+    {
+      "path": "viewer/app.js",
+      "sha256": "2bbf5fbcfe965e8fffb289ffd256871f4622bea08ad5c1f5505be2bc8efb7222"
+    },
+    {
+      "path": "viewer/explorer.js",
+      "sha256": "46d5d86700baaa6f2a5a3befc0c2496cd7f0ca9349951ead74a65b473b5947a3"
+    },
+    {
+      "path": "viewer/style.css",
+      "sha256": "6029913d6b44ffc1061d0b6e5e6e16c1c1077652a285087b42597c22f9ff38d3"
+    },
+    {
+      "path": "viewer/template.html",
+      "sha256": "76308371c0bd98da283e1ba5ffcf19d1d0dc9bbbb837ef33ed66c3ae043abb4b"
+    },
+    {
+      "path": "viewer/reliability-check.cjs",
+      "sha256": "69dca5fba16e3ff999e397ea982c5c07bd13c5477afd236ddab93a6abed2fbe7"
+    },
+    {
+      "path": "viewer/responsive-check.cjs",
+      "sha256": "1c8e7047ae9f05368c83c7d1159c948654d9effffe6db8538fcab93897ce12c1"
+    },
+    {
+      "path": "docs/viewer.md",
+      "sha256": "8f5fb7603a7f83068f807fca0d1cacadf4368b22be59aca80a6782f9f4b6401f"
+    },
+    {
+      "path": "docs/reviews/responsive-viewer.md",
+      "sha256": "3d670b2ab9eb4c8ca4836a79f06325defe57cc878b100514ddcdf994002b3ca1"
+    },
+    {
+      "path": "docs/images/viewer-responsive-mobile.png",
+      "sha256": "cf8c74f30dbf1db29d7dc7fdfd06c53ba4aa8c234367d18ce699f5ed905e37da"
+    },
+    {
+      "path": "docs/images/viewer-responsive-desktop.png",
+      "sha256": "3c4f9870984acbf590e745552e365fff98d470c4f38dd3bd07f39bc3ed2e7e37"
+    },
+    {
+      "path": "viewer/public-check.cjs",
+      "sha256": "267babb61fc513108f13d15c330d6f210bda667c7a99d5c4450124f3814ca58b"
+    }
+  ],
+  "built": [
+    {
+      "path": "docs/index.html",
+      "sha256": "33cfb63175a8ca3c2d0b540c733bc5a73a9739b67691adce0a2b01afd3435593"
+    },
+    {
+      "path": "docs/offline.html",
+      "sha256": "ac5120b184a132516948681bfbe10dd528b105b2f825a0dbe5ba0d735849b670"
+    }
+  ],
+  "embedded_data": {
+    "scene-data": {
+      "unchanged": true,
+      "sha256": "a444237a6b331b771d9266c33ff9532b36b604e357fcc513543223ce5ff311b8"
+    },
+    "print-data": {
+      "unchanged": true,
+      "sha256": "c3a1312611b240bde85c85ff19d236dda3a40301e37514d5762cb847a07dcb40"
+    }
+  },
+  "browsers": [
+    {
+      "engine": "chromium",
+      "target": "offline",
+      "checks": [
+        {
+          "label": "desktop initial",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 712,
+          "overlap": 0,
+          "toolbarRight": 734,
+          "pixels": {
+            "x0": 66,
+            "y0": 228,
+            "x1": 881,
+            "y1": 474,
+            "w": 946,
+            "h": 710
+          }
+        },
+        {
+          "label": "390x690 transition",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 234.59375,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 64,
+            "x1": 361,
+            "y1": 165,
+            "w": 388,
+            "h": 232
+          }
+        },
+        {
+          "label": "320x568 transition",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 210,
+          "overlap": 0,
+          "toolbarRight": 312,
+          "pixels": {
+            "x0": 21,
+            "y0": 61,
+            "x1": 296,
+            "y1": 143,
+            "w": 318,
+            "h": 208
+          }
+        },
+        {
+          "label": "844x390 transition",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 172,
+          "overlap": 0,
+          "toolbarRight": 488,
+          "pixels": {
+            "x0": 57,
+            "y0": 25,
+            "x1": 445,
+            "y1": 141,
+            "w": 502,
+            "h": 170
+          }
+        },
+        {
+          "label": "768x1024 transition",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 348.15625,
+          "overlap": 0,
+          "toolbarRight": 756,
+          "pixels": {
+            "x0": 53,
+            "y0": 67,
+            "x1": 713,
+            "y1": 269,
+            "w": 766,
+            "h": 346
+          }
+        },
+        {
+          "label": "1024x768 transition",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 520,
+          "overlap": 0,
+          "toolbarRight": 668,
+          "pixels": {
+            "x0": 47,
+            "y0": 167,
+            "x1": 635,
+            "y1": 344,
+            "w": 682,
+            "h": 518
+          }
+        },
+        {
+          "label": "1440x960 transition",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 712,
+          "overlap": 0,
+          "toolbarRight": 734,
+          "pixels": {
+            "x0": 66,
+            "y0": 228,
+            "x1": 881,
+            "y1": 474,
+            "w": 946,
+            "h": 710
+          }
+        },
+        {
+          "label": "390x844 transition",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 90,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "collapse details",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 405.109375,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 150,
+            "x1": 361,
+            "y1": 250,
+            "w": 388,
+            "h": 403
+          }
+        },
+        {
+          "label": "expand details",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 90,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "open view settings",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 90,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "close view settings",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 90,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "landscape expanded settings",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 180,
+          "overlap": 0,
+          "toolbarRight": 488,
+          "pixels": {
+            "x0": 48,
+            "y0": 25,
+            "x1": 454,
+            "y1": 148,
+            "w": 502,
+            "h": 178
+          }
+        },
+        {
+          "label": "touch navigation return",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 90,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "fit after gestures",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 79,
+            "y0": 31,
+            "x1": 310,
+            "y1": 255,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "return desktop",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 712,
+          "overlap": 0,
+          "toolbarRight": 734,
+          "pixels": {
+            "x0": 66,
+            "y0": 228,
+            "x1": 881,
+            "y1": 474,
+            "w": 946,
+            "h": 710
+          }
+        }
+      ],
+      "errors": [],
+      "physical_phone_tested": false,
+      "browser": "151.0.7922.34",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "target": "offline",
+      "checks": [
+        {
+          "label": "desktop initial",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 712,
+          "overlap": 0,
+          "toolbarRight": 734,
+          "pixels": {
+            "x0": 66,
+            "y0": 228,
+            "x1": 881,
+            "y1": 474,
+            "w": 946,
+            "h": 710
+          }
+        },
+        {
+          "label": "390x690 transition",
+          "width": 390,
+          "height": 690,
+          "overflow": false,
+          "canvasHeight": 234.59375,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 64,
+            "x1": 361,
+            "y1": 165,
+            "w": 388,
+            "h": 232
+          }
+        },
+        {
+          "label": "320x568 transition",
+          "width": 320,
+          "height": 568,
+          "overflow": false,
+          "canvasHeight": 210,
+          "overlap": 0,
+          "toolbarRight": 312,
+          "pixels": {
+            "x0": 21,
+            "y0": 61,
+            "x1": 296,
+            "y1": 143,
+            "w": 318,
+            "h": 208
+          }
+        },
+        {
+          "label": "844x390 transition",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 172,
+          "overlap": 0,
+          "toolbarRight": 488,
+          "pixels": {
+            "x0": 57,
+            "y0": 25,
+            "x1": 445,
+            "y1": 141,
+            "w": 502,
+            "h": 170
+          }
+        },
+        {
+          "label": "768x1024 transition",
+          "width": 768,
+          "height": 1024,
+          "overflow": false,
+          "canvasHeight": 348.15625,
+          "overlap": 0,
+          "toolbarRight": 756,
+          "pixels": {
+            "x0": 53,
+            "y0": 67,
+            "x1": 713,
+            "y1": 269,
+            "w": 766,
+            "h": 346
+          }
+        },
+        {
+          "label": "1024x768 transition",
+          "width": 1024,
+          "height": 768,
+          "overflow": false,
+          "canvasHeight": 520,
+          "overlap": 0,
+          "toolbarRight": 668,
+          "pixels": {
+            "x0": 47,
+            "y0": 167,
+            "x1": 635,
+            "y1": 344,
+            "w": 682,
+            "h": 518
+          }
+        },
+        {
+          "label": "1440x960 transition",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 712,
+          "overlap": 0,
+          "toolbarRight": 734,
+          "pixels": {
+            "x0": 66,
+            "y0": 228,
+            "x1": 881,
+            "y1": 474,
+            "w": 946,
+            "h": 710
+          }
+        },
+        {
+          "label": "390x844 transition",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 86,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "collapse details",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 405.109375,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 150,
+            "x1": 361,
+            "y1": 250,
+            "w": 388,
+            "h": 403
+          }
+        },
+        {
+          "label": "expand details",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 86,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "open view settings",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 86,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "close view settings",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 86,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "landscape expanded settings",
+          "width": 844,
+          "height": 390,
+          "overflow": false,
+          "canvasHeight": 180,
+          "overlap": 0,
+          "toolbarRight": 488,
+          "pixels": {
+            "x0": 48,
+            "y0": 25,
+            "x1": 454,
+            "y1": 148,
+            "w": 502,
+            "h": 178
+          }
+        },
+        {
+          "label": "touch navigation return",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 86,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "fit after gestures",
+          "width": 390,
+          "height": 844,
+          "overflow": false,
+          "canvasHeight": 286.953125,
+          "overlap": 0,
+          "toolbarRight": 378,
+          "pixels": {
+            "x0": 26,
+            "y0": 86,
+            "x1": 361,
+            "y1": 190,
+            "w": 388,
+            "h": 284
+          }
+        },
+        {
+          "label": "return desktop",
+          "width": 1440,
+          "height": 960,
+          "overflow": false,
+          "canvasHeight": 712,
+          "overlap": 0,
+          "toolbarRight": 734,
+          "pixels": {
+            "x0": 66,
+            "y0": 228,
+            "x1": 881,
+            "y1": 474,
+            "w": 946,
+            "h": 710
+          }
+        }
+      ],
+      "errors": [],
+      "physical_phone_tested": false,
+      "browser": "26.5",
+      "passed": true
+    }
+  ],
+  "reliability": {
+    "source_snapshot": "80f43d3d88a93da135663317855489f6ed3bf043",
+    "online_sha256": "33cfb63175a8ca3c2d0b540c733bc5a73a9739b67691adce0a2b01afd3435593",
+    "offline_sha256": "ac5120b184a132516948681bfbe10dd528b105b2f825a0dbe5ba0d735849b670",
+    "checks": {
+      "camera_transitions": 17,
+      "rejected_import_atomic_glb": true,
+      "legacy_solid_kit": true,
+      "battery_targets": true,
+      "undo_redo_and_pending_paint": true,
+      "named_json_export": true,
+      "lazy_print_retry_and_hash": true,
+      "exact_native_stl_hashes": true,
+      "missing_resource_atomic_glb": true,
+      "simultaneous_tabs_preserve_both": true,
+      "close_while_save_queued": true,
+      "palette_tab_conflicts": true,
+      "rejected_storage_preserved_and_downloadable": true,
+      "offline_exact_kit_and_glb": true,
+      "mobile_controls": true,
+      "no_locks_or_random_uuid": true,
+      "denied_storage_export": true
+    },
+    "errors": [],
+    "passed": true
+  },
+  "contracts": {
+    "fixtures": 122,
+    "js_python_parity": true,
+    "rebrand_check": true
+  },
+  "review": {
+    "lenses": [
+      "domain_constructive",
+      "adversarial_reliability"
+    ],
+    "independent_read_only": true,
+    "baseline_mutations": false,
+    "consensus": "Apply bounded restyle and deliver through existing main/docs Pages source",
+    "implementation_findings": [
+      "Mobile return action",
+      "Short landscape control containment",
+      "All clipping ancestors",
+      "Positive visible-hidden-visible line tests"
+    ],
+    "disposition": "All resolved; both final reviewers report no material objection."
+  },
+  "limits": [
+    "No physical iPhone test",
+    "Online full-resolution payload remains about 50 MiB",
+    "Chromium headless-shell GPU stall; full Chromium headless passed equivalent assertions"
+  ],
+  "reproduction": {
+    "responsive": "FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/responsive-check.cjs",
+    "webkit": "FLAN36_ENGINE=webkit FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright node viewer/responsive-check.cjs",
+    "reliability": "FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/reliability-check.cjs"
+  }
+}

@@ -28,7 +28,7 @@ const variants=new Map(catalog.variants.map(v=>[v.id,v]));
 const labels={base:'Bases',plate:'Plates',lid:'Frames / covers',keycaps:'Keycaps',switches:'Switches',pcb:'PCB',battery:'Batteries',mcu:'Controllers',display:'Displays',connectors:'Connectors',supports:'Supports',fasteners:'Fasteners / feet'};
 const state={half:'both',layers:Object.fromEntries(Object.keys(labels).map(k=>[k,true])),explode:0,view:'iso'};
 const directions={iso:[.35,1.6,1.75],top:[0,1,.0001],front:[0,0,1],back:[0,0,-1],right:[1,0,0],left:[-1,0,0],bottom:[0,-1,.0001]};
-const scene=new THREE.Scene();scene.background=new THREE.Color('#edf0e9');
+const scene=new THREE.Scene();scene.background=new THREE.Color('#f4f3ee');
 const camera=new THREE.OrthographicCamera(-180,180,100,-100,.1,3000);
 const canvas=$('canvas');
 let renderer;
@@ -103,14 +103,38 @@ controls.addEventListener('change',()=>{
   if(!orbiting)explorer?.cameraChanged();
   render();
 });
-let halfHeight=100;
+let halfHeight=100,lastAspect=0;
+// Resize only the projection: keep the user's orbit, pan and relative zoom.
+function projectedSize(){
+  const box=visibleBounds(),center=box.getCenter(new THREE.Vector3());
+  camera.updateMatrixWorld();
+  const right=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,0),up=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,1);
+  let w=0,h=0;
+  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){
+    const v=new THREE.Vector3(x,y,z).sub(center);w=Math.max(w,Math.abs(v.dot(right)));h=Math.max(h,Math.abs(v.dot(up)));
+  }
+  return {w,h};
+}
 function resize(){
   const {width,height}=canvas.getBoundingClientRect();if(width<1||height<1)return;
   renderer.setSize(width,height,false);const aspect=width/height;
+  if(lastAspect&&Math.abs(lastAspect-aspect)>.00001){
+    const {w,h}=projectedSize();
+    halfHeight*=Math.max(h,w/aspect,10)/Math.max(h,w/lastAspect,10);
+  }
+  lastAspect=aspect;
   camera.left=-halfHeight*aspect;camera.right=halfHeight*aspect;camera.top=halfHeight;camera.bottom=-halfHeight;
   camera.updateProjectionMatrix();explorer?.layoutChanged();render();
 }
 new ResizeObserver(()=>resize()).observe(canvas);
+const compactLayout=matchMedia('(max-width: 700px), (max-width: 1000px) and (orientation: portrait)');
+let previewVisible=true;
+function previewShortcut(){ $('back-to-model').hidden=!compactLayout.matches||previewVisible; }
+new IntersectionObserver(([entry])=>{previewVisible=entry.isIntersecting;previewShortcut();}).observe(canvas);
+compactLayout.addEventListener('change',previewShortcut);
+$('back-to-model').onclick=()=>{document.querySelector('.stage').scrollIntoView({block:'start',behavior:'instant'});canvas.focus({preventScroll:true});};
+canvas.tabIndex=0;
+
 
 function visibleBounds(){
   const box=new THREE.Box3();for(const o of objects)if(o.visible)box.union(new THREE.Box3().setFromObject(o));
@@ -122,12 +146,9 @@ function fit(direction){
   const d=direction?new THREE.Vector3(...direction):camera.position.clone().sub(controls.target);
   camera.position.copy(center).add(d.normalize().multiplyScalar(500));controls.target.copy(center);
   camera.zoom=1;controls.update();camera.updateMatrixWorld();
-  const right=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,0),up=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,1);
-  let w=0,h=0;
-  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){
-    const v=new THREE.Vector3(x,y,z).sub(center);w=Math.max(w,Math.abs(v.dot(right)));h=Math.max(h,Math.abs(v.dot(up)));
-  }
-  const aspect=canvas.clientWidth/canvas.clientHeight;halfHeight=Math.max(h,w/aspect,10)*1.13;resize();
+  const {w,h}=projectedSize();
+  lastAspect=canvas.clientWidth/canvas.clientHeight;
+  halfHeight=Math.max(h,w/lastAspect,10)*1.13;resize();
 }
 function sync(){
   explorer?.invalidate();
@@ -157,7 +178,7 @@ function reset(){
   sync();fit(directions.iso);
 }
 function setCollapsed(value){
-  document.querySelector('main').classList.toggle('detail-collapsed',value);$('collapse-detail').setAttribute('aria-expanded',String(!value));$('collapse-detail').textContent=value?'›':'‹';explorer?.layoutChanged();
+  document.querySelector('main').classList.toggle('detail-collapsed',value);$('collapse-detail').setAttribute('aria-expanded',String(!value));$('collapse-detail').textContent=value?'›':'‹';$('collapse-detail').setAttribute('aria-label',value?'Expand details':'Collapse details');explorer?.layoutChanged();
 }
 function openPanel(id,section=id){
   setCollapsed(false);

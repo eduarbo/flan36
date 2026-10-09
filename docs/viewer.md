@@ -2,9 +2,9 @@
 
 [Open Flan36](https://eduarbo.github.io/flan36/) · [Download the complete offline viewer](https://eduarbo.github.io/flan36/offline.html)
 
-Drag to orbit, scroll or pinch to zoom, and right-drag or use two fingers to pan. **Fit view** recenters the visible parts. Changing a case, frame, keycap, color or battery keeps your camera, hidden parts and layer separation. Resizing the sidebar preserves the view too.
+Drag to orbit, scroll or pinch to zoom, and right-drag or use two fingers to pan. **Fit view** recenters the visible parts. Open **View settings** for angle, half, layer separation, part links and reset. Changing a case, frame, keycap, color or battery keeps your camera, hidden parts and layer separation. Resizing or rotating the screen preserves your viewing angle, pan and zoom; the projection adapts to the available canvas so a fitted model stays framed.
 
-Hover or focus a component to highlight it, including through the case. A subtle line connects it to the sidebar. Click a component in the model or directory to inspect it; Escape clears the selection. The sidebar arrow collapses details while keeping the directory available.
+Hover or focus a component to highlight it, including through the case. A subtle line connects it to the sidebar. Click a component in the model or directory to inspect it; Escape clears the selection. The sidebar arrow collapses details while keeping the directory available. On phones and compact layouts, swipe the two-row component directory to reach all parts. On a phone, **Back to model** returns to the preview after editing farther down the page.
 
 The eye controls affect visibility. Open **Individual parts** to toggle one piece. **Show all** restores the assembly. **Solo** isolates the selected component. Case, frame and battery controls have explicit **Both / Left / Right** targets; the battery target follows the component you select.
 
@@ -38,6 +38,8 @@ With the locked viewer dependencies installed:
 node viewer/build.mjs
 node viewer/config-contract-check.cjs
 node viewer/rebrand-check.cjs
+FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/responsive-check.cjs
+FLAN36_ENGINE=webkit FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright node viewer/responsive-check.cjs
 FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/reliability-check.cjs
 FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/loading-check.cjs
 ```
@@ -54,3 +56,7 @@ FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium no
 The first matches the anonymous source archive and served viewer assets against Git. The second checks the actual public scene, camera continuity, configuration export and native print-kit hashes in a disposable browser profile. `python3 tools/restore_reliability_review.py` restores the ignored advisory review artifacts from their committed receipt.
 
 Save serialization uses the browser [Web Locks API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API). Without it, the viewer preserves a separate recovery draft and offers JSON export instead of overwriting shared saved state.
+
+## Responsive design verification
+
+The [responsive audit](reviews/responsive-viewer.md) covers phone, tablet, short landscape and desktop layouts. `responsive-check.cjs` measures rendered model pixels across viewport transitions without Reset, preserves interactive camera state, checks touch targets and gestures, and verifies clipped selection lines and the return-to-model action. Outputs under `build/responsive-review/` are ignored and reproducible with the commands above. Browser emulation is not a physical iPhone test.

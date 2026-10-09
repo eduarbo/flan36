@@ -2,41 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'self'; base-uri 'none'; form-action 'none'">
-<meta name="theme-color" content="#edf0e9">
+<meta name="theme-color" content="#f4f3ee">
 <title>Flan36 · Explore in 3D</title>
 <style>/*__STYLE__*/</style>
 </head>
 <body>
-<header><div><strong>FLAN36</strong><span>REV I / OBJECT EXPLORER</span></div><div class="history-controls" aria-label="Design history"><button id="save-warning" hidden title="Open saved-data recovery">Save warning</button><button id="undo" title="Undo design change (Ctrl/Cmd Z)" disabled>↶ Undo</button><button id="redo" title="Redo design change (Ctrl/Cmd Shift Z)" disabled>↷ Redo</button></div><a href="https://github.com/eduarbo/flan36">Repository ↗</a></header>
+<header><div class="brand"><strong>FLAN36<span class="brand-dot" aria-hidden="true">.</span></strong><span class="brand-caption">A split keyboard, made yours.</span></div><div class="history-controls" aria-label="Design history"><button id="save-warning" hidden title="Open saved-data recovery">Save warning</button><button id="undo" title="Undo design change (Ctrl/Cmd Z)" disabled>↶ Undo</button><button id="redo" title="Redo design change (Ctrl/Cmd Shift Z)" disabled>↷ Redo</button></div><a href="https://github.com/eduarbo/flan36">Repository ↗</a></header>
 <main>
 <section class="stage" aria-label="3D keyboard view">
   <canvas id="canvas" aria-label="Drag to rotate; pinch or scroll to zoom; tap a part to inspect"></canvas>
   <div class="stage-label"><span class="dot"></span><span id="status" role="status">Loading geometry…</span></div>
   <div class="view-controls" role="region" aria-label="View controls">
-    <div class="toolbar-top">
+    <div class="toolbar-primary">
       <div class="presets" role="group" aria-label="Assembly views"><button id="complete" aria-pressed="true">Assembled</button><button id="inside" aria-pressed="false">Inside</button><button id="stack" aria-pressed="false">Stack</button></div>
-      <label class="toolbar-select"><span>Half</span><select id="half"><option value="both">Both</option><option value="left">Left</option><option value="right">Right</option></select></label>
-      <button id="reset" aria-label="Reset view and visible layers" title="Reset view and layers; keep your parts">↺</button>
-    </div>
-    <div class="toolbar-bottom">
-      <label class="toolbar-select"><span>View</span><select id="view"><option value="iso">3D</option><option value="top">Top</option><option value="front">Front</option><option value="right">Right side</option><option value="left">Left side</option><option value="back">Back</option><option value="bottom">Bottom</option></select></label>
-      <button id="annotations" aria-pressed="true" aria-describedby="view-feedback" title="Show lines between visible parts and their explorer entries">Part links</button>
       <button id="fit" aria-describedby="view-feedback" title="Center and fit all visible parts; preserve the viewing angle">Fit view</button>
     </div>
+    <details class="view-settings"><summary>View settings <span>Angle, layers &amp; visibility</span></summary>
+    <div class="toolbar-secondary">
+      <label class="toolbar-select"><span>Half</span><select id="half"><option value="both">Both</option><option value="left">Left</option><option value="right">Right</option></select></label>
+      <button id="reset" aria-label="Reset view and visible layers" title="Reset view and layers; keep your parts">↺</button>
+
+      <label class="toolbar-select"><span>View</span><select id="view"><option value="iso">3D</option><option value="top">Top</option><option value="front">Front</option><option value="right">Right side</option><option value="left">Left side</option><option value="back">Back</option><option value="bottom">Bottom</option></select></label>
+      <button id="annotations" aria-pressed="true" aria-describedby="view-feedback" title="Show lines between visible parts and their explorer entries">Part links</button>
+    </div>
     <div class="toolbar-explode"><label for="explode">Separate layers</label><input id="explode" type="range" min="0" max="100" value="0" step="1"><output id="explosion" for="explode">0 %</output></div>
+    </details>
   </div>
   <p id="view-feedback" role="status" class="view-feedback">Drag to orbit · Pinch or scroll to zoom</p>
   <div id="error" role="alert" hidden></div>
 </section>
 <aside aria-label="Object explorer">
   <nav class="directory" aria-label="Components and sections">
-    <div class="directory-heading"><span class="eyebrow">EXPLORE</span><button id="collapse-detail" aria-expanded="true" aria-controls="inspector" title="Collapse or expand details">‹</button></div>
-    <div id="layers" aria-label="Component directory"></div>
+    <div class="directory-heading"><span class="eyebrow">Components<span class="scroll-hint"> · Swipe to explore →</span></span><button id="collapse-detail" aria-label="Collapse details" aria-expanded="true" aria-controls="inspector" title="Collapse or expand details">‹</button></div>
+    <div id="layers" tabindex="0" aria-label="Component directory. Scroll for more parts."></div>
     <div class="section-links" aria-label="Other sections"><button id="nav-themes" aria-expanded="false" aria-controls="panel-themes">Themes</button><button id="nav-files" aria-expanded="false" aria-controls="panel-files">Files</button><button id="nav-about" aria-expanded="false" aria-controls="panel-about">About</button></div>
   </nav>
   <div id="inspector" class="inspector">
+    <button id="back-to-model" class="back-to-model" hidden>↑ Back to model</button>
     <section id="selection" class="selection" role="region" aria-live="polite" aria-label="Selected component" hidden><button id="clear-selection" aria-label="Clear selected component">×</button><p id="selection-meta" class="eyebrow"></p><h2 id="selection-title"></h2><p id="selection-info"></p><p id="selection-visibility" class="micro"></p><div class="selection-actions"><button id="toggle-selection">Hide</button><button id="isolate-selection" title="Hide everything except this selection">Solo</button><button id="show-all" title="Restore every part and both halves">Show all</button></div><details id="individual-parts"><summary>Individual parts <span id="individual-count"></span></summary><div id="part-visibility-list"></div></details></section>
   <section id="panel-cases" aria-label="Case options">
     <div class="panel-heading"><h2>Cases</h2><span id="case-current"></span></div>

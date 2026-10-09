@@ -84,6 +84,7 @@ export function createExplorer({scene,camera,canvas,objects,onSelect,onClear,req
   $('clear-selection').onclick=clear;
   $('annotations').onclick=()=>{enabled=!enabled;$('annotations').setAttribute('aria-pressed',String(enabled));scheduleAnchor();$('view-feedback').textContent=!enabled?'Part links hidden.':!(hovered||selected)?'Part links on. Hover or select a visible component.':'Part links on. The line appears when the selected surface is visible.';requestRender();};
   new ResizeObserver(()=>{layoutDirty=true;requestRender();}).observe(main);
+  document.addEventListener('scroll',()=>{layoutDirty=true;requestRender();},true);
   function update(){
     // Keep selected frame and keycap palettes visible; hover still highlights its surface.
     const active=hovered||selected,highlighted=hovered||(['lid','keycaps'].includes(selected?.group)?null:selected),stamp=key(active)+':'+key(highlighted)+':'+revision;
@@ -102,12 +103,13 @@ export function createExplorer({scene,camera,canvas,objects,onSelect,onClear,req
     if(!enabled||moving||!active||!anchor||(!anchor.object.visible&&!hovered))return;
     if(layoutDirty){
       const r=main.getBoundingClientRect(),stage=canvas.getBoundingClientRect();layout={r,stage,targets:new Map()};
-      for(const e of document.querySelectorAll('.part-anchor')){const b=e.getBoundingClientRect();layout.targets.set(e.dataset.group,{x:b.x+b.width/2-r.x,y:b.y+b.height/2-r.y});}
+      for(const e of document.querySelectorAll('.part-anchor')){const b=e.getBoundingClientRect(),clip=$('layers').getBoundingClientRect(),dir=document.querySelector('.directory').getBoundingClientRect();if(b.left<Math.max(0,clip.left,dir.left)||b.right>Math.min(innerWidth,clip.right,dir.right)||b.top<Math.max(0,clip.top,dir.top)||b.bottom>Math.min(innerHeight,clip.bottom,dir.bottom))continue;layout.targets.set(e.dataset.group,{x:b.x+b.width/2-r.x,y:b.y+b.height/2-r.y});}
       svg.setAttribute('viewBox',`0 0 ${r.width} ${r.height}`);layoutDirty=false;
     }
     const p=anchor.point.clone().project(camera);if(Math.abs(p.x)>1||Math.abs(p.y)>1||Math.abs(p.z)>1)return;
     const {r,stage}=layout,to=layout.targets.get(active.group);if(!to)return;
     const x=stage.x-r.x+(p.x+1)*stage.width/2,y=stage.y-r.y+(1-p.y)*stage.height/2;
+    if(x+r.x<0||x+r.x>innerWidth||y+r.y<0||y+r.y>innerHeight)return;
     const edge=x<stage.width/2?8:stage.width-8;
     const elbow=stage.width===r.width?`L ${edge} ${y.toFixed(1)} L ${edge} ${(stage.bottom-r.y-2).toFixed(1)} L ${to.x.toFixed(1)} ${(stage.bottom-r.y-2).toFixed(1)}`:`L ${(stage.right-r.x-8).toFixed(1)} ${y.toFixed(1)} L ${(stage.right-r.x-8).toFixed(1)} ${to.y.toFixed(1)}`;
     path.setAttribute('d',`M ${x.toFixed(1)} ${y.toFixed(1)} ${elbow} L ${to.x.toFixed(1)} ${to.y.toFixed(1)}`);path.dataset.group=active.group;path.dataset.side=anchor.object.userData.side;path.dataset.endX=to.x;path.dataset.endY=to.y;
