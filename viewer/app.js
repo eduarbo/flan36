@@ -93,7 +93,7 @@ for(const part of data.parts){
 }
 // Runtime scene uses x=CAD x, y=CAD z, z=CAD y; right-hand meshes are not mirrored again.
 let explorer,appearance,keycapColors,renderFrame=0;
-function render(){if(renderFrame)return;renderFrame=requestAnimationFrame(()=>{renderFrame=0;explorer?.update();renderer.render(scene,camera);});}
+function render(){if(renderFrame)return;renderFrame=requestAnimationFrame(()=>{renderFrame=0;explorer?.update();renderer.render(scene,camera);$('loading').hidden=true;});}
 let orbiting=false;
 controls.addEventListener('start',()=>{orbiting=true;explorer?.motion(true);});controls.addEventListener('end',()=>{orbiting=false;explorer?.motion(false);});
 controls.addEventListener('change',()=>{
@@ -110,8 +110,15 @@ function projectedSize(){
   camera.updateMatrixWorld();
   const right=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,0),up=new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld,1);
   let w=0,h=0;
-  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){
-    const v=new THREE.Vector3(x,y,z).sub(center);w=Math.max(w,Math.abs(v.dot(right)));h=Math.max(h,Math.abs(v.dot(up)));
+  // Project each installed mesh's bounds, avoiding the empty corners between halves.
+  for(const o of objects){
+    if(!o.visible)continue;
+    if(!o.geometry.boundingBox)o.geometry.computeBoundingBox();
+    const bounds=o.geometry.boundingBox;
+    for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){
+      const v=new THREE.Vector3(x,y,z).applyMatrix4(o.matrixWorld).sub(center);
+      w=Math.max(w,Math.abs(v.dot(right)));h=Math.max(h,Math.abs(v.dot(up)));
+    }
   }
   return {w,h};
 }
@@ -128,14 +135,47 @@ function resize(){
 }
 new ResizeObserver(()=>resize()).observe(canvas);
 canvas.tabIndex=0;
-function setPreviewHidden(hidden){document.body.dataset.previewHidden=String(hidden);$('toggle-preview').textContent=hidden?'Show 3D':'Hide 3D';$('toggle-preview').setAttribute('aria-expanded',String(!hidden));explorer?.layoutChanged();}
-$('toggle-preview').onclick=()=>setPreviewHidden(document.body.dataset.previewHidden!=='true');
-function workspaceHeight(){
-  const height=window.visualViewport?.height||innerHeight;document.documentElement.style.setProperty('--app-height',height+'px');
-  const input=document.activeElement;
-  if(innerWidth<=700&&height<520&&input?.matches('input:not([type]),input[type=text],textarea'))setPreviewHidden(true);
+let activeMode='customize',activePanel='cases',panelOpen=false,panelOpener=null,currentScrollKey='customize:cases';
+const panelSizes=new Map(),panelScroll=new Map();
+const portraitLayout=matchMedia('(max-width:700px),(max-width:1000px) and (orientation:portrait)');
+function sizeKey(){return (portraitLayout.matches?'portrait:':'landscape:')+activeMode;}
+function panelBounds(){
+  const portrait=portraitLayout.matches,rect=document.querySelector('main').getBoundingClientRect(),total=portrait?rect.height:rect.width;
+  return {portrait,total,min:Math.min(portrait?180:240,Math.max(80,total-80)),max:Math.max(80,total-(portrait?80:200))};
 }
-window.addEventListener('resize',workspaceHeight);window.visualViewport?.addEventListener('resize',workspaceHeight);document.addEventListener('focusin',workspaceHeight);workspaceHeight();
+function defaultPanelRatio(){const {portrait,total}=panelBounds();return portrait?(['files','about'].includes(activeMode)?.78:.38):Math.min(360/total,.4);}
+function layoutPanel(){
+  if(!panelOpen)return;
+  const {portrait,total,min,max}=panelBounds(),input=document.activeElement;
+  const keyboard=portrait&&(window.visualViewport?.height||innerHeight)<520&&input?.matches('input:not([type]),input[type=text],textarea');
+  const ratio=panelSizes.get(sizeKey())??defaultPanelRatio(),size=Math.max(min,Math.min(max,keyboard?max:total*ratio));
+  document.querySelector('main').style.setProperty('--panel-size',size+'px');
+  const resize=$('panel-resize');resize.setAttribute('aria-orientation',portrait?'horizontal':'vertical');resize.setAttribute('aria-valuemin',Math.round(min/total*100));resize.setAttribute('aria-valuemax',Math.round(max/total*100));resize.setAttribute('aria-valuenow',Math.round(size/total*100));
+  const expanded=ratio>.6;$('panel-expand').textContent=expanded?'Compact':'Expand';$('panel-expand').setAttribute('aria-label',expanded?'Compact editor':'Expand editor');$('panel-expand').title=expanded?'Compact editor':'Expand editor';
+}
+function rememberPanelScroll(){if(panelOpen)panelScroll.set(currentScrollKey,$('inspector').scrollTop);}
+function updatePanelButtons(){
+  for(const b of document.querySelectorAll('.app-nav [data-mode]')){const active=panelOpen&&b.dataset.mode===activeMode;b.setAttribute('aria-expanded',String(active));if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');}
+}
+function setPanelOpen(open,{opener,focus=false}={}){
+  if(!open)rememberPanelScroll();
+  if(opener)panelOpener=opener;
+  panelOpen=open;document.body.dataset.panelOpen=String(open);$('workspace').hidden=!open;updatePanelButtons();layoutPanel();
+  if(open){$('inspector').scrollTop=panelScroll.get(currentScrollKey)||0;if(focus)$('inspector').focus({preventScroll:true});}
+  else if(focus)(panelOpener?.isConnected?panelOpener:$('nav-'+activeMode)).focus({preventScroll:true});
+  explorer?.layoutChanged();
+}
+$('panel-close').onclick=()=>setPanelOpen(false,{focus:true});
+$('panel-expand').onclick=()=>{const ratio=panelSizes.get(sizeKey())??defaultPanelRatio();const compact=Math.min(defaultPanelRatio(),.38);panelSizes.set(sizeKey(),ratio>.6?compact:.78);layoutPanel();};
+const resizeHandle=$('panel-resize');let panelDrag=null;
+resizeHandle.addEventListener('pointerdown',e=>{if(e.button!==0)return;const bounds=panelBounds();panelDrag={id:e.pointerId,x:e.clientX,y:e.clientY,size:portraitLayout.matches?$('workspace').offsetHeight:$('workspace').offsetWidth,...bounds};resizeHandle.setPointerCapture(e.pointerId);e.preventDefault();});
+resizeHandle.addEventListener('pointermove',e=>{if(!panelDrag||e.pointerId!==panelDrag.id)return;const d=panelDrag,delta=d.portrait?d.y-e.clientY:d.x-e.clientX,size=Math.max(d.min,Math.min(d.max,d.size+delta));panelSizes.set(sizeKey(),size/d.total);layoutPanel();});
+function stopPanelDrag(e){if(panelDrag?.id===e.pointerId)panelDrag=null;}
+resizeHandle.addEventListener('pointerup',stopPanelDrag);resizeHandle.addEventListener('pointercancel',stopPanelDrag);resizeHandle.addEventListener('lostpointercapture',stopPanelDrag);
+resizeHandle.addEventListener('keydown',e=>{const {portrait,total,min,max}=panelBounds(),grow=portrait?'ArrowUp':'ArrowLeft',shrink=portrait?'ArrowDown':'ArrowRight';if(![grow,shrink,'Home','End'].includes(e.key))return;e.preventDefault();const now=(panelSizes.get(sizeKey())??defaultPanelRatio())*total,size=e.key==='Home'?min:e.key==='End'?max:now+(e.key===grow?32:-32);panelSizes.set(sizeKey(),Math.max(min,Math.min(max,size))/total);layoutPanel();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panelOpen&&!document.querySelector('dialog[open]')){e.preventDefault();e.stopImmediatePropagation();setPanelOpen(false,{focus:true});}},true);
+function workspaceHeight(){document.documentElement.style.setProperty('--app-height',(window.visualViewport?.height||innerHeight)+'px');layoutPanel();}
+window.addEventListener('resize',workspaceHeight);window.visualViewport?.addEventListener('resize',workspaceHeight);document.addEventListener('focusin',workspaceHeight);document.addEventListener('focusout',()=>requestAnimationFrame(layoutPanel));workspaceHeight();
 
 
 function visibleBounds(){
@@ -150,7 +190,7 @@ function fit(direction){
   camera.zoom=1;controls.update();camera.updateMatrixWorld();
   const {w,h}=projectedSize();
   lastAspect=canvas.clientWidth/canvas.clientHeight;
-  halfHeight=Math.max(h,w/lastAspect,10)*1.13;resize();
+  halfHeight=Math.max(h,w/lastAspect,10)*1.10;resize();
 }
 function sync(){
   explorer?.invalidate();
@@ -179,28 +219,25 @@ function reset(){
   for(const key of Object.keys(labels))state.layers[key]=true;
   sync();fit(directions.iso);
 }
-let activeMode='customize',activePanel='cases';
 const editablePanel={base:'cases',plate:'cases',lid:'frames',keycaps:'keycaps',battery:'battery'};
-function showWorkspace({focus=false}={}){
-  document.body.dataset.mode=activeMode;
-  for(const name of ['customize','inspect','files','about']){
-    const button=$('nav-'+name);if(name===activeMode)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
-  }
+function showWorkspace(){
+  document.body.dataset.mode=activeMode;currentScrollKey=activeMode==='customize'?activeMode+':'+activePanel:activeMode;
   for(const name of ['cases','frames','themes','keycaps','battery','inspect','files','about'])$('panel-'+name).hidden=!(activeMode==='customize'?name===activePanel:name===activeMode);
-  for(const button of document.querySelectorAll('[data-panel]'))button.setAttribute('aria-pressed',String(button.dataset.panel===activePanel));
-  $('inspector').scrollTop=0;
-  if(focus)$('inspector').focus({preventScroll:true});
+  $('editor-category').hidden=activeMode!=='customize';$('editor-category').value=activePanel;
+  $('workspace-title').hidden=activeMode==='customize';$('workspace-title').textContent={inspect:'Parts',files:'Files',about:'About'}[activeMode]||'';
+  updatePanelButtons();layoutPanel();$('inspector').scrollTop=panelScroll.get(currentScrollKey)||0;
   explorer?.layoutChanged();appearance?.sync();keycapColors?.sync();
 }
-function openPanel(id){
-  if(['files','about','inspect'].includes(id))activeMode=id;
-  else {activeMode='customize';activePanel=id;}
-  showWorkspace();
+function openPanel(id,opener=canvas){
+  rememberPanelScroll();
+  if(['files','about','inspect'].includes(id))activeMode=id;else{activeMode='customize';activePanel=id;}
+  showWorkspace();setPanelOpen(true,{opener:panelOpen?undefined:opener});
 }
-for(const button of document.querySelectorAll('.app-nav button'))button.onclick=()=>{
-  activeMode=button.dataset.mode;showWorkspace({focus:true});if(activeMode==='files')refreshRecovery();
+for(const button of document.querySelectorAll('.app-nav [data-mode]'))button.onclick=()=>{
+  if(panelOpen&&activeMode===button.dataset.mode){setPanelOpen(false,{focus:true});return;}
+  rememberPanelScroll();activeMode=button.dataset.mode;showWorkspace();setPanelOpen(true,{opener:button,focus:true});if(activeMode==='files')refreshRecovery();
 };
-for(const button of document.querySelectorAll('[data-panel]'))button.onclick=()=>{activePanel=button.dataset.panel;showWorkspace({focus:true});};
+$('editor-category').onchange=e=>{rememberPanelScroll();activePanel=e.target.value;showWorkspace();};
 function editPart(ref){
   if(!ref||!editablePanel[ref.group])return;
   if(ref.group==='lid')setFrameSide(ref.side||'both');
@@ -232,9 +269,9 @@ function chooseView(view){state.view=view;sync();fit(directions[view]);}
 $('view').addEventListener('change',e=>chooseView(e.target.value));
 for(const button of document.querySelectorAll('[data-view]'))button.onclick=()=>chooseView(button.dataset.view);
 $('explode').addEventListener('input',e=>{state.explode=Number(e.target.value)/100;sync();});
-$('complete').onclick=reset;$('reset').onclick=()=>{reset();$('view-feedback').textContent='View and layers reset. Your parts are unchanged.';};$('fit').onclick=()=>{fit();$('view-feedback').textContent=objects.some(o=>o.visible)?'Visible parts centered and fitted.':'Nothing visible. Show a layer or choose Assembled.';};
-$('inside').onclick=()=>{reset();for(const k of ['base','plate','lid','keycaps','switches','fasteners'])state.layers[k]=false;sync();fit();};
-$('stack').onclick=()=>{reset();state.half='left';state.explode=.55;for(const k of Object.keys(labels))state.layers[k]=['battery','mcu','display','supports','connectors'].includes(k);sync();fit();};
+$('complete').onclick=()=>{reset();$('view-dialog').close();};$('reset').onclick=()=>{reset();$('view-feedback').textContent='View and layers reset. Your parts are unchanged.';};$('fit').onclick=()=>{fit();$('view-feedback').textContent=objects.some(o=>o.visible)?'Visible parts centered and fitted.':'Nothing visible. Show a layer or choose Assembled.';};
+$('inside').onclick=()=>{reset();for(const k of ['base','plate','lid','keycaps','switches','fasteners'])state.layers[k]=false;sync();fit();$('view-dialog').close();};
+$('stack').onclick=()=>{reset();state.half='left';state.explode=.55;for(const k of Object.keys(labels))state.layers[k]=['battery','mcu','display','supports','connectors'].includes(k);sync();fit();$('view-dialog').close();};
 for(const [opener,dialog,closer] of [['credits','licenses','close-credits'],['view-options','view-dialog','close-view']]){
   $(opener).onclick=()=>{$(dialog).showModal();$(dialog).querySelector('.dialog-body').scrollTop=0;};
   $(closer).onclick=()=>$(dialog).close();
@@ -262,7 +299,7 @@ $('glb').onclick=async()=>{
 };
 const saveWarnings=new Map();
 function storageNotice(text,error,scope){if(error)saveWarnings.set(scope,text);else saveWarnings.delete(scope);$('save-warning').hidden=saveWarnings.size===0;$('save-warning').title=[...saveWarnings.values()].join(' ');message(text,error);}
-$('save-warning').onclick=()=>{openPanel('files');refreshRecovery();$('recovery').open=true;};
+$('save-warning').onclick=()=>{openPanel('files',$('save-warning'));refreshRecovery();$('recovery').open=true;};
 const message=(text,error=false)=>{$('config-status').textContent=text;$('config-status').dataset.error=String(error);};
 const targetKeys=()=>Object.entries(catalog.layout).flatMap(([side,keys])=>keys.filter(k=>{
   const t=$('key-target').value;
@@ -478,9 +515,9 @@ if(storageMessage)storageNotice(storageMessage,true,'configuration');else if(res
 if(keycapColors.initialWarning)storageNotice(keycapColors.initialWarning,true,'palettes');
 
 
-resize();reset();openPanel('cases','base');
+resize();reset();showWorkspace();
 if(new URLSearchParams(location.search).has('diagnostics'))window.flan36=Object.freeze({snapshot:()=>({configuration:copy(configuration),view:copy(state),camera:{position:camera.position.toArray(),quaternion:camera.quaternion.toArray(),target:controls.target.toArray(),zoom:camera.zoom,halfHeight},hidden:[...hiddenObjects],selected:copy(explorer.selected),visible:objects.filter(o=>o.visible).map(o=>o.userData.objectIndex),undo:history.canUndo,redo:history.canRedo}),idle:()=>Promise.all([store.idle(),keycapColors.idle()])});
 
 
 }
-start().catch(error=>{document.getElementById('error').hidden=false;document.getElementById('error').textContent='Could not open the viewer: '+error.message;console.error(error);});
+start().catch(error=>{document.getElementById('loading').hidden=true;document.getElementById('error').hidden=false;document.getElementById('error').textContent='Could not open the viewer: '+error.message;console.error(error);});

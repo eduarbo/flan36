@@ -8,45 +8,43 @@
 <title>Flan36 · Explore in 3D</title>
 <style>/*__STYLE__*/</style>
 </head>
-<body data-mode="customize">
-<header><div class="brand"><strong>FLAN36<span class="brand-dot" aria-hidden="true">.</span></strong><span class="brand-caption">A split keyboard, made yours.</span></div><div class="history-controls" aria-label="Design history"><button id="save-warning" hidden title="Open saved-data recovery">Save warning</button><button id="undo" aria-label="Undo design change" title="Undo design change (Ctrl/Cmd Z)" disabled><span aria-hidden="true">↶</span><span class="history-label"> Undo</span></button><button id="redo" aria-label="Redo design change" title="Redo design change (Ctrl/Cmd Shift Z)" disabled><span aria-hidden="true">↷</span><span class="history-label"> Redo</span></button></div><button id="toggle-preview" aria-expanded="true" aria-controls="canvas">Hide 3D</button><a href="https://github.com/eduarbo/flan36">Repository ↗</a></header>
-<nav class="app-nav" aria-label="Main navigation">
-  <button id="nav-customize" data-mode="customize" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg><span>Customize</span></button>
-  <button id="nav-inspect" data-mode="inspect"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg><span>Parts</span></button>
-  <button id="nav-files" data-mode="files"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H5V3h2Zm7 0v6h5M9 13h6m-6 4h6"/></svg><span>Files</span></button>
-  <button id="nav-about" data-mode="about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-11v2"/></svg><span>About</span></button>
+<body data-mode="customize" data-panel-open="false">
+<nav class="app-nav" aria-label="Viewer tools">
+  <button id="nav-customize" data-mode="customize" aria-expanded="false" aria-controls="workspace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg><span>Design</span></button>
+  <button id="nav-inspect" data-mode="inspect" aria-expanded="false" aria-controls="workspace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg><span>Parts</span></button>
+  <button id="view-options" aria-haspopup="dialog" aria-controls="view-dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 5v8l-8 5-8-5V8l8-5Zm0 10v8M4 8l8 5 8-5M12 3v10"/></svg><span>View</span></button>
+  <button id="fit" aria-describedby="view-feedback" title="Fit visible parts, keeping your viewing angle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5m6 0h5v5M4 15v5h5m6 0h5v-5"/><circle cx="12" cy="12" r="3"/></svg><span>Fit</span></button>
+  <button id="nav-files" data-mode="files" aria-expanded="false" aria-controls="workspace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H5V3h2Zm7 0v6h5M9 13h6m-6 4h6"/></svg><span>Files</span></button>
+  <button id="nav-about" data-mode="about" aria-expanded="false" aria-controls="workspace"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-11v2"/></svg><span>About</span></button>
 </nav>
+<button id="save-warning" hidden title="Open saved-data recovery">Save warning</button>
 <main>
 <section class="stage" aria-label="3D keyboard view">
+  <p id="loading" role="status">Loading model…</p>
   <canvas id="canvas" aria-label="Drag to rotate; pinch or scroll to zoom; tap a part to inspect"></canvas>
-  <div class="stage-label"><span class="dot"></span><span class="gesture-hint">Drag to rotate · Pinch or scroll to zoom</span><span id="status" role="status">Loading geometry…</span></div>
-  <div class="view-controls" role="region" aria-label="View controls">
-    <div class="toolbar-primary">
-      <div class="presets" role="group" aria-label="Assembly views"><button id="complete" aria-pressed="true">Assembled</button><button id="inside" aria-pressed="false">Inside</button><button id="stack" aria-pressed="false">Stack</button></div>
-      <button id="view-options" aria-haspopup="dialog" aria-controls="view-dialog">View <span aria-hidden="true">⌄</span></button><button id="fit" aria-describedby="view-feedback" title="Center and fit all visible parts; preserve the viewing angle" aria-label="Fit view">⌖</button>
-    </div>
-  </div>
-  <p id="view-feedback" role="status" class="view-feedback">Drag to orbit · Pinch or scroll to zoom</p>
+  <p id="view-feedback" role="status" class="sr-only">Drag to orbit · Pinch or scroll to zoom</p>
   <div id="error" role="alert" hidden></div>
 </section>
-<aside aria-label="Keyboard workspace">
-  <nav class="customize-nav" aria-label="Customize parts">
-    <button id="edit-cases" data-panel="cases" aria-pressed="true">Case</button>
-    <button id="edit-frames" data-panel="frames" aria-pressed="false">Frame</button>
-    <button id="edit-keycaps" data-panel="keycaps" aria-pressed="false">Keys</button>
-    <button id="nav-themes" data-panel="themes" aria-pressed="false">Colors</button>
-    <button id="edit-battery" data-panel="battery" aria-pressed="false">Battery</button>
-  </nav>
+<aside id="workspace" aria-label="Keyboard editor" hidden>
+  <div id="panel-resize" role="separator" tabindex="0" aria-label="Resize editor" aria-orientation="horizontal" aria-valuemin="20" aria-valuemax="85" aria-valuenow="40"><span aria-hidden="true"></span></div>
+  <div class="panel-tools">
+    <label for="editor-category" class="sr-only">Design category</label>
+    <select id="editor-category"><option value="cases">Case</option><option value="frames">Frame</option><option value="keycaps">Keys</option><option value="themes">Colors</option><option value="battery">Battery</option></select>
+    <strong id="workspace-title" hidden>Parts</strong>
+    <div class="history-controls" aria-label="Design history"><button id="undo" aria-label="Undo design change" title="Undo design change (Ctrl/Cmd Z)" disabled>↶</button><button id="redo" aria-label="Redo design change" title="Redo design change (Ctrl/Cmd Shift Z)" disabled>↷</button></div>
+    <button id="panel-expand" aria-label="Expand editor" title="Expand editor">Expand</button>
+    <button id="panel-close" aria-label="Close editor" title="Close editor">×</button>
+  </div>
   <div id="inspector" class="inspector" tabindex="-1">
     <section id="panel-inspect" hidden aria-labelledby="parts-title">
-      <p class="eyebrow">Explore the assembly</p><h2 id="parts-title">Parts</h2>
+      <h2 id="parts-title">Components</h2><p id="status" class="micro" role="status">Loading geometry…</p>
       <p class="hint">Select a part for details. Use its eye to show or hide it.</p>
       <nav class="directory" aria-label="Components"><div id="layers" tabindex="0" aria-label="Component directory"></div></nav>
     <section id="selection" class="selection" role="region" aria-live="polite" aria-label="Selected component" hidden><button id="clear-selection" aria-label="Clear selected component">×</button><p id="selection-meta" class="eyebrow"></p><h2 id="selection-title"></h2><p id="selection-info"></p><p id="selection-visibility" class="micro"></p><div class="selection-actions"><button id="toggle-selection">Hide</button><button id="isolate-selection" title="Hide everything except this selection">Solo</button><button id="show-all" title="Restore every part and both halves">Show all</button></div><details id="individual-parts"><summary>Individual parts <span id="individual-count"></span></summary><div id="part-visibility-list"></div></details><button id="edit-selection" class="primary">Customize this part →</button></section>
     </section>
   <section id="panel-cases" aria-label="Case options">
-    <div class="panel-heading"><h2>Make it yours.</h2><span id="case-current"></span></div>
-    <p class="hint">Four case styles. One shared silhouette.</p>
+    <div class="panel-heading"><h2>Case style</h2><span id="case-current"></span></div>
+
     <div id="case-target" class="segments" role="group" aria-label="Apply case changes to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div>
     <div id="case-grid" class="preview-grid case-grid" role="group" aria-label="Case styles"></div>
     <details class="option-group"><summary>Colors &amp; finish</summary><div id="case-colors" class="color-fields"></div><label class="cover-option"><input type="checkbox" id="case-link-colors"> Match frame and rim</label></details>
@@ -55,8 +53,8 @@
     <a class="case-guide" href="https://github.com/eduarbo/flan36/blob/main/docs/cases.md">Case files &amp; printing guide ↗</a>
   </section>
   <section id="panel-frames" aria-label="Frame options">
-    <div class="panel-heading"><h2>Display frames</h2><span id="frame-current"></span></div>
-    <p class="hint">Pick a shape. Keep your colors, or restore its original palette.</p>
+    <div class="panel-heading"><h2>Frame style</h2><span id="frame-current"></span></div>
+
     <div id="frame-target" class="segments" role="group" aria-label="Apply frame changes to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div>
     <div id="frame-grid" class="preview-grid" role="group" aria-label="Frame styles"></div>
     <details class="option-group"><summary>Colors &amp; finish</summary><div class="finish-row"><span>Body <small id="color-current" hidden></small></span><div id="swatches" role="group" aria-label="Frame body colors"></div></div><div class="color-field"><input type="color" id="frame-color" value="#304d4e" aria-label="Frame body color"></div>
@@ -65,10 +63,10 @@
     <p class="micro">Previews show original palettes. Custom colors are saved with your parts. All frame details sit flush with the top.</p></details>
     <a class="case-guide" href="https://eduarbo.github.io/flan36/frame-proposals/" target="_blank" rel="noopener">Six selected designs ↗</a>
   </section>
-  <section id="panel-themes" aria-label="Color themes" hidden><div class="panel-heading"><h2>Themes</h2><span id="theme-current"></span></div><p class="hint">Coordinated palettes for the case, frame and keycaps.</p><div id="theme-target" class="segments" aria-label="Apply theme to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div><div id="themes-grid" class="preview-grid" aria-label="Color themes"></div><p id="theme-preview-note" class="micro"></p></section>
+  <section id="panel-themes" aria-label="Color themes" hidden><div class="panel-heading"><h2>Color palette</h2><span id="theme-current"></span></div><div id="theme-target" class="segments" aria-label="Apply theme to"><button data-side="both" aria-pressed="true">Both halves</button><button data-side="left" aria-pressed="false">Left</button><button data-side="right" aria-pressed="false">Right</button></div><div id="themes-grid" class="preview-grid" aria-label="Color themes"></div><p id="theme-preview-note" class="micro"></p></section>
   <section id="panel-keycaps" aria-label="Keycap options" hidden>
     <div class="panel-heading"><h2>Keycaps</h2><span>KLP Lamé</span></div>
-    <p class="hint">Start with a set, then tune individual keys.</p>
+
     <details id="cap-colors" class="option-group"><summary>Colors <span>all / row / column / key</span></summary>
 <div id="cap-side" class="segments" aria-label="Keycap color half"><button data-side="both" aria-pressed="true">Both</button><button data-side="left">Left</button><button data-side="right">Right</button></div>
 <label>Paint<select id="cap-mode"><option value="all">All keys</option><option value="row">Row</option><option value="column">Column</option><option value="key">Individual key</option></select></label>
@@ -113,7 +111,7 @@
 <svg id="leader-lines" aria-hidden="true"><path id="part-link" hidden></path><circle id="part-link-dot" r="2.5" hidden></circle></svg>
 </main>
 <dialog id="licenses" aria-labelledby="licenses-title"><div class="dialog-heading"><h2 id="licenses-title">Credits &amp; licenses</h2><button id="close-credits" aria-label="Close credits">Close</button></div><div class="dialog-body"><!--__LICENSES__--></div></dialog>
-<dialog id="view-dialog" aria-labelledby="view-title"><div class="dialog-heading"><h2 id="view-title">View settings</h2><button id="close-view">Done</button></div><div class="dialog-body">    <div class="view-settings">
+<dialog id="view-dialog" aria-labelledby="view-title"><div class="dialog-heading"><h2 id="view-title">View settings</h2><button id="close-view">Done</button></div><div class="dialog-body">    <div class="view-settings"><div class="presets" role="group" aria-label="Assembly views"><button id="complete" aria-pressed="true">Assembled</button><button id="inside" aria-pressed="false">Inside</button><button id="stack" aria-pressed="false">Stack</button></div>
     <div class="toolbar-secondary">
       <label class="toolbar-select"><span>Half</span><select id="half"><option value="both">Both</option><option value="left">Left</option><option value="right">Right</option></select></label>
       <button id="reset" aria-label="Reset view and visible layers" title="Reset view and layers; keep your parts">Reset view</button>

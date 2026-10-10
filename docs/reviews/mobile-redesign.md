@@ -1,5 +1,7 @@
 # Mobile viewer redesign and CAD authorship correction
 
+> Historical review: the user subsequently rejected this layout for its small canvas and permanent controls. The [canvas workspace correction](canvas-workspace.md) supersedes its spatial design; earlier technical evidence retains its original scope.
+
 Request: the original 2026-10-09 responsive/design audit, followed by Eduardo's explicit rejection of the first delivery as saturated, hard to navigate and insufficiently redesigned. The second request also corrects CAD authorship. Baseline: `e5c7e0833582fab0f4f55b332cc163cec097f8d2`, clean main.
 
 The original objective remains in scope: usable responsive viewing, a coherent design, preserved functionality and verified delivery. The first responsive measurements remain historical evidence; they did not establish acceptable mobile information architecture.
