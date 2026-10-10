@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-10T15:37:35.496572+00:00",
+  "request_ref": "user:20261009:revisa-flan32-visor-responsivo",
+  "correction_ref": "user:20261010:canvas-space-and-static-drawer",
+  "source_commit": "06433623dc77e91f01cb822c5664c1fa8274f687",
+  "status": "PUBLIC_DELIVERY_TECHNICALLY_VERIFIED",
+  "pages_build": "built",
+  "public_archive_and_bytes": {
+    "additional_published_assets": {
+      "docs/offline.html": "c759f1fe8e1dead52e17b1e5af72545e1d917ec23aa3a103638100054f83b484",
+      "docs/assets/printing-abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93.bin": "abfd546e81a70937026ee0f384b68b9b7de38846dd4c02fe450ec68cb01a6c93"
+    },
+    "source_commit": "06433623dc77e91f01cb822c5664c1fa8274f687",
+    "archive_files_verified": 1958,
+    "archive_sha256": "507ae96fd25c099a59bc31a11f2ac45be50c802d0a7de0bc355cb0c492905e1f",
+    "pages_url": "https://eduarbo.github.io/flan36/",
+    "pages_matches_committed_html": true,
+    "viewer_sha256": "1dd8c980894869650bfb4521d862c2b9874e1bf2b21930d359b7b7680dde8927",
+    "authenticated_requests": false,
+    "method": "All archive entries matched against Git blob IDs; public Pages bytes matched the committed viewer."
+  },
+  "public_function": {
+    "commit": "06433623dc77e91f01cb822c5664c1fa8274f687",
+    "editor_closed_on_startup": true,
+    "public_scene_matches_local": true,
+    "online_and_offline_byte_exact": true,
+    "only_six_approved_frame_cards": true,
+    "talavera_default": true,
+    "design_changes_keep_camera": true,
+    "json_matches_selection": true,
+    "lazy_public_print_assets_verified": true,
+    "exact_stl_hashes": true,
+    "errors": []
+  },
+  "public_webkit": {
+    "engine": "webkit",
+    "target": "https://eduarbo.github.io/flan36/?rev=06433623dc77e91f01cb822c5664c1fa8274f687",
+    "errors": [],
+    "physical_phone_tested": false,
+    "browser": "26.5",
+    "passed": true,
+    "interactions": [
+      "default closed canvas",
+      "unobstructed canvas pixels and hit target",
+      "compact expanded drag keyboard sizing",
+      "close and focus restoration",
+      "category scroll and panel size persistence",
+      "five editors",
+      "12 component eyes",
+      "one-half color edit and undo redo",
+      "modal Escape then panel Escape preserves selection",
+      "long license close remains reachable",
+      "presets and gestures",
+      "orientation preserves camera and selection",
+      "keyboard viewport preserves canvas",
+      "no header or floating toolbar"
+    ]
+  },
+  "public_layout_checks": 42,
+  "mobile_canvas_measurements": [
+    {
+      "label": "390x690 closed",
+      "width": 390,
+      "height": 690,
+      "closed": true,
+      "portrait": true,
+      "overflow": false,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 638
+      },
+      "area": 0.9246376811594202,
+      "editorWidth": 0,
+      "overlap": false,
+      "centerHit": "canvas",
+      "nav": [
+        {
+          "width": 63.65625,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.671875,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.65625,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.671875,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.671875,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.65625,
+          "height": 48,
+          "visible": true
+        }
+      ],
+      "pixels": {
+        "x0": 22,
+        "y0": 261,
+        "x1": 366,
+        "y1": 368,
+        "w": 388,
+        "h": 636
+      }
+    },
+    {
+      "label": "390x690 compact",
+      "width": 390,
+      "height": 690,
+      "closed": false,
+      "portrait": true,
+      "overflow": false,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 395.5625
+      },
+      "area": 0.5732789855072464,
+      "editorWidth": 390,
+      "overlap": false,
+      "centerHit": "canvas",
+      "nav": [
+        {
+          "width": 63.65625,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.671875,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.65625,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.671875,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.671875,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 63.65625,
+          "height": 48,
+          "visible": true
+        }
+      ],
+      "pixels": {
+        "x0": 22,
+        "y0": 144,
+        "x1": 366,
+        "y1": 246,
+        "w": 388,
+        "h": 393
+      }
+    },
+    {
+      "label": "320x568 closed",
+      "width": 320,
+      "height": 568,
+      "closed": true,
+      "portrait": true,
+      "overflow": false,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 516
+      },
+      "area": 0.9084507042253521,
+      "editorWidth": 0,
+      "overlap": false,
+      "centerHit": "canvas",
+      "nav": [
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        }
+      ],
+      "pixels": {
+        "x0": 18,
+        "y0": 212,
+        "x1": 300,
+        "y1": 297,
+        "w": 318,
+        "h": 514
+      }
+    },
+    {
+      "label": "320x568 compact",
+      "width": 320,
+      "height": 568,
+      "closed": false,
+      "portrait": true,
+      "overflow": false,
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 319.921875
+      },
+      "area": 0.5632427376760564,
+      "editorWidth": 320,
+      "overlap": false,
+      "centerHit": "canvas",
+      "nav": [
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "width": 52,
+          "height": 48,
+          "visible": true
+        }
+      ],
+      "pixels": {
+        "x0": 18,
+        "y0": 115,
+        "x1": 300,
+        "y1": 199,
+        "w": 318,
+        "h": 317
+      }
+    }
+  ],
+  "review_snapshots": {
+    "implementation-baseline": {
+      "head": "8f31ac75cb6692b32e6bacf89b35f44df880bd6a",
+      "status": " M docs/index.html\n M docs/offline.html\n M docs/reviews/mobile-redesign.md\n M docs/viewer.md\n M validation/revI-viewer.json\n M viewer/app.js\n M viewer/public-check.cjs\n M viewer/reliability-check.cjs\n M viewer/responsive-check.cjs\n M viewer/style.css\n M viewer/template.html\n?? docs/reviews/canvas-workspace.md\n",
+      "artifacts": [
+        {
+          "path": "viewer/template.html",
+          "sha256": "9e7e19e06b80859c54ad03f9d9459bc4187eaf20bae78d7afca64256f5710834"
+        },
+        {
+          "path": "viewer/style.css",
+          "sha256": "66d19d3e8eee031ef5822a0524268421bd7df827463a2d9308d08285d570953f"
+        },
+        {
+          "path": "viewer/app.js",
+          "sha256": "1d8f8c412e7f55528587413e249419302363b6db259940f1475f9fe982c95b40"
+        },
+        {
+          "path": "viewer/explorer.js",
+          "sha256": "3b1aefee22c55cdf937d31522988a24b9523caddd3f689e5281d53ef824fc622"
+        },
+        {
+          "path": "viewer/responsive-check.cjs",
+          "sha256": "16e10a0744d01adce1a9e46f1f42ad079f1236414aac21099611932672ba0fbe"
+        },
+        {
+          "path": "viewer/reliability-check.cjs",
+          "sha256": "5074298578c677e0f56593bc67b298530cd17d457bb4baa4fdd0237c7ee09357"
+        },
+        {
+          "path": "viewer/public-check.cjs",
+          "sha256": "04c11a9f5ae55bdcd8971ee15400d49373e696e92fcdeedd86f2b4f46ad27853"
+        },
+        {
+          "path": "docs/viewer.md",
+          "sha256": "f06a010678f3bd4c79df2be349a90097aa777d09e7147439267ee63c570be42e"
+        },
+        {
+          "path": "docs/reviews/canvas-workspace.md",
+          "sha256": "160f1f97bd44a73aade1b96ce76feda48fc580cccb2ac5a4e68402430643e589"
+        },
+        {
+          "path": "docs/reviews/mobile-redesign.md",
+          "sha256": "b99aebafc0bc957a153d83b3229f12e8ea899d1b75d287a0328cffad468f13b3"
+        }
+      ]
+    },
+    "focal-baseline": {
+      "head": "8f31ac75cb6692b32e6bacf89b35f44df880bd6a",
+      "status": " M docs/index.html\n M docs/offline.html\n M docs/reviews/mobile-redesign.md\n M docs/viewer.md\n M validation/revI-viewer.json\n M viewer/app.js\n M viewer/public-check.cjs\n M viewer/reliability-check.cjs\n M viewer/responsive-check.cjs\n M viewer/style.css\n M viewer/template.html\n?? docs/reviews/canvas-workspace.md\n",
+      "artifacts": [
+        {
+          "path": "viewer/template.html",
+          "sha256": "10312337ea39783ed71873de7766d92689643dd227319689413690a595f84539"
+        },
+        {
+          "path": "viewer/style.css",
+          "sha256": "1e805df54809948a7f11e6ba051f53bc617e03e514ca0542c1694070d31a5fbe"
+        },
+        {
+          "path": "viewer/app.js",
+          "sha256": "c004c2a9e2b41e097b35331d3ab1fb972da46ced2a0244f2b26729005dd88357"
+        },
+        {
+          "path": "viewer/explorer.js",
+          "sha256": "3b1aefee22c55cdf937d31522988a24b9523caddd3f689e5281d53ef824fc622"
+        },
+        {
+          "path": "viewer/responsive-check.cjs",
+          "sha256": "555b2a63a26629ffcb1bf7c59a774d92df694ba4c81796da35fa1b24de9b5de0"
+        },
+        {
+          "path": "viewer/reliability-check.cjs",
+          "sha256": "5074298578c677e0f56593bc67b298530cd17d457bb4baa4fdd0237c7ee09357"
+        },
+        {
+          "path": "viewer/public-check.cjs",
+          "sha256": "04c11a9f5ae55bdcd8971ee15400d49373e696e92fcdeedd86f2b4f46ad27853"
+        },
+        {
+          "path": "docs/viewer.md",
+          "sha256": "f06a010678f3bd4c79df2be349a90097aa777d09e7147439267ee63c570be42e"
+        },
+        {
+          "path": "docs/reviews/canvas-workspace.md",
+          "sha256": "fc2b8be9d702623022453bbe9e110b125afeaad8aa4f8b865ece09adb45e548d"
+        },
+        {
+          "path": "docs/reviews/mobile-redesign.md",
+          "sha256": "b99aebafc0bc957a153d83b3229f12e8ea899d1b75d287a0328cffad468f13b3"
+        },
+        {
+          "path": "build/canvas-review/chromium-responsive.json",
+          "sha256": "2318596c9ee49337e4a0091c3082a795ebca15117df8a62909bdce0840a6f032"
+        },
+        {
+          "path": "build/canvas-review/webkit-responsive.json",
+          "sha256": "905e40a15928d98fae50c4bbead376cb936c4835826dccc87db825028af1cedb"
+        }
+      ]
+    }
+  },
+  "local_receipt": "validation/revI-canvas-workspace.json",
+  "local_receipt_sha256": "0cf6ae3bfa9875f70815b4b5b8a0bff6ffb4769b8800734bcae40ee305adf867",
+  "physical_phone_tested": false,
+  "user_design_approval_assumed": false,
+  "reproduce_public_checks": [
+    "python3 tools/check_public_delivery.py 06433623dc77e91f01cb822c5664c1fa8274f687",
+    "FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright FLAN36_BROWSER=/path/to/chromium node viewer/public-check.cjs 06433623dc77e91f01cb822c5664c1fa8274f687",
+    "FLAN36_VIEWER_URL=https://eduarbo.github.io/flan36/?rev=06433623dc77e91f01cb822c5664c1fa8274f687 FLAN36_ENGINE=webkit FLAN36_PLAYWRIGHT_MODULE=/path/to/playwright node viewer/responsive-check.cjs"
+  ]
+}
